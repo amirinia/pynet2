@@ -5,6 +5,7 @@ import config
 import message
 from energymodel import EnergyModel
 import sensor
+import time
 
 class Node():
     def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(0,2000)),x=random.randint(0,200),y=random.randint(0,200),node_type=None, power_type=1, mobile_type=0, network=network ):
@@ -14,12 +15,14 @@ class Node():
         self.net = network
         self.is_alive = True
         self.energy = [2]
-        print("node is created ")
+        #print("node is created ")
         self.is_CH = False
         self.x = x
         self.y = y
         self.neighbors = []
         self.inbox = []
+        self.outbox = []
+
         self.parent = []
         self.power = EnergyModel(power_type=power_type)
         self.sensor = sensor.sensor(self.id,str(self.id)+"sensor")
@@ -31,7 +34,7 @@ class Node():
         return str("node"+str(self.id))
 
     def run(self):
-        print("node is runing")
+        print("node is runing",self.id)
         while True:
             if(self.is_alive == True):
                         if (sum(self.energy) <= config.DEAD_NODE_THRESHOLD ):
@@ -93,4 +96,38 @@ class Node():
                 self.node_send_message(self.aggregate,0)
                 self.aggregate.clear()
                 print("CH {0} aggregate sent to BS on env:{1}================================+++++++++++++++++++++++++++++++++++++++++++++++ \n".format(self.id,env.now))
-                
+
+
+    def node_send_message(self, str_message , node):
+        #print("message {0} is sent^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ from {1} to {2}".format(str_message,self.id,node))
+        self.outbox.append(str_message)
+
+
+    def node_receive_message(self, str_message ,sender_node):
+        self.inbox.append(str_message)
+        if(self.is_CH == True): # if node is CH then aggregate
+            self.aggregate.append(str_message)
+        #self.send_ACK(sender_node)
+        #print(self.name + " node_receive_message&&&&&&&&&&&&&&*************** " + str_message + " from "+ sender_node.name )
+        if( "is cluster Head" in str_message ):
+            self.change_TDMA(sender_node.TDMA)
+            self.parent_setter(sender_node)
+            if(self.is_CH == True):
+                self.change_CulsterHead()
+
+        
+        if( "BS" in str_message):
+            print("temp",self.name)
+            time.sleep(2)
+            for n in self.neighbors:
+                print(n,self)
+                if any("BS" in s for s in n.inbox):
+                    print("temp inbox",self.name)
+                    message1 = message.MyMessage()
+                    message1.broadcast(n,"BS+{0}".format(self))
+                    print(n.outbox ,n.name)
+                    print(n.inbox ,n.name)
+    
+    def send_ACK(self,destination_node):
+        message1 = message.MyMessage()
+        #message1.send_message("ack",cls,destination_node)

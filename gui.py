@@ -118,6 +118,8 @@ class graphic:
             print("GUI NEIGHBORS TABLE")
 
             G = nx.Graph()
+            G.add_node("BS",pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
+
             for node in self.mynetwork.nodes:
                 if(node.is_alive == True):
                     G.add_node(node.id,pos=(node.x,node.y,))
@@ -140,8 +142,9 @@ class graphic:
     def draw_nods(self):
             print("GUI NODES ONLY")
             G = nx.Graph()
+            G.add_node("BS",pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
+
             for node in self.mynetwork.nodes:
-                print(1)
                 if(node.is_alive == True):
                     G.add_node(node.id,pos=(node.x,node.y),weight=node.id)
                     #G.add_edge(node.id,0,weight=node.id)

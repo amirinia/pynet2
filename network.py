@@ -47,7 +47,10 @@ class Net():
                 self.clock.append("INACTIVE")
                 print("inactive network",self.env.now)
                 yield self.env.timeout(1)
-    
+            self.network_nodedsicovery()
+            print(self.nodes)
+            print("net discovery")
+
     def TDMA(self,duration):
         for i in range(duration):
             self.clock.clear()
@@ -66,10 +69,12 @@ class Net():
 
     def random_net_generator(self,env,network,node_number):
         for i in range(node_number):
-                mnode = node.Node(i+1,env ,2,random.randint(0,self.xsize),random.randint(0,self.ysize))
+                mnode = node.Node(i+2,env ,2,random.randint(0,self.xsize),random.randint(0,self.ysize))
                 mnode.net= self
                 self.nodes.append(mnode)
-        
+        self.network_nodedsicovery()
+        print("random")
+
     def add_node(self, node):
         #print (self.id) # debugging...
         self.nodes.append(node)
@@ -86,9 +91,32 @@ class Net():
                     if(n!=n1):
                         if n1 not in n.neighbors:
                             n.neighbors.append(n1)
-                            print("{0} <=> {1} with distance {2}".format(str(n.id) , str(n1.id) , math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2))))
+                            print("{0} <=> {1} d= {2}".format(str(n.id) , str(n1.id) , math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2))))
         print("+++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
 
 
     def distance(self, node ,node1):
         return math.sqrt(((node.x-node1.x)**2)+((node.y-node1.y)**2))
+
+
+    def network_inboxes(self):
+        print("\nInboxes are shown: ")
+        for n in self.nodes:
+            print("Inbox {0} has {1} \n".format(str(n.id) ,str(n.inbox)))
+
+    def network_outboxes(self):
+        print("\nOutboxes are shown: ")
+        for n in self.nodes:
+            print("Outbox {0} has {1} \n".format(str(n.id) ,str(n.outbox)))
+
+    def introduce_self(self):
+        print("****************************Begin of introduce network" + self.name)
+        print("Network {0} with {1} node number with size {2} {3} and have {4} clusters".format(self.name,len(self.nodelist),self.xsize,self.ysize,len(self.clusterheads)))
+        #print("New network is created : {0} with {1} node number ".format(self.name,self.nodelist.count))
+        for x in self.nodes:
+            print("{0} is alive: {5} with energy : {1} with position {2} {3} ; CH is {4}".format(x.name , str(sum(x.energy)) ,str(x.x) , str(x.y) ,str(x.parent),x.is_alive))
+        print("==============================Clusters===============================")
+        for c in self.clusters:
+            print("{0} is alive: {5} with energy : {1} with nodes {2} ; TDMA: {3} ; CH is {4}".format(c.name , c.average_cluster_energy() ,str(c.nodelist) , str(c.TDMA_slots) ,str(c.CH),c.is_alive))
+        print("****************************End of introduce network" + self.name + "\n")
+            
