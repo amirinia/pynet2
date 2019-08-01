@@ -7,7 +7,7 @@ from energymodel import EnergyModel
 import sensor
 
 class Node():
-    def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(0,2000)),x=random.randint(0,200),y=random.randint(0,200),node_type=None, power_type=1, mobile_type=0):
+    def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(0,2000)),x=random.randint(0,200),y=random.randint(0,200),node_type=None, power_type=1, mobile_type=0, network=network ):
         self.env = env
         self.id = id
         self.action = env.process(self.run())
@@ -23,6 +23,13 @@ class Node():
         self.parent = []
         self.power = EnergyModel(power_type=power_type)
         self.sensor = sensor.sensor(self.id,str(self.id)+"sensor")
+
+    def __str__(self):
+        return str(self.id)
+
+    def __repr__(self):
+        return str("node"+str(self.id))
+
     def run(self):
         print("node is runing")
         while True:

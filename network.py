@@ -2,6 +2,8 @@ import simpy
 import random
 import node
 import config
+import math
+
 """
 """
 
@@ -62,3 +64,31 @@ class Net():
 
 
 
+    def random_net_generator(self,env,network,node_number):
+        for i in range(node_number):
+                mnode = node.Node(i+1,env ,2,random.randint(0,self.xsize),random.randint(0,self.ysize))
+                mnode.net= self
+                self.nodes.append(mnode)
+        
+    def add_node(self, node):
+        #print (self.id) # debugging...
+        self.nodes.append(node)
+        node.network = self
+
+
+    def network_nodedsicovery(self,distance = config.TX_RANGE):
+        print("++++++++++++++++++++ network Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
+        for n in self.nodes:
+            print("Neighbors Table discovery for {0} is :".format(str(n.id)))
+            for n1 in self.nodes:
+                #print(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)))
+                if(distance > math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2))):
+                    if(n!=n1):
+                        if n1 not in n.neighbors:
+                            n.neighbors.append(n1)
+                            print("{0} <=> {1} with distance {2}".format(str(n.id) , str(n1.id) , math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2))))
+        print("+++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
+
+
+    def distance(self, node ,node1):
+        return math.sqrt(((node.x-node1.x)**2)+((node.y-node1.y)**2))

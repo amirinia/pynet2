@@ -37,7 +37,7 @@ class graphic:
 
         nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True, node_size=400)
         #ani = animation.FuncAnimation(fig, animate, interval=1000)
-        plt.legend(self.mynetwork.name)
+        plt.legend("Network")
 
         plt.show()
     
@@ -80,7 +80,7 @@ class graphic:
 
         nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True, node_size=400)
         #ani = animation.FuncAnimation(fig, animate, interval=1000)
-        plt.legend(self.mynetwork.name)
+        plt.legend("Network")
 
         plt.show()
 
@@ -89,7 +89,6 @@ class graphic:
         print("GUI CLUSTERS")
 
         G = nx.Graph()
-        G.add_node("BS",pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
         for node in self.mynetwork.nodes:
             if(node.is_alive == True):
                 G.add_node(node.id,pos=(node.x,node.y))
@@ -110,7 +109,7 @@ class graphic:
                             G.add_edge(node.id,node.parent[0].id)
         nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True, node_size=400)
         #ani = animation.FuncAnimation(fig, animate, interval=1000)
-        plt.legend(self.mynetwork.name)
+        plt.legend("Network")
 
         plt.show()
 
@@ -119,7 +118,6 @@ class graphic:
             print("GUI NEIGHBORS TABLE")
 
             G = nx.Graph()
-            G.add_node("BS",pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
             for node in self.mynetwork.nodes:
                 if(node.is_alive == True):
                     G.add_node(node.id,pos=(node.x,node.y,))
@@ -135,14 +133,13 @@ class graphic:
                         G.add_edge(node.id,neighbor.id)
             nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True)
             #ani = animation.FuncAnimation(fig, animate, interval=1000)
-            plt.legend(self.mynetwork.name)
+            plt.legend("Network")
             plt.show()
 
 
     def draw_nods(self):
             print("GUI NODES ONLY")
             G = nx.Graph()
-            G.add_node("BS",pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
             for node in self.mynetwork.nodes:
                 print(1)
                 if(node.is_alive == True):
