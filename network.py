@@ -43,7 +43,7 @@ class Net():
             for i in range(inactive_duration):
                 self.clock.clear()
                 self.clock.append("INACTIVE")
-                #print("inactive ",env.now)
+                print("inactive network",self.env.now)
                 yield self.env.timeout(1)
     
     def TDMA(self,duration):

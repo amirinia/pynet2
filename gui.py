@@ -18,7 +18,7 @@ class graphic:
 
         G = nx.Graph()
         G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
-        for node in self.mynetwork.nodelist:
+        for node in self.mynetwork.nodes:
             if(node.is_alive == True):
                 G.add_node(node.id,pos=(node.x,node.y))
                 print("{0} node is aliveeeeeeeeeeeeee with parent {1} and nexthop {2}".format(node,node.parent,node.next_hop))
@@ -47,9 +47,9 @@ class graphic:
 
         G = nx.Graph()
         G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
-        for node in self.mynetwork.nodelist:
+        for node in self.mynetwork.nodes:
             if(node.is_alive == True):
-                print("for node in self.mynetwork.nodelist {0} and cluster head {1}".format(node,node.parent))
+                print("for node in self.mynetwork.nodes {0} and cluster head {1}".format(node,node.parent))
 
                 G.add_node(node.id,pos=(node.x,node.y))
                 
@@ -68,7 +68,7 @@ class graphic:
 
         # for cluster in self.mynetwork.clusters:
         #     if(cluster.is_alive==True):
-        #         for node in cluster.nodelist:
+        #         for node in cluster.nodes:
         #             if(node.id!=0):
         #                 if(node.is_alive == True):
         #                     if(len(node.parent)!=0):
@@ -90,7 +90,7 @@ class graphic:
 
         G = nx.Graph()
         G.add_node("BS",pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
-        for node in self.mynetwork.nodelist:
+        for node in self.mynetwork.nodes:
             if(node.is_alive == True):
                 G.add_node(node.id,pos=(node.x,node.y))
                 #G.add_edge(node,"BS")
@@ -101,7 +101,7 @@ class graphic:
 
         for cluster in self.mynetwork.clusters:
             if(cluster.is_alive==True):
-                for node in cluster.nodelist:
+                for node in cluster.nodes:
                     if(node.is_alive == True):
                         if(len(node.parent)!=0):
                             #G.add_edge(node,node.parent)
@@ -120,14 +120,14 @@ class graphic:
 
             G = nx.Graph()
             G.add_node("BS",pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
-            for node in self.mynetwork.nodelist:
+            for node in self.mynetwork.nodes:
                 if(node.is_alive == True):
                     G.add_node(node.id,pos=(node.x,node.y,))
                 #G.add_edge(node,"BS")
 
                 #print(node)
 
-            for node in self.mynetwork.nodelist:
+            for node in self.mynetwork.nodes:
                 if(node.is_alive==True):
                     #print(node)
                     for neighbor in node.neighbors:
@@ -143,7 +143,8 @@ class graphic:
             print("GUI NODES ONLY")
             G = nx.Graph()
             G.add_node("BS",pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
-            for node in self.mynetwork.nodelist:
+            for node in self.mynetwork.nodes:
+                print(1)
                 if(node.is_alive == True):
                     G.add_node(node.id,pos=(node.x,node.y),weight=node.id)
                     #G.add_edge(node.id,0,weight=node.id)

@@ -15,6 +15,8 @@ node1.net = net1
 
 node2 = node.Node(2,env,)
 node2.net = net1
+graphi = gui.graphic(net1)
+graphi.draw_nods()
 
-
-env.run(until=600)
+print(node1.x)
+env.run(until=40)

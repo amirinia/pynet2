@@ -4,6 +4,7 @@ import random
 import config
 import message
 from energymodel import EnergyModel
+import sensor
 
 class Node():
     def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(0,2000)),x=random.randint(0,200),y=random.randint(0,200),node_type=None, power_type=1, mobile_type=0):
@@ -21,7 +22,7 @@ class Node():
         self.inbox = []
         self.parent = []
         self.power = EnergyModel(power_type=power_type)
-
+        self.sensor = sensor.sensor(self.id,str(self.id)+"sensor")
     def run(self):
         print("node is runing")
         while True:
@@ -43,11 +44,12 @@ class Node():
                     print("inter")
 
             elif self.net.clock[0]=="CSMA":
-                print("CH talks in CSMA ",self.env.now)
+                if(self.is_CH == True):
+                    print("CH talks in CSMA %d  %d "%(self.env.now,self.is_CH))
                 yield self.env.timeout(1)
 
             else:
-                print("Inactive",self.env.now)
+                #print("Inactive",self.env.now)
                 yield self.env.timeout(1)
 
 
@@ -57,7 +59,7 @@ class Node():
             if len(self.parent) == 0: # if node has no parent ,beacons
                 if(self.is_CH == False):
                     yield self.env.timeout(1)
-                    print("at {0} beacon adv is sent by {1}, since it has no CH with energy {2}".format(env.now,self.id,self.energy))
+                    print("at {0} beacon adv is sent by {1} is alive {2}, since it has no CH with energy {3}".format(env.now,self.id,self.is_alive,self.energy))
                     msg_len = message_sender.message_length()
                     self.power.decrease_tx_energy(msg_len)
                     self.energy.append(self.power.energy)
