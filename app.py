@@ -28,7 +28,7 @@ net1 = network.Net(env) # create instance
 #     mnode = node.Node(i,env,2,random.randint(0,net1.xsize),random.randint(0,net1.ysize))
 #     mnode.net= net1
 #     net1.nodes.append(mnode)
-net1.random_net_generator(env,net1,14)
+net1.random_net_generator(env,net1,20)
 net1.introduce_yourself()
 print("KKKKKKKKKK")
 
@@ -43,6 +43,6 @@ print(net1.nodes)
 
 graphi.draw_neighbors()
 
-net1.network_inboxes()
-net1.network_outboxes()
+# net1.network_inboxes()
+# net1.network_outboxes()
 net1.network_packet_summery()
