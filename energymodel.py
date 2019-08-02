@@ -41,6 +41,8 @@ class EnergyModel(object):
         """
         Initialize the node object.
         node_type: 'N' regular, 'B' base station/Sink, 'C' coordinator/cluster head/relay
+
+        power_type = 0 is for Base Station
         """
         self.type = node_type or 'N'
         self.power_type = power_type

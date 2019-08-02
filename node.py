@@ -22,10 +22,9 @@ class Node():
         self.neighbors = []
         self.inbox = []
         self.outbox = []
-
         self.parent = []
-        self.power = EnergyModel(power_type=power_type)
-        self.sensor = sensor.sensor(self.id,str(self.id)+"sensor")
+        self.power = EnergyModel(power_type = power_type)
+        self.sensor = sensor.sensor(self.id,str(self.id) + "sensor")
 
     def __str__(self):
         return str(self.id)
@@ -37,12 +36,12 @@ class Node():
         print("node is runing",self.id)
         while True:
             if(self.is_alive == True):
-                        if (sum(self.energy) <= config.DEAD_NODE_THRESHOLD ):
-                            print("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,self.energy,self.env.now))
-                            if(self.is_CH == True):
-                                print("ch is dead we need find another one")
-                                self.is_CH == False
-                            self.is_alive = False
+                if (sum(self.energy) <= config.DEAD_NODE_THRESHOLD ):
+                    print("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,self.energy,self.env.now))
+                    if(self.is_CH == True):
+                        print("ch is dead we need find another one")
+                        self.is_CH == False
+                    self.is_alive = False
 
             if self.net.clock[0]=="TDMA":
                 print("node%d is working TDMA %d "%(self.id,self.env.now))
@@ -59,7 +58,7 @@ class Node():
                 yield self.env.timeout(1)
 
             else:
-                #print("Inactive",self.env.now)
+                #print("Inactive",self.env.now) # inactive time
                 yield self.env.timeout(1)
 
 
@@ -69,11 +68,10 @@ class Node():
             if len(self.parent) == 0: # if node has no parent ,beacons
                 if(self.is_CH == False):
                     yield self.env.timeout(1)
-                    print("at {0} beacon adv is sent by {1} is alive {2}, since it has no CH with energy {3}".format(env.now,self.id,self.is_alive,self.energy))
+                    print("at {0} beacon adv is sent by {1} is alive {2}, since it has no CH with energy {3}".format(env.now,self.id,self.is_alive,self.power))
                     msg_len = message_sender.message_length()
                     self.power.decrease_tx_energy(msg_len)
                     self.energy.append(self.power.energy)
-
 
                     for n in self.neighbors:
                         message_sender.broadcast(n,"beacon adv {0} at env:{1}".format(n.id ,env.now))
@@ -88,11 +86,10 @@ class Node():
                     self.power.decrease_tx_energy(msg_len)
                     self.energy.append(self.power.energy)
                     yield self.env.timeout(1)
+            
             if (self.is_CH == True): # if node is cluster head
-
-                self.power.decrease_energy(discharging_time=100)  # idle discharge
-
-                yield self.env.timeout(config.AGGREGATE_TIME+self.TDMA)
+                self.power.decrease_energy(discharging_time = 100)  # idle discharge
+                yield self.env.timeout(config.AGGREGATE_TIME + self.TDMA)
                 self.node_send_message(self.aggregate,0)
                 self.aggregate.clear()
                 print("CH {0} aggregate sent to BS on env:{1}================================+++++++++++++++++++++++++++++++++++++++++++++++ \n".format(self.id,env.now))

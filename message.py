@@ -1,6 +1,7 @@
 #message
 import node
 import network
+import packetloss
 
 class Message(object):
 
@@ -20,7 +21,6 @@ class Message(object):
         """
         pymote 2
         """
-        return len(self.header + str(self.data)) + self.overhead_bytes
 
     def broadcast(self,node,message="hello"):
         for n in node.neighbors:
@@ -29,12 +29,18 @@ class Message(object):
             #message1.send_message(message,node,node.neighbors[x])
 
     def send_message(self, message , sender_node, destination_node):
-        sender_node.node_send_message(message,destination_node)
-        #destination_node.inbox.append(message)
-        destination_node.node_receive_message(message,sender_node)
-        #node.node_receive_message(str_message,node)
-        #print("message {0} is sent from {1} to {2}".format(message,sender_node.id,destination_node.id))
-    
+        is_loss =packetloss.packetloss()
+        if(not is_loss):
+            sender_node.node_send_message(message,destination_node)
+            #destination_node.inbox.append(message)
+            destination_node.node_receive_message(message,sender_node)
+            #node.node_receive_message(str_message,node)
+            #print("message {0} is sent from {1} to {2}".format(message,sender_node.id,destination_node.id))
+        else:
+            sender_node.node_send_message(message,destination_node)
+            print("packet is lost",is_loss)
+
+        
     def send_beacon_message(self, energy, distance, rssi ,neighbor_tables , sender_node, destination_node):
         pass
 
