@@ -121,4 +121,18 @@ class Net():
         # for c in self.clusters:
         #     print("{0} is alive: {5} with energy : {1} with nodes {2} ; TDMA: {3} ; CH is {4}".format(c.name , c.average_cluster_energy() ,str(c.nodelist) , str(c.TDMA_slots) ,str(c.CH),c.is_alive))
         print("****************************End of introduce network \n")
-            
+
+
+    def network_packet_summery(self):
+        sumpout = 0
+        sumpin = 0
+        print("=================================Sent packet summery==============================")
+        for n in self.nodes:
+            print("node {0} sent {1} packes".format(n,len(n.outbox)))
+            sumpout +=len(n.outbox)
+        print("All packet numbers in outbox the  network is {0} ".format(sumpout))
+        print("=================================Received packet summery==============================")
+        for n in self.nodes:
+            print("node {0} sent {1} packes".format(n,len(n.inbox)))
+            sumpin +=len(n.inbox)
+        print("All packet numbers in inbox the network is {0} \n".format(sumpin))
