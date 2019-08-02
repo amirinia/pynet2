@@ -39,7 +39,7 @@ class Message(object):
             #print("packet is lost",is_loss)
 
         elif(is_loss== False):
-            sender_node.node_send_message(message,destination_node)
+            sender_node.node_send_message(message + " resend",destination_node)
             #print("packet is lost",is_loss)
 
         

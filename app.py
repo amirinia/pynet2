@@ -6,7 +6,7 @@ import random
 
 env = simpy.Environment()
 net1 = network.Net(env) # create instance
-net1.introduce_yourself()
+
 # controller = node.Node(0, env, (net1.xsize)/2, (net1.xsize)/2,node_type='B' )
 # net1.nodes.append(controller)
 # controller.net = net1
@@ -28,7 +28,9 @@ net1.introduce_yourself()
 #     mnode = node.Node(i,env,2,random.randint(0,net1.xsize),random.randint(0,net1.ysize))
 #     mnode.net= net1
 #     net1.nodes.append(mnode)
-net1.random_net_generator(env,net1,24)
+net1.random_net_generator(env,net1,4)
+net1.introduce_yourself()
+print("KKKKKKKKKK")
 
 graphi = gui.graphic(net1)
 graphi.draw_nods()
@@ -41,5 +43,5 @@ print(net1.nodes)
 
 graphi.draw_neighbors()
 
-net1.network_inboxes()
-net1.network_outboxes()
+# net1.network_inboxes()
+# net1.network_outboxes()

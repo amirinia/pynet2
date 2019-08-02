@@ -15,12 +15,13 @@ class Net():
         self.nodes = []
         self.xsize = xsize
         self.ysize = ysize
-
-    
-    def run(self):
+        #add controller
         controller = node.Node(0, self.env, (self.xsize)/2, (self.xsize)/2,node_type='B' ,power_type=0)
         self.nodes.append(controller)
         controller.net = self
+    
+    def run(self):
+        
         print(" s n",self.nodes)
         counter = 0
         while True:
@@ -70,7 +71,7 @@ class Net():
 
     def random_net_generator(self,env,network,node_number):
         for i in range(node_number):
-                mnode = node.Node(i+2,env ,2,random.randint(0,self.xsize),random.randint(0,self.ysize))
+                mnode = node.Node(i+1,env ,2,random.randint(0,self.xsize),random.randint(0,self.ysize))
                 mnode.net= self
                 self.nodes.append(mnode)
         self.network_nodedsicovery()
@@ -115,7 +116,7 @@ class Net():
         # print("Network {0} with {1} node number with size {2} {3} and have {4} clusters".format(self.name,len(self.nodelist),self.xsize,self.ysize,len(self.clusterheads)))
         #print("New network is created : {0} with {1} node number ".format(self.name,self.nodelist.count))
         for x in self.nodes:
-            print("{0} is alive: {5} with energy : {1} with position {2} {3} ; CH is {4}".format(x.name , str(sum(x.energy)) ,str(x.x) , str(x.y) ,str(x.parent),x.is_alive))
+            print("{0} is alive: {5} with energy : {1} with position {2} {3} ; CH is {4}".format(x.id , x.power ,str(x.x) , str(x.y) ,str(x.parent),x.is_alive))
         print("==============================Clusters===============================")
         # for c in self.clusters:
         #     print("{0} is alive: {5} with energy : {1} with nodes {2} ; TDMA: {3} ; CH is {4}".format(c.name , c.average_cluster_energy() ,str(c.nodelist) , str(c.TDMA_slots) ,str(c.CH),c.is_alive))
