@@ -125,11 +125,11 @@ class graphic:
                     G.add_node(node.id,pos=(node.x,node.y,))
                 #G.add_edge(node,"BS")
 
-                print("draw node",node)
+                #print("draw node",node)
 
             for node in self.mynetwork.nodes:
                 if(node.is_alive==True):
-                    print("draw edge",node)
+                    #print("draw edge",node)
                     for neighbor in node.neighbors:
                         if(neighbor.is_alive == True):
                             #print("{0} nei {1}".format(node,neighbor))

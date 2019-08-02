@@ -38,7 +38,7 @@ class Node():
             if(self.is_alive == True):
                 #print(next(reversed(self.energy)))
                 if (next(reversed(self.energy)) <= config.DEAD_NODE_THRESHOLD ):
-                    print("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,self.energy,self.env.now))
+                    print("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
                     if(self.is_CH == True):
                         print("ch is dead we need find another one")
                         self.is_CH == False
