@@ -1,24 +1,7 @@
 
 import math
 
-
-    ## Energy Configurations wsn
-# energy dissipated at the transceiver electronic (/bit)
-E_ELEC = 50e-9 # Joules
-# energy dissipated at the data aggregation (/bit)
-E_DA = 5e-9 # Joules
-# energy dissipated at the power amplifier (supposing a multi-path
-# fading channel) (/bin/m^4)
-E_MP = 0.0013e-12 # Joules
-# energy dissipated at the power amplifier (supposing a line-of-sight
-# free-space channel (/bin/m^2)
-E_FS = 10e-12 # Joules
-THRESHOLD_DIST = math.sqrt(E_FS/E_MP) # meters
-
-
-
 Power_Type = {0: "External", 1: "Battery", 2: "Energy Harvesting"}
-
 
 #we use energy model of pymote 2.0 which uses 3 partsfunctions decrease_rx_energy decrease_tx_energy decrease_energy
 class EnergyModel(object):

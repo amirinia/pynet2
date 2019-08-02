@@ -125,14 +125,15 @@ class graphic:
                     G.add_node(node.id,pos=(node.x,node.y,))
                 #G.add_edge(node,"BS")
 
-                #print(node)
+                print("draw node",node)
 
             for node in self.mynetwork.nodes:
                 if(node.is_alive==True):
-                    #print(node)
+                    print("draw edge",node)
                     for neighbor in node.neighbors:
-                        #print("{0} nei {1}".format(node,neighbor))
-                        G.add_edge(node.id,neighbor.id)
+                        if(neighbor.is_alive == True):
+                            #print("{0} nei {1}".format(node,neighbor))
+                            G.add_edge(node.id,neighbor.id)
             nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True)
             #ani = animation.FuncAnimation(fig, animate, interval=1000)
             plt.legend("Network")
