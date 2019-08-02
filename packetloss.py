@@ -18,7 +18,7 @@ import random
 def packetloss():
     p = random.randint(1,100)
     if(p > PDR):
-        print(p)
+        #print(p)
         return False
     else:
         return True

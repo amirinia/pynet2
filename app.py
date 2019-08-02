@@ -35,9 +35,11 @@ graphi.draw_nods()
 
 
 
-env.run(until=60)
+env.run(until=30)
 
 print(net1.nodes)
 
 graphi.draw_neighbors()
-print(net1.nodes)
+
+net1.network_inboxes()
+net1.network_outboxes()
