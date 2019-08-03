@@ -30,7 +30,7 @@ TX_RANGE = 70 # meters 30
 BSID = -1
 
 # area definition
-AREA_WIDTH = 250
+AREA_WIDTH = 350
 AREA_LENGTH = 350
 
 # controller  position

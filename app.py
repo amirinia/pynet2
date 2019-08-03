@@ -28,14 +28,12 @@ net1 = network.Net(env) # create instance
 #     mnode = node.Node(i,env,2,random.randint(0,net1.xsize),random.randint(0,net1.ysize))
 #     mnode.net= net1
 #     net1.nodes.append(mnode)
-net1.random_net_generator(env,net1,20)
+net1.random_net_generator(env,net1,60)
 net1.introduce_yourself()
 print("KKKKKKKKKK")
 
 graphi = gui.graphic(net1)
 graphi.draw_nods()
-
-
 
 env.run(until=30)
 

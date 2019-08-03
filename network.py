@@ -71,11 +71,11 @@ class Net():
 
     def random_net_generator(self,env,network,node_number):
         for i in range(node_number):
-                mnode = node.Node(i+1,env ,2,random.randint(0,self.xsize),random.randint(0,self.ysize))
+                mnode = node.Node(i+1,env ,random.random(),random.randint(0,self.xsize),random.randint(0,self.ysize))
                 mnode.net= self
                 self.nodes.append(mnode)
         self.network_nodedsicovery()
-        print("random")
+        #print("random")
 
     def add_node(self, node):
         #print (self.id) # debugging...
@@ -138,3 +138,8 @@ class Net():
         print("All packet numbers in inbox the network is {0} \n".format(sumpin))
         print("{0} packets are lost on wireless sensor network".format(sumpout-sumpin))
         print("=================================")
+
+    def CH_probablity(self):
+        if(len(self.clusters)==0):
+            print("there is no cluster to cal CH_prob")
+        return float(len(self.clusters))/float(len(self.nodelist))

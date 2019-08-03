@@ -29,8 +29,9 @@ class Message(object):
             #message1.send_message(message,node,node.neighbors[x])
 
     def send_message(self, message , sender_node, destination_node):
-        is_loss =packetloss.packetloss()
+        is_loss = packetloss.packetloss()
         sender_node.node_send_message(message,destination_node)
+        self.data = message
             #destination_node.inbox.append(message)
         if(is_loss == True):
             destination_node.node_receive_message(message,sender_node)

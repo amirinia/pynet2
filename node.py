@@ -8,7 +8,7 @@ import sensor
 import time
 
 class Node():
-    def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(0,2000)),x=random.randint(0,200),y=random.randint(0,200),node_type=None, power_type=1, mobile_type=0, network=network ):
+    def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(0,2000)),x=random.randint(0,config.AREA_WIDTH),y=random.randint(0,config.AREA_LENGTH),node_type=None, power_type=1, mobile_type=0, network=network ):
         self.env = env
         self.id = id
         self.action = env.process(self.run())

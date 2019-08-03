@@ -144,28 +144,44 @@ class graphic:
             print("GUI NODES ONLY")
             G = nx.Graph()
             #G.add_node("BS",pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
-
             for node in self.mynetwork.nodes:
                 if(node.is_alive == True):
                     G.add_node(node.id,pos=(node.x,node.y),weight=node.id)
                     #G.add_edge(node.id,0,weight=node.id)
-
                 #print(node)
-
             pos = nx.get_node_attributes(G, 'pos')
             nx.draw(G, pos, with_labels=True)
             #ani = animation.FuncAnimation(fig, animate, interval=1000)
-
             edge_labels = { (u,v): d['weight'] for u,v,d in G.edges(data=True) }
- 
             nx.draw_networkx_nodes(G,pos,node_size=400)
-            
             nx.draw_networkx_edges(G,pos)
             nx.draw_networkx_labels(G,pos,)
             nx.draw_networkx_edge_labels(G,pos,edge_labels=edge_labels)
-            
-
             plt.title("Graph Title")
-
             plt.show()
 
+    def draw_ch(self):
+            print("GUI NODES CH ONLY")
+            G = nx.Graph()
+            #G.add_node("BS",pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
+            for node in self.mynetwork.nodes:
+                if(node.is_alive == True):
+                    G.add_node(node.id,pos=(node.x,node.y),weight=node.id)
+
+
+            for node in self.mynetwork.nodes:
+                if(node.is_alive == True):
+                    for node1 in self.mynetwork.nodes:
+                        if node is not node1:
+                            #print("bbbb",node.parent[0],node,node1.parent[0],node1,str(node.parent[0])==str(node1.parent[0]))
+
+                            if (str(node.parent[0])==str(node1.parent[0])):
+                                print("jjjj",node,node1)
+                                G.add_edge(node.id,node1.id)
+
+
+
+            nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True)
+            #ani = animation.FuncAnimation(fig, animate, interval=1000)
+            plt.legend("Network")
+            plt.show()
