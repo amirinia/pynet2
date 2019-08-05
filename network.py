@@ -16,7 +16,7 @@ class Net():
         self.xsize = xsize
         self.ysize = ysize
         #add controller
-        controller = node.Node(0, self.env, (self.xsize)/2, (self.xsize)/2,node_type='B' ,power_type=0)
+        controller = node.Node(0, self.env,4, (self.xsize)/2, (self.ysize)/2,node_type='B' ,power_type=0)
         self.nodes.append(controller)
         controller.net = self
     
