@@ -203,7 +203,7 @@ class graphic:
                             if node is not node1:
                                 #print("bbbb",node.parent[0],node,node1.parent[0],node1,str(node.parent[0])==str(node1.parent[0]))
 
-                                if (str(node.parent[0])==str(node1.parent[0])):
+                                if (str(node.cluster[0])==str(node1.cluster[0])):
                                     #print("Kmean",node,node1)
                                     G.add_edge(node.id,node1.id)
         nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True)

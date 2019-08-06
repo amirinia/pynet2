@@ -21,8 +21,8 @@ class Net():
         controller.net = self
     
     def run(self):
-        
-        print(" s n",self.nodes)
+        self.env.timeout(10)
+        print("Inititial network %d nods at %d"%(len(self.nodes),self.env.now))
         counter = 0
         while True:
             counter +=1
@@ -70,6 +70,7 @@ class Net():
 
 
     def random_net_generator(self,env,network,node_number):
+        print("Random network is generated with %d nodes\n"%node_number)
         for i in range(node_number):
                 mnode = node.Node(i+1,env ,random.random(),random.randint(0,self.xsize),random.randint(0,self.ysize))
                 mnode.net= self
@@ -143,3 +144,5 @@ class Net():
         if(len(self.clusters)==0):
             print("there is no cluster to cal CH_prob")
         return float(len(self.clusters))/float(len(self.nodelist))
+
+    

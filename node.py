@@ -23,6 +23,7 @@ class Node():
         self.inbox = []
         self.outbox = []
         self.parent = []
+        self.cluster = []
         self.power = EnergyModel(power_type = power_type)
         self.sensor = sensor.sensor(self.id,str(self.id) + "sensor")
 
@@ -33,7 +34,7 @@ class Node():
         return str("node"+str(self.id))
 
     def run(self):
-        print("node is runing",self.id)
+        # print("node is runing",self.id)
         while True:
             if(self.is_alive == True):
                 #print(next(reversed(self.energy)))
@@ -45,7 +46,7 @@ class Node():
                     self.is_alive = False
 
             if self.net.clock[0]=="TDMA":
-                print("node%d is working TDMA %d "%(self.id,self.env.now))
+                print("at %d node %d is working on TDMA  "%(self.env.now,self.id))
                 yield self.env.timeout(1)
                 try:
                     if(self.is_alive == True):
@@ -55,7 +56,7 @@ class Node():
 
             elif self.net.clock[0]=="CSMA":
                 if(self.is_CH == True):
-                    print("CH talks in CSMA %d  %d "%(self.env.now,self.is_CH))
+                    print("at %d CH talks in CSMA   %d "%(self.env.now,self.is_CH))
                 yield self.env.timeout(1)
 
             else:

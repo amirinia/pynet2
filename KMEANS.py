@@ -13,7 +13,10 @@ import numpy as np
 
 
 def Kmeans(network ,k=3):
+    if k >16:
+        print('use smaller k')
     df = pd.DataFrame(columns=['n', 'x', 'y'])
+    graphi = gui.graphic(network)
 
     for n in network.nodes:
         df.loc[n] = [n.id,n.x,n.y]
@@ -26,13 +29,13 @@ def Kmeans(network ,k=3):
         i+1: [np.random.randint(0, network.xsize), np.random.randint(0, network.ysize)]
         for i in range(k)
     }
-    colmap = {1: 'r', 2: 'g', 3: 'b',4: 'y',5: 'k',6: 'm',7: 'c'}
+    colmap = {1: 'r', 2: 'g', 3: 'b',4: 'y',5: 'k',6: 'm',7: 'c',8: 'pink',9 :'blue' ,10 :'green',11:'purple',12:'cyan',13:'red',14:'yellow',15:'black',16:'magenta'}
     for i in centroids.keys():
-        plt.scatter(*centroids[i], color=colmap[i])
+        plt.scatter(*centroids[i], color=colmap[i],s=400)
 
     plt.show()
 
-    print(df)
+    # print(df)
 
     def assignment(df, centroids):
         for i in centroids.keys():
@@ -50,14 +53,14 @@ def Kmeans(network ,k=3):
         return df
 
     df = assignment(df, centroids)
-    print(df.head())
+    # print(df.head())
     fig = plt.figure()
-    plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k')
+    plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k',s=400)
     for i in centroids.keys():
         plt.scatter(*centroids[i], color=colmap[i])
 
     plt.show()
-    print(df)
+    # print(df)
 
     ## Update Stage
     print("arrows")
@@ -76,7 +79,7 @@ def Kmeans(network ,k=3):
         
     fig = plt.figure()
     ax = plt.axes()
-    plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k')
+    plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k',s=400)
     for i in centroids.keys():
         plt.scatter(*centroids[i], color=colmap[i])
 
@@ -87,13 +90,12 @@ def Kmeans(network ,k=3):
         dy = (centroids[i][1] - old_centroids[i][1]) * 0.75
         ax.arrow(old_x, old_y, dx, dy, head_width=2, head_length=3, fc=colmap[i], ec=colmap[i])
     plt.show()
-    print(df)
-    print("done")
+    # print(df)
     df = assignment(df, centroids)
 
     # Plot results
     fig = plt.figure()
-    plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k')
+    plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k',s=400)
     for i in centroids.keys():
         plt.scatter(*centroids[i], color=colmap[i])
 
@@ -108,13 +110,14 @@ def Kmeans(network ,k=3):
 
     for n in network.nodes:
         if(n.id != 0):
-            print(n,df['closest'][n])
-            n.parent_setter(df['color'][n])
+            # print(n,df['closest'][n])
+            n.cluster.clear()
+            n.cluster.append(df['color'][n])
 
     network.introduce_yourself()
 
     graphi.Kmeans_draw()
-
+    print("kmeans is done")
 
     # while True:
     #     closest_centroids = df['closest'].copy(deep=True)
@@ -147,19 +150,14 @@ def Kmeans(network ,k=3):
 
 
 
+# env = simpy.Environment()
+# net1 = network.Net(env)
+# net1.random_net_generator(env,net1,10)
+# net1.introduce_yourself()
+# graphi = gui.graphic(net1)
+# graphi.draw_nods()
 
-k = 3
-env = simpy.Environment()
-net1 = network.Net(env)
-net1.random_net_generator(env,net1,10)
-net1.introduce_yourself()
-graphi = gui.graphic(net1)
-graphi.draw_nods()
-
-Kmeans(net1,3)
-
-
-
+# Kmeans(net1,3)
 
 
 
