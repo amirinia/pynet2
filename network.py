@@ -93,7 +93,7 @@ class Net():
                     if(n!=n1):
                         if n1 not in n.neighbors:
                             n.neighbors.append(n1)
-                            print("{0} <=> {1} d= {2} rssi {3}".format(str(n.id) , str(n1.id) , math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),RSSI.RSSI_nodes(n,n1)))
+                            print("{0} <=> {1} d= {2} rssi {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
         print("+++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
 
 

@@ -15,7 +15,7 @@ net1.random_net_generator(env,net1,10)
 def Kmeans(network,itrations):
 
     for n in net1.nodes:
-        distance = config.AREA_WIDTH
+        distance = 200
         #print(net1.distance(n,nodech))
         for i in range(itrations):
         
