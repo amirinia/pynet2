@@ -11,17 +11,20 @@ from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 import numpy as np
 
-k = 6
+k = 3
 env = simpy.Environment()
 net1 = network.Net(env)
-net1.random_net_generator(env,net1,20)
+net1.random_net_generator(env,net1,10)
+net1.introduce_yourself()
+graphi = gui.graphic(net1)
+graphi.draw_nods()
 
-df = pd.DataFrame(columns=['x', 'y'])
+df = pd.DataFrame(columns=['n', 'x', 'y'])
 
 for n in net1.nodes:
-    df.loc[n] = [n.x,n.y]
+    df.loc[n] = [n.id,n.x,n.y]
 
-print(df)
+
 kmeans = KMeans(n_clusters=3).fit(df)
 plt.scatter(df['x'], df['y'], color='k')
 # centroids[i] = [x, y]
@@ -35,6 +38,7 @@ for i in centroids.keys():
 
 plt.show()
 
+print(df)
 
 def assignment(df, centroids):
     for i in centroids.keys():
@@ -53,13 +57,16 @@ def assignment(df, centroids):
 
 df = assignment(df, centroids)
 print(df.head())
-fig = plt.figure(figsize=(5, 5))
+fig = plt.figure()
 plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k')
 for i in centroids.keys():
     plt.scatter(*centroids[i], color=colmap[i])
 
 plt.show()
+print(df)
 
+## Update Stage
+print("arrows")
 
 import copy
 
@@ -73,7 +80,7 @@ def update(k):
 
 centroids = update(centroids)
     
-fig = plt.figure(figsize=(5, 5))
+fig = plt.figure()
 ax = plt.axes()
 plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k')
 for i in centroids.keys():
@@ -86,31 +93,50 @@ for i in old_centroids.keys():
     dy = (centroids[i][1] - old_centroids[i][1]) * 0.75
     ax.arrow(old_x, old_y, dx, dy, head_width=2, head_length=3, fc=colmap[i], ec=colmap[i])
 plt.show()
-
+print(df)
+print("done")
 df = assignment(df, centroids)
 
 # Plot results
-fig = plt.figure(figsize=(5, 5))
+fig = plt.figure()
 plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k')
 for i in centroids.keys():
     plt.scatter(*centroids[i], color=colmap[i])
 
 plt.show()
+print(df)
 
-while True:
-    closest_centroids = df['closest'].copy(deep=True)
-    centroids = update(centroids)
-    df = assignment(df, centroids)
-    if closest_centroids.equals(df['closest']):
-        break
+# for i, row in df.iterrows():
+    # for j, column in row.iteritems():
+    # print(i,df['closest'][i])
+    #print(net1.nodes[i].id)
 
-fig = plt.figure(figsize=(5, 5))
-plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k')
-for i in centroids.keys():
-    plt.scatter(*centroids[i], color=colmap[i])
 
-plt.show()
+for n in net1.nodes:
+    if(n.id != 0):
+        print(n,df['closest'][n])
+        n.parent_setter(df['color'][n])
 
+net1.introduce_yourself()
+
+graphi.Kmeans_draw()
+
+
+# while True:
+#     closest_centroids = df['closest'].copy(deep=True)
+#     centroids = update(centroids)
+#     df = assignment(df, centroids)
+#     if closest_centroids.equals(df['closest']):
+#         break
+
+# fig = plt.figure(figsize=(5, 5))
+# plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k')
+# for i in centroids.keys():
+#     plt.scatter(*centroids[i], color=colmap[i])
+
+# plt.show()
+
+# print(df)
 
 # centroids = kmeans.cluster_centers_
 

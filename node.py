@@ -129,3 +129,6 @@ class Node():
     def send_ACK(self,destination_node):
         message1 = message.MyMessage()
         #message1.send_message("ack",cls,destination_node)
+
+    def parent_setter(self,ch):
+        self.parent.append(ch)

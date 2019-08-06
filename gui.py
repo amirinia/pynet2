@@ -185,3 +185,28 @@ class graphic:
             #ani = animation.FuncAnimation(fig, animate, interval=1000)
             plt.legend("Network")
             plt.show()
+
+    def Kmeans_draw(self):
+        print("GUI Kmean ONLY")
+        G = nx.Graph()
+        #G.add_node("BS",pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
+        for node in self.mynetwork.nodes:
+            if(node.is_alive == True):
+                G.add_node(node.id,pos=(node.x,node.y),weight=node.id)
+
+
+        for node in self.mynetwork.nodes:
+            if(node.id != 0):
+                if(node.is_alive == True):
+                    for node1 in self.mynetwork.nodes:
+                        if(node1.id != 0):
+                            if node is not node1:
+                                #print("bbbb",node.parent[0],node,node1.parent[0],node1,str(node.parent[0])==str(node1.parent[0]))
+
+                                if (str(node.parent[0])==str(node1.parent[0])):
+                                    print("Kmean",node,node1)
+                                    G.add_edge(node.id,node1.id)
+        nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True)
+        #ani = animation.FuncAnimation(fig, animate, interval=1000)
+        plt.legend("Network")
+        plt.show()
