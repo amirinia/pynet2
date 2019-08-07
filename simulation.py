@@ -19,8 +19,17 @@ print("_____________________________Algorithm___________________________________
 KMEANS.Kmeans(net1,6)
 print("_____________________________Algorithm___________________________________ end\n\n")
 
+graphi.draw_clusters()
+net1.cluster_formation()
+net1.introduce_yourself()
+
 print("++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
 env.run(until=40)#config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
-net1.cluster_formation()
+
+
+
+# for n in net1.nodes:
+#     if len(n.parent) != 0:
+#         print(n,next(reversed(n.parent)))

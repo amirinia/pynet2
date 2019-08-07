@@ -24,6 +24,7 @@ class Node():
         self.outbox = []
         self.parent = []
         self.cluster = []
+        self.TDMA = 0
         self.power = EnergyModel(power_type = power_type)
         self.sensor = sensor.sensor(self.id,str(self.id) + "sensor")
 
@@ -35,33 +36,34 @@ class Node():
 
     def run(self):
         # print("node is runing",self.id)
-        while True:
-            if(self.is_alive == True):
-                #print(next(reversed(self.energy)))
-                if (next(reversed(self.energy)) <= config.DEAD_NODE_THRESHOLD ):
-                    print("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
+        if self.id != 0:
+            while True:
+                if(self.is_alive == True):
+                    #print(next(reversed(self.energy)))
+                    if (next(reversed(self.energy)) <= config.DEAD_NODE_THRESHOLD ):
+                        print("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
+                        if(self.is_CH == True):
+                            print("ch is dead we need find another one")
+                            self.is_CH == False
+                        self.is_alive = False
+
+                if self.net.clock[0]=="TDMA":
+                    print("at {0} node {1} is working on TDMA {2} cluster {3} ".format(self.env.now,self.id,self.TDMA,self.cluster))
+                    yield self.env.timeout(1)
+                    try:
+                        if(self.is_alive == True):
+                            yield self.env.process(self.node_beaconing(self.env))
+                    except simpy.Interrupt:
+                        print("inter")
+
+                elif self.net.clock[0]=="CSMA":
                     if(self.is_CH == True):
-                        print("ch is dead we need find another one")
-                        self.is_CH == False
-                    self.is_alive = False
+                        print("at %d CH talks in CSMA   %d "%(self.env.now,self.is_CH))
+                    yield self.env.timeout(1)
 
-            if self.net.clock[0]=="TDMA":
-                print("at %d node %d is working on TDMA  "%(self.env.now,self.id))
-                yield self.env.timeout(1)
-                try:
-                    if(self.is_alive == True):
-                        yield self.env.process(self.node_beaconing(self.env))
-                except simpy.Interrupt:
-                    print("inter")
-
-            elif self.net.clock[0]=="CSMA":
-                if(self.is_CH == True):
-                    print("at %d CH talks in CSMA   %d "%(self.env.now,self.is_CH))
-                yield self.env.timeout(1)
-
-            else:
-                #print("Inactive",self.env.now) # inactive time
-                yield self.env.timeout(1)
+                else:
+                    #print("Inactive",self.env.now) # inactive time
+                    yield self.env.timeout(1)
 
 
     def node_beaconing(self,env):
@@ -79,11 +81,12 @@ class Node():
                         message_sender.broadcast(n,"beacon adv {0} at env:{1}".format(n.id ,env.now))
 
             if (len(self.parent) != 0): # if node has parent send data to parent
-                if((env.now % self.TDMA )==0):
-                    yield self.env.timeout(self.TDMA_slot_number)
-                    if(self.parent[0].is_alive == True):
-                        print("at env:{3} light: {0} temperature: {1} from node {2} TDMA-based to {4} with pos {5} {6}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,env.now,self.parent[0],self.x,self.y))
-                        message_sender.send_message("at env:{3} light: {0} temperature: {1} from node {2} to {4}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,env.now,self.parent[0]),self,self.parent[0])
+                if self.TDMA != 0:
+                    if((env.now % self.TDMA )==0):
+                        yield self.env.timeout(config.CSMA_duration+config.Inactive_duration)
+                        if(self.parent[0].is_alive == True):
+                            print("at env:{3} light: {0} temperature: {1} from node {2} TDMA-based to {4} with pos {5} {6}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,env.now,self.parent[0],self.x,self.y))
+                            message_sender.send_message("at env:{3} light: {0} temperature: {1} from node {2} to {4}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,env.now,self.parent[0]),self,self.parent[0])
                     msg_len = message_sender.message_length()
                     self.power.decrease_tx_energy(msg_len)
                     self.energy.append(self.power.energy)
@@ -133,6 +136,7 @@ class Node():
 
     def parent_setter(self,ch):
         self.parent.append(ch)
+        #print(ch, "is head")
 
     def change_to_clusterhead(self):
         message_sender = message.Message()

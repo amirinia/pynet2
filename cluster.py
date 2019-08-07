@@ -27,7 +27,8 @@ class mycluster:
         # node.TDMA_slot_number = self.nodes.index(node)
         # self.TDMA_slots += 1
         #print ("Cluster {0} has node id {1}".format(self.name,node.id))
-
+        node.TDMA = self.nodes.index(node)
+        
     def remove_node(self, node):
         self.nodelist.remove(node)
         # self.TDMA_slots -= 1
@@ -44,7 +45,11 @@ class mycluster:
             return average_en/len(self.nodes)
     
     def cluster_head_setter(self,node):
+
         self.CH = node
+        for n in self.nodes:
+            if n != node:
+                n.parent_setter(node)
 
     def Clusterhead_Selection(self):
         maxi = max(i.energy for i in self.nodes)
@@ -52,3 +57,4 @@ class mycluster:
             if (i.energy == maxi):
                 i.change_to_clusterhead()
                 print(i,"is cluster head")
+                self.cluster_head_setter(i)

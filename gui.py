@@ -93,20 +93,25 @@ class graphic:
             if(node.is_alive == True):
                 G.add_node(node.id,pos=(node.x,node.y))
                 #G.add_edge(node,"BS")
-        for node in self.mynetwork.clusterheads:
-            #G.add_edge("BS",node)
-            #print(node)
-            pass
-
+        # nodes in cluster
+        for node in self.mynetwork.nodes:
+            if(node.is_alive==True):
+                if(len(node.parent)!=0):
+                    
+                    print("netwww ",node)
+                    G.add_edge(node.id,node.parent[0].id)
+                    
         for cluster in self.mynetwork.clusters:
-            if(cluster.is_alive==True):
+            #if(cluster.is_alive==True):
+                print("gui",cluster)
                 for node in cluster.nodes:
+                    print(node)
                     if(node.is_alive == True):
                         if(len(node.parent)!=0):
                             #G.add_edge(node,node.parent)
                             #print("({0}, {1})".format(type(node),type(node.parent[0])))
                             #print("({0}, {1})".format((node),(node.parent[0])))
-                            G.add_edge(node.id,node.parent[0].id)
+                            G.add_edge(node.id,next(reversed(node.parent)))
         nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True, node_size=400)
         #ani = animation.FuncAnimation(fig, animate, interval=1000)
         plt.legend("Network")

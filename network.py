@@ -14,6 +14,7 @@ class Net():
         self.action = env.process(self.run())
         self.clock = ["CSMA"]
         self.nodes = []
+        self.clusters = []
         self.xsize = xsize
         self.ysize = ysize
         #add controller
@@ -55,7 +56,7 @@ class Net():
             for i in range(inactive_duration):
                 self.clock.clear()
                 self.clock.append("INACTIVE")
-                print("inactive network",self.env.now)
+                print("at %d inactive network" %self.env.now)
                 yield self.env.timeout(1)
             self.network_nodedsicovery()
             print(self.nodes)
@@ -130,7 +131,11 @@ class Net():
         # print("Network {0} with {1} node number with size {2} {3} and have {4} clusters".format(self.name,len(self.nodelist),self.xsize,self.ysize,len(self.clusterheads)))
         #print("New network is created : {0} with {1} node number ".format(self.name,self.nodelist.count))
         for x in self.nodes:
-            print("{0} is alive: {5} with energy : {1} with position {2} {3} ; CH is {4}".format(x.id , x.power ,str(x.x) , str(x.y) ,str(x.parent),x.is_alive))
+            if len(x.parent) == 0:
+                print("{0} is alive: {5} with energy : {1} with position {2} {3} ; CH is {4}".format(x.id , x.power ,str(x.x) , str(x.y) ,str(x.parent),x.is_alive))
+
+            if len(x.parent) != 0:
+                print("{0} is alive: {5} with energy : {1} with position {2} {3} ; CH is {4}".format(x.id , x.power ,str(x.x) , str(x.y) ,str(next(reversed(x.parent))),x.is_alive))
         print("==============================Clusters===============================")
         # for c in self.clusters:
         #     print("{0} is alive: {5} with energy : {1} with nodes {2} ; TDMA: {3} ; CH is {4}".format(c.name , c.average_cluster_energy() ,str(c.nodelist) , str(c.TDMA_slots) ,str(c.CH),c.is_alive))
@@ -159,15 +164,15 @@ class Net():
         return float(len(self.clusters))/float(len(self.nodelist))
 
     def cluster_formation(self):
-        clusters = []
+        
         
         for n in self.nodes:
             if n.id != 0:
                 if n.is_alive == True:
-                    if n.cluster not in clusters:
-                        clusters.append(n.cluster)
-        print(clusters)
-        for c in clusters:
+                    if n.cluster not in self.clusters:
+                        self.clusters.append(n.cluster)
+        print(self.clusters)
+        for c in self.clusters:
             mcluster = cluster.mycluster(c,self.env,self)
             for n in self.nodes:
                 if n.cluster == c:

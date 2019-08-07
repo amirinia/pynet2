@@ -1,4 +1,8 @@
 import math
+#TDMA
+CSMA_duration = 9
+TDMA_duration = 7
+Inactive_duration = 14
 
 # and config
 BEACONING_TIME       = 5
