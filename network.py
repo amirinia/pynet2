@@ -4,6 +4,7 @@ import node
 import config
 import math
 import RSSI
+import cluster
 """
 """
 
@@ -158,4 +159,18 @@ class Net():
         return float(len(self.clusters))/float(len(self.nodelist))
 
     def cluster_formation(self):
-        pass
+        clusters = []
+        
+        for n in self.nodes:
+            if n.id != 0:
+                if n.is_alive == True:
+                    if n.cluster not in clusters:
+                        clusters.append(n.cluster)
+        print(clusters)
+        for c in clusters:
+            mcluster = cluster.mycluster(c,self.env,self)
+            for n in self.nodes:
+                if n.cluster == c:
+                    mcluster.add_node(n)
+
+            print(mcluster.nodes)

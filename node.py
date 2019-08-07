@@ -133,3 +133,8 @@ class Node():
 
     def parent_setter(self,ch):
         self.parent.append(ch)
+
+    def change_to_clusterhead(self):
+        message_sender = message.Message()
+        self.is_CH == True
+
