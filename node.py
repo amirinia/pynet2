@@ -48,7 +48,7 @@ class Node():
                         self.is_alive = False
 
                 if self.net.clock[0]=="TDMA":
-                    print("at {0} node {1} is working on TDMA {2} cluster {3} ".format(self.env.now,self.id,self.TDMA,self.cluster))
+                    # print("at {0} node {1} is working on TDMA {2} cluster {3} ".format(self.env.now,self.id,self.TDMA,self.cluster))
                     yield self.env.timeout(1)
                     try:
                         if(self.is_alive == True):
@@ -82,11 +82,13 @@ class Node():
 
             if (len(self.parent) != 0): # if node has parent send data to parent
                 if self.TDMA != 0:
-                    if((env.now % self.TDMA )==0):
+                    if((self.env.now % self.TDMA )==0):
+                        # print(self.id,"I have parent",self.TDMA,"at",self.env.now,"cluster",self.cluster)
+                        print("at env:{3} light: {0} temperature: {1} from node {2} TDMA-based {4} to {5} with pos {6} {7}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,env.now,self.TDMA,self.cluster,self.x,self.y))
+
                         yield self.env.timeout(config.CSMA_duration+config.Inactive_duration)
-                        if(self.parent[0].is_alive == True):
-                            print("at env:{3} light: {0} temperature: {1} from node {2} TDMA-based to {4} with pos {5} {6}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,env.now,self.parent[0],self.x,self.y))
-                            message_sender.send_message("at env:{3} light: {0} temperature: {1} from node {2} to {4}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,env.now,self.parent[0]),self,self.parent[0])
+                        # if(self.parent[-1].is_alive == True):
+                        # message_sender.send_message("at env:{3} light: {0} temperature: {1} from node {2} to {4}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,env.now,self.parent[0]),self,self.parent[0])
                     msg_len = message_sender.message_length()
                     self.power.decrease_tx_energy(msg_len)
                     self.energy.append(self.power.energy)

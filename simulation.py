@@ -24,10 +24,10 @@ net1.cluster_formation()
 net1.introduce_yourself()
 
 print("++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
-env.run(until=40)#config.MAX_RUNTIME)
+env.run(until=200)#config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
-
+net1.network_packet_summery()
 
 
 # for n in net1.nodes:

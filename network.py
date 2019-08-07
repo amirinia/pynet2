@@ -58,9 +58,9 @@ class Net():
                 self.clock.append("INACTIVE")
                 print("at %d inactive network" %self.env.now)
                 yield self.env.timeout(1)
-            self.network_nodedsicovery()
-            print(self.nodes)
-            print("net discovery")
+            # self.network_nodedsicovery()
+            # print(self.nodes)
+            # print("net discovery")
     
     def initialization(self,duration):
         print('initial')
