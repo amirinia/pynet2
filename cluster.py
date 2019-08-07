@@ -50,4 +50,5 @@ class mycluster:
         maxi = max(i.energy for i in self.nodes)
         for i in self.nodes:
             if (i.energy == maxi):
-                self.CH = i
+                i.change_to_clusterhead()
+                print(i,"is cluster head")

@@ -174,3 +174,4 @@ class Net():
                     mcluster.add_node(n)
 
             print(mcluster.nodes)
+            mcluster.Clusterhead_Selection()
