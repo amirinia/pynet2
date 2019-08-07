@@ -21,10 +21,17 @@ class Net():
         controller.net = self
     
     def run(self):
-        self.env.timeout(10)
-        print("Inititial network %d nods at %d"%(len(self.nodes),self.env.now))
+        
         counter = 0
+        initial = False
         while True:
+            if(initial == False):
+                try:
+                    yield self.env.process(self.initialization(10))
+                except simpy.Interrupt:
+                    print('Was interrupted.CSMA')
+                initial = True
+
             counter +=1
             print('\n New Superframe is began CSMA at %d number %d\n' % (self.env.now ,counter))
             CSMA_duration = 9
@@ -52,6 +59,12 @@ class Net():
             self.network_nodedsicovery()
             print(self.nodes)
             print("net discovery")
+    
+    def initialization(self,duration):
+        print('initial')
+        print("Inititial network %d nods at %d"%(len(self.nodes),self.env.now))
+        yield self.env.timeout(duration)
+
 
     def TDMA(self,duration):
         for i in range(duration):
@@ -66,7 +79,6 @@ class Net():
             self.clock.append("CSMA")
             #print("CSMA",env.now)
             yield self.env.timeout(1)
-
 
 
     def random_net_generator(self,env,network,node_number):
@@ -145,4 +157,5 @@ class Net():
             print("there is no cluster to cal CH_prob")
         return float(len(self.clusters))/float(len(self.nodelist))
 
-    
+    def cluster_formation(self):
+        pass

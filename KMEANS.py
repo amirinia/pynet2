@@ -10,7 +10,7 @@ from pandas import DataFrame
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 import numpy as np
-
+import cluster
 
 def Kmeans(network ,k=3):
     if k >16:
@@ -63,7 +63,7 @@ def Kmeans(network ,k=3):
     # print(df)
 
     ## Update Stage
-    print("arrows")
+    # print("arrows")
 
     import copy
 
@@ -98,7 +98,7 @@ def Kmeans(network ,k=3):
     plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k',s=400)
     for i in centroids.keys():
         plt.scatter(*centroids[i], color=colmap[i])
-
+    ax.legend()
     plt.show()
     print(df)
 

@@ -4,6 +4,7 @@ import simpy
 import network
 import node
 import KMEANS
+
 # to run simulation you need initial networks ( just simply define nodes and addd to network or use random generator)
 env = simpy.Environment()
 net1 = network.Net(env)
