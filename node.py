@@ -61,24 +61,46 @@ class Node():
                         print("at %d CH talks in CSMA   %d "%(self.env.now,self.is_CH))
                     yield self.env.timeout(1)
 
+                    try:
+                        if(self.is_alive == True):
+                            yield self.env.process(self.csma_beaconing(self.env))
+                    except simpy.Interrupt:
+                        print("inter")
+
+
                 else:
                     #print("Inactive",self.env.now) # inactive time
                     yield self.env.timeout(1)
 
-
-    def node_beaconing(self,env):
+    def csma_beaconing(self,env):
         message_sender = message.Message()
         if(self.is_alive == True): #if node is alive
             if len(self.parent) == 0: # if node has no parent ,beacons
                 if(self.is_CH == False):
                     yield self.env.timeout(1)
-                    print("at {0} beacon adv is sent by {1} is alive {2}, since it has no CH with energy {3}".format(env.now,self.id,self.is_alive,self.power))
+                    print("at {0} beacon CSMA adv is sent by {1} is alive {2}, since it has no CH with energy {3}".format(env.now,self.id,self.is_alive,self.power))
                     msg_len = message_sender.message_length()
                     self.power.decrease_tx_energy(msg_len)
                     self.energy.append(self.power.energy)
 
                     for n in self.neighbors:
-                        message_sender.broadcast(n,"beacon adv {0} at env:{1}".format(n.id ,env.now))
+                        message_sender.broadcast(n,"beacon CSMA adv {0} at env:{1}".format(n.id ,env.now))
+        yield self.env.timeout(1)
+
+
+    def node_beaconing(self,env):
+        message_sender = message.Message()
+        if(self.is_alive == True): #if node is alive
+            # if len(self.parent) == 0: # if node has no parent ,beacons
+            #     if(self.is_CH == False):
+            #         yield self.env.timeout(1)
+            #         print("at {0} beacon adv is sent by {1} is alive {2}, since it has no CH with energy {3}".format(env.now,self.id,self.is_alive,self.power))
+            #         msg_len = message_sender.message_length()
+            #         self.power.decrease_tx_energy(msg_len)
+            #         self.energy.append(self.power.energy)
+
+            #         for n in self.neighbors:
+            #             message_sender.broadcast(n,"beacon adv {0} at env:{1}".format(n.id ,env.now))
 
             if (len(self.parent) != 0): # if node has parent send data to parent
                 if self.TDMA != 0:
@@ -96,10 +118,10 @@ class Node():
             
             if (self.is_CH == True): # if node is cluster head
                 self.power.decrease_energy(discharging_time = 100)  # idle discharge
-                yield self.env.timeout(config.AGGREGATE_TIME + self.TDMA)
                 self.node_send_message(self.aggregate,0)
                 self.aggregate.clear()
                 print("CH {0} aggregate sent to BS on env:{1}================================+++++++++++++++++++++++++++++++++++++++++++++++ \n".format(self.id,env.now))
+                yield self.env.timeout(config.AGGREGATE_TIME + self.TDMA)
 
 
     def node_send_message(self, str_message , node):

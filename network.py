@@ -79,7 +79,7 @@ class Net():
         for i in range(duration):
             self.clock.clear()
             self.clock.append("CSMA")
-            #print("CSMA",env.now)
+            print("at {0} CSMA".format(self.env.now))
             yield self.env.timeout(1)
 
 
