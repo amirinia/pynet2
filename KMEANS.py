@@ -116,6 +116,13 @@ def Kmeans(network ,k=3):
 
     network.introduce_yourself()
 
+    
+    for c in network.clusters:
+        for n in c.nodes:
+            n.add_nodes(c.nodes)
+
+        
+            
     graphi.Kmeans_draw()
     print("kmeans is done")
 
@@ -146,7 +153,7 @@ def Kmeans(network ,k=3):
     #     plt.scatter(*centroid, color=colmap[idx+1])
 
     # plt.show()
-
+    
 
 
 

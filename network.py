@@ -72,7 +72,7 @@ class Net():
         for i in range(duration):
             self.clock.clear()
             self.clock.append("TDMA")
-            print("TDMA",self.env.now)
+            print("at {0} TDMA {1}".format(self.env.now,(self.env.now % config.TDMA_duration)))
             yield self.env.timeout(1)
 
     def CSMA(self,duration):
