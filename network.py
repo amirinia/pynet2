@@ -79,7 +79,7 @@ class Net():
         for i in range(duration):
             self.clock.clear()
             self.clock.append("CSMA")
-            print("at {0} CSMA".format(self.env.now))
+            print("at {0} CSMA {1}".format(self.env.now,(self.env.now % config.CSMA_duration)))
             yield self.env.timeout(1)
 
 
@@ -108,7 +108,7 @@ class Net():
                     if(n!=n1):
                         if n1 not in n.neighbors:
                             n.neighbors.append(n1)
-                            print("{0} <=> {1} d= {2} rssi {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
+                            print("{0} <=> {1} D= {2} RSSI {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
         print("+++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
 
 

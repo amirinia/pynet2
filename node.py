@@ -85,7 +85,15 @@ class Node():
 
                     for n in self.neighbors:
                         message_sender.broadcast(n,"beacon CSMA adv {0} at env:{1}".format(n.id ,env.now))
-        yield self.env.timeout(1)
+        yield self.env.timeout(config.BEACONING_TIME)
+
+
+        if (self.is_CH == True): # if node is cluster head
+            self.power.decrease_energy(discharging_time = 100)  # idle discharge
+            self.node_send_message(self.aggregate,0)
+            self.aggregate.clear()
+            print("CH {0} aggregate CSMA sent to BS on env:{1}================================+++++++++++++++++++++++++++++++++++++++++++++++ \n".format(self.id,env.now))
+            yield self.env.timeout(config.AGGREGATE_TIME + self.TDMA)
 
 
     def node_beaconing(self,env):
@@ -168,3 +176,4 @@ class Node():
 
     def add_nodes(self,list):
         self.neighbors.append(list)
+        print(self.neighbors)

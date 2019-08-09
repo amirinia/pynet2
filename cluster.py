@@ -9,7 +9,7 @@ class mycluster:
         print("\nCluster {0} is created".format(self.id))
         self.is_alive = True
         self.env = env
-        # self.action = env.process(self.run(env))
+        self.action = env.process(self.run(env))
         self.network = network
         self.next_CH = []
         self.CH = []      
@@ -20,10 +20,17 @@ class mycluster:
     def __repr__(self):
         return str(self.name)
 
+    def run(self,env):
+        print(self.id,"cluster is runing",self.env.now)
+        yield self.env.timeout(1)
 
     def add_node(self, node):
         #print (self.id) # debugging...
+        if(len(self.nodes )> 7):
+            print("cluster nodes is exceeded")
+
         self.nodes.append(node)
+        
         # node.TDMA_slot_number = self.nodes.index(node)
         # self.TDMA_slots += 1
         #print ("Cluster {0} has node id {1}".format(self.name,node.id))
