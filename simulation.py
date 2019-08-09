@@ -23,10 +23,10 @@ print("_____________________________Algorithm___________________________________
 net1.cluster_formation()
 net1.introduce_yourself()
 
-for n in net1.nodes:
-    print(n,n.neighbors)
-    if len(n.parent) != 0:
-        print(n,next(reversed(n.parent)))
+# for n in net1.nodes:
+#     print(n,n.neighbors)
+#     if len(n.parent) != 0:
+#         print(n,next(reversed(n.parent)))
 
 print("++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
 env.run(until=200)#config.MAX_RUNTIME)

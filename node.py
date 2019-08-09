@@ -35,8 +35,21 @@ class Node():
         return str("node"+str(self.id))
 
     def run(self):
-        # print("node is runing",self.id)
-        if self.id != 0:
+        if self.id == 0: # if node is BS
+            while True:
+                if self.net.clock[0]=="CSMA":
+                    print("BS is running",self.env.now)
+                    yield self.env.timeout(config.BEACONING_TIME)
+
+                elif self.net.clock[0]=="TDMA":
+                    print("BS is calculating")
+                    yield self.env.timeout(config.BEACONING_TIME)
+                
+                else:
+                    print("BS is proccessing")
+                    yield self.env.timeout(config.BEACONING_TIME)
+
+        if self.id != 0: # if node is not BS
             while True:
                 if(self.is_alive == True):
                     #print(next(reversed(self.energy)))
@@ -66,7 +79,6 @@ class Node():
                             yield self.env.process(self.csma_beaconing(self.env))
                     except simpy.Interrupt:
                         print("inter")
-
 
                 else:
                     #print("Inactive",self.env.now) # inactive time
