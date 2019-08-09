@@ -89,7 +89,7 @@ net1.network_nodedsicovery()
 graphi = gui.graphic(net1)
 graphi.draw_nods()
 
-env.run(until=30)
+env.run(until=80)
 
 print(net1.nodes)
 

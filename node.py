@@ -42,11 +42,11 @@ class Node():
                     yield self.env.timeout(config.BEACONING_TIME)
 
                 elif self.net.clock[0]=="TDMA":
-                    print("BS is calculating")
+                    print("BS is calculating",self.env.now)
                     yield self.env.timeout(config.BEACONING_TIME)
                 
                 else:
-                    print("BS is proccessing")
+                    print("BS is proccessing",self.env.now)
                     yield self.env.timeout(config.BEACONING_TIME)
 
         if self.id != 0: # if node is not BS
@@ -72,7 +72,6 @@ class Node():
                 elif self.net.clock[0]=="CSMA":
                     if(self.is_CH == True):
                         print("at %d CH talks in CSMA   %d "%(self.env.now,self.is_CH))
-                    yield self.env.timeout(1)
 
                     try:
                         if(self.is_alive == True):
@@ -89,7 +88,7 @@ class Node():
         if(self.is_alive == True): #if node is alive
             if len(self.parent) == 0: # if node has no parent ,beacons
                 if(self.is_CH == False):
-                    yield self.env.timeout(1)
+                    # yield self.env.timeout(1)
                     print("at {0} beacon CSMA adv is sent by {1} is alive {2}, since it has no CH with energy {3}".format(env.now,self.id,self.is_alive,self.power))
                     msg_len = message_sender.message_length()
                     self.power.decrease_tx_energy(msg_len)
@@ -97,7 +96,7 @@ class Node():
 
                     for n in self.neighbors:
                         message_sender.broadcast(n,"beacon CSMA adv {0} at env:{1}".format(n.id ,env.now))
-        yield self.env.timeout(config.BEACONING_TIME)
+        yield self.env.timeout( random.randint(0,config.CSMA_duration))
 
 
         if (self.is_CH == True): # if node is cluster head
