@@ -22,12 +22,14 @@ class mycluster:
 
     def run(self,env):
         print(self.id,"cluster is runing",self.env.now)
+        if len(self.nodes)>7:
+            print("nodes number is exceeded")
         yield self.env.timeout(1)
 
     def add_node(self, node):
         #print (self.id) # debugging...
         if(len(self.nodes )> 7):
-            print("cluster nodes is exceeded")
+            print("cluster nodes is exceeded by",node)
 
         self.nodes.append(node)
         

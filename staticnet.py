@@ -99,3 +99,8 @@ graphi.draw_neighbors()
 # net1.network_outboxes()
 net1.network_packet_summery()
 net1.introduce_yourself()
+
+for n in net1.nodes:
+    print("-")
+    if n.is_CH == True:
+        print(n)

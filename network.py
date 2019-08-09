@@ -23,7 +23,6 @@ class Net():
         controller.net = self
     
     def run(self):
-        
         counter = 0
         initial = False
         while True:
@@ -63,9 +62,11 @@ class Net():
             # print("net discovery")
     
     def initialization(self,duration):
-        print('initial')
+        print('cluster formation\n')
+        self.cluster_formation()
         print("Inititial network %d nods at %d"%(len(self.nodes),self.env.now))
         yield self.env.timeout(duration)
+        print("net is initials ends at {0} \n".format(self.env.now))
 
 
     def TDMA(self,duration):
@@ -163,9 +164,7 @@ class Net():
             print("there is no cluster to cal CH_prob")
         return float(len(self.clusters))/float(len(self.nodelist))
 
-    def cluster_formation(self):
-        
-        
+    def cluster_formation(self):        
         for n in self.nodes:
             if n.id != 0:
                 if n.is_alive == True:

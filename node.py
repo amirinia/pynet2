@@ -38,11 +38,11 @@ class Node():
         if self.id == 0: # if node is BS
             while True:
                 if self.net.clock[0]=="CSMA":
-                    print("BS is running",self.env.now)
+                    print("at {0} BS is running".format(self.env.now))
                     yield self.env.timeout(config.BEACONING_TIME)
 
                 elif self.net.clock[0]=="TDMA":
-                    print("BS is calculating",self.env.now)
+                    print("at {0} BS is calculating".format(self.env.now))
                     yield self.env.timeout(config.BEACONING_TIME)
                 
                 else:
@@ -96,15 +96,19 @@ class Node():
 
                     for n in self.neighbors:
                         message_sender.broadcast(n,"beacon CSMA adv {0} at env:{1}".format(n.id ,env.now))
+
+            if (self.is_CH == True): # if node is cluster head
+                            print("test2")
+                            self.power.decrease_energy(discharging_time = 100)  # idle discharge
+                            self.node_send_message(self.aggregate,0)
+                            self.aggregate.clear()
+                            print("CH {0} aggregate CSMA sent to BS on env:{1}================================+++++++++++++++++++++++++++++++++++++++++++++++ \n".format(self.id,env.now))
+                            # yield self.env.timeout(config.AGGREGATE_TIME + self.TDMA)
+
         yield self.env.timeout( random.randint(0,config.CSMA_duration))
 
 
-        if (self.is_CH == True): # if node is cluster head
-            self.power.decrease_energy(discharging_time = 100)  # idle discharge
-            self.node_send_message(self.aggregate,0)
-            self.aggregate.clear()
-            print("CH {0} aggregate CSMA sent to BS on env:{1}================================+++++++++++++++++++++++++++++++++++++++++++++++ \n".format(self.id,env.now))
-            yield self.env.timeout(config.AGGREGATE_TIME + self.TDMA)
+
 
 
     def node_beaconing(self,env):
@@ -125,7 +129,7 @@ class Node():
                 if self.TDMA != 0:
                     if(((self.env.now % config.TDMA_duration)==self.TDMA )):
                         # print(self.id,"I have parent",self.TDMA,"at",self.env.now,"cluster",self.cluster)
-                        print("at env:{3} light: {0} temperature: {1} from node {2} TDMA-based {4} to {5} with pos {6} {7}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,env.now,self.TDMA,self.cluster,self.x,self.y))
+                        print("at env:{3} light: {0} temperature: {1} from node {2} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,env.now,self.TDMA,self.cluster,self.x,self.y,self.parent))
 
                         # yield self.env.timeout(config.CSMA_duration+config.Inactive_duration)
                         # if(self.parent[-1].is_alive == True):

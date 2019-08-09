@@ -106,6 +106,7 @@ def Kmeans(network ,k=3):
         # for j, column in row.iteritems():
         # print(i,df['closest'][i])
         #print(network.nodes[i].id)
+    
 
 
     for n in network.nodes: # add cluster to node
@@ -118,6 +119,7 @@ def Kmeans(network ,k=3):
 
     
     for c in network.clusters: # add neighbor to node
+        print("add neighbor to node")
         for n in c.nodes:
             n.add_nodes(c.nodes)
 
