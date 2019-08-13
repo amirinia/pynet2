@@ -29,6 +29,8 @@ class Node():
         self.sensor = sensor.sensor(self.id,str(self.id) + "sensor")
         self.getBS = False
         self.distance = []
+        self.next_hop = []
+        self.aggregate = []
 
     def __str__(self):
         return str(self.id)
@@ -98,16 +100,17 @@ class Node():
 
                     for n in self.neighbors:
                         message_sender.broadcast(n,"beacon CSMA adv {0} at env:{1}".format(n.id ,env.now))
-
-            if (self.is_CH == True): # if node is cluster head
+            
+            if self.net.clock[0]=="CSMA":
+                if (self.is_CH == True): # if node is cluster head
                             print("test2")
                             self.power.decrease_energy(discharging_time = 100)  # idle discharge
                             self.node_send_message(self.aggregate,0)
                             self.aggregate.clear()
                             print("CH {0} aggregate CSMA sent to BS on env:{1}================================+++++++++++++++++++++++++++++++++++++++++++++++ \n".format(self.id,env.now))
-                            # yield self.env.timeout(config.AGGREGATE_TIME + self.TDMA)
+                            yield self.env.timeout(random.randint(1,config.AGGREGATE_TIME ))
 
-        yield self.env.timeout( random.randint(0,config.CSMA_duration))
+        yield self.env.timeout( random.randint(1,config.CSMA_duration))
 
 
 
@@ -218,3 +221,15 @@ class Node():
     def add_nodes(self,list):
         self.neighbors.append(list)
         print(self.neighbors)
+
+
+    def change_CulsterHead(self):
+        if(self.is_CH == False):
+            self.is_CH = True
+            print("node {0} becomes CH (change)and parent is {1}".format(self.id,self.parent))
+    
+        else:
+            self.is_CH == False
+            self.next_hop.clear()
+            print("node {0} becomes simple node (change) and parent is {1}".format(self.id,self.parent))
+    

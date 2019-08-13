@@ -16,7 +16,7 @@ class LEACHC:
             if(len(node.neighbors)!=0):
 
                 if(node.energy >= max(neighbor.energy for neighbor in node.neighbors)):
-                    # node.change_CulsterHead()
+                    node.change_CulsterHead()
                     mycluster1 = cluster.mycluster(node.id,env,self.network)
                     for n in node.neighbors:
                         mycluster1.add_node(n)
