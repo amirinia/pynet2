@@ -5,6 +5,8 @@ import config
 import math
 import RSSI
 import cluster
+import message
+
 """
 """
 
@@ -15,6 +17,8 @@ class Net():
         self.clock = ["CSMA"]
         self.nodes = []
         self.clusters = []
+        self.clusterheads = []
+
         self.xsize = xsize
         self.ysize = ysize
         #add controller
@@ -26,6 +30,7 @@ class Net():
         counter = 0
         initial = False
         while True:
+            self.ClusterHead_finder()
             if(initial == False):
                 try:
                     yield self.env.process(self.initialization(10))
@@ -62,8 +67,16 @@ class Net():
             # print("net discovery")
     
     def initialization(self,duration):
+        print("BS start to advertise")
+        print("neighbors of BS: ",self.nodes[0].neighbors)
+        for n in self.nodes[0].neighbors:
+            # n.distance.clear()
+            n.distance.append(self.nodes[0])
+
+        message_sender = message.Message()
+        message_sender.broadcast(self.nodes[0],"BS boradcast adv {0} at env:{1}".format(self.nodes[0].id ,self.env.now))
         print('cluster formation\n')
-        self.cluster_formation()
+        # self.cluster_formation()
         print("Inititial network %d nods at %d"%(len(self.nodes),self.env.now))
         yield self.env.timeout(duration)
         print("net is initials ends at {0} \n".format(self.env.now))
@@ -179,3 +192,22 @@ class Net():
 
             print(mcluster.nodes)
             mcluster.Clusterhead_Selection()
+
+    def add_cluster(self, cluster):
+        self.clusters.append(cluster)
+        cluster.network = self
+        #print ("{0} network has cluster id {1}".format(self.name,cluster.id))
+
+    def remove_cluster(self, cluster):
+        self.clusters.remove(cluster)
+
+    def ClusterHead_finder(self):
+        self.clusterheads.clear()
+        for n in self.nodes:
+            if(n.is_alive==True):
+                if (n.is_CH == True):
+    
+                    self.clusterheads.append(n)
+                    self.clusterheads =  list(dict.fromkeys(self.clusterheads)) # remove duplicates
+        print("clusterheads are {0} in network  \n".format(self.clusterheads))
+    

@@ -27,6 +27,8 @@ class Node():
         self.TDMA = 0
         self.power = EnergyModel(power_type = power_type)
         self.sensor = sensor.sensor(self.id,str(self.id) + "sensor")
+        self.getBS = False
+        self.distance = []
 
     def __str__(self):
         return str(self.id)
@@ -157,26 +159,50 @@ class Node():
         if(self.is_CH == True): # if node is CH then aggregate
             self.aggregate.append(str_message)
         #self.send_ACK(sender_node)
-        #print(self.name + " node_receive_message&&&&&&&&&&&&&&*************** " + str_message + " from "+ sender_node.name )
+        #print(self.id + " node_receive_message&&&&&&&&&&&&&&*************** " + str_message + " from "+ sender_node.name )
         if( "is cluster Head" in str_message ):
-            self.change_TDMA(sender_node.TDMA)
+            # self.change_TDMA(sender_node.TDMA)
             self.parent_setter(sender_node)
             if(self.is_CH == True):
                 self.change_CulsterHead()
 
-        
         if( "BS" in str_message):
-            print("temp",self.name)
-            time.sleep(2)
-            for n in self.neighbors:
-                print(n,self)
-                if any("BS" in s for s in n.inbox):
-                    print("temp inbox",self.name)
-                    message1 = message.MyMessage()
-                    message1.broadcast(n,"BS+{0}".format(self))
-                    print(n.outbox ,n.name)
-                    print(n.inbox ,n.name)
-    
+            if any("BS" in s for s in self.inbox):
+                
+                
+                self.getBS == True
+                print(self.getBS,"\n")
+                print("temp inbox",self.id)
+                print("distance is ",self.distance)
+                print("for {0} neighbors are {1}".format(self,self.neighbors))
+                time.sleep(3)
+                for n in self.neighbors:
+                    if n.id != 0:
+                        if n.distance != self.distance:
+                            n.distance.append(self.distance)
+                            n.distance.append(self)
+                            print(n,"is far",n.distance)
+                            message1 = message.Message()
+                            
+                            # message1.send_message("BS +{0}".format(self),self,n)
+                            print(self,"message is sedn to",n)
+                            print(n.outbox ,n.id)
+                            print(n.inbox ,n.id)
+                
+                # if self.id != 0:
+
+                #     print("{0} get BS in message".format(self.id))
+                #     time.sleep(3)
+                #     for n in self.neighbors:
+                #         if n.id != 0:
+                #             if n.getBS == False:
+                #                 n.getBS == True
+                #                 print(n," get BS from ",self)
+                #                 print(n.getBS,self.getBS)
+                #                 if any("BS" in s for s in n.inbox):
+                #                     print("temp inbox",self.id)
+                #                     
+        
     def send_ACK(self,destination_node):
         message1 = message.MyMessage()
         #message1.send_message("ack",cls,destination_node)

@@ -24,6 +24,10 @@ class mycluster:
         print(self.id,"cluster is runing",self.env.now)
         if len(self.nodes)>7:
             print("nodes number is exceeded")
+        if(self.is_alive == True):
+            if(len(self.nodes)==0):
+                print("Cluster {0} is dead@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \n".format(self.id))
+                self.is_alive = False
         yield self.env.timeout(1)
 
     def add_node(self, node):

@@ -98,14 +98,14 @@ class graphic:
             if(node.is_alive==True):
                 if(len(node.parent)!=0):
                     
-                    print("netwww ",node)
+                    print("netwww ",node,node.x,node.y)
                     G.add_edge(node.id,node.parent[0].id)
                     
         for cluster in self.mynetwork.clusters:
             #if(cluster.is_alive==True):
-                print("gui",cluster)
+                print("gui cluster",cluster)
                 for node in cluster.nodes:
-                    print(node)
+                    print(node,node.x,node.y,node.parent[0],node.parent[0].x,node.parent[0].y)
                     if(node.is_alive == True):
                         if(len(node.parent)!=0):
                             #G.add_edge(node,node.parent)
