@@ -76,6 +76,7 @@ class Node():
                 elif self.net.clock[0]=="CSMA":
                     if(self.is_CH == True):
                         print("at %d CH talks in CSMA   %d "%(self.env.now,self.is_CH))
+                        yield self.env.timeout(1)
 
                     try:
                         if(self.is_alive == True):

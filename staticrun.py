@@ -21,16 +21,15 @@ print("__________________________LEACH__________________________________________
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++")
 net1.introduce_yourself()
-# graphi.draw_clusters()
 
 graphi.draw()
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
 
-env.run(until=140)#config.MAX_RUNTIME)
+env.run(until=440)#config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
-# graphi.draw()
+graphi.draw()
 
 net1.introduce_yourself()
 # net1.network_outboxes()

@@ -30,9 +30,9 @@ node16 = node.Node(16,env,2 ,29,189 )
 node17 = node.Node(17,env,2 ,35,204 )
 node18 = node.Node(18,env,2,31,172 )
 node19 = node.Node(19,env,2,30,50 )
-node20 = node.Node(20,env,2 ,150,20 )
+node20 = node.Node(20,env,2 ,130,20 )
 node21 = node.Node(21,env,2,135,2 )
-node22 = node.Node(22,env,2 ,165,5 )
+node22 = node.Node(22,env,2 ,175,5 )
 
 net1 = network.Net(env)
 
