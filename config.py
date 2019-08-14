@@ -4,6 +4,8 @@ CSMA_duration = 9
 TDMA_duration = 7
 Inactive_duration = 14
 
+Duration = CSMA_duration + TDMA_duration + Inactive_duration
+
 # and config
 BEACONING_TIME       = 5
 

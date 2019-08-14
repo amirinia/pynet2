@@ -125,7 +125,7 @@ class Node():
                             print("CH {0} aggregate CSMA sent to BS on env:{1}====+++++++++++++++++++ \n".format(self.id,env.now))
                             yield self.env.timeout(random.randint(1,config.AGGREGATE_TIME ))
 
-        yield self.env.timeout( random.randint(1,config.CSMA_duration))
+        yield self.env.timeout( random.randint(1,config.Duration))
 
 
 

@@ -27,8 +27,10 @@ class mycluster:
     def run(self,env):
         while True:
             if (self.net.superframe_num % config.cluster_rotation_period) == 0:
-                print ("#####",self.net.superframe_num)
+                print ("#####",self.net.superframe_num, env.now)
                 self.Random_Clusterhead_Selection()
+                yield self.env.timeout(config.Duration)
+
             print(self.id,"cluster is runing",self.env.now)
             if len(self.nodes)>7:
                 print("nodes number is exceeded")

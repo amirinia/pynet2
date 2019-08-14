@@ -42,5 +42,3 @@ for n in net1.nodes:
 
 
 print(net1.clusters)
-for c in net1.clusters:
-    print(c.CH)
