@@ -18,7 +18,7 @@ class Net():
         self.nodes = []
         self.clusters = []
         self.clusterheads = []
-
+        self.superframe_num = 0
         self.xsize = xsize
         self.ysize = ysize
         #add controller
@@ -39,6 +39,7 @@ class Net():
                 initial = True
 
             counter +=1
+            self.superframe_num = counter
             print('\n New Superframe is began CSMA at %d number %d\n' % (self.env.now ,counter))
             CSMA_duration = 9
 
@@ -180,7 +181,7 @@ class Net():
     def CH_probablity(self):
         if(len(self.clusters)==0):
             print("there is no cluster to cal CH_prob")
-        return float(len(self.clusters))/float(len(self.nodelist))
+        return float(len(self.clusters))/float(len(self.nodes))
 
     def cluster_formation(self):        
         for n in self.nodes:

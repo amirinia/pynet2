@@ -26,7 +26,7 @@ graphi.draw()
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
 
-env.run(until=1440)#config.MAX_RUNTIME)
+env.run(until=440)#config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 
@@ -39,6 +39,8 @@ net1.network_packet_summery()
 
 for n in net1.nodes:
     print(n,n.is_CH,n.cluster,"   ",n.distance)
-graphi.draw_neighbors()
+
 
 print(net1.clusters)
+for c in net1.clusters:
+    print(c.CH)

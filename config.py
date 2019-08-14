@@ -7,6 +7,7 @@ Inactive_duration = 14
 # and config
 BEACONING_TIME       = 5
 
+cluster_rotation_period = 10
 #TIME
 ## Runtime configuration
 MAX_RUNTIME = 100
@@ -20,7 +21,7 @@ COVERAGE_RADIUS = 15 # meters
 #ENERGY
 #dead node threshold
 DEAD_NODE_THRESHOLD = 0.0099
-
+LOW_NODE_THRESHOLD = 0.5
 # node transmission energy cnsumption
 PACKET_ENERGY_CONSUMPTION       = -5
 NODE_SLEEP_ENERGY_CONSUMPTION   = -1
@@ -30,7 +31,7 @@ NODE_RUNING_ENERGY_CONSUMPTION  = -2
 NODE_AGGREGATE_ENERGY_CONSUMPTION = -2
 
 # node transmission range node discovery
-TX_RANGE = 100 # meters 30
+TX_RANGE = 70 # meters 30
 BSID = -1
 
 # area definition

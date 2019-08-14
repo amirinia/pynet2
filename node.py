@@ -227,6 +227,7 @@ class Node():
         #message1.send_message("ack",cls,destination_node)
 
     def parent_setter(self,ch):
+        self.parent.clear()
         self.parent.append(ch)
         #print(ch, "is head")
 
