@@ -173,25 +173,26 @@ class Node():
         if( "BS" in str_message):
             if any("BS" in s for s in self.inbox):
                 
-                
-                self.getBS == True
-                print(self.getBS,"\n")
-                print("temp inbox",self.id)
+                self.BS_getter()
+                print("\n",self,self.getBS)
                 print("distance is ",self.distance)
                 print("for {0} neighbors are {1}".format(self,self.neighbors))
                 time.sleep(3)
                 for n in self.neighbors:
                     if n.id != 0:
+                        print(n)
+
                         if n.distance != self.distance:
                             n.distance.append(self.distance)
                             n.distance.append(self)
-                            print(n,"is far",n.distance)
-                            message1 = message.Message()
-                            
-                            # message1.send_message("BS +{0}".format(self),self,n)
-                            print(self,"message is sedn to",n)
-                            print(n.outbox ,n.id)
-                            print(n.inbox ,n.id)
+                            print(n,"is neighbor ",self.id,n.distance)
+                            if (len(n.distance)==0):
+                                message1 = message.Message()
+                                
+                                message1.send_message("BS +{0}".format(self),self,n)
+                                print(self,"message is sent to",n)
+                                print(n.outbox ,n.id)
+                                print(n.inbox ,n.id)
                 
                 # if self.id != 0:
 
@@ -233,4 +234,6 @@ class Node():
             self.is_CH == False
             self.next_hop.clear()
             print("node {0} becomes simple node (change) and parent is {1}".format(self.id,self.parent))
-    
+
+    def BS_getter(self):
+        self.getBS == True

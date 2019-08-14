@@ -30,7 +30,7 @@ NODE_RUNING_ENERGY_CONSUMPTION  = -2
 NODE_AGGREGATE_ENERGY_CONSUMPTION = -2
 
 # node transmission range node discovery
-TX_RANGE = 100 # meters 30
+TX_RANGE = 70 # meters 30
 BSID = -1
 
 # area definition
