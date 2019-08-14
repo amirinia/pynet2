@@ -88,6 +88,13 @@ class Node():
                     #print("Inactive",self.env.now) # inactive time
                     yield self.env.timeout(1)
 
+                if any("BS" in s for s in self.inbox):
+                    self.BS_getter()
+                    self.getBS == True
+                    print(self,self.getBS)
+                    yield self.env.timeout(1)
+
+
     def csma_beaconing(self,env):
         message_sender = message.Message()
         if(self.is_alive == True): #if node is alive

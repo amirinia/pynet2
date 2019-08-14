@@ -36,3 +36,7 @@ net1.introduce_yourself()
 # net1.network_inboxes()
 
 net1.network_packet_summery()
+
+for n in net1.nodes:
+    print(n,n.is_CH,n.distance)
+graphi.draw_neighbors()

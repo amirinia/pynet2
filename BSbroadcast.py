@@ -16,11 +16,11 @@ graphi.draw_neighbors()
 
 
 print("++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
-env.run(until=1)#config.MAX_RUNTIME)
+env.run(until=40)#config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 net1.network_packet_summery()
 
 for n in net1.nodes:
-    print(n,n.distance)
+    print(n,n.is_CH,n.distance)
 graphi.draw_neighbors()

@@ -44,3 +44,7 @@ for n in net1.nodes:
     print("-")
     if n.is_CH == True:
         print(n)
+
+for n in net1.nodes:
+    print(n,n.is_CH,n.distance)
+graphi.draw_neighbors()
