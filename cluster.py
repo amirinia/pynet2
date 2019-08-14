@@ -18,7 +18,7 @@ class mycluster:
         return str(self.id)
 
     def __repr__(self):
-        return str(self.name)
+        return str(self.id)
 
     def run(self,env):
         print(self.id,"cluster is runing",self.env.now)
@@ -34,6 +34,8 @@ class mycluster:
         #print (self.id) # debugging...
         if(len(self.nodes )> 7):
             print("cluster nodes is exceeded by",node)
+        node.clus==self
+        node.cluster.append(self)
 
         self.nodes.append(node)
         

@@ -6,6 +6,8 @@ import message
 from energymodel import EnergyModel
 import sensor
 import time
+import gui
+import cluster
 
 class Node():
     def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(0,2000)),x=random.randint(0,config.AREA_WIDTH),y=random.randint(0,config.AREA_LENGTH),node_type=None, power_type=1, mobile_type=0, network=network ):
@@ -23,6 +25,7 @@ class Node():
         self.inbox = []
         self.outbox = []
         self.parent = []
+        self.clus = cluster
         self.cluster = []
         self.TDMA = 0
         self.power = EnergyModel(power_type = power_type)
@@ -56,9 +59,13 @@ class Node():
         if self.id != 0: # if node is not BS
             while True:
                 if(self.is_alive == True):
+                    #self.parent.append(self.clus.CH)
+                    # print(self,self.clus.id,self.parent)
                     #print(next(reversed(self.energy)))
                     if (next(reversed(self.energy)) <= config.DEAD_NODE_THRESHOLD ):
                         print("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
+                        graphi = gui.graphic(self.net)
+                        graphi.draw()
                         if(self.is_CH == True):
                             print("ch is dead we need find another one")
                             self.is_CH == False
@@ -115,7 +122,7 @@ class Node():
                             self.power.decrease_energy(discharging_time = 100)  # idle discharge
                             self.node_send_message(self.aggregate,0)
                             self.aggregate.clear()
-                            print("CH {0} aggregate CSMA sent to BS on env:{1}================================+++++++++++++++++++++++++++++++++++++++++++++++ \n".format(self.id,env.now))
+                            print("CH {0} aggregate CSMA sent to BS on env:{1}====+++++++++++++++++++ \n".format(self.id,env.now))
                             yield self.env.timeout(random.randint(1,config.AGGREGATE_TIME ))
 
         yield self.env.timeout( random.randint(1,config.CSMA_duration))
@@ -184,7 +191,7 @@ class Node():
                 print("\n",self,self.getBS)
                 print("distance is ",self.distance)
                 print("for {0} neighbors are {1}".format(self,self.neighbors))
-                time.sleep(3)
+                time.sleep(1)
                 for n in self.neighbors:
                     if n.id != 0:
                         print(n)

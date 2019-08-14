@@ -101,29 +101,34 @@ class Net():
         print("Random network is generated with %d nodes\n"%node_number)
         for i in range(node_number):
                 mnode = node.Node(i+1,env ,random.random(),random.randint(0,self.xsize),random.randint(0,self.ysize))
-                mnode.net= self
-                self.nodes.append(mnode)
+                self.add_node(mnode)
         self.network_nodedsicovery()
         #print("random")
 
     def add_node(self, node):
         #print (self.id) # debugging...
         self.nodes.append(node)
-        node.network = self
+        node.net = self
+        self.network_nodedsicovery(distance = config.TX_RANGE,dprint=False)
 
 
-    def network_nodedsicovery(self,distance = config.TX_RANGE):
-        print("++++++++++++++++++++ network Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
+
+    def network_nodedsicovery(self,distance = config.TX_RANGE,dprint=True):
+        if dprint:
+            print("++++++++++++++++++++ network Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
         for n in self.nodes:
-            print("Neighbors Table discovery for {0} is :".format(str(n.id)))
+            if dprint:
+                print("Neighbors Table discovery for {0} is :".format(str(n.id)))
             for n1 in self.nodes:
                 #print(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)))
                 if(distance > math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2))):
                     if(n!=n1):
                         if n1 not in n.neighbors:
                             n.neighbors.append(n1)
-                            print("{0} <=> {1} D= {2} RSSI {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
-        print("+++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
+                            if dprint:
+                                print("{0} <=> {1} D= {2} RSSI {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
+        if dprint:
+            print("+++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
 
 
     def distance(self, node ,node1):
