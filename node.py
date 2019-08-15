@@ -69,35 +69,36 @@ class Node():
                         graphi.draw()
 
 
-                if self.net.clock[0]=="TDMA":
-                    # print("at {0} node {1} is working on TDMA {2} cluster {3} ".format(self.env.now,self.id,self.TDMA,self.cluster))
-                    yield self.env.timeout(1)
-                    try:
-                        if(self.is_alive == True):
-                            yield self.env.process(self.TDMA_beaconing(self.env))
-                    except simpy.Interrupt:
-                        print("inter")
-                    
-                elif self.net.clock[0]=="CSMA":
-                    if(self.is_CH == True):
-                        # print("at %d CH talks in CSMA   %d "%(self.env.now,self.is_CH))
+                    if self.net.clock[0]=="TDMA":
+                        print("TDMA ",self.net.TDMA_slot,config.TDMA_duration % self.net.TDMA_slot,config.TDMA_duration - self.net.TDMA_slot)
+                        print("at {0} node {1} is working on TDMA {2} cluster {3} ".format(self.env.now,self.id,self.TDMA,self.cluster))
+                        yield self.env.timeout(1)
+                        try:
+                            if(self.is_alive == True):
+                                yield self.env.process(self.TDMA_beaconing(self.env))
+                        except simpy.Interrupt:
+                            print("inter")
+                        
+                    elif self.net.clock[0]=="CSMA":
+                        if(self.is_CH == True):
+                            # print("at %d CH talks in CSMA   %d "%(self.env.now,self.is_CH))
+                            yield self.env.timeout(1)
+
+                        try:
+                            if(self.is_alive == True):
+                                yield self.env.process(self.CSMA_beaconing(self.env))
+                        except simpy.Interrupt:
+                            print("inter")
+
+                    else:
+                        #print("Inactive",self.env.now) # inactive time
                         yield self.env.timeout(1)
 
-                    try:
-                        if(self.is_alive == True):
-                            yield self.env.process(self.CSMA_beaconing(self.env))
-                    except simpy.Interrupt:
-                        print("inter")
-
-                else:
-                    #print("Inactive",self.env.now) # inactive time
-                    yield self.env.timeout(1)
-
-                if any("BS" in s for s in self.inbox):
-                    self.BS_getter()
-                    self.getBS == True
-                    print(self,self.getBS,"bs is in inbox")
-                    yield self.env.timeout(1)
+                    if any("BS" in s for s in self.inbox):
+                        self.BS_getter()
+                        self.getBS == True
+                        print(self,self.getBS,"bs is in inbox")
+                        yield self.env.timeout(1)
 
 
     def CSMA_beaconing(self,env):
@@ -130,8 +131,9 @@ class Node():
         if(self.is_alive == True): #if node is alive
             if (len(self.parent) != 0): # if node has parent send data to parent
                 if self.TDMA != 0:
+                    print(self.id,(self.net.TDMA_slot % self.TDMA))
+
                     if(((self.env.now % config.TDMA_duration)==self.TDMA )):
-                        print(self.net.TDMA_slot)
                         # print(self.id,"I have parent",self.TDMA,"at",self.env.now,"cluster",self.cluster)
                         print("at env:{3} light: {0} temperature: {1} from node {2} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,env.now,self.TDMA,self.cluster,self.x,self.y,self.parent))
 

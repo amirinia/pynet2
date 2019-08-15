@@ -25,12 +25,12 @@ graphi.draw()
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
 
-env.run(until=140)#config.MAX_RUNTIME)
+env.run(until=150)#config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 
 
-net1.introduce_yourself()
+# net1.introduce_yourself()
 # net1.network_outboxes()
 # net1.network_inboxes()
 
