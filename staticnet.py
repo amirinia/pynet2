@@ -86,21 +86,17 @@ node22.net = net1
 net1.introduce_yourself()
 print("KKKKKKKKKK")
 net1.network_nodedsicovery()
-graphi = gui.graphic(net1)
-graphi.draw_nods()
+# graphi = gui.graphic(net1)
+# graphi.draw_nods()
 
-env.run(until=80)
+# env.run(until=80)
 
-print(net1.nodes)
+# print(net1.nodes)
 
-graphi.draw_neighbors()
+# graphi.draw_neighbors()
 
 # net1.network_inboxes()
 # net1.network_outboxes()
-net1.network_packet_summery()
-net1.introduce_yourself()
+# net1.network_packet_summery()
+# net1.introduce_yourself()
 
-for n in net1.nodes:
-    print("-")
-    if n.is_CH == True:
-        print(n)

@@ -15,6 +15,8 @@ class Net():
         self.env = env
         self.action = env.process(self.run())
         self.clock = ["CSMA"]
+        self.TDMA_slot = 0
+        self.CSMA_slot =0
         self.nodes = []
         self.clusters = []
         self.clusterheads = []
@@ -87,6 +89,7 @@ class Net():
         for i in range(duration):
             self.clock.clear()
             self.clock.append("TDMA")
+            self.TDMA_slot = i+1
             print("at {0} TDMA - slot {1}".format(self.env.now,(i+1)))
             yield self.env.timeout(1)
 
@@ -94,6 +97,7 @@ class Net():
         for i in range(duration):
             self.clock.clear()
             self.clock.append("CSMA")
+            self.CSMA_slot = i+1
             print("at {0} CSMA - slot {1}".format(self.env.now,(i+1)))
             yield self.env.timeout(1)
 
@@ -110,26 +114,25 @@ class Net():
         #print (self.id) # debugging...
         self.nodes.append(node)
         node.net = self
-        self.network_nodedsicovery(distance = config.TX_RANGE,dprint=False)
+        # self.network_nodedsicovery(distance = config.TX_RANGE,dprint=False)
 
 
 
     def network_nodedsicovery(self,distance = config.TX_RANGE,dprint=True):
-        if dprint:
-            print("++++++++++++++++++++ network Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
+        
+        print("++++++++++++++++++++ network Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
         for n in self.nodes:
-            if dprint:
-                print("Neighbors Table discovery for {0} is :".format(str(n.id)))
+            
+            print("Neighbors Table discovery for {0} is :".format(str(n.id)))
             for n1 in self.nodes:
-                #print(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)))
                 if(distance > math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2))):
+                    # print(n,n1,math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)))
                     if(n!=n1):
                         if n1 not in n.neighbors:
                             n.neighbors.append(n1)
-                            if dprint:
-                                print("{0} <=> {1} D= {2} RSSI {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
-        if dprint:
-            print("+++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
+                            print("{0} <=> {1} D= {2} RSSI {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
+        
+        print("+++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
 
 
     def distance(self, node ,node1):

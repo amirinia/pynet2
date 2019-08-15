@@ -31,7 +31,7 @@ class mycluster:
                 self.Random_Clusterhead_Selection()
                 yield self.env.timeout(config.Duration)
 
-            print(self.id,"cluster is runing",self.env.now)
+            # print(self.id,"cluster is runing",self.env.now)
             if len(self.nodes)>7:
                 print("nodes number is exceeded")
             if(self.is_alive == True):
