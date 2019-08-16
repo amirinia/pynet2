@@ -49,7 +49,7 @@ class graphic:
         G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
         for node in self.mynetwork.nodes:
             if(node.is_alive == True):
-                print("for node in self.mynetwork.nodes {0} and cluster head {1}".format(node,node.parent))
+                # print("for node in self.mynetwork.nodes {0} and cluster head {1}".format(node,node.parent))
 
                 G.add_node(node.id,pos=(node.x,node.y))
                 

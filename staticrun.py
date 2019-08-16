@@ -25,16 +25,15 @@ graphi.draw()
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
 
-env.run(until=150)#config.MAX_RUNTIME)
+env.run(until=50)#config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 
+net1.introduce_yourself()
+net1.network_outboxes()
+net1.network_inboxes()
 
-# net1.introduce_yourself()
-# net1.network_outboxes()
-# net1.network_inboxes()
-
-# net1.network_packet_summery()
+net1.network_packet_summery()
 
 # for n in net1.nodes:
 #     print(n,n.is_CH,n.cluster,"   ",n.distance)

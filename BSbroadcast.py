@@ -15,7 +15,7 @@ graphi.draw_neighbors()
 
 
 print("++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
-env.run(until=40)#config.MAX_RUNTIME)
+env.run(until=140)#config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 net1.network_packet_summery()
