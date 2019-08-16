@@ -90,7 +90,7 @@ class Net():
             self.clock.clear()
             self.clock.append("TDMA")
             self.TDMA_slot = i+1
-            print("at {0} TDMA - slot {1}".format(self.env.now,(i+1)))
+            print("at {0} TDMA - slot {1}\n".format(self.env.now,(i+1)))
             yield self.env.timeout(1)
 
     def CSMA(self,duration):
@@ -98,7 +98,7 @@ class Net():
             self.clock.clear()
             self.clock.append("CSMA")
             self.CSMA_slot = i+1
-            print("at {0} CSMA - slot {1}".format(self.env.now,(i+1)))
+            print("at {0} CSMA - slot {1}\n".format(self.env.now,(i+1)))
             yield self.env.timeout(1)
 
 
@@ -218,5 +218,5 @@ class Net():
     
                     self.clusterheads.append(n)
                     self.clusterheads =  list(dict.fromkeys(self.clusterheads)) # remove duplicates
-        print("clusterheads are {0} in network  \n".format(self.clusterheads))
+        # print("clusterheads are {0} in network  \n".format(self.clusterheads))
     

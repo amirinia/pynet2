@@ -67,12 +67,10 @@ class Node():
                         self.is_alive = False
                         graphi = gui.graphic(self.net)
                         graphi.draw()
-
-
+                if(self.is_alive == True):
                     if self.net.clock[0]=="TDMA":
                         print("TDMA ",self.net.TDMA_slot,config.TDMA_duration % self.net.TDMA_slot,config.TDMA_duration - self.net.TDMA_slot)
                         print("at {0} node {1} is working on TDMA {2} cluster {3} ".format(self.env.now,self.id,self.TDMA,self.cluster))
-                        yield self.env.timeout(1)
                         try:
                             if(self.is_alive == True):
                                 yield self.env.process(self.TDMA_beaconing(self.env))
@@ -81,8 +79,7 @@ class Node():
                         
                     elif self.net.clock[0]=="CSMA":
                         if(self.is_CH == True):
-                            # print("at %d CH talks in CSMA   %d "%(self.env.now,self.is_CH))
-                            yield self.env.timeout(1)
+                            print("at %d CH talks in CSMA   %d "%(self.env.now,self.is_CH))
 
                         try:
                             if(self.is_alive == True):
@@ -90,15 +87,17 @@ class Node():
                         except simpy.Interrupt:
                             print("inter")
 
-                    else:
-                        #print("Inactive",self.env.now) # inactive time
-                        yield self.env.timeout(1)
+                    # else:
+                    #     print("Inactive",self.env.now) # inactive time
 
                     if any("BS" in s for s in self.inbox):
                         self.BS_getter()
                         self.getBS == True
                         print(self,self.getBS,"bs is in inbox")
-                        yield self.env.timeout(1)
+                    
+                    # print(self.id, "test")
+
+                    yield self.env.timeout(1)
 
 
     def CSMA_beaconing(self,env):
@@ -114,16 +113,18 @@ class Node():
 
                     for n in self.neighbors:
                         message_sender.broadcast(n,"beacon CSMA adv {0} at env:{1}".format(n.id ,env.now))
-                    yield self.env.timeout( random.randint(1,config.Duration))
+                    yield self.env.timeout(1)
 
             if (self.is_CH == True): # if node is cluster head
                     # if(self.net.superframe_num % config )
                             self.power.decrease_energy(discharging_time = 100)  # idle discharge
                             self.node_send_message(self.aggregate,0)
                             self.aggregate.clear()
-                            print("CH {0} aggregate CSMA sent to BS on env:{1}====+++++++++++++++++++ \n".format(self.id,env.now))
+                            print("CH {0} aggregate CSMA sent to BS on env:{1}====+++++++++++++++++++ ".format(self.id,env.now))
                             # yield self.env.timeout(random.randint(1,config.AGGREGATE_TIME ))
-                            yield self.env.timeout(config.AGGREGATE_TIME + self.TDMA)
+                            yield self.env.timeout( random.randint(1, config.AGGREGATE_TIME +self.TDMA))
+                            yield self.env.timeout(1)
+        yield self.env.timeout(1)
 
 
     def TDMA_beaconing(self,env):
@@ -143,15 +144,8 @@ class Node():
                     msg_len = message_sender.message_length()
                     self.power.decrease_tx_energy(msg_len)
                     self.energy.append(self.power.energy)
-                    yield self.env.timeout(1)
+        yield self.env.timeout(1)
             
-            # if (self.is_CH == True): # if node is cluster head
-            #     self.power.decrease_energy(discharging_time = 100)  # idle discharge
-            #     self.node_send_message(self.aggregate,0)
-            #     self.aggregate.clear()
-            #     print("CH {0} aggregate sent to BS on env:{1}================================+++++++++++++++++++++++++++++++++++++++++++++++ \n".format(self.id,env.now))
-            #     yield self.env.timeout(config.AGGREGATE_TIME + self.TDMA)
-
 
     def node_send_message(self, str_message , node):
         #print("message {0} is sent^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ from {1} to {2}".format(str_message,self.id,node))
