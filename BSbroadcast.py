@@ -23,3 +23,5 @@ net1.network_packet_summery()
 for n in net1.nodes:
     print(n,n.is_CH,n.distance)
 graphi.draw_neighbors()
+# net1.network_outboxes()
+# net1.network_inboxes()

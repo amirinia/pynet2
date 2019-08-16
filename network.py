@@ -71,8 +71,13 @@ class Net():
     
     def initialization(self,duration):
         print("BS start to advertise")
+        self.network_nodedsicovery()
+        for n in self.clusterheads:
+            self.nodes[0].neighbors.append(n)
+
         print("neighbors of BS: ",self.nodes[0].neighbors)
         for n in self.nodes[0].neighbors:
+            # print(n,"is near bs")
             # n.distance.clear()
             n.distance.append(self.nodes[0])
 
@@ -83,7 +88,7 @@ class Net():
         print("Inititial network %d nods at %d"%(len(self.nodes),self.env.now))
         yield self.env.timeout(duration)
         print("net is initials ends at {0} \n".format(self.env.now))
-
+        
 
     def TDMA(self,duration):
         for i in range(duration):
@@ -118,19 +123,19 @@ class Net():
 
 
 
-    def network_nodedsicovery(self,distance = config.TX_RANGE,dprint=True):
+    def network_nodedsicovery(self,distance = config.TX_RANGE):
         
         print("++++++++++++++++++++ network Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
         for n in self.nodes:
             
-            print("Neighbors Table discovery for {0} is :".format(str(n.id)))
+            print("Neighbors Table discovery for {0} is below and neighbors are {1}".format(str(n.id),n.neighbors))
             for n1 in self.nodes:
                 if(distance > math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2))):
-                    # print(n,n1,math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)))
                     if(n!=n1):
+                        print("{0} <=> {1} D= {2} RSSI {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
                         if n1 not in n.neighbors:
                             n.neighbors.append(n1)
-                            print("{0} <=> {1} D= {2} RSSI {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
+                            
         
         print("+++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
 

@@ -72,11 +72,12 @@ class Node():
                         message_sender = message.Message()
                         if(self.is_CH == False):
                             if(self.net.TDMA_slot==(self.TDMA+1)):
-                                print("at env:{3} light: {0} temperature: {1} from node {2} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent))
-                                msg_len = message_sender.message_length()
-                                self.power.decrease_tx_energy(msg_len)
-                                self.energy.append(self.power.energy)
-                                message_sender.send_message("at env:{3} light: {0} temperature: {1} from node {2} to {4}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,self.env.now,self.parent[0]),self,self.parent[0])
+                                if(len(self.parent)!=0):
+                                    print("at env:{3} light: {0} temperature: {1} from node {2} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent))
+                                    msg_len = message_sender.message_length()
+                                    self.power.decrease_tx_energy(msg_len)
+                                    self.energy.append(self.power.energy)
+                                    message_sender.send_message("at env:{3} light: {0} temperature: {1} from node {2} to {4}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,self.env.now,self.parent[0]),self,self.parent[0])
 
                             # try:
                             #     if(self.is_alive == True):
@@ -85,7 +86,6 @@ class Node():
                             #     print("inter")
                         
                     elif self.net.clock[0]=="CSMA":
-                        if(self.is_CH == True):
                             # print("at %d CH %d talks in CSMA   %d "%(self.env.now,self.id,self.is_CH))
 
                             try:
@@ -96,12 +96,12 @@ class Node():
 
                     # else:
                     #     print("Inactive",self.env.now) # inactive time
-
-                    if any("BS" in s for s in self.inbox):
-                        self.BS_getter()
-                        self.getBS == True
-                        print(self,self.getBS,"bs is in inbox")
-                    
+                    if self.net.clock[0]=="CSMA" and self.net.clock[0]=="TDMA" :
+                        if any("BS" in s for s in self.inbox):
+                            self.BS_getter()
+                            self.getBS == True
+                            print(self,self.getBS,"bs is in inbox")
+                        
                     # print(self.id, "test")
 
                 yield self.env.timeout(1)
@@ -112,15 +112,16 @@ class Node():
         if(self.is_alive == True): #if node is alive
             if len(self.parent) == 0: # if node has no parent ,beacons
                 if(self.is_CH == False):
-                    # yield self.env.timeout(1)
-                    print("at {0} beacon CSMA adv is sent by {1} is alive {2}, since it has no CH with energy {3}".format(env.now,self.id,self.is_alive,self.power))
-                    msg_len = message_sender.message_length()
-                    self.power.decrease_tx_energy(msg_len)
-                    self.energy.append(self.power.energy)
+                    if(random.randint(1,config.CSMA_duration)==5):
 
-                    for n in self.neighbors:
-                        message_sender.broadcast(n,"beacon CSMA adv {0} at env:{1}".format(n.id ,env.now))
-                    yield self.env.timeout(1)
+                        print("at {0} beacon CSMA adv is sent by {1} aprent is {2}, since it has no CH with energy {3}".format(env.now,self.id,self.parent,self.power))
+                        msg_len = message_sender.message_length()
+                        self.power.decrease_tx_energy(msg_len)
+                        self.energy.append(self.power.energy)
+
+                        for n in self.neighbors:
+                            message_sender.broadcast(n,"beacon CSMA adv {0} at env:{1}".format(n.id ,env.now))
+                            yield self.env.timeout(1)
 
             if (self.is_CH == True): # if node is cluster head
                 # print(random.randint(1,config.CSMA_duration))
