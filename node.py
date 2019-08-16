@@ -16,7 +16,7 @@ class Node():
         self.action = env.process(self.run())
         self.net = network
         self.is_alive = True
-        self.energy = [2]
+        self.energy = [energy]
         #print("node is created ")
         self.is_CH = False
         self.x = x
