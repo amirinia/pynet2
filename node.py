@@ -128,9 +128,12 @@ class Node():
                 if(random.randint(1,config.CSMA_duration)==5):
 
                             self.power.decrease_energy(discharging_time = 100)  # idle discharge
+                            temp = "CH {0} aggregate CSMA sent to BS on env:{1}====+++++++++++++++++++ ".format(self.id,env.now)
+                            # message_sender.send_message(temp,self,self.net.nodes[0])
+
                             self.node_send_message(self.aggregate,0)
                             self.aggregate.clear()
-                            print("CH {0} aggregate CSMA sent to BS on env:{1}====+++++++++++++++++++ ".format(self.id,env.now))
+                            print(temp)
                             # yield self.env.timeout(random.randint(1,config.AGGREGATE_TIME ))
                             # yield self.env.timeout( random.randint(0,9))
                             # yield self.env.timeout(1)
@@ -236,11 +239,13 @@ class Node():
         if(self.is_CH == False):
             self.is_CH = True
             print("node {0} becomes CH (change)and parent is {1}".format(self.id,self.parent))
-    
+            self.distance.clear
+            self.distance.append(self.net.nodes[0])
         else:
             self.is_CH == False
             self.next_hop.clear()
             print("node {0} becomes simple node (change) and parent is {1}".format(self.id,self.parent))
+            #self.distance.append(next(reversed(self.parent)))
 
     def BS_getter(self):
         self.getBS == True

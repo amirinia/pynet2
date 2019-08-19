@@ -22,7 +22,7 @@ COVERAGE_RADIUS = 15 # meters
 
 #ENERGY
 #dead node threshold
-DEAD_NODE_THRESHOLD = 0.0099
+DEAD_NODE_THRESHOLD = 0.299
 LOW_NODE_THRESHOLD = 0.5
 # node transmission energy cnsumption
 PACKET_ENERGY_CONSUMPTION       = -5

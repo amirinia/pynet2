@@ -35,7 +35,7 @@ def Kmeans(network ,k=3):
 
     plt.show()
 
-    # print(df)
+    print(1)
 
     def assignment(df, centroids):
         for i in centroids.keys():
@@ -60,7 +60,7 @@ def Kmeans(network ,k=3):
         plt.scatter(*centroids[i], color=colmap[i])
 
     plt.show()
-    # print(df)
+    print(2)
 
     ## Update Stage
     # print("arrows")
@@ -90,7 +90,7 @@ def Kmeans(network ,k=3):
         dy = (centroids[i][1] - old_centroids[i][1]) * 0.75
         ax.arrow(old_x, old_y, dx, dy, head_width=2, head_length=3, fc=colmap[i], ec=colmap[i])
     plt.show()
-    # print(df)
+    print(3)
     df = assignment(df, centroids)
 
     # Plot results
@@ -128,6 +128,19 @@ def Kmeans(network ,k=3):
     graphi.Kmeans_draw()
     print("kmeans is done")
 
+
+
+    doagain = False
+    print("clusters",network.clusters)
+    for c in network.clusters:
+            print(c,c.nodes)
+            if len(c.nodes):
+                    print("cluster is too large")
+                    doagain ==True
+
+    if doagain:
+            print("repeat Kmean")
+            Kmeans(network,k)
     # while True:
     #     closest_centroids = df['closest'].copy(deep=True)
     #     centroids = update(centroids)
