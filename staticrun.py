@@ -40,4 +40,4 @@ for n in net1.nodes:
 
 
 print(net1.clusters)
-print(net1.nodes[0].inbox)
+# print(net1.nodes[0].inbox)

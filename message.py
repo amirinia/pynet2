@@ -8,7 +8,7 @@ Message_Type = {0: "Broadcast", 1: "Data", 2: "Ack",3: "Beacon" ,4: "Single"}
 
 class Message(object):
 
-    def __init__(self, source=None, destination=None, nexthop=None, header='',data={}):
+    def __init__(self,data={}, source=None, destination=None, nexthop=None, header=''):
         """
         pymote 2
         """

@@ -24,6 +24,7 @@ class Node():
         self.neighbors = []
         self.inbox = []
         self.outbox = []
+        self.buffer =[]
         self.parent = []
         self.clus = cluster
         self.cluster = []
@@ -61,6 +62,7 @@ class Node():
                 if(self.is_alive == True):
                     if (next(reversed(self.energy)) <= config.DEAD_NODE_THRESHOLD ):
                         print("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
+                        print(self.energy)
                         if(self.is_CH == True):
                             print("ch is dead ,cluster needs to find another CH \n\n")
                             self.is_CH == False
@@ -73,12 +75,13 @@ class Node():
                         if(self.is_CH == False):
                             if(self.net.TDMA_slot==(self.TDMA+1)):
                                 if(len(self.parent)!=0):
-                                    print("at env:{3} light: {0} temperature: {1} from node {2} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent))
+                                    tempmessage ="at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent)
+                                    print(tempmessage)
                                     msg_len = message_sender.message_length()
                                     self.power.decrease_tx_energy(msg_len)
                                     self.energy.append(self.power.energy)
-                                    message_sender.send_message("at env:{3} light: {0} temperature: {1} from node {2} to {4}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,self.env.now,self.parent[0]),self,self.parent[0])
-
+                                    message_sender.send_message(tempmessage,self,self.parent[0])
+                                    self.parent[0].buffer.append(tempmessage)
                             # try:
                             #     if(self.is_alive == True):
                             #         yield self.env.process(self.TDMA_beaconing(self.env))
@@ -114,7 +117,8 @@ class Node():
                 if(self.is_CH == False):
                     if(random.randint(1,config.CSMA_duration)==5):
 
-                        print("at {0} beacon CSMA adv is sent by {1} aprent is {2}, since it has no CH with energy {3}".format(env.now,self.id,self.parent,self.power))
+                        tempmessage = "at {0} beacon CSMA adv is sent by {1} aprent is {2}, since it has no CH with energy {3}".format(env.now,self.id,self.parent,self.power)
+                        print(tempmessage)
                         msg_len = message_sender.message_length()
                         self.power.decrease_tx_energy(msg_len)
                         self.energy.append(self.power.energy)
@@ -127,39 +131,40 @@ class Node():
                 # print(random.randint(1,config.CSMA_duration))
                 if(random.randint(1,config.CSMA_duration)==5):
 
-                            self.power.decrease_energy(discharging_time = 100)  # idle discharge
-                            temp = "CH {0} aggregate CSMA sent to BS on env:{1}====+++++++++++++++++++ ".format(self.id,env.now)
+                            # self.power.decrease_energy(discharging_time = 10)  # idle discharge
+                            tempbuffer = "CH {0} aggregate CSMA sent to BS on env:{1}====+++++++++++++++++++\n {2} ".format(self.id,env.now,self.buffer)
                             # message_sender.send_message(temp,self,self.net.nodes[0])
-
+                            self.net.nodes[0].inbox.append(tempbuffer)
                             self.node_send_message(self.aggregate,0)
                             self.aggregate.clear()
-                            print(temp)
+                            print(tempbuffer)
+                            self.buffer.clear()
                             # yield self.env.timeout(random.randint(1,config.AGGREGATE_TIME ))
                             # yield self.env.timeout( random.randint(0,9))
                             # yield self.env.timeout(1)
         # yield self.env.timeout(1)
 
 
-    def TDMA_beaconing(self,env):
-        print(" TT node",self.id,self.is_CH,self.TDMA)
+    # def TDMA_beaconing(self,env):
+    #     print(" TT node",self.id,self.is_CH,self.TDMA)
 
-        message_sender = message.Message()
-        if(self.is_alive == True): #if node is alive
-            if (len(self.parent) != 0): # if node has parent send data to parent
-                if self.TDMA != 0:
-                    print("this node can work ",self.id,(self.net.TDMA_slot % self.TDMA),self.net.TDMA_slot==self.TDMA+1,self.TDMA+1)
+    #     message_sender = message.Message()
+    #     if(self.is_alive == True): #if node is alive
+    #         if (len(self.parent) != 0): # if node has parent send data to parent
+    #             if self.TDMA != 0:
+    #                 print("this node can work ",self.id,(self.net.TDMA_slot % self.TDMA),self.net.TDMA_slot==self.TDMA+1,self.TDMA+1)
 
-                    if(self.net.TDMA_slot==self.TDMA+1):
-                        # print(self.id,"I have parent",self.TDMA,"at",self.env.now,"cluster",self.cluster)
-                        print("at env:{3} light: {0} temperature: {1} from node {2} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,env.now,self.TDMA,self.cluster,self.x,self.y,self.parent))
-
-                        # yield self.env.timeout(config.CSMA_duration+config.Inactive_duration)
-                        # if(self.parent[-1].is_alive == True):
-                        # message_sender.send_message("at env:{3} light: {0} temperature: {1} from node {2} to {4}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,env.now,self.parent[0]),self,self.parent[0])
-                    msg_len = message_sender.message_length()
-                    self.power.decrease_tx_energy(msg_len)
-                    self.energy.append(self.power.energy)
-                    yield self.env.timeout(1)
+    #                 if(self.net.TDMA_slot==self.TDMA+1):
+    #                     # print(self.id,"I have parent",self.TDMA,"at",self.env.now,"cluster",self.cluster)
+    #                     tempmessage = "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to cluster {5} with pos {6} {7} and parent {8}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,env.now,self.TDMA,self.cluster,self.x,self.y,self.parent)
+    #                     print(tempmessage)
+    #                     # yield self.env.timeout(config.CSMA_duration+config.Inactive_duration)
+    #                     # if(self.parent[-1].is_alive == True):
+    #                     # message_sender.send_message("at env:{3} light: {0} temperature: {1} from node {2} to {4}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,env.now,self.parent[0]),self,self.parent[0])
+    #                 msg_len = message_sender.message_length()
+    #                 self.power.decrease_tx_energy(msg_len)
+    #                 self.energy.append(self.power.energy)
+    #                 yield self.env.timeout(1)
             
 
     def node_send_message(self, str_message , node):
