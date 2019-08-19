@@ -141,20 +141,36 @@ def Kmeans(network ,k=3):
     if doagain:
             print("repeat Kmean")
             Kmeans(network,k)
-    # while True:
-    #     closest_centroids = df['closest'].copy(deep=True)
-    #     centroids = update(centroids)
-    #     df = assignment(df, centroids)
-    #     if closest_centroids.equals(df['closest']):
-    #         break
 
-    # fig = plt.figure(figsize=(5, 5))
-    # plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k')
-    # for i in centroids.keys():
-    #     plt.scatter(*centroids[i], color=colmap[i])
+    
+    while True:
+        closest_centroids = df['closest'].copy(deep=True)
+        centroids = update(centroids)
+        df = assignment(df, centroids)
+        if closest_centroids.equals(df['closest']):
+            break
+
+    fig = plt.figure()
+    plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k',s=400)
+    for i in centroids.keys():
+        plt.scatter(*centroids[i], color=colmap[i])
+
+    plt.show()
+
+    # labels = kmeans.predict(df)
+    # centroids = kmeans.cluster_centers_
+
+    # fig = plt.figure()
+
+    # colors = map(lambda x: colmap[x+1], labels)
+
+    # plt.scatter(df['x'], df['y'], color=colors, alpha=0.5, edgecolor='k',s=400)
+    # for idx, centroid in enumerate(centroids):
+    #     plt.scatter(*centroid, color=colmap[idx+1])
 
     # plt.show()
 
+    
     # print(df)
 
     # centroids = kmeans.cluster_centers_
