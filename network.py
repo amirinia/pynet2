@@ -45,6 +45,13 @@ class Net():
             print('\n New Superframe is began CSMA at %d number %d\n' % (self.env.now ,counter))
             CSMA_duration = 9
 
+
+            if counter % 10 == 0:
+                for n in self.nodes[0].neighbors:
+                    message_sender = message.Message()
+                    message_sender.broadcast(self.nodes[0],"Base Station boradcast on regular basis {0} at env:{1}".format(self.nodes[0].id ,self.env.now))
+
+
             try:
                 yield self.env.process(self.CSMA(CSMA_duration))
             except simpy.Interrupt:
@@ -183,7 +190,7 @@ class Net():
         print("All packet numbers in outbox the  network is {0} ".format(sumpout))
         print("=================================Received packet summery==============================")
         for n in self.nodes:
-            print("node {0} sent {1} packes".format(n,len(n.inbox)))
+            print("node {0} Received {1} packes".format(n,len(n.inbox)))
             sumpin +=len(n.inbox)
         print("All packet numbers in inbox the network is {0} \n".format(sumpin))
         print("{0} packets are lost on wireless sensor network".format(sumpout-sumpin))

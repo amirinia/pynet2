@@ -25,12 +25,11 @@ graphi.draw()
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
 
-env.run(until=15550)#config.MAX_RUNTIME)
+env.run(until=1550)#config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 
-# net1.network_outboxes()
-# net1.network_inboxes()
+
 
 net1.network_packet_summery()
 
@@ -43,3 +42,6 @@ print(net1.clusterheads)
 
 # print(net1.nodes[0].inbox)
 net1.introduce_yourself()
+
+net1.network_outboxes()
+net1.network_inboxes()
