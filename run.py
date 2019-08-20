@@ -40,11 +40,11 @@ net1.network_packet_summery()
 #     if len(n.parent) != 0:
 #         print(n,next(reversed(n.parent)))
 
-for n in net1.nodes:
-    print("-")
-    if n.is_CH == True:
-        print(n)
 
 for n in net1.nodes:
     print(n,n.is_CH,n.distance)
 graphi.draw_neighbors()
+
+net1.introduce_yourself()
+net1.network_outboxes()
+net1.network_inboxes()

@@ -1,14 +1,14 @@
 import math
 #TDMA
 CSMA_duration = 9
-TDMA_duration = 7
+TDMA_duration = 8
 Inactive_duration = 14
 
 Duration = CSMA_duration + TDMA_duration + Inactive_duration
 
 # and config
 BEACONING_TIME       = 5
-
+Base_Sattion_Beaconning_period = 10
 cluster_rotation_period = 10
 #TIME
 ## Runtime configuration

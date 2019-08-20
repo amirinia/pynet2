@@ -10,7 +10,7 @@ import gui
 import cluster
 
 class Node():
-    def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(0,2000)),x=random.randint(0,config.AREA_WIDTH),y=random.randint(0,config.AREA_LENGTH),node_type=None, power_type=1, mobile_type=0, network=network ):
+    def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(1000,2000)),x=random.randint(0,config.AREA_WIDTH),y=random.randint(0,config.AREA_LENGTH),node_type=None, power_type=1, mobile_type=0, network=network ):
         self.env = env
         self.id = id
         self.action = env.process(self.run())
@@ -62,7 +62,7 @@ class Node():
                 if(self.is_alive == True):
                     if (next(reversed(self.energy)) <= config.DEAD_NODE_THRESHOLD ):
                         print("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
-                        print(self.energy)
+                        print(self.power.energy)
                         if(self.is_CH == True):
                             print("ch is dead ,cluster needs to find another CH \n\n")
                             self.is_CH == False

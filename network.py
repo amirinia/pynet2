@@ -45,8 +45,7 @@ class Net():
             print('\n New Superframe is began CSMA at %d number %d\n' % (self.env.now ,counter))
             CSMA_duration = 9
 
-
-            if counter % 10 == 0:
+            if counter % config.Base_Sattion_Beaconning_period == 0:
                 for n in self.nodes[0].neighbors:
                     message_sender = message.Message()
                     message_sender.broadcast(self.nodes[0],"Base Station boradcast on regular basis {0} at env:{1}".format(self.nodes[0].id ,self.env.now))
@@ -119,7 +118,7 @@ class Net():
     def random_net_generator(self,env,network,node_number):
         print("Random network is generated with %d nodes\n"%node_number)
         for i in range(node_number):
-                mnode = node.Node(i+1,env ,random.random(),random.randint(0,self.xsize),random.randint(0,self.ysize))
+                mnode = node.Node(i+1,env ,random.randint(1000,2000),random.randint(0,self.xsize),random.randint(0,self.ysize))
                 self.add_node(mnode)
         self.network_nodedsicovery()
         #print("random")
