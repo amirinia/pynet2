@@ -35,7 +35,7 @@ def Kmeans(network ,k=3):
 
     plt.show()
 
-    # print(df)
+    print(1)
 
     def assignment(df, centroids):
         for i in centroids.keys():
@@ -60,7 +60,7 @@ def Kmeans(network ,k=3):
         plt.scatter(*centroids[i], color=colmap[i])
 
     plt.show()
-    # print(df)
+    print(2)
 
     ## Update Stage
     # print("arrows")
@@ -90,7 +90,7 @@ def Kmeans(network ,k=3):
         dy = (centroids[i][1] - old_centroids[i][1]) * 0.75
         ax.arrow(old_x, old_y, dx, dy, head_width=2, head_length=3, fc=colmap[i], ec=colmap[i])
     plt.show()
-    # print(df)
+    print(3)
     df = assignment(df, centroids)
 
     # Plot results
@@ -128,20 +128,49 @@ def Kmeans(network ,k=3):
     graphi.Kmeans_draw()
     print("kmeans is done")
 
-    # while True:
-    #     closest_centroids = df['closest'].copy(deep=True)
-    #     centroids = update(centroids)
-    #     df = assignment(df, centroids)
-    #     if closest_centroids.equals(df['closest']):
-    #         break
 
-    # fig = plt.figure(figsize=(5, 5))
-    # plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k')
-    # for i in centroids.keys():
-    #     plt.scatter(*centroids[i], color=colmap[i])
+
+    doagain = False
+    print("clusters",network.clusters)
+    for c in network.clusters:
+            print(c,c.nodes)
+            if len(c.nodes):
+                    print("cluster is too large")
+                    doagain ==True
+
+    if doagain:
+            print("repeat Kmean")
+            Kmeans(network,k)
+
+    
+    while True:
+        closest_centroids = df['closest'].copy(deep=True)
+        centroids = update(centroids)
+        df = assignment(df, centroids)
+        if closest_centroids.equals(df['closest']):
+            break
+
+    fig = plt.figure()
+    plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k',s=400)
+    for i in centroids.keys():
+        plt.scatter(*centroids[i], color=colmap[i])
+
+    plt.show()
+
+    # labels = kmeans.predict(df)
+    # centroids = kmeans.cluster_centers_
+
+    # fig = plt.figure()
+
+    # colors = map(lambda x: colmap[x+1], labels)
+
+    # plt.scatter(df['x'], df['y'], color=colors, alpha=0.5, edgecolor='k',s=400)
+    # for idx, centroid in enumerate(centroids):
+    #     plt.scatter(*centroid, color=colmap[idx+1])
 
     # plt.show()
 
+    
     # print(df)
 
     # centroids = kmeans.cluster_centers_

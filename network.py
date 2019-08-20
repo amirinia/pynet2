@@ -45,6 +45,13 @@ class Net():
             print('\n New Superframe is began CSMA at %d number %d\n' % (self.env.now ,counter))
             CSMA_duration = 9
 
+
+            if counter % 10 == 0:
+                for n in self.nodes[0].neighbors:
+                    message_sender = message.Message()
+                    message_sender.broadcast(self.nodes[0],"Base Station boradcast on regular basis {0} at env:{1}".format(self.nodes[0].id ,self.env.now))
+
+
             try:
                 yield self.env.process(self.CSMA(CSMA_duration))
             except simpy.Interrupt:
@@ -57,6 +64,8 @@ class Net():
                 yield self.env.process(self.TDMA(TDMA_duration))
             except simpy.Interrupt:
                 print('Was interrupted.TDMA')
+
+            self.neighbor_collision()
 
             #print('INACTIVE at %d\n' % env.now)
             inactive_duration = 14
@@ -71,8 +80,13 @@ class Net():
     
     def initialization(self,duration):
         print("BS start to advertise")
+        self.network_nodedsicovery()
+        for n in self.clusterheads:
+            self.nodes[0].neighbors.append(n)
+
         print("neighbors of BS: ",self.nodes[0].neighbors)
         for n in self.nodes[0].neighbors:
+            # print(n,"is near bs")
             # n.distance.clear()
             n.distance.append(self.nodes[0])
 
@@ -83,7 +97,7 @@ class Net():
         print("Inititial network %d nods at %d"%(len(self.nodes),self.env.now))
         yield self.env.timeout(duration)
         print("net is initials ends at {0} \n".format(self.env.now))
-
+        
 
     def TDMA(self,duration):
         for i in range(duration):
@@ -118,19 +132,19 @@ class Net():
 
 
 
-    def network_nodedsicovery(self,distance = config.TX_RANGE,dprint=True):
+    def network_nodedsicovery(self,distance = config.TX_RANGE):
         
         print("++++++++++++++++++++ network Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
         for n in self.nodes:
             
-            print("Neighbors Table discovery for {0} is :".format(str(n.id)))
+            print("Neighbors Table discovery for {0} is below and neighbors are {1}".format(str(n.id),n.neighbors))
             for n1 in self.nodes:
                 if(distance > math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2))):
-                    # print(n,n1,math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)))
                     if(n!=n1):
+                        print("{0} <=> {1} Distance= {2} RSSI= {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
                         if n1 not in n.neighbors:
                             n.neighbors.append(n1)
-                            print("{0} <=> {1} D= {2} RSSI {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
+                            
         
         print("+++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
 
@@ -155,10 +169,11 @@ class Net():
         #print("New network is created : {0} with {1} node number ".format(self.name,self.nodelist.count))
         for x in self.nodes:
             if len(x.parent) == 0:
-                print("{0} is alive: {5} with energy : {1} with position {2} {3} ; CH is {4}".format(x.id , x.power ,str(x.x) , str(x.y) ,str(x.parent),x.is_alive))
-
+                print("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5} with TDMA {6} {7}".format(x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))))
+                # print(x.energy)
             if len(x.parent) != 0:
-                print("{0} is alive: {5} with energy : {1} with position {2} {3} ; CH is {4}".format(x.id , x.power ,str(x.x) , str(x.y) ,str(next(reversed(x.parent))),x.is_alive))
+                print("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5} with TDMA {6} {7}".format(x.id ,x.power, str(x.x) , str(x.y) ,str(next(reversed(x.parent))),x.is_alive,x.TDMA,next(reversed(x.energy))))
+                # print(x.energy)
         print("==============================Clusters===============================")
         # for c in self.clusters:
         #     print("{0} is alive: {5} with energy : {1} with nodes {2} ; TDMA: {3} ; CH is {4}".format(c.name , c.average_cluster_energy() ,str(c.nodelist) , str(c.TDMA_slots) ,str(c.CH),c.is_alive))
@@ -175,7 +190,7 @@ class Net():
         print("All packet numbers in outbox the  network is {0} ".format(sumpout))
         print("=================================Received packet summery==============================")
         for n in self.nodes:
-            print("node {0} sent {1} packes".format(n,len(n.inbox)))
+            print("node {0} Received {1} packes".format(n,len(n.inbox)))
             sumpin +=len(n.inbox)
         print("All packet numbers in inbox the network is {0} \n".format(sumpin))
         print("{0} packets are lost on wireless sensor network".format(sumpout-sumpin))
@@ -220,3 +235,13 @@ class Net():
                     self.clusterheads =  list(dict.fromkeys(self.clusterheads)) # remove duplicates
         # print("clusterheads are {0} in network  \n".format(self.clusterheads))
     
+    def neighbor_collision(self):
+        for n1 in self.nodes:
+            for n2 in self.nodes:
+                if n1.id != 0 :
+                    if n2.id !=0:
+                        if (n1.is_CH == False) and (n2.is_CH == False):
+                            if n1 in n2.neighbors:
+                                if n1.TDMA == n2.TDMA:
+                                    print(n1,n1.TDMA,"collison TDMA",n2,n2.TDMA)
+
