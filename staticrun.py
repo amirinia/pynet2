@@ -25,11 +25,10 @@ graphi.draw()
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
 
-env.run(until=1550)#config.MAX_RUNTIME)
+env.run(until=150)#config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 
-net1.introduce_yourself()
 # net1.network_outboxes()
 # net1.network_inboxes()
 
@@ -41,3 +40,4 @@ for n in net1.nodes:
 
 print(net1.clusters)
 # print(net1.nodes[0].inbox)
+net1.introduce_yourself()

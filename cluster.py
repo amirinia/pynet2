@@ -5,6 +5,7 @@ import gui
 import config
 import random
 import message
+import time
 
 class mycluster:
     def __init__(self,id, env ,network):
@@ -87,23 +88,23 @@ class mycluster:
 
     def Random_Clusterhead_Selection(self):
         prob_ch = self.net.CH_probablity()
-        print("   \n      Random_Clusterhead_Selection : {0} with prob {1}".format(self.id,prob_ch))
+        print("   \n      Random_Clusterhead_Selection : cluster {0} with prob {1}".format(self.id,prob_ch))
         for n in self.nodes:
             n_random = random.uniform(0,1)
             #print("random for {0} is {1}".format(n,n_random))
             if n_random < prob_ch:
                 if(next(reversed(n.energy))>config.LOW_NODE_THRESHOLD):
-                    print(" <<< random for {0} is {1} with energy {2} and av cluster {3}".format(n,n_random,next(reversed(n.energy)),self.average_cluster_energy()))
+                    print(" <<< random for node {0} is {1} with energy {2} and average cluster energy {3}".format(n,n_random,next(reversed(n.energy)),self.average_cluster_energy()))
 
                     if(sum(n.energy)>self.average_cluster_energy()):
                         if(n!=self.CH):
 
                             self.net.ClusterHead_finder()
-                            graph = gui.graphic(self.net)
-                            graph.draw() # simple draw
+                            # graph = gui.graphic(self.net)
+                            # graph.draw() # simple draw
+                            time.sleep(1)
 
-                            
-                            print("new ch is {0}  with {1} and last ch was {2} with {3}".format(n,n.parent,self.CH,self.CH.parent))
+                            print("new ch is node {0}  with parent {1} and last ch was {2} with {3}".format(n,n.parent,self.CH,self.CH.parent))
                             self.CH.change_CulsterHead()
                             #self.CH.parent.append(n)
                             n.parent.clear()

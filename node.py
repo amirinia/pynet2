@@ -108,7 +108,7 @@ class Node():
                         
                     # print(self.id, "test")
 
-                yield self.env.timeout(1)
+                    yield self.env.timeout(1)
 
 
     def CSMA_beaconing(self,env):
@@ -150,8 +150,8 @@ class Node():
         # yield self.env.timeout(1)
 
 
-    # def TDMA_beaconing(self,env):
-    #     print(" TT node",self.id,self.is_CH,self.TDMA)
+    def TDMA_beaconing(self,env):
+        print(" TT node",self.id,self.is_CH,self.TDMA)
 
     #     message_sender = message.Message()
     #     if(self.is_alive == True): #if node is alive
@@ -169,7 +169,7 @@ class Node():
     #                 msg_len = message_sender.message_length()
     #                 self.power.decrease_tx_energy(msg_len)
     #                 self.energy.append(self.power.energy)
-    #                 yield self.env.timeout(1)
+        yield self.env.timeout(1)
             
 
     def node_send_message(self, str_message , node):
@@ -196,7 +196,7 @@ class Node():
                 print("\n",self,self.getBS)
                 print("distance is ",self.distance)
                 print("for {0} neighbors are {1}".format(self,self.neighbors))
-                time.sleep(1)
+                # time.sleep(1)
                 for n in self.neighbors:
                     if n.id != 0:
                         print(n)
@@ -248,13 +248,13 @@ class Node():
     def change_CulsterHead(self):
         if(self.is_CH == False):
             self.is_CH = True
-            print("node {0} becomes CH (change)and parent is {1}".format(self.id,self.parent))
+            print("node {0} becomes CH (change)and parent is {1} and TDMA {2}".format(self.id,self.parent,self.TDMA))
             self.distance.clear
             self.distance.append(self.net.nodes[0])
         else:
             self.is_CH == False
             self.next_hop.clear()
-            print("node {0} becomes simple node (change) and parent is {1}".format(self.id,self.parent))
+            print("node {0} becomes simple node (change) and parent is {1} and TDMA {2}".format(self.id,self.parent,self.TDMA))
             #self.distance.append(next(reversed(self.parent)))
 
     def BS_getter(self):
