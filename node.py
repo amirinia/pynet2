@@ -67,16 +67,17 @@ class Node():
                             print("ch is dead ,cluster needs to find another CH \n\n")
                             self.is_CH == False
                         self.is_alive = False
+                        # draw
                         graphi = gui.graphic(self.net)
                         graphi.draw()
 
                     if self.net.clock[0]=="TDMA":
-                        message_sender = message.Message()
                         if(self.is_CH == False):
                             if(self.net.TDMA_slot==(self.TDMA+1)):
                                 if(len(self.parent)!=0):
                                     tempmessage ="at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent)
                                     print(tempmessage)
+                                    message_sender = message.Message(tempmessage)
                                     msg_len = message_sender.message_length()
                                     self.power.decrease_tx_energy(msg_len)
                                     self.energy.append(self.power.energy)
@@ -111,7 +112,6 @@ class Node():
 
 
     def CSMA_beaconing(self,env):
-        message_sender = message.Message()
         if(self.is_alive == True): #if node is alive
             if len(self.parent) == 0: # if node has no parent ,beacons
                 if(self.is_CH == False):
@@ -119,6 +119,7 @@ class Node():
 
                         tempmessage = "at {0} beacon CSMA adv is sent by {1} aprent is {2}, since it has no CH with energy {3}".format(env.now,self.id,self.parent,self.power)
                         print(tempmessage)
+                        message_sender = message.Message(tempmessage)
                         msg_len = message_sender.message_length()
                         self.power.decrease_tx_energy(msg_len)
                         self.energy.append(self.power.energy)
@@ -130,7 +131,7 @@ class Node():
             if (self.is_CH == True): # if node is cluster head
                 # print(random.randint(1,config.CSMA_duration))
                 if(random.randint(1,config.CSMA_duration)==5):
-
+                    if len(self.buffer) !=0 :
                             # self.power.decrease_energy(discharging_time = 10)  # idle discharge
                             tempbuffer = "CH {0} aggregate CSMA sent to BS on env:{1}====+++++++++++++++++++\n {2} ".format(self.id,env.now,self.buffer)
                             # message_sender.send_message(temp,self,self.net.nodes[0])
@@ -138,6 +139,10 @@ class Node():
                             self.node_send_message(self.aggregate,0)
                             self.aggregate.clear()
                             print(tempbuffer)
+                            message_sender = message.Message(tempbuffer)
+                            msg_len = message_sender.message_length()
+                            self.power.decrease_tx_energy(msg_len)
+                            self.energy.append(self.power.energy)
                             self.buffer.clear()
                             # yield self.env.timeout(random.randint(1,config.AGGREGATE_TIME ))
                             # yield self.env.timeout( random.randint(0,9))

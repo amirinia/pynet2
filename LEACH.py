@@ -22,7 +22,7 @@ class LEACHC:
                         mycluster1.add_node(n)
                     mycluster1.CH = node
                     # node.change_TDMA(mycluster1.TDMA_slots)
-                    print("{0} is CH in {1} with {2}  energy ++++++++++++++++++\n".format(node.id , mycluster1.id,str(node.energy) ) )
+                    print("{0} is CH in {1} with {2} energy ++++++++++++++++++\n".format(node.id , mycluster1.id,str(node.energy) ) )
                     message2 = message.Message()
                     message2.broadcast(node,"node {0} is cluster Head in {1} with TDMA ".format(node.id,mycluster1.id))
                     
