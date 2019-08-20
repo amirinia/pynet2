@@ -162,11 +162,11 @@ class Net():
         #print("New network is created : {0} with {1} node number ".format(self.name,self.nodelist.count))
         for x in self.nodes:
             if len(x.parent) == 0:
-                print("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5}".format(x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive))
-                print(x.energy)
+                print("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5} with TDMA {6} {7}".format(x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))))
+                # print(x.energy)
             if len(x.parent) != 0:
-                print("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5}".format(x.id ,x.power, str(x.x) , str(x.y) ,str(next(reversed(x.parent))),x.is_alive))
-                print(x.energy)
+                print("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5} with TDMA {6} {7}".format(x.id ,x.power, str(x.x) , str(x.y) ,str(next(reversed(x.parent))),x.is_alive,x.TDMA,next(reversed(x.energy))))
+                # print(x.energy)
         print("==============================Clusters===============================")
         # for c in self.clusters:
         #     print("{0} is alive: {5} with energy : {1} with nodes {2} ; TDMA: {3} ; CH is {4}".format(c.name , c.average_cluster_energy() ,str(c.nodelist) , str(c.TDMA_slots) ,str(c.CH),c.is_alive))

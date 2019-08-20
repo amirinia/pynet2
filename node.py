@@ -259,3 +259,6 @@ class Node():
 
     def BS_getter(self):
         self.getBS == True
+
+    def set_TDMA(self,num):
+        self.TDMA = num +1

@@ -13,6 +13,9 @@ class LEACHC:
 
     def global_cluster_fromation(self,env):
         for node in self.network.nodes:
+            tempmessage = "beacon on LEACH from {0}".format(node)
+            message1 = message.Message(tempmessage)
+            message1.broadcast(node,tempmessage)
             if(len(node.neighbors)!=0):
 
                 if(node.energy >= max(neighbor.energy for neighbor in node.neighbors)):
@@ -21,6 +24,7 @@ class LEACHC:
                     for n in node.neighbors:
                         mycluster1.add_node(n)
                     mycluster1.CH = node
+                    node.set_TDMA(len(mycluster1.nodes))
                     # node.change_TDMA(mycluster1.TDMA_slots)
                     print("{0} is CH in {1} with {2} energy ++++++++++++++++++\n".format(node.id , mycluster1.id,str(node.energy) ) )
                     message2 = message.Message()
