@@ -43,5 +43,5 @@ print(net1.clusterheads)
 # print(net1.nodes[0].inbox)
 net1.introduce_yourself()
 
-net1.network_outboxes()
-net1.network_inboxes()
+# net1.network_outboxes()
+# net1.network_inboxes()

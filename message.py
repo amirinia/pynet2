@@ -36,9 +36,10 @@ class Message(object):
         sender_node.node_send_message(message,destination_node)
         self.data = message
             #destination_node.inbox.append(message)
-        if(is_loss == True):
+        if(is_loss == True): # if no lost
             destination_node.node_receive_message(message,sender_node)
-            destination_node.node_send_message("ACK "+ message,sender_node)
+            destination_node.node_send_message("ACK ",sender_node)
+            sender_node.node_receive_message("ACK " ,destination_node)
             #node.node_receive_message(str_message,node)
             #print("message {0} is sent from {1} to {2}".format(message,sender_node.id,destination_node.id))
             #print("packet is lost",is_loss)
@@ -46,7 +47,8 @@ class Message(object):
         elif(is_loss== False):
             sender_node.node_send_message(message + " resend",destination_node)
             destination_node.node_receive_message(message + " resend",sender_node)
-            destination_node.node_send_message("ACK " + message + " resend",sender_node)
+            destination_node.node_send_message("ACK "  + " resend",sender_node)
+            sender_node.node_receive_message("ACK ",destination_node)
 
             #print("packet is lost",is_loss)
 
