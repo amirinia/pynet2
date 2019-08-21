@@ -5,6 +5,15 @@ import matplotlib.animation as animation
 import time 
 
 
+import numpy as np
+import matplotlib.cm as cm
+import matplotlib.pyplot as plt
+import matplotlib.cbook as cbook
+
+
+
+
+
 class graphic:
     def __init__(self, mynetwork):
         self.mynetwork = mynetwork
@@ -43,6 +52,9 @@ class graphic:
     
     
     def draw(self):
+
+
+
         print("draw \n")
 
         G = nx.Graph()
@@ -81,8 +93,8 @@ class graphic:
         nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True, node_size=400)
         #ani = animation.FuncAnimation(fig, animate, interval=1000)
         plt.legend("Network")
-
         plt.show()
+
 
 
     def draw_clusters(self):
@@ -214,4 +226,17 @@ class graphic:
         nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True)
         #ani = animation.FuncAnimation(fig, animate, interval=1000)
         plt.legend("Network")
+        plt.show()
+
+
+    def alert(self):
+                # A sample image
+        with cbook.get_sample_data('C:\\Users\\amiry\\OneDrive\\Desktop\\fire1.png') as image_file:
+            image = plt.imread(image_file)
+        fig, ax = plt.subplots()
+        ax.imshow(image)
+        #ax.axis('off')  # clear x-axis and y-axis
+        # ax.set_title('Fire')
+        x = range(300)
+        ax.plot(x, x, '--', linewidth=5, color='firebrick')
         plt.show()

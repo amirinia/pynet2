@@ -76,6 +76,12 @@ class Net():
             # self.network_nodedsicovery()
             # print(self.nodes)
             # print("net discovery")
+
+            if self.env.now > config.ALERT_TIME:
+                print("jkeviubeiuvbei")
+                self.alert_creator()
+                yield self.env.timeout(1)
+
     
     def initialization(self,duration):
         print("BS start to advertise")
@@ -244,3 +250,7 @@ class Net():
                                 if n1.TDMA == n2.TDMA:
                                     print(n1,n1.TDMA,"collison TDMA",n2,n2.TDMA)
 
+
+    def alert_creator(self):
+        print("Alert")
+        yield self.env.timeout(1)

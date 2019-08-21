@@ -13,6 +13,7 @@ cluster_rotation_period = 10
 #TIME
 ## Runtime configuration
 MAX_RUNTIME = 100
+ALERT_TIME = 119
 
 #aggregate time
 AGGREGATE_TIME = 10
