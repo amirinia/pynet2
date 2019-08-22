@@ -37,6 +37,7 @@ class Node():
         self.aggregate = []
         self.light = 0
         self.temperature = 0 
+        self.alert_neighbor = False
 
     def __str__(self):
         return str(self.id)
@@ -77,10 +78,11 @@ class Node():
                         if(self.is_CH == False):
                             if(self.net.TDMA_slot==(self.TDMA+1)):
                                 if(len(self.parent)!=0):
-                                    self.light = self.sensor.light_sensor()
-                                    # self.cluster[0].light.append(self.light)
-                                    self.temperature = self.sensor.temperature_sensor()
-                                    # self.cluster[0].temperature.append(self.temperature)
+                                    if(not self.alert_neighbor):
+                                        self.light = self.sensor.light_sensor()
+                                        # self.cluster[0].light.append(self.light)
+                                        self.temperature = self.sensor.temperature_sensor()
+                                        # self.cluster[0].temperature.append(self.temperature)
 
                                     tempmessage ="at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent)
                                     print(tempmessage)
@@ -270,3 +272,6 @@ class Node():
 
     def set_TDMA(self,num):
         self.TDMA = num +1
+
+    def alert_toggle(self):
+        self.alert_neighbor == True
