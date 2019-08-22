@@ -7,6 +7,7 @@ import RSSI
 import cluster
 import message
 import gui
+import alert
 
 """
 """
@@ -81,6 +82,7 @@ class Net():
             if self.env.now > config.ALERT_TIME:
                 print("Alert is created")
                 self.alert_creator()
+                alert1 = alert.Alert(self.env,100,100,self)
                 yield self.env.timeout(1)
 
     
