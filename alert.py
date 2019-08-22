@@ -17,16 +17,14 @@ class Alert():
         self.alert_nodedsicovery()
         while True:
             print("Alert is still exist",self.env.now,self.x,self.y)
-            yield self.env.timeout(1)
+            yield self.env.timeout(config.BEACONING_TIME)
 
 
     def alert_nodedsicovery(self,distance = config.Alert_RANGE):
-        print("++++++++++++++++++++ alert Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
+        print("\n++++++++++++++++++++ Alert Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.Alert_RANGE)
         for n in self.net.nodes:
                 if(distance > math.sqrt(((n.x-self.x)**2)+((n.y-self.y)**2))):
-                        print("{0} <=> {1} Distance= {2} ".format(str(n.id) , "alert" , round(math.sqrt(((n.x-self.x)**2)+((n.y-self.y)**2)),2)))
                         self.neighbors.append(n)
-                        n.alert_toggle()
                         n.temperature += 100
-                        print(n.temperature,n.alert_neighbor)
+                        print("{0} with temp {1} Distance= {2} ".format(str(n.id) , n.temperature , round(math.sqrt(((n.x-self.x)**2)+((n.y-self.y)**2)),2)))
         print("+++++++++++++++++++++ Alert Table Discovery Ends +++++++++++++++++++++++++++++++ \n")

@@ -8,6 +8,7 @@ import sensor
 import time
 import gui
 import cluster
+import math
 
 class Node():
     def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(1000,2000)),x=random.randint(0,config.AREA_WIDTH),y=random.randint(0,config.AREA_LENGTH),node_type=None, power_type=1, mobile_type=0, network=network ):
@@ -74,6 +75,13 @@ class Node():
                         graphi = gui.graphic(self.net)
                         graphi.draw()
 
+                    if self.env.now > config.ALERT_TIME:
+                        if self.net.alert :
+                             if(config.Alert_RANGE > math.sqrt(((config.alertx-self.x)**2)+((config.alerty-self.y)**2))):
+                                 self.alert_neighbor = True
+
+
+
                     if self.net.clock[0]=="TDMA":
                         if(self.is_CH == False):
                             if(self.net.TDMA_slot==(self.TDMA+1)):
@@ -82,6 +90,11 @@ class Node():
                                         self.light = self.sensor.light_sensor()
                                         # self.cluster[0].light.append(self.light)
                                         self.temperature = self.sensor.temperature_sensor()
+                                        # self.cluster[0].temperature.append(self.temperature)
+                                    elif(self.alert_neighbor):
+                                        self.light = 300+ self.sensor.light_sensor()
+                                        # self.cluster[0].light.append(self.light)
+                                        self.temperature = 100+ self.sensor.temperature_sensor()
                                         # self.cluster[0].temperature.append(self.temperature)
 
                                     tempmessage ="at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent)
@@ -143,6 +156,7 @@ class Node():
                     if len(self.buffer) !=0 :
                             # self.power.decrease_energy(discharging_time = 10)  # idle discharge
                             tempbuffer = "CH {0} aggregate CSMA sent to BS on env:{1}====+++++++++++++++++++\n {2} ".format(self.id,env.now,self.buffer)
+                            tempbuffer + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent)
                             # message_sender.send_message(temp,self,self.net.nodes[0])
                             self.net.nodes[0].inbox.append(tempbuffer)
                             self.node_send_message(self.aggregate,0)

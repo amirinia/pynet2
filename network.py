@@ -29,7 +29,8 @@ class Net():
         controller = node.Node(0, self.env,4, (self.xsize)/2, (self.ysize)/2,node_type='B' ,power_type=0)
         self.nodes.append(controller)
         controller.net = self
-    
+        self.alert = False
+
     def run(self):
         counter = 0
         initial = False
@@ -83,7 +84,8 @@ class Net():
 
             if(initialalert == False):
                 if self.env.now > config.ALERT_TIME:
-                    print("Alertm is created")
+                    self.alert = True
+                    print("Alert is created")
                     try:
                         yield self.env.process(self.alert_creator())
                     except simpy.Interrupt:
@@ -258,8 +260,8 @@ class Net():
 
 
     def alert_creator(self):
-        print("Alerty")
         alert1 = alert.Alert(self.env,config.alertx,config.alerty,self)
         graphi = gui.graphic(self)
         graphi.alert()
+
         yield self.env.timeout(1)
