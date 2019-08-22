@@ -33,6 +33,8 @@ class Net():
     def run(self):
         counter = 0
         initial = False
+        initialalert = False
+
         while True:
             self.ClusterHead_finder()
             if(initial == False):
@@ -79,12 +81,14 @@ class Net():
             # print(self.nodes)
             # print("net discovery")
 
-            if self.env.now > config.ALERT_TIME:
-                print("Alert is created")
-                self.alert_creator()
-                alert1 = alert.Alert(self.env,100,100,self)
-                yield self.env.timeout(1)
-
+            if(initialalert == False):
+                if self.env.now > config.ALERT_TIME:
+                    print("Alertm is created")
+                    try:
+                        yield self.env.process(self.alert_creator())
+                    except simpy.Interrupt:
+                        print('Was interrupted.CSMA')
+                    initialalert = True
     
     def initialization(self,duration):
         print("BS start to advertise")
@@ -153,7 +157,6 @@ class Net():
                         if n1 not in n.neighbors:
                             n.neighbors.append(n1)
                             
-        
         print("+++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
 
 
@@ -255,6 +258,8 @@ class Net():
 
 
     def alert_creator(self):
-        print("Alert")
+        print("Alerty")
         graphi = gui.graphic(self)
         graphi.alert()
+        alert1 = alert.Alert(self.env,config.alertx,config.alerty,self)
+        yield self.env.timeout(1)

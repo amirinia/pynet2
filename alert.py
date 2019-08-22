@@ -20,7 +20,7 @@ class Alert():
 
 
 
-    def network_nodedsicovery(self,distance = config.TX_RANGE):
+    def alert_nodedsicovery(self,distance = config.TX_RANGE):
         
         print("++++++++++++++++++++ alert Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
         for n in self.net.nodes:

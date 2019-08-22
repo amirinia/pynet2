@@ -25,7 +25,7 @@ graphi.draw()
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
 
-env.run(until=150)#config.MAX_RUNTIME)
+env.run(until=250)#config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 
