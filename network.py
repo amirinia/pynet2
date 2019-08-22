@@ -94,7 +94,10 @@ class Net():
 
             if self.env.now > config.ALERT_END:
                 self.alert = False
-                
+                print("Alert is solved ")
+                # graphi = gui.graphic(self)
+                # graphi.draw()
+
     def initialization(self,duration):
         print("BS start to advertise")
         self.network_nodedsicovery()

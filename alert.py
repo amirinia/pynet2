@@ -2,6 +2,7 @@ import simpy
 import network
 import math
 import config
+import time
 
 class Alert():
     def __init__(self, env, x, y, network):
@@ -25,6 +26,8 @@ class Alert():
         for n in self.net.nodes:
                 if(distance > math.sqrt(((n.x-self.x)**2)+((n.y-self.y)**2))):
                         self.neighbors.append(n)
-                        n.temperature += 100
-                        print("{0} with temp {1} Distance= {2} ".format(str(n.id) , n.temperature , round(math.sqrt(((n.x-self.x)**2)+((n.y-self.y)**2)),2)))
+                        dist = round(math.sqrt(((n.x-self.x)**2)+((n.y-self.y)**2)),2)
+                        n.temperature += ( 250 - dist)
+                        print("{0} with temp {1} Distance= {2} ".format(str(n.id) , n.temperature , dist))
         print("+++++++++++++++++++++ Alert Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
+        time.sleep(5)
