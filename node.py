@@ -79,7 +79,8 @@ class Node():
                         if self.net.alert :
                              if(config.Alert_RANGE > math.sqrt(((config.alertx-self.x)**2)+((config.alerty-self.y)**2))):
                                  self.alert_neighbor = True
-
+                        else:
+                                 self.alert_neighbor = False
 
 
                     if self.net.clock[0]=="TDMA":
@@ -156,7 +157,7 @@ class Node():
                     if len(self.buffer) !=0 :
                             # self.power.decrease_energy(discharging_time = 10)  # idle discharge
                             tempbuffer = "CH {0} aggregate CSMA sent to BS on env:{1}====+++++++++++++++++++\n {2} ".format(self.id,env.now,self.buffer)
-                            tempbuffer + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent)
+                            tempbuffer += "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent)
                             # message_sender.send_message(temp,self,self.net.nodes[0])
                             self.net.nodes[0].inbox.append(tempbuffer)
                             self.node_send_message(self.aggregate,0)
