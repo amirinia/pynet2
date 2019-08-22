@@ -25,21 +25,21 @@ graphi.draw()
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
 
-env.run(until=650)#config.MAX_RUNTIME)
+env.run(until=350)#config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 
-net1.network_packet_summery()
+# net1.network_packet_summery()
 
-for n in net1.nodes:
-    print(n,n.TDMA,n.is_CH,n.cluster,"   ",n.distance)
+# for n in net1.nodes:
+#     print(n,n.TDMA,n.is_CH,n.cluster,"   ",n.distance)
 
 
-print(net1.clusters)
-print(net1.clusterheads)
+# print(net1.clusters)
+# print(net1.clusterheads)
 
 # print(net1.nodes[0].inbox)
-net1.introduce_yourself()   
+# net1.introduce_yourself()   
 
 # net1.network_outboxes()
 # net1.network_inboxes()

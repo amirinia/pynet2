@@ -21,7 +21,7 @@ alerty = 110
 Alert_RANGE = 90 # meters
 #TIME
 ALERT_TIME = 119
-ALERT_END = 500
+ALERT_END = 300
 ## Runtime configuration
 MAX_RUNTIME = 100
 

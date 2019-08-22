@@ -16,6 +16,7 @@ class Alert():
             
     def run(self):
         self.alert_nodedsicovery()
+        print("\n\n 2 options  1-decrease in active time 2-reclustering\n\n\n")
         while self.env.now < config.ALERT_END:
             print("Alert is still exist",self.env.now,self.x,self.y)
             yield self.env.timeout(config.BEACONING_TIME)
