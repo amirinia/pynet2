@@ -111,6 +111,9 @@ class graphic:
                             #print("({0}, {1})".format((node),(node.parent[0])))
                             G.add_edge(node.id,next(reversed(node.parent)))
         nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True, node_size=400)
+        if self.mynetwork.alert :
+                G.add_node("Fire",pos=(config.alertx,config.alerty))
+                nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=["Fire"], node_size=1000, node_color='#FF0000')
         #ani = animation.FuncAnimation(fig, animate, interval=1000)
         plt.legend("Network")
 
@@ -216,16 +219,15 @@ class graphic:
 
 
     def alert(self):
-                # A sample image
-        with cbook.get_sample_data('C:\\Users\\amiry\\OneDrive\\Desktop\\fire1.png') as image_file:
-            image = plt.imread(image_file)
-        fig, ax = plt.subplots()
-        ax.imshow(image)
-        #ax.axis('off')  # clear x-axis and y-axis
-        # ax.set_title('Fire')
-        x = range(300)
-        ax.plot(x, x, '--', linewidth=5, color='firebrick')
-        plt.show()
+        #         # A sample image
+        # with cbook.get_sample_data('C:\\Users\\amiry\\OneDrive\\Desktop\\fire1.png') as image_file:
+        #     image = plt.imread(image_file)
+        # fig, ax = plt.subplots()
+        # ax.imshow(image)
+        # #ax.axis('off')  # clear x-axis and y-axis
+        # # ax.set_title('Fire')
+        # x = range(300)
+        # ax.plot(x, x, '--', linewidth=5, color='firebrick')
 
 
         G = nx.Graph()
@@ -252,7 +254,7 @@ class graphic:
 
         G.add_node("Fire",pos=(config.alertx,config.alerty))
         nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True, node_size=400)
-        nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=["Fire"], node_size=1000, node_color='#FF0000')
+        nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=["Fire"], node_size=1300, node_color='#FF0000')
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=[0], node_size=1000, node_color='#66ff66')
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=nodelistCH, node_size=700, node_color='#ff80ff')
 

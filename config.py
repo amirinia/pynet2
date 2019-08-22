@@ -12,13 +12,15 @@ Base_Sattion_Beaconning_period = 10
 cluster_rotation_period = 10
 
 # alert position
-alertx = 266
-alerty = 166
-Alert_RANGE = 80 # meters
+alertx = 270
+alerty = 100
+Alert_RANGE = 90 # meters
 #TIME
+ALERT_TIME = 119
+ALERT_END = 500
 ## Runtime configuration
 MAX_RUNTIME = 100
-ALERT_TIME = 119
+
 
 #aggregate time
 AGGREGATE_TIME = 10

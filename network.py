@@ -91,7 +91,10 @@ class Net():
                     except simpy.Interrupt:
                         print('Was interrupted.CSMA')
                     initialalert = True
-    
+
+            if self.env.now > config.ALERT_END:
+                self.alert = False
+                
     def initialization(self,duration):
         print("BS start to advertise")
         self.network_nodedsicovery()
