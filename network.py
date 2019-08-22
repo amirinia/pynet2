@@ -6,6 +6,7 @@ import math
 import RSSI
 import cluster
 import message
+import gui
 
 """
 """
@@ -78,7 +79,7 @@ class Net():
             # print("net discovery")
 
             if self.env.now > config.ALERT_TIME:
-                print("jkeviubeiuvbei")
+                print("Alert is created")
                 self.alert_creator()
                 yield self.env.timeout(1)
 
@@ -253,4 +254,5 @@ class Net():
 
     def alert_creator(self):
         print("Alert")
-        yield self.env.timeout(1)
+        graphi = gui.graphic(self)
+        graphi.alert()

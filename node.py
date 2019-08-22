@@ -75,7 +75,12 @@ class Node():
                         if(self.is_CH == False):
                             if(self.net.TDMA_slot==(self.TDMA+1)):
                                 if(len(self.parent)!=0):
-                                    tempmessage ="at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent)
+                                    temp_light = self.sensor.light_sensor()
+                                    # self.cluster[0].light.append(temp_light)
+                                    temp_temperature = self.sensor.temperature_sensor()
+                                    # self.cluster[0].temperature.append(temp_temperature)
+
+                                    tempmessage ="at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(temp_light,temp_temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent)
                                     print(tempmessage)
                                     message_sender = message.Message(tempmessage)
                                     msg_len = message_sender.message_length()
@@ -144,9 +149,10 @@ class Node():
                             self.power.decrease_tx_energy(msg_len)
                             self.energy.append(self.power.energy)
                             self.buffer.clear()
-                            # yield self.env.timeout(random.randint(1,config.AGGREGATE_TIME ))
-                            # yield self.env.timeout( random.randint(0,9))
-                            # yield self.env.timeout(1)
+
+                            # print(self.clus.cluster_average_light())
+                            # self.clus.light.clear()
+
         # yield self.env.timeout(1)
 
 
