@@ -1,4 +1,8 @@
 import math
+# area definition
+AREA_WIDTH = 300
+AREA_LENGTH = 200
+
 #TDMA
 CSMA_duration = 9
 TDMA_duration = 8
@@ -13,7 +17,7 @@ cluster_rotation_period = 10
 
 # alert position
 alertx = 270
-alerty = 100
+alerty = 110
 Alert_RANGE = 90 # meters
 #TIME
 ALERT_TIME = 119
@@ -44,9 +48,7 @@ NODE_AGGREGATE_ENERGY_CONSUMPTION = -0.00002
 TX_RANGE = 70 # meters 30
 BSID = -1
 
-# area definition
-AREA_WIDTH = 300
-AREA_LENGTH = 200
+
 
 # controller  position
 BS_POS_X = 0.0

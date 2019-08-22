@@ -257,6 +257,7 @@ class graphic:
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=["Fire"], node_size=1300, node_color='#FF0000')
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=[0], node_size=1000, node_color='#66ff66')
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=nodelistCH, node_size=700, node_color='#ff80ff')
-
-    
+        mng = plt.get_current_fig_manager()
+        mng.full_screen_toggle()
+        mng.set_window_title("Fire happens")
         plt.show()

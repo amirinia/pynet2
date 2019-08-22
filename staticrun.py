@@ -29,8 +29,6 @@ env.run(until=650)#config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 
-
-
 net1.network_packet_summery()
 
 for n in net1.nodes:
