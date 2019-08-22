@@ -52,11 +52,7 @@ class graphic:
     
     
     def draw(self):
-
-
-
         print("draw \n")
-
         G = nx.Graph()
         G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
         for node in self.mynetwork.nodes:
@@ -83,7 +79,6 @@ class graphic:
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=[0], node_size=1000, node_color='#66ff66')
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=nodelistCH, node_size=700, node_color='#ff80ff')
 
-        plt.legend("Network")
         plt.show()
 
 
@@ -261,6 +256,5 @@ class graphic:
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=[0], node_size=1000, node_color='#66ff66')
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=nodelistCH, node_size=700, node_color='#ff80ff')
 
-        
-        plt.legend("Network")
+    
         plt.show()

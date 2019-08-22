@@ -259,7 +259,7 @@ class Net():
 
     def alert_creator(self):
         print("Alerty")
+        alert1 = alert.Alert(self.env,config.alertx,config.alerty,self)
         graphi = gui.graphic(self)
         graphi.alert()
-        alert1 = alert.Alert(self.env,config.alertx,config.alerty,self)
         yield self.env.timeout(1)
