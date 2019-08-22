@@ -10,6 +10,11 @@ Duration = CSMA_duration + TDMA_duration + Inactive_duration
 BEACONING_TIME       = 5
 Base_Sattion_Beaconning_period = 10
 cluster_rotation_period = 10
+
+# alert position
+alertx =100
+alerty =150
+
 #TIME
 ## Runtime configuration
 MAX_RUNTIME = 100

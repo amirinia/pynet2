@@ -22,16 +22,9 @@ class Alert():
 
     def network_nodedsicovery(self,distance = config.TX_RANGE):
         
-        print("++++++++++++++++++++ network Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
-        for n in self.nodes:
-            
-            print("Neighbors Table discovery for {0} is below and neighbors are {1}".format(str(n.id),n.neighbors))
-            for n1 in self.nodes:
-                if(distance > math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2))):
-                    if(n!=n1):
-                        print("{0} <=> {1} Distance= {2} RSSI= {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
-                        if n1 not in n.neighbors:
-                            n.neighbors.append(n1)
-                            
-        
-        print("+++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
+        print("++++++++++++++++++++ alert Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
+        for n in self.net.nodes:
+                if(distance > math.sqrt(((n.x-self.x)**2)+((n.y-self.y)**2))):
+                        print("{0} <=> {1} Distance= {2} RSSI= {3}".format(str(n.id) , "alert" , round(math.sqrt(((n.x-self.x)**2)+((n.y-self.y)**2)),2)))
+
+        print("+++++++++++++++++++++ Alert Table Discovery Ends +++++++++++++++++++++++++++++++ \n")

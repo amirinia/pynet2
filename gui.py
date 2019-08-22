@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import network
 import matplotlib.animation as animation
 import time 
-
+import config
 
 import numpy as np
 import matplotlib.cm as cm
@@ -239,4 +239,25 @@ class graphic:
         # ax.set_title('Fire')
         x = range(300)
         ax.plot(x, x, '--', linewidth=5, color='firebrick')
+        plt.show()
+
+
+        G = nx.Graph()
+        G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
+        for node in self.mynetwork.nodes:
+            if(node.is_alive == True):
+                # print("for node in self.mynetwork.nodes {0} and cluster head {1}".format(node,node.parent))
+
+                G.add_node(node.id,pos=(node.x,node.y))
+                
+                if(len(node.parent)!=0):
+                    if(node.parent[0].is_alive==True):
+                        G.add_edge(0,node.parent[0].id)
+                if(len(node.parent)!=0):
+                    if(node.parent[0].is_alive==True):
+                        G.add_edge(node.id,node.parent[0].id)
+
+        G.add_node("F",pos=(config.alertx,config.alerty))
+        nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True, node_size=400)
+        plt.legend("Network")
         plt.show()
