@@ -95,6 +95,7 @@ class Node():
                                     elif(self.alert_neighbor):
                                         self.light = 300+ self.sensor.light_sensor()
                                         # self.cluster[0].light.append(self.light)
+                                        # send alert to BS
                                         self.temperature = 100+ self.sensor.temperature_sensor()
                                         # self.cluster[0].temperature.append(self.temperature)
 
