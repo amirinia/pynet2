@@ -87,6 +87,7 @@ class Node():
                         if(self.is_CH == False):
                             if(self.net.TDMA_slot==(self.TDMA+1)):
                                 if(len(self.parent)!=0):
+                                    temp1 =""
                                     if(not self.alert_neighbor):
                                         self.light = self.sensor.light_sensor()
                                         # self.cluster[0].light.append(self.light)
@@ -95,11 +96,12 @@ class Node():
                                     elif(self.alert_neighbor):
                                         self.light = 300+ self.sensor.light_sensor()
                                         # self.cluster[0].light.append(self.light)
+                                        temp1 = str(self.id) + " Alert " 
                                         # send alert to BS
                                         self.temperature = 100+ self.sensor.temperature_sensor()
                                         # self.cluster[0].temperature.append(self.temperature)
 
-                                    tempmessage ="at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent)
+                                    tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent)
                                     print(tempmessage)
                                     message_sender = message.Message(tempmessage)
                                     msg_len = message_sender.message_length()
@@ -251,7 +253,12 @@ class Node():
                 #                 print(n.getBS,self.getBS)
                 #                 if any("BS" in s for s in n.inbox):
                 #                     print("temp inbox",self.id)
-                #                     
+                #  
+        # if( "Alert" in str_message): 
+        #     print("fire 2 sould be siezed \n\n",self.id)                 
+        #     print(self.id)
+        #     if self.id == 0:
+        #         print("fire 1 sould be siezed \n\n",self.id)                 
         
     def send_ACK(self,destination_node):
         message1 = message.MyMessage()
