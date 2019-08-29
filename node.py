@@ -94,11 +94,11 @@ class Node():
                                         self.temperature = self.sensor.temperature_sensor()
                                         # self.cluster[0].temperature.append(self.temperature)
                                     elif(self.alert_neighbor):
-                                        self.light = 300+ self.sensor.light_sensor()
+                                        self.light = config.Alert_increase_temp+ self.sensor.light_sensor()
                                         # self.cluster[0].light.append(self.light)
                                         temp1 = str(self.id) + " Alert " 
                                         # send alert to BS
-                                        self.temperature = 100+ self.sensor.temperature_sensor()
+                                        self.temperature = 200+ self.sensor.temperature_sensor()
                                         # self.cluster[0].temperature.append(self.temperature)
 
                                     tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent)

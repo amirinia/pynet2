@@ -19,6 +19,7 @@ cluster_rotation_period = 10
 alertx = 270
 alerty = 110
 Alert_RANGE = 90 # meters
+Alert_increase_temp = 300
 #TIME
 ALERT_TIME = 119
 ALERT_END = 300

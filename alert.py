@@ -28,7 +28,7 @@ class Alert():
                 if(distance > math.sqrt(((n.x-self.x)**2)+((n.y-self.y)**2))):
                         self.neighbors.append(n)
                         dist = round(math.sqrt(((n.x-self.x)**2)+((n.y-self.y)**2)),2)
-                        n.temperature += ( 250 - dist)
+                        n.temperature += ( config.Alert_increase_temp - dist)
                         print("{0} with temp {1} Distance= {2} ".format(str(n.id) , n.temperature , dist))
         print("+++++++++++++++++++++ Alert Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
         time.sleep(5)

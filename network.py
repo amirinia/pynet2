@@ -8,6 +8,7 @@ import cluster
 import message
 import gui
 import alert
+import config
 
 """
 """
@@ -38,23 +39,22 @@ class Net():
 
         while True:
             self.ClusterHead_finder()
-            if(initial == False):
+            if (initial == False): # run once initialization
                 try:
                     yield self.env.process(self.initialization(10))
                 except simpy.Interrupt:
                     print('Was interrupted.CSMA')
                 initial = True
 
-            counter +=1
+            counter += 1 # count superframes
             self.superframe_num = counter
             print('\n New Superframe is began CSMA at %d number %d\n' % (self.env.now ,counter))
-            CSMA_duration = 9
+            CSMA_duration = config.CSMA_duration
 
             if counter % config.Base_Sattion_Beaconning_period == 0:
                 for n in self.nodes[0].neighbors:
                     message_sender = message.Message()
                     message_sender.broadcast(self.nodes[0],"Base Station boradcast on regular basis {0} at env:{1}".format(self.nodes[0].id ,self.env.now))
-
 
             try:
                 yield self.env.process(self.CSMA(CSMA_duration))
@@ -100,11 +100,12 @@ class Net():
             
             if self.alert == True: # if BS get alert
                 if any("Alert" in s for s in self.nodes[0].inbox):
-                    print("Alertttttt is received by BS")
+                    print("Alertttttt is received by BS " , self.env.now)
+                    
 
 
     def initialization(self,duration):
-        print("BS start to advertise")
+        print("BS start to advertise + Superframe rules")
         self.network_nodedsicovery()
         for n in self.clusterheads:
             self.nodes[0].neighbors.append(n)
@@ -116,7 +117,7 @@ class Net():
             n.distance.append(self.nodes[0])
 
         message_sender = message.Message()
-        message_sender.broadcast(self.nodes[0],"BS boradcast adv {0} at env:{1}".format(self.nodes[0].id ,self.env.now))
+        message_sender.broadcast(self.nodes[0],"BS boradcast + Superframe rules adv {0} at env:{1}".format(self.nodes[0].id ,self.env.now))
         print('cluster formation\n')
         # self.cluster_formation()
         print("Inititial network %d nods at %d"%(len(self.nodes),self.env.now))
@@ -154,7 +155,6 @@ class Net():
         self.nodes.append(node)
         node.net = self
         # self.network_nodedsicovery(distance = config.TX_RANGE,dprint=False)
-
 
 
     def network_nodedsicovery(self,distance = config.TX_RANGE):
