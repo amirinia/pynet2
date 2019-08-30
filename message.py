@@ -31,12 +31,14 @@ class Message(object):
             message1.send_message(message,node,n)
             #message1.send_message(message,node,node.neighbors[x])
 
-    def send_message(self, message , sender_node, destination_node):
+    def send_message(self, message , sender_node, destination_node, TDMA = False):
         is_loss = packetloss.packetloss()
+        if TDMA == True:
+            is_loss = False
         sender_node.node_send_message(message,destination_node)
         self.data = message
             #destination_node.inbox.append(message)
-        if(is_loss == True): # if no lost
+        if(is_loss == False): # if no lost
             destination_node.node_receive_message(message,sender_node)
             destination_node.node_send_message("ACK ",sender_node)
             sender_node.node_receive_message("ACK " ,destination_node)
@@ -44,7 +46,7 @@ class Message(object):
             #print("message {0} is sent from {1} to {2}".format(message,sender_node.id,destination_node.id))
             #print("packet is lost",is_loss)
 
-        elif(is_loss== False):
+        elif(is_loss== True):
             sender_node.node_send_message(message + " resend",destination_node)
             destination_node.node_receive_message(message + " resend",sender_node)
             destination_node.node_send_message("ACK "  + " resend",sender_node)

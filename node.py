@@ -107,7 +107,7 @@ class Node():
                                     msg_len = message_sender.message_length()
                                     self.power.decrease_tx_energy(msg_len)
                                     self.energy.append(self.power.energy)
-                                    message_sender.send_message(tempmessage,self,self.parent[0])
+                                    message_sender.send_message(tempmessage,self,self.parent[0],TDMA=True)
                                     self.parent[0].buffer.append(tempmessage)
                             # try:
                             #     if(self.is_alive == True):

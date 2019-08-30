@@ -29,7 +29,7 @@ env.run(until=350)#config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 
-# net1.network_packet_summery()
+net1.network_packet_summery()
 
 # for n in net1.nodes:
 #     print(n,n.TDMA,n.is_CH,n.cluster,"   ",n.distance)
