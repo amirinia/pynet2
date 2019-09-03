@@ -36,6 +36,7 @@ class Net():
         counter = 0
         initial = False
         initialalert = False
+        is_solved = False
 
         while True:
             self.ClusterHead_finder()
@@ -92,11 +93,13 @@ class Net():
                         print('Was interrupted.CSMA')
                     initialalert = True
 
-            if self.env.now > config.ALERT_END:
-                self.alert = False
-                print("Alert is solved ")
-                # graphi = gui.graphic(self)
-                # graphi.draw()
+            if(is_solved == False):
+                if self.env.now > config.ALERT_END:
+                    self.alert = False
+                    print("Alert is solved ")
+                    graphi = gui.graphic(self)
+                    graphi.alert_sloved()
+                    is_solved = True
             
             if self.alert == True: # if BS get alert
                 if any("Alert" in s for s in self.nodes[0].inbox):

@@ -115,6 +115,11 @@ class graphic:
                 G.add_node("Fire",pos=(config.alertx,config.alerty))
                 nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=["Fire"], node_size=1000, node_color='#FF0000')
         #ani = animation.FuncAnimation(fig, animate, interval=1000)
+        if not self.mynetwork.alert:
+            G.add_node("Solve",pos=(config.alertx,config.alerty))
+            nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=["Solve"], node_size=2000, node_color='#00ff80')
+        #ani = animation.FuncAnimation(fig, animate, interval=1000)
+
         plt.legend("Network")
 
         plt.show()
@@ -256,6 +261,42 @@ class graphic:
         nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True, node_size=400)
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=["Fire"], node_size=1300, node_color='#FF0000')
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=[0], node_size=1000, node_color='#66ff66')
+        nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=nodelistCH, node_size=700, node_color='#ff80ff')
+        mng = plt.get_current_fig_manager()
+        mng.full_screen_toggle()
+        mng.set_window_title("Fire happens")
+        plt.show()
+
+
+    def alert_sloved(self):
+
+
+        G = nx.Graph()
+        G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
+        for node in self.mynetwork.nodes:
+            if(node.is_alive == True):
+                # print("for node in self.mynetwork.nodes {0} and cluster head {1}".format(node,node.parent))
+
+                G.add_node(node.id,pos=(node.x,node.y))
+                
+                if(len(node.parent)!=0):
+                    if(node.parent[0].is_alive==True):
+                        G.add_edge(0,node.parent[0].id)
+                if(len(node.parent)!=0):
+                    if(node.parent[0].is_alive==True):
+                        G.add_edge(node.id,node.parent[0].id)
+
+
+        nodelistCH = []
+        for node in self.mynetwork.nodes:
+            if(node.is_alive == True):
+                if(node.is_CH == True):
+                    nodelistCH.append(node.id)
+
+        G.add_node("Solved",pos=(config.alertx,config.alerty))
+        nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True, node_size=400)
+        nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=["Solved"], node_size=2200, node_color='#24D39A')
+        nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=[0], node_size=3000, node_color='#66ff66')
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=nodelistCH, node_size=700, node_color='#ff80ff')
         mng = plt.get_current_fig_manager()
         mng.full_screen_toggle()

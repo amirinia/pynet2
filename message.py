@@ -33,8 +33,8 @@ class Message(object):
 
     def send_message(self, message , sender_node, destination_node, TDMA = False):
         is_loss = packetloss.packetloss()
-        if TDMA == True:
-            is_loss = False
+        # if TDMA == True:
+        #     is_loss = False
         sender_node.node_send_message(message,destination_node)
         self.data = message
             #destination_node.inbox.append(message)
