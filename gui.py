@@ -308,4 +308,5 @@ class graphic:
         mng.set_window_title("Fire happens")
         plt.pause(15)
         plt.clf()
+
         plt.close()
