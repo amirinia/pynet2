@@ -17,7 +17,9 @@ class mycluster:
         self.action = env.process(self.run(env))
         self.net = network
         self.next_CH = []
-        self.CH = []      
+        self.CH = []
+        self.light = []
+        self.temperature = []      
 
     def __str__(self):
         return str(self.id)
@@ -120,3 +122,18 @@ class mycluster:
 
                             
                             return
+    
+    def cluster_average_light(self):
+        temp_light = 0
+        for n in self.light:
+            temp_light += self.light[n]
+        if len(self.light) != 0 :
+            return temp_light / len(self.light)
+
+
+    def cluster_average_temp(self):
+        temp = 0
+        for n in self.temperature:
+            temp += self.temperature[n]
+        if len(self.temperature) != 0 :
+            return temp / len(self.temperature)

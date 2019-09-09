@@ -8,6 +8,7 @@ import sensor
 import time
 import gui
 import cluster
+import math
 
 class Node():
     def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(1000,2000)),x=random.randint(0,config.AREA_WIDTH),y=random.randint(0,config.AREA_LENGTH),node_type=None, power_type=1, mobile_type=0, network=network ):
@@ -35,6 +36,9 @@ class Node():
         self.distance = []
         self.next_hop = []
         self.aggregate = []
+        self.light = 0
+        self.temperature = 0 
+        self.alert_neighbor = False
 
     def __str__(self):
         return str(self.id)
@@ -71,17 +75,39 @@ class Node():
                         graphi = gui.graphic(self.net)
                         graphi.draw()
 
+                    if self.env.now > config.ALERT_TIME:
+                        if self.net.alert :
+                             if(config.Alert_RANGE > math.sqrt(((config.alertx-self.x)**2)+((config.alerty-self.y)**2))):
+                                 self.alert_neighbor = True
+                        else:
+                                 self.alert_neighbor = False
+
+
                     if self.net.clock[0]=="TDMA":
                         if(self.is_CH == False):
                             if(self.net.TDMA_slot==(self.TDMA+1)):
                                 if(len(self.parent)!=0):
-                                    tempmessage ="at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent)
+                                    temp1 =""
+                                    if(not self.alert_neighbor):
+                                        self.light = self.sensor.light_sensor()
+                                        # self.cluster[0].light.append(self.light)
+                                        self.temperature = self.sensor.temperature_sensor()
+                                        # self.cluster[0].temperature.append(self.temperature)
+                                    elif(self.alert_neighbor):
+                                        self.light = config.Alert_increase_temp+ self.sensor.light_sensor()
+                                        # self.cluster[0].light.append(self.light)
+                                        temp1 = str(self.id) + " Alert " 
+                                        # send alert to BS
+                                        self.temperature = 200+ self.sensor.temperature_sensor()
+                                        # self.cluster[0].temperature.append(self.temperature)
+
+                                    tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent)
                                     print(tempmessage)
                                     message_sender = message.Message(tempmessage)
                                     msg_len = message_sender.message_length()
                                     self.power.decrease_tx_energy(msg_len)
                                     self.energy.append(self.power.energy)
-                                    message_sender.send_message(tempmessage,self,self.parent[0])
+                                    message_sender.send_message(tempmessage,self,self.parent[0],TDMA=True)
                                     self.parent[0].buffer.append(tempmessage)
                             # try:
                             #     if(self.is_alive == True):
@@ -134,6 +160,7 @@ class Node():
                     if len(self.buffer) !=0 :
                             # self.power.decrease_energy(discharging_time = 10)  # idle discharge
                             tempbuffer = "CH {0} aggregate CSMA sent to BS on env:{1}====+++++++++++++++++++\n {2} ".format(self.id,env.now,self.buffer)
+                            tempbuffer += "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent)
                             # message_sender.send_message(temp,self,self.net.nodes[0])
                             self.net.nodes[0].inbox.append(tempbuffer)
                             self.node_send_message(self.aggregate,0)
@@ -144,9 +171,10 @@ class Node():
                             self.power.decrease_tx_energy(msg_len)
                             self.energy.append(self.power.energy)
                             self.buffer.clear()
-                            # yield self.env.timeout(random.randint(1,config.AGGREGATE_TIME ))
-                            # yield self.env.timeout( random.randint(0,9))
-                            # yield self.env.timeout(1)
+
+                            # print(self.clus.cluster_average_light())
+                            # self.clus.light.clear()
+
         # yield self.env.timeout(1)
 
 
@@ -225,7 +253,12 @@ class Node():
                 #                 print(n.getBS,self.getBS)
                 #                 if any("BS" in s for s in n.inbox):
                 #                     print("temp inbox",self.id)
-                #                     
+                #  
+        # if( "Alert" in str_message): 
+        #     print("fire 2 sould be siezed \n\n",self.id)                 
+        #     print(self.id)
+        #     if self.id == 0:
+        #         print("fire 1 sould be siezed \n\n",self.id)                 
         
     def send_ACK(self,destination_node):
         message1 = message.MyMessage()
@@ -262,3 +295,6 @@ class Node():
 
     def set_TDMA(self,num):
         self.TDMA = num +1
+
+    def alert_toggle(self):
+        self.alert_neighbor == True

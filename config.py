@@ -1,4 +1,8 @@
 import math
+# area definition
+AREA_WIDTH = 300
+AREA_LENGTH = 200
+
 #TDMA
 CSMA_duration = 9
 TDMA_duration = 8
@@ -10,10 +14,20 @@ Duration = CSMA_duration + TDMA_duration + Inactive_duration
 BEACONING_TIME       = 5
 Base_Sattion_Beaconning_period = 10
 cluster_rotation_period = 10
+
+# alert position
+alertx = 270
+alerty = 110
+Alert_RANGE = 90 # meters
+Alert_increase_temp = 300
+
 #TIME
+ALERT_TIME = 119
+ALERT_END = 1300
+
 ## Runtime configuration
 MAX_RUNTIME = 100
-ALERT_TIME = 119
+
 
 #aggregate time
 AGGREGATE_TIME = 10
@@ -36,10 +50,6 @@ NODE_AGGREGATE_ENERGY_CONSUMPTION = -0.00002
 # node transmission range node discovery
 TX_RANGE = 70 # meters 30
 BSID = -1
-
-# area definition
-AREA_WIDTH = 300
-AREA_LENGTH = 200
 
 # controller  position
 BS_POS_X = 0.0

@@ -6,6 +6,9 @@ import math
 import RSSI
 import cluster
 import message
+import gui
+import alert
+import config
 
 """
 """
@@ -27,29 +30,32 @@ class Net():
         controller = node.Node(0, self.env,4, (self.xsize)/2, (self.ysize)/2,node_type='B' ,power_type=0)
         self.nodes.append(controller)
         controller.net = self
-    
+        self.alert = False
+
     def run(self):
         counter = 0
         initial = False
+        initialalert = False
+        is_solved = False
+
         while True:
             self.ClusterHead_finder()
-            if(initial == False):
+            if (initial == False): # run once initialization
                 try:
                     yield self.env.process(self.initialization(10))
                 except simpy.Interrupt:
                     print('Was interrupted.CSMA')
                 initial = True
 
-            counter +=1
+            counter += 1 # count superframes
             self.superframe_num = counter
             print('\n New Superframe is began CSMA at %d number %d\n' % (self.env.now ,counter))
-            CSMA_duration = 9
+            CSMA_duration = config.CSMA_duration
 
             if counter % config.Base_Sattion_Beaconning_period == 0:
                 for n in self.nodes[0].neighbors:
                     message_sender = message.Message()
                     message_sender.broadcast(self.nodes[0],"Base Station boradcast on regular basis {0} at env:{1}".format(self.nodes[0].id ,self.env.now))
-
 
             try:
                 yield self.env.process(self.CSMA(CSMA_duration))
@@ -77,14 +83,32 @@ class Net():
             # print(self.nodes)
             # print("net discovery")
 
-            if self.env.now > config.ALERT_TIME:
-                print("jkeviubeiuvbei")
-                self.alert_creator()
-                yield self.env.timeout(1)
+            if(initialalert == False):
+                if self.env.now > config.ALERT_TIME:
+                    self.alert = True
+                    print("Alert is created")
+                    try:
+                        yield self.env.process(self.alert_creator())
+                    except simpy.Interrupt:
+                        print('Was interrupted.CSMA')
+                    initialalert = True
 
-    
+            if(is_solved == False):
+                if self.env.now > config.ALERT_END:
+                    self.alert = False
+                    print("Alert is solved ")
+                    graphi = gui.graphic(self)
+                    graphi.alert_sloved()
+                    is_solved = True
+            
+            if self.alert == True: # if BS get alert
+                if any("Alert" in s for s in self.nodes[0].inbox):
+                    print("Alertttttt is received by BS " , self.env.now)
+                    
+
+
     def initialization(self,duration):
-        print("BS start to advertise")
+        print("BS start to advertise + Superframe rules")
         self.network_nodedsicovery()
         for n in self.clusterheads:
             self.nodes[0].neighbors.append(n)
@@ -96,7 +120,7 @@ class Net():
             n.distance.append(self.nodes[0])
 
         message_sender = message.Message()
-        message_sender.broadcast(self.nodes[0],"BS boradcast adv {0} at env:{1}".format(self.nodes[0].id ,self.env.now))
+        message_sender.broadcast(self.nodes[0],"BS boradcast + Superframe rules adv {0} at env:{1}".format(self.nodes[0].id ,self.env.now))
         print('cluster formation\n')
         # self.cluster_formation()
         print("Inititial network %d nods at %d"%(len(self.nodes),self.env.now))
@@ -136,7 +160,6 @@ class Net():
         # self.network_nodedsicovery(distance = config.TX_RANGE,dprint=False)
 
 
-
     def network_nodedsicovery(self,distance = config.TX_RANGE):
         
         print("++++++++++++++++++++ network Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
@@ -150,7 +173,6 @@ class Net():
                         if n1 not in n.neighbors:
                             n.neighbors.append(n1)
                             
-        
         print("+++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
 
 
@@ -240,7 +262,7 @@ class Net():
                     self.clusterheads =  list(dict.fromkeys(self.clusterheads)) # remove duplicates
         # print("clusterheads are {0} in network  \n".format(self.clusterheads))
     
-    def neighbor_collision(self):
+    def neighbor_collision(self): # check if 2 nodes neighbor have same TDMA
         for n1 in self.nodes:
             for n2 in self.nodes:
                 if n1.id != 0 :
@@ -249,8 +271,13 @@ class Net():
                             if n1 in n2.neighbors:
                                 if n1.TDMA == n2.TDMA:
                                     print(n1,n1.TDMA,"collison TDMA",n2,n2.TDMA)
+                                    n2.TDMA = len(n2.clus.nodes) + 1
 
 
-    def alert_creator(self):
-        print("Alert")
+    def alert_creator(self): # create alert in the network
+        alert1 = alert.Alert(self.env,config.alertx,config.alerty,self)
+        graphi = gui.graphic(self)
+        graphi.alert()
+
         yield self.env.timeout(1)
+
