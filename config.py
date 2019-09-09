@@ -20,9 +20,11 @@ alertx = 270
 alerty = 110
 Alert_RANGE = 90 # meters
 Alert_increase_temp = 300
+
 #TIME
 ALERT_TIME = 119
-ALERT_END = 300
+ALERT_END = 1300
+
 ## Runtime configuration
 MAX_RUNTIME = 100
 
@@ -48,8 +50,6 @@ NODE_AGGREGATE_ENERGY_CONSUMPTION = -0.00002
 # node transmission range node discovery
 TX_RANGE = 70 # meters 30
 BSID = -1
-
-
 
 # controller  position
 BS_POS_X = 0.0

@@ -78,8 +78,11 @@ class graphic:
         #ani = animation.FuncAnimation(fig, animate, interval=1000)
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=[0], node_size=1000, node_color='#66ff66')
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=nodelistCH, node_size=700, node_color='#ff80ff')
-
-        plt.show()
+        mng = plt.get_current_fig_manager()
+        mng.full_screen_toggle()
+        plt.pause(15)
+        plt.clf()
+        plt.close()
 
 
 
@@ -265,7 +268,9 @@ class graphic:
         mng = plt.get_current_fig_manager()
         mng.full_screen_toggle()
         mng.set_window_title("Fire happens")
-        plt.show()
+        plt.pause(15)
+        plt.clf()
+        plt.close()
 
 
     def alert_sloved(self):
@@ -301,4 +306,6 @@ class graphic:
         mng = plt.get_current_fig_manager()
         mng.full_screen_toggle()
         mng.set_window_title("Fire happens")
-        plt.show()
+        plt.pause(15)
+        plt.clf()
+        plt.close()
