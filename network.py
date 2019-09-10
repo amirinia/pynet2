@@ -169,9 +169,14 @@ class Net():
             for n1 in self.nodes:
                 if(distance > math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2))):
                     if(n!=n1):
-                        print("{0} <=> {1} Distance= {2} RSSI= {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
+                        tempmessage = "{0} your neighbor is {1} Distance= {2} RSSI= {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4)
+                        message_sender = message.Message(tempmessage)
+                        msg_len = message_sender.message_length()
+                        message_sender.send_message(tempmessage,n,n1,TDMA=False)
+                        print( "{0} <=> {1} Distance= {2} RSSI= {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
                         if n1 not in n.neighbors:
                             n.neighbors.append(n1)
+
                             
         print("+++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
 

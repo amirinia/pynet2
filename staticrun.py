@@ -3,6 +3,7 @@
 # to run simulation you need initial networks ( just simply define nodes and addd to network)
 import staticnet as initialnetwork
 import gui
+import config
 #initialnetwork.net1.introduce_self()
 net1 = initialnetwork.net1
 env = initialnetwork.env
@@ -25,7 +26,7 @@ graphi.draw()
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
 
-env.run(until=1550)#config.MAX_RUNTIME)
+env.run(until=config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 

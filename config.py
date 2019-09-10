@@ -1,4 +1,11 @@
 import math
+
+## Runtime configuration
+MAX_RUNTIME = 1500
+#ALERT TIME
+ALERT_TIME = 119
+ALERT_END = 1300
+
 # area definition
 AREA_WIDTH = 300
 AREA_LENGTH = 200
@@ -20,13 +27,6 @@ alertx = 270
 alerty = 110
 Alert_RANGE = 90 # meters
 Alert_increase_temp = 300
-
-#TIME
-ALERT_TIME = 119
-ALERT_END = 1300
-
-## Runtime configuration
-MAX_RUNTIME = 100
 
 
 #aggregate time
