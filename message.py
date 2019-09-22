@@ -2,6 +2,7 @@
 import node
 import network
 import packetloss
+import energymodel
 
 
 Message_Type = {0: "Broadcast", 1: "Data", 2: "Ack",3: "Beacon" ,4: "Single"}
@@ -45,6 +46,12 @@ class Message(object):
             #node.node_receive_message(str_message,node)
             #print("message {0} is sent from {1} to {2}".format(message,sender_node.id,destination_node.id))
             #print("packet is lost",is_loss)
+
+            # energy cosumption for receiving
+            message_sender = Message(message)
+            msg_len = message_sender.message_length()
+            destination_node.power.decrease_rx_energy(msg_len)
+            destination_node.energy.append(destination_node.power.energy)
 
         elif(is_loss== True):
             sender_node.node_send_message(message + " resend",destination_node)
