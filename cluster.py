@@ -6,6 +6,7 @@ import config
 import random
 import message
 import time
+import logger
 
 class mycluster:
     def __init__(self,id, env ,network):
@@ -19,7 +20,8 @@ class mycluster:
         self.next_CH = []
         self.CH = []
         self.light = []
-        self.temperature = []      
+        self.temperature = []  
+        self.logger = logger.logger()    
 
     def __str__(self):
         return str(self.id)
@@ -30,7 +32,8 @@ class mycluster:
     def run(self,env):
         while True:
             if (self.net.superframe_num % config.cluster_rotation_period) == 0:
-                print ("#####",self.net.superframe_num, env.now)
+                self.logger.log("##### {0} {1}".format(self.net.superframe_num, env.now))
+                print ("##### {0} {1}".format(self.net.superframe_num, env.now))
                 self.Random_Clusterhead_Selection()
                 yield self.env.timeout(config.Duration)
 
@@ -39,6 +42,7 @@ class mycluster:
                 print("nodes number is exceeded")
             if(self.is_alive == True):
                 if(len(self.nodes)==0):
+                    self.logger.log("Cluster {0} is dead@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \n".format(self.id))
                     print("Cluster {0} is dead@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \n".format(self.id))
                     self.is_alive = False
             yield self.env.timeout(1)
@@ -46,7 +50,8 @@ class mycluster:
     def add_node(self, node):
         #print (self.id) # debugging...
         if(len(self.nodes )> 7):
-            print("cluster nodes is exceeded by",node)
+            self.logger.log("cluster nodes is exceeded by {0}".format(node))
+            print("cluster nodes is exceeded by {0}".format(node))
         node.clus==self
         node.cluster.clear()
         node.cluster.append(self)
@@ -63,6 +68,7 @@ class mycluster:
         # self.TDMA_slots -= 1
         
     def introduce_yourself(self):
+        self.logger.log("cluster {0} has {1} with TDMA_slots {2} (introduce)\n".format(self.id,self.nodes,self.TDMA_slots))
         print("cluster {0} has {1} with TDMA_slots {2} (introduce)\n".format(self.id,self.nodes,self.TDMA_slots))
 
 
@@ -85,17 +91,20 @@ class mycluster:
         for i in self.nodes:
             if (i.energy == maxi):
                 i.change_to_clusterhead()
-                print(i,"is cluster head")
+                self.logger.log("{0} is cluster head".format(i))
+                print("{0} is cluster head".format(i))
                 self.cluster_head_setter(i)
 
     def Random_Clusterhead_Selection(self):
         prob_ch = self.net.CH_probablity()
+        self.logger.log("   \n      Random_Clusterhead_Selection : cluster {0} with prob {1}".format(self.id,prob_ch))
         print("   \n      Random_Clusterhead_Selection : cluster {0} with prob {1}".format(self.id,prob_ch))
         for n in self.nodes:
             n_random = random.uniform(0,1)
             #print("random for {0} is {1}".format(n,n_random))
             if n_random < prob_ch:
                 if(next(reversed(n.energy))>config.LOW_NODE_THRESHOLD):
+                    self.logger.log(" <<< random for node {0} is {1} with energy {2} and average cluster energy {3}".format(n,n_random,next(reversed(n.energy)),self.average_cluster_energy()))
                     print(" <<< random for node {0} is {1} with energy {2} and average cluster energy {3}".format(n,n_random,next(reversed(n.energy)),self.average_cluster_energy()))
 
                     if(sum(n.energy)>self.average_cluster_energy()):
@@ -105,7 +114,7 @@ class mycluster:
                             # graph = gui.graphic(self.net)
                             # graph.draw() # simple draw
                             time.sleep(1)
-
+                            self.logger.log("new ch is node {0}  with parent {1} and last ch was {2} with {3}".format(n,n.parent,self.CH,self.CH.parent))
                             print("new ch is node {0}  with parent {1} and last ch was {2} with {3}".format(n,n.parent,self.CH,self.CH.parent))
                             self.CH.change_CulsterHead()
                             #self.CH.parent.append(n)
@@ -116,6 +125,7 @@ class mycluster:
                             # n.change_TDMA(self.TDMA_slots)
                             self.cluster_head_setter(n)
                             n.cluster = self
+                            self.logger.log("node {0} is CH in {1}  +  energy ++++++++++++++++++by random CH selection c ".format(n.id , self.id ,next(reversed(n.energy))))
                             print("node {0} is CH in {1}  +  energy ++++++++++++++++++by random CH selection c ".format(n.id , self.id ,next(reversed(n.energy))))
                             message2 = message.Message()
                             message2.broadcast(n,"{0} is cluster Head in {1} with TDMA ".format(n.id,self.id))

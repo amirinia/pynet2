@@ -1,7 +1,7 @@
 import math
 
 ## Runtime configuration
-MAX_RUNTIME = 15500
+MAX_RUNTIME = 14000
 #ALERT TIME
 ALERT_TIME = 119
 ALERT_END = 1300
@@ -60,7 +60,7 @@ MSG_LENGTH = 4000 # bits
 HEADER_LENGTH = 150 # bits
 
 # initial energy at every node's battery
-INITIAL_ENERGY = 2000 # mili Joules
+INITIAL_ENERGY = 700 # mili Joules 2000
 
 RESULTS_PATH = './results/'
 
