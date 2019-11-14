@@ -19,6 +19,8 @@ class sensor:
     def light_sensor(self):
         return random.randint(100,300)
 
-        
+    #Humidity 
+
+    #pressure
 
     

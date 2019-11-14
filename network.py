@@ -262,6 +262,12 @@ class Net():
         print("{0} packets are lost on wireless sensor network".format(sumpout-sumpin))
         print("=================================")
         df.to_csv('report/packet.csv')
+                        
+    dfdead = pd.DataFrame(columns=['id','deadtime','remainedenergy'])
+
+    def savedeadnodes(i,energy,now):
+        dfdead.append(pd.Series([i,energy,now], index=dfdead.columns), ignore_index=True)
+        dfdead.to_csv('report/deadnodes.csv')
 
     def CH_probablity(self):
         if(len(self.clusters)==0):

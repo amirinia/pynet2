@@ -5,6 +5,8 @@ import staticnet as initialnetwork
 import gui
 import config
 import report
+import logger
+
 #initialnetwork.net1.introduce_self()
 net1 = initialnetwork.net1
 env = initialnetwork.env
@@ -48,3 +50,5 @@ net1.introduce_yourself()
 
 report.plotenergy()
 report.plotpacket()
+
+logger.logger.log(str(net1.nodes[0].inbox))

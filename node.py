@@ -51,6 +51,8 @@ class Node():
 
     def run(self):
         if self.id == 0: # if node is BS
+            df = pd.DataFrame(columns=['id','deadtime','remainedenergy'])
+
             while True:
                 if self.net.clock[0]=="CSMA":
                     self.logger.log("at {0} BS is running".format(self.env.now))
@@ -66,18 +68,17 @@ class Node():
                     self.logger.log("BS is proccessing {0}".format(self.env.now))
                     print("BS is proccessing {0}".format(self.env.now))
                     yield self.env.timeout(config.BEACONING_TIME)
-                    
-        df = pd.DataFrame(columns=['id','deadtime','remainedenergy'])
+
 
         if self.id != 0: # if node is not BS
             while True:
                 if(self.is_alive == True):
-                    df = pd.DataFrame(columns=['id','deadtime','remainedenergy'])
                     if (next(reversed(self.energy)) <= config.DEAD_NODE_THRESHOLD ):
                         self.logger.log("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
                         print("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
                         print(self.power.energy)
-                        df.append(pd.Series([self.id,next(reversed(self.energy)),self.env.now], index=df.columns), ignore_index=True)
+
+                        self.net.Net.savedeadnodes(self.id,next(reversed(self.energy)),self.env.now)
                         if(self.is_CH == True):
                             self.logger.log("ch is dead ,cluster needs to find another CH \n\n")
                             print("ch is dead ,cluster needs to find another CH \n\n")
@@ -86,7 +87,7 @@ class Node():
                         # draw
                         graphi = gui.graphic(self.net)
                         graphi.draw()
-                    df.to_csv('report/deadnodes.csv')
+                    
                     if self.env.now > config.ALERT_TIME:
                         if self.net.alert :
                              if(config.Alert_RANGE > math.sqrt(((config.alertx-self.x)**2)+((config.alerty-self.y)**2))):
