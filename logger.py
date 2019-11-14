@@ -9,8 +9,8 @@ class logger:
         f.write("New log is named at {0} \r\n".format(time.strftime('%X %x %Z')))
 
     def log(self,string):
-        f = open('log','a')
-        f.write(string +"\n")
+        f = open('report/log.txt','a')
+        f.write(time.strftime("%a, %d %b %Y %H:%M:%S")+" "+string +"\n")
         f.close()
 
 # logg = logger()

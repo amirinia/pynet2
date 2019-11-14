@@ -10,6 +10,7 @@ import gui
 import alert
 import config
 import pandas as pd
+import logger
 """
 """
 
@@ -31,6 +32,7 @@ class Net():
         self.nodes.append(controller)
         controller.net = self
         self.alert = False
+        self.logger = logger.logger()
 
     def run(self):
         counter = 0
@@ -44,11 +46,13 @@ class Net():
                 try:
                     yield self.env.process(self.initialization(10))
                 except simpy.Interrupt:
+                    self.logger.log("Was interrupted.CSMA")
                     print('Was interrupted.CSMA')
                 initial = True
 
             counter += 1 # count superframes
             self.superframe_num = counter
+            self.logger.log('\n New Superframe is began CSMA at %d number %d\n' % (self.env.now ,counter))
             print('\n New Superframe is began CSMA at %d number %d\n' % (self.env.now ,counter))
             CSMA_duration = config.CSMA_duration
 
@@ -77,6 +81,7 @@ class Net():
             for i in range(inactive_duration):
                 self.clock.clear()
                 self.clock.append("INACTIVE")
+                self.logger.log("at %d inactive network" %self.env.now)
                 print("at %d inactive network" %self.env.now)
                 yield self.env.timeout(1)
             # self.network_nodedsicovery()
@@ -86,6 +91,7 @@ class Net():
             if(initialalert == False):
                 if self.env.now > config.ALERT_TIME:
                     self.alert = True
+                    self.logger.log("Alert is created")
                     print("Alert is created")
                     try:
                         yield self.env.process(self.alert_creator())
@@ -96,6 +102,7 @@ class Net():
             if(is_solved == False):
                 if self.env.now > config.ALERT_END:
                     self.alert = False
+                    self.logger.log("Alert is solved ")
                     print("Alert is solved ")
                     graphi = gui.graphic(self)
                     graphi.alert_sloved()
@@ -103,17 +110,19 @@ class Net():
             
             if self.alert == True: # if BS get alert
                 if any("Alert" in s for s in self.nodes[0].inbox):
+                    self.logger.log("Alertttttt is received by BS " , self.env.now)
                     print("Alertttttt is received by BS " , self.env.now)
                     
 
 
     def initialization(self,duration):
+        self.logger.log("BS start to advertise + Superframe rules")
         print("BS start to advertise + Superframe rules")
         self.network_nodedsicovery()
         for n in self.clusterheads:
             self.nodes[0].neighbors.append(n)
-
-        print("neighbors of BS: ",self.nodes[0].neighbors)
+        self.logger.log("neighbors of BS:{0}".format(self.nodes[0].neighbors))
+        print("neighbors of BS: {0}".format(self.nodes[0].neighbors))
         for n in self.nodes[0].neighbors:
             # print(n,"is near bs")
             # n.distance.clear()
@@ -121,6 +130,7 @@ class Net():
 
         message_sender = message.Message()
         message_sender.broadcast(self.nodes[0],"BS boradcast + Superframe rules adv {0} at env:{1}".format(self.nodes[0].id ,self.env.now))
+        self.logger.log('cluster formation\n')
         print('cluster formation\n')
         # self.cluster_formation()
         print("Inititial network %d nods at %d"%(len(self.nodes),self.env.now))
@@ -161,10 +171,10 @@ class Net():
 
 
     def network_nodedsicovery(self,distance = config.TX_RANGE):
-        
+        self.logger.log("++++++++++++++++++++ network Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
         print("++++++++++++++++++++ network Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
         for n in self.nodes:
-            
+            self.logger.log("Neighbors Table discovery for {0} is below and neighbors are {1}".format(str(n.id),n.neighbors))
             print("Neighbors Table discovery for {0} is below and neighbors are {1}".format(str(n.id),n.neighbors))
             for n1 in self.nodes:
                 if(distance > math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2))):
@@ -173,11 +183,12 @@ class Net():
                         message_sender = message.Message(tempmessage)
                         msg_len = message_sender.message_length()
                         message_sender.send_message(tempmessage,n,n1,TDMA=False)
+                        self.logger.log("{0} <=> {1} Distance= {2} RSSI= {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
                         print("{0} <=> {1} Distance= {2} RSSI= {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
                         if n1 not in n.neighbors:
                             n.neighbors.append(n1)
 
-                            
+        self.logger.log( "+++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ \n")                   
         print("+++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
 
 
@@ -186,30 +197,37 @@ class Net():
 
 
     def network_inboxes(self):
+        self.logger.log("\nInboxes are shown: ")
         print("\nInboxes are shown: ")
         for n in self.nodes:
+            self.logger.log("Inbox {0} has {1} \n".format(str(n.id) ,str(n.inbox)))
             print("Inbox {0} has {1} \n".format(str(n.id) ,str(n.inbox)))
 
     def network_outboxes(self):
+        self.logger.log("\nOutboxes are shown: ")
         print("\nOutboxes are shown: ")
         for n in self.nodes:
+            self.logger.log("Outbox {0} has {1} \n".format(str(n.id) ,str(n.outbox)))
             print("Outbox {0} has {1} \n".format(str(n.id) ,str(n.outbox)))
 
     def introduce_yourself(self):
         df = pd.DataFrame(columns=['id' , 'power', 'x' , 'y' , 'parent' ,'is_alive','TDMA','energy'])
+        self.logger.log("****************************Begin of introduce network" )
         print("****************************Begin of introduce network" )
         # print("Network {0} with {1} node number with size {2} {3} and have {4} clusters".format(self.name,len(self.nodelist),self.xsize,self.ysize,len(self.clusterheads)))
         #print("New network is created : {0} with {1} node number ".format(self.name,self.nodelist.count))
         for x in self.nodes:
             if len(x.parent) == 0:
+                self.logger.log("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5} with TDMA {6} {7}".format(x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))))
                 print("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5} with TDMA {6} {7}".format(x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))))
                 # print(x.energy)
                 df = df. append(pd.Series([x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))], index=df.columns), ignore_index=True)
             if len(x.parent) != 0:
+                self.logger.log("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5} with TDMA {6} {7}".format(x.id ,x.power, str(x.x) , str(x.y) ,str(next(reversed(x.parent))),x.is_alive,x.TDMA,next(reversed(x.energy))))
                 print("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5} with TDMA {6} {7}".format(x.id ,x.power, str(x.x) , str(x.y) ,str(next(reversed(x.parent))),x.is_alive,x.TDMA,next(reversed(x.energy))))
                 # print(x.energy)
                 df = df. append(pd.Series([x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))], index=df.columns), ignore_index=True)
-
+        self.logger.log("==============================Clusters===============================")
         print("==============================Clusters===============================")
         # for c in self.clusters:
         #     print("{0} is alive: {5} with energy : {1} with nodes {2} ; TDMA: {3} ; CH is {4}".format(c.name , c.average_cluster_energy() ,str(c.nodelist) , str(c.TDMA_slots) ,str(c.CH),c.is_alive))
@@ -221,17 +239,24 @@ class Net():
         sumpout = 0
         sumpin = 0
         df = pd.DataFrame(columns=['id','sent','received','lost'])
+        self.logger.log("=================================Sent packet summery==============================")
         print("=================================Sent packet summery==============================")
         for n in self.nodes:
+            self.logger.log("node {0} sent {1} packes".format(n,len(n.outbox)))
             print("node {0} sent {1} packes".format(n,len(n.outbox)))
             sumpout +=len(n.outbox)
+        self.logger.log("All packet numbers in outbox the  network is {0} ".format(sumpout))
         print("All packet numbers in outbox the  network is {0} ".format(sumpout))
+        self.logger.log("=================================Received packet summery==============================")
         print("=================================Received packet summery==============================")
         for n in self.nodes:
+            self.logger.log("node {0} Received {1} packes".format(n,len(n.inbox)))
             print("node {0} Received {1} packes".format(n,len(n.inbox)))
             sumpin +=len(n.inbox)
             df = df.append(pd.Series([n,len(n.outbox),len(n.inbox),len(n.outbox)-len(n.inbox)], index=df.columns), ignore_index=True)
+        self.logger.log("All packet numbers in inbox the network is {0} \n".format(sumpin))
         print("All packet numbers in inbox the network is {0} \n".format(sumpin))
+        self.logger.log("{0} packets are lost on wireless sensor network".format(sumpout-sumpin))
         print("{0} packets are lost on wireless sensor network".format(sumpout-sumpin))
         print("=================================")
         df.to_csv('report/packet.csv')
@@ -283,7 +308,8 @@ class Net():
                         if (n1.is_CH == False) and (n2.is_CH == False):
                             if n1 in n2.neighbors:
                                 if n1.TDMA == n2.TDMA:
-                                    print(n1,n1.TDMA,"collison TDMA",n2,n2.TDMA)
+                                    self.logger.log("{0} {1} {2} {3} {4} ".format(n1,n1.TDMA,"collison TDMA",n2,n2.TDMA))
+                                    print("{0} {1} {2} {3} {4} ".format(n1,n1.TDMA,"collison TDMA",n2,n2.TDMA))
                                     n2.TDMA = len(n2.clus.nodes) + 1
 
 

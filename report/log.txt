@@ -1,0 +1,275 @@
+Thu, 14 Nov 2019 09:07:58 ****************************Begin of introduce network
+Thu, 14 Nov 2019 09:07:58 0  with energy : <Power Type=External, Energy=2000 mJ>  with position 150.0 100.0 ; CH is [] is alive: True with TDMA 0 4
+Thu, 14 Nov 2019 09:07:58 1  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 10 10 ; CH is [] is alive: True with TDMA 0 1.99
+Thu, 14 Nov 2019 09:07:58 2  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 10 60 ; CH is [] is alive: True with TDMA 0 1.98
+Thu, 14 Nov 2019 09:07:58 3  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 30 11 ; CH is [] is alive: True with TDMA 0 1.988
+Thu, 14 Nov 2019 09:07:58 4  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 43 35 ; CH is [] is alive: True with TDMA 0 1.9088
+Thu, 14 Nov 2019 09:07:58 5  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 260 30 ; CH is [] is alive: True with TDMA 0 1.9855
+Thu, 14 Nov 2019 09:07:58 6  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 270 50 ; CH is [] is alive: True with TDMA 0 1.9678
+Thu, 14 Nov 2019 09:07:58 7  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 259 72 ; CH is [] is alive: True with TDMA 0 1.8434
+Thu, 14 Nov 2019 09:07:58 8  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 241 47 ; CH is [] is alive: True with TDMA 0 1.90234
+Thu, 14 Nov 2019 09:07:58 9  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 260 200 ; CH is [] is alive: True with TDMA 0 1.989364
+Thu, 14 Nov 2019 09:07:58 10  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 290 200 ; CH is [] is alive: True with TDMA 0 1.876549
+Thu, 14 Nov 2019 09:07:58 11  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 280 220 ; CH is [] is alive: True with TDMA 0 1.78233
+Thu, 14 Nov 2019 09:07:58 12  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 20 200 ; CH is [] is alive: True with TDMA 0 1.79745
+Thu, 14 Nov 2019 09:07:58 13  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 10 160 ; CH is [] is alive: True with TDMA 0 1.86435
+Thu, 14 Nov 2019 09:07:58 14  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 13 183 ; CH is [] is alive: True with TDMA 0 1.76434
+Thu, 14 Nov 2019 09:07:58 15  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 50 200 ; CH is [] is alive: True with TDMA 0 1.9754734
+Thu, 14 Nov 2019 09:07:58 16  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 29 189 ; CH is [] is alive: True with TDMA 0 1.8634754
+Thu, 14 Nov 2019 09:07:58 17  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 35 204 ; CH is [] is alive: True with TDMA 0 1.87648
+Thu, 14 Nov 2019 09:07:58 18  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 31 172 ; CH is [] is alive: True with TDMA 0 1.7645
+Thu, 14 Nov 2019 09:07:58 19  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 30 50 ; CH is [] is alive: True with TDMA 0 1.3654675
+Thu, 14 Nov 2019 09:07:58 20  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 130 20 ; CH is [] is alive: True with TDMA 0 1.846
+Thu, 14 Nov 2019 09:07:58 21  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 135 2 ; CH is [] is alive: True with TDMA 0 1.786487
+Thu, 14 Nov 2019 09:07:59 22  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 175 5 ; CH is [] is alive: True with TDMA 0 2
+Thu, 14 Nov 2019 09:07:59 ==============================Clusters===============================
+Thu, 14 Nov 2019 09:07:59 ++++++++++++++++++++ network Table Discovery Begins 70 meters ++++++++++++++++++++++++++++
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 0 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 1 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 1 <=> 2 Distance= 50.0 RSSI= -103
+Thu, 14 Nov 2019 09:07:59 1 <=> 3 Distance= 20.02 RSSI= -95
+Thu, 14 Nov 2019 09:07:59 1 <=> 4 Distance= 41.4 RSSI= -101
+Thu, 14 Nov 2019 09:07:59 1 <=> 19 Distance= 44.72 RSSI= -102
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 2 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 2 <=> 1 Distance= 50.0 RSSI= -103
+Thu, 14 Nov 2019 09:07:59 2 <=> 3 Distance= 52.92 RSSI= -103
+Thu, 14 Nov 2019 09:07:59 2 <=> 4 Distance= 41.4 RSSI= -101
+Thu, 14 Nov 2019 09:07:59 2 <=> 19 Distance= 22.36 RSSI= -96
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 3 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 3 <=> 1 Distance= 20.02 RSSI= -95
+Thu, 14 Nov 2019 09:07:59 3 <=> 2 Distance= 52.92 RSSI= -103
+Thu, 14 Nov 2019 09:07:59 3 <=> 4 Distance= 27.29 RSSI= -98
+Thu, 14 Nov 2019 09:07:59 3 <=> 19 Distance= 39.0 RSSI= -101
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 4 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 4 <=> 1 Distance= 41.4 RSSI= -101
+Thu, 14 Nov 2019 09:07:59 4 <=> 2 Distance= 41.4 RSSI= -101
+Thu, 14 Nov 2019 09:07:59 4 <=> 3 Distance= 27.29 RSSI= -98
+Thu, 14 Nov 2019 09:07:59 4 <=> 19 Distance= 19.85 RSSI= -95
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 5 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 5 <=> 6 Distance= 22.36 RSSI= -96
+Thu, 14 Nov 2019 09:07:59 5 <=> 7 Distance= 42.01 RSSI= -101
+Thu, 14 Nov 2019 09:07:59 5 <=> 8 Distance= 25.5 RSSI= -97
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 6 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 6 <=> 5 Distance= 22.36 RSSI= -96
+Thu, 14 Nov 2019 09:07:59 6 <=> 7 Distance= 24.6 RSSI= -97
+Thu, 14 Nov 2019 09:07:59 6 <=> 8 Distance= 29.15 RSSI= -98
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 7 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 7 <=> 5 Distance= 42.01 RSSI= -101
+Thu, 14 Nov 2019 09:07:59 7 <=> 6 Distance= 24.6 RSSI= -97
+Thu, 14 Nov 2019 09:07:59 7 <=> 8 Distance= 30.81 RSSI= -99
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 8 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 8 <=> 5 Distance= 25.5 RSSI= -97
+Thu, 14 Nov 2019 09:07:59 8 <=> 6 Distance= 29.15 RSSI= -98
+Thu, 14 Nov 2019 09:07:59 8 <=> 7 Distance= 30.81 RSSI= -99
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 9 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 9 <=> 10 Distance= 30.0 RSSI= -99
+Thu, 14 Nov 2019 09:07:59 9 <=> 11 Distance= 28.28 RSSI= -98
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 10 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 10 <=> 9 Distance= 30.0 RSSI= -99
+Thu, 14 Nov 2019 09:07:59 10 <=> 11 Distance= 22.36 RSSI= -96
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 11 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 11 <=> 9 Distance= 28.28 RSSI= -98
+Thu, 14 Nov 2019 09:07:59 11 <=> 10 Distance= 22.36 RSSI= -96
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 12 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 12 <=> 13 Distance= 41.23 RSSI= -101
+Thu, 14 Nov 2019 09:07:59 12 <=> 14 Distance= 18.38 RSSI= -94
+Thu, 14 Nov 2019 09:07:59 12 <=> 15 Distance= 30.0 RSSI= -99
+Thu, 14 Nov 2019 09:07:59 12 <=> 16 Distance= 14.21 RSSI= -92
+Thu, 14 Nov 2019 09:07:59 12 <=> 17 Distance= 15.52 RSSI= -93
+Thu, 14 Nov 2019 09:07:59 12 <=> 18 Distance= 30.08 RSSI= -99
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 13 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 13 <=> 12 Distance= 41.23 RSSI= -101
+Thu, 14 Nov 2019 09:07:59 13 <=> 14 Distance= 23.19 RSSI= -96
+Thu, 14 Nov 2019 09:07:59 13 <=> 15 Distance= 56.57 RSSI= -104
+Thu, 14 Nov 2019 09:07:59 13 <=> 16 Distance= 34.67 RSSI= -100
+Thu, 14 Nov 2019 09:07:59 13 <=> 17 Distance= 50.61 RSSI= -103
+Thu, 14 Nov 2019 09:07:59 13 <=> 18 Distance= 24.19 RSSI= -97
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 14 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 14 <=> 12 Distance= 18.38 RSSI= -94
+Thu, 14 Nov 2019 09:07:59 14 <=> 13 Distance= 23.19 RSSI= -96
+Thu, 14 Nov 2019 09:07:59 14 <=> 15 Distance= 40.72 RSSI= -101
+Thu, 14 Nov 2019 09:07:59 14 <=> 16 Distance= 17.09 RSSI= -94
+Thu, 14 Nov 2019 09:07:59 14 <=> 17 Distance= 30.41 RSSI= -99
+Thu, 14 Nov 2019 09:07:59 14 <=> 18 Distance= 21.1 RSSI= -95
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 15 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 15 <=> 12 Distance= 30.0 RSSI= -99
+Thu, 14 Nov 2019 09:07:59 15 <=> 13 Distance= 56.57 RSSI= -104
+Thu, 14 Nov 2019 09:07:59 15 <=> 14 Distance= 40.72 RSSI= -101
+Thu, 14 Nov 2019 09:07:59 15 <=> 16 Distance= 23.71 RSSI= -96
+Thu, 14 Nov 2019 09:07:59 15 <=> 17 Distance= 15.52 RSSI= -93
+Thu, 14 Nov 2019 09:07:59 15 <=> 18 Distance= 33.84 RSSI= -100
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 16 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 16 <=> 12 Distance= 14.21 RSSI= -92
+Thu, 14 Nov 2019 09:07:59 16 <=> 13 Distance= 34.67 RSSI= -100
+Thu, 14 Nov 2019 09:07:59 16 <=> 14 Distance= 17.09 RSSI= -94
+Thu, 14 Nov 2019 09:07:59 16 <=> 15 Distance= 23.71 RSSI= -96
+Thu, 14 Nov 2019 09:07:59 16 <=> 17 Distance= 16.16 RSSI= -93
+Thu, 14 Nov 2019 09:07:59 16 <=> 18 Distance= 17.12 RSSI= -94
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 17 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 17 <=> 12 Distance= 15.52 RSSI= -93
+Thu, 14 Nov 2019 09:07:59 17 <=> 13 Distance= 50.61 RSSI= -103
+Thu, 14 Nov 2019 09:07:59 17 <=> 14 Distance= 30.41 RSSI= -99
+Thu, 14 Nov 2019 09:07:59 17 <=> 15 Distance= 15.52 RSSI= -93
+Thu, 14 Nov 2019 09:07:59 17 <=> 16 Distance= 16.16 RSSI= -93
+Thu, 14 Nov 2019 09:07:59 17 <=> 18 Distance= 32.25 RSSI= -99
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 18 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 18 <=> 12 Distance= 30.08 RSSI= -99
+Thu, 14 Nov 2019 09:07:59 18 <=> 13 Distance= 24.19 RSSI= -97
+Thu, 14 Nov 2019 09:07:59 18 <=> 14 Distance= 21.1 RSSI= -95
+Thu, 14 Nov 2019 09:07:59 18 <=> 15 Distance= 33.84 RSSI= -100
+Thu, 14 Nov 2019 09:07:59 18 <=> 16 Distance= 17.12 RSSI= -94
+Thu, 14 Nov 2019 09:07:59 18 <=> 17 Distance= 32.25 RSSI= -99
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 19 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 19 <=> 1 Distance= 44.72 RSSI= -102
+Thu, 14 Nov 2019 09:07:59 19 <=> 2 Distance= 22.36 RSSI= -96
+Thu, 14 Nov 2019 09:07:59 19 <=> 3 Distance= 39.0 RSSI= -101
+Thu, 14 Nov 2019 09:07:59 19 <=> 4 Distance= 19.85 RSSI= -95
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 20 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 20 <=> 21 Distance= 18.68 RSSI= -94
+Thu, 14 Nov 2019 09:07:59 20 <=> 22 Distance= 47.43 RSSI= -103
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 21 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 21 <=> 20 Distance= 18.68 RSSI= -94
+Thu, 14 Nov 2019 09:07:59 21 <=> 22 Distance= 40.11 RSSI= -101
+Thu, 14 Nov 2019 09:07:59 Neighbors Table discovery for 22 is below and neighbors are []
+Thu, 14 Nov 2019 09:07:59 22 <=> 20 Distance= 47.43 RSSI= -103
+Thu, 14 Nov 2019 09:07:59 22 <=> 21 Distance= 40.11 RSSI= -101
+Thu, 14 Nov 2019 09:07:59 +++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ 
+
+Thu, 14 Nov 2019 09:07:59 ****************************Begin of introduce network
+Thu, 14 Nov 2019 09:07:59 0  with energy : <Power Type=External, Energy=2000 mJ>  with position 150.0 100.0 ; CH is [] is alive: True with TDMA 0 4
+Thu, 14 Nov 2019 09:07:59 1  with energy : <Power Type=Battery, Energy=1998 mJ>  with position 10 10 ; CH is [] is alive: True with TDMA 5 1.9982776562499998
+Thu, 14 Nov 2019 09:07:59 2  with energy : <Power Type=Battery, Energy=1998 mJ>  with position 10 60 ; CH is 1 is alive: True with TDMA 1 1.99824115625
+Thu, 14 Nov 2019 09:07:59 3  with energy : <Power Type=Battery, Energy=1998 mJ>  with position 30 11 ; CH is 1 is alive: True with TDMA 2 1.99824115625
+Thu, 14 Nov 2019 09:07:59 4  with energy : <Power Type=Battery, Energy=1998 mJ>  with position 43 35 ; CH is 1 is alive: True with TDMA 3 1.9980563749999998
+Thu, 14 Nov 2019 09:07:59 5  with energy : <Power Type=Battery, Energy=1998 mJ>  with position 260 30 ; CH is [] is alive: True with TDMA 4 1.998713375
+Thu, 14 Nov 2019 09:07:59 6  with energy : <Power Type=Battery, Energy=1998 mJ>  with position 270 50 ; CH is 5 is alive: True with TDMA 1 1.9984920937499997
+Thu, 14 Nov 2019 09:07:59 7  with energy : <Power Type=Battery, Energy=1998 mJ>  with position 259 72 ; CH is 5 is alive: True with TDMA 2 1.998676875
+Thu, 14 Nov 2019 09:07:59 8  with energy : <Power Type=Battery, Energy=1998 mJ>  with position 241 47 ; CH is 5 is alive: True with TDMA 3 1.9984920937499997
+Thu, 14 Nov 2019 09:07:59 9  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 260 200 ; CH is [] is alive: True with TDMA 3 1.99913540625
+Thu, 14 Nov 2019 09:07:59 10  with energy : <Power Type=Battery, Energy=1998 mJ>  with position 290 200 ; CH is 9 is alive: True with TDMA 1 1.99891184375
+Thu, 14 Nov 2019 09:07:59 11  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 280 220 ; CH is 9 is alive: True with TDMA 2 1.9991559375
+Thu, 14 Nov 2019 09:07:59 12  with energy : <Power Type=Battery, Energy=1997 mJ>  with position 20 200 ; CH is 15 is alive: True with TDMA 1 1.9971575625000004
+Thu, 14 Nov 2019 09:07:59 13  with energy : <Power Type=Battery, Energy=1997 mJ>  with position 10 160 ; CH is 15 is alive: True with TDMA 2 1.9971484375000004
+Thu, 14 Nov 2019 09:07:59 14  with energy : <Power Type=Battery, Energy=1997 mJ>  with position 13 183 ; CH is 15 is alive: True with TDMA 3 1.9976320625000004
+Thu, 14 Nov 2019 09:07:59 15  with energy : <Power Type=Battery, Energy=1997 mJ>  with position 50 200 ; CH is [] is alive: True with TDMA 7 1.9973811250000004
+Thu, 14 Nov 2019 09:07:59 16  with energy : <Power Type=Battery, Energy=1997 mJ>  with position 29 189 ; CH is 15 is alive: True with TDMA 4 1.9971552812500004
+Thu, 14 Nov 2019 09:07:59 17  with energy : <Power Type=Battery, Energy=1997 mJ>  with position 35 204 ; CH is 15 is alive: True with TDMA 5 1.9973446250000004
+Thu, 14 Nov 2019 09:07:59 18  with energy : <Power Type=Battery, Energy=1997 mJ>  with position 31 172 ; CH is 15 is alive: True with TDMA 6 1.9973856875000005
+Thu, 14 Nov 2019 09:07:59 19  with energy : <Power Type=Battery, Energy=1998 mJ>  with position 30 50 ; CH is 1 is alive: True with TDMA 4 1.9982365937500004
+Thu, 14 Nov 2019 09:07:59 20  with energy : <Power Type=Battery, Energy=1998 mJ>  with position 130 20 ; CH is 22 is alive: True with TDMA 1 1.9988981562500001
+Thu, 14 Nov 2019 09:07:59 21  with energy : <Power Type=Battery, Energy=1998 mJ>  with position 135 2 ; CH is 22 is alive: True with TDMA 2 1.9988981562500001
+Thu, 14 Nov 2019 09:07:59 22  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 175 5 ; CH is [] is alive: True with TDMA 3 1.9991240000000001
+Thu, 14 Nov 2019 09:07:59 ==============================Clusters===============================
+Thu, 14 Nov 2019 09:08:17 BS start to advertise + Superframe rules
+Thu, 14 Nov 2019 09:08:17 ++++++++++++++++++++ network Table Discovery Begins 70 meters ++++++++++++++++++++++++++++
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 0 is below and neighbors are []
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 1 is below and neighbors are [node2, node3, node4, node19]
+Thu, 14 Nov 2019 09:08:17 1 <=> 2 Distance= 50.0 RSSI= -103
+Thu, 14 Nov 2019 09:08:17 1 <=> 3 Distance= 20.02 RSSI= -95
+Thu, 14 Nov 2019 09:08:17 1 <=> 4 Distance= 41.4 RSSI= -101
+Thu, 14 Nov 2019 09:08:17 1 <=> 19 Distance= 44.72 RSSI= -102
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 2 is below and neighbors are [node1, node3, node4, node19]
+Thu, 14 Nov 2019 09:08:17 2 <=> 1 Distance= 50.0 RSSI= -103
+Thu, 14 Nov 2019 09:08:17 2 <=> 3 Distance= 52.92 RSSI= -103
+Thu, 14 Nov 2019 09:08:17 2 <=> 4 Distance= 41.4 RSSI= -101
+Thu, 14 Nov 2019 09:08:17 2 <=> 19 Distance= 22.36 RSSI= -96
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 3 is below and neighbors are [node1, node2, node4, node19]
+Thu, 14 Nov 2019 09:08:17 3 <=> 1 Distance= 20.02 RSSI= -95
+Thu, 14 Nov 2019 09:08:17 3 <=> 2 Distance= 52.92 RSSI= -103
+Thu, 14 Nov 2019 09:08:17 3 <=> 4 Distance= 27.29 RSSI= -98
+Thu, 14 Nov 2019 09:08:17 3 <=> 19 Distance= 39.0 RSSI= -101
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 4 is below and neighbors are [node1, node2, node3, node19]
+Thu, 14 Nov 2019 09:08:17 4 <=> 1 Distance= 41.4 RSSI= -101
+Thu, 14 Nov 2019 09:08:17 4 <=> 2 Distance= 41.4 RSSI= -101
+Thu, 14 Nov 2019 09:08:17 4 <=> 3 Distance= 27.29 RSSI= -98
+Thu, 14 Nov 2019 09:08:17 4 <=> 19 Distance= 19.85 RSSI= -95
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 5 is below and neighbors are [node6, node7, node8]
+Thu, 14 Nov 2019 09:08:17 5 <=> 6 Distance= 22.36 RSSI= -96
+Thu, 14 Nov 2019 09:08:17 5 <=> 7 Distance= 42.01 RSSI= -101
+Thu, 14 Nov 2019 09:08:17 5 <=> 8 Distance= 25.5 RSSI= -97
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 6 is below and neighbors are [node5, node7, node8]
+Thu, 14 Nov 2019 09:08:17 6 <=> 5 Distance= 22.36 RSSI= -96
+Thu, 14 Nov 2019 09:08:17 6 <=> 7 Distance= 24.6 RSSI= -97
+Thu, 14 Nov 2019 09:08:17 6 <=> 8 Distance= 29.15 RSSI= -98
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 7 is below and neighbors are [node5, node6, node8]
+Thu, 14 Nov 2019 09:08:17 7 <=> 5 Distance= 42.01 RSSI= -101
+Thu, 14 Nov 2019 09:08:17 7 <=> 6 Distance= 24.6 RSSI= -97
+Thu, 14 Nov 2019 09:08:17 7 <=> 8 Distance= 30.81 RSSI= -99
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 8 is below and neighbors are [node5, node6, node7]
+Thu, 14 Nov 2019 09:08:17 8 <=> 5 Distance= 25.5 RSSI= -97
+Thu, 14 Nov 2019 09:08:17 8 <=> 6 Distance= 29.15 RSSI= -98
+Thu, 14 Nov 2019 09:08:17 8 <=> 7 Distance= 30.81 RSSI= -99
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 9 is below and neighbors are [node10, node11]
+Thu, 14 Nov 2019 09:08:17 9 <=> 10 Distance= 30.0 RSSI= -99
+Thu, 14 Nov 2019 09:08:17 9 <=> 11 Distance= 28.28 RSSI= -98
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 10 is below and neighbors are [node9, node11]
+Thu, 14 Nov 2019 09:08:17 10 <=> 9 Distance= 30.0 RSSI= -99
+Thu, 14 Nov 2019 09:08:17 10 <=> 11 Distance= 22.36 RSSI= -96
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 11 is below and neighbors are [node9, node10]
+Thu, 14 Nov 2019 09:08:17 11 <=> 9 Distance= 28.28 RSSI= -98
+Thu, 14 Nov 2019 09:08:17 11 <=> 10 Distance= 22.36 RSSI= -96
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 12 is below and neighbors are [node13, node14, node15, node16, node17, node18]
+Thu, 14 Nov 2019 09:08:17 12 <=> 13 Distance= 41.23 RSSI= -101
+Thu, 14 Nov 2019 09:08:17 12 <=> 14 Distance= 18.38 RSSI= -94
+Thu, 14 Nov 2019 09:08:17 12 <=> 15 Distance= 30.0 RSSI= -99
+Thu, 14 Nov 2019 09:08:17 12 <=> 16 Distance= 14.21 RSSI= -92
+Thu, 14 Nov 2019 09:08:17 12 <=> 17 Distance= 15.52 RSSI= -93
+Thu, 14 Nov 2019 09:08:17 12 <=> 18 Distance= 30.08 RSSI= -99
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 13 is below and neighbors are [node12, node14, node15, node16, node17, node18]
+Thu, 14 Nov 2019 09:08:17 13 <=> 12 Distance= 41.23 RSSI= -101
+Thu, 14 Nov 2019 09:08:17 13 <=> 14 Distance= 23.19 RSSI= -96
+Thu, 14 Nov 2019 09:08:17 13 <=> 15 Distance= 56.57 RSSI= -104
+Thu, 14 Nov 2019 09:08:17 13 <=> 16 Distance= 34.67 RSSI= -100
+Thu, 14 Nov 2019 09:08:17 13 <=> 17 Distance= 50.61 RSSI= -103
+Thu, 14 Nov 2019 09:08:17 13 <=> 18 Distance= 24.19 RSSI= -97
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 14 is below and neighbors are [node12, node13, node15, node16, node17, node18]
+Thu, 14 Nov 2019 09:08:17 14 <=> 12 Distance= 18.38 RSSI= -94
+Thu, 14 Nov 2019 09:08:17 14 <=> 13 Distance= 23.19 RSSI= -96
+Thu, 14 Nov 2019 09:08:17 14 <=> 15 Distance= 40.72 RSSI= -101
+Thu, 14 Nov 2019 09:08:17 14 <=> 16 Distance= 17.09 RSSI= -94
+Thu, 14 Nov 2019 09:08:17 14 <=> 17 Distance= 30.41 RSSI= -99
+Thu, 14 Nov 2019 09:08:17 14 <=> 18 Distance= 21.1 RSSI= -95
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 15 is below and neighbors are [node12, node13, node14, node16, node17, node18]
+Thu, 14 Nov 2019 09:08:17 15 <=> 12 Distance= 30.0 RSSI= -99
+Thu, 14 Nov 2019 09:08:17 15 <=> 13 Distance= 56.57 RSSI= -104
+Thu, 14 Nov 2019 09:08:17 15 <=> 14 Distance= 40.72 RSSI= -101
+Thu, 14 Nov 2019 09:08:17 15 <=> 16 Distance= 23.71 RSSI= -96
+Thu, 14 Nov 2019 09:08:17 15 <=> 17 Distance= 15.52 RSSI= -93
+Thu, 14 Nov 2019 09:08:17 15 <=> 18 Distance= 33.84 RSSI= -100
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 16 is below and neighbors are [node12, node13, node14, node15, node17, node18]
+Thu, 14 Nov 2019 09:08:17 16 <=> 12 Distance= 14.21 RSSI= -92
+Thu, 14 Nov 2019 09:08:17 16 <=> 13 Distance= 34.67 RSSI= -100
+Thu, 14 Nov 2019 09:08:17 16 <=> 14 Distance= 17.09 RSSI= -94
+Thu, 14 Nov 2019 09:08:17 16 <=> 15 Distance= 23.71 RSSI= -96
+Thu, 14 Nov 2019 09:08:17 16 <=> 17 Distance= 16.16 RSSI= -93
+Thu, 14 Nov 2019 09:08:17 16 <=> 18 Distance= 17.12 RSSI= -94
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 17 is below and neighbors are [node12, node13, node14, node15, node16, node18]
+Thu, 14 Nov 2019 09:08:17 17 <=> 12 Distance= 15.52 RSSI= -93
+Thu, 14 Nov 2019 09:08:17 17 <=> 13 Distance= 50.61 RSSI= -103
+Thu, 14 Nov 2019 09:08:17 17 <=> 14 Distance= 30.41 RSSI= -99
+Thu, 14 Nov 2019 09:08:17 17 <=> 15 Distance= 15.52 RSSI= -93
+Thu, 14 Nov 2019 09:08:17 17 <=> 16 Distance= 16.16 RSSI= -93
+Thu, 14 Nov 2019 09:08:17 17 <=> 18 Distance= 32.25 RSSI= -99
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 18 is below and neighbors are [node12, node13, node14, node15, node16, node17]
+Thu, 14 Nov 2019 09:08:17 18 <=> 12 Distance= 30.08 RSSI= -99
+Thu, 14 Nov 2019 09:08:17 18 <=> 13 Distance= 24.19 RSSI= -97
+Thu, 14 Nov 2019 09:08:17 18 <=> 14 Distance= 21.1 RSSI= -95
+Thu, 14 Nov 2019 09:08:17 18 <=> 15 Distance= 33.84 RSSI= -100
+Thu, 14 Nov 2019 09:08:17 18 <=> 16 Distance= 17.12 RSSI= -94
+Thu, 14 Nov 2019 09:08:17 18 <=> 17 Distance= 32.25 RSSI= -99
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 19 is below and neighbors are [node1, node2, node3, node4]
+Thu, 14 Nov 2019 09:08:17 19 <=> 1 Distance= 44.72 RSSI= -102
+Thu, 14 Nov 2019 09:08:17 19 <=> 2 Distance= 22.36 RSSI= -96
+Thu, 14 Nov 2019 09:08:17 19 <=> 3 Distance= 39.0 RSSI= -101
+Thu, 14 Nov 2019 09:08:17 19 <=> 4 Distance= 19.85 RSSI= -95
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 20 is below and neighbors are [node21, node22]
+Thu, 14 Nov 2019 09:08:17 20 <=> 21 Distance= 18.68 RSSI= -94
+Thu, 14 Nov 2019 09:08:17 20 <=> 22 Distance= 47.43 RSSI= -103
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 21 is below and neighbors are [node20, node22]
+Thu, 14 Nov 2019 09:08:17 21 <=> 20 Distance= 18.68 RSSI= -94
+Thu, 14 Nov 2019 09:08:17 21 <=> 22 Distance= 40.11 RSSI= -101
+Thu, 14 Nov 2019 09:08:17 Neighbors Table discovery for 22 is below and neighbors are [node20, node21]
+Thu, 14 Nov 2019 09:08:17 22 <=> 20 Distance= 47.43 RSSI= -103
+Thu, 14 Nov 2019 09:08:17 22 <=> 21 Distance= 40.11 RSSI= -101
+Thu, 14 Nov 2019 09:08:17 +++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ 
+
