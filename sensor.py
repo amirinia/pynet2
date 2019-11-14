@@ -1,13 +1,15 @@
 import random
 
-
+Sensor_Type = {0: "Temp", 1: "Monitoring"}
 class sensor:
-    def __init__(self,id,name):
+    def __init__(self,id,name,Sensor_Type=1):
         self.id = id
         self.name = name
+        self.sensor_type = Sensor_Type
 
     def run(self,env):
-        print(self.temperature_sensor())
+        if self.sensor_type == 0:
+            print(self.temperature_sensor())
         print(self.light_sensor())
 
     def temperature_sensor(self):

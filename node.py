@@ -12,7 +12,7 @@ import math
 import pandas as pd 
 
 class Node():
-    def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(1000,2000)),x=random.randint(0,config.AREA_WIDTH),y=random.randint(0,config.AREA_LENGTH),node_type=None, power_type=1, mobile_type=0, network=network ):
+    def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(1000,2000)),x=random.randint(0,config.AREA_WIDTH),y=random.randint(0,config.AREA_LENGTH),node_type=None, power_type=1, mobile_type=0, network=network ,sensor_type=0):
         self.env = env
         self.id = id
         self.action = env.process(self.run())
@@ -32,7 +32,7 @@ class Node():
         self.cluster = []
         self.TDMA = 0
         self.power = EnergyModel(power_type = power_type)
-        self.sensor = sensor.sensor(self.id,str(self.id) + "sensor")
+        self.sensor = sensor.sensor(self.id,str(self.id) + "sensor",sensor_type)
         self.getBS = False
         self.distance = []
         self.next_hop = []
