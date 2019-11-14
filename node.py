@@ -9,6 +9,7 @@ import time
 import gui
 import cluster
 import math
+import pandas as pd 
 
 class Node():
     def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(1000,2000)),x=random.randint(0,config.AREA_WIDTH),y=random.randint(0,config.AREA_LENGTH),node_type=None, power_type=1, mobile_type=0, network=network ):
@@ -64,9 +65,11 @@ class Node():
         if self.id != 0: # if node is not BS
             while True:
                 if(self.is_alive == True):
+                    df = pd.DataFrame(columns=['id','deadtime','remainedenergy'])
                     if (next(reversed(self.energy)) <= config.DEAD_NODE_THRESHOLD ):
                         print("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
                         print(self.power.energy)
+                        df.append(pd.Series([self.id,next(reversed(self.energy)),self.env.now], index=df.columns), ignore_index=True)
                         if(self.is_CH == True):
                             print("ch is dead ,cluster needs to find another CH \n\n")
                             self.is_CH == False
@@ -74,7 +77,7 @@ class Node():
                         # draw
                         graphi = gui.graphic(self.net)
                         graphi.draw()
-
+                    df.to_csv('report/deadnodes.csv')
                     if self.env.now > config.ALERT_TIME:
                         if self.net.alert :
                              if(config.Alert_RANGE > math.sqrt(((config.alertx-self.x)**2)+((config.alerty-self.y)**2))):

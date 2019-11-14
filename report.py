@@ -1,13 +1,13 @@
 import matplotlib.pyplot as plt 
 import pandas as pd 
 
-df1 = pd.read_csv('report/packet.csv')
-df2 = pd.read_csv('report/introduce_yourself.csv')
+
 
 
 
 #print(df1.id,df1.lost)
 def plotpacket():
+    df1 = pd.read_csv('report/packet.csv')
     df = df1[1:21]
     ax = plt.gca()
     df.plot(kind='line',x='id',y='sent',color='red',ax = ax)
@@ -22,6 +22,8 @@ def plotpacket():
 
 #print(df2)
 def plotenergy():
+    df2 = pd.read_csv('report/introduce_yourself.csv')
+
     df2.plot(kind='bar',x='id',y='energy')
     plt.savefig('report/energy{0} {1} .png'.format(1,2))
     plt.pause(15)
@@ -29,5 +31,5 @@ def plotenergy():
     plt.close()
 
 
-plotpacket()
-plotenergy()
+#plotpacket()
+#plotenergy()
