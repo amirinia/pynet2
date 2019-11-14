@@ -4,6 +4,7 @@
 import staticnet as initialnetwork
 import gui
 import config
+import report
 #initialnetwork.net1.introduce_self()
 net1 = initialnetwork.net1
 env = initialnetwork.env
@@ -30,7 +31,7 @@ env.run(until=config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 
-# net1.network_packet_summery()
+net1.network_packet_summery()
 
 # for n in net1.nodes:
 #     print(n,n.TDMA,n.is_CH,n.cluster,"   ",n.distance)
@@ -40,7 +41,10 @@ print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++
 # print(net1.clusterheads)
 
 # print(net1.nodes[0].inbox)
-# net1.introduce_yourself()   
+net1.introduce_yourself()   
 
 # net1.network_outboxes()
 # net1.network_inboxes()
+
+report.plotenergy()
+report.plotpacket()
