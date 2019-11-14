@@ -33,6 +33,7 @@ class Net():
         controller.net = self
         self.alert = False
         self.logger = logger.logger()
+        self.dfdead = pd.DataFrame(columns=['id','deadtime','remainedenergy'])
 
     def run(self):
         counter = 0
@@ -263,11 +264,10 @@ class Net():
         print("=================================")
         df.to_csv('report/packet.csv')
                         
-    dfdead = pd.DataFrame(columns=['id','deadtime','remainedenergy'])
 
-    def savedeadnodes(i,energy,now):
-        dfdead.append(pd.Series([i,energy,now], index=dfdead.columns), ignore_index=True)
-        dfdead.to_csv('report/deadnodes.csv')
+    def savedeadnodes(self,i,energy,now):
+        self.dfdead.append(pd.Series([i,energy,now], index=self.dfdead.columns), ignore_index=True)
+        self.dfdead.to_csv('report/deadnodes.csv')
 
     def CH_probablity(self):
         if(len(self.clusters)==0):

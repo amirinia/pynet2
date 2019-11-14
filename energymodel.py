@@ -6,8 +6,8 @@ Power_Type = {0: "External", 1: "Battery", 2: "Energy Harvesting"}
 
 #we use energy model of pymote 2.0 which uses 3 partsfunctions decrease_rx_energy decrease_tx_energy decrease_energy
 class EnergyModel(object):
-    P_TX = 0.084  # Watts to transmite 
-    P_RX = 0.073  # Watts to receive
+    P_TX = config.P_TX  # Watts to transmite 
+    P_RX = config.P_RX  # Watts to receive
 
     E_INIT = config.INITIAL_ENERGY #2.0 * 1000  # 2 Joules
     E_MIN = 0.5   # Joules to operate

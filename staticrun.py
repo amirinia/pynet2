@@ -51,4 +51,3 @@ net1.introduce_yourself()
 report.plotenergy()
 report.plotpacket()
 
-logger.logger.log(str(net1.nodes[0].inbox))

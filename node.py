@@ -78,7 +78,7 @@ class Node():
                         print("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
                         print(self.power.energy)
 
-                        self.net.Net.savedeadnodes(self.id,next(reversed(self.energy)),self.env.now)
+                        self.net.savedeadnodes(self.id,next(reversed(self.energy)),self.env.now)
                         if(self.is_CH == True):
                             self.logger.log("ch is dead ,cluster needs to find another CH \n\n")
                             print("ch is dead ,cluster needs to find another CH \n\n")

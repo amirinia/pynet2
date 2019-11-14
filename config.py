@@ -1,7 +1,7 @@
 import math
 
 ## Runtime configuration
-MAX_RUNTIME = 1000
+MAX_RUNTIME = 10000
 #ALERT TIME
 ALERT_TIME = 119
 ALERT_END = 1300
@@ -36,13 +36,19 @@ AGGREGATE_TIME = 10
 COVERAGE_RADIUS = 15 # meters 
 
 #ENERGY
+# initial energy at every node's battery
+INITIAL_ENERGY = 70 # mili Joules 2000
+
+P_TX = 0.084 *1000 # Watts to transmite 
+P_RX = 0.073 *1000 # Watts to receive
 #dead node threshold
 DEAD_NODE_THRESHOLD = 0.299
 LOW_NODE_THRESHOLD = 0.5
+
 # node transmission energy cnsumption
-PACKET_ENERGY_CONSUMPTION       = -0.00005
-NODE_SLEEP_ENERGY_CONSUMPTION   = -0.00001
-NODE_RUNING_ENERGY_CONSUMPTION  = -0.00002
+PACKET_ENERGY_CONSUMPTION       = -0.00005 #* 1000000
+NODE_SLEEP_ENERGY_CONSUMPTION   = -0.00001 #* 1000000
+NODE_RUNING_ENERGY_CONSUMPTION  = -0.00002 #* 1000000
 
 #node CPU
 NODE_AGGREGATE_ENERGY_CONSUMPTION = -0.00002
@@ -59,9 +65,8 @@ BS_POS_Y = 0.0
 MSG_LENGTH = 4000 # bits
 HEADER_LENGTH = 150 # bits
 
-# initial energy at every node's battery
-INITIAL_ENERGY = 700 # mili Joules 2000
 
-RESULTS_PATH = './results/'
+
+RESULTS_PATH = 'report/'
 
 
