@@ -114,7 +114,7 @@ class Node():
                                         self.temperature = 200+ self.sensor.temperature_sensor()
                                         # self.cluster[0].temperature.append(self.temperature)
 
-                                    tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent)
+                                    tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
                                     self.logger.log(tempmessage)
                                     print(tempmessage)
                                     message_sender = message.Message(tempmessage)
