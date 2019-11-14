@@ -1,5 +1,6 @@
 
 import math
+import config
 
 Power_Type = {0: "External", 1: "Battery", 2: "Energy Harvesting"}
 
@@ -8,7 +9,7 @@ class EnergyModel(object):
     P_TX = 0.084  # Watts to transmite 
     P_RX = 0.073  # Watts to receive
 
-    E_INIT = 2.0  # Joules
+    E_INIT = config.INITIAL_ENERGY #2.0 * 1000  # 2 Joules
     E_MIN = 0.5   # Joules to operate
 
     # charging  rate
@@ -33,7 +34,7 @@ class EnergyModel(object):
         self.energy_consumption = 0
 
     def __repr__(self):
-        return "<Power Type=%s, Energy=%d mJ>" % (Power_Type[self.power_type], self.energy*1000)
+        return "<Power Type=%s, Energy=%d mJ>" % (Power_Type[self.power_type], self.energy)
 
     def decrease_tx_energy(self, packet_size):
         # power consumption = Tx power * Tx time
