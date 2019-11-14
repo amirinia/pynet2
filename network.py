@@ -110,8 +110,8 @@ class Net():
             
             if self.alert == True: # if BS get alert
                 if any("Alert" in s for s in self.nodes[0].inbox):
-                    self.logger.log("Alertttttt is received by BS " , self.env.now)
-                    print("Alertttttt is received by BS " , self.env.now)
+                    self.logger.log("Alertttttt is received by BS ".format( self.env.now))
+                    print("Alertttttt is received by BS ".format( self.env.now))
                     
 
 

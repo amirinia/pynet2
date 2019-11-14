@@ -10,6 +10,7 @@ import gui
 import cluster
 import math
 import pandas as pd 
+import logger
 
 class Node():
     def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(1000,2000)),x=random.randint(0,config.AREA_WIDTH),y=random.randint(0,config.AREA_LENGTH),node_type=None, power_type=1, mobile_type=0, network=network ,sensor_type=0):
@@ -40,6 +41,7 @@ class Node():
         self.light = 0
         self.temperature = 0 
         self.alert_neighbor = False
+        self.logger = logger.logger()
 
     def __str__(self):
         return str(self.id)
@@ -51,15 +53,18 @@ class Node():
         if self.id == 0: # if node is BS
             while True:
                 if self.net.clock[0]=="CSMA":
+                    self.logger.log("at {0} BS is running".format(self.env.now))
                     print("at {0} BS is running".format(self.env.now))
                     yield self.env.timeout(config.BEACONING_TIME)
 
                 elif self.net.clock[0]=="TDMA":
+                    self.logger.log("at {0} BS is calculating".format(self.env.now))
                     print("at {0} BS is calculating".format(self.env.now))
                     yield self.env.timeout(config.BEACONING_TIME)
                 
                 else:
-                    print("BS is proccessing",self.env.now)
+                    self.logger.log("BS is proccessing {0}".format(self.env.now))
+                    print("BS is proccessing {0}".format(self.env.now))
                     yield self.env.timeout(config.BEACONING_TIME)
 
         if self.id != 0: # if node is not BS
@@ -67,10 +72,12 @@ class Node():
                 if(self.is_alive == True):
                     df = pd.DataFrame(columns=['id','deadtime','remainedenergy'])
                     if (next(reversed(self.energy)) <= config.DEAD_NODE_THRESHOLD ):
+                        self.logger.log("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
                         print("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
                         print(self.power.energy)
                         df.append(pd.Series([self.id,next(reversed(self.energy)),self.env.now], index=df.columns), ignore_index=True)
                         if(self.is_CH == True):
+                            self.logger.log("ch is dead ,cluster needs to find another CH \n\n")
                             print("ch is dead ,cluster needs to find another CH \n\n")
                             self.is_CH == False
                         self.is_alive = False
@@ -105,6 +112,7 @@ class Node():
                                         # self.cluster[0].temperature.append(self.temperature)
 
                                     tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent)
+                                    self.logger.log(tempmessage)
                                     print(tempmessage)
                                     message_sender = message.Message(tempmessage)
                                     msg_len = message_sender.message_length()
@@ -133,7 +141,8 @@ class Node():
                         if any("BS" in s for s in self.inbox):
                             self.BS_getter()
                             self.getBS == True
-                            print(self,self.getBS,"bs is in inbox")
+                            self.logger.log("{0} {1} {2}".format(self.id,self.getBS,"bs is in inbox"))
+                            print("{0} {1} {2}".format(self.id,self.getBS,"bs is in inbox"))
                         
                     # print(self.id, "test")
 
@@ -147,6 +156,7 @@ class Node():
                     if(random.randint(1,config.CSMA_duration)==5):
 
                         tempmessage = "at {0} beacon CSMA adv is sent by {1} aprent is {2}, since it has no CH with energy {3}".format(env.now,self.id,self.parent,self.power)
+                        self.logger.log(tempmessage)
                         print(tempmessage)
                         message_sender = message.Message(tempmessage)
                         msg_len = message_sender.message_length()
@@ -168,6 +178,7 @@ class Node():
                             self.net.nodes[0].inbox.append(tempbuffer)
                             self.node_send_message(self.aggregate,0)
                             self.aggregate.clear()
+                            self.logger.log(tempbuffer)
                             print(tempbuffer)
                             message_sender = message.Message(tempbuffer)
                             msg_len = message_sender.message_length()
@@ -226,6 +237,7 @@ class Node():
                 self.BS_getter()
                 print("\n",self,self.getBS)
                 print("distance is ",self.distance)
+                self.logger.log("for {0} neighbors are {1}".format(self,self.neighbors))
                 print("for {0} neighbors are {1}".format(self,self.neighbors))
                 # time.sleep(1)
                 for n in self.neighbors:
@@ -284,12 +296,14 @@ class Node():
     def change_CulsterHead(self):
         if(self.is_CH == False):
             self.is_CH = True
+            self.logger.log("node {0} becomes CH (change)and parent is {1} and TDMA {2}".format(self.id,self.parent,self.TDMA))
             print("node {0} becomes CH (change)and parent is {1} and TDMA {2}".format(self.id,self.parent,self.TDMA))
             self.distance.clear
             self.distance.append(self.net.nodes[0])
         else:
             self.is_CH == False
             self.next_hop.clear()
+            self.logger.log("node {0} becomes simple node (change) and parent is {1} and TDMA {2}".format(self.id,self.parent,self.TDMA))
             print("node {0} becomes simple node (change) and parent is {1} and TDMA {2}".format(self.id,self.parent,self.TDMA))
             #self.distance.append(next(reversed(self.parent)))
 
