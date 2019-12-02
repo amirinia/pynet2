@@ -36,6 +36,10 @@ class mycluster:
                 print ("##### {0} {1}".format(self.net.superframe_num, env.now))
                 self.Random_Clusterhead_Selection()
                 yield self.env.timeout(config.Duration)
+            print("cluster ,head :{0} {1} and average {2}".format(self.CH,self.CH.is_alive,self.average_cluster_energy()))
+
+            if(self.CH.is_alive):
+                self.Random_Clusterhead_Selection()
 
             # print(self.id,"cluster is runing",self.env.now)
             if len(self.nodes)>7:

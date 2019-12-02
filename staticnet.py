@@ -30,9 +30,9 @@ node16 = node.Node(16,env,1.8634754 ,29,189 )
 node17 = node.Node(17,env,1.87648 ,35,204 )
 node18 = node.Node(18,env,1.7645,31,172 )
 node19 = node.Node(19,env,1.3654675,30,50 )
-node20 = node.Node(20,env,1.846 ,130,20 )
-node21 = node.Node(21,env,1.786487,135,2 )
-node22 = node.Node(22,env,2 ,175,5 )
+node20 = node.Node(20,env,1.846 ,130,20 , node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
+node21 = node.Node(21,env,1.786487,135,2 , node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
+node22 = node.Node(22,env,2 ,175,5,node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1 )
 
 net1 = network.Net(env)
 

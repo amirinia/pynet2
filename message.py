@@ -47,7 +47,8 @@ class Message(object):
             #print("message {0} is sent from {1} to {2}".format(message,sender_node.id,destination_node.id))
             #print("packet is lost",is_loss)
 
-            # energy cosumption for receiving
+            # energy cosumption for receiving rx  decrease
+
             message_sender = Message(message)
             msg_len = message_sender.message_length()
             destination_node.power.decrease_rx_energy(msg_len)

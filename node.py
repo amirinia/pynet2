@@ -77,16 +77,21 @@ class Node():
                         self.logger.log("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
                         print("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
                         print(self.power.energy)
+                        time.sleep(4)
+                        graphi = gui.graphic(self.net)
+                        graphi.drawdead()
 
-                        self.net.savedeadnodes(self.id,next(reversed(self.energy)),self.env.now)
+                        #self.net.savedeadnodes(self.id,next(reversed(self.energy)),self.env.now)
                         if(self.is_CH == True):
-                            self.logger.log("ch is dead ,cluster needs to find another CH \n\n")
-                            print("ch is dead ,cluster needs to find another CH \n\n")
+                            self.logger.log("ch is dead ,cluster needs to find another CH {0} {1}\n\n".format(self.env.now, config.Duration))
+                            print("ch is dead ,cluster needs to find another CH {0} {1}\n\n".format(self.env.now, config.Duration))
                             self.is_CH == False
+                            print(self.clus,self.cluster)
                         self.is_alive = False
                         # draw
+                        time.sleep(4)
                         graphi = gui.graphic(self.net)
-                        graphi.draw()
+                        graphi.drawdead()
                     
                     if self.env.now > config.ALERT_TIME:
                         if self.net.alert :
@@ -117,6 +122,8 @@ class Node():
                                     tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
                                     self.logger.log(tempmessage)
                                     print(tempmessage)
+
+                                    # energy tx decrease
                                     message_sender = message.Message(tempmessage)
                                     msg_len = message_sender.message_length()
                                     self.power.decrease_tx_energy(msg_len)
@@ -161,6 +168,7 @@ class Node():
                         tempmessage = "at {0} beacon CSMA adv is sent by {1} aprent is {2}, since it has no CH with energy {3}".format(env.now,self.id,self.parent,self.power)
                         self.logger.log(tempmessage)
                         print(tempmessage)
+                        # energy tx decrease
                         message_sender = message.Message(tempmessage)
                         msg_len = message_sender.message_length()
                         self.power.decrease_tx_energy(msg_len)
@@ -183,6 +191,7 @@ class Node():
                             self.aggregate.clear()
                             self.logger.log(tempbuffer)
                             print(tempbuffer)
+                            # energy tx decrease
                             message_sender = message.Message(tempbuffer)
                             msg_len = message_sender.message_length()
                             self.power.decrease_tx_energy(msg_len)
