@@ -84,7 +84,7 @@ class Node():
                             self.logger.log("ch is dead ,cluster needs to find another CH {0} {1}\n\n".format(self.env.now, config.Duration))
                             print("ch is dead ,cluster needs to find another CH {0} {1}\n\n".format(self.env.now, config.Duration))
                             self.is_CH == False
-                            print("cc test",self.clus,self.cluster)
+                            print("cc test",self.clus,self.cluster,self.cluster.CH)
                         self.is_alive = False
                         # draw
                         time.sleep(4)
