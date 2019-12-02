@@ -65,6 +65,9 @@ BS_POS_Y = 0.0
 MSG_LENGTH = 4000 # bits
 HEADER_LENGTH = 150 # bits
 
+# multiframe 
+Multiframe_size = 2
+Multiframe_state = True
 
 
 RESULTS_PATH = 'report/'

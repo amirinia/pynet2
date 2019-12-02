@@ -119,30 +119,44 @@ class Node():
                                         # send alert to BS
                                         self.temperature = 200+ self.sensor.temperature_sensor()
                                         # self.cluster[0].temperature.append(self.temperature)
+                                    if(config.Multiframe_state):
+                                        if(self.sensor.sensor_type == 1 and self.net.superframe_num % config.Multiframe_size == 0): # every 2 superframe  Multisuperframe
+                                            tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
+                                            self.logger.log(tempmessage)
+                                            print(tempmessage)
+                                            # energy tx decrease
+                                            message_sender = message.Message(tempmessage)
+                                            msg_len = message_sender.message_length()
+                                            self.power.decrease_tx_energy(msg_len)
+                                            self.energy.append(self.power.energy)
+                                            message_sender.send_message(tempmessage,self,self.parent[0],TDMA=True)
+                                            self.parent[0].buffer.append(tempmessage)
+                                        
+                                        if (self.sensor.sensor_type == 0): # every frame nodetype
+                                            tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
+                                            self.logger.log(tempmessage)
+                                            print(tempmessage)
+                                            # energy tx decrease
+                                            message_sender = message.Message(tempmessage)
+                                            msg_len = message_sender.message_length()
+                                            self.power.decrease_tx_energy(msg_len)
+                                            self.energy.append(self.power.energy)
+                                            message_sender.send_message(tempmessage,self,self.parent[0],TDMA=True)
+                                            self.parent[0].buffer.append(tempmessage)
+                                    else:
+                                        tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
+                                        self.logger.log(tempmessage)
+                                        print(tempmessage)
+                                        # energy tx decrease
+                                        message_sender = message.Message(tempmessage)
+                                        msg_len = message_sender.message_length()
+                                        self.power.decrease_tx_energy(msg_len)
+                                        self.energy.append(self.power.energy)
+                                        message_sender.send_message(tempmessage,self,self.parent[0],TDMA=True)
+                                        self.parent[0].buffer.append(tempmessage)
 
-                                    if(self.sensor.sensor_type == 1 and self.net.superframe_num % 2 == 0): # every 2 superframe  Multisuperframe
-                                        tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
-                                        self.logger.log(tempmessage)
-                                        print(tempmessage)
-                                        # energy tx decrease
-                                        message_sender = message.Message(tempmessage)
-                                        msg_len = message_sender.message_length()
-                                        self.power.decrease_tx_energy(msg_len)
-                                        self.energy.append(self.power.energy)
-                                        message_sender.send_message(tempmessage,self,self.parent[0],TDMA=True)
-                                        self.parent[0].buffer.append(tempmessage)
+                                
                                     
-                                    if (self.sensor.sensor_type ==0): # every frame nodetype
-                                        tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
-                                        self.logger.log(tempmessage)
-                                        print(tempmessage)
-                                        # energy tx decrease
-                                        message_sender = message.Message(tempmessage)
-                                        msg_len = message_sender.message_length()
-                                        self.power.decrease_tx_energy(msg_len)
-                                        self.energy.append(self.power.energy)
-                                        message_sender.send_message(tempmessage,self,self.parent[0],TDMA=True)
-                                        self.parent[0].buffer.append(tempmessage)
                             # try:
                             #     if(self.is_alive == True):
                             #         yield self.env.process(self.TDMA_beaconing(self.env))
