@@ -328,3 +328,10 @@ class Net():
 
         yield self.env.timeout(1)
 
+    def network_energy(self):
+        energy = 0
+        for n in self.nodes:
+            energy =+ next(reversed(n.energy))
+        self.logger.log("avrage network energy {0}".format(energy))
+        print ("avrage network energy {0}".format(energy))
+        return energy
