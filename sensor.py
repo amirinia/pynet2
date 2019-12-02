@@ -1,6 +1,6 @@
 import random
 
-Sensor_Type = {0: "Temperature", 1: "Monitoring"}
+Sensor_Type = {0: "Alert-Temperature", 1: "Monitoring"}
 class sensor:
     def __init__(self,id,name,Sensor_Type=1):
         self.id = id

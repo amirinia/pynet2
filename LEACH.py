@@ -4,12 +4,15 @@ import message
 import network
 import node
 import simpy
+import logger
 
 
 class LEACHC:
     def __init__(self,env, network):
         self.env = env
         self.network = network
+        self.logger = logger.logger()
+
 
     def global_cluster_fromation(self,env):
         for node in self.network.nodes:
@@ -26,6 +29,7 @@ class LEACHC:
                     mycluster1.CH = node
                     node.set_TDMA(len(mycluster1.nodes))
                     # node.change_TDMA(mycluster1.TDMA_slots)
+                    self.logger.log("{0} is CH in {1} with {2} energy ++++++++++++++++++\n".format(node.id , mycluster1.id,str(node.energy) ) )
                     print("{0} is CH in {1} with {2} energy ++++++++++++++++++\n".format(node.id , mycluster1.id,str(node.energy) ) )
                     message2 = message.Message()
                     message2.broadcast(node,"node {0} is cluster Head in {1} with TDMA ".format(node.id,mycluster1.id))
@@ -35,6 +39,7 @@ class LEACHC:
 
 
     def Random_Clusterhead_Selection(self,env,network):
+        self.logger.log("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH \n")
         print("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH \n")
             #initial clusters
         self.global_cluster_fromation(env)

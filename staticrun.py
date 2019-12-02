@@ -14,22 +14,25 @@ graphi = gui.graphic(net1)
 
 
 # in second step you need and algorithm
+#logger.logger.log(str("__________________________LEACH___________________________________________ start"))
 print("__________________________LEACH___________________________________________ start\n\n")
 import LEACH 
 
 LEACH1 = LEACH.LEACHC(env,net1)
 #LEACH1.global_cluster_fromation(env)
 LEACH1.Random_Clusterhead_Selection(env,net1)
+#logger.logger.log(str("__________________________LEACH___________________________________________ end"))
 print("__________________________LEACH___________________________________________ end\n\n")
 
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++")
 net1.introduce_yourself()
 graphi.draw()
-
+#logger.logger.log(str("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++"))
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
 
 env.run(until=config.MAX_RUNTIME)
+#logger.logger.log(str("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++"))
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 
