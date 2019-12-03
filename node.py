@@ -42,7 +42,7 @@ class Node():
         self.temperature = 0 
         self.alert_neighbor = False
         self.logger = logger.logger()
-
+        self.deadtime = 0
     def __str__(self):
         return str(self.id)
 
@@ -77,7 +77,7 @@ class Node():
                         self.logger.log("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
                         print("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
                         print(self.power.energy)
-                        
+                        self.deadtime = self.env.now()
 
                         #self.net.savedeadnodes(self.id,next(reversed(self.energy)),self.env.now)
                         if(self.is_CH == True):

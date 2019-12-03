@@ -328,10 +328,25 @@ class Net():
 
         yield self.env.timeout(1)
 
-    def network_energy(self):
+    def network_optimize(self):
+        # energy
         energy = 0
         for n in self.nodes:
-            energy =+ next(reversed(n.energy))
+            if(next(reversed(n.energy)) > 0):
+                energy = energy + next(reversed(n.energy))
+                #print(next(reversed(n.energy)))
         self.logger.log("avrage network energy {0}".format(energy))
         print ("avrage network energy {0}".format(energy))
-        return energy
+
+        # duration
+        print("duration ={0} superframe {1} {2}".format(config.duration,config.Multiframe_size,config.Multiframe_state))
+        
+        # packet lost
+        sumpout = 0
+        sumpin = 0
+        for n in self.nodes:
+            sumpout +=len(n.outbox)
+            sumpin +=len(n.inbox)
+        print("{0} packets are lost on wireless sensor network".format(sumpout-sumpin))
+
+
