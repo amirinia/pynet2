@@ -86,7 +86,7 @@ class graphic:
         plt.clf()
         plt.close()
 
-    def drawdead(self):
+    def drawdead(self,title):
         print("draw dead\n")
         G = nx.Graph()
         G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
@@ -115,7 +115,7 @@ class graphic:
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=nodelistCH, node_size=700, node_color='#ff80ff')
         mng = plt.get_current_fig_manager()
         #mng.full_screen_toggle()
-        mng.set_window_title("dead node")
+        mng.set_window_title("dead node {0}".format(title))
 
         plt.title("dead mode")
 

@@ -42,7 +42,7 @@ class Node():
         self.temperature = 0 
         self.alert_neighbor = False
         self.logger = logger.logger()
-        self.deadtime = 0
+        self.deadtime = 100000000000000
     def __str__(self):
         return str(self.id)
 
@@ -77,19 +77,19 @@ class Node():
                         self.logger.log("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
                         print("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
                         print(self.power.energy)
-                        self.deadtime = self.env.now()
+                        self.deadtime = self.env.now
 
                         #self.net.savedeadnodes(self.id,next(reversed(self.energy)),self.env.now)
                         if(self.is_CH == True):
                             self.logger.log("ch is dead ,cluster needs to find another CH {0} {1}\n\n".format(self.env.now, config.Duration))
                             print("ch is dead ,cluster needs to find another CH {0} {1}\n\n".format(self.env.now, config.Duration))
                             self.is_CH == False
-                            print("cc test",self.clus,self.cluster,self.cluster.CH)
+                            print("cc test {0} cluster{1} ch {2}".format(self.cluser,self.cluster,self.cluster.CH))
                         self.is_alive = False
                         # draw
                         time.sleep(4)
                         graphi = gui.graphic(self.net)
-                        graphi.drawdead()
+                        graphi.drawdead("{0} {1}".format(self.id ,self.env.now ))
                         # save dead
                         print("env exit")
                         self.net.env.exit()

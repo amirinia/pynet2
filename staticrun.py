@@ -54,5 +54,5 @@ net1.introduce_yourself()
 report.plotenergy()
 report.plotpacket()
 
-net1.network_energy()
+net1.network_optimize()
 

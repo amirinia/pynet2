@@ -336,10 +336,10 @@ class Net():
                 energy = energy + next(reversed(n.energy))
                 #print(next(reversed(n.energy)))
         self.logger.log("avrage network energy {0}".format(energy))
-        print ("avrage network energy {0}".format(energy))
+        print("avrage network energy {0}".format(energy))
 
         # duration
-        print("duration ={0} superframe {1} {2}".format(config.duration,config.Multiframe_size,config.Multiframe_state))
+        print("duration ={0} superframe {1} {2}".format(config.Duration,config.Multiframe_size,config.Multiframe_state))
         
         # packet lost
         sumpout = 0
@@ -348,5 +348,11 @@ class Net():
             sumpout +=len(n.outbox)
             sumpin +=len(n.inbox)
         print("{0} packets are lost on wireless sensor network".format(sumpout-sumpin))
-
+        
+        # first node
+        t = []
+        for n in self.nodes:
+            t.append(n.deadtime)
+        print("first node {0} in total run = {1}".format(min(t),config.MAX_RUNTIME))
+            
 
