@@ -111,8 +111,8 @@ class Net():
             
             if self.alert == True: # if BS get alert
                 if any("Alert" in s for s in self.nodes[0].inbox):
-                    self.logger.log("Alertttttt is received by BS ".format( self.env.now))
-                    print("Alertttttt is received by BS ".format( self.env.now))
+                    self.logger.log(" Alertttttt is received by BS ".format( self.env.now))
+                    print(" Alertttttt is received by BS ".format( self.env.now))
                     
 
 
@@ -182,7 +182,7 @@ class Net():
             for n1 in self.nodes:
                 if(distance > math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2))):
                     if(n!=n1):
-                        tempmessage = ("{0} your neighbor is {1} Distance= {2} RSSI= {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
+                        tempmessage = ("a{0} your neighbor is {1} Distance= {2} RSSI= {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
                         message_sender = message.Message(tempmessage)
                         msg_len = message_sender.message_length()
                         message_sender.send_message(tempmessage,n,n1,TDMA=False)
@@ -339,7 +339,7 @@ class Net():
         print("avrage network energy {0}".format(energy))
 
         # duration
-        print("duration ={0} superframe {1} {2}".format(config.Duration,config.Multiframe_size,config.Multiframe_state))
+        print("duration ={0} superframe {1} {2} and t1{3} t2{4} t3{5}".format(config.Duration,config.Multiframe_size,config.Multiframe_state,config.TDMA_duration,config.CSMA_duration,config.Inactive_duration))
         
         # packet lost
         sumpout = 0
@@ -354,5 +354,6 @@ class Net():
         for n in self.nodes:
             t.append(n.deadtime)
         print("first node {0} in total run = {1}".format(min(t),config.MAX_RUNTIME))
+        #
             
 

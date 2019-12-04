@@ -44,10 +44,10 @@ class mycluster:
 
             if (next(reversed(self.CH.energy))< config.LOW_NODE_THRESHOLD):
                 self.Random_Clusterhead_Selection()
-
+                self.Clusterhead_Selection()
             if(self.CH.is_alive==False):
                 self.Random_Clusterhead_Selection()
-
+                self.Clusterhead_Selection()
             # print(self.id,"cluster is runing",self.env.now)
             if len(self.nodes)>7:
                 print("nodes number is exceeded")
