@@ -1,0 +1,6 @@
+Wed, 04 Dec 2019 22:36:13 HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH 
+
+Wed, 04 Dec 2019 22:36:13 node 0 becomes CH (change)and parent is [] and TDMA 0
+Wed, 04 Dec 2019 22:36:13 0 is CH in 0 with [4] energy ++++++++++++++++++
+
+Wed, 04 Dec 2019 22:36:13 node 1 becomes CH (change)and parent is [node0] and TDMA 1

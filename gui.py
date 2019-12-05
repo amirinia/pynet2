@@ -82,7 +82,7 @@ class graphic:
         #mng.full_screen_toggle()
         mng.set_window_title("draw")
 
-        plt.pause(5)
+        plt.pause(1)
         plt.clf()
         plt.close()
 
@@ -119,7 +119,7 @@ class graphic:
 
         plt.title("dead mode")
 
-        plt.pause(5)
+        plt.pause(1)
         plt.clf()
         plt.close()
 
@@ -309,7 +309,7 @@ class graphic:
         mng.set_window_title("Fire happens")
         plt.title("alert")
 
-        plt.pause(5)
+        plt.pause(1)
         plt.clf()
         plt.close()
 
@@ -347,7 +347,7 @@ class graphic:
         mng = plt.get_current_fig_manager()
         #mng.full_screen_toggle()
         mng.set_window_title("Fire happens")
-        plt.pause(5)
+        plt.pause(1)
         plt.clf()
 
         plt.close()

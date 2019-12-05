@@ -124,7 +124,7 @@ class mycluster:
                             self.net.ClusterHead_finder()
                             # graph = gui.graphic(self.net)
                             # graph.draw() # simple draw
-                            time.sleep(1)
+                            #time.sleep(1)
                             self.logger.log("new ch is node {0}  with parent {1} and last ch was {2} with {3}".format(n,n.parent,self.CH,self.CH.parent))
                             print("new ch is node {0}  with parent {1} and last ch was {2} with {3}".format(n,n.parent,self.CH,self.CH.parent))
                             self.CH.change_CulsterHead()

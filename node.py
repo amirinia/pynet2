@@ -88,9 +88,9 @@ class Node():
                             self.cluster.Clusterhead_Selection()
                         self.is_alive = False
                         # draw
-                        time.sleep(4)
-                        graphi = gui.graphic(self.net)
-                        graphi.drawdead("{0} {1}".format(self.id ,self.env.now ))
+                        #time.sleep(4)
+                        #graphi = gui.graphic(self.net)
+                        #graphi.drawdead("{0} {1}".format(self.id ,self.env.now ))
                         # save dead
                         print("env exit")
                         self.net.env.exit()
