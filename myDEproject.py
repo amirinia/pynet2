@@ -3,14 +3,16 @@ import numpy as np
 import random
 import optimizationrun
 D = 4
+df = pd.DataFrame(columns=['pop','energy','duration','lost','dead'])
 
-def function(x):
-    #print(x[0],+x[1],x[0]+x[1])
-    return optimizationrun.run(x)
+def function(x,df):
+    op = optimizationrun
+    a = op.run(x)
+    df = df.append(pd.Series([x,a[0],a[1],a[2],a[3]], index=df.columns), ignore_index=True)
 
-def function0(x):
-    a = optimizationrun.run(x)
     return a[0]
+
+
 
 """ DE """
 De_FIT=[]
@@ -19,8 +21,7 @@ De_POP=[]
 
 
 
-def de(fuctuion, mut=0.8, crossp=0.9, popsize=100, its=10):
-        df = pd.DataFrame(columns=['pop','energy','duration','lost','dead'])
+def de(fuctuion,df, mut=0.8, crossp=0.9, popsize=100, its=10):
         #print("de")
         dimensions = D
         initial = []
@@ -43,7 +44,7 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=100, its=10):
         popnp = np.asarray(initial)
         #print((popnp))
 
-        fitness = np.asarray([function0(ind) for ind in popnp])
+        fitness = np.asarray([function(ind,df) for ind in popnp])
         #print("fitness list",fitness)
         best_idx = np.argmin(fitness)
         #print("index of best",best_idx)
@@ -85,8 +86,7 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=100, its=10):
                      cross_points[np.random.randint(0, dimensions)] = True
                 trial = np.where(cross_points, mutant, popnp[j])
                  #print("trail",trial)
-                a = function(trial)
-                df = df.append(pd.Series([trial,a[0],a[1],a[2],a[3]], index=df.columns), ignore_index=True)
+                function(trial,df)
 
                 f=a[0]
                 if f > fitness[j]:
@@ -98,9 +98,9 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=100, its=10):
             
             De_FIT.append(fitness[best_idx])
             De_VAR.append(best)
-            df.to_csv('report/DE best .csv')
             return best, fitness[best_idx]
 
 
-de(lambda x: function(x) ,its=50)
+de(lambda x: function(x),df )
 print("list",De_FIT,De_VAR)
+df.to_csv('report/DE best .csv')

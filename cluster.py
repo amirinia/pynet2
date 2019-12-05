@@ -64,7 +64,7 @@ class mycluster:
             self.logger.log("cluster nodes is exceeded by {0}".format(node))
             print("cluster nodes is exceeded by {0}".format(node))
         node.clus==self
-        node.cluster.clear()
+        node.cluster = []
         node.cluster.append(self)
 
         self.nodes.append(node)

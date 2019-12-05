@@ -1,0 +1,54 @@
+Wed, 04 Dec 2019 22:43:25 HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH 
+
+Wed, 04 Dec 2019 22:43:25 node 0 becomes CH (change)and parent is [] and TDMA 0
+Wed, 04 Dec 2019 22:43:25 0 is CH in 0 with [4] energy ++++++++++++++++++
+
+Wed, 04 Dec 2019 22:43:25 node 11 becomes simple node (change) and parent is [node0] and TDMA 3
+Wed, 04 Dec 2019 22:43:25 node 1 becomes CH (change)and parent is [node0] and TDMA 1
+Wed, 04 Dec 2019 22:43:25 1 is CH in 1 with [1.99, 1975.590625, 1951.18125, 1926.7718750000001, 1901.9062500000002, 1883.2000000000003, 1864.4937500000003, 1845.7875000000004, 1826.8531250000003, 1802.4437500000004, 1778.0343750000004, 1753.1687500000005, 1711.4218750000005, 1669.4468750000005, 1545.0218750000006, 1502.8187500000006, 1481.6031250000005, 1431.4656250000005, 1410.0218750000006, 1388.8062500000005, 1338.6687500000005, 1317.4531250000005, 1296.2375000000004, 1274.7937500000005, 1224.1312500000006, 1173.4687500000007, 1152.2531250000006, 1101.8531250000005, 1080.4093750000006, 1029.7468750000007, 979.0843750000007, 957.8687500000007, 936.4250000000006, 886.0250000000007, 860.4750000000007, 834.9250000000008, 809.3750000000008, 783.8250000000008, 758.2750000000009, 707.8750000000009, 657.4750000000009, 607.075000000001, 556.9375000000009, 506.53750000000093, 455.8750000000009, 405.47500000000093, 354.8125000000009, 304.41250000000093, 285.7062500000009, 263.35000000000093] energy ++++++++++++++++++
+
+Wed, 04 Dec 2019 22:43:25 node 19 becomes simple node (change) and parent is [node1] and TDMA 4
+Wed, 04 Dec 2019 22:43:25 node 5 becomes CH (change)and parent is [node0] and TDMA 2
+Wed, 04 Dec 2019 22:43:25 5 is CH in 5 with [1.9855, 1975.590625, 1950.953125, 1926.771875, 1908.065625, 1889.359375, 1870.653125, 1846.24375, 1822.0625, 1797.88125, 1755.90625, 1714.159375, 1692.94375, 1671.7281249999999, 1621.3281249999998, 1570.9281249999997, 1520.2656249999998, 1469.6031249999999, 1416.5781249999998, 1363.5531249999997, 1310.5281249999996, 1257.5031249999995, 1231.9531249999995, 1206.4031249999996, 1180.8531249999996, 1155.3031249999997, 1102.2781249999996, 1049.2531249999995, 996.2281249999995, 943.4656249999995, 922.2499999999994, 869.4874999999994, 816.7249999999993, 763.9624999999993, 711.1999999999992, 658.4374999999992, 639.7312499999992, 617.3749999999992] energy ++++++++++++++++++
+
+Wed, 04 Dec 2019 22:43:25 node 7 becomes simple node (change) and parent is [node5] and TDMA 2
+Wed, 04 Dec 2019 22:43:25 node 8 becomes simple node (change) and parent is [node5] and TDMA 3
+Wed, 04 Dec 2019 22:43:25 node 9 becomes CH (change)and parent is [node11] and TDMA 3
+Wed, 04 Dec 2019 22:43:25 9 is CH in 9 with [1.989364, 1975.590625, 1950.953125, 1932.01875, 1913.084375, 1891.640625, 1867.003125, 1817.9156249999999, 1766.990625, 1717.9031249999998, 1666.7156249999998, 1615.5281249999998, 1564.3406249999998, 1513.1531249999998, 1461.9656249999998, 1410.7781249999998, 1359.5906249999998, 1308.4031249999998, 1257.2156249999998, 1206.0281249999998, 1154.8406249999998, 1103.6531249999998, 1052.4656249999998, 1001.2781249999998, 950.0906249999998] energy ++++++++++++++++++
+
+Wed, 04 Dec 2019 22:43:25 node 11 becomes simple node (change) and parent is [node9] and TDMA 2
+Wed, 04 Dec 2019 22:43:25 node 15 becomes CH (change)and parent is [node0] and TDMA 4
+Wed, 04 Dec 2019 22:43:25 15 is CH in 15 with [1.9754734, 1975.3625, 1950.26875, 1925.175, 1900.309375, 1875.215625, 1856.28125, 1837.346875, 1818.4125, 1799.4781249999999, 1780.5437499999998, 1761.6093749999998, 1739.9374999999998, 1715.2999999999997, 1690.2062499999997, 1665.1124999999997, 1640.2468749999998, 1615.38125, 1590.2875, 1566.1062499999998, 1544.4343749999998, 1522.7624999999998, 1501.0906249999998, 1479.4187499999998, 1457.7468749999998, 1436.0749999999998, 1414.4031249999998, 1392.7312499999998, 1371.0593749999998, 1349.3874999999998, 1327.7156249999998, 1306.0437499999998, 1284.3718749999998, 1262.6999999999998, 1241.0281249999998, 1219.3562499999998, 1197.6843749999998, 1176.0124999999998, 1154.3406249999998, 1132.6687499999998, 1110.9968749999998, 1089.3249999999998, 1063.7749999999999, 1038.225, 1012.675, 987.125, 961.575, 939.903125, 918.23125, 896.559375, 874.8875, 853.215625, 831.54375, 809.871875, 788.2, 766.528125, 744.85625, 723.184375, 701.5125, 679.840625, 658.16875, 636.496875, 614.825, 593.153125, 571.48125, 549.809375, 528.1375, 509.43125000000003, 487.07500000000005, 468.14062500000006, 449.20625000000007, 430.2718750000001] energy ++++++++++++++++++
+
+Wed, 04 Dec 2019 22:43:25 node 12 becomes simple node (change) and parent is [node15] and TDMA 1
+Wed, 04 Dec 2019 22:43:25 node 14 becomes simple node (change) and parent is [node15] and TDMA 3
+Wed, 04 Dec 2019 22:43:25 node 16 becomes simple node (change) and parent is [node15] and TDMA 4
+Wed, 04 Dec 2019 22:43:25 node 22 becomes CH (change)and parent is [node0] and TDMA 5
+Wed, 04 Dec 2019 22:43:25 22 is CH in 22 with [2, 1974.90625, 1949.8125, 1930.878125, 1911.94375, 1886.85, 1861.75625, 1837.5749999999998, 1815.9031249999998, 1765.240625, 1716.1531249999998, 1665.2281249999999, 1614.303125, 1588.753125, 1563.203125, 1537.653125, 1512.103125, 1486.5531250000001, 1435.6281250000002, 1384.7031250000002, 1333.7781250000003, 1282.8531250000003, 1231.9281250000004, 1213.2218750000004, 1190.8656250000004, 1171.9312500000003] energy ++++++++++++++++++
+
+Wed, 04 Dec 2019 22:43:25 node 20 becomes simple node (change) and parent is [node22] and TDMA 1
+Wed, 04 Dec 2019 22:43:25 ****************************Begin of introduce network
+Wed, 04 Dec 2019 22:43:25 0  with energy : <Power Type=External, Energy=2000 mJ>  with position 150.0 100.0 ; CH is [] is alive: True with TDMA 6 4
+Wed, 04 Dec 2019 22:43:25 1  with energy : <Power Type=Battery, Energy=188 mJ>  with position 10 10 ; CH is 0 is alive: True with TDMA 5 188.2968750000009 sensor t: 0
+Wed, 04 Dec 2019 22:43:25 2  with energy : <Power Type=Battery, Energy=528 mJ>  with position 10 60 ; CH is 1 is alive: True with TDMA 1 528.415625 sensor t: 1
+Wed, 04 Dec 2019 22:43:25 3  with energy : <Power Type=Battery, Energy=240 mJ>  with position 30 11 ; CH is 1 is alive: True with TDMA 2 240.48749999999973 sensor t: 0
+Wed, 04 Dec 2019 22:43:25 4  with energy : <Power Type=Battery, Energy=1004 mJ>  with position 43 35 ; CH is 1 is alive: True with TDMA 3 1004.9093750000009 sensor t: 1
+Wed, 04 Dec 2019 22:43:25 5  with energy : <Power Type=Battery, Energy=561 mJ>  with position 260 30 ; CH is 0 is alive: True with TDMA 4 561.2562499999993 sensor t: 0
+Wed, 04 Dec 2019 22:43:25 6  with energy : <Power Type=Battery, Energy=1080 mJ>  with position 270 50 ; CH is 5 is alive: True with TDMA 1 1080.1187499999996 sensor t: 1
+Wed, 04 Dec 2019 22:43:25 7  with energy : <Power Type=Battery, Energy=327 mJ>  with position 259 72 ; CH is 5 is alive: True with TDMA 2 327.47499999999985 sensor t: 0
+Wed, 04 Dec 2019 22:43:25 8  with energy : <Power Type=Battery, Energy=-634 mJ>  with position 241 47 ; CH is 5 is alive: False with TDMA 3 -634.1531249999998 sensor t: 0
+Wed, 04 Dec 2019 22:43:25 9  with energy : <Power Type=Battery, Energy=912 mJ>  with position 260 200 ; CH is 11 is alive: True with TDMA 3 912.2218749999997 sensor t: 0
+Wed, 04 Dec 2019 22:43:25 10  with energy : <Power Type=Battery, Energy=1320 mJ>  with position 290 200 ; CH is 9 is alive: True with TDMA 1 1320.359375 sensor t: 1
+Wed, 04 Dec 2019 22:43:25 11  with energy : <Power Type=Battery, Energy=-418 mJ>  with position 280 220 ; CH is 9 is alive: False with TDMA 2 -418.7499999999997 sensor t: 0
+Wed, 04 Dec 2019 22:43:25 12  with energy : <Power Type=Battery, Energy=-585 mJ>  with position 20 200 ; CH is 15 is alive: False with TDMA 1 -585.5781250000001 sensor t: 1
+Wed, 04 Dec 2019 22:43:25 13  with energy : <Power Type=Battery, Energy=-50 mJ>  with position 10 160 ; CH is 15 is alive: True with TDMA 2 -50.831249999999955 sensor t: 0
+Wed, 04 Dec 2019 22:43:25 14  with energy : <Power Type=Battery, Energy=-84 mJ>  with position 13 183 ; CH is 15 is alive: True with TDMA 3 -84.70312499999983 sensor t: 1
+Wed, 04 Dec 2019 22:43:25 15  with energy : <Power Type=Battery, Energy=392 mJ>  with position 50 200 ; CH is 0 is alive: True with TDMA 7 392.4031250000001 sensor t: 0
+Wed, 04 Dec 2019 22:43:25 16  with energy : <Power Type=Battery, Energy=-335 mJ>  with position 29 189 ; CH is 15 is alive: False with TDMA 4 -335.67499999999916 sensor t: 0
+Wed, 04 Dec 2019 22:43:25 17  with energy : <Power Type=Battery, Energy=-986 mJ>  with position 35 204 ; CH is 15 is alive: False with TDMA 5 -986.3624999999993 sensor t: 1
+Wed, 04 Dec 2019 22:43:25 18  with energy : <Power Type=Battery, Energy=-483 mJ>  with position 31 172 ; CH is 15 is alive: False with TDMA 6 -483.3187499999991 sensor t: 0
+Wed, 04 Dec 2019 22:43:25 19  with energy : <Power Type=Battery, Energy=-831 mJ>  with position 30 50 ; CH is 1 is alive: False with TDMA 4 -831.1812499999999 sensor t: 0
+Wed, 04 Dec 2019 22:43:25 20  with energy : <Power Type=Battery, Energy=-92 mJ>  with position 130 20 ; CH is 22 is alive: True with TDMA 1 -92.27812499999993 sensor t: 1
+Wed, 04 Dec 2019 22:43:25 21  with energy : <Power Type=Battery, Energy=1345 mJ>  with position 135 2 ; CH is 22 is alive: True with TDMA 2 1345.671875 sensor t: 1
+Wed, 04 Dec 2019 22:43:25 22  with energy : <Power Type=Battery, Energy=1171 mJ>  with position 175 5 ; CH is 0 is alive: True with TDMA 3 1171.9312500000003 sensor t: 1
+Wed, 04 Dec 2019 22:43:25 ==============================Clusters===============================
