@@ -3,12 +3,12 @@ import numpy as np
 import random
 import optimizationrun
 D = 4
-df = pd.DataFrame(columns=['pop','energy','duration','lost','dead'])
+#df = pd.DataFrame(columns=['pop','energy','duration','lost','dead'])
 
-def function(x,df):
+def function(x):
     op = optimizationrun
     a = op.run(x)
-    df = df.append(pd.Series([x,a[0],a[1],a[2],a[3]], index=df.columns), ignore_index=True)
+    #df = df.append(pd.Series([x,a[0],a[1],a[2],a[3]], index=df.columns), ignore_index=True)
 
     return a[0]
 
@@ -21,7 +21,7 @@ De_POP=[]
 
 
 
-def de(fuctuion,df, mut=0.8, crossp=0.9, popsize=100, its=10):
+def de(fuctuion, mut=0.8, crossp=0.9, popsize=10, its=2):
         #print("de")
         dimensions = D
         initial = []
@@ -98,9 +98,11 @@ def de(fuctuion,df, mut=0.8, crossp=0.9, popsize=100, its=10):
             
             De_FIT.append(fitness[best_idx])
             De_VAR.append(best)
+
             return best, fitness[best_idx]
 
 
-de(lambda x: function(x),df )
+de(lambda x: function(x) )
 print("list",De_FIT,De_VAR)
-df.to_csv('report/DE best .csv')
+#df.to_csv('report/DE best .csv')
+

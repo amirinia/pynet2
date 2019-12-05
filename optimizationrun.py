@@ -10,8 +10,9 @@ import simpy
 import network
 import node
 
+#df = pd.DataFrame(columns=['pop','energy','duration','lost','dead'])
+
 def run(x):
-    df = pd.DataFrame(columns=['pop','energy','duration','lost','dead'])
 
     config.TDMA_duration = x[0]
     config.CSMA_duration = x[1]

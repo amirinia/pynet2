@@ -1,0 +1,2879 @@
+Wed, 04 Dec 2019 23:52:20 ****************************Begin of introduce network
+Wed, 04 Dec 2019 23:52:20 0  with energy : <Power Type=External, Energy=2000 mJ>  with position 150.0 100.0 ; CH is [] is alive: True with TDMA 0 4
+Wed, 04 Dec 2019 23:52:20 1  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 10 10 ; CH is [] is alive: True with TDMA 0 1.99
+Wed, 04 Dec 2019 23:52:20 2  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 10 60 ; CH is [] is alive: True with TDMA 0 1.98
+Wed, 04 Dec 2019 23:52:20 3  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 30 11 ; CH is [] is alive: True with TDMA 0 1.988
+Wed, 04 Dec 2019 23:52:20 4  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 43 35 ; CH is [] is alive: True with TDMA 0 1.9088
+Wed, 04 Dec 2019 23:52:20 5  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 260 30 ; CH is [] is alive: True with TDMA 0 1.9855
+Wed, 04 Dec 2019 23:52:20 6  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 270 50 ; CH is [] is alive: True with TDMA 0 1.9678
+Wed, 04 Dec 2019 23:52:20 7  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 259 72 ; CH is [] is alive: True with TDMA 0 1.8434
+Wed, 04 Dec 2019 23:52:20 8  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 241 47 ; CH is [] is alive: True with TDMA 0 1.90234
+Wed, 04 Dec 2019 23:52:20 9  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 260 200 ; CH is [] is alive: True with TDMA 0 1.989364
+Wed, 04 Dec 2019 23:52:20 10  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 290 200 ; CH is [] is alive: True with TDMA 0 1.876549
+Wed, 04 Dec 2019 23:52:20 11  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 280 220 ; CH is [] is alive: True with TDMA 0 1.78233
+Wed, 04 Dec 2019 23:52:20 12  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 20 200 ; CH is [] is alive: True with TDMA 0 1.79745
+Wed, 04 Dec 2019 23:52:20 13  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 10 160 ; CH is [] is alive: True with TDMA 0 1.86435
+Wed, 04 Dec 2019 23:52:21 14  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 13 183 ; CH is [] is alive: True with TDMA 0 1.76434
+Wed, 04 Dec 2019 23:52:21 15  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 50 200 ; CH is [] is alive: True with TDMA 0 1.9754734
+Wed, 04 Dec 2019 23:52:21 16  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 29 189 ; CH is [] is alive: True with TDMA 0 1.8634754
+Wed, 04 Dec 2019 23:52:21 17  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 35 204 ; CH is [] is alive: True with TDMA 0 1.87648
+Wed, 04 Dec 2019 23:52:21 18  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 31 172 ; CH is [] is alive: True with TDMA 0 1.7645
+Wed, 04 Dec 2019 23:52:21 19  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 30 50 ; CH is [] is alive: True with TDMA 0 1.3654675
+Wed, 04 Dec 2019 23:52:21 20  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 130 20 ; CH is [] is alive: True with TDMA 0 1.846
+Wed, 04 Dec 2019 23:52:21 21  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 135 2 ; CH is [] is alive: True with TDMA 0 1.786487
+Wed, 04 Dec 2019 23:52:21 22  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 175 5 ; CH is [] is alive: True with TDMA 0 2
+Wed, 04 Dec 2019 23:52:21 ==============================Clusters===============================
+Wed, 04 Dec 2019 23:52:21 ++++++++++++++++++++ network Table Discovery Begins 70 meters ++++++++++++++++++++++++++++
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 0 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 1 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 1 <=> 2 Distance= 50.0 RSSI= -103
+Wed, 04 Dec 2019 23:52:21 1 <=> 3 Distance= 20.02 RSSI= -95
+Wed, 04 Dec 2019 23:52:21 1 <=> 4 Distance= 41.4 RSSI= -101
+Wed, 04 Dec 2019 23:52:21 1 <=> 19 Distance= 44.72 RSSI= -102
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 2 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 2 <=> 1 Distance= 50.0 RSSI= -103
+Wed, 04 Dec 2019 23:52:21 2 <=> 3 Distance= 52.92 RSSI= -103
+Wed, 04 Dec 2019 23:52:21 2 <=> 4 Distance= 41.4 RSSI= -101
+Wed, 04 Dec 2019 23:52:21 2 <=> 19 Distance= 22.36 RSSI= -96
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 3 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 3 <=> 1 Distance= 20.02 RSSI= -95
+Wed, 04 Dec 2019 23:52:21 3 <=> 2 Distance= 52.92 RSSI= -103
+Wed, 04 Dec 2019 23:52:21 3 <=> 4 Distance= 27.29 RSSI= -98
+Wed, 04 Dec 2019 23:52:21 3 <=> 19 Distance= 39.0 RSSI= -101
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 4 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 4 <=> 1 Distance= 41.4 RSSI= -101
+Wed, 04 Dec 2019 23:52:21 4 <=> 2 Distance= 41.4 RSSI= -101
+Wed, 04 Dec 2019 23:52:21 4 <=> 3 Distance= 27.29 RSSI= -98
+Wed, 04 Dec 2019 23:52:21 4 <=> 19 Distance= 19.85 RSSI= -95
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 5 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 5 <=> 6 Distance= 22.36 RSSI= -96
+Wed, 04 Dec 2019 23:52:21 5 <=> 7 Distance= 42.01 RSSI= -101
+Wed, 04 Dec 2019 23:52:21 5 <=> 8 Distance= 25.5 RSSI= -97
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 6 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 6 <=> 5 Distance= 22.36 RSSI= -96
+Wed, 04 Dec 2019 23:52:21 6 <=> 7 Distance= 24.6 RSSI= -97
+Wed, 04 Dec 2019 23:52:21 6 <=> 8 Distance= 29.15 RSSI= -98
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 7 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 7 <=> 5 Distance= 42.01 RSSI= -101
+Wed, 04 Dec 2019 23:52:21 7 <=> 6 Distance= 24.6 RSSI= -97
+Wed, 04 Dec 2019 23:52:21 7 <=> 8 Distance= 30.81 RSSI= -99
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 8 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 8 <=> 5 Distance= 25.5 RSSI= -97
+Wed, 04 Dec 2019 23:52:21 8 <=> 6 Distance= 29.15 RSSI= -98
+Wed, 04 Dec 2019 23:52:21 8 <=> 7 Distance= 30.81 RSSI= -99
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 9 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 9 <=> 10 Distance= 30.0 RSSI= -99
+Wed, 04 Dec 2019 23:52:21 9 <=> 11 Distance= 28.28 RSSI= -98
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 10 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 10 <=> 9 Distance= 30.0 RSSI= -99
+Wed, 04 Dec 2019 23:52:21 10 <=> 11 Distance= 22.36 RSSI= -96
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 11 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 11 <=> 9 Distance= 28.28 RSSI= -98
+Wed, 04 Dec 2019 23:52:21 11 <=> 10 Distance= 22.36 RSSI= -96
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 12 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 12 <=> 13 Distance= 41.23 RSSI= -101
+Wed, 04 Dec 2019 23:52:21 12 <=> 14 Distance= 18.38 RSSI= -94
+Wed, 04 Dec 2019 23:52:21 12 <=> 15 Distance= 30.0 RSSI= -99
+Wed, 04 Dec 2019 23:52:21 12 <=> 16 Distance= 14.21 RSSI= -92
+Wed, 04 Dec 2019 23:52:21 12 <=> 17 Distance= 15.52 RSSI= -93
+Wed, 04 Dec 2019 23:52:21 12 <=> 18 Distance= 30.08 RSSI= -99
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 13 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 13 <=> 12 Distance= 41.23 RSSI= -101
+Wed, 04 Dec 2019 23:52:21 13 <=> 14 Distance= 23.19 RSSI= -96
+Wed, 04 Dec 2019 23:52:21 13 <=> 15 Distance= 56.57 RSSI= -104
+Wed, 04 Dec 2019 23:52:21 13 <=> 16 Distance= 34.67 RSSI= -100
+Wed, 04 Dec 2019 23:52:21 13 <=> 17 Distance= 50.61 RSSI= -103
+Wed, 04 Dec 2019 23:52:21 13 <=> 18 Distance= 24.19 RSSI= -97
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 14 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 14 <=> 12 Distance= 18.38 RSSI= -94
+Wed, 04 Dec 2019 23:52:21 14 <=> 13 Distance= 23.19 RSSI= -96
+Wed, 04 Dec 2019 23:52:21 14 <=> 15 Distance= 40.72 RSSI= -101
+Wed, 04 Dec 2019 23:52:21 14 <=> 16 Distance= 17.09 RSSI= -94
+Wed, 04 Dec 2019 23:52:21 14 <=> 17 Distance= 30.41 RSSI= -99
+Wed, 04 Dec 2019 23:52:21 14 <=> 18 Distance= 21.1 RSSI= -95
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 15 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 15 <=> 12 Distance= 30.0 RSSI= -99
+Wed, 04 Dec 2019 23:52:21 15 <=> 13 Distance= 56.57 RSSI= -104
+Wed, 04 Dec 2019 23:52:21 15 <=> 14 Distance= 40.72 RSSI= -101
+Wed, 04 Dec 2019 23:52:21 15 <=> 16 Distance= 23.71 RSSI= -96
+Wed, 04 Dec 2019 23:52:21 15 <=> 17 Distance= 15.52 RSSI= -93
+Wed, 04 Dec 2019 23:52:21 15 <=> 18 Distance= 33.84 RSSI= -100
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 16 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 16 <=> 12 Distance= 14.21 RSSI= -92
+Wed, 04 Dec 2019 23:52:21 16 <=> 13 Distance= 34.67 RSSI= -100
+Wed, 04 Dec 2019 23:52:21 16 <=> 14 Distance= 17.09 RSSI= -94
+Wed, 04 Dec 2019 23:52:21 16 <=> 15 Distance= 23.71 RSSI= -96
+Wed, 04 Dec 2019 23:52:21 16 <=> 17 Distance= 16.16 RSSI= -93
+Wed, 04 Dec 2019 23:52:21 16 <=> 18 Distance= 17.12 RSSI= -94
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 17 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 17 <=> 12 Distance= 15.52 RSSI= -93
+Wed, 04 Dec 2019 23:52:21 17 <=> 13 Distance= 50.61 RSSI= -103
+Wed, 04 Dec 2019 23:52:21 17 <=> 14 Distance= 30.41 RSSI= -99
+Wed, 04 Dec 2019 23:52:21 17 <=> 15 Distance= 15.52 RSSI= -93
+Wed, 04 Dec 2019 23:52:21 17 <=> 16 Distance= 16.16 RSSI= -93
+Wed, 04 Dec 2019 23:52:21 17 <=> 18 Distance= 32.25 RSSI= -99
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 18 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 18 <=> 12 Distance= 30.08 RSSI= -99
+Wed, 04 Dec 2019 23:52:21 18 <=> 13 Distance= 24.19 RSSI= -97
+Wed, 04 Dec 2019 23:52:21 18 <=> 14 Distance= 21.1 RSSI= -95
+Wed, 04 Dec 2019 23:52:21 18 <=> 15 Distance= 33.84 RSSI= -100
+Wed, 04 Dec 2019 23:52:21 18 <=> 16 Distance= 17.12 RSSI= -94
+Wed, 04 Dec 2019 23:52:21 18 <=> 17 Distance= 32.25 RSSI= -99
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 19 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 19 <=> 1 Distance= 44.72 RSSI= -102
+Wed, 04 Dec 2019 23:52:21 19 <=> 2 Distance= 22.36 RSSI= -96
+Wed, 04 Dec 2019 23:52:21 19 <=> 3 Distance= 39.0 RSSI= -101
+Wed, 04 Dec 2019 23:52:21 19 <=> 4 Distance= 19.85 RSSI= -95
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 20 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 20 <=> 21 Distance= 18.68 RSSI= -94
+Wed, 04 Dec 2019 23:52:21 20 <=> 22 Distance= 47.43 RSSI= -103
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 21 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 21 <=> 20 Distance= 18.68 RSSI= -94
+Wed, 04 Dec 2019 23:52:21 21 <=> 22 Distance= 40.11 RSSI= -101
+Wed, 04 Dec 2019 23:52:21 Neighbors Table discovery for 22 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:21 22 <=> 20 Distance= 47.43 RSSI= -103
+Wed, 04 Dec 2019 23:52:21 22 <=> 21 Distance= 40.11 RSSI= -101
+Wed, 04 Dec 2019 23:52:21 +++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ 
+
+Wed, 04 Dec 2019 23:52:21 HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH 
+
+Wed, 04 Dec 2019 23:52:21 node 1 becomes CH (change)and parent is [] and TDMA 0
+Wed, 04 Dec 2019 23:52:21 1 is CH in 1 with [1.99, 1975.590625, 1951.18125, 1926.7718750000001, 1901.9062500000002] energy ++++++++++++++++++
+
+Wed, 04 Dec 2019 23:52:21 node 5 becomes CH (change)and parent is [] and TDMA 0
+Wed, 04 Dec 2019 23:52:21 5 is CH in 5 with [1.9855, 1975.590625, 1950.953125, 1926.771875] energy ++++++++++++++++++
+
+Wed, 04 Dec 2019 23:52:21 node 9 becomes CH (change)and parent is [] and TDMA 0
+Wed, 04 Dec 2019 23:52:21 9 is CH in 9 with [1.989364, 1975.590625, 1950.953125] energy ++++++++++++++++++
+
+Wed, 04 Dec 2019 23:52:21 node 15 becomes CH (change)and parent is [] and TDMA 0
+Wed, 04 Dec 2019 23:52:21 15 is CH in 15 with [1.9754734, 1974.90625, 1949.8125, 1924.946875, 1900.0812500000002, 1874.9875000000002, 1856.0531250000001, 1837.11875, 1818.184375] energy ++++++++++++++++++
+
+Wed, 04 Dec 2019 23:52:21 node 22 becomes CH (change)and parent is [] and TDMA 0
+Wed, 04 Dec 2019 23:52:21 22 is CH in 22 with [2, 1974.90625, 1949.8125, 1930.878125, 1911.94375] energy ++++++++++++++++++
+
+Wed, 04 Dec 2019 23:52:21 ****************************Begin of introduce network
+Wed, 04 Dec 2019 23:52:21 0  with energy : <Power Type=External, Energy=2000 mJ>  with position 150.0 100.0 ; CH is [] is alive: True with TDMA 0 4
+Wed, 04 Dec 2019 23:52:21 1  with energy : <Power Type=Battery, Energy=1826 mJ>  with position 10 10 ; CH is [] is alive: True with TDMA 5 1826.8531250000003
+Wed, 04 Dec 2019 23:52:21 2  with energy : <Power Type=Battery, Energy=1828 mJ>  with position 10 60 ; CH is 1 is alive: True with TDMA 1 1828.90625 sensor t: 1
+Wed, 04 Dec 2019 23:52:21 3  with energy : <Power Type=Battery, Energy=1804 mJ>  with position 30 11 ; CH is 1 is alive: True with TDMA 2 1804.496875 sensor t: 0
+Wed, 04 Dec 2019 23:52:21 4  with energy : <Power Type=Battery, Energy=1829 mJ>  with position 43 35 ; CH is 1 is alive: True with TDMA 3 1829.134375 sensor t: 1
+Wed, 04 Dec 2019 23:52:21 5  with energy : <Power Type=Battery, Energy=1889 mJ>  with position 260 30 ; CH is [] is alive: True with TDMA 4 1889.359375
+Wed, 04 Dec 2019 23:52:21 6  with energy : <Power Type=Battery, Energy=1848 mJ>  with position 270 50 ; CH is 5 is alive: True with TDMA 1 1848.525 sensor t: 1
+Wed, 04 Dec 2019 23:52:21 7  with energy : <Power Type=Battery, Energy=1848 mJ>  with position 259 72 ; CH is 5 is alive: True with TDMA 2 1848.296875 sensor t: 0
+Wed, 04 Dec 2019 23:52:21 8  with energy : <Power Type=Battery, Energy=1872 mJ>  with position 241 47 ; CH is 5 is alive: True with TDMA 3 1872.7062500000002 sensor t: 0
+Wed, 04 Dec 2019 23:52:21 9  with energy : <Power Type=Battery, Energy=1913 mJ>  with position 260 200 ; CH is [] is alive: True with TDMA 3 1913.084375
+Wed, 04 Dec 2019 23:52:21 10  with energy : <Power Type=Battery, Energy=1913 mJ>  with position 290 200 ; CH is 9 is alive: True with TDMA 1 1913.0843750000001 sensor t: 1
+Wed, 04 Dec 2019 23:52:21 11  with energy : <Power Type=Battery, Energy=1890 mJ>  with position 280 220 ; CH is 9 is alive: True with TDMA 2 1890.5 sensor t: 0
+Wed, 04 Dec 2019 23:52:21 12  with energy : <Power Type=Battery, Energy=1739 mJ>  with position 20 200 ; CH is 15 is alive: True with TDMA 1 1739.253125 sensor t: 1
+Wed, 04 Dec 2019 23:52:21 13  with energy : <Power Type=Battery, Energy=1713 mJ>  with position 10 160 ; CH is 15 is alive: True with TDMA 2 1713.475 sensor t: 0
+Wed, 04 Dec 2019 23:52:21 14  with energy : <Power Type=Battery, Energy=1733 mJ>  with position 13 183 ; CH is 15 is alive: True with TDMA 3 1733.321875 sensor t: 1
+Wed, 04 Dec 2019 23:52:21 15  with energy : <Power Type=Battery, Energy=1761 mJ>  with position 50 200 ; CH is [] is alive: True with TDMA 7 1761.38125
+Wed, 04 Dec 2019 23:52:21 16  with energy : <Power Type=Battery, Energy=1714 mJ>  with position 29 189 ; CH is 15 is alive: True with TDMA 4 1714.1593750000002 sensor t: 0
+Wed, 04 Dec 2019 23:52:21 17  with energy : <Power Type=Battery, Energy=1714 mJ>  with position 35 204 ; CH is 15 is alive: True with TDMA 5 1714.1593750000002 sensor t: 1
+Wed, 04 Dec 2019 23:52:21 18  with energy : <Power Type=Battery, Energy=1739 mJ>  with position 31 172 ; CH is 15 is alive: True with TDMA 6 1739.253125 sensor t: 0
+Wed, 04 Dec 2019 23:52:21 19  with energy : <Power Type=Battery, Energy=1804 mJ>  with position 30 50 ; CH is 1 is alive: True with TDMA 4 1804.040625 sensor t: 0
+Wed, 04 Dec 2019 23:52:21 20  with energy : <Power Type=Battery, Energy=1889 mJ>  with position 130 20 ; CH is 22 is alive: True with TDMA 1 1889.359375 sensor t: 1
+Wed, 04 Dec 2019 23:52:21 21  with energy : <Power Type=Battery, Energy=1889 mJ>  with position 135 2 ; CH is 22 is alive: True with TDMA 2 1889.359375 sensor t: 1
+Wed, 04 Dec 2019 23:52:21 22  with energy : <Power Type=Battery, Energy=1911 mJ>  with position 175 5 ; CH is [] is alive: True with TDMA 3 1911.94375
+Wed, 04 Dec 2019 23:52:21 ==============================Clusters===============================
+Wed, 04 Dec 2019 23:52:23 at 0 BS is running
+Wed, 04 Dec 2019 23:52:23 ##### 0 0
+Wed, 04 Dec 2019 23:52:23    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:23 ##### 0 0
+Wed, 04 Dec 2019 23:52:23    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:23  <<< random for node 7 is 0.15251383759308612 with energy 1848.296875 and average cluster energy 12755.192013333333
+Wed, 04 Dec 2019 23:52:23 new ch is node 7  with parent [node5] and last ch was 5 with []
+Wed, 04 Dec 2019 23:52:23 node 5 becomes simple node (change) and parent is [] and TDMA 4
+Wed, 04 Dec 2019 23:52:23 node 7 becomes CH (change)and parent is [] and TDMA 2
+Wed, 04 Dec 2019 23:52:23 node 7 is CH in 5  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 04 Dec 2019 23:52:23 ##### 0 0
+Wed, 04 Dec 2019 23:52:23    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:23  <<< random for node 10 is 0.18311943150120868 with energy 1913.0843750000001 and average cluster energy 8716.331002
+Wed, 04 Dec 2019 23:52:23 ##### 0 0
+Wed, 04 Dec 2019 23:52:23    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:23  <<< random for node 16 is 0.11590430478018499 with energy 1714.1593750000002 and average cluster energy 23043.558745066668
+Wed, 04 Dec 2019 23:52:23 new ch is node 16  with parent [node15] and last ch was 15 with []
+Wed, 04 Dec 2019 23:52:23 node 15 becomes simple node (change) and parent is [] and TDMA 7
+Wed, 04 Dec 2019 23:52:23 node 16 becomes CH (change)and parent is [] and TDMA 4
+Wed, 04 Dec 2019 23:52:23 node 16 is CH in 15  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 04 Dec 2019 23:52:23 ##### 0 0
+Wed, 04 Dec 2019 23:52:23    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:23 BS start to advertise + Superframe rules
+Wed, 04 Dec 2019 23:52:23 ++++++++++++++++++++ network Table Discovery Begins 70 meters ++++++++++++++++++++++++++++
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 0 is below and neighbors are []
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 1 is below and neighbors are [node2, node3, node4, node19]
+Wed, 04 Dec 2019 23:52:23 1 <=> 2 Distance= 50.0 RSSI= -103
+Wed, 04 Dec 2019 23:52:23 1 <=> 3 Distance= 20.02 RSSI= -95
+Wed, 04 Dec 2019 23:52:23 1 <=> 4 Distance= 41.4 RSSI= -101
+Wed, 04 Dec 2019 23:52:23 1 <=> 19 Distance= 44.72 RSSI= -102
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 2 is below and neighbors are [node1, node3, node4, node19]
+Wed, 04 Dec 2019 23:52:23 2 <=> 1 Distance= 50.0 RSSI= -103
+Wed, 04 Dec 2019 23:52:23 2 <=> 3 Distance= 52.92 RSSI= -103
+Wed, 04 Dec 2019 23:52:23 2 <=> 4 Distance= 41.4 RSSI= -101
+Wed, 04 Dec 2019 23:52:23 2 <=> 19 Distance= 22.36 RSSI= -96
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 3 is below and neighbors are [node1, node2, node4, node19]
+Wed, 04 Dec 2019 23:52:23 3 <=> 1 Distance= 20.02 RSSI= -95
+Wed, 04 Dec 2019 23:52:23 3 <=> 2 Distance= 52.92 RSSI= -103
+Wed, 04 Dec 2019 23:52:23 3 <=> 4 Distance= 27.29 RSSI= -98
+Wed, 04 Dec 2019 23:52:23 3 <=> 19 Distance= 39.0 RSSI= -101
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 4 is below and neighbors are [node1, node2, node3, node19]
+Wed, 04 Dec 2019 23:52:23 4 <=> 1 Distance= 41.4 RSSI= -101
+Wed, 04 Dec 2019 23:52:23 4 <=> 2 Distance= 41.4 RSSI= -101
+Wed, 04 Dec 2019 23:52:23 4 <=> 3 Distance= 27.29 RSSI= -98
+Wed, 04 Dec 2019 23:52:23 4 <=> 19 Distance= 19.85 RSSI= -95
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 5 is below and neighbors are [node6, node7, node8]
+Wed, 04 Dec 2019 23:52:23 5 <=> 6 Distance= 22.36 RSSI= -96
+Wed, 04 Dec 2019 23:52:23 5 <=> 7 Distance= 42.01 RSSI= -101
+Wed, 04 Dec 2019 23:52:23 5 <=> 8 Distance= 25.5 RSSI= -97
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 6 is below and neighbors are [node5, node7, node8]
+Wed, 04 Dec 2019 23:52:23 6 <=> 5 Distance= 22.36 RSSI= -96
+Wed, 04 Dec 2019 23:52:23 6 <=> 7 Distance= 24.6 RSSI= -97
+Wed, 04 Dec 2019 23:52:23 6 <=> 8 Distance= 29.15 RSSI= -98
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 7 is below and neighbors are [node5, node6, node8]
+Wed, 04 Dec 2019 23:52:23 7 <=> 5 Distance= 42.01 RSSI= -101
+Wed, 04 Dec 2019 23:52:23 7 <=> 6 Distance= 24.6 RSSI= -97
+Wed, 04 Dec 2019 23:52:23 7 <=> 8 Distance= 30.81 RSSI= -99
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 8 is below and neighbors are [node5, node6, node7]
+Wed, 04 Dec 2019 23:52:23 8 <=> 5 Distance= 25.5 RSSI= -97
+Wed, 04 Dec 2019 23:52:23 8 <=> 6 Distance= 29.15 RSSI= -98
+Wed, 04 Dec 2019 23:52:23 8 <=> 7 Distance= 30.81 RSSI= -99
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 9 is below and neighbors are [node10, node11]
+Wed, 04 Dec 2019 23:52:23 9 <=> 10 Distance= 30.0 RSSI= -99
+Wed, 04 Dec 2019 23:52:23 9 <=> 11 Distance= 28.28 RSSI= -98
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 10 is below and neighbors are [node9, node11]
+Wed, 04 Dec 2019 23:52:23 10 <=> 9 Distance= 30.0 RSSI= -99
+Wed, 04 Dec 2019 23:52:23 10 <=> 11 Distance= 22.36 RSSI= -96
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 11 is below and neighbors are [node9, node10]
+Wed, 04 Dec 2019 23:52:23 11 <=> 9 Distance= 28.28 RSSI= -98
+Wed, 04 Dec 2019 23:52:23 11 <=> 10 Distance= 22.36 RSSI= -96
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 12 is below and neighbors are [node13, node14, node15, node16, node17, node18]
+Wed, 04 Dec 2019 23:52:23 12 <=> 13 Distance= 41.23 RSSI= -101
+Wed, 04 Dec 2019 23:52:23 12 <=> 14 Distance= 18.38 RSSI= -94
+Wed, 04 Dec 2019 23:52:23 12 <=> 15 Distance= 30.0 RSSI= -99
+Wed, 04 Dec 2019 23:52:23 12 <=> 16 Distance= 14.21 RSSI= -92
+Wed, 04 Dec 2019 23:52:23 12 <=> 17 Distance= 15.52 RSSI= -93
+Wed, 04 Dec 2019 23:52:23 12 <=> 18 Distance= 30.08 RSSI= -99
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 13 is below and neighbors are [node12, node14, node15, node16, node17, node18]
+Wed, 04 Dec 2019 23:52:23 13 <=> 12 Distance= 41.23 RSSI= -101
+Wed, 04 Dec 2019 23:52:23 13 <=> 14 Distance= 23.19 RSSI= -96
+Wed, 04 Dec 2019 23:52:23 13 <=> 15 Distance= 56.57 RSSI= -104
+Wed, 04 Dec 2019 23:52:23 13 <=> 16 Distance= 34.67 RSSI= -100
+Wed, 04 Dec 2019 23:52:23 13 <=> 17 Distance= 50.61 RSSI= -103
+Wed, 04 Dec 2019 23:52:23 13 <=> 18 Distance= 24.19 RSSI= -97
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 14 is below and neighbors are [node12, node13, node15, node16, node17, node18]
+Wed, 04 Dec 2019 23:52:23 14 <=> 12 Distance= 18.38 RSSI= -94
+Wed, 04 Dec 2019 23:52:23 14 <=> 13 Distance= 23.19 RSSI= -96
+Wed, 04 Dec 2019 23:52:23 14 <=> 15 Distance= 40.72 RSSI= -101
+Wed, 04 Dec 2019 23:52:23 14 <=> 16 Distance= 17.09 RSSI= -94
+Wed, 04 Dec 2019 23:52:23 14 <=> 17 Distance= 30.41 RSSI= -99
+Wed, 04 Dec 2019 23:52:23 14 <=> 18 Distance= 21.1 RSSI= -95
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 15 is below and neighbors are [node12, node13, node14, node16, node17, node18]
+Wed, 04 Dec 2019 23:52:23 15 <=> 12 Distance= 30.0 RSSI= -99
+Wed, 04 Dec 2019 23:52:23 15 <=> 13 Distance= 56.57 RSSI= -104
+Wed, 04 Dec 2019 23:52:23 15 <=> 14 Distance= 40.72 RSSI= -101
+Wed, 04 Dec 2019 23:52:23 15 <=> 16 Distance= 23.71 RSSI= -96
+Wed, 04 Dec 2019 23:52:23 15 <=> 17 Distance= 15.52 RSSI= -93
+Wed, 04 Dec 2019 23:52:23 15 <=> 18 Distance= 33.84 RSSI= -100
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 16 is below and neighbors are [node12, node13, node14, node15, node17, node18]
+Wed, 04 Dec 2019 23:52:23 16 <=> 12 Distance= 14.21 RSSI= -92
+Wed, 04 Dec 2019 23:52:23 16 <=> 13 Distance= 34.67 RSSI= -100
+Wed, 04 Dec 2019 23:52:23 16 <=> 14 Distance= 17.09 RSSI= -94
+Wed, 04 Dec 2019 23:52:23 16 <=> 15 Distance= 23.71 RSSI= -96
+Wed, 04 Dec 2019 23:52:23 16 <=> 17 Distance= 16.16 RSSI= -93
+Wed, 04 Dec 2019 23:52:23 16 <=> 18 Distance= 17.12 RSSI= -94
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 17 is below and neighbors are [node12, node13, node14, node15, node16, node18]
+Wed, 04 Dec 2019 23:52:23 17 <=> 12 Distance= 15.52 RSSI= -93
+Wed, 04 Dec 2019 23:52:23 17 <=> 13 Distance= 50.61 RSSI= -103
+Wed, 04 Dec 2019 23:52:23 17 <=> 14 Distance= 30.41 RSSI= -99
+Wed, 04 Dec 2019 23:52:23 17 <=> 15 Distance= 15.52 RSSI= -93
+Wed, 04 Dec 2019 23:52:23 17 <=> 16 Distance= 16.16 RSSI= -93
+Wed, 04 Dec 2019 23:52:23 17 <=> 18 Distance= 32.25 RSSI= -99
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 18 is below and neighbors are [node12, node13, node14, node15, node16, node17]
+Wed, 04 Dec 2019 23:52:23 18 <=> 12 Distance= 30.08 RSSI= -99
+Wed, 04 Dec 2019 23:52:23 18 <=> 13 Distance= 24.19 RSSI= -97
+Wed, 04 Dec 2019 23:52:23 18 <=> 14 Distance= 21.1 RSSI= -95
+Wed, 04 Dec 2019 23:52:23 18 <=> 15 Distance= 33.84 RSSI= -100
+Wed, 04 Dec 2019 23:52:23 18 <=> 16 Distance= 17.12 RSSI= -94
+Wed, 04 Dec 2019 23:52:23 18 <=> 17 Distance= 32.25 RSSI= -99
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 19 is below and neighbors are [node1, node2, node3, node4]
+Wed, 04 Dec 2019 23:52:23 19 <=> 1 Distance= 44.72 RSSI= -102
+Wed, 04 Dec 2019 23:52:23 19 <=> 2 Distance= 22.36 RSSI= -96
+Wed, 04 Dec 2019 23:52:23 19 <=> 3 Distance= 39.0 RSSI= -101
+Wed, 04 Dec 2019 23:52:23 19 <=> 4 Distance= 19.85 RSSI= -95
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 20 is below and neighbors are [node21, node22]
+Wed, 04 Dec 2019 23:52:23 20 <=> 21 Distance= 18.68 RSSI= -94
+Wed, 04 Dec 2019 23:52:23 20 <=> 22 Distance= 47.43 RSSI= -103
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 21 is below and neighbors are [node20, node22]
+Wed, 04 Dec 2019 23:52:23 21 <=> 20 Distance= 18.68 RSSI= -94
+Wed, 04 Dec 2019 23:52:23 21 <=> 22 Distance= 40.11 RSSI= -101
+Wed, 04 Dec 2019 23:52:23 Neighbors Table discovery for 22 is below and neighbors are [node20, node21]
+Wed, 04 Dec 2019 23:52:23 22 <=> 20 Distance= 47.43 RSSI= -103
+Wed, 04 Dec 2019 23:52:23 22 <=> 21 Distance= 40.11 RSSI= -101
+Wed, 04 Dec 2019 23:52:23 +++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ 
+
+Wed, 04 Dec 2019 23:52:23 neighbors of BS:[node1, node7, node9, node15, node22]
+Wed, 04 Dec 2019 23:52:23 for 1 neighbors are [node2, node3, node4, node19]
+Wed, 04 Dec 2019 23:52:23 for 7 neighbors are [node5, node6, node8]
+Wed, 04 Dec 2019 23:52:23 for 9 neighbors are [node10, node11]
+Wed, 04 Dec 2019 23:52:23 for 15 neighbors are [node12, node13, node14, node16, node17, node18]
+Wed, 04 Dec 2019 23:52:23 for 22 neighbors are [node20, node21]
+Wed, 04 Dec 2019 23:52:23 cluster formation
+
+Wed, 04 Dec 2019 23:52:23 at 5 BS is running
+Wed, 04 Dec 2019 23:52:23 at 10 BS is running
+Wed, 04 Dec 2019 23:52:23 
+ New Superframe is began CSMA at 10 number 1
+
+Wed, 04 Dec 2019 23:52:23 
+at 10 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:23 
+at 11 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:23 
+at 12 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:23 
+at 13 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:23 
+
+at 14 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:23 at 15 BS is calculating
+Wed, 04 Dec 2019 23:52:23 
+
+at 15 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:23 
+
+at 16 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:23 at env:16 from node 3 light: 226 temperature: 17 TDMA-based 2 to [1] with pos 30 11 and parent [node1] and energy 1706.403125
+Wed, 04 Dec 2019 23:52:23 at env:16 from node 11 light: 147 temperature: 17 TDMA-based 2 to [9] with pos 280 220 and parent [node9] and energy 1840.996875
+Wed, 04 Dec 2019 23:52:23 at env:16 from node 13 light: 104 temperature: 29 TDMA-based 2 to [15] with pos 10 160 and parent [node16] and energy 1541.696875
+Wed, 04 Dec 2019 23:52:23 
+
+at 17 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:23 at env:17 from node 8 light: 129 temperature: 25 TDMA-based 3 to [5] with pos 241 47 and parent [node7] and energy 1827.309375
+Wed, 04 Dec 2019 23:52:23 
+
+at 18 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:23 at env:18 from node 5 light: 122 temperature: 18 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 1794.9156249999999
+Wed, 04 Dec 2019 23:52:23 at env:18 from node 19 light: 166 temperature: 22 TDMA-based 4 to [1] with pos 30 50 and parent [node1] and energy 1705.2625
+Wed, 04 Dec 2019 23:52:23 
+
+at 19 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:23 at 20 BS is calculating
+Wed, 04 Dec 2019 23:52:23 
+
+at 20 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:23 at env:20 from node 18 light: 235 temperature: 18 TDMA-based 6 to [15] with pos 31 172 and parent [node16] and energy 1568.3875000000003
+Wed, 04 Dec 2019 23:52:23 at env:21 from node 18 light: 134 temperature: 26 TDMA-based 6 to [15] with pos 31 172 and parent [node16] and energy 1516.9375000000002
+Wed, 04 Dec 2019 23:52:23 at 21 inactive network
+Wed, 04 Dec 2019 23:52:23 at 22 inactive network
+Wed, 04 Dec 2019 23:52:23 at 23 inactive network
+Wed, 04 Dec 2019 23:52:23 at 24 inactive network
+Wed, 04 Dec 2019 23:52:23 BS is proccessing 25
+Wed, 04 Dec 2019 23:52:23 at 25 inactive network
+Wed, 04 Dec 2019 23:52:23 at 26 inactive network
+Wed, 04 Dec 2019 23:52:23 at 27 inactive network
+Wed, 04 Dec 2019 23:52:23 at 28 inactive network
+Wed, 04 Dec 2019 23:52:23 at 29 inactive network
+Wed, 04 Dec 2019 23:52:23 BS is proccessing 30
+Wed, 04 Dec 2019 23:52:23 at 30 inactive network
+Wed, 04 Dec 2019 23:52:23 at 31 inactive network
+Wed, 04 Dec 2019 23:52:23 at 32 inactive network
+Wed, 04 Dec 2019 23:52:23 at 33 inactive network
+Wed, 04 Dec 2019 23:52:23 at 34 inactive network
+Wed, 04 Dec 2019 23:52:23 BS is proccessing 35
+Wed, 04 Dec 2019 23:52:23    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:23  <<< random for node 2 is 0.0015392720935504256 with energy 1730.8125 and average cluster energy 23929.716816875
+Wed, 04 Dec 2019 23:52:23    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:23    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:23    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:23  <<< random for node 17 is 0.01822817372360197 with energy 1543.0656250000006 and average cluster energy 35671.59728673334
+Wed, 04 Dec 2019 23:52:23    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:23  <<< random for node 20 is 0.012128996162260708 with energy 1839.4 and average cluster energy 13363.5224935
+Wed, 04 Dec 2019 23:52:23 new ch is node 20  with parent [node22] and last ch was 22 with []
+Wed, 04 Dec 2019 23:52:23 node 22 becomes simple node (change) and parent is [] and TDMA 3
+Wed, 04 Dec 2019 23:52:23 node 20 becomes CH (change)and parent is [] and TDMA 1
+Wed, 04 Dec 2019 23:52:23 node 20 is CH in 22  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 04 Dec 2019 23:52:23 
+ New Superframe is began CSMA at 35 number 2
+
+Wed, 04 Dec 2019 23:52:23 
+at 35 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:23 
+at 36 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:23 
+at 37 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:23 
+at 38 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:23 
+
+at 39 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:23 at 40 BS is calculating
+Wed, 04 Dec 2019 23:52:23    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:23  <<< random for node 2 is 0.13734803754139968 with energy 1730.8125 and average cluster energy 23929.716816875
+Wed, 04 Dec 2019 23:52:23  <<< random for node 3 is 0.12505950027890544 with energy 1657.840625 and average cluster energy 23929.716816875
+Wed, 04 Dec 2019 23:52:23 new ch is node 3  with parent [node1] and last ch was 1 with []
+Wed, 04 Dec 2019 23:52:23 node 1 becomes simple node (change) and parent is [] and TDMA 5
+Wed, 04 Dec 2019 23:52:23 node 3 becomes CH (change)and parent is [] and TDMA 2
+Wed, 04 Dec 2019 23:52:23 node 3 is CH in 1  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 04 Dec 2019 23:52:23    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:23    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:23    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:23  <<< random for node 14 is 0.03737951516000837 with energy 1562.4562500000004 and average cluster energy 35671.59728673334
+Wed, 04 Dec 2019 23:52:23    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:23  <<< random for node 21 is 0.021399144123548597 with energy 1817.728125 and average cluster energy 14272.386556000001
+Wed, 04 Dec 2019 23:52:23 new ch is node 21  with parent [node20] and last ch was 20 with []
+Wed, 04 Dec 2019 23:52:23 node 20 becomes simple node (change) and parent is [] and TDMA 1
+Wed, 04 Dec 2019 23:52:23 node 21 becomes CH (change)and parent is [] and TDMA 2
+Wed, 04 Dec 2019 23:52:23 node 21 is CH in 22  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 04 Dec 2019 23:52:23 
+
+at 40 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:23 at env:40 from node 2 light: 158 temperature: 18 TDMA-based 1 to [1] with pos 10 60 and parent [node3] and energy 1709.596875
+Wed, 04 Dec 2019 23:52:23 at env:40 from node 6 light: 257 temperature: 26 TDMA-based 1 to [5] with pos 270 50 and parent [node7] and energy 1754.309375
+Wed, 04 Dec 2019 23:52:23 at env:40 from node 10 light: 191 temperature: 23 TDMA-based 1 to [9] with pos 290 200 and parent [node9] and energy 1863.8093750000003
+Wed, 04 Dec 2019 23:52:23 at env:40 from node 12 light: 287 temperature: 17 TDMA-based 1 to [15] with pos 20 200 and parent [node16] and energy 1568.3875000000003
+Wed, 04 Dec 2019 23:52:23 at env:40 from node 20 light: 150 temperature: 19 TDMA-based 1 to 22 with pos 130 20 and parent [node21] and energy 1817.728125
+Wed, 04 Dec 2019 23:52:23 
+
+at 41 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:23 at env:41 from node 11 light: 275 temperature: 23 TDMA-based 2 to [9] with pos 280 220 and parent [node9] and energy 1791.6468750000001
+Wed, 04 Dec 2019 23:52:23 at env:41 from node 13 light: 289 temperature: 23 TDMA-based 2 to [15] with pos 10 160 and parent [node16] and energy 1492.0843750000001
+Wed, 04 Dec 2019 23:52:23 
+
+at 42 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:23 at env:42 from node 4 light: 188 temperature: 19 TDMA-based 3 to [1] with pos 43 35 and parent [node3] and energy 1710.0531250000001
+Wed, 04 Dec 2019 23:52:23 at env:42 from node 8 light: 116 temperature: 22 TDMA-based 3 to [5] with pos 241 47 and parent [node7] and energy 1778.484375
+Wed, 04 Dec 2019 23:52:23 at env:42 from node 14 light: 159 temperature: 29 TDMA-based 3 to [15] with pos 13 183 and parent [node16] and energy 1562.4562500000004
+Wed, 04 Dec 2019 23:52:23 at env:42 from node 22 light: 223 temperature: 20 TDMA-based 3 to [] with pos 175 5 and parent [node21] and energy 1794.2312499999998
+Wed, 04 Dec 2019 23:52:23 
+
+at 43 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:23 at env:43 from node 5 light: 177 temperature: 20 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 1744.5156249999998
+Wed, 04 Dec 2019 23:52:23 at env:43 from node 19 light: 202 temperature: 30 TDMA-based 4 to [1] with pos 30 50 and parent [node3] and energy 1635.746875
+Wed, 04 Dec 2019 23:52:23 
+
+at 44 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:23 at env:44 from node 1 light: 139 temperature: 29 TDMA-based 5 to [] with pos 10 10 and parent [node3] and energy 1599.1843750000005
+Wed, 04 Dec 2019 23:52:23 at env:44 from node 17 light: 185 temperature: 20 TDMA-based 5 to [15] with pos 35 204 and parent [node16] and energy 1543.0656250000006
+Wed, 04 Dec 2019 23:52:23 at 45 BS is calculating
+Wed, 04 Dec 2019 23:52:23    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:23  <<< random for node 19 is 0.05485906646200611 with energy 1586.921875 and average cluster energy 27971.147285625
+Wed, 04 Dec 2019 23:52:23 new ch is node 19  with parent [node3] and last ch was 3 with []
+Wed, 04 Dec 2019 23:52:24 node 3 becomes simple node (change) and parent is [] and TDMA 2
+Wed, 04 Dec 2019 23:52:24 node 19 becomes CH (change)and parent is [] and TDMA 4
+Wed, 04 Dec 2019 23:52:24 node 19 is CH in 1  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 21 is 0.05724264038564442 with energy 1731.040625 and average cluster energy 17818.625618500002
+Wed, 04 Dec 2019 23:52:24 
+
+at 45 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:24 at env:45 from node 18 light: 214 temperature: 20 TDMA-based 6 to [15] with pos 31 172 and parent [node16] and energy 1465.4875000000002
+Wed, 04 Dec 2019 23:52:24 at env:46 from node 18 light: 228 temperature: 24 TDMA-based 6 to [15] with pos 31 172 and parent [node16] and energy 1414.0375000000001
+Wed, 04 Dec 2019 23:52:24 at 46 inactive network
+Wed, 04 Dec 2019 23:52:24 at 47 inactive network
+Wed, 04 Dec 2019 23:52:24 at 48 inactive network
+Wed, 04 Dec 2019 23:52:24 at 49 inactive network
+Wed, 04 Dec 2019 23:52:24 BS is proccessing 50
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 7 is 0.05527791366563528 with energy 1535.9937499999996 and average cluster energy 23193.820138333336
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 10 is 0.007601691541848199 with energy 1812.6218750000003 and average cluster energy 15118.366939500002
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24 at 50 inactive network
+Wed, 04 Dec 2019 23:52:24 at 51 inactive network
+Wed, 04 Dec 2019 23:52:24 at 52 inactive network
+Wed, 04 Dec 2019 23:52:24 at 53 inactive network
+Wed, 04 Dec 2019 23:52:24 at 54 inactive network
+Wed, 04 Dec 2019 23:52:24 BS is proccessing 55
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 2 is 0.05046105106368182 with energy 1639.590625 and average cluster energy 29156.694941875
+Wed, 04 Dec 2019 23:52:24  <<< random for node 4 is 0.016809667211509782 with energy 1638.2093750000001 and average cluster energy 29156.694941875
+Wed, 04 Dec 2019 23:52:24  <<< random for node 19 is 0.14126451317215571 with energy 1586.921875 and average cluster energy 29156.694941875
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 12 is 0.19419223326339097 with energy 1516.9375000000002 and average cluster energy 38403.436870066675
+Wed, 04 Dec 2019 23:52:24  <<< random for node 13 is 0.07551789518885343 with energy 1440.634375 and average cluster energy 38403.436870066675
+Wed, 04 Dec 2019 23:52:24  <<< random for node 17 is 0.19058772112466194 with energy 1491.6156250000006 and average cluster energy 38403.436870066675
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24 at 55 inactive network
+Wed, 04 Dec 2019 23:52:24 at 56 inactive network
+Wed, 04 Dec 2019 23:52:24 at 57 inactive network
+Wed, 04 Dec 2019 23:52:24 at 58 inactive network
+Wed, 04 Dec 2019 23:52:24 at 59 inactive network
+Wed, 04 Dec 2019 23:52:24 BS is proccessing 60
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 6 is 0.17772900612457465 with energy 1705.484375 and average cluster energy 23193.820138333336
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 10 is 0.1744831958988191 with energy 1812.6218750000003 and average cluster energy 15118.366939500002
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 13 is 0.1935338770132209 with energy 1440.634375 and average cluster energy 38403.436870066675
+Wed, 04 Dec 2019 23:52:24  <<< random for node 18 is 0.13672758697743193 with energy 1362.5875 and average cluster energy 38403.436870066675
+Wed, 04 Dec 2019 23:52:24 new ch is node 18  with parent [node16] and last ch was 16 with []
+Wed, 04 Dec 2019 23:52:24 node 16 becomes simple node (change) and parent is [] and TDMA 4
+Wed, 04 Dec 2019 23:52:24 node 18 becomes CH (change)and parent is [] and TDMA 6
+Wed, 04 Dec 2019 23:52:24 node 18 is CH in 15  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24 
+ New Superframe is began CSMA at 60 number 3
+
+Wed, 04 Dec 2019 23:52:24 
+at 60 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:24 
+at 61 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:24 
+at 62 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:24 
+at 63 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:24 
+
+at 64 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:24 at 65 BS is calculating
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 3 is 0.06982452080011325 with energy 1464.390625 and average cluster energy 29156.694941875
+Wed, 04 Dec 2019 23:52:24 new ch is node 3  with parent [node19] and last ch was 19 with []
+Wed, 04 Dec 2019 23:52:24 node 19 becomes simple node (change) and parent is [] and TDMA 4
+Wed, 04 Dec 2019 23:52:24 node 3 becomes CH (change)and parent is [] and TDMA 2
+Wed, 04 Dec 2019 23:52:24 node 3 is CH in 1  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 8 is 0.20699800277063019 with energy 1729.659375 and average cluster energy 23193.820138333336
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 14 is 0.17252554693441402 with energy 1489.3343750000004 and average cluster energy 39091.2452034
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24 
+
+at 65 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:24 
+
+at 66 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:24 at env:66 from node 11 light: 127 temperature: 23 TDMA-based 2 to [9] with pos 280 220 and parent [node9] and energy 1740.4593750000001
+Wed, 04 Dec 2019 23:52:24 at env:66 from node 13 light: 233 temperature: 17 TDMA-based 2 to [15] with pos 10 160 and parent [node18] and energy 1440.634375
+Wed, 04 Dec 2019 23:52:24 
+
+at 67 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:24 at env:67 from node 8 light: 236 temperature: 25 TDMA-based 3 to [5] with pos 241 47 and parent [node7] and energy 1729.659375
+Wed, 04 Dec 2019 23:52:24 
+
+at 68 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:24 at env:68 from node 5 light: 106 temperature: 30 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 1694.1156249999997
+Wed, 04 Dec 2019 23:52:24 at env:68 from node 16 light: 111 temperature: 18 TDMA-based 4 to 15 with pos 29 189 and parent [node18] and energy 1142.25
+Wed, 04 Dec 2019 23:52:24 at env:68 from node 19 light: 118 temperature: 18 TDMA-based 4 to 1 with pos 30 50 and parent [node3] and energy 1565.70625
+Wed, 04 Dec 2019 23:52:24 
+
+at 69 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:24 at env:69 from node 1 light: 263 temperature: 24 TDMA-based 5 to [] with pos 10 10 and parent [node3] and energy 1506.3875000000005
+Wed, 04 Dec 2019 23:52:24 at 70 BS is calculating
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 2 is 0.10410109183976202 with energy 1618.375 and average cluster energy 31436.809785625002
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 13 is 0.1537375945498789 with energy 1391.0218750000001 and average cluster energy 39938.3170784
+Wed, 04 Dec 2019 23:52:24  <<< random for node 18 is 0.021092068092229965 with energy 1277.7250000000001 and average cluster energy 39938.3170784
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24 
+
+at 70 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:24 at 71 inactive network
+Wed, 04 Dec 2019 23:52:24 at 72 inactive network
+Wed, 04 Dec 2019 23:52:24 at 73 inactive network
+Wed, 04 Dec 2019 23:52:24 at 74 inactive network
+Wed, 04 Dec 2019 23:52:24 BS is proccessing 75
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 2 is 0.07305734740082992 with energy 1618.375 and average cluster energy 31436.809785625002
+Wed, 04 Dec 2019 23:52:24  <<< random for node 3 is 0.19489873337393637 with energy 1379.0718749999999 and average cluster energy 31436.809785625002
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 21 is 0.12447690739830819 with energy 1731.040625 and average cluster energy 17818.625618500002
+Wed, 04 Dec 2019 23:52:24 at 75 inactive network
+Wed, 04 Dec 2019 23:52:24 at 76 inactive network
+Wed, 04 Dec 2019 23:52:24 at 77 inactive network
+Wed, 04 Dec 2019 23:52:24 at 78 inactive network
+Wed, 04 Dec 2019 23:52:24 at 79 inactive network
+Wed, 04 Dec 2019 23:52:24 BS is proccessing 80
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 4 is 0.1503487824761841 with energy 1616.99375 and average cluster energy 31436.809785625002
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 11 is 0.1867683661004731 with energy 1689.2718750000001 and average cluster energy 15963.002877
+Wed, 04 Dec 2019 23:52:24 new ch is node 11  with parent [node9] and last ch was 9 with []
+Wed, 04 Dec 2019 23:52:24 node 9 becomes simple node (change) and parent is [] and TDMA 3
+Wed, 04 Dec 2019 23:52:24 node 11 becomes CH (change)and parent is [] and TDMA 2
+Wed, 04 Dec 2019 23:52:24 node 11 is CH in 9  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 17 is 0.19560290672218317 with energy 1491.6156250000006 and average cluster energy 39938.3170784
+Wed, 04 Dec 2019 23:52:24  <<< random for node 18 is 0.0474952330612598 with energy 1277.7250000000001 and average cluster energy 39938.3170784
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 21 is 0.10702937695296388 with energy 1731.040625 and average cluster energy 17818.625618500002
+Wed, 04 Dec 2019 23:52:24 at 80 inactive network
+Wed, 04 Dec 2019 23:52:24 at 81 inactive network
+Wed, 04 Dec 2019 23:52:24 at 82 inactive network
+Wed, 04 Dec 2019 23:52:24 at 83 inactive network
+Wed, 04 Dec 2019 23:52:24 at 84 inactive network
+Wed, 04 Dec 2019 23:52:24 BS is proccessing 85
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 2 is 0.2156861355774431 with energy 1618.375 and average cluster energy 31436.809785625002
+Wed, 04 Dec 2019 23:52:24  <<< random for node 4 is 0.015205039443976553 with energy 1616.99375 and average cluster energy 31436.809785625002
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 6 is 0.03422162552647434 with energy 1705.484375 and average cluster energy 24735.206596666667
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24 
+ New Superframe is began CSMA at 85 number 4
+
+Wed, 04 Dec 2019 23:52:24 
+at 85 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:24 
+at 86 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:24 
+at 87 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:24 
+at 88 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:24 
+
+at 89 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:24 at 90 BS is calculating
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 6 is 0.10449620013000027 with energy 1705.484375 and average cluster energy 24735.206596666667
+Wed, 04 Dec 2019 23:52:24  <<< random for node 8 is 0.15006691740864386 with energy 1680.834375 and average cluster energy 24735.206596666667
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 14 is 0.19662164578929842 with energy 1489.3343750000004 and average cluster energy 39938.3170784
+Wed, 04 Dec 2019 23:52:24  <<< random for node 18 is 0.1854899247838876 with energy 1277.7250000000001 and average cluster energy 39938.3170784
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24 
+
+at 90 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:24 at env:90 from node 2 light: 247 temperature: 30 TDMA-based 1 to [1] with pos 10 60 and parent [node3] and energy 1618.375
+Wed, 04 Dec 2019 23:52:24 at env:90 from node 6 light: 212 temperature: 19 TDMA-based 1 to [5] with pos 270 50 and parent [node7] and energy 1705.484375
+Wed, 04 Dec 2019 23:52:24 at env:90 from node 10 light: 192 temperature: 23 TDMA-based 1 to [9] with pos 290 200 and parent [node11] and energy 1791.1781250000004
+Wed, 04 Dec 2019 23:52:24 at env:90 from node 12 light: 144 temperature: 20 TDMA-based 1 to [15] with pos 20 200 and parent [node18] and energy 1495.2656250000002
+Wed, 04 Dec 2019 23:52:24 at env:90 from node 20 light: 268 temperature: 19 TDMA-based 1 to 22 with pos 130 20 and parent [node21] and energy 1768.640625
+Wed, 04 Dec 2019 23:52:24 
+
+at 91 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:24 at env:91 from node 13 light: 128 temperature: 27 TDMA-based 2 to [15] with pos 10 160 and parent [node18] and energy 1391.0218750000001
+Wed, 04 Dec 2019 23:52:24 
+
+at 92 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:24 at env:92 from node 4 light: 128 temperature: 18 TDMA-based 3 to [1] with pos 43 35 and parent [node3] and energy 1616.99375
+Wed, 04 Dec 2019 23:52:24 at env:92 from node 8 light: 120 temperature: 19 TDMA-based 3 to [5] with pos 241 47 and parent [node7] and energy 1680.834375
+Wed, 04 Dec 2019 23:52:24 at env:92 from node 9 light: 297 temperature: 20 TDMA-based 3 to [] with pos 260 200 and parent [node11] and energy 1642.0718749999999
+Wed, 04 Dec 2019 23:52:24 at env:92 from node 14 light: 270 temperature: 24 TDMA-based 3 to [15] with pos 13 183 and parent [node18] and energy 1489.3343750000004
+Wed, 04 Dec 2019 23:52:24 at env:92 from node 22 light: 240 temperature: 17 TDMA-based 3 to [] with pos 175 5 and parent [node21] and energy 1743.56875
+Wed, 04 Dec 2019 23:52:24 
+
+at 93 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:24 at env:93 from node 5 light: 233 temperature: 26 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 1643.7156249999996
+Wed, 04 Dec 2019 23:52:24 at env:93 from node 16 light: 174 temperature: 22 TDMA-based 4 to 15 with pos 29 189 and parent [node18] and energy 1094.2125
+Wed, 04 Dec 2019 23:52:24 at env:93 from node 19 light: 217 temperature: 30 TDMA-based 4 to 1 with pos 30 50 and parent [node3] and energy 1517.66875
+Wed, 04 Dec 2019 23:52:24 
+
+at 94 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:24 at env:94 from node 1 light: 263 temperature: 19 TDMA-based 5 to [] with pos 10 10 and parent [node3] and energy 1456.2500000000005
+Wed, 04 Dec 2019 23:52:24 at env:94 from node 17 light: 269 temperature: 27 TDMA-based 5 to [15] with pos 35 204 and parent [node18] and energy 1491.6156250000006
+Wed, 04 Dec 2019 23:52:24 at 95 BS is calculating
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 3 is 0.09394546648907531 with energy 1251.7781249999998 and average cluster energy 33560.097285625
+Wed, 04 Dec 2019 23:52:24  <<< random for node 4 is 0.1728373710554253 with energy 1568.6937500000001 and average cluster energy 33560.097285625
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 7 is 0.057224327039418266 with energy 1321.0999999999995 and average cluster energy 27195.87326333333
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 12 is 0.20351037267497862 with energy 1443.8156250000002 and average cluster energy 42009.99103673334
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 21 is 0.05575686053007933 with energy 1688.8375 and average cluster energy 19522.820931000002
+Wed, 04 Dec 2019 23:52:24 
+
+at 95 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:24 at 96 inactive network
+Wed, 04 Dec 2019 23:52:24 at 97 inactive network
+Wed, 04 Dec 2019 23:52:24 at 98 inactive network
+Wed, 04 Dec 2019 23:52:24 at 99 inactive network
+Wed, 04 Dec 2019 23:52:24 BS is proccessing 100
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 12 is 0.16128592307524225 with energy 1443.8156250000002 and average cluster energy 42009.99103673334
+Wed, 04 Dec 2019 23:52:24  <<< random for node 14 is 0.00610569927812743 with energy 1437.8843750000003 and average cluster energy 42009.99103673334
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24 at 100 inactive network
+Wed, 04 Dec 2019 23:52:24 at 101 inactive network
+Wed, 04 Dec 2019 23:52:24 at 102 inactive network
+Wed, 04 Dec 2019 23:52:24 at 103 inactive network
+Wed, 04 Dec 2019 23:52:24 at 104 inactive network
+Wed, 04 Dec 2019 23:52:24 BS is proccessing 105
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 4 is 0.13256795299892177 with energy 1568.6937500000001 and average cluster energy 33560.097285625
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 6 is 0.03920443104689575 with energy 1656.659375 and average cluster energy 27195.87326333333
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 12 is 0.17388311605609397 with energy 1443.8156250000002 and average cluster energy 42009.99103673334
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24 at 105 inactive network
+Wed, 04 Dec 2019 23:52:24 at 106 inactive network
+Wed, 04 Dec 2019 23:52:24 at 107 inactive network
+Wed, 04 Dec 2019 23:52:24 at 108 inactive network
+Wed, 04 Dec 2019 23:52:24 at 109 inactive network
+Wed, 04 Dec 2019 23:52:24 BS is proccessing 110
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 4 is 0.07053393106144834 with energy 1568.6937500000001 and average cluster energy 33560.097285625
+Wed, 04 Dec 2019 23:52:24  <<< random for node 19 is 0.111939818388339 with energy 1469.6312500000001 and average cluster energy 33560.097285625
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 8 is 0.03155819818034833 with energy 1632.0093749999999 and average cluster energy 27195.87326333333
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 11 is 0.0016234167260021914 with energy 1600.3031250000001 and average cluster energy 19350.887252
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 16 is 0.10335356590384792 with energy 1045.65 and average cluster energy 42009.99103673334
+Wed, 04 Dec 2019 23:52:24 new ch is node 16  with parent [node18] and last ch was 18 with []
+Wed, 04 Dec 2019 23:52:24 node 18 becomes simple node (change) and parent is [] and TDMA 6
+Wed, 04 Dec 2019 23:52:24 node 16 becomes CH (change)and parent is [] and TDMA 4
+Wed, 04 Dec 2019 23:52:24 node 16 is CH in 15  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24 
+ New Superframe is began CSMA at 110 number 5
+
+Wed, 04 Dec 2019 23:52:24 
+at 110 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:24 
+at 111 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:24 
+at 112 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:24 
+at 113 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:24 
+
+at 114 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:24 at 115 BS is calculating
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 6 is 0.026029771635296295 with energy 1656.659375 and average cluster energy 27195.87326333333
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 12 is 0.16256328919760898 with energy 1422.1437500000002 and average cluster energy 43111.61603673334
+Wed, 04 Dec 2019 23:52:24  <<< random for node 14 is 0.10200784301819266 with energy 1416.2125000000003 and average cluster energy 43111.61603673334
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 20 is 0.10497960828964625 with energy 1719.553125 and average cluster energy 19522.820931000002
+Wed, 04 Dec 2019 23:52:24  <<< random for node 21 is 0.06460294013152434 with energy 1688.8375 and average cluster energy 19522.820931000002
+Wed, 04 Dec 2019 23:52:24 
+
+at 115 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:24 
+
+at 116 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:24 at env:116 from node 13 light: 264 temperature: 22 TDMA-based 2 to [15] with pos 10 160 and parent [node16] and energy 1317.9
+Wed, 04 Dec 2019 23:52:24 
+
+at 117 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:24 at env:117 from node 8 light: 255 temperature: 26 TDMA-based 3 to [5] with pos 241 47 and parent [node7] and energy 1632.0093749999999
+Wed, 04 Dec 2019 23:52:24 at env:117 from node 9 light: 100 temperature: 19 TDMA-based 3 to [] with pos 260 200 and parent [node11] and energy 1591.146875
+Wed, 04 Dec 2019 23:52:24 
+
+at 118 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:24 at env:118 from node 5 light: 251 temperature: 24 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 1593.3156249999995
+Wed, 04 Dec 2019 23:52:24 at env:118 from node 19 light: 140 temperature: 26 TDMA-based 4 to 1 with pos 30 50 and parent [node3] and energy 1469.6312500000001
+Wed, 04 Dec 2019 23:52:24 
+
+at 119 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:24 at env:119 from node 1 light: 283 temperature: 22 TDMA-based 5 to [] with pos 10 10 and parent [node3] and energy 1406.1125000000004
+Wed, 04 Dec 2019 23:52:24 at 120 BS is calculating
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 6 is 0.16048222577523552 with energy 1656.659375 and average cluster energy 28559.454513333334
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 17 is 0.08090296056693036 with energy 1418.4937500000005 and average cluster energy 43490.413432566675
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24 
+
+at 120 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:24 at env:120 from node 18 light: 181 temperature: 28 TDMA-based 6 to 15 with pos 31 172 and parent [node16] and energy 1034.9999999999998
+Wed, 04 Dec 2019 23:52:24 at env:121 from node 18 light: 139 temperature: 28 TDMA-based 6 to 15 with pos 31 172 and parent [node16] and energy 983.8124999999998
+Wed, 04 Dec 2019 23:52:24 at 121 inactive network
+Wed, 04 Dec 2019 23:52:24 at 122 inactive network
+Wed, 04 Dec 2019 23:52:24 at 123 inactive network
+Wed, 04 Dec 2019 23:52:24 at 124 inactive network
+Wed, 04 Dec 2019 23:52:24 BS is proccessing 125
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 2 is 0.05663168478560954 with energy 1570.6 and average cluster energy 34507.944160625004
+Wed, 04 Dec 2019 23:52:24  <<< random for node 4 is 0.10515132191228604 with energy 1568.6937500000001 and average cluster energy 34507.944160625004
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 13 is 0.04980657612928563 with energy 1269.3375 and average cluster energy 44122.141557566676
+Wed, 04 Dec 2019 23:52:24  <<< random for node 16 is 0.1895413026993008 with energy 914.7062500000001 and average cluster energy 44122.141557566676
+Wed, 04 Dec 2019 23:52:24  <<< random for node 18 is 0.216038373763347 with energy 932.8874999999998 and average cluster energy 44122.141557566676
+Wed, 04 Dec 2019 23:52:24 new ch is node 18  with parent [node16] and last ch was 16 with []
+Wed, 04 Dec 2019 23:52:24 node 16 becomes simple node (change) and parent is [] and TDMA 4
+Wed, 04 Dec 2019 23:52:24 node 18 becomes CH (change)and parent is [] and TDMA 6
+Wed, 04 Dec 2019 23:52:24 node 18 is CH in 15  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 20 is 0.020849147653337785 with energy 1719.553125 and average cluster energy 19522.820931000002
+Wed, 04 Dec 2019 23:52:24  <<< random for node 21 is 0.20790112906375136 with energy 1688.8375 and average cluster energy 19522.820931000002
+Wed, 04 Dec 2019 23:52:24 at 125 inactive network
+Wed, 04 Dec 2019 23:52:24 at 126 inactive network
+Wed, 04 Dec 2019 23:52:24 at 127 inactive network
+Wed, 04 Dec 2019 23:52:24 at 128 inactive network
+Wed, 04 Dec 2019 23:52:24 at 129 inactive network
+Wed, 04 Dec 2019 23:52:24 BS is proccessing 130
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 10 is 0.049142002937503815 with energy 1739.7281250000003 and average cluster energy 20129.5950645
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 21 is 0.11055476452775137 with energy 1688.8375 and average cluster energy 19522.820931000002
+Wed, 04 Dec 2019 23:52:24 at 130 inactive network
+Wed, 04 Dec 2019 23:52:24 at 131 inactive network
+Wed, 04 Dec 2019 23:52:24 at 132 inactive network
+Wed, 04 Dec 2019 23:52:24 at 133 inactive network
+Wed, 04 Dec 2019 23:52:24 at 134 inactive network
+Wed, 04 Dec 2019 23:52:24 BS is proccessing 135
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24  <<< random for node 11 is 0.15793982923076932 with energy 1557.415625 and average cluster energy 20129.5950645
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:24 Alert is created
+Wed, 04 Dec 2019 23:52:31 
+ New Superframe is began CSMA at 136 number 6
+
+Wed, 04 Dec 2019 23:52:31 
+at 136 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:31 
+at 137 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:31 
+at 138 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:31 
+at 139 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:31 at 140 BS is running
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 20 is 0.005335417994379643 with energy 1719.553125 and average cluster energy 19522.820931000002
+Wed, 04 Dec 2019 23:52:31  <<< random for node 21 is 0.18300916682068236 with energy 1688.8375 and average cluster energy 19522.820931000002
+Wed, 04 Dec 2019 23:52:31 
+
+at 140 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:31 
+
+at 141 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:31 at env:141 from node 2 light: 213 temperature: 26 TDMA-based 1 to [1] with pos 10 60 and parent [node3] and energy 1570.6
+Wed, 04 Dec 2019 23:52:31 6 Alert at env:141 from node 6 light: 517 temperature: 229 TDMA-based 1 to [5] with pos 270 50 and parent [node7] and energy 1656.659375
+Wed, 04 Dec 2019 23:52:31 at env:141 from node 10 light: 141 temperature: 24 TDMA-based 1 to [9] with pos 290 200 and parent [node11] and energy 1739.7281250000003
+Wed, 04 Dec 2019 23:52:31 at env:141 from node 12 light: 127 temperature: 29 TDMA-based 1 to [15] with pos 20 200 and parent [node18] and energy 1400.4718750000002
+Wed, 04 Dec 2019 23:52:31 at env:141 from node 20 light: 240 temperature: 25 TDMA-based 1 to 22 with pos 130 20 and parent [node21] and energy 1719.553125
+Wed, 04 Dec 2019 23:52:31 
+
+at 142 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:31 at env:142 from node 13 light: 172 temperature: 23 TDMA-based 2 to [15] with pos 10 160 and parent [node18] and energy 1247.665625
+Wed, 04 Dec 2019 23:52:31 
+
+at 143 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:31 at env:143 from node 4 light: 186 temperature: 21 TDMA-based 3 to [1] with pos 43 35 and parent [node3] and energy 1568.6937500000001
+Wed, 04 Dec 2019 23:52:31 8 Alert at env:143 from node 8 light: 460 temperature: 217 TDMA-based 3 to [5] with pos 241 47 and parent [node7] and energy 1581.084375
+Wed, 04 Dec 2019 23:52:31 at env:143 from node 9 light: 216 temperature: 22 TDMA-based 3 to [] with pos 260 200 and parent [node11] and energy 1541.796875
+Wed, 04 Dec 2019 23:52:31 at env:143 from node 14 light: 295 temperature: 22 TDMA-based 3 to [15] with pos 13 183 and parent [node18] and energy 1394.5406250000003
+Wed, 04 Dec 2019 23:52:31 at env:143 from node 22 light: 221 temperature: 27 TDMA-based 3 to [] with pos 175 5 and parent [node21] and energy 1695.00625
+Wed, 04 Dec 2019 23:52:31 
+
+at 144 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:31 5 Alert at env:144 from node 5 light: 458 temperature: 230 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 1542.6531249999996
+Wed, 04 Dec 2019 23:52:31 at env:144 from node 16 light: 208 temperature: 29 TDMA-based 4 to 15 with pos 29 189 and parent [node18] and energy 893.0343750000001
+Wed, 04 Dec 2019 23:52:31 at env:144 from node 19 light: 272 temperature: 22 TDMA-based 4 to 1 with pos 30 50 and parent [node3] and energy 1419.23125
+Wed, 04 Dec 2019 23:52:31 at 145 BS is calculating
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 21 is 0.0975140830004394 with energy 1603.51875 and average cluster energy 21982.656868500002
+Wed, 04 Dec 2019 23:52:31 
+
+at 145 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:31 at env:145 from node 1 light: 160 temperature: 21 TDMA-based 5 to [] with pos 10 10 and parent [node3] and energy 1355.7125000000003
+Wed, 04 Dec 2019 23:52:31 at env:145 from node 17 light: 204 temperature: 24 TDMA-based 5 to [15] with pos 35 204 and parent [node18] and energy 1396.8218750000005
+Wed, 04 Dec 2019 23:52:31 
+
+at 146 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:31 at 147 inactive network
+Wed, 04 Dec 2019 23:52:31 at 148 inactive network
+Wed, 04 Dec 2019 23:52:31 at 149 inactive network
+Wed, 04 Dec 2019 23:52:31 BS is proccessing 150
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 3 is 0.05843862976630354 with energy 993.0843749999999 and average cluster energy 36668.885566875004
+Wed, 04 Dec 2019 23:52:31  <<< random for node 19 is 0.12683603859914605 with energy 1370.93125 and average cluster energy 36668.885566875004
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31 at 150 inactive network
+Wed, 04 Dec 2019 23:52:31 at 151 inactive network
+Wed, 04 Dec 2019 23:52:31 at 152 inactive network
+Wed, 04 Dec 2019 23:52:31 at 153 inactive network
+Wed, 04 Dec 2019 23:52:31 at 154 inactive network
+Wed, 04 Dec 2019 23:52:31 BS is proccessing 155
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 12 is 0.15411256035515686 with energy 1348.759375 and average cluster energy 46856.67749506668
+Wed, 04 Dec 2019 23:52:31  <<< random for node 13 is 0.03318428135629681 with energy 1197.790625 and average cluster energy 46856.67749506668
+Wed, 04 Dec 2019 23:52:31  <<< random for node 14 is 0.19075890398573347 with energy 1342.8281250000002 and average cluster energy 46856.67749506668
+Wed, 04 Dec 2019 23:52:31  <<< random for node 17 is 0.21659063091375208 with energy 1345.1093750000005 and average cluster energy 46856.67749506668
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31 at 155 inactive network
+Wed, 04 Dec 2019 23:52:31 at 156 inactive network
+Wed, 04 Dec 2019 23:52:31 at 157 inactive network
+Wed, 04 Dec 2019 23:52:31 at 158 inactive network
+Wed, 04 Dec 2019 23:52:31 at 159 inactive network
+Wed, 04 Dec 2019 23:52:31 BS is proccessing 160
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 10 is 0.006413219617027122 with energy 1688.0156250000002 and average cluster energy 22464.634127
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31 at 160 inactive network
+Wed, 04 Dec 2019 23:52:31 
+ New Superframe is began CSMA at 161 number 7
+
+Wed, 04 Dec 2019 23:52:31 
+at 161 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:31 
+at 162 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:31 
+at 163 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:31 
+at 164 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:31 at 165 BS is running
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 12 is 0.16238288371880183 with energy 1348.759375 and average cluster energy 46856.67749506668
+Wed, 04 Dec 2019 23:52:31  <<< random for node 14 is 0.014965103603303276 with energy 1342.8281250000002 and average cluster energy 46856.67749506668
+Wed, 04 Dec 2019 23:52:31  <<< random for node 18 is 0.03443635584716087 with energy 710.4656249999999 and average cluster energy 46856.67749506668
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31 
+
+at 165 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:31 
+
+at 166 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:31 
+
+at 167 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:31 at env:167 from node 13 light: 130 temperature: 23 TDMA-based 2 to [15] with pos 10 160 and parent [node18] and energy 1197.790625
+Wed, 04 Dec 2019 23:52:31 
+
+at 168 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:31 8 Alert at env:168 from node 8 light: 454 temperature: 228 TDMA-based 3 to [5] with pos 241 47 and parent [node7] and energy 1529.6343749999999
+Wed, 04 Dec 2019 23:52:31 at env:168 from node 9 light: 278 temperature: 20 TDMA-based 3 to [] with pos 260 200 and parent [node11] and energy 1492.446875
+Wed, 04 Dec 2019 23:52:31 
+
+at 169 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:31 5 Alert at env:169 from node 5 light: 468 temperature: 230 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 1489.6281249999995
+Wed, 04 Dec 2019 23:52:31 at env:169 from node 16 light: 176 temperature: 29 TDMA-based 4 to 15 with pos 29 189 and parent [node18] and energy 842.1093750000001
+Wed, 04 Dec 2019 23:52:31 at env:169 from node 19 light: 217 temperature: 21 TDMA-based 4 to 1 with pos 30 50 and parent [node3] and energy 1370.93125
+Wed, 04 Dec 2019 23:52:31 at 170 BS is calculating
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 6 is 0.007367839567303247 with energy 1605.209375 and average cluster energy 31924.75868
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 13 is 0.13603456035212813 with energy 1147.915625 and average cluster energy 47394.858745066675
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31 
+
+at 170 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:31 at env:170 from node 1 light: 193 temperature: 23 TDMA-based 5 to [] with pos 10 10 and parent [node3] and energy 1305.3125000000002
+Wed, 04 Dec 2019 23:52:31 
+
+at 171 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:31 at 172 inactive network
+Wed, 04 Dec 2019 23:52:31 at 173 inactive network
+Wed, 04 Dec 2019 23:52:31 at 174 inactive network
+Wed, 04 Dec 2019 23:52:31 BS is proccessing 175
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 7 is 0.06166662848217963 with energy 1004.9187499999994 and average cluster energy 31924.75868
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 12 is 0.19748364804721108 with energy 1348.759375 and average cluster energy 47394.858745066675
+Wed, 04 Dec 2019 23:52:31  <<< random for node 14 is 0.026904210766572567 with energy 1342.8281250000002 and average cluster energy 47394.858745066675
+Wed, 04 Dec 2019 23:52:31  <<< random for node 16 is 0.02471650331896602 with energy 791.1843750000002 and average cluster energy 47394.858745066675
+Wed, 04 Dec 2019 23:52:31 new ch is node 16  with parent [node18] and last ch was 18 with []
+Wed, 04 Dec 2019 23:52:31 node 18 becomes simple node (change) and parent is [] and TDMA 6
+Wed, 04 Dec 2019 23:52:31 node 16 becomes CH (change)and parent is [] and TDMA 4
+Wed, 04 Dec 2019 23:52:31 node 16 is CH in 15  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31 at 175 inactive network
+Wed, 04 Dec 2019 23:52:31 at 176 inactive network
+Wed, 04 Dec 2019 23:52:31 at 177 inactive network
+Wed, 04 Dec 2019 23:52:31 at 178 inactive network
+Wed, 04 Dec 2019 23:52:31 at 179 inactive network
+Wed, 04 Dec 2019 23:52:31 BS is proccessing 180
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 2 is 0.08730660553504932 with energy 1523.0874999999999 and average cluster energy 37464.148066875
+Wed, 04 Dec 2019 23:52:31  <<< random for node 19 is 0.10982272908234736 with energy 1322.6312500000001 and average cluster energy 37464.148066875
+Wed, 04 Dec 2019 23:52:31 new ch is node 19  with parent [node3] and last ch was 3 with []
+Wed, 04 Dec 2019 23:52:31 node 3 becomes simple node (change) and parent is [] and TDMA 2
+Wed, 04 Dec 2019 23:52:31 node 19 becomes CH (change)and parent is [] and TDMA 4
+Wed, 04 Dec 2019 23:52:31 node 19 is CH in 1  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 8 is 0.03393379691756215 with energy 1476.346875 and average cluster energy 31924.75868
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 20 is 0.08093232055290156 with energy 1670.203125 and average cluster energy 21982.656868500002
+Wed, 04 Dec 2019 23:52:31 at 180 inactive network
+Wed, 04 Dec 2019 23:52:31 at 181 inactive network
+Wed, 04 Dec 2019 23:52:31 at 182 inactive network
+Wed, 04 Dec 2019 23:52:31 at 183 inactive network
+Wed, 04 Dec 2019 23:52:31 at 184 inactive network
+Wed, 04 Dec 2019 23:52:31 BS is proccessing 185
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 3 is 0.2070055536708496 with energy 885.8656249999999 and average cluster energy 38059.761348125
+Wed, 04 Dec 2019 23:52:31 new ch is node 3  with parent [node19] and last ch was 19 with []
+Wed, 04 Dec 2019 23:52:31 node 19 becomes simple node (change) and parent is [] and TDMA 4
+Wed, 04 Dec 2019 23:52:31 node 3 becomes CH (change)and parent is [] and TDMA 2
+Wed, 04 Dec 2019 23:52:31 node 3 is CH in 1  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 8 is 0.07733550562223457 with energy 1476.346875 and average cluster energy 31924.75868
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 17 is 0.0007899183370512208 with energy 1323.4375000000005 and average cluster energy 48244.51291173335
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 20 is 0.16091198559014286 with energy 1670.203125 and average cluster energy 21982.656868500002
+Wed, 04 Dec 2019 23:52:31 at 185 inactive network
+Wed, 04 Dec 2019 23:52:31 
+ New Superframe is began CSMA at 186 number 8
+
+Wed, 04 Dec 2019 23:52:31 
+at 186 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:31 
+at 187 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:31 
+at 188 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:31 
+at 189 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:31 at 190 BS is running
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 8 is 0.15716308116067867 with energy 1476.346875 and average cluster energy 31924.75868
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 11 is 0.08111857250568377 with energy 1426.7 and average cluster energy 23177.984127000003
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 13 is 0.19624275560835147 with energy 1126.24375 and average cluster energy 48244.51291173335
+Wed, 04 Dec 2019 23:52:31  <<< random for node 16 is 0.149033356973725 with energy 791.1843750000002 and average cluster energy 48244.51291173335
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31 
+
+at 190 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:31 
+
+at 191 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:31 at env:191 from node 2 light: 209 temperature: 30 TDMA-based 1 to [1] with pos 10 60 and parent [node3] and energy 1501.8718749999998
+Wed, 04 Dec 2019 23:52:31 6 Alert at env:191 from node 6 light: 589 temperature: 217 TDMA-based 1 to [5] with pos 270 50 and parent [node7] and energy 1605.209375
+Wed, 04 Dec 2019 23:52:31 at env:191 from node 10 light: 158 temperature: 28 TDMA-based 1 to [9] with pos 290 200 and parent [node11] and energy 1688.0156250000002
+Wed, 04 Dec 2019 23:52:31 at env:191 from node 12 light: 291 temperature: 20 TDMA-based 1 to [15] with pos 20 200 and parent [node16] and energy 1327.0875
+Wed, 04 Dec 2019 23:52:31 at env:191 from node 20 light: 300 temperature: 29 TDMA-based 1 to 22 with pos 130 20 and parent [node21] and energy 1670.203125
+Wed, 04 Dec 2019 23:52:31 
+
+at 192 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:31 at env:192 from node 13 light: 281 temperature: 26 TDMA-based 2 to [15] with pos 10 160 and parent [node16] and energy 1126.24375
+Wed, 04 Dec 2019 23:52:31 
+
+at 193 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:31 at env:193 from node 4 light: 142 temperature: 23 TDMA-based 3 to [1] with pos 43 35 and parent [node3] and energy 1475.3718750000003
+Wed, 04 Dec 2019 23:52:31 8 Alert at env:193 from node 8 light: 499 temperature: 228 TDMA-based 3 to [5] with pos 241 47 and parent [node7] and energy 1476.346875
+Wed, 04 Dec 2019 23:52:31 at env:193 from node 9 light: 201 temperature: 24 TDMA-based 3 to [] with pos 260 200 and parent [node11] and energy 1443.0968750000002
+Wed, 04 Dec 2019 23:52:31 at env:193 from node 14 light: 122 temperature: 17 TDMA-based 3 to [15] with pos 13 183 and parent [node16] and energy 1321.1562500000002
+Wed, 04 Dec 2019 23:52:31 at env:193 from node 22 light: 108 temperature: 28 TDMA-based 3 to [] with pos 175 5 and parent [node21] and energy 1646.1812499999999
+Wed, 04 Dec 2019 23:52:31 
+
+at 194 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:31 5 Alert at env:194 from node 5 light: 410 temperature: 226 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 1436.6031249999994
+Wed, 04 Dec 2019 23:52:31 at env:194 from node 19 light: 190 temperature: 26 TDMA-based 4 to 1 with pos 30 50 and parent [node3] and energy 1301.415625
+Wed, 04 Dec 2019 23:52:31 at 195 BS is calculating
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 4 is 0.0914309561279788 with energy 1424.7093750000004 and average cluster energy 40760.432441875
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 7 is 0.17718308554998763 with energy 869.4124999999995 and average cluster energy 33832.68159666667
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 18 is 0.00645717873522611 with energy 622.8656249999999 and average cluster energy 49200.76812006668
+Wed, 04 Dec 2019 23:52:31 new ch is node 18  with parent [node16] and last ch was 16 with []
+Wed, 04 Dec 2019 23:52:31 node 16 becomes simple node (change) and parent is [] and TDMA 4
+Wed, 04 Dec 2019 23:52:31 node 18 becomes CH (change)and parent is [] and TDMA 6
+Wed, 04 Dec 2019 23:52:31 node 18 is CH in 15  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 20 is 0.02974055593840863 with energy 1620.853125 and average cluster energy 24331.586556000002
+Wed, 04 Dec 2019 23:52:31 
+
+at 195 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:31 at env:195 from node 1 light: 186 temperature: 17 TDMA-based 5 to [] with pos 10 10 and parent [node3] and energy 1212.2531250000002
+Wed, 04 Dec 2019 23:52:31 at env:195 from node 17 light: 191 temperature: 17 TDMA-based 5 to [15] with pos 35 204 and parent [node18] and energy 1301.7656250000005
+Wed, 04 Dec 2019 23:52:31 
+
+at 196 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:31 at 197 inactive network
+Wed, 04 Dec 2019 23:52:31 at 198 inactive network
+Wed, 04 Dec 2019 23:52:31 at 199 inactive network
+Wed, 04 Dec 2019 23:52:31 BS is proccessing 200
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 3 is 0.07214009271019384 with energy 711.8062499999999 and average cluster energy 40938.384004374995
+Wed, 04 Dec 2019 23:52:31  <<< random for node 4 is 0.03289293970362561 with energy 1424.7093750000004 and average cluster energy 40938.384004374995
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 11 is 0.14636644756404626 with energy 1337.275 and average cluster energy 25355.652877
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31 at 200 inactive network
+Wed, 04 Dec 2019 23:52:31 at 201 inactive network
+Wed, 04 Dec 2019 23:52:31 at 202 inactive network
+Wed, 04 Dec 2019 23:52:31 at 203 inactive network
+Wed, 04 Dec 2019 23:52:31 at 204 inactive network
+Wed, 04 Dec 2019 23:52:31 BS is proccessing 205
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 13 is 0.01632977716648476 with energy 1076.6312500000001 and average cluster energy 50246.12645340001
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31 at 205 inactive network
+Wed, 04 Dec 2019 23:52:31 at 206 inactive network
+Wed, 04 Dec 2019 23:52:31 at 207 inactive network
+Wed, 04 Dec 2019 23:52:31 at 208 inactive network
+Wed, 04 Dec 2019 23:52:31 at 209 inactive network
+Wed, 04 Dec 2019 23:52:31 BS is proccessing 210
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 2 is 0.011277405374350402 with energy 1451.209375 and average cluster energy 40938.384004374995
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 8 is 0.02411485659543966 with energy 1424.896875 and average cluster energy 33832.68159666667
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 10 is 0.21587203855405268 with energy 1636.3031250000001 and average cluster energy 25355.652877
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 13 is 0.028868025726803692 with energy 1076.6312500000001 and average cluster energy 50246.12645340001
+Wed, 04 Dec 2019 23:52:31  <<< random for node 17 is 0.004366521054817829 with energy 1250.0531250000004 and average cluster energy 50246.12645340001
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 20 is 0.0242253866112615 with energy 1620.853125 and average cluster energy 24331.586556000002
+Wed, 04 Dec 2019 23:52:31 at 210 inactive network
+Wed, 04 Dec 2019 23:52:31 
+ New Superframe is began CSMA at 211 number 9
+
+Wed, 04 Dec 2019 23:52:31 
+at 211 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:31 
+at 212 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:31 
+at 213 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:31 
+at 214 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:31 at 215 BS is running
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 8 is 0.16543856751641028 with energy 1424.896875 and average cluster energy 33832.68159666667
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 10 is 0.1742607052913413 with energy 1636.3031250000001 and average cluster energy 25355.652877
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 13 is 0.19482056579539886 with energy 1076.6312500000001 and average cluster energy 50246.12645340001
+Wed, 04 Dec 2019 23:52:31  <<< random for node 14 is 0.2008596247925244 with energy 1247.7718750000001 and average cluster energy 50246.12645340001
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31 
+
+at 215 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:31 
+
+at 216 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:31 
+
+at 217 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:31 at env:217 from node 13 light: 151 temperature: 28 TDMA-based 2 to [15] with pos 10 160 and parent [node18] and energy 1076.6312500000001
+Wed, 04 Dec 2019 23:52:31 
+
+at 218 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:31 8 Alert at env:218 from node 8 light: 442 temperature: 223 TDMA-based 3 to [5] with pos 241 47 and parent [node7] and energy 1424.896875
+Wed, 04 Dec 2019 23:52:31 at env:218 from node 9 light: 184 temperature: 24 TDMA-based 3 to [] with pos 260 200 and parent [node11] and energy 1391.9093750000002
+Wed, 04 Dec 2019 23:52:31 
+
+at 219 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:31 5 Alert at env:219 from node 5 light: 437 temperature: 227 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 1383.5781249999993
+Wed, 04 Dec 2019 23:52:31 at env:219 from node 16 light: 147 temperature: 20 TDMA-based 4 to 15 with pos 29 189 and parent [node18] and energy 638.5687500000001
+Wed, 04 Dec 2019 23:52:31 at env:219 from node 19 light: 244 temperature: 28 TDMA-based 4 to 1 with pos 30 50 and parent [node3] and energy 1252.853125
+Wed, 04 Dec 2019 23:52:31 at 220 BS is calculating
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 8 is 0.05145016650276446 with energy 1373.4468749999999 and average cluster energy 34824.936805
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 17 is 0.18591963126646815 with energy 1250.0531250000004 and average cluster energy 50685.17228673335
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31 
+
+at 220 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:31 at env:220 from node 1 light: 292 temperature: 22 TDMA-based 5 to [] with pos 10 10 and parent [node3] and energy 1161.853125
+Wed, 04 Dec 2019 23:52:31 
+
+at 221 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:31 at 222 inactive network
+Wed, 04 Dec 2019 23:52:31 at 223 inactive network
+Wed, 04 Dec 2019 23:52:31 at 224 inactive network
+Wed, 04 Dec 2019 23:52:31 BS is proccessing 225
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 19 is 0.03653108131114435 with energy 1204.290625 and average cluster energy 41563.707441875
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 7 is 0.024841322952154132 with energy 778.6187499999995 and average cluster energy 34824.936805
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 14 is 0.05406779535747486 with energy 1247.7718750000001 and average cluster energy 50685.17228673335
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31 at 225 inactive network
+Wed, 04 Dec 2019 23:52:31 at 226 inactive network
+Wed, 04 Dec 2019 23:52:31 at 227 inactive network
+Wed, 04 Dec 2019 23:52:31 at 228 inactive network
+Wed, 04 Dec 2019 23:52:31 at 229 inactive network
+Wed, 04 Dec 2019 23:52:31 BS is proccessing 230
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 7 is 0.0935594318790961 with energy 778.6187499999995 and average cluster energy 34824.936805
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 11 is 0.00588980135146322 with energy 1292.790625 and average cluster energy 26002.048189500005
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 20 is 0.20490927403570136 with energy 1620.853125 and average cluster energy 24331.586556000002
+Wed, 04 Dec 2019 23:52:31 at 230 inactive network
+Wed, 04 Dec 2019 23:52:31 at 231 inactive network
+Wed, 04 Dec 2019 23:52:31 at 232 inactive network
+Wed, 04 Dec 2019 23:52:31 at 233 inactive network
+Wed, 04 Dec 2019 23:52:31 at 234 inactive network
+Wed, 04 Dec 2019 23:52:31 BS is proccessing 235
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 3 is 0.10373274551259604 with energy 627.3999999999999 and average cluster energy 41563.707441875
+Wed, 04 Dec 2019 23:52:31  <<< random for node 4 is 0.12594484395950967 with energy 1424.7093750000004 and average cluster energy 41563.707441875
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 11 is 0.09219400463006477 with energy 1292.790625 and average cluster energy 26002.048189500005
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 16 is 0.03586978825545961 with energy 587.6437500000002 and average cluster energy 50685.17228673335
+Wed, 04 Dec 2019 23:52:31 new ch is node 16  with parent [node18] and last ch was 18 with []
+Wed, 04 Dec 2019 23:52:31 node 18 becomes simple node (change) and parent is [] and TDMA 6
+Wed, 04 Dec 2019 23:52:31 node 16 becomes CH (change)and parent is [] and TDMA 4
+Wed, 04 Dec 2019 23:52:31 node 16 is CH in 15  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 21 is 0.02952672819161728 with energy 1516.375 and average cluster energy 24331.586556000002
+Wed, 04 Dec 2019 23:52:31 at 235 inactive network
+Wed, 04 Dec 2019 23:52:31 
+ New Superframe is began CSMA at 236 number 10
+
+Wed, 04 Dec 2019 23:52:31 
+at 236 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:31 ##### 10 237
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 2 is 0.20043885937599848 with energy 1451.209375 and average cluster energy 41563.707441875
+Wed, 04 Dec 2019 23:52:31  <<< random for node 3 is 0.15980830573690064 with energy 627.3999999999999 and average cluster energy 41563.707441875
+Wed, 04 Dec 2019 23:52:31 ##### 10 237
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 8 is 0.16888933758562208 with energy 1373.4468749999999 and average cluster energy 35777.928471666666
+Wed, 04 Dec 2019 23:52:31 ##### 10 237
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31 ##### 10 237
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 16 is 0.0695698338289995 with energy 587.6437500000002 and average cluster energy 51545.03530756667
+Wed, 04 Dec 2019 23:52:31 ##### 10 237
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31 
+at 237 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:31 
+at 238 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:31 
+at 239 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:31 at 240 BS is running
+Wed, 04 Dec 2019 23:52:31 
+
+at 240 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:31 
+
+at 241 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:31 at env:241 from node 2 light: 188 temperature: 21 TDMA-based 1 to [1] with pos 10 60 and parent [node3] and energy 1451.209375
+Wed, 04 Dec 2019 23:52:31 6 Alert at env:241 from node 6 light: 516 temperature: 228 TDMA-based 1 to [5] with pos 270 50 and parent [node7] and energy 1553.7593749999999
+Wed, 04 Dec 2019 23:52:31 at env:241 from node 10 light: 122 temperature: 25 TDMA-based 1 to [9] with pos 290 200 and parent [node11] and energy 1636.3031250000001
+Wed, 04 Dec 2019 23:52:31 at env:241 from node 12 light: 188 temperature: 19 TDMA-based 1 to [15] with pos 20 200 and parent [node16] and energy 1234.3937500000002
+Wed, 04 Dec 2019 23:52:31 at env:241 from node 20 light: 229 temperature: 29 TDMA-based 1 to 22 with pos 130 20 and parent [node21] and energy 1620.853125
+Wed, 04 Dec 2019 23:52:31 
+
+at 242 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:31 at env:242 from node 13 light: 224 temperature: 18 TDMA-based 2 to [15] with pos 10 160 and parent [node16] and energy 1003.246875
+Wed, 04 Dec 2019 23:52:31 
+
+at 243 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:31 at env:243 from node 4 light: 102 temperature: 25 TDMA-based 3 to [1] with pos 43 35 and parent [node3] and energy 1424.7093750000004
+Wed, 04 Dec 2019 23:52:31 8 Alert at env:243 from node 8 light: 516 temperature: 230 TDMA-based 3 to [5] with pos 241 47 and parent [node7] and energy 1373.4468749999999
+Wed, 04 Dec 2019 23:52:31 at env:243 from node 9 light: 217 temperature: 27 TDMA-based 3 to [] with pos 260 200 and parent [node11] and energy 1264.0718750000003
+Wed, 04 Dec 2019 23:52:31 at env:243 from node 14 light: 175 temperature: 29 TDMA-based 3 to [15] with pos 13 183 and parent [node16] and energy 1226.1000000000001
+Wed, 04 Dec 2019 23:52:31 at env:243 from node 22 light: 116 temperature: 20 TDMA-based 3 to [] with pos 175 5 and parent [node21] and energy 1467.5062500000001
+Wed, 04 Dec 2019 23:52:31 
+
+at 244 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:31 5 Alert at env:244 from node 5 light: 418 temperature: 226 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 1330.5531249999992
+Wed, 04 Dec 2019 23:52:31 at env:244 from node 19 light: 112 temperature: 22 TDMA-based 4 to 1 with pos 30 50 and parent [node3] and energy 1204.290625
+Wed, 04 Dec 2019 23:52:31 at 245 BS is calculating
+Wed, 04 Dec 2019 23:52:31 
+
+at 245 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:31 at env:245 from node 1 light: 180 temperature: 24 TDMA-based 5 to [] with pos 10 10 and parent [node3] and energy 985.5406250000003
+Wed, 04 Dec 2019 23:52:31 at env:245 from node 17 light: 284 temperature: 28 TDMA-based 5 to [15] with pos 35 204 and parent [node16] and energy 1228.3812500000004
+Wed, 04 Dec 2019 23:52:31 
+
+at 246 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:31 at env:246 from node 18 light: 119 temperature: 19 TDMA-based 6 to 15 with pos 31 172 and parent [node16] and energy 467.05625
+Wed, 04 Dec 2019 23:52:31 at env:247 from node 18 light: 132 temperature: 26 TDMA-based 6 to 15 with pos 31 172 and parent [node16] and energy 418.23125
+Wed, 04 Dec 2019 23:52:31 at 247 inactive network
+Wed, 04 Dec 2019 23:52:31 at 248 inactive network
+Wed, 04 Dec 2019 23:52:31 at 249 inactive network
+Wed, 04 Dec 2019 23:52:31 BS is proccessing 250
+Wed, 04 Dec 2019 23:52:31 at 250 inactive network
+Wed, 04 Dec 2019 23:52:31 at 251 inactive network
+Wed, 04 Dec 2019 23:52:31 at 252 inactive network
+Wed, 04 Dec 2019 23:52:31 at 253 inactive network
+Wed, 04 Dec 2019 23:52:31 at 254 inactive network
+Wed, 04 Dec 2019 23:52:31 BS is proccessing 255
+Wed, 04 Dec 2019 23:52:31 at 255 inactive network
+Wed, 04 Dec 2019 23:52:31 at 256 inactive network
+Wed, 04 Dec 2019 23:52:31 at 257 inactive network
+Wed, 04 Dec 2019 23:52:31 at 258 inactive network
+Wed, 04 Dec 2019 23:52:31 at 259 inactive network
+Wed, 04 Dec 2019 23:52:31 BS is proccessing 260
+Wed, 04 Dec 2019 23:52:31 at 260 inactive network
+Wed, 04 Dec 2019 23:52:31 
+ New Superframe is began CSMA at 261 number 11
+
+Wed, 04 Dec 2019 23:52:31 
+at 261 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:31 
+at 262 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:31 
+at 263 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:31 
+at 264 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:31 at 265 BS is running
+Wed, 04 Dec 2019 23:52:31 
+
+at 265 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:31 
+
+at 266 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:31 
+
+at 267 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:31 at env:267 from node 13 light: 184 temperature: 25 TDMA-based 2 to [15] with pos 10 160 and parent [node16] and energy 953.371875
+Wed, 04 Dec 2019 23:52:31 
+
+at 268 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:31 8 Alert at env:268 from node 8 light: 424 temperature: 217 TDMA-based 3 to [5] with pos 241 47 and parent [node7] and energy 1320.159375
+Wed, 04 Dec 2019 23:52:31 at env:268 from node 9 light: 162 temperature: 25 TDMA-based 3 to [] with pos 260 200 and parent [node11] and energy 1212.8843750000003
+Wed, 04 Dec 2019 23:52:31 
+
+at 269 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:31 5 Alert at env:269 from node 5 light: 580 temperature: 219 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 1277.5281249999991
+Wed, 04 Dec 2019 23:52:31 at env:269 from node 19 light: 261 temperature: 30 TDMA-based 4 to 1 with pos 30 50 and parent [node3] and energy 1155.728125
+Wed, 04 Dec 2019 23:52:31 at 270 BS is calculating
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 4 is 0.05057474005263607 with energy 1374.0468750000005 and average cluster energy 43446.732441875
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31  <<< random for node 7 is 0.03988541538693746 with energy 446.92499999999967 and average cluster energy 38038.22847166667
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:31    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32 
+
+at 270 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:32 at env:270 from node 1 light: 176 temperature: 25 TDMA-based 5 to [] with pos 10 10 and parent [node3] and energy 935.4031250000003
+Wed, 04 Dec 2019 23:52:32 
+
+at 271 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:32 at env:271 from node 18 light: 263 temperature: 17 TDMA-based 6 to 15 with pos 31 172 and parent [node16] and energy 369.40625
+Wed, 04 Dec 2019 23:52:32 at env:272 from node 18 light: 280 temperature: 29 TDMA-based 6 to 15 with pos 31 172 and parent [node16] and energy 320.58125
+Wed, 04 Dec 2019 23:52:32 at 272 inactive network
+Wed, 04 Dec 2019 23:52:32 at 273 inactive network
+Wed, 04 Dec 2019 23:52:32 at 274 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 275
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 3 is 0.167907739214888 with energy 369.3906249999999 and average cluster energy 43539.080098125
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 6 is 0.07609621169224534 with energy 1500.471875 and average cluster energy 38038.22847166667
+Wed, 04 Dec 2019 23:52:32  <<< random for node 7 is 0.06681498308558309 with energy 446.92499999999967 and average cluster energy 38038.22847166667
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 12 is 0.02825338693261714 with energy 1182.68125 and average cluster energy 53225.98062006667
+Wed, 04 Dec 2019 23:52:32  <<< random for node 13 is 0.06690917511814765 with energy 903.7593750000001 and average cluster energy 53225.98062006667
+Wed, 04 Dec 2019 23:52:32  <<< random for node 16 is 0.0731543773687523 with energy 196.63750000000027 and average cluster energy 53225.98062006667
+Wed, 04 Dec 2019 23:52:32  <<< random for node 17 is 0.07508116410395016 with energy 1176.6687500000003 and average cluster energy 53225.98062006667
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32 at 275 inactive network
+Wed, 04 Dec 2019 23:52:32 at 276 inactive network
+Wed, 04 Dec 2019 23:52:32 at 277 inactive network
+Wed, 04 Dec 2019 23:52:32 at 278 inactive network
+Wed, 04 Dec 2019 23:52:32 at 279 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 280
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 6 is 0.20917277867368866 with energy 1500.471875 and average cluster energy 38038.22847166667
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 13 is 0.16144001883277959 with energy 903.7593750000001 and average cluster energy 53225.98062006667
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 20 is 0.20074550822916437 with energy 1571.5031250000002 and average cluster energy 26568.697493500003
+Wed, 04 Dec 2019 23:52:32 at 280 inactive network
+Wed, 04 Dec 2019 23:52:32 at 281 inactive network
+Wed, 04 Dec 2019 23:52:32 at 282 inactive network
+Wed, 04 Dec 2019 23:52:32 at 283 inactive network
+Wed, 04 Dec 2019 23:52:32 at 284 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 285
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 12 is 0.10673521637180738 with energy 1182.68125 and average cluster energy 53225.98062006667
+Wed, 04 Dec 2019 23:52:32  <<< random for node 13 is 0.14877444952306007 with energy 903.7593750000001 and average cluster energy 53225.98062006667
+Wed, 04 Dec 2019 23:52:32  <<< random for node 16 is 0.05437409327179665 with energy 196.63750000000027 and average cluster energy 53225.98062006667
+Wed, 04 Dec 2019 23:52:32  <<< random for node 17 is 0.11415272586448022 with energy 1176.6687500000003 and average cluster energy 53225.98062006667
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32 at 285 inactive network
+Wed, 04 Dec 2019 23:52:32 
+ New Superframe is began CSMA at 286 number 12
+
+Wed, 04 Dec 2019 23:52:32 
+at 286 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:32 
+at 287 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:32 
+at 288 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:32 
+at 289 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:32 at 290 BS is running
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 20 is 0.0562629328664741 with energy 1571.5031250000002 and average cluster energy 26568.697493500003
+Wed, 04 Dec 2019 23:52:32 
+
+at 290 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:32 
+
+at 291 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:32 at env:291 from node 2 light: 184 temperature: 19 TDMA-based 1 to [1] with pos 10 60 and parent [node3] and energy 1402.3843749999999
+Wed, 04 Dec 2019 23:52:32 6 Alert at env:291 from node 6 light: 535 temperature: 222 TDMA-based 1 to [5] with pos 270 50 and parent [node7] and energy 1500.471875
+Wed, 04 Dec 2019 23:52:32 at env:291 from node 10 light: 106 temperature: 21 TDMA-based 1 to [9] with pos 290 200 and parent [node11] and energy 1584.590625
+Wed, 04 Dec 2019 23:52:32 at env:291 from node 12 light: 223 temperature: 26 TDMA-based 1 to [15] with pos 20 200 and parent [node16] and energy 1182.68125
+Wed, 04 Dec 2019 23:52:32 at env:291 from node 20 light: 139 temperature: 19 TDMA-based 1 to 22 with pos 130 20 and parent [node21] and energy 1571.5031250000002
+Wed, 04 Dec 2019 23:52:32 
+
+at 292 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:32 at env:292 from node 13 light: 138 temperature: 26 TDMA-based 2 to [15] with pos 10 160 and parent [node16] and energy 903.7593750000001
+Wed, 04 Dec 2019 23:52:32 
+
+at 293 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:32 at env:293 from node 4 light: 216 temperature: 21 TDMA-based 3 to [1] with pos 43 35 and parent [node3] and energy 1374.0468750000005
+Wed, 04 Dec 2019 23:52:32 8 Alert at env:293 from node 8 light: 572 temperature: 222 TDMA-based 3 to [5] with pos 241 47 and parent [node7] and energy 1268.709375
+Wed, 04 Dec 2019 23:52:32 at env:293 from node 9 light: 124 temperature: 29 TDMA-based 3 to [] with pos 260 200 and parent [node11] and energy 1161.6968750000003
+Wed, 04 Dec 2019 23:52:32 at env:293 from node 14 light: 159 temperature: 26 TDMA-based 3 to [15] with pos 13 183 and parent [node16] and energy 1174.3875
+Wed, 04 Dec 2019 23:52:32 at env:293 from node 22 light: 134 temperature: 28 TDMA-based 3 to [] with pos 175 5 and parent [node21] and energy 1416.5812500000002
+Wed, 04 Dec 2019 23:52:32 
+
+at 294 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:32 5 Alert at env:294 from node 5 light: 403 temperature: 218 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 1224.503124999999
+Wed, 04 Dec 2019 23:52:32 at env:294 from node 19 light: 286 temperature: 18 TDMA-based 4 to 1 with pos 30 50 and parent [node3] and energy 1107.165625
+Wed, 04 Dec 2019 23:52:32 at 295 BS is calculating
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 19 is 0.12482247680912884 with energy 1058.603125 and average cluster energy 44683.964473125
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 6 is 0.13194026792926117 with energy 1449.021875 and average cluster energy 39284.10868
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32 
+
+at 295 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:32 at env:295 from node 1 light: 152 temperature: 23 TDMA-based 5 to [] with pos 10 10 and parent [node3] and energy 885.2656250000002
+Wed, 04 Dec 2019 23:52:32 at env:295 from node 17 light: 104 temperature: 26 TDMA-based 5 to [15] with pos 35 204 and parent [node16] and energy 1176.6687500000003
+Wed, 04 Dec 2019 23:52:32 
+
+at 296 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:32 at env:296 from node 18 light: 269 temperature: 30 TDMA-based 6 to 15 with pos 31 172 and parent [node16] and energy 271.75625
+Wed, 04 Dec 2019 23:52:32 at env:297 from node 18 light: 190 temperature: 22 TDMA-based 6 to 15 with pos 31 172 and parent [node16] and energy 222.93125000000003
+Wed, 04 Dec 2019 23:52:32 at 297 inactive network
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 14 is 0.04389306400705195 with energy 1125.0375000000001 and average cluster energy 54052.97020340001
+Wed, 04 Dec 2019 23:52:32 17 is cluster head
+Wed, 04 Dec 2019 23:52:32 ^^^^^^^^^^node 16 is dead ith energy -21.22187499999969 at env:298^^^^^^^^^^^ 
+
+Wed, 04 Dec 2019 23:52:32 ch is dead ,cluster needs to find another CH 298 31
+
+
+Wed, 04 Dec 2019 23:52:32 17 is cluster head
+Wed, 04 Dec 2019 23:52:32 at 298 inactive network
+Wed, 04 Dec 2019 23:52:32 at 299 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 300
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 4 is 0.10802615033887364 with energy 1323.3843750000005 and average cluster energy 44732.854316875
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 8 is 0.11590962793946791 with energy 1217.2593749999999 and average cluster energy 39284.10868
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 10 is 0.18324135548898424 with energy 1534.715625 and average cluster energy 30460.045064500002
+Wed, 04 Dec 2019 23:52:32  <<< random for node 11 is 0.06322525163509174 with energy 1071.0531250000001 and average cluster energy 30460.045064500002
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 14 is 0.18392593498362353 with energy 1125.0375000000001 and average cluster energy 54052.97020340001
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32 at 300 inactive network
+Wed, 04 Dec 2019 23:52:32 at 301 inactive network
+Wed, 04 Dec 2019 23:52:32 at 302 inactive network
+Wed, 04 Dec 2019 23:52:32 at 303 inactive network
+Wed, 04 Dec 2019 23:52:32 at 304 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 305
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 6 is 0.1429005743203886 with energy 1449.021875 and average cluster energy 39284.10868
+Wed, 04 Dec 2019 23:52:32  <<< random for node 7 is 0.04704474457314911 with energy 311.64687499999974 and average cluster energy 39284.10868
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 10 is 0.04791216279701749 with energy 1534.715625 and average cluster energy 30460.045064500002
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 12 is 0.11285903539245623 with energy 1133.0687500000001 and average cluster energy 54052.97020340001
+Wed, 04 Dec 2019 23:52:32  <<< random for node 13 is 0.08273493991073055 with energy 852.309375 and average cluster energy 54052.97020340001
+Wed, 04 Dec 2019 23:52:32  <<< random for node 14 is 0.20882611238420812 with energy 1125.0375000000001 and average cluster energy 54052.97020340001
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 20 is 0.20268594460731448 with energy 1520.3156250000002 and average cluster energy 28691.474056
+Wed, 04 Dec 2019 23:52:32 at 305 inactive network
+Wed, 04 Dec 2019 23:52:32 at 306 inactive network
+Wed, 04 Dec 2019 23:52:32 at 307 inactive network
+Wed, 04 Dec 2019 23:52:32 at 308 inactive network
+Wed, 04 Dec 2019 23:52:32 at 309 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 310
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 2 is 0.021676850835829153 with energy 1351.721875 and average cluster energy 44732.854316875
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 6 is 0.06326433904812845 with energy 1449.021875 and average cluster energy 39284.10868
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 14 is 0.18966015980728224 with energy 1125.0375000000001 and average cluster energy 54052.97020340001
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 20 is 0.2058451219541575 with energy 1520.3156250000002 and average cluster energy 28691.474056
+Wed, 04 Dec 2019 23:52:32 at 310 inactive network
+Wed, 04 Dec 2019 23:52:32 
+ New Superframe is began CSMA at 311 number 13
+
+Wed, 04 Dec 2019 23:52:32 
+at 311 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:32 
+at 312 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:32 
+at 313 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:32 
+at 314 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:32 at 315 BS is running
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 3 is 0.13223718716502586 with energy 195.5593749999999 and average cluster energy 44732.854316875
+Wed, 04 Dec 2019 23:52:32  <<< random for node 4 is 0.16003871371993916 with energy 1323.3843750000005 and average cluster energy 44732.854316875
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 6 is 0.1755736899712177 with energy 1449.021875 and average cluster energy 39284.10868
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32 
+
+at 315 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:32 
+
+at 316 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:32 
+
+at 317 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:32 at env:317 from node 13 light: 144 temperature: 20 TDMA-based 2 to [15] with pos 10 160 and parent [node17] and energy 852.309375
+Wed, 04 Dec 2019 23:52:32 
+
+at 318 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:32 8 Alert at env:318 from node 8 light: 542 temperature: 219 TDMA-based 3 to [5] with pos 241 47 and parent [node7] and energy 1217.2593749999999
+Wed, 04 Dec 2019 23:52:32 at env:318 from node 9 light: 197 temperature: 18 TDMA-based 3 to [] with pos 260 200 and parent [node11] and energy 1110.5093750000003
+Wed, 04 Dec 2019 23:52:32 
+
+at 319 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:32 5 Alert at env:319 from node 5 light: 588 temperature: 227 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 1171.740624999999
+Wed, 04 Dec 2019 23:52:32 at env:319 from node 19 light: 299 temperature: 22 TDMA-based 4 to 1 with pos 30 50 and parent [node3] and energy 1058.603125
+Wed, 04 Dec 2019 23:52:32 at 320 BS is calculating
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 17 is 0.0881413060208317 with energy 1081.8406250000003 and average cluster energy 54367.059786733334
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 20 is 0.045861653661527946 with energy 1520.3156250000002 and average cluster energy 28691.474056
+Wed, 04 Dec 2019 23:52:32 
+
+at 320 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:32 at env:320 from node 1 light: 160 temperature: 29 TDMA-based 5 to [] with pos 10 10 and parent [node3] and energy 835.1281250000002
+Wed, 04 Dec 2019 23:52:32 
+
+at 321 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:32 at env:321 from node 18 light: 154 temperature: 28 TDMA-based 6 to 15 with pos 31 172 and parent [node17] and energy 171.74375000000003
+Wed, 04 Dec 2019 23:52:32 at env:322 from node 18 light: 151 temperature: 20 TDMA-based 6 to 15 with pos 31 172 and parent [node17] and energy 120.55625000000003
+Wed, 04 Dec 2019 23:52:32 at 322 inactive network
+Wed, 04 Dec 2019 23:52:32 at 323 inactive network
+Wed, 04 Dec 2019 23:52:32 at 324 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 325
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 3 is 0.04696409836353532 with energy 109.7843749999999 and average cluster energy 45051.149629374995
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 8 is 0.19667127593254452 with energy 1163.971875 and average cluster energy 39833.70659666666
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 12 is 0.04158563201570409 with energy 1133.0687500000001 and average cluster energy 54737.085307566675
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32 at 325 inactive network
+Wed, 04 Dec 2019 23:52:32 at 326 inactive network
+Wed, 04 Dec 2019 23:52:32 at 327 inactive network
+Wed, 04 Dec 2019 23:52:32 at 328 inactive network
+Wed, 04 Dec 2019 23:52:32 at 329 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 330
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 10 is 0.18320717509845796 with energy 1534.715625 and average cluster energy 30460.045064500002
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 14 is 0.12972720227149992 with energy 1125.0375000000001 and average cluster energy 54737.085307566675
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 21 is 0.20936834978620456 with energy 1340.4906250000001 and average cluster energy 28691.474056
+Wed, 04 Dec 2019 23:52:32 at 330 inactive network
+Wed, 04 Dec 2019 23:52:32 at 331 inactive network
+Wed, 04 Dec 2019 23:52:32 at 332 inactive network
+Wed, 04 Dec 2019 23:52:32 at 333 inactive network
+Wed, 04 Dec 2019 23:52:32 at 334 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 335
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 13 is 0.16764278868627625 with energy 802.6968750000001 and average cluster energy 54737.085307566675
+Wed, 04 Dec 2019 23:52:32 new ch is node 13  with parent [node17] and last ch was 17 with [node16]
+Wed, 04 Dec 2019 23:52:32 node 17 becomes CH (change)and parent is [node16] and TDMA 5
+Wed, 04 Dec 2019 23:52:32 node 13 becomes CH (change)and parent is [] and TDMA 2
+Wed, 04 Dec 2019 23:52:32 node 13 is CH in 15  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 04 Dec 2019 23:52:32 node 16 becomes simple node (change) and parent is [node13] and TDMA 4
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 21 is 0.07918542371245896 with energy 1340.4906250000001 and average cluster energy 28691.474056
+Wed, 04 Dec 2019 23:52:32 at 335 inactive network
+Wed, 04 Dec 2019 23:52:32 
+ New Superframe is began CSMA at 336 number 14
+
+Wed, 04 Dec 2019 23:52:32 
+at 336 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:32 
+at 337 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:32 
+at 338 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:32 
+at 339 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:32 at 340 BS is running
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 19 is 0.08203818280190744 with energy 1010.0406250000001 and average cluster energy 45051.149629374995
+Wed, 04 Dec 2019 23:52:32 new ch is node 19  with parent [node3] and last ch was 3 with []
+Wed, 04 Dec 2019 23:52:32 node 3 becomes simple node (change) and parent is [] and TDMA 2
+Wed, 04 Dec 2019 23:52:32 node 19 becomes CH (change)and parent is [] and TDMA 4
+Wed, 04 Dec 2019 23:52:32 node 19 is CH in 1  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 6 is 0.08071558589738781 with energy 1449.021875 and average cluster energy 39833.70659666666
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32 
+
+at 340 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:32 
+
+at 341 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:32 at env:341 from node 2 light: 138 temperature: 20 TDMA-based 1 to [1] with pos 10 60 and parent [node19] and energy 1330.278125
+Wed, 04 Dec 2019 23:52:32 6 Alert at env:341 from node 6 light: 423 temperature: 223 TDMA-based 1 to [5] with pos 270 50 and parent [node7] and energy 1449.021875
+Wed, 04 Dec 2019 23:52:32 at env:341 from node 10 light: 114 temperature: 27 TDMA-based 1 to [9] with pos 290 200 and parent [node11] and energy 1534.715625
+Wed, 04 Dec 2019 23:52:32 at env:341 from node 12 light: 287 temperature: 20 TDMA-based 1 to [15] with pos 20 200 and parent [node13] and energy 1111.3968750000001
+Wed, 04 Dec 2019 23:52:32 at env:341 from node 20 light: 142 temperature: 23 TDMA-based 1 to 22 with pos 130 20 and parent [node21] and energy 1520.3156250000002
+Wed, 04 Dec 2019 23:52:32 
+
+at 342 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:32 at env:342 from node 3 light: 219 temperature: 30 TDMA-based 2 to 1 with pos 30 11 and parent [node19] and energy 88.3406249999999
+Wed, 04 Dec 2019 23:52:32 
+
+at 343 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:32 at env:343 from node 4 light: 133 temperature: 20 TDMA-based 3 to [1] with pos 43 35 and parent [node19] and energy 1301.9406250000006
+Wed, 04 Dec 2019 23:52:32 8 Alert at env:343 from node 8 light: 579 temperature: 230 TDMA-based 3 to [5] with pos 241 47 and parent [node7] and energy 1163.971875
+Wed, 04 Dec 2019 23:52:32 at env:343 from node 9 light: 222 temperature: 19 TDMA-based 3 to [] with pos 260 200 and parent [node11] and energy 1059.3218750000003
+Wed, 04 Dec 2019 23:52:32 at env:343 from node 14 light: 232 temperature: 20 TDMA-based 3 to [15] with pos 13 183 and parent [node13] and energy 1103.3656250000001
+Wed, 04 Dec 2019 23:52:32 at env:343 from node 22 light: 148 temperature: 25 TDMA-based 3 to [] with pos 175 5 and parent [node21] and energy 1365.6562500000002
+Wed, 04 Dec 2019 23:52:32 
+
+at 344 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:32 5 Alert at env:344 from node 5 light: 424 temperature: 218 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 1118.978124999999
+Wed, 04 Dec 2019 23:52:32 at 345 BS is calculating
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 19 is 0.15613763636937428 with energy 879.7812500000001 and average cluster energy 47066.757441875
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 6 is 0.10056731006979147 with energy 1397.5718749999999 and average cluster energy 40771.63472166666
+Wed, 04 Dec 2019 23:52:32  <<< random for node 8 is 0.13689591651883015 with energy 1112.521875 and average cluster energy 40771.63472166666
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 12 is 0.13235074219930176 with energy 1059.684375 and average cluster energy 55865.864474233334
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 20 is 0.09058399841752973 with energy 1469.1281250000002 and average cluster energy 30699.916243500003
+Wed, 04 Dec 2019 23:52:32 
+
+at 345 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:32 at env:345 from node 1 light: 299 temperature: 21 TDMA-based 5 to [] with pos 10 10 and parent [node19] and energy 763.5468750000001
+Wed, 04 Dec 2019 23:52:32 at env:345 from node 17 light: 300 temperature: 24 TDMA-based 5 to [15] with pos 35 204 and parent [node13] and energy 971.2000000000003
+Wed, 04 Dec 2019 23:52:32 
+
+at 346 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:32 at env:346 from node 18 light: 183 temperature: 24 TDMA-based 6 to 15 with pos 31 172 and parent [node13] and energy 47.696875000000034
+Wed, 04 Dec 2019 23:52:32 ^^^^^^^^^^node 18 is dead ith energy -3.490624999999966 at env:347^^^^^^^^^^^ 
+
+Wed, 04 Dec 2019 23:52:32 at 347 inactive network
+Wed, 04 Dec 2019 23:52:32 at 348 inactive network
+Wed, 04 Dec 2019 23:52:32 at 349 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 350
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 2 is 0.04855606917647015 with energy 1281.190625 and average cluster energy 47275.752754375004
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 7 is 0.20556921917657256 with energy 128.91874999999973 and average cluster energy 40771.63472166666
+Wed, 04 Dec 2019 23:52:32  <<< random for node 8 is 0.04648101625283951 with energy 1112.521875 and average cluster energy 40771.63472166666
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 14 is 0.027132865662336414 with energy 1051.653125 and average cluster energy 56233.86134923334
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32 at 350 inactive network
+Wed, 04 Dec 2019 23:52:32 at 351 inactive network
+Wed, 04 Dec 2019 23:52:32 at 352 inactive network
+Wed, 04 Dec 2019 23:52:32 at 353 inactive network
+Wed, 04 Dec 2019 23:52:32 at 354 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 355
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 13 is 0.15460747853474288 with energy 623.6187500000002 and average cluster energy 56233.86134923334
+Wed, 04 Dec 2019 23:52:32  <<< random for node 17 is 0.1019732391221213 with energy 919.7500000000002 and average cluster energy 56233.86134923334
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32 at 355 inactive network
+Wed, 04 Dec 2019 23:52:32 at 356 inactive network
+Wed, 04 Dec 2019 23:52:32 at 357 inactive network
+Wed, 04 Dec 2019 23:52:32 at 358 inactive network
+Wed, 04 Dec 2019 23:52:32 at 359 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 360
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 2 is 0.16467022325577574 with energy 1281.190625 and average cluster energy 47275.752754375004
+Wed, 04 Dec 2019 23:52:32  <<< random for node 4 is 0.00034316252444133166 with energy 1251.0156250000007 and average cluster energy 47275.752754375004
+Wed, 04 Dec 2019 23:52:32  <<< random for node 19 is 0.105420715127171 with energy 835.9812500000002 and average cluster energy 47275.752754375004
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32 at 360 inactive network
+Wed, 04 Dec 2019 23:52:32 
+ New Superframe is began CSMA at 361 number 15
+
+Wed, 04 Dec 2019 23:52:32 
+at 361 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:32 
+at 362 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:32 
+at 363 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:32 
+at 364 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:32 at 365 BS is running
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 4 is 0.1848286209951402 with energy 1251.0156250000007 and average cluster energy 47275.752754375004
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 13 is 0.1986804410290356 with energy 623.6187500000002 and average cluster energy 56233.86134923334
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 21 is 0.01945150817839747 with energy 1251.7500000000002 and average cluster energy 30699.916243500003
+Wed, 04 Dec 2019 23:52:32 
+
+at 365 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:32 
+
+at 366 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:32 
+
+at 367 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:32 at env:367 from node 3 light: 206 temperature: 23 TDMA-based 2 to 1 with pos 30 11 and parent [node19] and energy 38.4656249999999
+Wed, 04 Dec 2019 23:52:32 
+
+at 368 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:32 ^^^^^^^^^^node 3 is dead ith energy -11.409375000000097 at env:368^^^^^^^^^^^ 
+
+Wed, 04 Dec 2019 23:52:32 8 Alert at env:368 from node 8 light: 562 temperature: 219 TDMA-based 3 to [5] with pos 241 47 and parent [node7] and energy 1112.521875
+Wed, 04 Dec 2019 23:52:32 at env:368 from node 9 light: 122 temperature: 27 TDMA-based 3 to [] with pos 260 200 and parent [node11] and energy 1008.1343750000003
+Wed, 04 Dec 2019 23:52:32 
+
+at 369 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:32 5 Alert at env:369 from node 5 light: 448 temperature: 226 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 1066.215624999999
+Wed, 04 Dec 2019 23:52:32 at 370 BS is calculating
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 4 is 0.08800076013104752 with energy 1251.0156250000007 and average cluster energy 47471.059785625
+Wed, 04 Dec 2019 23:52:32  <<< random for node 19 is 0.1433110899558807 with energy 792.6375000000002 and average cluster energy 47471.059785625
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 11 is 0.21247364501388233 with energy 938.7406250000001 and average cluster energy 32677.302877000002
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 21 is 0.01441037288788849 with energy 1251.7500000000002 and average cluster energy 30699.916243500003
+Wed, 04 Dec 2019 23:52:32 
+
+at 370 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:32 at env:370 from node 1 light: 269 temperature: 27 TDMA-based 5 to [] with pos 10 10 and parent [node19] and energy 713.1468750000001
+Wed, 04 Dec 2019 23:52:32 
+
+at 371 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:32 at 372 inactive network
+Wed, 04 Dec 2019 23:52:32 at 373 inactive network
+Wed, 04 Dec 2019 23:52:32 at 374 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 375
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 7 is 0.19451976369336232 with energy 38.35312499999973 and average cluster energy 41166.178471666666
+Wed, 04 Dec 2019 23:52:32  <<< random for node 8 is 0.07217477025664809 with energy 1061.0718749999999 and average cluster energy 41166.178471666666
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 12 is 0.1907728680930404 with energy 1059.684375 and average cluster energy 56233.86134923334
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32 at 375 inactive network
+Wed, 04 Dec 2019 23:52:32 at 376 inactive network
+Wed, 04 Dec 2019 23:52:32 at 377 inactive network
+Wed, 04 Dec 2019 23:52:32 at 378 inactive network
+Wed, 04 Dec 2019 23:52:32 at 379 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 380
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 7 is 0.017417371360304856 with energy 38.35312499999973 and average cluster energy 41166.178471666666
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 10 is 0.012695192915269327 with energy 1484.840625 and average cluster energy 32677.302877000002
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 12 is 0.18530389892972554 with energy 1059.684375 and average cluster energy 56233.86134923334
+Wed, 04 Dec 2019 23:52:32  <<< random for node 14 is 0.0812580716688861 with energy 1051.653125 and average cluster energy 56233.86134923334
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 21 is 0.013546779267069597 with energy 1251.7500000000002 and average cluster energy 30699.916243500003
+Wed, 04 Dec 2019 23:52:32 at 380 inactive network
+Wed, 04 Dec 2019 23:52:32 at 381 inactive network
+Wed, 04 Dec 2019 23:52:32 at 382 inactive network
+Wed, 04 Dec 2019 23:52:32 at 383 inactive network
+Wed, 04 Dec 2019 23:52:32 at 384 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 385
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 19 is 0.029197246167207314 with energy 748.8375000000002 and average cluster energy 47658.269160625
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 8 is 0.07968198644690005 with energy 1061.0718749999999 and average cluster energy 41166.178471666666
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 10 is 0.02531488969309359 with energy 1484.840625 and average cluster energy 32677.302877000002
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32 at 385 inactive network
+Wed, 04 Dec 2019 23:52:32 
+ New Superframe is began CSMA at 386 number 16
+
+Wed, 04 Dec 2019 23:52:32 
+at 386 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:32 
+at 387 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:32 
+at 388 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:32 
+at 389 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:32 at 390 BS is running
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 20 is 0.1879487243124227 with energy 1469.1281250000002 and average cluster energy 30699.916243500003
+Wed, 04 Dec 2019 23:52:32 
+
+at 390 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:32 
+
+at 391 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:32 at env:391 from node 2 light: 263 temperature: 25 TDMA-based 1 to [1] with pos 10 60 and parent [node19] and energy 1281.190625
+Wed, 04 Dec 2019 23:52:32 6 Alert at env:391 from node 6 light: 536 temperature: 223 TDMA-based 1 to [5] with pos 270 50 and parent [node7] and energy 1397.5718749999999
+Wed, 04 Dec 2019 23:52:32 ^^^^^^^^^^node 7 is dead ith energy -7.956250000000267 at env:391^^^^^^^^^^^ 
+
+Wed, 04 Dec 2019 23:52:32 ch is dead ,cluster needs to find another CH 391 31
+
+
+Wed, 04 Dec 2019 23:52:32 6 is cluster head
+Wed, 04 Dec 2019 23:52:32 at env:391 from node 10 light: 162 temperature: 20 TDMA-based 1 to [9] with pos 290 200 and parent [node11] and energy 1484.840625
+Wed, 04 Dec 2019 23:52:32 at env:391 from node 12 light: 174 temperature: 23 TDMA-based 1 to [15] with pos 20 200 and parent [node13] and energy 1059.684375
+Wed, 04 Dec 2019 23:52:32 at env:391 from node 20 light: 255 temperature: 25 TDMA-based 1 to 22 with pos 130 20 and parent [node21] and energy 1469.1281250000002
+Wed, 04 Dec 2019 23:52:32 
+
+at 392 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:32 
+
+at 393 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:32 at env:393 from node 4 light: 240 temperature: 21 TDMA-based 3 to [1] with pos 43 35 and parent [node19] and energy 1251.0156250000007
+Wed, 04 Dec 2019 23:52:32 8 Alert at env:393 from node 8 light: 437 temperature: 217 TDMA-based 3 to [5] with pos 241 47 and parent [node6] and energy 1061.0718749999999
+Wed, 04 Dec 2019 23:52:32 at env:393 from node 9 light: 189 temperature: 18 TDMA-based 3 to [] with pos 260 200 and parent [node11] and energy 956.9468750000003
+Wed, 04 Dec 2019 23:52:32 at env:393 from node 14 light: 113 temperature: 22 TDMA-based 3 to [15] with pos 13 183 and parent [node13] and energy 1051.653125
+Wed, 04 Dec 2019 23:52:32 at env:393 from node 22 light: 133 temperature: 18 TDMA-based 3 to [] with pos 175 5 and parent [node21] and energy 1314.7312500000003
+Wed, 04 Dec 2019 23:52:32 
+
+at 394 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:32 5 Alert at env:394 from node 5 light: 589 temperature: 225 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 1013.4531249999989
+Wed, 04 Dec 2019 23:52:32 at 395 BS is calculating
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 4 is 0.1318919773777275 with energy 1200.0906250000007 and average cluster energy 48608.342598125
+Wed, 04 Dec 2019 23:52:32  <<< random for node 19 is 0.055714099758328084 with energy 661.9218750000002 and average cluster energy 48608.342598125
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 10 is 0.07043964153941673 with energy 1434.965625 and average cluster energy 34268.0544395
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 17 is 0.0681302325864852 with energy 919.7500000000002 and average cluster energy 56755.32697423333
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32 
+
+at 395 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:32 at env:395 from node 1 light: 178 temperature: 21 TDMA-based 5 to [] with pos 10 10 and parent [node19] and energy 662.7468750000002
+Wed, 04 Dec 2019 23:52:32 at env:395 from node 17 light: 189 temperature: 21 TDMA-based 5 to [15] with pos 35 204 and parent [node13] and energy 919.7500000000002
+Wed, 04 Dec 2019 23:52:32 
+
+at 396 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:32 at 397 inactive network
+Wed, 04 Dec 2019 23:52:32 at 398 inactive network
+Wed, 04 Dec 2019 23:52:32 at 399 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 400
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 4 is 0.11364698200019707 with energy 1200.0906250000007 and average cluster energy 48762.87306687499
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 10 is 0.06321932412272946 with energy 1434.965625 and average cluster energy 34268.0544395
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 12 is 0.03717124239187741 with energy 1009.809375 and average cluster energy 56982.08009923333
+Wed, 04 Dec 2019 23:52:32  <<< random for node 14 is 0.1074823232526897 with energy 1001.778125 and average cluster energy 56982.08009923333
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 21 is 0.12659956191292054 with energy 1163.0093750000003 and average cluster energy 32594.024056000002
+Wed, 04 Dec 2019 23:52:32 at 400 inactive network
+Wed, 04 Dec 2019 23:52:32 at 401 inactive network
+Wed, 04 Dec 2019 23:52:32 at 402 inactive network
+Wed, 04 Dec 2019 23:52:32 at 403 inactive network
+Wed, 04 Dec 2019 23:52:32 at 404 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 405
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 4 is 0.04186270103004641 with energy 1200.0906250000007 and average cluster energy 48762.87306687499
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 8 is 0.045515341383849606 with energy 1007.7843749999998 and average cluster energy 42362.19513833333
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 11 is 0.13765624507597374 with energy 851.1406250000001 and average cluster energy 34268.0544395
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 21 is 0.1714825255043061 with energy 1163.0093750000003 and average cluster energy 32594.024056000002
+Wed, 04 Dec 2019 23:52:32 at 405 inactive network
+Wed, 04 Dec 2019 23:52:32 at 406 inactive network
+Wed, 04 Dec 2019 23:52:32 at 407 inactive network
+Wed, 04 Dec 2019 23:52:32 at 408 inactive network
+Wed, 04 Dec 2019 23:52:32 at 409 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 410
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 19 is 0.16003755997066993 with energy 618.1218750000003 and average cluster energy 48762.87306687499
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 10 is 0.03659628828182038 with energy 1434.965625 and average cluster energy 34268.0544395
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 21 is 0.06631456800505897 with energy 1163.0093750000003 and average cluster energy 32594.024056000002
+Wed, 04 Dec 2019 23:52:32 at 410 inactive network
+Wed, 04 Dec 2019 23:52:32 
+ New Superframe is began CSMA at 411 number 17
+
+Wed, 04 Dec 2019 23:52:32 
+at 411 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:32 
+at 412 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:32 
+at 413 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:32 
+at 414 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:32 at 415 BS is running
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 6 is 0.12955939624504642 with energy 1297.975 and average cluster energy 42362.19513833333
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32 
+
+at 415 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:32 
+
+at 416 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:32 
+
+at 417 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:32 
+
+at 418 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:32 8 Alert at env:418 from node 8 light: 435 temperature: 228 TDMA-based 3 to [5] with pos 241 47 and parent [node6] and energy 1007.7843749999998
+Wed, 04 Dec 2019 23:52:32 at env:418 from node 9 light: 166 temperature: 28 TDMA-based 3 to [] with pos 260 200 and parent [node11] and energy 906.0218750000004
+Wed, 04 Dec 2019 23:52:32 
+
+at 419 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:32 5 Alert at env:419 from node 5 light: 572 temperature: 217 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 960.4281249999989
+Wed, 04 Dec 2019 23:52:32 at 420 BS is calculating
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 2 is 0.1876859097606126 with energy 1232.1031249999999 and average cluster energy 48762.87306687499
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 13 is 0.14077216026510475 with energy 492.2187500000002 and average cluster energy 56982.08009923333
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32 
+
+at 420 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:32 at env:420 from node 1 light: 205 temperature: 28 TDMA-based 5 to [] with pos 10 10 and parent [node19] and energy 612.3468750000002
+Wed, 04 Dec 2019 23:52:32 
+
+at 421 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:32 at 422 inactive network
+Wed, 04 Dec 2019 23:52:32 at 423 inactive network
+Wed, 04 Dec 2019 23:52:32 at 424 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 425
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 19 is 0.025564004727491763 with energy 574.3218750000003 and average cluster energy 48906.453535625
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 8 is 0.14964194809428655 with energy 954.4968749999998 and average cluster energy 43064.28576333333
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 13 is 0.0033652191867490355 with energy 492.2187500000002 and average cluster energy 56982.08009923333
+Wed, 04 Dec 2019 23:52:32  <<< random for node 17 is 0.136267467241869 with energy 868.3000000000002 and average cluster energy 56982.08009923333
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32 at 425 inactive network
+Wed, 04 Dec 2019 23:52:32 at 426 inactive network
+Wed, 04 Dec 2019 23:52:32 at 427 inactive network
+Wed, 04 Dec 2019 23:52:32 at 428 inactive network
+Wed, 04 Dec 2019 23:52:32 at 429 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 430
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 21 is 0.18987346491007462 with energy 1163.0093750000003 and average cluster energy 32594.024056000002
+Wed, 04 Dec 2019 23:52:32 at 430 inactive network
+Wed, 04 Dec 2019 23:52:32 at 431 inactive network
+Wed, 04 Dec 2019 23:52:32 at 432 inactive network
+Wed, 04 Dec 2019 23:52:32 at 433 inactive network
+Wed, 04 Dec 2019 23:52:32 at 434 inactive network
+Wed, 04 Dec 2019 23:52:32 BS is proccessing 435
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 19 is 0.15982700234126546 with energy 574.3218750000003 and average cluster energy 48906.453535625
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 6 is 0.06501603031387437 with energy 1251.6656249999999 and average cluster energy 43064.28576333333
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 14 is 0.1963773655068637 with energy 1001.778125 and average cluster energy 56982.08009923333
+Wed, 04 Dec 2019 23:52:32  <<< random for node 17 is 0.11958098749127866 with energy 868.3000000000002 and average cluster energy 56982.08009923333
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 20 is 0.07576067832790279 with energy 1417.9406250000002 and average cluster energy 32594.024056000002
+Wed, 04 Dec 2019 23:52:32 at 435 inactive network
+Wed, 04 Dec 2019 23:52:32 
+ New Superframe is began CSMA at 436 number 18
+
+Wed, 04 Dec 2019 23:52:32 
+at 436 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:32 
+at 437 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:32 
+at 438 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:32 
+at 439 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:32 at 440 BS is running
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 2 is 0.20552049792274596 with energy 1232.1031249999999 and average cluster energy 48906.453535625
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 6 is 0.19375155074464923 with energy 1251.6656249999999 and average cluster energy 43064.28576333333
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32  <<< random for node 11 is 0.20251560195640206 with energy 806.8843750000001 and average cluster energy 34671.496627
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:32 
+
+at 440 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:32 
+
+at 441 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:32 at env:441 from node 2 light: 224 temperature: 22 TDMA-based 1 to [1] with pos 10 60 and parent [node19] and energy 1232.1031249999999
+Wed, 04 Dec 2019 23:52:32 6 Alert at env:441 from node 6 light: 528 temperature: 221 TDMA-based 1 to [5] with pos 270 50 and parent [node7] and energy 1251.6656249999999
+Wed, 04 Dec 2019 23:52:32 at env:441 from node 10 light: 179 temperature: 27 TDMA-based 1 to [9] with pos 290 200 and parent [node11] and energy 1434.965625
+Wed, 04 Dec 2019 23:52:32 at env:441 from node 12 light: 120 temperature: 18 TDMA-based 1 to [15] with pos 20 200 and parent [node13] and energy 1009.809375
+Wed, 04 Dec 2019 23:52:32 at env:441 from node 20 light: 151 temperature: 18 TDMA-based 1 to 22 with pos 130 20 and parent [node21] and energy 1417.9406250000002
+Wed, 04 Dec 2019 23:52:32 
+
+at 442 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:32 
+
+at 443 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:32 at env:443 from node 4 light: 252 temperature: 30 TDMA-based 3 to [1] with pos 43 35 and parent [node19] and energy 1200.0906250000007
+Wed, 04 Dec 2019 23:52:32 8 Alert at env:443 from node 8 light: 423 temperature: 226 TDMA-based 3 to [5] with pos 241 47 and parent [node6] and energy 954.4968749999998
+Wed, 04 Dec 2019 23:52:32 at env:443 from node 9 light: 214 temperature: 28 TDMA-based 3 to [] with pos 260 200 and parent [node11] and energy 855.0968750000004
+Wed, 04 Dec 2019 23:52:33 at env:443 from node 14 light: 286 temperature: 24 TDMA-based 3 to [15] with pos 13 183 and parent [node13] and energy 1001.778125
+Wed, 04 Dec 2019 23:52:33 at env:443 from node 22 light: 102 temperature: 24 TDMA-based 3 to [] with pos 175 5 and parent [node21] and energy 1263.8062500000003
+Wed, 04 Dec 2019 23:52:33 
+
+at 444 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:33 5 Alert at env:444 from node 5 light: 451 temperature: 219 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 907.6656249999988
+Wed, 04 Dec 2019 23:52:33 at 445 BS is calculating
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 8 is 0.1631796723022252 with energy 901.4718749999998 and average cluster energy 44035.58368
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 17 is 0.21481708763935625 with energy 868.3000000000002 and average cluster energy 57443.12072423333
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33 
+
+at 445 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:33 at env:445 from node 1 light: 203 temperature: 24 TDMA-based 5 to [] with pos 10 10 and parent [node19] and energy 561.9468750000002
+Wed, 04 Dec 2019 23:52:33 at env:445 from node 17 light: 189 temperature: 26 TDMA-based 5 to [15] with pos 35 204 and parent [node13] and energy 868.3000000000002
+Wed, 04 Dec 2019 23:52:33 
+
+at 446 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:33 at 447 inactive network
+Wed, 04 Dec 2019 23:52:33 at 448 inactive network
+Wed, 04 Dec 2019 23:52:33 at 449 inactive network
+Wed, 04 Dec 2019 23:52:33 BS is proccessing 450
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 2 is 0.17468815695975393 with energy 1181.178125 and average cluster energy 49853.510566875
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 6 is 0.021348713761794036 with energy 1152.296875 and average cluster energy 44035.58368
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33 at 450 inactive network
+Wed, 04 Dec 2019 23:52:33 at 451 inactive network
+Wed, 04 Dec 2019 23:52:33 at 452 inactive network
+Wed, 04 Dec 2019 23:52:33 at 453 inactive network
+Wed, 04 Dec 2019 23:52:33 at 454 inactive network
+Wed, 04 Dec 2019 23:52:33 BS is proccessing 455
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 19 is 0.036398562797696044 with energy 442.00937500000026 and average cluster energy 49853.510566875
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 6 is 0.16665930947722452 with energy 1152.296875 and average cluster energy 44035.58368
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33 at 455 inactive network
+Wed, 04 Dec 2019 23:52:33 at 456 inactive network
+Wed, 04 Dec 2019 23:52:33 at 457 inactive network
+Wed, 04 Dec 2019 23:52:33 at 458 inactive network
+Wed, 04 Dec 2019 23:52:33 at 459 inactive network
+Wed, 04 Dec 2019 23:52:33 BS is proccessing 460
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 4 is 0.1516928922248476 with energy 1149.1656250000008 and average cluster energy 49853.510566875
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 6 is 0.01533749230967918 with energy 1152.296875 and average cluster energy 44035.58368
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 11 is 0.1810106691512552 with energy 719.2843750000001 and average cluster energy 36105.454439500005
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 12 is 0.09958940686325057 with energy 959.934375 and average cluster energy 57639.39884923334
+Wed, 04 Dec 2019 23:52:33  <<< random for node 14 is 0.10079035274397863 with energy 951.903125 and average cluster energy 57639.39884923334
+Wed, 04 Dec 2019 23:52:33  <<< random for node 17 is 0.0719407475169993 with energy 816.8500000000001 and average cluster energy 57639.39884923334
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33 at 460 inactive network
+Wed, 04 Dec 2019 23:52:33 
+ New Superframe is began CSMA at 461 number 19
+
+Wed, 04 Dec 2019 23:52:33 
+at 461 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:33 
+at 462 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:33 
+at 463 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:33 
+at 464 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:33 at 465 BS is running
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 2 is 0.14564487505025203 with energy 1181.178125 and average cluster energy 49853.510566875
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 6 is 0.04776674655433211 with energy 1152.296875 and average cluster energy 44035.58368
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 11 is 0.21062169832058286 with energy 719.2843750000001 and average cluster energy 36105.454439500005
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33 
+
+at 465 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:33 
+
+at 466 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:33 
+
+at 467 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:33 
+
+at 468 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:33 8 Alert at env:468 from node 8 light: 423 temperature: 218 TDMA-based 3 to [5] with pos 241 47 and parent [node6] and energy 901.4718749999998
+Wed, 04 Dec 2019 23:52:33 at env:468 from node 9 light: 185 temperature: 28 TDMA-based 3 to [] with pos 260 200 and parent [node11] and energy 804.1718750000005
+Wed, 04 Dec 2019 23:52:33 
+
+at 469 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:33 5 Alert at env:469 from node 5 light: 407 temperature: 218 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 854.9031249999988
+Wed, 04 Dec 2019 23:52:33 at 470 BS is calculating
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 8 is 0.1133305164230265 with energy 848.4468749999999 and average cluster energy 44607.835763333336
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 12 is 0.1509689748122881 with energy 959.934375 and average cluster energy 57639.39884923334
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33 
+
+at 470 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:33 at env:470 from node 1 light: 120 temperature: 25 TDMA-based 5 to [] with pos 10 10 and parent [node19] and energy 511.5468750000002
+Wed, 04 Dec 2019 23:52:33 
+
+at 471 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:33 at 472 inactive network
+Wed, 04 Dec 2019 23:52:33 at 473 inactive network
+Wed, 04 Dec 2019 23:52:33 at 474 inactive network
+Wed, 04 Dec 2019 23:52:33 BS is proccessing 475
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 6 is 0.1829798197746786 with energy 1106.215625 and average cluster energy 44607.835763333336
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33 at 475 inactive network
+Wed, 04 Dec 2019 23:52:33 at 476 inactive network
+Wed, 04 Dec 2019 23:52:33 at 477 inactive network
+Wed, 04 Dec 2019 23:52:33 at 478 inactive network
+Wed, 04 Dec 2019 23:52:33 at 479 inactive network
+Wed, 04 Dec 2019 23:52:33 BS is proccessing 480
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 2 is 0.0068106513217283116 with energy 1181.178125 and average cluster energy 49953.062910625
+Wed, 04 Dec 2019 23:52:33  <<< random for node 4 is 0.11062283935049044 with energy 1149.1656250000008 and average cluster energy 49953.062910625
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33 at 480 inactive network
+Wed, 04 Dec 2019 23:52:33 at 481 inactive network
+Wed, 04 Dec 2019 23:52:33 at 482 inactive network
+Wed, 04 Dec 2019 23:52:33 at 483 inactive network
+Wed, 04 Dec 2019 23:52:33 at 484 inactive network
+Wed, 04 Dec 2019 23:52:33 BS is proccessing 485
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 10 is 0.2015288346280567 with energy 1385.090625 and average cluster energy 36442.968502
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 13 is 0.14193031558401248 with energy 360.81875000000025 and average cluster energy 57639.39884923334
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 20 is 0.029224440925542106 with energy 1366.7531250000002 and average cluster energy 34373.7974935
+Wed, 04 Dec 2019 23:52:33  <<< random for node 21 is 0.17319131848280367 with energy 1074.2687500000004 and average cluster energy 34373.7974935
+Wed, 04 Dec 2019 23:52:33 at 485 inactive network
+Wed, 04 Dec 2019 23:52:33 
+ New Superframe is began CSMA at 486 number 20
+
+Wed, 04 Dec 2019 23:52:33 
+at 486 CSMA - slot 1
+Wed, 04 Dec 2019 23:52:33 ##### 20 487
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 4 is 0.15304649971555084 with energy 1149.1656250000008 and average cluster energy 49953.062910625
+Wed, 04 Dec 2019 23:52:33 ##### 20 487
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 6 is 0.15117480144065876 with energy 1106.215625 and average cluster energy 44083.57534666667
+Wed, 04 Dec 2019 23:52:33 ##### 20 487
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33 ##### 20 487
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 15 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33  <<< random for node 17 is 0.015374617466938356 with energy 816.8500000000001 and average cluster energy 57639.39884923334
+Wed, 04 Dec 2019 23:52:33 ##### 20 487
+Wed, 04 Dec 2019 23:52:33    
+      Random_Clusterhead_Selection : cluster 22 with prob 0.21739130434782608
+Wed, 04 Dec 2019 23:52:33 
+at 487 CSMA - slot 2
+Wed, 04 Dec 2019 23:52:33 
+at 488 CSMA - slot 3
+Wed, 04 Dec 2019 23:52:33 
+at 489 CSMA - slot 4
+Wed, 04 Dec 2019 23:52:33 at 490 BS is running
+Wed, 04 Dec 2019 23:52:33 
+
+at 490 TDMA - slot 1
+Wed, 04 Dec 2019 23:52:33 
+
+at 491 TDMA - slot 2
+Wed, 04 Dec 2019 23:52:33 at env:491 from node 2 light: 214 temperature: 28 TDMA-based 1 to [1] with pos 10 60 and parent [node19] and energy 1181.178125
+Wed, 04 Dec 2019 23:52:33 6 Alert at env:491 from node 6 light: 405 temperature: 230 TDMA-based 1 to [5] with pos 270 50 and parent [node7] and energy 1106.215625
+Wed, 04 Dec 2019 23:52:33 at env:491 from node 10 light: 245 temperature: 26 TDMA-based 1 to [9] with pos 290 200 and parent [node11] and energy 1385.090625
+Wed, 04 Dec 2019 23:52:33 at env:491 from node 12 light: 184 temperature: 24 TDMA-based 1 to [15] with pos 20 200 and parent [node13] and energy 959.934375
+Wed, 04 Dec 2019 23:52:33 at env:491 from node 20 light: 206 temperature: 24 TDMA-based 1 to 22 with pos 130 20 and parent [node21] and energy 1366.7531250000002
+Wed, 04 Dec 2019 23:52:33 
+
+at 492 TDMA - slot 3
+Wed, 04 Dec 2019 23:52:33 
+
+at 493 TDMA - slot 4
+Wed, 04 Dec 2019 23:52:33 at env:493 from node 4 light: 213 temperature: 24 TDMA-based 3 to [1] with pos 43 35 and parent [node19] and energy 1149.1656250000008
+Wed, 04 Dec 2019 23:52:33 8 Alert at env:493 from node 8 light: 571 temperature: 221 TDMA-based 3 to [5] with pos 241 47 and parent [node6] and energy 848.4468749999999
+Wed, 04 Dec 2019 23:52:33 at env:493 from node 9 light: 200 temperature: 26 TDMA-based 3 to [] with pos 260 200 and parent [node11] and energy 625.4968750000007
+Wed, 04 Dec 2019 23:52:33 at env:493 from node 14 light: 134 temperature: 24 TDMA-based 3 to [15] with pos 13 183 and parent [node13] and energy 951.903125
+Wed, 04 Dec 2019 23:52:33 at env:493 from node 22 light: 254 temperature: 21 TDMA-based 3 to [] with pos 175 5 and parent [node21] and energy 1085.1312500000006
+Wed, 04 Dec 2019 23:52:33 
+
+at 494 TDMA - slot 5
+Wed, 04 Dec 2019 23:52:33 5 Alert at env:494 from node 5 light: 525 temperature: 229 TDMA-based 4 to [] with pos 260 30 and parent [node7] and energy 802.1406249999987
+Wed, 04 Dec 2019 23:52:33 at 495 BS is calculating
+Wed, 04 Dec 2019 23:52:33 
+
+at 495 TDMA - slot 6
+Wed, 04 Dec 2019 23:52:33 at env:495 from node 1 light: 108 temperature: 30 TDMA-based 5 to [] with pos 10 10 and parent [node19] and energy 333.3968750000002
+Wed, 04 Dec 2019 23:52:33 at env:495 from node 17 light: 236 temperature: 24 TDMA-based 5 to [15] with pos 35 204 and parent [node13] and energy 816.8500000000001
+Wed, 04 Dec 2019 23:52:33 
+
+at 496 TDMA - slot 7
+Wed, 04 Dec 2019 23:52:33 at 497 inactive network
+Wed, 04 Dec 2019 23:52:33 at 498 inactive network
+Wed, 04 Dec 2019 23:52:33 at 499 inactive network
+Wed, 04 Dec 2019 23:52:33 =================================Sent packet summery==============================
+Wed, 04 Dec 2019 23:52:33 node 0 sent 58 packes
+Wed, 04 Dec 2019 23:52:33 node 1 sent 68 packes
+Wed, 04 Dec 2019 23:52:33 node 2 sent 42 packes
+Wed, 04 Dec 2019 23:52:33 node 3 sent 79 packes
+Wed, 04 Dec 2019 23:52:33 node 4 sent 41 packes
+Wed, 04 Dec 2019 23:52:33 node 5 sent 43 packes
+Wed, 04 Dec 2019 23:52:33 node 6 sent 37 packes
+Wed, 04 Dec 2019 23:52:33 node 7 sent 79 packes
+Wed, 04 Dec 2019 23:52:33 node 8 sent 41 packes
+Wed, 04 Dec 2019 23:52:33 node 9 sent 49 packes
+Wed, 04 Dec 2019 23:52:33 node 10 sent 24 packes
+Wed, 04 Dec 2019 23:52:33 node 11 sent 44 packes
+Wed, 04 Dec 2019 23:52:33 node 12 sent 57 packes
+Wed, 04 Dec 2019 23:52:33 node 13 sent 78 packes
+Wed, 04 Dec 2019 23:52:33 node 14 sent 55 packes
+Wed, 04 Dec 2019 23:52:33 node 15 sent 62 packes
+Wed, 04 Dec 2019 23:52:33 node 16 sent 102 packes
+Wed, 04 Dec 2019 23:52:33 node 17 sent 59 packes
+Wed, 04 Dec 2019 23:52:33 node 18 sent 96 packes
+Wed, 04 Dec 2019 23:52:33 node 19 sent 71 packes
+Wed, 04 Dec 2019 23:52:33 node 20 sent 27 packes
+Wed, 04 Dec 2019 23:52:33 node 21 sent 36 packes
+Wed, 04 Dec 2019 23:52:33 node 22 sent 37 packes
+Wed, 04 Dec 2019 23:52:33 All packet numbers in outbox the  network is 1285 
+Wed, 04 Dec 2019 23:52:33 =================================Received packet summery==============================
+Wed, 04 Dec 2019 23:52:33 node 0 Received 55 packes
+Wed, 04 Dec 2019 23:52:33 node 1 Received 66 packes
+Wed, 04 Dec 2019 23:52:33 node 2 Received 41 packes
+Wed, 04 Dec 2019 23:52:33 node 3 Received 79 packes
+Wed, 04 Dec 2019 23:52:33 node 4 Received 41 packes
+Wed, 04 Dec 2019 23:52:33 node 5 Received 42 packes
+Wed, 04 Dec 2019 23:52:33 node 6 Received 35 packes
+Wed, 04 Dec 2019 23:52:33 node 7 Received 78 packes
+Wed, 04 Dec 2019 23:52:33 node 8 Received 40 packes
+Wed, 04 Dec 2019 23:52:33 node 9 Received 47 packes
+Wed, 04 Dec 2019 23:52:33 node 10 Received 24 packes
+Wed, 04 Dec 2019 23:52:33 node 11 Received 44 packes
+Wed, 04 Dec 2019 23:52:33 node 12 Received 55 packes
+Wed, 04 Dec 2019 23:52:33 node 13 Received 76 packes
+Wed, 04 Dec 2019 23:52:33 node 14 Received 55 packes
+Wed, 04 Dec 2019 23:52:33 node 15 Received 61 packes
+Wed, 04 Dec 2019 23:52:33 node 16 Received 100 packes
+Wed, 04 Dec 2019 23:52:33 node 17 Received 58 packes
+Wed, 04 Dec 2019 23:52:33 node 18 Received 92 packes
+Wed, 04 Dec 2019 23:52:33 node 19 Received 70 packes
+Wed, 04 Dec 2019 23:52:33 node 20 Received 26 packes
+Wed, 04 Dec 2019 23:52:33 node 21 Received 36 packes
+Wed, 04 Dec 2019 23:52:33 node 22 Received 37 packes
+Wed, 04 Dec 2019 23:52:33 All packet numbers in inbox the network is 1258 
+
+Wed, 04 Dec 2019 23:52:33 27 packets are lost on wireless sensor network
+Wed, 04 Dec 2019 23:52:33 ****************************Begin of introduce network
+Wed, 04 Dec 2019 23:52:33 0  with energy : <Power Type=External, Energy=2000 mJ>  with position 150.0 100.0 ; CH is [] is alive: True with TDMA 0 4
+Wed, 04 Dec 2019 23:52:33 1  with energy : <Power Type=Battery, Energy=282 mJ>  with position 10 10 ; CH is 19 is alive: True with TDMA 5 282.9968750000002 sensor t: 0
+Wed, 04 Dec 2019 23:52:33 2  with energy : <Power Type=Battery, Energy=1132 mJ>  with position 10 60 ; CH is 19 is alive: True with TDMA 1 1132.0906249999998 sensor t: 1
+Wed, 04 Dec 2019 23:52:33 3  with energy : <Power Type=Battery, Energy=-11 mJ>  with position 30 11 ; CH is 19 is alive: False with TDMA 2 -11.409375000000097 sensor t: 0
+Wed, 04 Dec 2019 23:52:33 4  with energy : <Power Type=Battery, Energy=1098 mJ>  with position 43 35 ; CH is 19 is alive: True with TDMA 3 1098.2406250000008 sensor t: 1
+Wed, 04 Dec 2019 23:52:33 5  with energy : <Power Type=Battery, Energy=749 mJ>  with position 260 30 ; CH is 7 is alive: True with TDMA 4 749.3781249999987 sensor t: 0
+Wed, 04 Dec 2019 23:52:33 6  with energy : <Power Type=Battery, Energy=1008 mJ>  with position 270 50 ; CH is 7 is alive: True with TDMA 1 1008.684375 sensor t: 1
+Wed, 04 Dec 2019 23:52:33 7  with energy : <Power Type=Battery, Energy=-456 mJ>  with position 259 72 ; CH is 6 is alive: False with TDMA 2 -456.22187500000024 sensor t: 0
+Wed, 04 Dec 2019 23:52:33 8  with energy : <Power Type=Battery, Energy=795 mJ>  with position 241 47 ; CH is 6 is alive: True with TDMA 3 795.4218749999999 sensor t: 0
+Wed, 04 Dec 2019 23:52:33 9  with energy : <Power Type=Battery, Energy=574 mJ>  with position 260 200 ; CH is 11 is alive: True with TDMA 3 574.5718750000008 sensor t: 0
+Wed, 04 Dec 2019 23:52:33 10  with energy : <Power Type=Battery, Energy=1335 mJ>  with position 290 200 ; CH is 11 is alive: True with TDMA 1 1335.215625 sensor t: 1
+Wed, 04 Dec 2019 23:52:33 11  with energy : <Power Type=Battery, Energy=587 mJ>  with position 280 220 ; CH is [] is alive: True with TDMA 2 587.428125
+Wed, 04 Dec 2019 23:52:33 12  with energy : <Power Type=Battery, Energy=910 mJ>  with position 20 200 ; CH is 13 is alive: True with TDMA 1 910.3218750000001 sensor t: 1
+Wed, 04 Dec 2019 23:52:33 13  with energy : <Power Type=Battery, Energy=229 mJ>  with position 10 160 ; CH is [] is alive: True with TDMA 2 229.8750000000002
+Wed, 04 Dec 2019 23:52:33 14  with energy : <Power Type=Battery, Energy=902 mJ>  with position 13 183 ; CH is 13 is alive: True with TDMA 3 902.2906250000001 sensor t: 1
+Wed, 04 Dec 2019 23:52:33 15  with energy : <Power Type=Battery, Energy=1223 mJ>  with position 50 200 ; CH is 13 is alive: True with TDMA 7 1223.6906250000004 sensor t: 0
+Wed, 04 Dec 2019 23:52:33 16  with energy : <Power Type=Battery, Energy=-42 mJ>  with position 29 189 ; CH is 13 is alive: False with TDMA 4 -42.893749999999685 sensor t: 0
+Wed, 04 Dec 2019 23:52:33 17  with energy : <Power Type=Battery, Energy=765 mJ>  with position 35 204 ; CH is 13 is alive: True with TDMA 5 765.4000000000001 sensor t: 1
+Wed, 04 Dec 2019 23:52:33 18  with energy : <Power Type=Battery, Energy=-3 mJ>  with position 31 172 ; CH is 13 is alive: False with TDMA 6 -3.490624999999966 sensor t: 0
+Wed, 04 Dec 2019 23:52:33 19  with energy : <Power Type=Battery, Energy=267 mJ>  with position 30 50 ; CH is [] is alive: True with TDMA 4 267.49375000000026
+Wed, 04 Dec 2019 23:52:33 20  with energy : <Power Type=Battery, Energy=1315 mJ>  with position 130 20 ; CH is 21 is alive: True with TDMA 1 1315.5656250000002 sensor t: 1
+Wed, 04 Dec 2019 23:52:33 21  with energy : <Power Type=Battery, Energy=985 mJ>  with position 135 2 ; CH is [] is alive: True with TDMA 2 985.5281250000004
+Wed, 04 Dec 2019 23:52:33 22  with energy : <Power Type=Battery, Energy=1034 mJ>  with position 175 5 ; CH is 21 is alive: True with TDMA 3 1034.2062500000006 sensor t: 1
+Wed, 04 Dec 2019 23:52:33 ==============================Clusters===============================
+Wed, 04 Dec 2019 23:52:33 avrage network energy 15202.400000000003
