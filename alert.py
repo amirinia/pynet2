@@ -31,4 +31,4 @@ class Alert():
                         n.temperature += ( config.Alert_increase_temp - dist)
                         print("{0} with temp {1} Distance= {2} ".format(str(n.id) , n.temperature , dist))
         print("+++++++++++++++++++++ Alert Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
-        time.sleep(5)
+        #time.sleep(5)
