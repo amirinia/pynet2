@@ -3,12 +3,13 @@ import numpy as np
 import random
 import optimizationrun
 D = 4
-#df = pd.DataFrame(columns=['pop','energy','duration','lost','dead'])
+df = pd.DataFrame(columns=['pop','energy','duration','lost','dead'])
 
 def function(x):
     op = optimizationrun
     a = op.run(x)
-    #df = df.append(pd.Series([x,a[0],a[1],a[2],a[3]], index=df.columns), ignore_index=True)
+    global df
+    df = df.append(pd.Series([x,a[0],a[1],a[2],a[3]], index=df.columns), ignore_index=True)
 
     return a[0]
 
@@ -19,9 +20,10 @@ De_FIT=[]
 De_VAR=[]
 De_POP=[]
 
+population_num = 100
+iteration = (D * 5000)/population_num
 
-
-def de(fuctuion, mut=0.8, crossp=0.9, popsize=10, its=2):
+def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=20):
         #print("de")
         dimensions = D
         initial = []
@@ -31,20 +33,16 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=10, its=2):
             t2 = random.randint(1,9)
             t3 = random.randint(0, 240 - (t1 +t2))
             b1 = random.choice([0, 1])
-            t = np.concatenate((t1, t2, t3, b1), axis=None)
             pop2.append(t1)
             pop2.append(t2)
             pop2.append(t3)
             pop2.append(b1)
-          
-            #print(pop2)
-            #pop = np.random.randint(low=1,high=10,size=dimensions)
-            #print("pop ",pop)
+
             initial.append(pop2)
         popnp = np.asarray(initial)
         #print((popnp))
 
-        fitness = np.asarray([function(ind,df) for ind in popnp])
+        fitness = np.asarray([function(ind) for ind in popnp])
         #print("fitness list",fitness)
         best_idx = np.argmin(fitness)
         #print("index of best",best_idx)
@@ -86,9 +84,9 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=10, its=2):
                      cross_points[np.random.randint(0, dimensions)] = True
                 trial = np.where(cross_points, mutant, popnp[j])
                  #print("trail",trial)
-                function(trial,df)
+                 
 
-                f=a[0]
+                f = function(trial)
                 if f > fitness[j]:
                      fitness[j] = f 
                      popnp[j] = trial
@@ -103,6 +101,6 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=10, its=2):
 
 
 de(lambda x: function(x) )
-print("list",De_FIT,De_VAR)
-#df.to_csv('report/DE best .csv')
+print("fit ",De_FIT," ide ",De_VAR," ",De_POP)
+df.to_csv('report/DE best .csv')
 

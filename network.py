@@ -339,7 +339,7 @@ class Net():
         print("avrage network energy {0}".format(energy))
 
         # duration
-        duration = config.Duration
+        duration = config.TDMA_duration + config.Duration + config.Inactive_duration
         print("duration ={0} superframe {1} {2} and t1:{3} t2:{4} t3:{5}".format(config.Duration,config.Multiframe_size,config.Multiframe_state,config.TDMA_duration,config.CSMA_duration,config.Inactive_duration))
         
         # packet lost

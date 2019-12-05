@@ -6,7 +6,7 @@ D = 9
 
 def function(x):
     #print(x[0],+x[1],x[0]+x[1])
-    return x[0]+x[1]
+    return x[0]+x[1]+x[2]
 
 """ DE """
 De_FIT=[]
@@ -14,7 +14,7 @@ De_VAR=[]
 De_POP=[]
 
 
-def de(fuctuion, mut=0.8, crossp=0.9, popsize=100, its=10):
+def de(fuctuion, mut=0.8, crossp=0.9, popsize=100, its=50):
         #print("de")
         dimensions = D
         initial = []
@@ -38,6 +38,8 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=100, its=10):
                  a, b, c = popnp[np.random.choice(idxs, 3, replace = False)]
                  #print(a,b,c)
                  mutant = np.clip(a +np.round( mut * (b - c)),0,100)#-1/(2-(1/(i+1))), 1/(2-(1/(i+1))))
+                 mutant = mutant.astype(int) # convert to int
+
                  #print("mutant",mutant)
                  cross_points = np.random.rand(dimensions) < crossp
                  #print(cross_points)
@@ -47,10 +49,10 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=100, its=10):
                  #print("trail",trial)
     
                  f = function(trial)
-                 if f < fitness[j]:
+                 if f > fitness[j]:
                      fitness[j] = f
                      popnp[j] = trial
-                     if f < fitness[best_idx]:
+                     if f > fitness[best_idx]:
                          best_idx = j
                          best = trial
             
