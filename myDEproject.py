@@ -97,10 +97,11 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=20):
             De_FIT.append(fitness[best_idx])
             De_VAR.append(best)
 
-            return best, fitness[best_idx]
+        print("best  ",best,fitness[best_idx])
+        return best, fitness[best_idx]
 
 
 de(lambda x: function(x) )
-print("fit ",De_FIT," ide ",De_VAR," ",De_POP)
+#print("fit ",De_FIT," ide ",De_VAR," ",De_POP)
 df.to_csv('report/DE best .csv')
 

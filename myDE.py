@@ -58,8 +58,8 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=100, its=50):
             
              De_FIT.append(fitness[best_idx])
              De_VAR.append(best)
-             return best, fitness[best_idx]
-
+        print("best  ",best,fitness[best_idx])
+        return best, fitness[best_idx]
 
 de(lambda x: function(x) ,its=50)
-print("list",De_FIT,De_VAR)
+#print("list",De_FIT,De_VAR)
