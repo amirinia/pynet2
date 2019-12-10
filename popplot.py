@@ -38,6 +38,24 @@ def convertvar(df):
     print(dfv)
     dfv.to_csv('report/DE best variables.csv')
 
+def myplotpopulation(df):
+    #df.rename({'t1': 'x', 't2': 'y'}, axis=1, inplace=True)
+
+    fig = plt.figure()
+    ax = fig.add_subplot(111, projection='3d')
+    x= df.t1
+    y= df.t2
+    z= df.t3
+    e =np.array(df.energy)
+    xy2 = np.ma.masked_where( (e < 6)&(e > 12000), e)
+    ax.scatter(x, y, z, c=xy2, marker='o',s =(df.duration))
+    plt.title("population")
+
+    ax.set_xlabel('X t1')
+    ax.set_ylabel('Y t2')
+    ax.set_zlabel('Z t3')
+    plt.show()
+
 def myplott1t2(df):
     df.rename({'t1': 'x', 't2': 'y'}, axis=1, inplace=True)
 
@@ -110,6 +128,8 @@ def myploted(df):
     
 
 print(dfv2[-100:])
+
+myplotpopulation(dfv2)
 myplott1t2(dfv2[-200:])
 
 myplotobj(dfv2[-200:])
