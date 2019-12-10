@@ -65,10 +65,11 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=30):
                      mutant[1]=1
                 if(mutant[1] > 9):
                      mutant[1]=9
-                     
-                if(mutant[2] < 0):
-                     mutant[2]=0
+
                 temp = mutant[1] + mutant[0]
+
+                if(mutant[2] < temp):
+                     mutant[2]=temp
                 if(mutant[2] > 240 - temp):
                      mutant[2]= 240 - temp
 

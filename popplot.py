@@ -134,4 +134,4 @@ myplott1t2(dfv2[-200:])
 
 myplotobj(dfv2[-200:])
 myplotvar(dfv2[-200:])
-myploted(dfv2[-300:])
+myploted(dfv2[-30:])
