@@ -84,7 +84,9 @@ class Node():
                             self.logger.log("ch is dead ,cluster needs to find another CH {0} {1}\n\n".format(self.env.now, config.Duration))
                             print("ch is dead ,cluster needs to find another CH {0} {1}\n\n".format(self.env.now, config.Duration))
                             self.is_CH == False
-                            print("cc test {0} cluster{1} ch {2}".format(self.cluster,self.cluster,self.cluster.CH))
+                            print("cc test {0} cluster{1} size {2}".format(self.cluster,"ooo","cluster head is dead"))
+                            #self.clus.mycluster.Clusterhead_Selection(self.cluster.self)
+                            
                             self.cluster.Clusterhead_Selection()
                         self.is_alive = False
                         # draw

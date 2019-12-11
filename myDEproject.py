@@ -31,7 +31,7 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=30):
             pop2 =[]
             t1 = random.randint(4,7)
             t2 = random.randint(1,9)
-            t3 = random.randint(0, 240 - (t1 +t2))
+            t3 = random.randint((t1 +t2), 240 - (t1 +t2))
             b1 = random.choice([0, 1])
             pop2.append(t1)
             pop2.append(t2)
@@ -57,14 +57,14 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=30):
                 mutant = np.clip(a + np.round( mut * (b - c)),0,237)#-1/(2-(1/(i+1))), 1/(2-(1/(i+1))))
                 mutant = mutant.astype(int) # convert to int
                 if(mutant[0] < 4):
-                     mutant[0]=4
+                     mutant[0]=4 +random.randint(0,2)
                 if(mutant[0] > 7):
-                     mutant[0]=7
+                     mutant[0]=7 -random.randint(0,2)
 
                 if(mutant[1] < 1):
-                     mutant[1]=1
+                     mutant[1]=1 +random.randint(0,3)
                 if(mutant[1] > 9):
-                     mutant[1]=9
+                     mutant[1]=9 -random.randint(0,3)
 
                 temp = mutant[1] + mutant[0]
 

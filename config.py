@@ -4,7 +4,7 @@ import math
 MAX_RUNTIME = 500
 #ALERT TIME
 ALERT_TIME = 119
-ALERT_END = 1300
+ALERT_END = 400
 
 # area definition
 AREA_WIDTH = 300

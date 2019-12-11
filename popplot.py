@@ -14,7 +14,6 @@ df.sort_values(by=['energy'], inplace=True)
 
 #print(df)
 
-dfv2 =pd.read_csv('report/DE best variables.csv')
 
 def convertvar(df):
     dfv = pd.DataFrame(columns=['t1','t2','t3','t4','energy','duration' , 'lost','dead'])
@@ -36,7 +35,12 @@ def convertvar(df):
         dfv = dfv.append(pd.Series([(L[0]),(L[1]),(L[2]),(L[3]),df['energy'][index],df['duration'][index],df['lost'][index],df['dead'][index]], index=dfv.columns),ignore_index=True)
 
     print(dfv)
-    dfv.to_csv('report/DE best variables.csv')
+    dfv.to_csv('report/DE best variables new.csv')
+
+#convertvar(df)
+dfv2 =pd.read_csv('report/DE best variables new.csv')
+
+
 
 def myplotpopulation(df):
     #df.rename({'t1': 'x', 't2': 'y'}, axis=1, inplace=True)
@@ -132,6 +136,6 @@ print(dfv2[-100:])
 myplotpopulation(dfv2)
 myplott1t2(dfv2[-200:])
 
-myplotobj(dfv2[-200:])
+myplotobj(dfv2[-1200:])
 myplotvar(dfv2[-200:])
-myploted(dfv2[-30:])
+myploted(dfv2[-200:])

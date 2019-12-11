@@ -106,7 +106,7 @@ class Net():
                     self.logger.log("Alert is solved ")
                     print("Alert is solved ")
                     graphi = gui.graphic(self)
-                    graphi.alert_sloved()
+                    #graphi.alert_sloved()
                     is_solved = True
             
             if self.alert == True: # if BS get alert
@@ -324,7 +324,7 @@ class Net():
     def alert_creator(self): # create alert in the network
         alert1 = alert.Alert(self.env,config.alertx,config.alerty,self)
         graphi = gui.graphic(self)
-        graphi.alert()
+        #graphi.alert()
 
         yield self.env.timeout(1)
 
