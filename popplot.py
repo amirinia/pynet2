@@ -9,10 +9,10 @@ import matplotlib.pyplot  as plt
 from mpl_toolkits import mplot3d
 import numpy as np
 
-df = pd.read_csv("DE best .csv")
+df = pd.read_csv("report/DE best new.csv")
 df.sort_values(by=['energy'], inplace=True)
 
-#print(df)
+print(df)
 
 
 def convertvar(df):
@@ -37,7 +37,7 @@ def convertvar(df):
     print(dfv)
     dfv.to_csv('report/DE best variables new.csv')
 
-#convertvar(df)
+convertvar(df)
 dfv2 =pd.read_csv('report/DE best variables new.csv')
 
 
