@@ -16,7 +16,7 @@ print(df)
 
 
 def convertvar(df):
-    dfv = pd.DataFrame(columns=['t1','t2','t3','t4','energy','duration' , 'lost','dead'])
+    dfv = pd.DataFrame(columns=['t1','t2','t3','t4','energy','old duration' , 'lost','dead','duration'])
     for index,row in df.iterrows():
         print(index)
         word = df['pop'][index]
@@ -32,13 +32,14 @@ def convertvar(df):
         #dft['My new column'] =L[0]
         #("p",L[0],L[1],L[2],L[3])
         #dft["n"][index] =L[2]
-        dfv = dfv.append(pd.Series([(L[0]),(L[1]),(L[2]),(L[3]),df['energy'][index],df['duration'][index],df['lost'][index],df['dead'][index]], index=dfv.columns),ignore_index=True)
+        sumduration =int(L[0])+int(L[1])+int(L[2])
+        dfv = dfv.append(pd.Series([(L[0]),(L[1]),(L[2]),(L[3]),df['energy'][index],df['duration'][index],df['lost'][index],df['dead'][index],sumduration], index=dfv.columns),ignore_index=True)
 
     print(dfv)
-    dfv.to_csv('report/DE best variables new.csv')
+    dfv.to_csv('report/DE best variables new1.csv')
 
-convertvar(df)
-dfv2 =pd.read_csv('report/DE best variables new.csv')
+#convertvar(df)
+dfv2 =pd.read_csv('report/DE best variables new1.csv')
 
 
 
@@ -52,12 +53,12 @@ def myplotpopulation(df):
     z= df.t3
     e =np.array(df.energy)
     xy2 = np.ma.masked_where( (e < 6)&(e > 12000), e)
-    ax.scatter(x, y, z, c=xy2, marker='o',s =(df.duration))
-    plt.title("population")
+    ax.scatter(x, y, z, c=xy2, marker='o')
+    plt.title("Population")
 
-    ax.set_xlabel('X t1')
-    ax.set_ylabel('Y t2')
-    ax.set_zlabel('Z t3')
+    ax.set_xlabel('X (GTS)')
+    ax.set_ylabel('Y (CAP)')
+    ax.set_zlabel('Z (Inactive)')
     plt.show()
 
 def myplott1t2(df):
@@ -70,12 +71,12 @@ def myplott1t2(df):
     z= df.energy
     e =np.array(df.energy)
     xy2 = np.ma.masked_where( (e < 6)&(e > 12000), e)
-    ax.scatter(x, y, z, c=xy2, marker='o',s =(df.duration))
-    plt.title("t1 t2")
+    ax.scatter(x, y, z, c=xy2, marker='o')
+    plt.title("GTS-CAP")
 
-    ax.set_xlabel('X t1')
-    ax.set_ylabel('Y t2')
-    ax.set_zlabel('Z Energy')
+    ax.set_xlabel('X (GTS)')
+    ax.set_ylabel('Y (CAP)')
+    ax.set_zlabel('Z Energy (MJ)')
     plt.show()
     
 def myplotobj(df):
@@ -89,11 +90,11 @@ def myplotobj(df):
     e =np.array(df.energy)
     xy2 = np.ma.masked_where( (e < 6)&(e > 12000), e)
     ax.scatter(x, y, z, c=xy2, marker='o',s =(df.energy/1000))
-    plt.title("objective")
+    plt.title("Objectives")
 
-    ax.set_xlabel('X duration')
+    ax.set_xlabel('X duration(S)')
     ax.set_ylabel('Y Lost')
-    ax.set_zlabel('Z Energy')
+    ax.set_zlabel('Z Energy(MJ)')
     plt.show()
 
 def myplotvar(df):
@@ -106,12 +107,12 @@ def myplotvar(df):
     z= df.t3
     e =np.array(df.energy)
     xy2 = np.ma.masked_where( (e < 6)&(e > 12000), e)
-    ax.scatter(x, y, z, c=xy2, marker='o',s =(df.t3))
-    plt.title("Variables")
+    ax.scatter(x, y, z, c=xy2, marker='o',s =(df.duration))
+    plt.title("Variables (sample size = superframesize)")
 
-    ax.set_xlabel('X t1')
-    ax.set_ylabel('Y t2')
-    ax.set_zlabel('Z t3')
+    ax.set_xlabel('X (GTS)')
+    ax.set_ylabel('Y (CAP)')
+    ax.set_zlabel('Z (inactive)')
     plt.show()
 
 def myploted(df):
@@ -123,19 +124,19 @@ def myploted(df):
     ax = fig.add_subplot()
 
     xy2 = np.ma.masked_where( (e < 6)&(e > 12000), e)
-    ax.scatter(x, y, c=xy2, marker='o',s =(df.duration))
-
-    ax.set_xlabel('<== Delay Min')
-    ax.set_ylabel('Energy Max ==>')
+    ax.scatter(x, y, c=xy2, marker='o')
     plt.title("Pareto front")
+
+    ax.set_xlabel('<== Min Delay(s)')
+    ax.set_ylabel('Energy(MJ). Max ==>')
     plt.show()
     
 
 print(dfv2[-100:])
 
 myplotpopulation(dfv2)
-myplott1t2(dfv2[-200:])
+myplott1t2(dfv2[-500:])
 
-myplotobj(dfv2[-1200:])
-myplotvar(dfv2[-200:])
-myploted(dfv2[-200:])
+myplotobj(dfv2[-3000:])
+myplotvar(dfv2[-500:])
+myploted(dfv2[-500:])

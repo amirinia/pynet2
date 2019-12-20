@@ -87,7 +87,7 @@ class Node():
                             print("cc test {0} cluster{1} size {2}".format(self.cluster,"ooo","cluster head is dead"))
                             #self.clus.mycluster.Clusterhead_Selection(self.cluster.self)
                             
-                            self.cluster.Clusterhead_Selection()
+                            #self.cluster.Clusterhead_Selection()
                         self.is_alive = False
                         # draw
                         #time.sleep(4)

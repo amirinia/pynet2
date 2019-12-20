@@ -11,9 +11,9 @@ AREA_WIDTH = 300
 AREA_LENGTH = 200
 
 #TDMA
-CSMA_duration = 9
-TDMA_duration = 8
-Inactive_duration = 14
+CSMA_duration = 7
+TDMA_duration = 3
+Inactive_duration = 198
 
 Duration = CSMA_duration + TDMA_duration + Inactive_duration
 
