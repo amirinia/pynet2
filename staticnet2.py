@@ -33,6 +33,23 @@ node19 = node.Node(19,env,1.3654675,30,50 )
 node20 = node.Node(20,env,1.846 ,130,20 , node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
 node21 = node.Node(21,env,1.786487,135,2 , node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
 node22 = node.Node(22,env,2 ,175,5,node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1 )
+node23 = node.Node(23,env,1.988,33,14)
+node24 = node.Node(24,env,1.9088,57,28, node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
+node25 = node.Node(25,env,1.9855,252,48)
+node26 = node.Node(26,env,1.9678,263,48, node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
+node27 = node.Node(27,env,1.8434,249,87)
+node28 = node.Node(28,env,1.90234,233,35)
+node29 = node.Node(29,env,1.989364,253,197)
+node30 = node.Node(30,env,1.876549,280,210, node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
+node31 = node.Node(31,env,1.78233 ,260,210 )
+node32 = node.Node(32,env,1.79745,147,130 , node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
+node33 = node.Node(33,env,1.86435,163,142 )
+node34 = node.Node(34,env,1.76434 ,163,145 , node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
+node35 = node.Node(35,env,1.9754734 ,160,140 )
+node36 = node.Node(36,env,1.8634754 ,139,19 )
+node37 = node.Node(37,env,1.87648 ,145,20 , node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
+node38 = node.Node(38,env,1.7645,141,18 )
+node39 = node.Node(39,env,1.3654675,150,17 )
 
 net1 = network.Net(env)
 
@@ -58,6 +75,24 @@ net1.add_node(node19)
 net1.add_node(node20)
 net1.add_node(node21)
 net1.add_node(node22)
+net1.add_node(node23)
+net1.add_node(node24)
+net1.add_node(node25)
+net1.add_node(node26)
+net1.add_node(node27)
+net1.add_node(node28)
+net1.add_node(node29)
+net1.add_node(node30)
+net1.add_node(node31)
+net1.add_node(node32)
+net1.add_node(node33)
+net1.add_node(node34)
+net1.add_node(node35)
+net1.add_node(node36)
+net1.add_node(node37)
+net1.add_node(node38)
+net1.add_node(node39)
+
 
 node1.net = net1
 node2.net = net1
@@ -81,13 +116,29 @@ node19.net = net1
 node20.net = net1
 node21.net = net1
 node22.net = net1
-
+node23.net = net1
+node24.net = net1
+node25.net = net1
+node26.net = net1
+node27.net = net1
+node28.net = net1
+node29.net = net1
+node30.net = net1
+node31.net = net1
+node32.net = net1
+node33.net = net1
+node34.net = net1
+node35.net = net1
+node36.net = net1
+node37.net = net1
+node38.net = net1
+node39.net = net1
 
 net1.introduce_yourself()
 print("KKKKKKKKKK")
 net1.network_nodedsicovery()
-#graphi = gui.graphic(net1)
-#graphi.draw_nods()
+graphi = gui.graphic(net1)
+graphi.draw_nods()
 
 # env.run(until=80)
 

@@ -9,7 +9,7 @@ import matplotlib.pyplot  as plt
 from mpl_toolkits import mplot3d
 import numpy as np
 
-df = pd.read_csv("report/DE best new.csv")
+df = pd.read_csv("report/10000/DE best .csv")
 df.sort_values(by=['energy'], inplace=True)
 
 print(df)
@@ -39,7 +39,7 @@ def convertvar(df):
     dfv.to_csv('report/DE best variables new1.csv')
 
 #convertvar(df)
-dfv2 =pd.read_csv('report/DE best variables new1.csv')
+dfv2 =pd.read_csv('report/10000/DE best variables new1.csv')
 
 
 
@@ -107,7 +107,7 @@ def myplotvar(df):
     z= df.t3
     e =np.array(df.energy)
     xy2 = np.ma.masked_where( (e < 6)&(e > 12000), e)
-    ax.scatter(x, y, z, c=xy2, marker='o',s =(df.duration))
+    ax.scatter(x, y, z, c=xy2, marker='o')#,s =(df.duration))
     plt.title("Variables (sample size = superframesize)")
 
     ax.set_xlabel('X (GTS)')
@@ -135,8 +135,8 @@ def myploted(df):
 print(dfv2[-100:])
 
 myplotpopulation(dfv2)
-myplott1t2(dfv2[-500:])
+myplott1t2(dfv2[-3000:])
 
 myplotobj(dfv2[-3000:])
-myplotvar(dfv2[-500:])
-myploted(dfv2[-500:])
+myplotvar(dfv2[-3000:])
+myploted(dfv2[-200:]) # pareto

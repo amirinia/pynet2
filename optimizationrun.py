@@ -109,7 +109,7 @@ def run(x):
     # net1.random_net_generator(env,net1,60)
 
     # net1 = initialnetwork.net1
-    graphi = gui.graphic(net1)
+    #graphi = gui.graphic(net1)
 
 
     # in second step you need and algorithm
