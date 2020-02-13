@@ -1,7 +1,7 @@
 import numpy as np 
 import random 
 import pandas as pd
-#import staticnet as initialnetwork
+import staticnet as initialnetwork
 import gui
 import config
 import report
@@ -24,6 +24,7 @@ def run(x):
 
     
     env = simpy.Environment()
+
 
 
     node1 = node.Node(1,env,1.99, 10,10)
@@ -96,7 +97,6 @@ def run(x):
     node20.net = net1
     node21.net = net1
     node22.net = net1
-
 
 
     net1.introduce_yourself()

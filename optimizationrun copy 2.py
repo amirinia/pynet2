@@ -26,25 +26,31 @@ def run(x):
     env = simpy.Environment()
 
 
-    node1 = node.Node(1,env,1.99, 10,10)
+    node1 = node.Node(1,env,1.99, 10,10, node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
     node2 = node.Node(2,env,1.98,10,60 ,node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
-    node3 = node.Node(3,env,1.988,30,11)
+    node3 = node.Node(3,env,1.988,30,11, node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
     node4 = node.Node(4,env,1.9088,43,35, node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
-    node5 = node.Node(5,env,1.9855,260,30)
+    node19 = node.Node(19,env,1.3654675,30,50 , node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
+
+
+    node5 = node.Node(5,env,1.9855,260,30, node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
     node6 = node.Node(6,env,1.9678,270,50, node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
-    node7 = node.Node(7,env,1.8434,259,72)
-    node8 = node.Node(8,env,1.90234,241,47)
+    node7 = node.Node(7,env,1.8434,259,72, node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
+    node8 = node.Node(8,env,1.90234,241,47, node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
+
+
     node9 = node.Node(9,env,1.989364,260,200)
-    node10 = node.Node(10,env,1.876549,290,200, node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
+    node10 = node.Node(10,env,1.876549,290,200)
     node11 = node.Node(11,env,1.78233 ,280,220 )
-    node12 = node.Node(12,env,1.79745,20,200 , node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
+    node12 = node.Node(12,env,1.79745,20,200 )
     node13 = node.Node(13,env,1.86435,10,160 )
-    node14 = node.Node(14,env,1.76434 ,13,183 , node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
+    node14 = node.Node(14,env,1.76434 ,13,183)
     node15 = node.Node(15,env,1.9754734 ,50,200 )
     node16 = node.Node(16,env,1.8634754 ,29,189 )
-    node17 = node.Node(17,env,1.87648 ,35,204 , node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
+    node17 = node.Node(17,env,1.87648 ,35,204 )
     node18 = node.Node(18,env,1.7645,31,172 )
-    node19 = node.Node(19,env,1.3654675,30,50 )
+    
+    
     node20 = node.Node(20,env,1.846 ,130,20 , node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
     node21 = node.Node(21,env,1.786487,135,2 , node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
     node22 = node.Node(22,env,2 ,175,5,node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1 )
@@ -96,7 +102,6 @@ def run(x):
     node20.net = net1
     node21.net = net1
     node22.net = net1
-
 
 
     net1.introduce_yourself()

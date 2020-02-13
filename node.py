@@ -68,7 +68,8 @@ class Node():
                     self.logger.log("BS is proccessing {0}".format(self.env.now))
                     print("BS is proccessing {0}".format(self.env.now))
                     yield self.env.timeout(config.BEACONING_TIME)
-
+        if (next(reversed(self.energy)) <= config.DEAD_NODE_THRESHOLD):
+            self.is_alive = False
 
         if self.id != 0: # if node is not BS
             while True:

@@ -36,7 +36,7 @@ env.run(until=config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 
-net1.network_packet_summery()
+#net1.network_packet_summery()
 
 # for n in net1.nodes:
 #     print(n,n.TDMA,n.is_CH,n.cluster,"   ",n.distance)
@@ -52,7 +52,7 @@ net1.introduce_yourself()
 # net1.network_inboxes()
 
 report.plotenergy()
-report.plotpacket()
+#report.plotpacket()
 
 net1.network_optimize()
 

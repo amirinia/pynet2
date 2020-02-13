@@ -1,7 +1,7 @@
 import math
 
 ## Runtime configuration
-MAX_RUNTIME = 5000
+MAX_RUNTIME = 1000
 #ALERT TIME
 ALERT_TIME = 1000
 ALERT_END = 4000
@@ -11,9 +11,9 @@ AREA_WIDTH = 300
 AREA_LENGTH = 200
 
 #TDMA
-CSMA_duration = 7
-TDMA_duration = 3
-Inactive_duration = 198
+CSMA_duration = 9
+TDMA_duration = 7
+Inactive_duration = 148
 
 Duration = CSMA_duration + TDMA_duration + Inactive_duration
 

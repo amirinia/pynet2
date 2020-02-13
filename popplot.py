@@ -9,7 +9,7 @@ import matplotlib.pyplot  as plt
 from mpl_toolkits import mplot3d
 import numpy as np
 
-df = pd.read_csv("report/5000/DE best .csv")
+df = pd.read_csv("report/DE best .csv")
 df.sort_values(by=['energy'], inplace=True)
 
 print(df)
@@ -36,10 +36,10 @@ def convertvar(df):
         dfv = dfv.append(pd.Series([(L[0]),(L[1]),(L[2]),(L[3]),df['energy'][index],df['duration'][index],df['lost'][index],df['dead'][index],sumduration], index=dfv.columns),ignore_index=True)
 
     print(dfv)
-    dfv.to_csv('report/DE best variables new1.csv')
+    dfv.to_csv('report/1000,000.csv')
 
-#convertvar(df)
-dfv2 =pd.read_csv('report/500/DE best variables new1.csv')
+convertvar(df)
+dfv2 =pd.read_csv('report/1000,000.csv')
 
 
 
@@ -139,4 +139,4 @@ myplott1t2(dfv2[-3000:])
 
 myplotobj(dfv2[-3000:])
 myplotvar(dfv2[-3000:])
-myploted(dfv2[-150:]) # pareto
+myploted(dfv2[-100:]) # pareto

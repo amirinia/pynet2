@@ -56,8 +56,8 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=30):
                 #print(a,b,c)
                 mutant = np.clip(a + np.round( mut * (b - c)),0,237)#-1/(2-(1/(i+1))), 1/(2-(1/(i+1))))
                 mutant = mutant.astype(int) # convert to int
-                if(mutant[0] < 4):
-                     mutant[0]=4 +random.randint(0,2)
+                if(mutant[0] < 1):
+                     mutant[0]=1 +random.randint(0,2)
                 if(mutant[0] > 7):
                      mutant[0]=7 -random.randint(0,2)
 
