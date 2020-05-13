@@ -39,15 +39,18 @@ class mycluster:
             #self.logger.log("cluster {0} ,CH :{1} alive {2} and average {3}".format(self.id,self.CH,self.CH.is_alive,self.average_cluster_energy()))
             #print("cluster {0} ,CH :{1} alive {2} and average {3}".format(self.id,self.CH,self.CH.is_alive,self.average_cluster_energy()))
             
-            if(self.env.now % 5 == 0):
+            if(self.env.now % 1000 == 0):
                 self.Random_Clusterhead_Selection()
+                print("R buz 1000")
 
             if (next(reversed(self.CH.energy))< config.LOW_NODE_THRESHOLD):
                 self.Random_Clusterhead_Selection()
                 self.Clusterhead_Selection()
+                print("R buz r")
             if(self.CH.is_alive==False):
                 self.Random_Clusterhead_Selection()
                 self.Clusterhead_Selection()
+                print("R buz dead")
             # print(self.id,"cluster is runing",self.env.now)
             if len(self.nodes)>7:
                 print("nodes number is exceeded")
@@ -87,7 +90,7 @@ class mycluster:
         average_en = 0
         if(len(self.nodes)!=0):
             for node in self.nodes:
-                average_en += sum(node.energy)
+                average_en += (next(reversed(node.energy)))
             return average_en/len(self.nodes)
     
     def cluster_head_setter(self,node):
@@ -116,14 +119,14 @@ class mycluster:
             if n_random < prob_ch:
                 if(next(reversed(n.energy))>config.LOW_NODE_THRESHOLD):
                     self.logger.log(" <<< random for node {0} is {1} with energy {2} and average cluster energy {3}".format(n,n_random,next(reversed(n.energy)),self.average_cluster_energy()))
-                    print(" <<< random for node {0} is {1} with energy {2} and average cluster energy {3}".format(n,n_random,next(reversed(n.energy)),self.average_cluster_energy()))
+                    print(" <<< random for node {0} is {1} with energy {2} and average cluster energy {3} low threshold {4}".format(n,n_random,next(reversed(n.energy)),self.average_cluster_energy(),config.LOW_NODE_THRESHOLD))
 
                     if(sum(n.energy)>self.average_cluster_energy()):
                         if(n!=self.CH):
 
                             self.net.ClusterHead_finder()
-                            # graph = gui.graphic(self.net)
-                            # graph.draw() # simple draw
+                            graph = gui.graphic(self.net)
+                            graph.draw() # simple draw
                             #time.sleep(1)
                             self.logger.log("new ch is node {0}  with parent {1} and last ch was {2} with {3}".format(n,n.parent,self.CH,self.CH.parent))
                             print("new ch is node {0}  with parent {1} and last ch was {2} with {3}".format(n,n.parent,self.CH,self.CH.parent))

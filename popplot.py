@@ -9,7 +9,7 @@ import matplotlib.pyplot  as plt
 from mpl_toolkits import mplot3d
 import numpy as np
 
-df = pd.read_csv("report/DE best .csv")
+df = pd.read_csv("report/old/DE best .csv")
 df.sort_values(by=['energy'], inplace=True)
 
 print(df)
@@ -38,8 +38,8 @@ def convertvar(df):
     print(dfv)
     dfv.to_csv('report/1000,000.csv')
 
-convertvar(df)
-dfv2 =pd.read_csv('report/1000,000.csv')
+#convertvar(df)
+dfv2 =pd.read_csv('report/old/DE best variables.csv')
 
 
 
@@ -54,11 +54,12 @@ def myplotpopulation(df):
     e =np.array(df.energy)
     xy2 = np.ma.masked_where( (e < 6)&(e > 12000), e)
     ax.scatter(x, y, z, c=xy2, marker='o')
-    plt.title("Population")
+    ax.scatter(x, y, z, c=xy2, marker='o')
+    #plt.title("Population")
 
-    ax.set_xlabel('X (GTS)')
-    ax.set_ylabel('Y (CAP)')
-    ax.set_zlabel('Z (Inactive)')
+    ax.set_xlabel('GTS size')
+    ax.set_ylabel('CAP size')
+    ax.set_zlabel('Inactive size')
     plt.show()
 
 def myplott1t2(df):
@@ -72,11 +73,47 @@ def myplott1t2(df):
     e =np.array(df.energy)
     xy2 = np.ma.masked_where( (e < 6)&(e > 12000), e)
     ax.scatter(x, y, z, c=xy2, marker='o')
-    plt.title("GTS-CAP")
+    plt.title("")
 
-    ax.set_xlabel('X (GTS)')
-    ax.set_ylabel('Y (CAP)')
-    ax.set_zlabel('Z Energy (MJ)')
+    ax.set_xlabel('GTS size')
+    ax.set_ylabel('CAP size')
+    ax.set_zlabel('Remaining Energy (MJ)')
+    plt.show()
+
+def myplott1t2d(df):
+    df.rename({'t1': 'x', 't2': 'y'}, axis=1, inplace=True)
+
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    x= df.x
+    #y= df.y
+    y= df.energy
+    e =np.array(df.energy)
+    xy2 = np.ma.masked_where( (e < 6)&(e > 12000), e)
+    ax.scatter(x, y, c=xy2, marker='o')
+    plt.title("")
+
+    ax.set_xlabel('GTS size')
+    #ax.set_ylabel('CAP size')
+    ax.set_ylabel('Remaining Energy (MJ)')
+    plt.show()
+
+def myplott1t2d2(df):
+    df.rename({'t1': 'x', 't2': 'y'}, axis=1, inplace=True)
+
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    #x= df.x
+    x= df.y
+    y= df.energy
+    e =np.array(df.energy)
+    xy2 = np.ma.masked_where( (e < 6)&(e > 12000), e)
+    ax.scatter(x, y, c=xy2, marker='o')
+    plt.title("")
+
+    #ax.set_xlabel('GTS size')
+    ax.set_xlabel('CAP size')
+    ax.set_ylabel('Remaining Energy (MJ)')
     plt.show()
     
 def myplotobj(df):
@@ -110,9 +147,9 @@ def myplotvar(df):
     ax.scatter(x, y, z, c=xy2, marker='o')#,s =(df.duration))
     #plt.title("Variables (sample size = superframesize)")
 
-    ax.set_xlabel('X (GTS)')
-    ax.set_ylabel('Y (CAP)')
-    ax.set_zlabel('Z (inactive)')
+    ax.set_xlabel('GTS size')
+    ax.set_ylabel('CAP size')
+    ax.set_zlabel('inactive size')
     plt.show()
 
 def myploted(df):
@@ -125,17 +162,20 @@ def myploted(df):
 
     xy2 = np.ma.masked_where( (e < 6)&(e > 12000), e)
     ax.scatter(x, y, c=xy2, marker='o')
-    plt.title("Pareto front")
+    #plt.title("Pareto front")
 
-    ax.set_xlabel('<== Min Superframe Size(s)')
-    ax.set_ylabel('Energy(MJ). Max ==>')
+    ax.set_xlabel('Superframe Size (s)')
+    ax.set_ylabel('The Remaining Energy (MJ)')
     plt.show()
     
 
 print(dfv2[-70:])
 
-myplotpopulation(dfv2)
+myplotpopulation(dfv2[-100:])
 myplott1t2(dfv2[-3000:])
+myplott1t2d(dfv2[-3000:])
+myplott1t2d2(dfv2[-3000:])
+
 
 myplotobj(dfv2[-3000:])
 myplotvar(dfv2[-3000:])

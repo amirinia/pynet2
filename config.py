@@ -1,7 +1,7 @@
 import math
 
 ## Runtime configuration
-MAX_RUNTIME = 1000
+MAX_RUNTIME = 10000
 #ALERT TIME
 ALERT_TIME = 1000
 ALERT_END = 4000
@@ -13,7 +13,7 @@ AREA_LENGTH = 200
 #TDMA
 CSMA_duration = 9
 TDMA_duration = 7
-Inactive_duration = 148
+Inactive_duration = 16
 
 Duration = CSMA_duration + TDMA_duration + Inactive_duration
 
@@ -39,11 +39,11 @@ COVERAGE_RADIUS = 15 # meters
 # initial energy at every node's battery
 INITIAL_ENERGY = 2000 # mili Joules 2000
 
-P_TX = 0.084 * 1000  # Watts to transmite 
-P_RX = 0.073 * 1000 # Watts to receive
+P_TX = 0.084 * 10000  # Watts to transmite 
+P_RX = 0.073 * 10000 # Watts to receive
 #dead node threshold
-DEAD_NODE_THRESHOLD = 0.299
-LOW_NODE_THRESHOLD = 0.5
+DEAD_NODE_THRESHOLD = 100.299
+LOW_NODE_THRESHOLD = 300.5
 
 # node transmission energy cnsumption
 PACKET_ENERGY_CONSUMPTION       = -0.00005 #* 1000000
@@ -67,7 +67,7 @@ HEADER_LENGTH = 150 # bits
 
 # multiframe 
 Multiframe_size = 2
-Multiframe_state = True
+Multiframe_state = False
 
 
 RESULTS_PATH = 'report/'

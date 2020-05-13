@@ -1,7 +1,7 @@
 #at begining you can set parameters in config file
 
 # to run simulation you need initial networks ( just simply define nodes and addd to network)
-import staticnet as initialnetwork
+import staticnetc2 as initialnetwork
 import gui
 import config
 import report
@@ -27,7 +27,7 @@ print("__________________________LEACH__________________________________________
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++")
 net1.introduce_yourself()
-#graphi.draw()
+graphi.draw()
 #logger.logger.log(str("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++"))
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
 
