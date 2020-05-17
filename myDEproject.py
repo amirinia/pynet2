@@ -23,7 +23,7 @@ De_POP=[]
 population_num = 100
 iteration = (D * 5000)/population_num
 
-def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=30):
+def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=10):
         #print("de")
         dimensions = D
         initial = []
@@ -104,5 +104,5 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=30):
 
 de(lambda x: function(x) )
 #print("fit ",De_FIT," ide ",De_VAR," ",De_POP)
-df.to_csv('report/DE best .csv')
+df.to_csv('report/DE best 2020.csv')
 

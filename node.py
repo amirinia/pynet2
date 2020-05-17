@@ -11,6 +11,7 @@ import cluster
 import math
 import pandas as pd 
 import logger
+import sys
 
 class Node():
     def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(1000,2000)),x=random.randint(0,config.AREA_WIDTH),y=random.randint(0,config.AREA_LENGTH),node_type=None, power_type=1, mobile_type=0, network=network ,sensor_type=0):
@@ -43,6 +44,7 @@ class Node():
         self.alert_neighbor = False
         self.logger = logger.logger()
         self.deadtime = 100000000000000
+        
     def __str__(self):
         return str(self.id)
 
@@ -79,6 +81,12 @@ class Node():
                         print("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
                         print(self.power.energy)
                         self.deadtime = self.env.now
+                        print(self.clus)
+                        sys.exit()
+                        self.clus.mycluster.Clusterhead_Selection()#SRandom_Clusterhead_Selection()
+                        self.env.timeout(100)
+                        yield env.timeout(10)
+
 
                         #self.net.savedeadnodes(self.id,next(reversed(self.energy)),self.env.now)
                         if(self.is_CH == True):
@@ -188,7 +196,10 @@ class Node():
                     # print(self.id, "test")
 
                     yield self.env.timeout(1)
-
+            #if (next(reversed(self.energy)) <= config.DEAD_NODE_THRESHOLD):
+                #self.is_alive = False
+                #print("node isdead...."+self.id)
+                #yield self.env.timeout(10)
 
     def CSMA_beaconing(self,env):
         if(self.is_alive == True): #if node is alive
@@ -339,15 +350,15 @@ class Node():
     def change_CulsterHead(self):
         if(self.is_CH == False):
             self.is_CH = True
-            self.logger.log("node {0} becomes CH (change)and parent is {1} and TDMA {2}".format(self.id,self.parent,self.TDMA))
-            print("node {0} becomes CH (change)and parent is {1} and TDMA {2}".format(self.id,self.parent,self.TDMA))
+            self.logger.log("node {0} becomes CH (change)and parent is {1} and TDMA {2} energy {3}".format(self.id,self.parent,self.TDMA,(next(reversed(self.energy)))))
+            print("node {0} becomes CH (change)and parent is {1} and TDMA energy {3}".format(self.id,self.parent,self.TDMA,(next(reversed(self.energy)))))
             self.distance.clear
             self.distance.append(self.net.nodes[0])
         else:
             self.is_CH == False
             self.next_hop.clear()
-            self.logger.log("node {0} becomes simple node (change) and parent is {1} and TDMA {2}".format(self.id,self.parent,self.TDMA))
-            print("node {0} becomes simple node (change) and parent is {1} and TDMA {2}".format(self.id,self.parent,self.TDMA))
+            self.logger.log("e node {0} becomes simple node (change) and parent is {1} and TDMA {2} energy {3}".format(self.id,self.parent,self.TDMA,(next(reversed(self.energy)))))
+            print("e node {0} becomes simple node (change) and parent is {1} and TDMA {2} energy {3}".format(self.id,self.parent,self.TDMA,(next(reversed(self.energy)))))
             #self.distance.append(next(reversed(self.parent)))
 
     def BS_getter(self):

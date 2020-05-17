@@ -18,9 +18,10 @@ class Net():
     def __init__(self,env,xsize=config.AREA_WIDTH,ysize=config.AREA_LENGTH):
         self.env = env
         self.action = env.process(self.run())
+        # superframe
         self.clock = ["CSMA"]
         self.TDMA_slot = 0
-        self.CSMA_slot =0
+        self.CSMA_slot = 0
         self.nodes = []
         self.clusters = []
         self.clusterheads = []
@@ -144,8 +145,8 @@ class Net():
             self.clock.clear()
             self.clock.append("TDMA")
             self.TDMA_slot = i+1
-            self.logger.log("\n\nat {0} TDMA - slot {1}".format(self.env.now,(i+1)))
-            print("\n\nat {0} TDMA - slot {1}".format(self.env.now,(i+1)))
+            self.logger.log("\n\nat {0} TDMA - slot {1}".format(self.env.now,(i)))
+            print("\n\nat {0} TDMA - slot {1}".format(self.env.now,(i)))
             yield self.env.timeout(1)
 
     def CSMA(self,duration):

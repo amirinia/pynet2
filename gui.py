@@ -82,7 +82,7 @@ class graphic:
         #mng.full_screen_toggle()
         mng.set_window_title("draw")
 
-        plt.pause(3)
+        plt.pause(13)
         plt.clf()
         plt.close()
 
@@ -119,7 +119,7 @@ class graphic:
 
         plt.title("dead mode")
 
-        plt.pause(1)
+        plt.pause(7)
         plt.clf()
         plt.close()
 
