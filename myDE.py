@@ -27,7 +27,7 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=100, its=50):
 
         fitness = np.asarray([function(ind) for ind in popnp])
         print("fitness list",fitness)
-        best_idx = np.argmin(fitness)
+        best_idx = np.argmax(fitness)# find min or max
         print("index of best",best_idx)
         best = popnp[best_idx]
         print("best chromosome",best)
