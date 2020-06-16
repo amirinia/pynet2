@@ -1,7 +1,7 @@
 #at begining you can set parameters in config file
 
 # to run simulation you need initial networks ( just simply define nodes and addd to network)
-import staticnet as initialnetwork
+import staticnet2c as initialnetwork
 import gui
 import config
 import report
@@ -49,7 +49,7 @@ print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++
 net1.introduce_yourself()   
 
 # net1.network_outboxes()
-net1.network_inboxes()
+# net1.network_inboxes()
 
 
 net1.network_packet_summery()

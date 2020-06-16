@@ -1,8 +1,18 @@
 # Author: amirinia
-
+import simpy
+import network 
+from  node import  Node
+import message
+import time
+import gui
+import config
 
 from tkinter import *
 import numpy as np
+import config as setting
+
+import pickle
+
 
 size_of_board = 1000
 symbol_size = (size_of_board / 150 ) 
@@ -23,7 +33,7 @@ class Network():
         self.canvas.pack()
         # Input from user in form of clicks
         self.window.bind('<Button-1>', self.click)
-        self.pos = []
+        self.pos = [[setting.BS_POS_X,setting.BS_POS_Y]]
         self.board_status = np.zeros(shape=(300, 300))
 
         #self.button1 = Button(self.canvas, text='quit', command=quit)
@@ -57,7 +67,7 @@ class Network():
             self.canvas.create_oval(grid_position[0] - symbol_size, grid_position[1] - symbol_size,
                                     grid_position[0] + symbol_size, grid_position[1] + symbol_size, width=symbol_thickness,
                                     outline=symbol_O_color)
-            print((logical_position.tolist())) #<class 'numpy.ndarray'>
+            #print((logical_position.tolist())) #<class 'numpy.ndarray'>
             self.pos.append(logical_position.tolist())
             if(str(logical_position) == "[0 0]"):
                 print("it is done")
@@ -98,23 +108,37 @@ class Network():
                     self.board_status[logical_position[0]][logical_position[1]] = 1
 
 
-import simpy
-import network 
-import node
-import message
-import time
-import gui
-import config
 
 
-env = simpy.Environment()
+
 
 
 
     def makeinitialnetwork(self,positions):
-        for i in positions:
-            print(i[0],i[1])
-        pass
+        env = simpy.Environment()
+        net1 = network.Net(env)
+        Node
+        for i in range(1,len( positions)):
+            #if (i >0):
+                print("p= ",positions[i][0],i)
+
+                net1.add_node(Node(i,env,2000,positions[i][0],positions[i][1],node_type=None,network=net1))
+        net1.introduce_yourself()
+        print("KKKKKKKKKK")
+        #net1.network_nodedsicovery()
+        
+        print(net1)
+        # listnodes = net1.nodes
+        # file_pi = open('linstnodes.obj', 'w') 
+        # pickle.dump(listnodes, file_pi)
+        # with open('net1.pkl', 'wb') as handle:
+        #     pickle.dump(net1, handle)
+        # pickle.dump(net1, file = open("net1.pickle", "wb"))
+        # reloaded1 = pickle.load(open("net1.pickle", "rb"))
+        
+        graphi = gui.graphic(net1)
+        graphi.draw_nods()
+
 
 instance = Network()
 instance.mainloop()

@@ -10,7 +10,6 @@ import config
 env = simpy.Environment()
 
 
-
 node1 = node.Node(1,env,1.99, 10,10)
 node2 = node.Node(2,env,1.98,10,60 ,node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
 node3 = node.Node(3,env,1.988,30,11)

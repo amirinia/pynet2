@@ -11,6 +11,7 @@ import alert
 import config
 import pandas as pd
 import logger
+from superframe import Superframe
 """
 """
 
@@ -22,6 +23,9 @@ class Net():
         self.clock = ["CSMA"]
         self.TDMA_slot = 0
         self.CSMA_slot = 0
+        self.superframe = Superframe
+        self.superframe.TDMA_slot = 0
+        self.superframe.CSMA_slot = 0 # we can set here
         self.nodes = []
         self.clusters = []
         self.clusterheads = []
