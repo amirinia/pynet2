@@ -14,16 +14,16 @@ def function(x):
     return a[0]
 
 
-
 """ DE """
 De_FIT=[]
 De_VAR=[]
 De_POP=[]
 
+
 population_num = 100
 iteration = (D * 5000)/population_num
 
-def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=10):
+def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=40):
         #print("de")
         dimensions = D
         initial = []
@@ -95,14 +95,14 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=10):
                          best_idx = j
                          best = trial
             
-            De_FIT.append(fitness[best_idx])
-            De_VAR.append(best)
+            #De_FIT.append(fitness[best_idx])
+            #De_VAR.append(best)
 
         print("best  ",best,fitness[best_idx])
         return best, fitness[best_idx]
 
 
-de(lambda x: function(x) )
+de(lambda x: function(x))
 #print("fit ",De_FIT," ide ",De_VAR," ",De_POP)
-df.to_csv('report/DE best 2020.csv')
+df.to_csv('report/DE best 2020-40-2.csv')
 

@@ -236,7 +236,7 @@ class Net():
         # for c in self.clusters:
         #     print("{0} is alive: {5} with energy : {1} with nodes {2} ; TDMA: {3} ; CH is {4}".format(c.name , c.average_cluster_energy() ,str(c.nodelist) , str(c.TDMA_slots) ,str(c.CH),c.is_alive))
         print("****************************End of introduce network \n")
-        #df.to_csv('report/introduce_yourself.csv')
+        df.to_csv('report/introduce_yourself.csv')
 
 
     def network_packet_summery(self):
@@ -263,7 +263,7 @@ class Net():
         self.logger.log("{0} packets are lost on wireless sensor network".format(sumpout-sumpin))
         print("{0} packets are lost on wireless sensor network".format(sumpout-sumpin))
         print("=================================")
-        #df.to_csv('report/packet.csv')
+        df.to_csv('report/packet.csv')
                         
 
     def savedeadnodes(self,i,energy,now):

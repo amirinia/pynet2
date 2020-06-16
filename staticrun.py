@@ -51,8 +51,8 @@ net1.introduce_yourself()
 # net1.network_outboxes()
 # net1.network_inboxes()
 
-report.plotenergy()
-#report.plotpacket()
 
+net1.network_packet_summery()
 net1.network_optimize()
-
+report.plotpacket()
+report.plotenergy()
