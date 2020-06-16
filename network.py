@@ -319,7 +319,8 @@ class Net():
                                 if n1.TDMA == n2.TDMA:
                                     self.logger.log("{0} {1} {2} {3} {4} ".format(n1,n1.TDMA,"collison TDMA",n2,n2.TDMA))
                                     print("{0} {1} {2} {3} {4} ".format(n1,n1.TDMA,"collison TDMA",n2,n2.TDMA))
-                                    n2.TDMA = len(n2.clus.nodes) + 1
+                                    #print(n2.clus)
+                                    #n2.TDMA = len(n2.clus.nodes) + 1
 
 
     def alert_creator(self): # create alert in the network

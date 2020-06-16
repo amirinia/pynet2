@@ -82,7 +82,7 @@ class graphic:
         #mng.full_screen_toggle()
         mng.set_window_title("draw")
 
-        plt.pause(13)
+        plt.pause(3)
         plt.clf()
         plt.close()
 

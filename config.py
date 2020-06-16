@@ -1,7 +1,7 @@
 import math
 
 ## Runtime configuration
-MAX_RUNTIME = 30000
+MAX_RUNTIME = 1000
 #ALERT TIME
 ALERT_TIME = 1000
 ALERT_END = 4000
