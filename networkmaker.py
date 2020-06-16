@@ -18,7 +18,7 @@ size_of_board = 1000
 symbol_size = (size_of_board / 150 ) 
 symbol_thickness = 15
 
-symbol_O_color = 'green'
+symbol_color = 'pink'
 
 
 
@@ -45,8 +45,11 @@ class Network():
     def mexit(self,buttonB):
         print("Positions are saved")
         print((self.pos))
-        with open("pos.txt", "w") as file:
-            file.write(str(self.pos))
+        # with open("pos.txt", "w") as file:
+        #     file.write(str(self.pos))
+        
+        pickle.dump(self.pos, file = open("pos.pickle", "wb"))
+
         self.makeinitialnetwork(self.pos)
         exit()
     
@@ -63,12 +66,14 @@ class Network():
         # logical_position = grid value on the board
         # grid_position = actual pixel values of the center of the grid
         grid_position = self.convert_logical_to_grid_position(logical_position)
-        if(grid_position[0] >100 or grid_position[1]>60):
+        if(grid_position[0] > 100 or grid_position[1] > 60): # not around button
             self.canvas.create_oval(grid_position[0] - symbol_size, grid_position[1] - symbol_size,
                                     grid_position[0] + symbol_size, grid_position[1] + symbol_size, width=symbol_thickness,
-                                    outline=symbol_O_color)
+                                    outline=symbol_color)
+            
             #print((logical_position.tolist())) #<class 'numpy.ndarray'>
             self.pos.append(logical_position.tolist())
+            #self.canvas.create_text(logical_position[0], logical_position[1], font="Purisa",text="1")
             if(str(logical_position) == "[0 0]"):
                 print("it is done")
 
@@ -117,7 +122,6 @@ class Network():
     def makeinitialnetwork(self,positions):
         env = simpy.Environment()
         net1 = network.Net(env)
-        Node
         for i in range(1,len( positions)):
             #if (i >0):
                 print("p= ",positions[i][0],i)
@@ -127,7 +131,6 @@ class Network():
         print("KKKKKKKKKK")
         #net1.network_nodedsicovery()
         
-        print(net1)
         # listnodes = net1.nodes
         # file_pi = open('linstnodes.obj', 'w') 
         # pickle.dump(listnodes, file_pi)

@@ -12,6 +12,7 @@ import config
 import pandas as pd
 import logger
 from superframe import Superframe
+import pickle
 """
 """
 
@@ -219,7 +220,7 @@ class Net():
             print("Outbox {0} has {1} \n".format(str(n.id) ,str(n.outbox)))
 
     def introduce_yourself(self):
-        df = pd.DataFrame(columns=['id' , 'power', 'x' , 'y' , 'parent' ,'is_alive','TDMA','energy'])
+        dfi = pd.DataFrame(columns=['id' , 'power', 'x' , 'y' , 'parent' ,'is_alive','TDMA','energy'])
         self.logger.log("****************************Begin of introduce network" )
         print("****************************Begin of introduce network" )
         # print("Network {0} with {1} node number with size {2} {3} and have {4} clusters".format(self.name,len(self.nodelist),self.xsize,self.ysize,len(self.clusterheads)))
@@ -229,24 +230,26 @@ class Net():
                 self.logger.log("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5} with TDMA {6} {7}".format(x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))))
                 print("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5} with TDMA {6} {7}".format(x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))))
                 # print(x.energy)
-                df = df. append(pd.Series([x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))], index=df.columns), ignore_index=True)
+                dfi = dfi. append(pd.Series([x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))], index=dfi.columns), ignore_index=True)
             if len(x.parent) != 0:
                 self.logger.log("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5} with TDMA {6} {7} sensor t: {8}".format(x.id ,x.power, str(x.x) , str(x.y) ,str(next(reversed(x.parent))),x.is_alive,x.TDMA,next(reversed(x.energy)),x.sensor))
                 print("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5} with TDMA {6} {7} sensor t: {8}".format(x.id ,x.power, str(x.x) , str(x.y) ,str(next(reversed(x.parent))),x.is_alive,x.TDMA,next(reversed(x.energy)),x.sensor))
                 # print(x.energy)
-                df = df. append(pd.Series([x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))], index=df.columns), ignore_index=True)
+                dfi = dfi. append(pd.Series([x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))], index=dfi.columns), ignore_index=True)
         self.logger.log("==============================Clusters===============================")
         print("==============================Clusters===============================")
         # for c in self.clusters:
         #     print("{0} is alive: {5} with energy : {1} with nodes {2} ; TDMA: {3} ; CH is {4}".format(c.name , c.average_cluster_energy() ,str(c.nodelist) , str(c.TDMA_slots) ,str(c.CH),c.is_alive))
         print("****************************End of introduce network \n")
-        df.to_csv('report/introduce_yourself.csv')
+        dfi.to_csv('report/introduce_yourself.csv')
+        pickle.dump(self.nodes, file = open("nodes.pickle", "wb"))
+
 
 
     def network_packet_summery(self):
         sumpout = 0
         sumpin = 0
-        df = pd.DataFrame(columns=['id','sent','received','lost'])
+        dfp = pd.DataFrame(columns=['id','sent','received','lost'])
         self.logger.log("=================================Sent packet summery==============================")
         print("=================================Sent packet summery==============================")
         for n in self.nodes:
@@ -261,13 +264,13 @@ class Net():
             self.logger.log("node {0} Received {1} packes".format(n,len(n.inbox)))
             print("node {0} Received {1} packes".format(n,len(n.inbox)))
             sumpin +=len(n.inbox)
-            df = df.append(pd.Series([n,len(n.outbox),len(n.inbox),len(n.outbox)-len(n.inbox)], index=df.columns), ignore_index=True)
+            dfp = dfp.append(pd.Series([n,len(n.outbox),len(n.inbox),len(n.outbox)-len(n.inbox)], index=dfp.columns), ignore_index=True)
         self.logger.log("All packet numbers in inbox the network is {0} \n".format(sumpin))
         print("All packet numbers in inbox the network is {0} \n".format(sumpin))
         self.logger.log("{0} packets are lost on wireless sensor network".format(sumpout-sumpin))
         print("{0} packets are lost on wireless sensor network".format(sumpout-sumpin))
         print("=================================")
-        df.to_csv('report/packet.csv')
+        dfp.to_csv('report/packet.csv')
                         
 
     def savedeadnodes(self,i,energy,now):

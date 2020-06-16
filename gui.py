@@ -210,6 +210,8 @@ class graphic:
             nx.draw_networkx_edges(G,pos)
             nx.draw_networkx_labels(G,pos,)
             nx.draw_networkx_edge_labels(G,pos,edge_labels=edge_labels)
+            nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=[0], node_size=1000, node_color='#66ff66')
+
             plt.title("Graph Title")
             plt.show()
 

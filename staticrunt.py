@@ -49,7 +49,7 @@ print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++
 net1.introduce_yourself()   
 
 # net1.network_outboxes()
-net1.network_inboxes()
+#net1.network_inboxes()
 
 
 net1.network_packet_summery()
