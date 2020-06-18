@@ -33,7 +33,10 @@ def Kmeans(network ,k=3):
     for i in centroids.keys():
         plt.scatter(*centroids[i], color=colmap[i],s=400)
 
-    plt.show()
+
+    plt.pause(5)
+    plt.clf()
+    plt.close()
 
     print(1)
 
@@ -59,7 +62,10 @@ def Kmeans(network ,k=3):
     for i in centroids.keys():
         plt.scatter(*centroids[i], color=colmap[i])
 
-    plt.show()
+
+    plt.pause(5)
+    plt.clf()
+    plt.close()
     print(2)
 
     ## Update Stage
@@ -89,7 +95,10 @@ def Kmeans(network ,k=3):
         dx = (centroids[i][0] - old_centroids[i][0]) * 0.75
         dy = (centroids[i][1] - old_centroids[i][1]) * 0.75
         ax.arrow(old_x, old_y, dx, dy, head_width=2, head_length=3, fc=colmap[i], ec=colmap[i])
-    plt.show()
+
+    plt.pause(5)
+    plt.clf()
+    plt.close()
     print(3)
     df = assignment(df, centroids)
 
@@ -99,7 +108,10 @@ def Kmeans(network ,k=3):
     for i in centroids.keys():
         plt.scatter(*centroids[i], color=colmap[i])
     ax.legend()
-    plt.show()
+
+    plt.pause(5)
+    plt.clf()
+    plt.close()
     print(df)
 
     # for i, row in df.iterrows():
@@ -155,7 +167,10 @@ def Kmeans(network ,k=3):
     for i in centroids.keys():
         plt.scatter(*centroids[i], color=colmap[i])
 
-    plt.show()
+
+    plt.pause(5)
+    plt.clf()
+    plt.close()
 
     # labels = kmeans.predict(df)
     # centroids = kmeans.cluster_centers_

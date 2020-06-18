@@ -48,7 +48,7 @@ class Net():
         is_solved = False
 
         while True:
-            self.ClusterHead_finder()
+            #self.ClusterHead_finder()
             if (initial == False): # run once initialization
                 try:
                     yield self.env.process(self.initialization(10))
@@ -123,23 +123,28 @@ class Net():
 
 
     def initialization(self,duration):
-        self.logger.log("BS start to advertise + Superframe rules")
-        print("BS start to advertise + Superframe rules")
+        self.logger.log("initialization BS start to advertise + Superframe rules")
+        print("initialization BS start to advertise + Superframe rules")
         self.network_nodedsicovery()
-        for n in self.clusterheads:
-            self.nodes[0].neighbors.append(n)
-        self.logger.log("neighbors of BS:{0}".format(self.nodes[0].neighbors))
-        print("neighbors of BS: {0}".format(self.nodes[0].neighbors))
-        for n in self.nodes[0].neighbors:
-            # print(n,"is near bs")
-            # n.distance.clear()
-            n.distance.append(self.nodes[0])
+        if (len(self.clusterheads) != 0):
+            for n in self.clusterheads:
+                self.nodes[0].neighbors.append(n)
+            self.logger.log("neighbors of BS:{0}".format(self.nodes[0].neighbors))
+            print("neighbors of BS: {0}".format(self.nodes[0].neighbors))
+        else:
+            print("Clusterheads' list is empty")
+
+        # for n in self.nodes[0].neighbors:
+        #     print(n,"is near bs")
+        #     # n.distance.clear()
+        #     n.distance.append(self.nodes[0])
 
         message_sender = message.Message()
+        for n in self.nodes:
+            message_sender.send_message("BS boradcast + Superframe rules adv " + str(n.id),self.nodes[0],n)
         message_sender.broadcast(self.nodes[0],"BS boradcast + Superframe rules adv {0} at env:{1}".format(self.nodes[0].id ,self.env.now))
-        self.logger.log('cluster formation\n')
-        print('cluster formation\n')
-        # self.cluster_formation()
+        #self.logger.log('cluster formation\n')
+
         print("Inititial network %d nods at %d"%(len(self.nodes),self.env.now))
         yield self.env.timeout(duration)
         print("net is initials ends at {0} \n".format(self.env.now))
@@ -223,8 +228,7 @@ class Net():
         dfi = pd.DataFrame(columns=['id' , 'power', 'x' , 'y' , 'parent' ,'is_alive','TDMA','energy'])
         self.logger.log("****************************Begin of introduce network" )
         print("****************************Begin of introduce network" )
-        # print("Network {0} with {1} node number with size {2} {3} and have {4} clusters".format(self.name,len(self.nodelist),self.xsize,self.ysize,len(self.clusterheads)))
-        #print("New network is created : {0} with {1} node number ".format(self.name,self.nodelist.count))
+
         for x in self.nodes:
             if len(x.parent) == 0:
                 self.logger.log("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5} with TDMA {6} {7}".format(x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))))
@@ -236,13 +240,13 @@ class Net():
                 print("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5} with TDMA {6} {7} sensor t: {8}".format(x.id ,x.power, str(x.x) , str(x.y) ,str(next(reversed(x.parent))),x.is_alive,x.TDMA,next(reversed(x.energy)),x.sensor))
                 # print(x.energy)
                 dfi = dfi. append(pd.Series([x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))], index=dfi.columns), ignore_index=True)
-        self.logger.log("==============================Clusters===============================")
-        print("==============================Clusters===============================")
+        #self.logger.log("==============================Clusters===============================")
+        #print("==============================Clusters===============================")
         # for c in self.clusters:
         #     print("{0} is alive: {5} with energy : {1} with nodes {2} ; TDMA: {3} ; CH is {4}".format(c.name , c.average_cluster_energy() ,str(c.nodelist) , str(c.TDMA_slots) ,str(c.CH),c.is_alive))
         print("****************************End of introduce network \n")
         dfi.to_csv('report/introduce_yourself.csv')
-        pickle.dump(self.nodes, file = open("nodes.pickle", "wb"))
+        #pickle.dump(self.nodes, file = open("nodes.pickle", "wb"))
 
 
 
@@ -277,26 +281,12 @@ class Net():
         self.dfdead.append(pd.Series([i,energy,now], index=self.dfdead.columns), ignore_index=True)
         self.dfdead.to_csv('report/deadnodes.csv')
 
-    def CH_probablity(self):
-        if(len(self.clusters)==0):
-            print("there is no cluster to cal CH_prob")
-        return float(len(self.clusters))/float(len(self.nodes))
+    # def CH_probablity(self):
+    #     if(len(self.clusters)==0):
+    #         print("there is no cluster to cal CH_prob")
+    #     return float(len(self.clusters))/float(len(self.nodes))
 
-    def cluster_formation(self):        
-        for n in self.nodes:
-            if n.id != 0:
-                if n.is_alive == True:
-                    if n.cluster not in self.clusters:
-                        self.clusters.append(n.cluster)
-        print(self.clusters)
-        for c in self.clusters:
-            mcluster = cluster.mycluster(c,self.env,self)
-            for n in self.nodes:
-                if n.cluster == c:
-                    mcluster.add_node(n)
-
-            print(mcluster.nodes)
-            mcluster.Clusterhead_Selection()
+   
 
     def add_cluster(self, cluster):
         self.clusters.append(cluster)
@@ -306,15 +296,7 @@ class Net():
     def remove_cluster(self, cluster):
         self.clusters.remove(cluster)
 
-    def ClusterHead_finder(self):
-        self.clusterheads.clear()
-        for n in self.nodes:
-            if(n.is_alive==True):
-                if (n.is_CH == True):
-    
-                    self.clusterheads.append(n)
-                    self.clusterheads =  list(dict.fromkeys(self.clusterheads)) # remove duplicates
-        # print("clusterheads are {0} in network  \n".format(self.clusterheads))
+
     
     def neighbor_collision(self): # check if 2 nodes neighbor have same TDMA
         for n1 in self.nodes:
@@ -326,7 +308,7 @@ class Net():
                                 if n1.TDMA == n2.TDMA:
                                     self.logger.log("{0} {1} {2} {3} {4} ".format(n1,n1.TDMA,"collison TDMA",n2,n2.TDMA))
                                     print("{0} {1} {2} {3} {4} ".format(n1,n1.TDMA,"collison TDMA",n2,n2.TDMA))
-                                    #print(n2.clus)
+                                    n2.TDMA =n2.TDMA+1
                                     #n2.TDMA = len(n2.clus.nodes) + 1
 
 

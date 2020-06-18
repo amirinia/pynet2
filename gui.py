@@ -19,11 +19,8 @@ class graphic:
         self.mynetwork = mynetwork
 
 
-    def simple_draw(self):
+    def simple_draw(self): # this is simple version no color
         print("simple draw")
-
-
-        self.mynetwork.ClusterHead_finder()
 
         G = nx.Graph()
         G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
@@ -35,6 +32,7 @@ class graphic:
                     if(node.parent[0].is_alive==True):
                         G.add_edge(node.id,node.parent[0].id)
                 if(node.is_CH == True):
+                    
                     if(len(node.next_hop)!=0):
                         if(node!=node.next_hop[0]):
                             if(node.next_hop[0].is_alive==True):
@@ -48,7 +46,10 @@ class graphic:
         #ani = animation.FuncAnimation(fig, animate, interval=1000)
         plt.legend("Network")
 
-        plt.show()
+
+        plt.pause(3)
+        plt.clf()
+        plt.close()
     
     
     def draw(self):
@@ -72,6 +73,7 @@ class graphic:
         for node in self.mynetwork.nodes:
             if(node.is_alive == True):
                 if(node.is_CH == True):
+                    print(node.id," is CH on draw",)
                     nodelistCH.append(node.id)
         # print(nodelistCH)
         nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True, node_size=400)
@@ -213,7 +215,9 @@ class graphic:
             nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=[0], node_size=1000, node_color='#66ff66')
 
             plt.title("Graph Title")
-            plt.show()
+            plt.pause(5)
+            plt.clf()
+            plt.close()
 
     def draw_ch(self):
             print("GUI NODES CH ONLY")
@@ -264,7 +268,10 @@ class graphic:
         nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True)
         #ani = animation.FuncAnimation(fig, animate, interval=1000)
         plt.legend("Network")
-        plt.show()
+
+        plt.pause(5)
+        plt.clf()
+        plt.close()
 
 
     def alert(self):

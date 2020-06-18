@@ -20,7 +20,7 @@ KMEANS.Kmeans(net1,7)
 print("_____________________________Algorithm___________________________________ end\n\n")
 
 # graphi.draw_clusters()
-net1.cluster_formation()
+#net1.cluster_formation()
 net1.introduce_yourself()
 
 # for n in net1.nodes:
@@ -32,7 +32,7 @@ print("++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++
 env.run(until=1)#config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
-net1.network_packet_summery()
+#net1.network_packet_summery()
 
 
 # for n in net1.nodes:
@@ -46,5 +46,5 @@ for n in net1.nodes:
 graphi.draw_neighbors()
 
 net1.introduce_yourself()
-net1.network_outboxes()
-net1.network_inboxes()
+#net1.network_outboxes()
+#net1.network_inboxes()

@@ -1,7 +1,7 @@
 #at begining you can set parameters in config file
 
 # to run simulation you need initial networks ( just simply define nodes and addd to network)
-import staticnet as initialnetwork
+import staticnetfrommaker as initialnetwork
 import gui
 import config
 import report
@@ -18,9 +18,8 @@ graphi = gui.graphic(net1)
 print("__________________________LEACH___________________________________________ start\n\n")
 import LEACH 
 
-LEACH1 = LEACH.LEACHC(env,net1)
-#LEACH1.global_cluster_fromation(env)
-LEACH1.Random_Clusterhead_Selection(env,net1)
+LEACH1 = LEACH.LEACHC(env,net1) 
+
 #logger.logger.log(str("__________________________LEACH___________________________________________ end"))
 print("__________________________LEACH___________________________________________ end\n\n")
 
@@ -48,7 +47,7 @@ print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++
 # print(net1.nodes[0].inbox)
 net1.introduce_yourself()   
 
-# net1.network_outboxes()
+#net1.network_outboxes()
 #net1.network_inboxes()
 
 

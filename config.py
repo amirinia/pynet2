@@ -39,8 +39,8 @@ COVERAGE_RADIUS = 15 # meters
 # initial energy at every node's battery
 INITIAL_ENERGY = 2000 # mili Joules 2000
 
-P_TX = 0.084 * 1000  # Watts to transmite 
-P_RX = 0.073 * 1000 # Watts to receive
+P_TX = 0.084 * 3000  # Watts to transmite 
+P_RX = 0.073 * 3000 # Watts to receive
 #dead node threshold
 DEAD_NODE_THRESHOLD = 100.299
 LOW_NODE_THRESHOLD = 300.5

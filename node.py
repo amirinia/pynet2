@@ -279,36 +279,46 @@ class Node():
             self.aggregate.append(str_message)
         #self.send_ACK(sender_node)
         #print(self.id + " node_receive_message&&&&&&&&&&&&&&*************** " + str_message + " from "+ sender_node.name )
+        
+        if("Superframe rules" in str_message ):
+            print("superframe is set on node {0}".format(self.id))
+        
+        
+        
         if( "is cluster Head" in str_message ):
             # self.change_TDMA(sender_node.TDMA)
             self.parent_setter(sender_node)
             if(self.is_CH == True):
                 self.change_CulsterHead()
+                print("node {0} is CH NOW nnn".format(self.id))
+
+
+
 
         if( "BS" in str_message):
             if any("BS" in s for s in self.inbox):
                 
                 self.BS_getter()
-                print("\n",self,self.getBS)
+                print("\n",self,self.getBS, "is CH ",self.is_CH)
                 print("distance is ",self.distance)
                 self.logger.log("for {0} neighbors are {1}".format(self,self.neighbors))
                 print("for {0} neighbors are {1}".format(self,self.neighbors))
                 # time.sleep(1)
-                for n in self.neighbors:
-                    if n.id != 0:
-                        print(n)
+                # for n in self.neighbors:
+                #     if n.id != 0:
+                #         print(n)
 
-                        if n.distance != self.distance:
-                            n.distance.append(self.distance)
-                            n.distance.append(self)
-                            print(n,"is neighbor ",self.id,n.distance)
-                            if (len(n.distance)==0):
-                                message1 = message.Message()
+                #         if n.distance != self.distance:
+                #             n.distance.append(self.distance)
+                #             n.distance.append(self)
+                #             print(n,"is neighbor ",self.id,n.distance)
+                #             if (len(n.distance)==0):
+                #                 message1 = message.Message()
                                 
-                                message1.send_message("BS +{0}".format(self),self,n)
-                                print(self,"message is sent to",n)
-                                print(n.outbox ,n.id)
-                                print(n.inbox ,n.id)
+                #                 message1.send_message("BS +{0}".format(self),self,n)
+                #                 print(self,"message is sent to",n)
+                #                 print(n.outbox ,n.id)
+                #                 print(n.inbox ,n.id)
                 
                 # if self.id != 0:
 
@@ -335,7 +345,8 @@ class Node():
 
     def parent_setter(self,ch):
         self.parent.clear()
-        self.parent.append(ch)
+        if(self.id !=0):
+            self.parent.append(ch)
         #print(ch, "is head")
 
     def change_to_clusterhead(self):
