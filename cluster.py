@@ -19,7 +19,7 @@ class mycluster:
         self.action = env.process(self.run(env))
         self.net = network
         self.next_CH = []
-        self.CH = []
+        self.CH = node.Node
         self.light = []
         self.temperature = []  
         self.logger = logger.logger()
@@ -51,11 +51,18 @@ class mycluster:
             #self.logger.log("cluster {0} ,CH :{1} alive {2} and average {3}".format(self.id,self.CH,self.CH.is_alive,self.average_cluster_energy()))
             #print("cluster {0} ,CH :{1} alive {2} and average {3}".format(self.id,self.CH,self.CH.is_alive,self.average_cluster_energy()))
             
+            
 
             if(self.CH.is_alive == False):
                 #self.Random_Clusterhead_Selection()
                 #self.Clusterhead_Selection()
                 print("Cluster head is buz dead inside cluster")
+                for n in self.nodes:
+                    if (n.is_alive == True):
+                        self.cluster_head_setter(n)
+                        return
+
+
             # print(self.id,"cluster is runing",self.env.now)
             if len(self.nodes)>7:
                 print("nodes number is exceeded")
@@ -99,11 +106,11 @@ class mycluster:
             return average_en/len(self.nodes)
     
     def cluster_head_setter(self,node):
-
-        self.CH = node
-        for n in self.nodes:
-            if n != node:
-                n.parent_setter(node)
+        if(node.is_alive):
+            self.CH = node
+            for n in self.nodes:
+                if n != node:
+                    n.parent_setter(node)
 
     def Clusterhead_Selection(self):
         maxi = max(i.energy for i in self.nodes)

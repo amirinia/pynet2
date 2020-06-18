@@ -77,15 +77,17 @@ class Node():
             while True:
                 if(self.is_alive == True):
                     if (next(reversed(self.energy)) <= config.DEAD_NODE_THRESHOLD ):
+                        if(self.is_alive == True):
+                            self.is_alive == False
                         self.logger.log("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
                         print("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
                         print(self.power.energy)
                         self.deadtime = self.env.now
                         print(self.clus)
-                        sys.exit()
-                        self.clus.mycluster.Clusterhead_Selection()#SRandom_Clusterhead_Selection()
+                        
+                        #self.clus.mycluster.Clusterhead_Selection()#SRandom_Clusterhead_Selection()
                         self.env.timeout(100)
-                        yield env.timeout(10)
+                        yield self.env.timeout(10)
 
 
                         #self.net.savedeadnodes(self.id,next(reversed(self.energy)),self.env.now)
@@ -103,9 +105,12 @@ class Node():
                         #graphi = gui.graphic(self.net)
                         #graphi.drawdead("{0} {1}".format(self.id ,self.env.now ))
                         # save dead
+                        graph = gui.graphic(self.net)
+                        graph.draw()
                         print("env exit")
                         self.net.env.exit()
-                    
+                        sys.exit()
+
                     if self.env.now > config.ALERT_TIME:
                         if self.net.alert :
                              if(config.Alert_RANGE > math.sqrt(((config.alertx-self.x)**2)+((config.alerty-self.y)**2))):
@@ -136,11 +141,8 @@ class Node():
                                             tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
                                             self.logger.log(tempmessage)
                                             print(tempmessage)
-                                            # energy tx decrease
                                             message_sender = message.Message(tempmessage)
-                                            msg_len = message_sender.message_length()
-                                            self.power.decrease_tx_energy(msg_len)
-                                            self.energy.append(self.power.energy)
+     
                                             message_sender.send_message(tempmessage,self,self.parent[0],TDMA=True)
                                             self.parent[0].buffer.append(tempmessage)
                                         
@@ -148,22 +150,16 @@ class Node():
                                             tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
                                             self.logger.log(tempmessage)
                                             print(tempmessage)
-                                            # energy tx decrease
                                             message_sender = message.Message(tempmessage)
-                                            msg_len = message_sender.message_length()
-                                            self.power.decrease_tx_energy(msg_len)
-                                            self.energy.append(self.power.energy)
+
                                             message_sender.send_message(tempmessage,self,self.parent[0],TDMA=True)
                                             self.parent[0].buffer.append(tempmessage)
                                     else:
                                         tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
                                         self.logger.log(tempmessage)
                                         print(tempmessage)
-                                        # energy tx decrease
                                         message_sender = message.Message(tempmessage)
-                                        msg_len = message_sender.message_length()
-                                        self.power.decrease_tx_energy(msg_len)
-                                        self.energy.append(self.power.energy)
+
                                         message_sender.send_message(tempmessage,self,self.parent[0],TDMA=True)
                                         self.parent[0].buffer.append(tempmessage)
 
@@ -210,11 +206,8 @@ class Node():
                         tempmessage = "at {0} beacon CSMA adv is sent by {1} aprent is {2}, since it has no CH with energy {3}".format(env.now,self.id,self.parent,self.power)
                         self.logger.log(tempmessage)
                         print(tempmessage)
-                        # energy tx decrease
                         message_sender = message.Message(tempmessage)
-                        msg_len = message_sender.message_length()
-                        self.power.decrease_tx_energy(msg_len)
-                        self.energy.append(self.power.energy)
+
 
                         for n in self.neighbors:
                             message_sender.broadcast(n,"beacon CSMA adv {0} at env:{1}".format(n.id ,env.now))
@@ -235,9 +228,7 @@ class Node():
                             print(tempbuffer)
                             # energy tx decrease
                             message_sender = message.Message(tempbuffer)
-                            msg_len = message_sender.message_length()
-                            self.power.decrease_tx_energy(msg_len)
-                            self.energy.append(self.power.energy)
+
                             self.buffer.clear()
 
                             # print(self.clus.cluster_average_light())
@@ -263,8 +254,7 @@ class Node():
     #                     # if(self.parent[-1].is_alive == True):
     #                     # message_sender.send_message("at env:{3} light: {0} temperature: {1} from node {2} to {4}".format(self.sensor.light_sensor(),self.sensor.temperature_sensor(),self.id,env.now,self.parent[0]),self,self.parent[0])
     #                 msg_len = message_sender.message_length()
-    #                 self.power.decrease_tx_energy(msg_len)
-    #                 self.energy.append(self.power.energy)
+  
         yield self.env.timeout(1)
             
 

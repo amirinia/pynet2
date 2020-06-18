@@ -44,8 +44,10 @@ class LEACHC:
                 if(node.energy >= max(neighbor.energy for neighbor in node.neighbors)):
                     node.change_CulsterHead()
                     mycluster1 = cluster.mycluster(node.id,env,self.network)
-                    for n in node.neighbors:
+                    mycluster1.add_node(node) # add ch to node list
+                    for n in node.neighbors: # add neighbor of CH to cluster
                         mycluster1.add_node(n)
+                    
                     mycluster1.CH = node
                     node.set_TDMA(len(mycluster1.nodes))
                     # node.change_TDMA(mycluster1.TDMA_slots)
@@ -116,14 +118,28 @@ class LEACHC:
         prob_ch =  self.CH_probablity()
         cluster.logger.log("   \n      Random_Clusterhead_Selection : cluster {0} with prob {1}".format(cluster.id,prob_ch))
         print("   \n      Random_Clusterhead_Selection : cluster {0} with prob {1}".format(cluster.id,prob_ch))
+        av = cluster.average_cluster_energy()
+        print("av enargy = ",av ," cluster nodes ",cluster.nodes)
+        toplist =[]
         for n in cluster.nodes:
-            n_random = random.uniform(0,1)
-            #print("random for {0} is {1}".format(n,n_random))
-            if n_random < prob_ch:
-                if(next(reversed(n.energy))>config.LOW_NODE_THRESHOLD):
+            print(n.id," en: ",next(reversed(n.energy)))
+            if(next(reversed(n.energy)) >= av ):
+                toplist.append(n)
+        print("toplist",toplist)
+        
+        for n in toplist:
+            if(n == self.findmaxenergy(toplist)):
+                random_node = random.choice(cluster.nodes)
+                if(random_node.id == n.id):
+                    print(n.id," ",n.is_CH, " .neighbors ",n.neighbors," energy : ",next(reversed(n.energy)), " r.id ",random_node.id)
+
+                #print("random for {0} is {1}".format(n,n_random))
+                n_random = random.uniform(0,1)
+            
+                if n_random < prob_ch:
+                
                     cluster.logger.log(" <<< random for node {0} is {1} with energy {2} and average cluster energy {3}".format(n,n_random,next(reversed(n.energy)),cluster.average_cluster_energy()))
                     print(" <<< random for node {0} is {1} with energy {2} and average cluster energy {3} low threshold {4}".format(n,n_random,next(reversed(n.energy)),cluster.average_cluster_energy(),config.LOW_NODE_THRESHOLD))
-                    print(n.is_CH, " .neighbors ",n.neighbors)
                     if(sum(n.energy)> cluster.average_cluster_energy()):
                         if(n!=cluster.CH):
                             
@@ -145,6 +161,18 @@ class LEACHC:
                             message2 = message.Message()
                             message2.broadcast(n,"{0} is cluster Head in {1} with TDMA ".format(n.id,cluster.id))
                             self.ClusterHead_finder()
-                            graph = gui.graphic(cluster.net)
-                            graph.draw() # simple draw
+                            #graph = gui.graphic(cluster.net)
+                            #graph.draw() # simple draw
                             #time.sleep(1)
+                            
+                            return # it 
+    
+    def findmaxenergy(self,nodelist):
+        energylist = []
+        for n in nodelist:
+            energylist.append(next(reversed(n.energy)))
+        
+        for n in nodelist:
+            if (max(energylist) == next(reversed(n.energy))):
+                print(n.id, " has max energy " ,max(energylist))
+                return n

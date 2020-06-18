@@ -61,32 +61,47 @@ class graphic:
                 # print("for node in self.mynetwork.nodes {0} and cluster head {1}".format(node,node.parent))
 
                 G.add_node(node.id,pos=(node.x,node.y))
-                
+                if(len(node.parent)==0): # if there is no parrent
+                    if(node.is_alive==True):
+                        G.add_edge(0,node.id)
                 if(len(node.parent)!=0):
                     if(node.parent[0].is_alive==True):
                         G.add_edge(0,node.parent[0].id)
                 if(len(node.parent)!=0):
                     if(node.parent[0].is_alive==True):
                         G.add_edge(node.id,node.parent[0].id)
+            else: # deadposition
+                G.add_node(node.id,pos=(node.x,node.y))
 
         nodelistCH = []
+        deadlist = []
         for node in self.mynetwork.nodes:
             if(node.is_alive == True):
                 if(node.is_CH == True):
-                    print(node.id," is CH on draw",)
+                   # print(node.id," is CH on draw",)
                     nodelistCH.append(node.id)
-        # print(nodelistCH)
+            else:
+                deadlist.append(node.id)
+                print(node.id," id dead in gui")
+        
+        #print(deadlist)
+
         nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True, node_size=400)
         #ani = animation.FuncAnimation(fig, animate, interval=1000)
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=[0], node_size=1000, node_color='#66ff66')
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=nodelistCH, node_size=700, node_color='#ff80ff')
+        nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=deadlist, node_size=500, node_color='#ff0000')
+
         mng = plt.get_current_fig_manager()
         #mng.full_screen_toggle()
         mng.set_window_title("draw")
 
-        plt.pause(3)
+        plt.pause(5)
         plt.clf()
         plt.close()
+        # plt.show()
+
+        
 
     def drawdead(self,title):
         print("draw dead\n")

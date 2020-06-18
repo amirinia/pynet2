@@ -49,6 +49,10 @@ class Net():
 
         while True:
             #self.ClusterHead_finder()
+            if(self.env.now % 700 == 0):
+                graph = gui.graphic(self)
+                graph.draw()  
+                
             if (initial == False): # run once initialization
                 try:
                     yield self.env.process(self.initialization(10))
@@ -119,7 +123,8 @@ class Net():
                 if any("Alert" in s for s in self.nodes[0].inbox):
                     self.logger.log(" Alertttttt is received by BS ".format( self.env.now))
                     print(" Alertttttt is received by BS ".format( self.env.now))
-                    
+            
+                
 
 
     def initialization(self,duration):
