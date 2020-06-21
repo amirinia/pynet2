@@ -12,6 +12,7 @@ import math
 import pandas as pd 
 import logger
 import sys
+from superframe import Superframe
 
 class Node():
     def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(1000,2000)),x=random.randint(0,config.AREA_WIDTH),y=random.randint(0,config.AREA_LENGTH),node_type=None, power_type=1, mobile_type=0, network=network ,sensor_type=0):
@@ -44,6 +45,7 @@ class Node():
         self.alert_neighbor = False
         self.logger = logger.logger()
         self.deadtime = 100000000000000
+        self.superframe = Superframe()
         
     def __str__(self):
         return str(self.id)

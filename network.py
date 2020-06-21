@@ -24,9 +24,8 @@ class Net():
         self.clock = ["CSMA"]
         self.TDMA_slot = 0
         self.CSMA_slot = 0
-        self.superframe = Superframe
-        self.superframe.TDMA_slot = 0
-        self.superframe.CSMA_slot = 0 # we can set here
+        self.superframe = Superframe()
+         # we can set here
         self.nodes = []
         self.clusters = []
         self.clusterheads = []
@@ -47,6 +46,7 @@ class Net():
         initialalert = False
         is_solved = False
 
+
         while True:
             #self.ClusterHead_finder()
             if(self.env.now % 700 == 0):
@@ -65,7 +65,7 @@ class Net():
             self.superframe_num = counter
             self.logger.log('\n New Superframe is began CSMA at %d number %d\n' % (self.env.now ,counter))
             print('\n New Superframe is began CSMA at %d number %d\n' % (self.env.now ,counter))
-            CSMA_duration = config.CSMA_duration
+            CSMA_duration = self.superframe.CSMA_slot
 
             if counter % config.Base_Sattion_Beaconning_period == 0:
                 for n in self.nodes[0].neighbors:
@@ -78,7 +78,7 @@ class Net():
                 print('Was interrupted.CSMA')
 
             #print('TDMA at %d\n' % env.now)
-            TDMA_duration = 7
+            TDMA_duration = self.superframe.TDMA_slot
 
             try:
                 yield self.env.process(self.TDMA(TDMA_duration))
@@ -337,7 +337,7 @@ class Net():
         # duration
         duration = config.TDMA_duration + config.Duration + config.Inactive_duration
         print("duration ={0} superframe {1} {2} and t1:{3} t2:{4} t3:{5}".format(config.Duration,config.Multiframe_size,config.Multiframe_state,config.TDMA_duration,config.CSMA_duration,config.Inactive_duration))
-        
+        print("number of superframe " , self.superframe_num)
         # packet lost
         sumpout = 0
         sumpin = 0

@@ -9,6 +9,7 @@ import time
 import logger
 import LEACH
 import pickle
+from superframe import Superframe
 
 class mycluster:
     def __init__(self,id, env ,network):
@@ -23,7 +24,8 @@ class mycluster:
         self.light = []
         self.temperature = []  
         self.logger = logger.logger()
-        self.saveClusterPos()    
+        self.saveClusterPos()
+        self.superframe = Superframe()    
         print("\nCluster {0} is created".format(self.id))
         
 
