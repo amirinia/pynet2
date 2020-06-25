@@ -18,6 +18,7 @@ class LEACHC:
         self.global_cluster_fromation(env)
         self.initial = False
         self.action = env.process(self.run(env))
+        self.rotation_time = 800
 
     def run(self,env): #steady pahse
         while True:
@@ -27,7 +28,7 @@ class LEACHC:
             #     self.global_cluster_fromation(env)
 
 
-            if(self.env.now % 500 == 0):
+            if(self.env.now % self.rotation_time == 0):
                 for c in self.clusters:
                     self.Random_Clusterhead_SelectionCluster(c)
                 print("R buz 1000")
@@ -139,7 +140,7 @@ class LEACHC:
                 if n_random < prob_ch:
                 
                     cluster.logger.log(" <<< random for node {0} is {1} with energy {2} and average cluster energy {3}".format(n,n_random,next(reversed(n.energy)),cluster.average_cluster_energy()))
-                    print(" <<< random for node {0} is {1} with energy {2} and average cluster energy {3} low threshold {4}".format(n,n_random,next(reversed(n.energy)),cluster.average_cluster_energy(),config.LOW_NODE_THRESHOLD))
+                    print("at ",self.env.now," <<< random for node {0} is {1} with energy {2} and average cluster energy {3} low threshold {4}".format(n,n_random,next(reversed(n.energy)),cluster.average_cluster_energy(),config.LOW_NODE_THRESHOLD))
                     if(sum(n.energy)> cluster.average_cluster_energy()):
                         if(n!=cluster.CH):
                             
@@ -161,8 +162,8 @@ class LEACHC:
                             message2 = message.Message()
                             message2.broadcast(n,"{0} is cluster Head in {1} with TDMA ".format(n.id,cluster.id))
                             self.ClusterHead_finder()
-                            #graph = gui.graphic(cluster.net)
-                            #graph.draw() # simple draw
+                            graph = gui.graphic(cluster.net)
+                            graph.draw() # simple draw
                             #time.sleep(1)
                             
                             return # it 

@@ -3,12 +3,17 @@ import gui
 import simpy
 import network
 import node
-import KMEANS
+import clusteringKMEANS as KMEANS
 
 # to run simulation you need initial networks ( just simply define nodes and addd to network or use random generator)
-env = simpy.Environment()
-net1 = network.Net(env)
-net1.random_net_generator(env,net1,40)
+#import staticnetfrommaker as initialnetwork
+import staticnet as initialnetwork
+
+
+
+net1 = initialnetwork.net1
+env = initialnetwork.env
+#net1.random_net_generator(env,net1,40)
 net1.introduce_yourself()
 graphi = gui.graphic(net1)
 graphi.draw_nods()
@@ -16,7 +21,7 @@ graphi.draw_nods()
 
 # in second step you need and algorithm
 print("_____________________________Algorithm___________________________________ start\n\n")
-KMEANS.Kmeans(net1,7)
+KMEANS.Kmeans(net1,5)
 print("_____________________________Algorithm___________________________________ end\n\n")
 
 # graphi.draw_clusters()

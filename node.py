@@ -271,7 +271,11 @@ class Node():
             self.aggregate.append(str_message)
         #self.send_ACK(sender_node)
         #print(self.id + " node_receive_message&&&&&&&&&&&&&&*************** " + str_message + " from "+ sender_node.name )
-        
+        # if(self.header == 'superframe'):
+        #     print("zzzzzzzzzz")
+        #     exit()
+            
+
         if("Superframe rules" in str_message ):
             print("superframe is set on node {0}".format(self.id))
         

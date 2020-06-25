@@ -1,14 +1,14 @@
 import math
 
 ## Runtime configuration
-MAX_RUNTIME = 20000
+MAX_RUNTIME = 10000
 #ALERT TIME
 ALERT_TIME = 1000
 ALERT_END = 4000
 
 # area definition
 AREA_WIDTH = 300
-AREA_LENGTH = 200
+AREA_LENGTH = 300
 
 #Superframe
 CSMA_duration = 9

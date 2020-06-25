@@ -29,7 +29,7 @@ class Network():
     def __init__(self):
         self.window = Tk()
         self.window.title('Network Maker')
-        self.canvas = Canvas(self.window, width=size_of_board, height=size_of_board)
+        self.canvas = Canvas(self.window, width=size_of_board, height=size_of_board,bg="white")
         self.canvas.pack()
         # Input from user in form of clicks
         self.window.bind('<Button-1>', self.click)
@@ -48,7 +48,7 @@ class Network():
         # with open("pos.txt", "w") as file:
         #     file.write(str(self.pos))
         
-        pickle.dump(self.pos, file = open("pos.pickle", "wb"))
+        pickle.dump(self.pos, file = open("report/pos.pickle", "wb"))
 
         self.makeinitialnetwork(self.pos)
         exit()
@@ -113,20 +113,16 @@ class Network():
                     self.board_status[logical_position[0]][logical_position[1]] = 1
 
 
-
-
-
-
-
-
     def makeinitialnetwork(self,positions):
         env = simpy.Environment()
         net1 = network.Net(env)
         for i in range(1,len( positions)):
             #if (i >0):
-                print("p= ",positions[i][0],i)
+                x = positions[i][0]
+                y = net1.ysize - positions[i][1]
+                print("p = x:",positions[i][0],positions[i][1],i)
 
-                net1.add_node(Node(i,env,2000,positions[i][0],positions[i][1],node_type=None,network=net1))
+                net1.add_node(Node(i,env,2000,x,y,node_type=None,network=net1))
         net1.introduce_yourself()
         print("KKKKKKKKKK")
         #net1.network_nodedsicovery()

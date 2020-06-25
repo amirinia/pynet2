@@ -61,6 +61,7 @@ class graphic:
                 # print("for node in self.mynetwork.nodes {0} and cluster head {1}".format(node,node.parent))
 
                 G.add_node(node.id,pos=(node.x,node.y))
+                
                 if(len(node.parent)==0): # if there is no parrent
                     if(node.is_alive==True):
                         G.add_edge(0,node.id)
@@ -217,6 +218,7 @@ class graphic:
             for node in self.mynetwork.nodes:
                 if(node.is_alive == True):
                     G.add_node(node.id,pos=(node.x,node.y),weight=node.id)
+                    #print("draw ",node.x,node.y)
                     #G.add_edge(node.id,0,weight=node.id)
                 #print(node)
             pos = nx.get_node_attributes(G, 'pos')

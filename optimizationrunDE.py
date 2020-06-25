@@ -23,7 +23,7 @@ De_POP=[]
 population_num = 100
 iteration = (D * 5000)/population_num
 
-def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=40):
+def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=30):
         #print("de")
         dimensions = D
         initial = []

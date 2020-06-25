@@ -1,3 +1,5 @@
-networkx
 simpy
+networkx
+matplotlib
 pandas
+pickle

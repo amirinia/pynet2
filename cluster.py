@@ -41,7 +41,7 @@ class mycluster:
         pos =[]
         for n in self.nodes:
             pos.append([n.x,n.y])
-        pickle.dump(pos, file = open("posCluster{0}.pickle".format(self.id), "wb"))
+        #pickle.dump(pos, file = open("report/posCluster{0}.pickle".format(self.id), "wb"))
 
     def run(self,env):
         while True:

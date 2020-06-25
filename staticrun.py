@@ -1,38 +1,40 @@
 #at begining you can set parameters in config file
 
 # to run simulation you need initial networks ( just simply define nodes and addd to network)
-import staticnetc2 as initialnetwork
 import gui
 import config
 import report
 import logger
 
-#initialnetwork.net1.introduce_self()
+# here you select if it start with statci network or network maker
+startstatic = False
+if(startstatic):
+    import staticnet as initialnetwork
+else:
+    import staticnetfrommaker as initialnetwork
+
+# create network
 net1 = initialnetwork.net1
 env = initialnetwork.env
 graphi = gui.graphic(net1)
 
 
 # in second step you need and algorithm
-#logger.logger.log(str("__________________________LEACH___________________________________________ start"))
+
 print("__________________________LEACH___________________________________________ start\n\n")
 import LEACH 
 
 LEACH1 = LEACH.LEACHC(env,net1)
-#LEACH1.global_cluster_fromation(env)
-#LEACH1.Random_Clusterhead_Selection(env,net1)
-#logger.logger.log(str("__________________________LEACH___________________________________________ end"))
+
 print("__________________________LEACH___________________________________________ end\n\n")
 
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++")
 net1.introduce_yourself()
 graphi.draw()
-#logger.logger.log(str("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++"))
-print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
 
+print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
 env.run(until=config.MAX_RUNTIME)
-#logger.logger.log(str("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++"))
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 

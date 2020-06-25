@@ -7,7 +7,7 @@ import RSSI
 import cluster
 import message
 import gui
-import alert
+#import alert
 import config
 import pandas as pd
 import logger
@@ -51,7 +51,7 @@ class Net():
             #self.ClusterHead_finder()
             if(self.env.now % 700 == 0):
                 graph = gui.graphic(self)
-                graph.draw()  
+                #graph.draw()  
                 
             if (initial == False): # run once initialization
                 try:
@@ -144,10 +144,12 @@ class Net():
         #     # n.distance.clear()
         #     n.distance.append(self.nodes[0])
 
-        message_sender = message.Message()
+        message_sender = message.Message(header='superframe',data=self.superframe)
+        message_sender.broadcast(self.nodes[0])
+
         for n in self.nodes:
             message_sender.send_message("BS boradcast + Superframe rules adv " + str(n.id),self.nodes[0],n)
-        message_sender.broadcast(self.nodes[0],"BS boradcast + Superframe rules adv {0} at env:{1}".format(self.nodes[0].id ,self.env.now))
+        #message_sender.broadcast(self.nodes[0],"BS boradcast + Superframe rules adv {0} at env:{1}".format(self.nodes[0].id ,self.env.now))
         #self.logger.log('cluster formation\n')
 
         print("Inititial network %d nods at %d"%(len(self.nodes),self.env.now))
@@ -250,8 +252,8 @@ class Net():
         # for c in self.clusters:
         #     print("{0} is alive: {5} with energy : {1} with nodes {2} ; TDMA: {3} ; CH is {4}".format(c.name , c.average_cluster_energy() ,str(c.nodelist) , str(c.TDMA_slots) ,str(c.CH),c.is_alive))
         print("****************************End of introduce network \n")
-        dfi.to_csv('report/introduce_yourself.csv')
-        #pickle.dump(self.nodes, file = open("nodes.pickle", "wb"))
+        #dfi.to_csv('report/introduce_yourself.csv')
+        #pickle.dump(self.nodes, file = open("report/nodes.pickle", "wb"))
 
 
 
@@ -318,7 +320,7 @@ class Net():
 
 
     def alert_creator(self): # create alert in the network
-        alert1 = alert.Alert(self.env,config.alertx,config.alerty,self)
+        
         graphi = gui.graphic(self)
         #graphi.alert()
 
