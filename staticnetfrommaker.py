@@ -32,7 +32,7 @@ net1.introduce_yourself()
 print("KKKKKKKKKK")
 net1.network_nodedsicovery()
 graphi = gui.graphic(net1)
-graphi.draw_nods()
+#graphi.draw_nods()
 
 # env.run(until=80)
 

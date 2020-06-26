@@ -7,7 +7,7 @@ import report
 import logger
 
 # here you select if it start with statci network or network maker
-startstatic = True
+startstatic = False
 if(startstatic):
     import staticnet as initialnetwork
 else:

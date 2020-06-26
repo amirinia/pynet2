@@ -5,7 +5,8 @@ import config
 import RSSI
 import simpy
 import pickle
-
+import energymodel
+import message
 
 class Interference():
     def __init__(self,env,network):
@@ -38,8 +39,10 @@ class Interference():
         
         if (len(self.list) != len(set(self.list))):
             print(self.list)
-            print("Interference is detected")
-
+            l1= self.list
+            print("Interference is detected",set([x for x in l1 if l1.count(x) > 1]))
+            for n in l1:
+                n.power.decrease_rx_energy(500)
 
 
     def distance(self, node ,node1):

@@ -18,7 +18,7 @@ class LEACHC:
         self.global_cluster_fromation(env)
         self.initial = False
         self.action = env.process(self.run(env))
-        self.rotation_time = 800
+        self.rotation_time = 300
 
     def run(self,env): #steady pahse
         while True:
@@ -63,21 +63,7 @@ class LEACHC:
                     self.clusterheads.append(node)
                     #yield self.env.timeout(1)
 
-    def Random_Clusterhead_Selection(self,env,network):
-        self.logger.log("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH \n")
-        print("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH \n")
-            #initial clusters
-        self.global_cluster_fromation(env)
-        # yield self.env.timeout(1)
-        # try:
-        #     yield self.env.process(self.Random_Clusterhead_Selection_steady(env))
-        # except simpy.Interrupt:
-        #     print("inter")
 
-        # prob_ch = self.network.CH_probablity()
-        # print("probib {0}".format(prob_ch))
-        # print(network.clusters)
-        # print(self.network.clusters)
 
     def Random_Clusterhead_Selection_steady(self,env):
         yield self.env.timeout(7)
@@ -91,7 +77,7 @@ class LEACHC:
 
         for n in self.network.nodes:
             if(n.is_alive==True):
-                if (n.is_CH == True):
+                if (n.is_CH == True and n.id != 0):
                     #self.network.clusterheads.append(n)
                     self.network.clusterheads.append(n)
                     self.network.clusterheads =  list(dict.fromkeys(self.clusterheads)) 
@@ -109,7 +95,7 @@ class LEACHC:
     def Clusterhead_Selection(self):
         maxi = max(i.energy for i in self.nodes)
         for i in self.nodes:
-            if (i.energy == maxi):
+            if (i.energy == maxi and i.id !=0):
                 i.change_to_clusterhead()
                 self.logger.log("{0} is cluster head".format(i))
                 print("{0} is cluster head".format(i))
@@ -121,10 +107,10 @@ class LEACHC:
         print("   \n      Random_Clusterhead_Selection : cluster {0} with prob {1}".format(cluster.id,prob_ch))
         av = cluster.average_cluster_energy()
         print("av enargy = ",av ," cluster nodes ",cluster.nodes)
-        toplist =[]
+        toplist = []
         for n in cluster.nodes:
             print(n.id," en: ",next(reversed(n.energy)))
-            if(next(reversed(n.energy)) >= av ):
+            if(next(reversed(n.energy)) >= av and n.id != 0):
                 toplist.append(n)
         print("toplist",toplist)
         
@@ -144,7 +130,7 @@ class LEACHC:
                     if(sum(n.energy)> cluster.average_cluster_energy()):
                         if(n!=cluster.CH):
                             
-                            self.ClusterHead_finder()
+                            #self.ClusterHead_finder()
 
                             cluster.logger.log("new ch is node {0}  with parent {1} and last ch was {2} with {3}".format(n,n.parent,cluster.CH,cluster.CH.parent))
                             print("new ch is node {0}  with parent {1} and last ch was {2} with {3}".format(n,n.parent,cluster.CH,cluster.CH.parent))
@@ -162,8 +148,8 @@ class LEACHC:
                             message2 = message.Message()
                             message2.broadcast(n,"{0} is cluster Head in {1} with TDMA ".format(n.id,cluster.id))
                             self.ClusterHead_finder()
-                            #graph = gui.graphic(cluster.net)
-                            #graph.draw() # simple draw
+                            graph = gui.graphic(cluster.net)
+                            graph.draw() # simple draw
                             #time.sleep(1)
                             
                             return # it 
