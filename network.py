@@ -13,6 +13,7 @@ import pandas as pd
 import logger
 from superframe import Superframe
 import pickle
+from interference import Interference
 """
 """
 
@@ -39,6 +40,7 @@ class Net():
         self.alert = False
         self.logger = logger.logger()
         self.dfdead = pd.DataFrame(columns=['id','deadtime','remainedenergy'])
+        self.interfrerence = Interference(self.env,self)
 
     def run(self):
         counter = 0
@@ -48,6 +50,7 @@ class Net():
 
 
         while True:
+
             #self.ClusterHead_finder()
             if(self.env.now % 700 == 0):
                 graph = gui.graphic(self)
@@ -88,12 +91,13 @@ class Net():
             self.neighbor_collision()
 
             #print('INACTIVE at %d\n' % env.now)
-            inactive_duration = 14
+            inactive_duration = config.Inactive_duration
             for i in range(inactive_duration):
                 self.clock.clear()
                 self.clock.append("INACTIVE")
                 self.logger.log("at %d inactive network" %self.env.now)
                 print("at %d inactive network" %self.env.now)
+
                 yield self.env.timeout(1)
             # self.network_nodedsicovery()
             # print(self.nodes)
@@ -123,7 +127,8 @@ class Net():
                 if any("Alert" in s for s in self.nodes[0].inbox):
                     self.logger.log(" Alertttttt is received by BS ".format( self.env.now))
                     print(" Alertttttt is received by BS ".format( self.env.now))
-            
+            self.interfrerence
+
                 
 
 
@@ -164,6 +169,7 @@ class Net():
             self.TDMA_slot = i+1
             self.logger.log("\n\nat {0} TDMA - slot {1}".format(self.env.now,(i)))
             print("\n\nat {0} TDMA - slot {1}".format(self.env.now,(i)))
+
             yield self.env.timeout(1)
 
     def CSMA(self,duration):
@@ -173,6 +179,7 @@ class Net():
             self.CSMA_slot = i+1
             self.logger.log("\nat {0} CSMA - slot {1}".format(self.env.now,(i+1)))
             print("\nat {0} CSMA - slot {1}".format(self.env.now,(i+1)))
+
             yield self.env.timeout(1)
 
 

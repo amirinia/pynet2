@@ -7,7 +7,7 @@ import report
 import logger
 
 # here you select if it start with statci network or network maker
-startstatic = False
+startstatic = True
 if(startstatic):
     import staticnet as initialnetwork
 else:
@@ -31,7 +31,7 @@ print("__________________________LEACH__________________________________________
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++")
 net1.introduce_yourself()
-graphi.draw()
+#graphi.draw()
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
 env.run(until=config.MAX_RUNTIME)

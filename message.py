@@ -5,6 +5,8 @@ import packetloss
 import energymodel
 from propagation import PropagationModel
 import math
+from interference import  Interference
+
 
 Message_Type = {0: "Broadcast", 1: "Data", 2: "Ack",3: "Beacon" ,4: "Single"}
 

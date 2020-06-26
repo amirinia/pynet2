@@ -13,6 +13,7 @@ import pandas as pd
 import logger
 import sys
 from superframe import Superframe
+from interference import Interference
 
 class Node():
     def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(1000,2000)),x=random.randint(0,config.AREA_WIDTH),y=random.randint(0,config.AREA_LENGTH),node_type=None, power_type=1, mobile_type=0, network=network ,sensor_type=0):
@@ -46,6 +47,8 @@ class Node():
         self.logger = logger.logger()
         self.deadtime = 100000000000000
         self.superframe = Superframe()
+        #self.interfrerence = Interference(self.env)
+        self.flag = False
         
     def __str__(self):
         return str(self.id)
@@ -58,6 +61,8 @@ class Node():
             df = pd.DataFrame(columns=['id','deadtime','remainedenergy'])
 
             while True:
+                self.flag = False
+
                 if self.net.clock[0]=="CSMA":
                     self.logger.log("at {0} BS is running".format(self.env.now))
                     print("at {0} BS is running".format(self.env.now))
@@ -77,6 +82,8 @@ class Node():
 
         if self.id != 0: # if node is not BS
             while True:
+                self.flag = False
+
                 if(self.is_alive == True):
                     if (next(reversed(self.energy)) <= config.DEAD_NODE_THRESHOLD ):
                         if(self.is_alive == True):
@@ -126,6 +133,7 @@ class Node():
                             if(self.net.TDMA_slot==(self.TDMA+1)):
                                 if(len(self.parent)!=0):
                                     temp1 =""
+                                    #self.flag = True
                                     if(not self.alert_neighbor):
                                         self.light = self.sensor.light_sensor()
                                         # self.cluster[0].light.append(self.light)
@@ -140,30 +148,34 @@ class Node():
                                         # self.cluster[0].temperature.append(self.temperature)
                                     if(config.Multiframe_state):
                                         if(self.sensor.sensor_type == 1 and self.net.superframe_num % config.Multiframe_size == 0): # every 2 superframe  Multisuperframe
-                                            tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
+                                            tempmessage = temp1 + "at. env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
                                             self.logger.log(tempmessage)
                                             print(tempmessage)
                                             message_sender = message.Message(tempmessage)
      
                                             message_sender.send_message(tempmessage,self,self.parent[0],TDMA=True)
                                             self.parent[0].buffer.append(tempmessage)
-                                        
+
                                         if (self.sensor.sensor_type == 0): # every frame nodetype
-                                            tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
+                                            tempmessage = temp1 + "at.. env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
                                             self.logger.log(tempmessage)
                                             print(tempmessage)
                                             message_sender = message.Message(tempmessage)
 
                                             message_sender.send_message(tempmessage,self,self.parent[0],TDMA=True)
                                             self.parent[0].buffer.append(tempmessage)
+                                        #self.interference.listsetter(self.id)
+
                                     else:
-                                        tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
+                                        tempmessage = temp1 + "at... env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
                                         self.logger.log(tempmessage)
                                         print(tempmessage)
                                         message_sender = message.Message(tempmessage)
 
                                         message_sender.send_message(tempmessage,self,self.parent[0],TDMA=True)
                                         self.parent[0].buffer.append(tempmessage)
+                                        #self.interference.listsetter(self.id)
+
 
                                 
                                     
@@ -209,6 +221,7 @@ class Node():
                         self.logger.log(tempmessage)
                         print(tempmessage)
                         message_sender = message.Message(tempmessage)
+                        #self.flag = True
 
 
                         for n in self.neighbors:
@@ -230,8 +243,10 @@ class Node():
                             print(tempbuffer)
                             # energy tx decrease
                             message_sender = message.Message(tempbuffer)
+                                        #self.interference.listsetter(self.id)
 
                             self.buffer.clear()
+                            #self.flag = True
 
                             # print(self.clus.cluster_average_light())
                             # self.clus.light.clear()
@@ -263,10 +278,13 @@ class Node():
     def node_send_message(self, str_message , node):
         #print("message {0} is sent^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ from {1} to {2}".format(str_message,self.id,node))
         self.outbox.append(str_message)
+        
+
 
 
     def node_receive_message(self, str_message ,sender_node):
         self.inbox.append(str_message)
+        self.flag = True
         if(self.is_CH == True): # if node is CH then aggregate
             self.aggregate.append(str_message)
         #self.send_ACK(sender_node)
@@ -372,7 +390,7 @@ class Node():
         self.getBS == True
 
     def set_TDMA(self,num):
-        self.TDMA = num +1
+        self.TDMA = num 
 
     def alert_toggle(self):
         self.alert_neighbor == True
