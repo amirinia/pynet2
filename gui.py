@@ -54,7 +54,7 @@ class graphic:
     
     def draw(self):
         print("draw \n")
-        self.mynetwork.introduce_yourself()
+        #self.mynetwork.introduce_yourself()
         G = nx.Graph()
         G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
         for node in self.mynetwork.nodes:
@@ -98,10 +98,10 @@ class graphic:
         #mng.full_screen_toggle()
         mng.set_window_title("draw")
 
-        # plt.pause(5)
-        # plt.clf()
-        # plt.close()
-        plt.show()
+        plt.pause(4)
+        plt.clf()
+        plt.close()
+        # plt.show()
 
         
 

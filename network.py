@@ -20,7 +20,6 @@ from interference import Interference
 class Net():
     def __init__(self,env,xsize=config.AREA_WIDTH,ysize=config.AREA_LENGTH):
         self.env = env
-        self.action = env.process(self.run())
         # superframe
         self.clock = ["CSMA"]
         self.TDMA_slot = 0
@@ -41,6 +40,8 @@ class Net():
         self.logger = logger.logger()
         self.dfdead = pd.DataFrame(columns=['id','deadtime','remainedenergy'])
         self.interfrerence = Interference(self.env,self)
+        self.action = env.process(self.run())
+
 
     def run(self):
         counter = 0

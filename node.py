@@ -19,7 +19,7 @@ class Node():
     def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(1000,2000)),x=random.randint(0,config.AREA_WIDTH),y=random.randint(0,config.AREA_LENGTH),node_type=None, power_type=1, mobile_type=0, network=network ,sensor_type=0):
         self.env = env
         self.id = id
-        self.action = env.process(self.run())
+        
         self.net = network
         self.is_alive = True
         self.energy = [energy]
@@ -49,7 +49,8 @@ class Node():
         self.superframe = Superframe()
         #self.interfrerence = Interference(self.env)
         self.flag = False
-        
+        self.action = env.process(self.run())
+
     def __str__(self):
         return str(self.id)
 
@@ -314,7 +315,7 @@ class Node():
                     self.change_CulsterHead()
 
                     self.is_CH = False
-                    print("node {0} is CH NOW nnn parent is {1} and node is CH {2}".format(self.id, self.parent[0],self.is_CH))
+                    print("node {0} is CH NOW nnn parent is {1} and node is CH {2}".format(self.id, self.parent,self.is_CH))
 
 
 
@@ -383,6 +384,8 @@ class Node():
     def change_CulsterHead(self):
         if(self.is_CH == False):
             self.is_CH = True
+            self.parent.clear()
+
             self.logger.log("node {0} becomes CH (change)and parent is {1} and TDMA {2} energy {3}".format(self.id,self.parent,self.TDMA,(next(reversed(self.energy)))))
             print("node {0} becomes CH (change)and parent is {1} and TDMA energy {3}".format(self.id,self.parent,self.TDMA,(next(reversed(self.energy)))))
             self.distance.clear

@@ -224,7 +224,7 @@ class Kmeans:
         print("kmeans is done")
 
         for node in self.network.nodes:
-            print(node.id, node.is_CH)
+            #print(node.id, node.is_CH)
             if (node.is_CH == False):
                 if (len(node.parent) == 0):
                     self.notclustered.append(node)

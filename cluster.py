@@ -17,7 +17,6 @@ class mycluster:
         self.nodes = []
         self.is_alive = True
         self.env = env
-        self.action = env.process(self.run(env))
         self.net = network
         self.next_CH = []
         self.CH = node.Node
@@ -27,6 +26,8 @@ class mycluster:
         self.saveClusterPos()
         self.superframe = Superframe()    
         print("\nCluster {0} is created".format(self.id))
+        self.action = env.process(self.run(env))
+
         
 
 
