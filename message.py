@@ -5,7 +5,7 @@ import packetloss
 import energymodel
 from propagation import PropagationModel
 import math
-from interference import  Interference
+from interference import Interference
 
 
 Message_Type = {0: "Broadcast", 1: "Data", 2: "Ack",3: "Beacon" ,4: "Single"}
@@ -21,6 +21,7 @@ class Message(object):
         self.nexthop = nexthop
         self.header = header
         self.data = data
+        self.targets = []
         self.overhead_bytes = 60
 
     def message_length(self):
@@ -29,10 +30,10 @@ class Message(object):
         pymote 2
         """
 
-    def broadcast(self,node,message="hello"):
+    def broadcast(self,node,message="hello",nodelist =list):
         message_sender = Message(message)
         msg_len = message_sender.message_length()
-        for n in node.neighbors:
+        for n in nodelist:
             message_sender.send_message(message,node,n)
             
             #message1.send_message(message,node,node.neighbors[x])

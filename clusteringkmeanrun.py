@@ -26,7 +26,7 @@ env = initialnetwork.env
 
 # in second step you need and algorithm
 print("_____________________________Algorithm___________________________________ start\n\n")
-k1 = KMEANS.Kmeans(env,net1,5)
+k1 = KMEANS.Kmeans(env,net1,7)
 print("_____________________________Algorithm___________________________________ end\n\n")
 
 # graphi.draw_clusters()
@@ -39,7 +39,7 @@ net1.introduce_yourself()
 #         print(n,next(reversed(n.parent)))
 
 print("++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
-env.run(until=1000)#config.MAX_RUNTIME)
+env.run(until=100)#config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 #net1.network_packet_summery()

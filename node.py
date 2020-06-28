@@ -62,6 +62,7 @@ class Node():
 
             while True:
                 self.flag = False
+                self.parent.clear()
 
                 if self.net.clock[0]=="CSMA":
                     self.logger.log("at {0} BS is running".format(self.env.now))
@@ -83,7 +84,8 @@ class Node():
         if self.id != 0: # if node is not BS
             while True:
                 self.flag = False
-
+                # if(len(self.parent)!=0 and self.parent[0].is_CH == False):
+                #     self.parent.clear()
                 if(self.is_alive == True):
                     if (next(reversed(self.energy)) <= config.DEAD_NODE_THRESHOLD ):
                         if(self.is_alive == True):
@@ -129,9 +131,12 @@ class Node():
 
 
                     if self.net.clock[0]=="TDMA":
+                        #print(self.net.TDMA_slot,(self.TDMA))
                         if(self.is_CH == False):
                             if(self.net.TDMA_slot==(self.TDMA+1)):
                                 if(len(self.parent)!=0):
+                                    #print(self.net.TDMA_slot,(self.TDMA))
+
                                     temp1 =""
                                     #self.flag = True
                                     if(not self.alert_neighbor):
@@ -225,7 +230,7 @@ class Node():
 
 
                         for n in self.neighbors:
-                            message_sender.broadcast(n,"beacon CSMA adv {0} at env:{1}".format(n.id ,env.now))
+                            message_sender.broadcast(n,"beacon CSMA adv {0} at env:{1}".format(n.id ,env.now),n.neighbors)
                             yield self.env.timeout(1)
 
             if (self.is_CH == True): # if node is cluster head
@@ -301,10 +306,15 @@ class Node():
         
         if( "is cluster Head" in str_message ):
             # self.change_TDMA(sender_node.TDMA)
-            self.parent_setter(sender_node)
-            if(self.is_CH == True):
-                self.change_CulsterHead()
-                print("node {0} is CH NOW nnn".format(self.id))
+            if (sender_node.cluster == self.cluster):
+                self.parent_setter(sender_node)
+                if(self.is_CH == True):
+                    self.parent_setter(sender_node)
+
+                    self.change_CulsterHead()
+
+                    self.is_CH = False
+                    print("node {0} is CH NOW nnn parent is {1} and node is CH {2}".format(self.id, self.parent[0],self.is_CH))
 
 
 
@@ -363,9 +373,7 @@ class Node():
             self.parent.append(ch)
         #print(ch, "is head")
 
-    def change_to_clusterhead(self):
-        message_sender = message.Message()
-        self.is_CH == True
+
 
     def add_nodes(self,list):
         self.neighbors.append(list)
@@ -379,7 +387,7 @@ class Node():
             print("node {0} becomes CH (change)and parent is {1} and TDMA energy {3}".format(self.id,self.parent,self.TDMA,(next(reversed(self.energy)))))
             self.distance.clear
             self.distance.append(self.net.nodes[0])
-        else:
+        if(self.is_CH == True):
             self.is_CH == False
             self.next_hop.clear()
             self.logger.log("e node {0} becomes simple node (change) and parent is {1} and TDMA {2} energy {3}".format(self.id,self.parent,self.TDMA,(next(reversed(self.energy)))))
@@ -390,7 +398,7 @@ class Node():
         self.getBS == True
 
     def set_TDMA(self,num):
-        self.TDMA = num 
+        self.TDMA = num
 
     def alert_toggle(self):
         self.alert_neighbor == True

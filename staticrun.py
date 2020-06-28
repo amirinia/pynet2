@@ -5,6 +5,8 @@ import gui
 import config
 import report
 import logger
+import LEACH 
+import clusteringKMEANS as KMEANS
 
 # here you select if it start with statci network or network maker
 startstatic = False
@@ -16,25 +18,26 @@ else:
 # create network
 net1 = initialnetwork.net1
 env = initialnetwork.env
-graphi = gui.graphic(net1)
 
 
 # in second step you need and algorithm
+second = True
+print("_____________________________Clustering Algorithm___________________________________ start\n\n")
+if(second):
+    KMEANS1 = KMEANS.Kmeans(env,net1,10)
+else:
+    LEACH1 = LEACH.LEACHC(env,net1)
+print("_____________________________Clustering Algorithm___________________________________ end\n\n")
 
-print("__________________________LEACH___________________________________________ start\n\n")
-import LEACH 
-
-LEACH1 = LEACH.LEACHC(env,net1)
-
-print("__________________________LEACH___________________________________________ end\n\n")
 
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++")
 net1.introduce_yourself()
-#graphi.draw()
+graphi = gui.graphic(net1)
+graphi.draw()
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
-env.run(until=config.MAX_RUNTIME)
+env.run(110)#until=config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 

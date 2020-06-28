@@ -54,6 +54,7 @@ class graphic:
     
     def draw(self):
         print("draw \n")
+        self.mynetwork.introduce_yourself()
         G = nx.Graph()
         G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
         for node in self.mynetwork.nodes:
@@ -62,12 +63,12 @@ class graphic:
 
                 G.add_node(node.id,pos=(node.x,node.y))
                 
-                if(len(node.parent)==0): # if there is no parrent
+                if(node.is_CH == True): # if there is no parrent
                     if(node.is_alive==True):
                         G.add_edge(0,node.id)
-                if(len(node.parent)!=0):
-                    if(node.parent[0].is_alive==True):
-                        G.add_edge(0,node.parent[0].id)
+                # if(len(node.parent)!=0):
+                #     if(node.parent[0].is_alive==True):
+                #         G.add_edge(0,node.parent[0].id)
                 if(len(node.parent)!=0):
                     if(node.parent[0].is_alive==True):
                         G.add_edge(node.id,node.parent[0].id)
@@ -97,10 +98,10 @@ class graphic:
         #mng.full_screen_toggle()
         mng.set_window_title("draw")
 
-        plt.pause(5)
-        plt.clf()
-        plt.close()
-        # plt.show()
+        # plt.pause(5)
+        # plt.clf()
+        # plt.close()
+        plt.show()
 
         
 

@@ -73,7 +73,7 @@ class Net():
             if counter % config.Base_Sattion_Beaconning_period == 0:
                 for n in self.nodes[0].neighbors:
                     message_sender = message.Message()
-                    message_sender.broadcast(self.nodes[0],"Base Station boradcast on regular basis {0} at env:{1}".format(self.nodes[0].id ,self.env.now))
+                    message_sender.broadcast(self.nodes[0],"Base Station boradcast on regular basis {0} at env:{1}".format(self.nodes[0].id ,self.env.now),n.neighbors)
 
             try:
                 yield self.env.process(self.CSMA(CSMA_duration))
@@ -143,14 +143,14 @@ class Net():
             print("neighbors of BS: {0}".format(self.nodes[0].neighbors))
         else:
             print("Clusterheads' list is empty")
-
+        self.introduce_yourself()
         # for n in self.nodes[0].neighbors:
         #     print(n,"is near bs")
         #     # n.distance.clear()
         #     n.distance.append(self.nodes[0])
 
         message_sender = message.Message(header='superframe',data=self.superframe)
-        message_sender.broadcast(self.nodes[0])
+        message_sender.broadcast(self.nodes[0],nodelist=self.nodes)
 
         for n in self.nodes:
             message_sender.send_message("BS boradcast + Superframe rules adv " + str(n.id),self.nodes[0],n)
@@ -163,7 +163,7 @@ class Net():
         
 
     def TDMA(self,duration):
-        for i in range(duration):
+        for i in range(duration+1):
             self.clock.clear()
             self.clock.append("TDMA")
             self.TDMA_slot = i+1
@@ -244,14 +244,15 @@ class Net():
         print("****************************Begin of introduce network" )
 
         for x in self.nodes:
+            #print(x.id," is_CH ",x.is_CH,x.parent)
             if len(x.parent) == 0:
-                self.logger.log("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5} with TDMA {6} {7}".format(x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))))
-                print("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5} with TDMA {6} {7}".format(x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))))
+                self.logger.log("{0}  with energy : {1}  with position {2} {3} ; CH is {8} {4} is alive: {5} with TDMA {6} {7}".format(x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy)),x.is_CH))
+                print("{0}  with energy : {1}  with position {2} {3} ; CH is {8} {4} is alive: {5} with TDMA {6} {7}".format(x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy)),x.is_CH))
                 # print(x.energy)
                 dfi = dfi. append(pd.Series([x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))], index=dfi.columns), ignore_index=True)
             if len(x.parent) != 0:
-                self.logger.log("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5} with TDMA {6} {7} sensor t: {8}".format(x.id ,x.power, str(x.x) , str(x.y) ,str(next(reversed(x.parent))),x.is_alive,x.TDMA,next(reversed(x.energy)),x.sensor))
-                print("{0}  with energy : {1}  with position {2} {3} ; CH is {4} is alive: {5} with TDMA {6} {7} sensor t: {8}".format(x.id ,x.power, str(x.x) , str(x.y) ,str(next(reversed(x.parent))),x.is_alive,x.TDMA,next(reversed(x.energy)),x.sensor))
+                self.logger.log("{0}  with energy : {1}  with position {2} {3} ; CH is {9} {4} is alive: {5} with TDMA {6} {7} sensor t: {8}".format(x.id ,x.power, str(x.x) , str(x.y) ,str(next(reversed(x.parent))),x.is_alive,x.TDMA,next(reversed(x.energy)),x.sensor,x.is_CH))
+                print("{0}  with energy : {1}  with position {2} {3} ; CH is {9} {4} is alive: {5} with TDMA {6} {7} sensor t: {8}".format(x.id ,x.power, str(x.x) , str(x.y) ,str(next(reversed(x.parent))),x.is_alive,x.TDMA,next(reversed(x.energy)),x.sensor,x.is_CH))
                 # print(x.energy)
                 dfi = dfi. append(pd.Series([x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))], index=dfi.columns), ignore_index=True)
         #self.logger.log("==============================Clusters===============================")
@@ -259,7 +260,7 @@ class Net():
         # for c in self.clusters:
         #     print("{0} is alive: {5} with energy : {1} with nodes {2} ; TDMA: {3} ; CH is {4}".format(c.name , c.average_cluster_energy() ,str(c.nodelist) , str(c.TDMA_slots) ,str(c.CH),c.is_alive))
         print("****************************End of introduce network \n")
-        #dfi.to_csv('report/introduce_yourself.csv')
+        dfi.to_csv('report/introduce_yourself.csv')
         #pickle.dump(self.nodes, file = open("report/nodes.pickle", "wb"))
 
 

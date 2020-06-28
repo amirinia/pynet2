@@ -37,7 +37,7 @@ net1.add_node(Node(22,env,2 ,175,5,network =net1, sensor_type=1))
 
 
 net1.introduce_yourself()
-print("KKKKKKKKKK")
+print("satatic net KKKKKKKKKK")
 net1.network_nodedsicovery()
 graphi = gui.graphic(net1)
 graphi.draw_nods()

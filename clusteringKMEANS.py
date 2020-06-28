@@ -20,6 +20,7 @@ class Kmeans:
         self.k = k
         self.clusterheads = []
         self.clusters = []
+        self.notclustered = []
         self.env = env
         self.action = env.process(self.run(env))
 
@@ -133,73 +134,18 @@ class Kmeans:
             #print(self.network.nodes[i].id)
         
 
-        print("nn",self.network.nodes)
-        clusters = []
-        for n in self.network.nodes: # add cluster to node
-            if(n.id != 0):
-                print(n,df['closest'][n])
-                n.cluster.clear()
-                n.cluster.append(df['color'][n])
-                clusters.append(df['closest'][n])
-        print(set(clusters))
-
-
-        self.network.introduce_yourself()
-
-        
-        for c in set(clusters): # add neighbor to node
-            print(c ,"is new cluster in kmean" )
-
-
-
-                        # node.change_CulsterHead()
-            mycluster1 = cluster.mycluster(c,env,self.network)
-                        # mycluster1.add_node(node) # add ch to node list
-            for n in self.network.nodes: # add neighbor of CH to cluster
-                if(df['closest'][n] == c):
-                    #print(df['closest'][n], "   ", c)
-
-                    mycluster1.add_node(n)
-                    print(n," is added")
-                    #print(mycluster1.CH)
-            n= random.choice(mycluster1.nodes)
-            print(n," is high")
-            n.change_CulsterHead()
-            mycluster1.CH = n
-            n.set_TDMA(len(mycluster1.nodes))
-                            # # node.change_TDMA(mycluster1.TDMA_slots)
-                        #self.logger.log("{0} is CH in {1} with {2} energy ++++++++++++++++++\n".format(node.id , mycluster1.id,str(node.energy) ) )
-            print("{0} is CH in {1} with {2} energy ++++++++++++++++++ {3}\n".format(n.id , mycluster1.id,(n.neighbors) ,mycluster1.nodes) )
-            message2 = message.Message()
-            message2.broadcast(n,"node {0} is cluster Head in {1} with TDMA ".format(n.id,mycluster1.id))
-                            
-            self.network.add_cluster(mycluster1)
-            self.clusters.append(mycluster1)
-            self.network.clusterheads.append(n)
-            self.clusterheads.append(n)
-                        
-
-
-            
-        print(self.clusters)    
-        print(self.clusterheads)  
-        graphi = gui.graphic(self.network)  
-        graphi.draw()
-        print("kmeans is done")
-        self.network.introduce_yourself()
-
 
         doagain = False
         print("clusters",self.network.clusters)
         for c in self.network.clusters:
                 print(c,c.nodes)
-                if len(c.nodes)>7:
+                if (len(c.nodes)>7 or len(c.nodes)<2 ):
                         print("cluster is too large")
                         doagain ==True
 
         if doagain:
                 print("repeat Kmean")
-                Kmeans(self.network,k)
+                Kmeans(self.env,self.network,self.k)
 
         
         while True:
@@ -218,6 +164,97 @@ class Kmeans:
         plt.pause(5)
         plt.clf()
         plt.close()
+
+
+
+        print("nn",self.network.nodes)
+        clusters = []
+        for n in self.network.nodes: # add cluster to node
+            if(n.id != 0):
+                #print(n,df['color'][n])
+                n.cluster.clear()
+                n.cluster.append(df['closest'][n])
+                clusters.append(df['closest'][n])
+        print("clusss ",set(clusters))
+
+
+
+        
+        for c in set(clusters): # add neighbor to node
+            print(c ,"is new cluster in kmean" )
+                        # node.change_CulsterHead()
+            mycluster1 = cluster.mycluster(c,env,self.network)
+                        # mycluster1.add_node(node) # add ch to node list
+            for n in self.network.nodes: # add neighbor of CH to cluster
+                if(df['closest'][n] == c and n.id != 0):
+                    #print(df['closest'][n], "   ", c)
+                    mycluster1.add_node(n)
+                    print(n," is added")
+            print("c nodws",mycluster1.nodes)
+            if(len(mycluster1.nodes) >7):
+                doagain == True
+            n= random.choice(mycluster1.nodes)
+            # for n in self.clusterheads:
+            #     for nei in n.neighbors:
+            #         if n == nei:
+            #             n= random.choice(mycluster1.nodes)
+
+            #print(n," is high")
+            if( n.id != 0 and n not in self.clusterheads):
+                n.change_CulsterHead()
+                mycluster1.CH = n
+                n.set_TDMA(len(mycluster1.nodes))
+                                # # node.change_TDMA(mycluster1.TDMA_slots)
+                            #self.logger.log("{0} is CH in {1} with {2} energy ++++++++++++++++++\n".format(node.id , mycluster1.id,str(node.energy) ) )
+                print("{0} is CH in {1} with {2} energy ++++++++++++++++++ {3}\n".format(n.id , mycluster1.id,(n.neighbors) ,mycluster1.nodes) )
+                message2 = message.Message()
+                message2.broadcast(n,"node {0} is cluster Head in {1} with TDMA ".format(n.id,mycluster1.id),mycluster1.nodes)
+                                
+                self.network.add_cluster(mycluster1)
+                self.clusters.append(mycluster1)
+                self.network.clusterheads.append(n)
+                self.clusterheads.append(n)
+                        
+
+
+        print("nodes ",self.network.nodes) 
+        print("clusters ",self.clusters)    
+        print("CHs ",self.clusterheads)  
+
+        print("kmeans is done")
+
+        for node in self.network.nodes:
+            print(node.id, node.is_CH)
+            if (node.is_CH == False):
+                if (len(node.parent) == 0):
+                    self.notclustered.append(node)
+
+        if(len(self.notclustered) != 0):
+            print("these are not clustered area ",self.notclustered)
+        
+        for c in self.clusters:
+            for node in c.nodes:
+                if(node.energy >= max(neighbor.energy for neighbor in c.nodes)):
+
+                    c.cluster_head_setter(node)
+                    c.CH = node
+                    node.set_TDMA(len(c.nodes))
+                    node.change_CulsterHead()
+                    node.is_CH = True
+                    # node.change_TDMA(mycluster1.TDMA_slots)
+                    #self.logger.log("{0} is CH in cluster {1} with {2}  ++++++++++++++++++ area\n".format(node.id , c.id,str(c.nodes) ) )
+                    print("{0} is CH in cluster {1} with {2}  ++++++++++++++++++ is CH {3} area \n".format(node.id , c.id,str(c.nodes),node.is_CH ) )
+                    message2 = message.Message()
+                    message2.broadcast(node,"node {0} is cluster Head in {1} with TDMA ".format(node.id,c.id),node.neighbors)
+                    self.network.clusterheads.append(node)
+                    self.clusterheads.append(node)
+            self.network.add_cluster(c)
+
+        self.network.introduce_yourself()
+        graphi = gui.graphic(self.network)  
+        graphi.draw()
+
+
         yield self.env.timeout(1)
 
         # labels = kmeans.predict(df)
