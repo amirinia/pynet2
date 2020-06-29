@@ -56,14 +56,14 @@ class mycluster:
             
             
 
-            if(self.CH.is_alive == False):
-                #self.Random_Clusterhead_Selection()
-                #self.Clusterhead_Selection()
-                print("Cluster head is buz dead inside cluster")
-                for n in self.nodes:
-                    if (n.is_alive == True):
-                        self.cluster_head_setter(n)
-                        return
+            # if(self.CH.is_alive == False):
+            #     #self.Random_Clusterhead_Selection()
+            #     #self.Clusterhead_Selection()
+            #     print("Cluster head is buz dead inside cluster")
+            #     for n in self.nodes:
+            #         if (n.is_alive == True):
+            #             self.cluster_head_setter(n)
+            #             return
 
 
             # print(self.id,"cluster is runing",self.env.now)

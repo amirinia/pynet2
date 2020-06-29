@@ -119,7 +119,7 @@ def run(x):
 
     LEACH1 = LEACH.LEACHC(env,net1)
     #LEACH1.global_cluster_fromation(env)
-    LEACH1.Random_Clusterhead_Selection(env,net1)
+    #LEACH1.Random_Clusterhead_Selection(env,net1)
     #logger.logger.log(str("__________________________LEACH___________________________________________ end"))
     print("__________________________LEACH___________________________________________ end\n\n")
 

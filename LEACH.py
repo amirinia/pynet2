@@ -15,7 +15,7 @@ class LEACHC:
         self.logger = logger.logger()
         self.clusterheads = []
         self.clusters = []
-        self.rotation_time = 100
+        self.rotation_time = 500
         self.notclustered = []
         self.initial = False
 
@@ -248,8 +248,8 @@ class LEACHC:
                             message2 = message.Message()
                             message2.broadcast(n,"{0} is cluster Head in {1} with TDMA ".format(n.id,cluster.id),n.neighbors)
                             self.ClusterHead_finder()
-                            graph = gui.graphic(cluster.net)
-                            graph.draw() # simple draw
+                            #graph = gui.graphic(cluster.net)
+                            #graph.draw() # simple draw
                             #time.sleep(1)
                             
                             return # it 

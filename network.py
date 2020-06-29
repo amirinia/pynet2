@@ -18,13 +18,14 @@ from interference import Interference
 """
 
 class Net():
-    def __init__(self,env,xsize=config.AREA_WIDTH,ysize=config.AREA_LENGTH):
+    def __init__(self,env ,xsize = config.AREA_WIDTH, ysize = config.AREA_LENGTH):
         self.env = env
         # superframe
         self.clock = ["CSMA"]
+        self.superframe = Superframe()
         self.TDMA_slot = 0
         self.CSMA_slot = 0
-        self.superframe = Superframe()
+        self.inactive_duration = 0
          # we can set here
         self.nodes = []
         self.clusters = []
@@ -33,7 +34,7 @@ class Net():
         self.xsize = xsize
         self.ysize = ysize
         #add controller
-        controller = node.Node(0, self.env,4, (self.xsize)/2, (self.ysize)/2,node_type='B' ,power_type=0)
+        controller = node.Node(0, self.env, 4, (self.xsize)/2, (self.ysize)/2, node_type='B' ,power_type=0)
         self.nodes.append(controller)
         controller.net = self
         self.alert = False
@@ -92,14 +93,18 @@ class Net():
             self.neighbor_collision()
 
             #print('INACTIVE at %d\n' % env.now)
-            inactive_duration = config.Inactive_duration
-            for i in range(inactive_duration):
-                self.clock.clear()
-                self.clock.append("INACTIVE")
-                self.logger.log("at %d inactive network" %self.env.now)
-                print("at %d inactive network" %self.env.now)
+            #inactive_duration = self.superframe.Inactive_slot
+            # for i in range(inactive_duration):
+            #     self.clock.clear()
+            #     self.clock.append("INACTIVE")
+            #     self.logger.log("at %d inactive network" %self.env.now)
+            #     print("at %d inactive network" %self.env.now)
 
-                yield self.env.timeout(1)
+            #     yield self.env.timeout(1)
+            try:
+                yield self.env.process(self.INACTIVE(self.superframe.Inactive_slot))
+            except simpy.Interrupt:
+                print('Was interrupted.INACTIVE')
             # self.network_nodedsicovery()
             # print(self.nodes)
             # print("net discovery")
@@ -182,7 +187,16 @@ class Net():
             print("\nat {0} CSMA - slot {1}".format(self.env.now,(i+1)))
 
             yield self.env.timeout(1)
+    
+    def INACTIVE(self,duration):
+        for i in range(duration):
+            self.clock.clear()
+            self.clock.append("INACTIVE")
+            self.CSMA_slot = i+1
+            self.logger.log("at %d inactive network" %self.env.now)
+            print("at %d inactive network" %self.env.now)
 
+            yield self.env.timeout(1)
 
     def random_net_generator(self,env,network,node_number):
         print("Random network is generated with %d nodes\n"%node_number)

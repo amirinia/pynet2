@@ -20,17 +20,17 @@ De_VAR=[]
 De_POP=[]
 
 
-population_num = 100
+population_num = 20
 iteration = (D * 5000)/population_num
 
-def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=30):
+def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=20):
         #print("de")
         dimensions = D
         initial = []
         for i in range(popsize):
             pop2 =[]
-            t1 = random.randint(4,7)
-            t2 = random.randint(1,9)
+            t1 = random.randint(2,7)
+            t2 = random.randint(2,9)
             t3 = random.randint((t1 +t2), 240 - (t1 +t2))
             b1 = random.choice([0, 1])
             pop2.append(t1)
@@ -49,6 +49,7 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=30):
         best = popnp[best_idx]
         #print("best chromosome",best)
         for i in range(its):
+            print(" New iteration ",i)
             for j in range(popsize):
                 idxs = [idx for idx in range(popsize) if idx != j]
                 #print(idxs)
@@ -104,5 +105,5 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=30):
 
 de(lambda x: function(x))
 #print("fit ",De_FIT," ide ",De_VAR," ",De_POP)
-df.to_csv('report/DE best 2020-40-2.csv')
+df.to_csv('report/DE best 2020-10-10.csv')
 

@@ -134,7 +134,14 @@ class Node():
                     if self.net.clock[0]=="TDMA":
                         #print(self.net.TDMA_slot,(self.TDMA))
                         if(self.is_CH == False):
-                            if(self.net.TDMA_slot==(self.TDMA+1)):
+                            if(self.net.TDMA_slot < (self.TDMA )): # there is no TDMA for this onde in network
+                                    print("TDMA of this nod does not exist node : ", self.id)
+                                    self.power.decrease_tx_energy(10000)
+                                    self.energy.append(self.power.energy)
+
+
+
+                            if(self.net.TDMA_slot -1 == (self.TDMA )):
                                 if(len(self.parent)!=0):
                                     #print(self.net.TDMA_slot,(self.TDMA))
 
