@@ -7,6 +7,9 @@ import gui
 import config
 
 
+        # self.xsize = xsize
+        # self.ysize = ysize
+
 env = simpy.Environment()
 
 net1 = network.Net(env)

@@ -44,7 +44,7 @@ class LEACHC:
             tempmessage = "beacon on LEACH from {0}".format(node)
             message1 = message.Message(tempmessage)
             message1.broadcast(node,tempmessage,node.neighbors)
-            if(len(node.neighbors)!=0):
+            if(len(node.neighbors)!=0 and node.id !=0):
 
                 if(node.energy >= max(neighbor.energy for neighbor in node.neighbors)):
                     node.change_CulsterHead()
@@ -55,8 +55,6 @@ class LEACHC:
                             mycluster1.add_node(n)
                     mycluster1.cluster_head_setter(n)
                     mycluster1.CH = node
-                    node.set_TDMA(len(mycluster1.nodes))
-                    # node.change_TDMA(mycluster1.TDMA_slots)
                     self.logger.log("{0} is CH in cluster {1} with {2}  ++++++++++++++++++\n".format(node.id , mycluster1.id,str(mycluster1.nodes) ) )
                     print("{0} is CH in cluster {1} with {2}  ++++++++++++++++++\n".format(node.id , mycluster1.id,str(mycluster1.nodes) ) )
                     message2 = message.Message()
@@ -88,40 +86,35 @@ class LEACHC:
         mycluster9 = cluster.mycluster(9,env,self.network)
 
         for node in nodes:
-            if node.x <=100:
-                if node.y <=100:
-                    mycluster1.add_node(node) # add ch to node list
-                if node.y <=200 and node.y >100:
-                    mycluster2.add_node(node) # add ch to node list                    
-                if node.y <=300 and node.y > 200:
-                    mycluster3.add_node(node) # add ch to node list
-            if node.x > 100 and node.x <=200:
-                #print(node.id, node.x,node.y)
+            if(node.id !=0):
+                if node.x <=100:
+                    if node.y <=100:
+                        mycluster1.add_node(node) # add ch to node list
+                    if node.y <=200 and node.y >100:
+                        mycluster2.add_node(node) # add ch to node list                    
+                    if node.y <=300 and node.y > 200:
+                        mycluster3.add_node(node) # add ch to node list
+                        
+                if node.x > 100 and node.x <=200:
+                    #print(node.id, node.x,node.y)
+                    if node.y <=100:
+                        mycluster4.add_node(node) # add ch to node list
+                        #print(node.id, node.x)
+                    if node.y <=200 and node.y >100:
+                        mycluster5.add_node(node) # add ch to node list 
+                        #print(node.id, node.x)
+                    if node.y <=300 and node.y > 200:
+                        mycluster6.add_node(node) # add ch to node list
+                        #print(node.id, node.x)
 
-                if node.y <=100:
-                    mycluster4.add_node(node) # add ch to node list
+                if node.x > 200 and node.x <=300:
                     #print(node.id, node.x)
-
-                if node.y <=200 and node.y >100:
-                    mycluster5.add_node(node) # add ch to node list 
-                    #print(node.id, node.x)
-                   
-                if node.y <=300 and node.y > 200:
-                    mycluster6.add_node(node) # add ch to node list
-                    #print(node.id, node.x)
-
-
-
-
-            if node.x > 200 and node.x <=300:
-                #print(node.id, node.x)
-
-                if node.y <=100:
-                    mycluster7.add_node(node) # add ch to node list
-                if node.y <=200 and node.y >100:
-                    mycluster8.add_node(node) # add ch to node list                    
-                if node.y <=300 and node.y > 200:
-                    mycluster9.add_node(node) # add ch to node list
+                    if node.y <=100:
+                        mycluster7.add_node(node) # add ch to node list
+                    if node.y <=200 and node.y >100:
+                        mycluster8.add_node(node) # add ch to node list                    
+                    if node.y <=300 and node.y > 200:
+                        mycluster9.add_node(node) # add ch to node list
 
         self.clusters.append(mycluster1)
         self.clusters.append(mycluster2)
@@ -138,9 +131,7 @@ class LEACHC:
 
                     c.cluster_head_setter(node)
                     c.CH = node
-                    node.set_TDMA(len(c.nodes))
                     node.change_CulsterHead()
-                    # node.change_TDMA(mycluster1.TDMA_slots)
                     self.logger.log("{0} is CH in cluster {1} with {2}  ++++++++++++++++++ area\n".format(node.id , c.id,str(c.nodes) ) )
                     print("{0} is CH in cluster {1} with {2}  ++++++++++++++++++ is CH {3} area \n".format(node.id , c.id,str(c.nodes),node.is_CH ) )
                     message2 = message.Message()
@@ -152,16 +143,13 @@ class LEACHC:
 
 
         for node in self.network.nodes:
-            print(node.id, node.is_CH)
+            #print(node.id, node.is_CH)
             if (node.is_CH == False):
                 if (len(node.parent) == 0):
                     self.notclustered.append(node)
 
         if(len(self.notclustered) != 0):
             print("these are not clustered area ",self.notclustered)
-
-
-
 
 
 
@@ -248,8 +236,8 @@ class LEACHC:
                             message2 = message.Message()
                             message2.broadcast(n,"{0} is cluster Head in {1} with TDMA ".format(n.id,cluster.id),n.neighbors)
                             self.ClusterHead_finder()
-                            #graph = gui.graphic(cluster.net)
-                            #graph.draw() # simple draw
+                            graph = gui.graphic(cluster.net)
+                            graph.draw() # simple draw
                             #time.sleep(1)
                             
                             return # it 

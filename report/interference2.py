@@ -29,7 +29,7 @@ class Interference():
 
 
     def network_nodedsicovery(net,distance = config.TX_RANGE):
-        print("++++++++++++++++++++ network Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
+        print("++++++++++++++++++++ network Table Discovery Begins %d meters ++++++++++++++++++++++++++++inter"%config.TX_RANGE)
         for n in net.nodes:
             print("Neighbors Table discovery for {0} is below and neighbors are {1}".format(str(n.id),n.neighbors))
             for n1 in net.nodes:
@@ -40,7 +40,7 @@ class Interference():
                         if n1 not in n.neighbors:
                             n.neighbors.append(n1)
 
-        print("+++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
+        print("+++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++inter \n")
 
 
     def distance(self, node ,node1):

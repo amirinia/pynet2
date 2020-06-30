@@ -23,7 +23,7 @@ class graphic:
         print("simple draw")
 
         G = nx.Graph()
-        G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
+        G.add_node(0,pos=(config.xsize/2,config.xsize/2))
         for node in self.mynetwork.nodes:
             if(node.is_alive == True):
                 G.add_node(node.id,pos=(node.x,node.y))
@@ -56,7 +56,7 @@ class graphic:
         print("draw \n")
         #self.mynetwork.introduce_yourself()
         G = nx.Graph()
-        G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
+        G.add_node(0,pos=(config.xsize/2,config.ysize/2))
         for node in self.mynetwork.nodes:
             if(node.is_alive == True):
                 # print("for node in self.mynetwork.nodes {0} and cluster head {1}".format(node,node.parent))
@@ -108,7 +108,7 @@ class graphic:
     def drawdead(self,title):
         print("draw dead\n")
         G = nx.Graph()
-        G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
+        G.add_node(0,pos=(config.xsize/2,config.ysize/2))
         for node in self.mynetwork.nodes:
             if(node.is_alive == True):
                 # print("for node in self.mynetwork.nodes {0} and cluster head {1}".format(node,node.parent))
@@ -190,7 +190,6 @@ class graphic:
             print("GUI NEIGHBORS TABLE")
 
             G = nx.Graph()
-            #G.add_node("BS",pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
 
             for node in self.mynetwork.nodes:
                 if(node.is_alive == True):
@@ -215,7 +214,6 @@ class graphic:
     def draw_nods(self):
             print("GUI NODES ONLY")
             G = nx.Graph()
-            #G.add_node("BS",pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
             for node in self.mynetwork.nodes:
                 if(node.is_alive == True):
                     G.add_node(node.id,pos=(node.x,node.y),weight=node.id)
@@ -240,7 +238,6 @@ class graphic:
     def draw_ch(self):
             print("GUI NODES CH ONLY")
             G = nx.Graph()
-            #G.add_node("BS",pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
             for node in self.mynetwork.nodes:
                 if(node.is_alive == True):
                     G.add_node(node.id,pos=(node.x,node.y),weight=node.id)
@@ -266,7 +263,6 @@ class graphic:
     def Kmeans_draw(self):
         print("GUI Kmean ONLY")
         G = nx.Graph()
-        #G.add_node("BS",pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
         for node in self.mynetwork.nodes:
             if(node.is_alive == True):
                 G.add_node(node.id,pos=(node.x,node.y),weight=node.id)
@@ -305,7 +301,7 @@ class graphic:
 
 
         G = nx.Graph()
-        G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
+        G.add_node(0,pos=(config.xsize/2,config.ysize/2))
         for node in self.mynetwork.nodes:
             if(node.is_alive == True):
                 # print("for node in self.mynetwork.nodes {0} and cluster head {1}".format(node,node.parent))
@@ -345,7 +341,7 @@ class graphic:
 
 
         G = nx.Graph()
-        G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
+        G.add_node(0,pos=(config.xsize/2,config.ysize/2))
         for node in self.mynetwork.nodes:
             if(node.is_alive == True):
                 # print("for node in self.mynetwork.nodes {0} and cluster head {1}".format(node,node.parent))

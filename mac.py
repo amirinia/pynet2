@@ -7,6 +7,8 @@ import RSSI
 import cluster
 import message
 import config
+import network
+import logger
 import pandas as pd
 from superframe import Superframe
 from interference import Interference
@@ -14,16 +16,19 @@ from interference import Interference
 """
 
 class Mac():
-    def __init__(self,env ,superframe = Superframe()):
+    def __init__(self,env ,network=network):
         self.env = env
         # superframe
         self.clock = ["CSMA"]
         self.superframe = Superframe()
-        self.TDMA_slot = superframe.TDMA_slot
-        self.CSMA_slot = superframe.CSMA_slot
-        self.inactive_duration = superframe.Inactive_slot
+        self.TDMA_slot = 0
+        self.CSMA_slot = 0
+        self.inactive_duration = 0
         self.superframe_num = 0
-        self.interfrerence = Interference(self.env,self)
+        self.net = network
+        self.logger = logger.logger()
+
+        #self.interfrerence = Interference(self.env,self)
         self.action = env.process(self.run())
 
 
@@ -31,7 +36,8 @@ class Mac():
         counter = 0
         initial = False
 
-        while True:              
+        while True:           
+            print("mac ", self.TDMA_slot,self.CSMA_slot,self.inactive_duration)   
             if (initial == False): # run once initialization
                 try:
                     yield self.env.process(self.initialization(10))
@@ -42,14 +48,11 @@ class Mac():
 
             counter += 1 # count superframes
             self.superframe_num = counter
-            self.logger.log('\n New Superframe is began CSMA at %d number %d\n' % (self.env.now ,counter))
-            print('\n New Superframe is began CSMA at %d number %d\n' % (self.env.now ,counter))
+            self.logger.log('\n MAC New Superframe is began CSMA at %d number %d\n' % (self.env.now ,counter))
+            print('\n MAC New Superframe is began CSMA at %d number %d\n' % (self.env.now ,counter))
             CSMA_duration = self.superframe.CSMA_slot
+            yield self.env.timeout(32)
 
-            if counter % config.Base_Sattion_Beaconning_period == 0:
-                for n in self.nodes[0].neighbors:
-                    message_sender = message.Message()
-                    message_sender.broadcast(self.nodes[0],"Base Station boradcast on regular basis {0} at env:{1}".format(self.nodes[0].id ,self.env.now),n.neighbors)
 
             try:
                 yield self.env.process(self.CSMA(CSMA_duration))
@@ -64,49 +67,25 @@ class Mac():
             except simpy.Interrupt:
                 print('Was interrupted.TDMA')
 
-            self.neighbor_collision()
+
 
             #print('INACTIVE at %d\n' % env.now)
-            inactive_duration = self.Inactive_duration
+            inactive_duration = self.superframe.Inactive_slot
             try:
                 yield self.env.process(self.INACTIVE(inactive_duration))
             except simpy.Interrupt:
                 print('Was interrupted.INACTIVE')
-            # self.network_nodedsicovery()
-            # print(self.nodes)
-            # print("net discovery")
 
-            self.interfrerence
+
+            #self.interfrerence
 
 
     def initialization(self,duration):
-        self.logger.log("initialization BS start to advertise + Superframe rules")
-        print("initialization BS start to advertise + Superframe rules")
-        self.network_nodedsicovery()
-        if (len(self.clusterheads) != 0):
-            for n in self.clusterheads:
-                self.nodes[0].neighbors.append(n)
-            self.logger.log("neighbors of BS:{0}".format(self.nodes[0].neighbors))
-            print("neighbors of BS: {0}".format(self.nodes[0].neighbors))
-        else:
-            print("Clusterheads' list is empty")
-        self.introduce_yourself()
-        # for n in self.nodes[0].neighbors:
-        #     print(n,"is near bs")
-        #     # n.distance.clear()
-        #     n.distance.append(self.nodes[0])
+        self.logger.log("initialization MAC")
+        print("initialization MAC")
 
-        message_sender = message.Message(header='superframe',data=self.superframe)
-        message_sender.broadcast(self.nodes[0],nodelist=self.nodes)
-
-        for n in self.nodes:
-            message_sender.send_message("BS boradcast + Superframe rules adv " + str(n.id),self.nodes[0],n)
-        #message_sender.broadcast(self.nodes[0],"BS boradcast + Superframe rules adv {0} at env:{1}".format(self.nodes[0].id ,self.env.now))
-        #self.logger.log('cluster formation\n')
-
-        print("Inititial network %d nods at %d"%(len(self.nodes),self.env.now))
         yield self.env.timeout(duration)
-        print("net is initials ends at {0} \n".format(self.env.now))
+        print("MAC is initials ends at {0} \n".format(self.env.now))
         
 
     def TDMA(self,duration):
@@ -115,7 +94,7 @@ class Mac():
             self.clock.append("TDMA")
             self.TDMA_slot = i+1
             self.logger.log("\n\nat {0} TDMA - slot {1}".format(self.env.now,(i)))
-            print("\n\nat {0} TDMA - slot {1}".format(self.env.now,(i)))
+            print("\n\n mac at {0} TDMA - slot {1}".format(self.env.now,(i)))
 
             yield self.env.timeout(1)
 
@@ -125,7 +104,7 @@ class Mac():
             self.clock.append("CSMA")
             self.CSMA_slot = i+1
             self.logger.log("\nat {0} CSMA - slot {1}".format(self.env.now,(i+1)))
-            print("\nat {0} CSMA - slot {1}".format(self.env.now,(i+1)))
+            print("\n mac at {0} CSMA - slot {1}".format(self.env.now,(i+1)))
 
             yield self.env.timeout(1)
 
@@ -135,6 +114,6 @@ class Mac():
             self.clock.append("INACTIVE")
             self.CSMA_slot = i+1
             self.logger.log("at %d inactive network" %self.env.now)
-            print("at %d inactive network" %self.env.now)
+            print("mac at %d inactive network" %self.env.now)
 
             yield self.env.timeout(1)

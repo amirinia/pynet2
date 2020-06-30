@@ -28,8 +28,7 @@ class mycluster:
         print("\nCluster {0} is created".format(self.id))
         self.action = env.process(self.run(env))
 
-        
-
+    
 
     def __str__(self):
         return str(self.id)
@@ -47,8 +46,8 @@ class mycluster:
     def run(self,env):
         while True:
             if (self.net.superframe_num % config.cluster_rotation_period) == 0:
-                self.logger.log("##### {0} {1}".format(self.net.superframe_num, env.now))
-                print ("##### {0} {1}".format(self.net.superframe_num, env.now))
+                self.logger.log("Cluster {0}  with {1} nodes ##### {2} {3}".format(self,self.nodes,self.net.superframe_num, env.now))
+                print ("Cluster {0}  with {1} nodes ##### {2} {3}".format(self,self.nodes,self.net.superframe_num, env.now))
                 #self.Random_Clusterhead_Selection()
                 yield self.env.timeout(config.Duration)
             #self.logger.log("cluster {0} ,CH :{1} alive {2} and average {3}".format(self.id,self.CH,self.CH.is_alive,self.average_cluster_energy()))
@@ -90,7 +89,7 @@ class mycluster:
         # node.TDMA_slot_number = self.nodes.index(node)
         # self.TDMA_slots += 1
         #print ("Cluster {0} has node id {1}".format(self.name,node.id))
-        node.set_TDMA(self.nodes.index(node))
+        node.set_TDMA(self.nodes.index(node)+1)
         
     def remove_node(self, node):
         self.nodelist.remove(node)

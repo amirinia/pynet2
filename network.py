@@ -14,6 +14,7 @@ import logger
 from superframe import Superframe
 import pickle
 from interference import Interference
+import mac
 """
 """
 
@@ -31,15 +32,15 @@ class Net():
         self.clusters = []
         self.clusterheads = []
         self.superframe_num = 0
-        self.xsize = xsize
-        self.ysize = ysize
+
         #add controller
-        controller = node.Node(0, self.env, 4, (self.xsize)/2, (self.ysize)/2, node_type='B' ,power_type=0)
+        controller = node.Node(0, self.env, 4, (config.xsize)/2, (config.ysize)/2, node_type='B' ,power_type=0)
         self.nodes.append(controller)
         controller.net = self
-        self.alert = False
         self.logger = logger.logger()
         self.dfdead = pd.DataFrame(columns=['id','deadtime','remainedenergy'])
+        #self.mac = mac.Mac(self.env,self)
+
         self.interfrerence = Interference(self.env,self)
         self.action = env.process(self.run())
 
@@ -47,12 +48,11 @@ class Net():
     def run(self):
         counter = 0
         initial = False
-        initialalert = False
         is_solved = False
 
 
         while True:
-
+            #self.clock = self.mac.clock
             #self.ClusterHead_finder()
             if(self.env.now % 700 == 0):
                 graph = gui.graphic(self)
@@ -109,30 +109,7 @@ class Net():
             # print(self.nodes)
             # print("net discovery")
 
-            if(initialalert == False):
-                if self.env.now > config.ALERT_TIME:
-                    self.alert = True
-                    self.logger.log("Alert is created")
-                    print("Alert is created")
-                    try:
-                        yield self.env.process(self.alert_creator())
-                    except simpy.Interrupt:
-                        print('Was interrupted.CSMA')
-                    initialalert = True
 
-            if(is_solved == False):
-                if self.env.now > config.ALERT_END:
-                    self.alert = False
-                    self.logger.log("Alert is solved ")
-                    print("Alert is solved ")
-                    graphi = gui.graphic(self)
-                    #graphi.alert_sloved()
-                    is_solved = True
-            
-            if self.alert == True: # if BS get alert
-                if any("Alert" in s for s in self.nodes[0].inbox):
-                    self.logger.log(" Alertttttt is received by BS ".format( self.env.now))
-                    print(" Alertttttt is received by BS ".format( self.env.now))
             self.interfrerence
 
                 
@@ -214,11 +191,11 @@ class Net():
 
 
     def network_nodedsicovery(self,distance = config.TX_RANGE):
-        self.logger.log("++++++++++++++++++++ network Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
+        self.logger.log("\n++++++++++++++++++++ network Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
         print("++++++++++++++++++++ network Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
         for n in self.nodes:
             self.logger.log("Neighbors Table discovery for {0} is below and neighbors are {1}".format(str(n.id),n.neighbors))
-            print("Neighbors Table discovery for {0} is below and neighbors are {1}".format(str(n.id),n.neighbors))
+            #print("Neighbors Table discovery for {0} is below and neighbors are {1}".format(str(n.id),n.neighbors))
             for n1 in self.nodes:
                 if(distance > math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2))):
                     if(n!=n1):
@@ -227,7 +204,7 @@ class Net():
                         msg_len = message_sender.message_length()
                         message_sender.send_message(tempmessage,n,n1,TDMA=False)
                         self.logger.log("{0} <=> {1} Distance= {2} RSSI= {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
-                        print("{0} <=> {1} Distance= {2} RSSI= {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
+                        #print("{0} <=> {1} Distance= {2} RSSI= {3}".format(str(n.id) , str(n1.id) , round(math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2)),2),round(RSSI.RSSI_nodes(n,n1)),4))
                         if n1 not in n.neighbors:
                             n.neighbors.append(n1)
 
@@ -284,27 +261,20 @@ class Net():
         sumpout = 0
         sumpin = 0
         dfp = pd.DataFrame(columns=['id','sent','received','lost'])
-        self.logger.log("=================================Sent packet summery==============================")
-        print("=================================Sent packet summery==============================")
+        self.logger.log("================================= packet summery==============================")
+        print("================================= packet summery==============================")
         for n in self.nodes:
-            self.logger.log("node {0} sent {1} packes".format(n,len(n.outbox)))
-            print("node {0} sent {1} packes".format(n,len(n.outbox)))
-            sumpout +=len(n.outbox)
-        self.logger.log("All packet numbers in outbox the  network is {0} ".format(sumpout))
-        print("All packet numbers in outbox the  network is {0} ".format(sumpout))
-        self.logger.log("=================================Received packet summery==============================")
-        print("=================================Received packet summery==============================")
-        for n in self.nodes:
-            self.logger.log("node {0} Received {1} packes".format(n,len(n.inbox)))
-            print("node {0} Received {1} packes".format(n,len(n.inbox)))
-            sumpin +=len(n.inbox)
-            dfp = dfp.append(pd.Series([n,len(n.outbox),len(n.inbox),len(n.outbox)-len(n.inbox)], index=dfp.columns), ignore_index=True)
-        self.logger.log("All packet numbers in inbox the network is {0} \n".format(sumpin))
-        print("All packet numbers in inbox the network is {0} \n".format(sumpin))
+            if (n.id !=0):
+                self.logger.log("node {0} Sent {1} packes and Received {2} packes".format(n,len(n.outbox),len(n.inbox)))
+                print("node {0} Sent {1} packes and Received {2} packes Lost : {3}".format(n,len(n.outbox),len(n.inbox),len(n.outbox)-len(n.inbox)))
+                dfp = dfp.append(pd.Series([n,len(n.outbox),len(n.inbox),len(n.outbox)-len(n.inbox)], index=dfp.columns), ignore_index=True)
+                sumpout += len(n.outbox)
+                sumpin += len(n.inbox)
         self.logger.log("{0} packets are lost on wireless sensor network".format(sumpout-sumpin))
-        print("{0} packets are lost on wireless sensor network".format(sumpout-sumpin))
+        print("{0} packets are lost on wireless sensor network {1} {2}".format(sumpout-sumpin,sumpout,sumpin))
         print("=================================")
         dfp.to_csv('report/packet.csv')
+        print(dfp.sum(axis = 0, skipna = True))
                         
 
     def savedeadnodes(self,i,energy,now):
@@ -342,12 +312,6 @@ class Net():
                                     #n2.TDMA = len(n2.clus.nodes) + 1
 
 
-    def alert_creator(self): # create alert in the network
-        
-        graphi = gui.graphic(self)
-        #graphi.alert()
-
-        yield self.env.timeout(1)
 
     def network_optimize(self):
         # energy

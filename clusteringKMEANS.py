@@ -40,7 +40,7 @@ class Kmeans:
         plt.scatter(df['x'], df['y'], color='k')
         # centroids[i] = [x, y]
         centroids = {
-            i+1: [np.random.randint(0, self.network.xsize), np.random.randint(0, self.network.ysize)]
+            i+1: [np.random.randint(0, config.xsize), np.random.randint(0, config.ysize)]
             for i in range(self.k)
         }
         colmap = {1: 'r', 2: 'g', 3: 'b',4: 'y',5: 'k',6: 'm',7: 'c',8: 'pink',9 :'blue' ,10 :'green',11:'purple',12:'cyan',13:'red',14:'yellow',15:'black',16:'magenta'}
@@ -238,10 +238,8 @@ class Kmeans:
 
                     c.cluster_head_setter(node)
                     c.CH = node
-                    node.set_TDMA(len(c.nodes))
                     node.change_CulsterHead()
                     node.is_CH = True
-                    # node.change_TDMA(mycluster1.TDMA_slots)
                     #self.logger.log("{0} is CH in cluster {1} with {2}  ++++++++++++++++++ area\n".format(node.id , c.id,str(c.nodes) ) )
                     print("{0} is CH in cluster {1} with {2}  ++++++++++++++++++ is CH {3} area \n".format(node.id , c.id,str(c.nodes),node.is_CH ) )
                     message2 = message.Message()

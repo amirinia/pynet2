@@ -37,7 +37,7 @@ graphi = gui.graphic(net1)
 graphi.draw()
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
-env.run(190)#until=config.MAX_RUNTIME)
+env.run(600)#until=config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 
@@ -58,6 +58,6 @@ net1.introduce_yourself()
 
 
 net1.network_packet_summery()
-net1.network_optimize()
-report.plotpacket()
-report.plotenergy()
+#net1.network_optimize()
+#report.plotpacket()
+#report.plotenergy()

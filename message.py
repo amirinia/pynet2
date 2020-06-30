@@ -49,7 +49,7 @@ class Message(object):
             #is_loss = packetloss.packetloss() # packet loss model
 
             # propagation model
-            en = PropagationModel(propagation_type=1)
+            en = PropagationModel(propagation_type=0)
             n = sender_node
             n1 = destination_node
             d = math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2))
@@ -77,6 +77,9 @@ class Message(object):
                 destination_node.node_receive_message(message + " resend",sender_node)
                 destination_node.node_send_message("ACK "  + " resend",sender_node)
                 sender_node.node_receive_message("ACK ",destination_node)
+                
+                sender_node.power.decrease_tx_energy(msg_len)
+                sender_node.energy.append(node.power.energy)
 
                 self.decreasEngryrx(destination_node,msg_len)
                 self.decreasEngryrx(destination_node,msg_len)

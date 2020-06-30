@@ -120,8 +120,8 @@ class Node():
                         graph = gui.graphic(self.net)
                         graph.draw()
                         print("env exit")
-                        self.net.env.exit()
-                        sys.exit()
+                        # self.net.env.exit()
+                        # sys.exit()
 
                     if self.env.now > config.ALERT_TIME:
                         if self.net.alert :
@@ -134,7 +134,7 @@ class Node():
                     if self.net.clock[0]=="TDMA":
                         #print(self.net.TDMA_slot,(self.TDMA))
                         if(self.is_CH == False):
-                            if(self.net.TDMA_slot < (self.TDMA )): # there is no TDMA for this onde in network
+                            if(config.TDMA_duration < (self.TDMA )): # there is no TDMA for this onde in network
                                     print("TDMA of this nod does not exist node : ", self.id)
                                     self.power.decrease_tx_energy(10000)
                                     self.energy.append(self.power.energy)
@@ -313,7 +313,6 @@ class Node():
         
         
         if( "is cluster Head" in str_message ):
-            # self.change_TDMA(sender_node.TDMA)
             if (sender_node.cluster == self.cluster):
                 self.parent_setter(sender_node)
                 if(self.is_CH == True):
@@ -331,10 +330,10 @@ class Node():
             if any("BS" in s for s in self.inbox):
                 
                 self.BS_getter()
-                print("\n",self,self.getBS, "is CH ",self.is_CH)
-                print("distance is ",self.distance)
-                self.logger.log("for {0} neighbors are {1}".format(self,self.neighbors))
-                print("for {0} neighbors are {1}".format(self,self.neighbors))
+                #print("\n",self,self.getBS, "is CH ",self.is_CH)
+                #print("distance is ",self.distance)
+                #self.logger.log("for {0} neighbors are {1}".format(self,self.neighbors))
+                #print("for {0} neighbors are {1}".format(self,self.neighbors))
                 # time.sleep(1)
                 # for n in self.neighbors:
                 #     if n.id != 0:
@@ -382,14 +381,13 @@ class Node():
         #print(ch, "is head")
 
 
-
     def add_nodes(self,list):
         self.neighbors.append(list)
         print(self.neighbors)
 
 
     def change_CulsterHead(self):
-        if(self.is_CH == False):
+        if(self.is_CH == False and self.id !=0):
             self.is_CH = True
             self.parent.clear()
 
@@ -397,7 +395,7 @@ class Node():
             print("node {0} becomes CH (change)and parent is {1} and TDMA energy {3}".format(self.id,self.parent,self.TDMA,(next(reversed(self.energy)))))
             self.distance.clear
             self.distance.append(self.net.nodes[0])
-        if(self.is_CH == True):
+        if(self.is_CH == True and self.id !=0):
             self.is_CH == False
             self.next_hop.clear()
             self.logger.log("e node {0} becomes simple node (change) and parent is {1} and TDMA {2} energy {3}".format(self.id,self.parent,self.TDMA,(next(reversed(self.energy)))))
