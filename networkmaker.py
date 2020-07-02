@@ -116,7 +116,10 @@ class Network():
     def makeinitialnetwork(self,positions):
         env = simpy.Environment()
         net1 = network.Net(env)
+        net1.add_node(Node(0, env, 4, (config.xsize)/2, (config.ysize)/2, node_type='B' ,power_type=0,network =net1))
+
         for i in range(1,len( positions)):
+            
             #if (i >0):
                 x = positions[i][0]
                 y = net1.ysize - positions[i][1]

@@ -34,11 +34,11 @@ class Net():
         self.superframe_num = 0
 
         #add controller
-        controller = node.Node(0, self.env, 4, (config.xsize)/2, (config.ysize)/2, node_type='B' ,power_type=0)
-        self.nodes.append(controller)
-        controller.net = self
+        # controller = node.Node(0, self.env, 4, (config.xsize)/2, (config.ysize)/2, node_type='B' ,power_type=0)
+        # self.nodes.append(controller)
+        # controller.net = self
         self.logger = logger.logger()
-        self.dfdead = pd.DataFrame(columns=['id','deadtime','remainedenergy'])
+        #self.dfdead = pd.DataFrame(columns=['id','deadtime','remainedenergy'])
         #self.mac = mac.Mac(self.env,self)
 
         self.interfrerence = Interference(self.env,self)
@@ -109,11 +109,9 @@ class Net():
             # print(self.nodes)
             # print("net discovery")
 
-
             self.interfrerence
 
                 
-
 
     def initialization(self,duration):
         self.logger.log("initialization BS start to advertise + Superframe rules")
@@ -277,14 +275,11 @@ class Net():
         print(dfp.sum(axis = 0, skipna = True))
                         
 
-    def savedeadnodes(self,i,energy,now):
-        self.dfdead.append(pd.Series([i,energy,now], index=self.dfdead.columns), ignore_index=True)
-        self.dfdead.to_csv('report/deadnodes.csv')
+    # def savedeadnodes(self,i,energy,now):
+    #     self.dfdead.append(pd.Series([i,energy,now], index=self.dfdead.columns), ignore_index=True)
+    #     self.dfdead.to_csv('report/deadnodes.csv')
 
-    # def CH_probablity(self):
-    #     if(len(self.clusters)==0):
-    #         print("there is no cluster to cal CH_prob")
-    #     return float(len(self.clusters))/float(len(self.nodes))
+
 
    
 
@@ -295,7 +290,6 @@ class Net():
 
     def remove_cluster(self, cluster):
         self.clusters.remove(cluster)
-
 
     
     def neighbor_collision(self): # check if 2 nodes neighbor have same TDMA

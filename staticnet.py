@@ -14,6 +14,8 @@ env = simpy.Environment()
 
 net1 = network.Net(env)
 
+
+net1.add_node(Node(0, env, 4, (config.xsize)/2, (config.ysize)/2, node_type='B' ,power_type=0,network =net1))
 net1.add_node(Node(1,env,1.99, 10,10,network =net1))
 net1.add_node(Node(2,env,1.98,10,60,network =net1, sensor_type=1))
 net1.add_node(Node(3,env,1.988,30,11,network =net1))

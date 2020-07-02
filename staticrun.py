@@ -21,7 +21,7 @@ env = initialnetwork.env
 
 
 # in second step you need and algorithm
-second = False
+second = True
 print("_____________________________Clustering Algorithm___________________________________ start\n\n")
 if(second):
     KMEANS1 = KMEANS.Kmeans(env,net1,10)

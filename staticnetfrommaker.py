@@ -17,6 +17,7 @@ positions = pickle.load(open("report/pos.pickle", "rb"))
 env = simpy.Environment()
 
 net1 = network.Net(env)
+net1.add_node(Node(0, env, 4, (config.xsize)/2, (config.ysize)/2, node_type='B' ,power_type=0,network =net1))
 
 for i in range(len(positions)):
     if (i >0):
