@@ -1,10 +1,9 @@
 import simpy
-import network
+import ieee802154
 import random 
 import config
 import message
 from energymodel import EnergyModel
-import sensor
 import time
 import gui
 import cluster
@@ -15,12 +14,42 @@ import sys
 from superframe import Superframe
 from interference import Interference
 
+
+
+Sensor_Type = {0: "Alert-Temperature", 1: "Monitoring"}
+class sensor:
+    def __init__(self,id,name,Sensor_Type=1):
+        self.id = id
+        self.name = name
+        self.sensor_type = Sensor_Type
+
+    def __str__(self):
+        return str(self.sensor_type)
+
+    def __repr__(self):
+        return str("sensor"+str(self.sensor_type))
+
+    def run(self,env):
+        if self.sensor_type == 0:
+            print(self.temperature_sensor())
+        print(self.light_sensor())
+        print(self.temperature_sensor())
+
+    def temperature_sensor(self):
+        return random.randint(17,30)
+        
+    def light_sensor(self):
+        return random.randint(100,300)
+
+    def humidity_sensor(self):
+        return random.randint(171 , 194)
+
 class Node():
-    def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(1000,2000)),x=random.randint(0,config.AREA_WIDTH),y=random.randint(0,config.AREA_LENGTH),node_type=None, power_type=1, mobile_type=0, network=network ,sensor_type=0):
+    def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(1000,2000)),x=random.randint(0,config.AREA_WIDTH),y=random.randint(0,config.AREA_LENGTH),node_type=None, power_type=1, mobile_type=0, ieee802154=ieee802154 ,sensor_type=0):
         self.env = env
         self.id = id
         
-        self.net = network
+        self.net = ieee802154
         self.is_alive = True
         self.energy = [energy]
         #print("node is created ")
@@ -36,7 +65,7 @@ class Node():
         self.cluster = []
         self.TDMA = 0
         self.power = EnergyModel(power_type = power_type)
-        self.sensor = sensor.sensor(self.id,str(self.id) + "sensor",sensor_type)
+        self.sensor = sensor(self.id,str(self.id) + "sensor",sensor_type)
         self.getBS = False
         self.distance = []
         self.next_hop = []
@@ -123,18 +152,18 @@ class Node():
                         # self.net.env.exit()
                         # sys.exit()
 
-                    if self.env.now > config.ALERT_TIME:
-                        if self.net.alert :
-                             if(config.Alert_RANGE > math.sqrt(((config.alertx-self.x)**2)+((config.alerty-self.y)**2))):
-                                 self.alert_neighbor = True
-                        else:
-                                 self.alert_neighbor = False
+                    # if self.env.now > config.ALERT_TIME:
+                    #     if self.net.alert :
+                    #          if(config.Alert_RANGE > math.sqrt(((config.alertx-self.x)**2)+((config.alerty-self.y)**2))):
+                    #              self.alert_neighbor = True
+                    #     else:
+                    #              self.alert_neighbor = False
 
 
                     if self.net.clock[0]=="TDMA":
                         #print(self.net.TDMA_slot,(self.TDMA))
                         if(self.is_CH == False):
-                            if(config.TDMA_duration < (self.TDMA )): # there is no TDMA for this onde in network
+                            if(config.TDMA_duration < (self.TDMA )): # there is no TDMA for this onde in ieee802154
                                     print("TDMA of this nod does not exist node : ", self.id)
                                     self.power.decrease_tx_energy(10000)
                                     self.energy.append(self.power.energy)

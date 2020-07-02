@@ -1,5 +1,5 @@
 import simpy
-import network 
+import ieee802154 
 import node
 import message
 import time
@@ -34,7 +34,7 @@ node20 = node.Node(20,env,1.846 ,130,20 )
 node21 = node.Node(21,env,1.786487,135,2)
 node22 = node.Node(22,env,2 ,175,5)
 
-net1 = network.Net(env)
+net1 = ieee802154.Net(env)
 
 net1.add_node(node1)
 net1.add_node(node2)
@@ -72,7 +72,7 @@ node21.net = net1
 
 net1.introduce_yourself()
 print("KKKKKKKKKK")
-net1.network_nodedsicovery()
+net1.ieee802154_nodedsicovery()
 #graphi = gui.graphic(net1)
 #graphi.draw_nods()
 
@@ -82,8 +82,8 @@ net1.network_nodedsicovery()
 
 # graphi.draw_neighbors()
 
-# net1.network_inboxes()
-# net1.network_outboxes()
-# net1.network_packet_summery()
+# net1.ieee802154_inboxes()
+# net1.ieee802154_outboxes()
+# net1.ieee802154_packet_summery()
 # net1.introduce_yourself()
 

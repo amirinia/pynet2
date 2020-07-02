@@ -1,4 +1,4 @@
-import network
+import ieee802154
 import simpy
 import random
 import config
@@ -15,8 +15,8 @@ import simpy
 import message
 
 class Kmeans:
-    def __init__(self,env, network,k=5):
-        self.network = network
+    def __init__(self,env, ieee802154,k=5):
+        self.ieee802154 = ieee802154
         self.k = k
         self.clusterheads = []
         self.clusters = []
@@ -30,9 +30,9 @@ class Kmeans:
         if self.k >16:
             print('use smaller k')
         df = pd.DataFrame(columns=['n', 'x', 'y'])
-        graphi = gui.graphic(network)
+        graphi = gui.graphic(ieee802154)
 
-        for n in self.network.nodes:
+        for n in self.ieee802154.nodes:
             df.loc[n] = [n.id,n.x,n.y]
 
 
@@ -131,13 +131,13 @@ class Kmeans:
         # for i, row in df.iterrows():
             # for j, column in row.iteritems():
             # print(i,df['closest'][i])
-            #print(self.network.nodes[i].id)
+            #print(self.ieee802154.nodes[i].id)
         
 
 
         doagain = False
-        print("clusters",self.network.clusters)
-        for c in self.network.clusters:
+        print("clusters",self.ieee802154.clusters)
+        for c in self.ieee802154.clusters:
                 print(c,c.nodes)
                 if (len(c.nodes)>7 or len(c.nodes)<2 ):
                         print("cluster is too large")
@@ -145,7 +145,7 @@ class Kmeans:
 
         if doagain:
                 print("repeat Kmean")
-                Kmeans(self.env,self.network,self.k)
+                Kmeans(self.env,self.ieee802154,self.k)
 
         
         while True:
@@ -167,9 +167,9 @@ class Kmeans:
 
 
 
-        print("nn",self.network.nodes)
+        print("nn",self.ieee802154.nodes)
         clusters = []
-        for n in self.network.nodes: # add cluster to node
+        for n in self.ieee802154.nodes: # add cluster to node
             if(n.id != 0):
                 #print(n,df['color'][n])
                 n.cluster.clear()
@@ -183,9 +183,9 @@ class Kmeans:
         for c in set(clusters): # add neighbor to node
             print(c ,"is new cluster in kmean" )
                         # node.change_CulsterHead()
-            mycluster1 = cluster.mycluster(c,env,self.network)
+            mycluster1 = cluster.mycluster(c,env,self.ieee802154)
                         # mycluster1.add_node(node) # add ch to node list
-            for n in self.network.nodes: # add neighbor of CH to cluster
+            for n in self.ieee802154.nodes: # add neighbor of CH to cluster
                 if(df['closest'][n] == c and n.id != 0):
                     #print(df['closest'][n], "   ", c)
                     mycluster1.add_node(n)
@@ -210,20 +210,20 @@ class Kmeans:
                 message2 = message.Message()
                 message2.broadcast(n,"node {0} is cluster Head in {1} with TDMA ".format(n.id,mycluster1.id),mycluster1.nodes)
                                 
-                self.network.add_cluster(mycluster1)
+                self.ieee802154.add_cluster(mycluster1)
                 self.clusters.append(mycluster1)
-                self.network.clusterheads.append(n)
+                self.ieee802154.clusterheads.append(n)
                 self.clusterheads.append(n)
                         
 
 
-        print("nodes ",self.network.nodes) 
+        print("nodes ",self.ieee802154.nodes) 
         print("clusters ",self.clusters)    
         print("CHs ",self.clusterheads)  
 
         print("kmeans is done")
 
-        for node in self.network.nodes:
+        for node in self.ieee802154.nodes:
             #print(node.id, node.is_CH)
             if (node.is_CH == False):
                 if (len(node.parent) == 0):
@@ -244,12 +244,12 @@ class Kmeans:
                     print("{0} is CH in cluster {1} with {2}  ++++++++++++++++++ is CH {3} area \n".format(node.id , c.id,str(c.nodes),node.is_CH ) )
                     message2 = message.Message()
                     message2.broadcast(node,"node {0} is cluster Head in {1} with TDMA ".format(node.id,c.id),node.neighbors)
-                    self.network.clusterheads.append(node)
+                    self.ieee802154.clusterheads.append(node)
                     self.clusterheads.append(node)
-            self.network.add_cluster(c)
+            self.ieee802154.add_cluster(c)
 
-        self.network.introduce_yourself()
-        graphi = gui.graphic(self.network)  
+        self.ieee802154.introduce_yourself()
+        graphi = gui.graphic(self.ieee802154)  
         graphi.draw()
 
 
@@ -287,7 +287,7 @@ class Kmeans:
 
 
     # env = simpy.Environment()
-    # net1 = network.Net(env)
+    # net1 = ieee802154.Net(env)
     # net1.random_net_generator(env,net1,10)
     # net1.introduce_yourself()
     # graphi = gui.graphic(net1)
@@ -299,9 +299,9 @@ class Kmeans:
 
 
 
-    #print(network.nodes[0].x)
+    #print(ieee802154.nodes[0].x)
 
-        # def myKmeans(self,network,itrations):
+        # def myKmeans(self,ieee802154,itrations):
 
             
         #     for i in range(itrations):
@@ -309,12 +309,12 @@ class Kmeans:
         #         y=random.randint(0,config.AREA_LENGTH)
         #         nodech = node.Node(1000+i,env,2,x,y)
 
-        #         for n in self.network.nodes:
+        #         for n in self.ieee802154.nodes:
         #             distance = 200
-        #             #print(self.network.distance(n,nodech))
+        #             #print(self.ieee802154.distance(n,nodech))
         #             #print(i,x,y)
-        #             if(distance > self.network.distance(n,nodech)):
-        #                 distance = self.network.distance(n,nodech)
+        #             if(distance > self.ieee802154.distance(n,nodech)):
+        #                 distance = self.ieee802154.distance(n,nodech)
         #                 print(n,nodech,distance)
         #                 n.parent.clear()
         #                 n.parent.append(nodech)
@@ -323,7 +323,7 @@ class Kmeans:
 
 
 
-    # Kmeans(network,5)
-    # network.introduce_yourself()
-    # graphi = gui.graphic(network)
+    # Kmeans(ieee802154,5)
+    # ieee802154.introduce_yourself()
+    # graphi = gui.graphic(ieee802154)
     # graphi.draw_ch()

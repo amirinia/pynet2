@@ -1,6 +1,6 @@
 import math
 import node
-import network
+import ieee802154
 import config
 import RSSI
 import simpy
@@ -9,10 +9,10 @@ import energymodel
 import message
 
 class Interference():
-    def __init__(self,env,network):
+    def __init__(self,env,ieee802154):
         self.time = env.now
         self.env = env
-        self.network = network
+        self.ieee802154 = ieee802154
         self.list = []
         self.action = env.process(self.run())
 
@@ -20,16 +20,16 @@ class Interference():
         while True:
             self.list.clear()
             #print("at {0} hi".format(self.env.now))
-            self.network_Interfrence()
-            #print(self.network.nodes)
+            self.ieee802154_Interfrence()
+            #print(self.ieee802154.nodes)
             
             yield self.env.timeout(1)
 
 
-    def network_Interfrence(self):
+    def ieee802154_Interfrence(self):
         distance = config.TX_RANGE
-        for n in self.network.nodes:
-            for n1 in self.network.nodes:
+        for n in self.ieee802154.nodes:
+            for n1 in self.ieee802154.nodes:
                 if(distance > math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2))):
                     if(n!=n1):
                         if ( n1.flag == True and n.flag == True):

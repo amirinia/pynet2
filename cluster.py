@@ -1,4 +1,4 @@
-import network
+import ieee802154
 import node
 import simpy
 import gui
@@ -12,12 +12,12 @@ import pickle
 from superframe import Superframe
 
 class mycluster:
-    def __init__(self,id, env ,network):
+    def __init__(self,id, env ,ieee802154):
         self.id = id
         self.nodes = []
         self.is_alive = True
         self.env = env
-        self.net = network
+        self.net = ieee802154
         self.next_CH = []
         self.CH = node.Node
         self.light = []

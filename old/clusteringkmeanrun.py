@@ -1,23 +1,22 @@
 #at begining you can set parameters in config file
 import gui
 import simpy
-import network
+import ieee802154
 import node
 import clusteringKMEANS as KMEANS
 
-# to run simulation you need initial networks ( just simply define nodes and addd to network or use random generator)
-#import staticnetfrommaker as initialnetwork
-# here you select if it start with statci network or network maker
+# to run simulation you need initial ieee802154s ( just simply define nodes and addd to ieee802154 or use random generator)
+#import networkfrommaker as initialieee802154
+# here you select if it start with statci ieee802154 or ieee802154 maker
 startstatic = False
 if(startstatic):
-    import staticnet as initialnetwork
+    import network as initialieee802154
 else:
-    import staticnetfrommaker as initialnetwork
+    import networkfrommaker as initialieee802154
 
 
-
-net1 = initialnetwork.net1
-env = initialnetwork.env
+net1 = initialieee802154.net1
+env = initialieee802154.env
 #net1.random_net_generator(env,net1,40)
 # net1.introduce_yourself()
 # graphi = gui.graphic(net1)
@@ -42,7 +41,7 @@ print("++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++
 env.run(until=100)#config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
-#net1.network_packet_summery()
+#net1.ieee802154_packet_summery()
 
 
 # for n in net1.nodes:
@@ -55,5 +54,5 @@ print("++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++
 #graphi.draw_neighbors()
 
 net1.introduce_yourself()
-#net1.network_outboxes()
-#net1.network_inboxes()
+#net1.ieee802154_outboxes()
+#net1.ieee802154_inboxes()

@@ -1,6 +1,6 @@
 #at begining you can set parameters in config file
 
-# to run simulation you need initial networks ( just simply define nodes and addd to network)
+# to run simulation you need initial ieee802154s ( just simply define nodes and addd to ieee802154)
 import gui
 import config
 import report
@@ -8,20 +8,20 @@ import logger
 import LEACH 
 import clusteringKMEANS as KMEANS
 
-# here you select if it start with statci network or network maker
+# here you select if it start with statci ieee802154 or ieee802154 maker
 startstatic = False
 if(startstatic):
-    import staticnet as initialnetwork
+    import network as initialieee802154
 else:
-    import staticnetfrommaker as initialnetwork
+    import networkfrommaker as initialieee802154
 
-# create network
-net1 = initialnetwork.net1
-env = initialnetwork.env
+# create ieee802154
+net1 = initialieee802154.net1
+env = initialieee802154.env
 
 
 # in second step you need and algorithm
-second = True
+second = False
 print("_____________________________Clustering Algorithm___________________________________ start\n\n")
 if(second):
     KMEANS1 = KMEANS.Kmeans(env,net1,10)
@@ -41,7 +41,7 @@ env.run(600)#until=config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 
-#net1.network_packet_summery()
+#net1.ieee802154_packet_summery()
 
 # for n in net1.nodes:
 #     print(n,n.TDMA,n.is_CH,n.cluster,"   ",n.distance)
@@ -53,11 +53,11 @@ print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++
 # print(net1.nodes[0].inbox)
 net1.introduce_yourself()   
 
-# net1.network_outboxes()
-# net1.network_inboxes()
+# net1.ieee802154_outboxes()
+# net1.ieee802154_inboxes()
 
 
-net1.network_packet_summery()
-#net1.network_optimize()
+net1.ieee802154_packet_summery()
+#net1.ieee802154_optimize()
 #report.plotpacket()
 #report.plotenergy()

@@ -7,7 +7,7 @@ import RSSI
 import cluster
 import message
 import config
-import network
+import ieee802154
 import logger
 import pandas as pd
 from superframe import Superframe
@@ -16,7 +16,7 @@ from interference import Interference
 """
 
 class Mac():
-    def __init__(self,env ,network=network):
+    def __init__(self,env ,ieee802154=ieee802154):
         self.env = env
         # superframe
         self.clock = ["CSMA"]
@@ -25,7 +25,7 @@ class Mac():
         self.CSMA_slot = 0
         self.inactive_duration = 0
         self.superframe_num = 0
-        self.net = network
+        self.net = ieee802154
         self.logger = logger.logger()
 
         #self.interfrerence = Interference(self.env,self)
@@ -113,7 +113,7 @@ class Mac():
             self.clock.clear()
             self.clock.append("INACTIVE")
             self.CSMA_slot = i+1
-            self.logger.log("at %d inactive network" %self.env.now)
-            print("mac at %d inactive network" %self.env.now)
+            self.logger.log("at %d inactive ieee802154" %self.env.now)
+            print("mac at %d inactive ieee802154" %self.env.now)
 
             yield self.env.timeout(1)

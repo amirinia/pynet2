@@ -1,16 +1,16 @@
 import simpy
-import network
+import ieee802154
 import math
 import config
 import time
 
 class Alert():
-    def __init__(self, env, x, y, network):
+    def __init__(self, env, x, y, ieee802154):
         self.env = env
         self.action = env.process(self.run())
         self.x = x
         self.y = y
-        self.net = network
+        self.net = ieee802154
         self.neighbors = []
             
             

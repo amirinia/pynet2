@@ -1,11 +1,11 @@
 import simpy
-import network
+import ieee802154
 import node
 import gui
 import random
 
 env = simpy.Environment()
-net1 = network.Net(env) # create instance
+net1 = ieee802154.Net(env) # create instance
 
 # controller = node.Node(0, env, (net1.xsize)/2, (net1.xsize)/2,node_type='B' )
 # net1.nodes.append(controller)
@@ -41,7 +41,7 @@ print(net1.nodes)
 
 graphi.draw_neighbors()
 
-# net1.network_inboxes()
-# net1.network_outboxes()
-net1.network_packet_summery()
+# net1.ieee802154_inboxes()
+# net1.ieee802154_outboxes()
+net1.ieee802154_packet_summery()
 net1.introduce_yourself()

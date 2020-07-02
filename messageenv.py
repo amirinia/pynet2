@@ -1,6 +1,6 @@
 #message
 import node
-import network
+import ieee802154
 import packetloss
 import energymodel
 from propagation import PropagationModel

@@ -1,4 +1,4 @@
-Tue, 07 Jan 2020 17:33:06 ****************************Begin of introduce network
+Tue, 07 Jan 2020 17:33:06 ****************************Begin of introduce ieee802154
 Tue, 07 Jan 2020 17:33:06 0  with energy : <Power Type=External, Energy=2000 mJ>  with position 150.0 100.0 ; CH is [] is alive: True with TDMA 0 4
 Tue, 07 Jan 2020 17:33:06 1  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 10 10 ; CH is [] is alive: True with TDMA 0 1.99
 Tue, 07 Jan 2020 17:33:06 2  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 10 60 ; CH is [] is alive: True with TDMA 0 1.98
@@ -23,7 +23,7 @@ Tue, 07 Jan 2020 17:33:06 20  with energy : <Power Type=Battery, Energy=2000 mJ>
 Tue, 07 Jan 2020 17:33:06 21  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 135 2 ; CH is [] is alive: True with TDMA 0 1.786487
 Tue, 07 Jan 2020 17:33:06 22  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 175 5 ; CH is [] is alive: True with TDMA 0 2
 Tue, 07 Jan 2020 17:33:06 ==============================Clusters===============================
-Tue, 07 Jan 2020 17:33:06 ++++++++++++++++++++ network Table Discovery Begins 70 meters ++++++++++++++++++++++++++++
+Tue, 07 Jan 2020 17:33:06 ++++++++++++++++++++ ieee802154 Table Discovery Begins 70 meters ++++++++++++++++++++++++++++
 Tue, 07 Jan 2020 17:33:06 Neighbors Table discovery for 0 is below and neighbors are []
 Tue, 07 Jan 2020 17:33:06 Neighbors Table discovery for 1 is below and neighbors are []
 Tue, 07 Jan 2020 17:33:06 1 <=> 2 Distance= 50.0 RSSI= -103
@@ -133,9 +133,9 @@ Tue, 07 Jan 2020 17:33:06 21 <=> 22 Distance= 40.11 RSSI= -101
 Tue, 07 Jan 2020 17:33:06 Neighbors Table discovery for 22 is below and neighbors are []
 Tue, 07 Jan 2020 17:33:06 22 <=> 20 Distance= 47.43 RSSI= -103
 Tue, 07 Jan 2020 17:33:06 22 <=> 21 Distance= 40.11 RSSI= -101
-Tue, 07 Jan 2020 17:33:07 +++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ 
+Tue, 07 Jan 2020 17:33:07 +++++++++++++++++++++ ieee802154 Table Discovery Ends +++++++++++++++++++++++++++++++ 
 
-Tue, 07 Jan 2020 17:33:17 ****************************Begin of introduce network
+Tue, 07 Jan 2020 17:33:17 ****************************Begin of introduce ieee802154
 Tue, 07 Jan 2020 17:33:17 0  with energy : <Power Type=External, Energy=2000 mJ>  with position 150.0 100.0 ; CH is [] is alive: True with TDMA 0 4
 Tue, 07 Jan 2020 17:33:17 1  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 10 10 ; CH is [] is alive: True with TDMA 0 1.99
 Tue, 07 Jan 2020 17:33:17 2  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 10 60 ; CH is [] is alive: True with TDMA 0 1.98
@@ -160,7 +160,7 @@ Tue, 07 Jan 2020 17:33:17 20  with energy : <Power Type=Battery, Energy=2000 mJ>
 Tue, 07 Jan 2020 17:33:17 21  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 135 2 ; CH is [] is alive: True with TDMA 0 1.786487
 Tue, 07 Jan 2020 17:33:17 22  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 175 5 ; CH is [] is alive: True with TDMA 0 2
 Tue, 07 Jan 2020 17:33:17 ==============================Clusters===============================
-Tue, 07 Jan 2020 17:33:17 ++++++++++++++++++++ network Table Discovery Begins 70 meters ++++++++++++++++++++++++++++
+Tue, 07 Jan 2020 17:33:17 ++++++++++++++++++++ ieee802154 Table Discovery Begins 70 meters ++++++++++++++++++++++++++++
 Tue, 07 Jan 2020 17:33:17 Neighbors Table discovery for 0 is below and neighbors are []
 Tue, 07 Jan 2020 17:33:17 Neighbors Table discovery for 1 is below and neighbors are []
 Tue, 07 Jan 2020 17:33:17 1 <=> 2 Distance= 50.0 RSSI= -103
@@ -270,5 +270,5 @@ Tue, 07 Jan 2020 17:33:17 21 <=> 22 Distance= 40.11 RSSI= -101
 Tue, 07 Jan 2020 17:33:17 Neighbors Table discovery for 22 is below and neighbors are []
 Tue, 07 Jan 2020 17:33:17 22 <=> 20 Distance= 47.43 RSSI= -103
 Tue, 07 Jan 2020 17:33:17 22 <=> 21 Distance= 40.11 RSSI= -101
-Tue, 07 Jan 2020 17:33:17 +++++++++++++++++++++ network Table Discovery Ends +++++++++++++++++++++++++++++++ 
+Tue, 07 Jan 2020 17:33:17 +++++++++++++++++++++ ieee802154 Table Discovery Ends +++++++++++++++++++++++++++++++ 
 

@@ -1,6 +1,6 @@
 # Author: amirinia
 import simpy
-import network 
+import ieee802154 
 from  node import  Node
 import message
 import time
@@ -22,13 +22,13 @@ symbol_color = 'pink'
 
 
 
-class Network():
+class network():
     # ------------------------------------------------------------------
     # Initialization Functions:
     # ------------------------------------------------------------------
     def __init__(self):
         self.window = Tk()
-        self.window.title('Network Maker')
+        self.window.title('network Maker')
         self.canvas = Canvas(self.window, width=size_of_board, height=size_of_board,bg="white")
         self.canvas.pack()
         # Input from user in form of clicks
@@ -115,8 +115,8 @@ class Network():
 
     def makeinitialnetwork(self,positions):
         env = simpy.Environment()
-        net1 = network.Net(env)
-        net1.add_node(Node(0, env, 4, (config.xsize)/2, (config.ysize)/2, node_type='B' ,power_type=0,network =net1))
+        net1 = ieee802154.Net(env)
+        net1.add_node(Node(0, env, 4, (config.xsize)/2, (config.ysize)/2, node_type='B' ,power_type=0,ieee802154 =net1))
 
         for i in range(1,len( positions)):
             
@@ -125,10 +125,10 @@ class Network():
                 y = net1.ysize - positions[i][1]
                 #print("p = x:",positions[i][0],positions[i][1],i)
 
-                net1.add_node(Node(i,env,2000,x,y,node_type=None,network=net1))
+                net1.add_node(Node(i,env,2000,x,y,node_type=None,ieee802154=net1))
         net1.introduce_yourself()
         print("KKKKKKKKKK")
-        #net1.network_nodedsicovery()
+        #net1.ieee802154_nodedsicovery()
         
         # listnodes = net1.nodes
         # file_pi = open('linstnodes.obj', 'w') 
@@ -142,5 +142,5 @@ class Network():
         graphi.draw_nods()
 
 
-instance = Network()
+instance = network()
 instance.mainloop()

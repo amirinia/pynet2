@@ -1,13 +1,13 @@
 import numpy as np 
 import random 
 import pandas as pd
-#import staticnet as initialnetwork
+#import network as initialieee802154
 import gui
 import config
 import report
 import logger
 import simpy
-import network
+import ieee802154
 import node
 
 #df = pd.DataFrame(columns=['pop','energy','duration','lost','dead'])
@@ -26,17 +26,17 @@ def run(x):
     env = simpy.Environment()
 
 
-    node1 = node.Node(1,env,1.99, 10,10, node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
-    node2 = node.Node(2,env,1.98,10,60 ,node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
-    node3 = node.Node(3,env,1.988,30,11, node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
-    node4 = node.Node(4,env,1.9088,43,35, node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
-    node19 = node.Node(19,env,1.3654675,30,50 , node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
+    node1 = node.Node(1,env,1.99, 10,10, node_type=None, power_type=1, mobile_type=0, ieee802154=ieee802154, sensor_type=1)
+    node2 = node.Node(2,env,1.98,10,60 ,node_type=None, power_type=1, mobile_type=0, ieee802154=ieee802154, sensor_type=1)
+    node3 = node.Node(3,env,1.988,30,11, node_type=None, power_type=1, mobile_type=0, ieee802154=ieee802154, sensor_type=1)
+    node4 = node.Node(4,env,1.9088,43,35, node_type=None, power_type=1, mobile_type=0, ieee802154=ieee802154, sensor_type=1)
+    node19 = node.Node(19,env,1.3654675,30,50 , node_type=None, power_type=1, mobile_type=0, ieee802154=ieee802154, sensor_type=1)
 
 
-    node5 = node.Node(5,env,1.9855,260,30, node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
-    node6 = node.Node(6,env,1.9678,270,50, node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
-    node7 = node.Node(7,env,1.8434,259,72, node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
-    node8 = node.Node(8,env,1.90234,241,47, node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
+    node5 = node.Node(5,env,1.9855,260,30, node_type=None, power_type=1, mobile_type=0, ieee802154=ieee802154, sensor_type=1)
+    node6 = node.Node(6,env,1.9678,270,50, node_type=None, power_type=1, mobile_type=0, ieee802154=ieee802154, sensor_type=1)
+    node7 = node.Node(7,env,1.8434,259,72, node_type=None, power_type=1, mobile_type=0, ieee802154=ieee802154, sensor_type=1)
+    node8 = node.Node(8,env,1.90234,241,47, node_type=None, power_type=1, mobile_type=0, ieee802154=ieee802154, sensor_type=1)
 
 
     node9 = node.Node(9,env,1.989364,260,200)
@@ -51,11 +51,11 @@ def run(x):
     node18 = node.Node(18,env,1.7645,31,172 )
     
     
-    node20 = node.Node(20,env,1.846 ,130,20 , node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
-    node21 = node.Node(21,env,1.786487,135,2 , node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1)
-    node22 = node.Node(22,env,2 ,175,5,node_type=None, power_type=1, mobile_type=0, network=network, sensor_type=1 )
+    node20 = node.Node(20,env,1.846 ,130,20 , node_type=None, power_type=1, mobile_type=0, ieee802154=ieee802154, sensor_type=1)
+    node21 = node.Node(21,env,1.786487,135,2 , node_type=None, power_type=1, mobile_type=0, ieee802154=ieee802154, sensor_type=1)
+    node22 = node.Node(22,env,2 ,175,5,node_type=None, power_type=1, mobile_type=0, ieee802154=ieee802154, sensor_type=1 )
 
-    net1 = network.Net(env)
+    net1 = ieee802154.Net(env)
 
     net1.add_node(node1)
     net1.add_node(node2)
@@ -106,14 +106,14 @@ def run(x):
 
     net1.introduce_yourself()
     print("KKKKKKKKKK")
-    net1.network_nodedsicovery()
-    #initialnetwork.net1.introduce_self()
+    net1.ieee802154_nodedsicovery()
+    #initialieee802154.net1.introduce_self()
     # env = simpy.Environment()
-    # net1 = network.Net(env)
-    # env = initialnetwork.env
+    # net1 = ieee802154.Net(env)
+    # env = initialieee802154.env
     # net1.random_net_generator(env,net1,60)
 
-    # net1 = initialnetwork.net1
+    # net1 = initialieee802154.net1
     #graphi = gui.graphic(net1)
 
 
@@ -140,7 +140,7 @@ def run(x):
     print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 
-    net1.network_packet_summery()
+    net1.ieee802154_packet_summery()
 
     # for n in net1.nodes:
     #     print(n,n.TDMA,n.is_CH,n.cluster,"   ",n.distance)
@@ -152,13 +152,13 @@ def run(x):
     # print(net1.nodes[0].inbox)
     net1.introduce_yourself()   
 
-    # net1.network_outboxes()
-    # net1.network_inboxes()
+    # net1.ieee802154_outboxes()
+    # net1.ieee802154_inboxes()
 
     #report.plotenergy()
     #report.plotpacket()
 
-    a = net1.network_optimize()
+    a = net1.ieee802154_optimize()
     #df = df.append(pd.Series([x,a[0],a[1],a[2],a[3]], index=df.columns), ignore_index=True)
 
     return a

@@ -1,7 +1,7 @@
 import random
 import cluster
 import message
-import network
+import ieee802154
 import node
 import simpy
 import logger
@@ -9,9 +9,9 @@ import config
 import gui
 
 class LEACHC:
-    def __init__(self,env, network):
+    def __init__(self,env, ieee802154):
         self.env = env
-        self.network = network
+        self.ieee802154 = ieee802154
         self.logger = logger.logger()
         self.clusterheads = []
         self.clusters = []
@@ -19,7 +19,7 @@ class LEACHC:
         self.notclustered = []
         self.initial = False
 
-        self.cluster_fromation_area(env,self.network.nodes)
+        self.cluster_fromation_area(env,self.ieee802154.nodes)
         self.action = env.process(self.run(env))
 
 
@@ -48,7 +48,7 @@ class LEACHC:
 
                 if(node.energy >= max(neighbor.energy for neighbor in node.neighbors)):
                     node.change_CulsterHead()
-                    mycluster1 = cluster.mycluster(node.id,env,self.network)
+                    mycluster1 = cluster.mycluster(node.id,env,self.ieee802154)
                     mycluster1.add_node(node) # add ch to node list
                     for n in node.neighbors: # add neighbor of CH to cluster
                         if(n.id != 0):
@@ -60,13 +60,13 @@ class LEACHC:
                     message2 = message.Message()
                     message2.broadcast(node,"node {0} is cluster Head in {1} with TDMA ".format(node.id,mycluster1.id),node.neighbors)
                     
-                    self.network.add_cluster(mycluster1)
+                    self.ieee802154.add_cluster(mycluster1)
                     self.clusters.append(mycluster1)
-                    self.network.clusterheads.append(node)
+                    self.ieee802154.clusterheads.append(node)
                     self.clusterheads.append(node)
                     #yield self.env.timeout(1)
         
-        for node in self.network.nodes:
+        for node in self.ieee802154.nodes:
             if (node.is_CH == False):
                 if (len(node.parent) == 0):
                     self.notclustered.append(node)
@@ -75,15 +75,15 @@ class LEACHC:
             print("these are not clustered ",self.notclustered)
 
     def cluster_fromation_area(self,env ,nodes):
-        mycluster1 = cluster.mycluster(1,env,self.network)
-        mycluster2 = cluster.mycluster(2,env,self.network)
-        mycluster3 = cluster.mycluster(3,env,self.network)
-        mycluster4 = cluster.mycluster(4,env,self.network)
-        mycluster5 = cluster.mycluster(5,env,self.network)
-        mycluster6 = cluster.mycluster(6,env,self.network)
-        mycluster7 = cluster.mycluster(7,env,self.network)
-        mycluster8 = cluster.mycluster(8,env,self.network)
-        mycluster9 = cluster.mycluster(9,env,self.network)
+        mycluster1 = cluster.mycluster(1,env,self.ieee802154)
+        mycluster2 = cluster.mycluster(2,env,self.ieee802154)
+        mycluster3 = cluster.mycluster(3,env,self.ieee802154)
+        mycluster4 = cluster.mycluster(4,env,self.ieee802154)
+        mycluster5 = cluster.mycluster(5,env,self.ieee802154)
+        mycluster6 = cluster.mycluster(6,env,self.ieee802154)
+        mycluster7 = cluster.mycluster(7,env,self.ieee802154)
+        mycluster8 = cluster.mycluster(8,env,self.ieee802154)
+        mycluster9 = cluster.mycluster(9,env,self.ieee802154)
 
         for node in nodes:
             if(node.id !=0):
@@ -136,13 +136,13 @@ class LEACHC:
                     print("{0} is CH in cluster {1} with {2}  ++++++++++++++++++ is CH {3} area \n".format(node.id , c.id,str(c.nodes),node.is_CH ) )
                     message2 = message.Message()
                     message2.broadcast(node,"node {0} is cluster Head in {1} with TDMA ".format(node.id,c.id),node.neighbors)
-                    self.network.clusterheads.append(node)
+                    self.ieee802154.clusterheads.append(node)
                     self.clusterheads.append(node)
-            self.network.add_cluster(c)
+            self.ieee802154.add_cluster(c)
             #self.Random_Clusterhead_SelectionCluster(c)
 
 
-        for node in self.network.nodes:
+        for node in self.ieee802154.nodes:
             #print(node.id, node.is_CH)
             if (node.is_CH == False):
                 if (len(node.parent) == 0):
@@ -159,24 +159,24 @@ class LEACHC:
             
  
 
-    def ClusterHead_finder(self):# pass network to it and it sets the BS neighbors who are CH
-        self.network.clusterheads.clear()
+    def ClusterHead_finder(self):# pass ieee802154 to it and it sets the BS neighbors who are CH
+        self.ieee802154.clusterheads.clear()
         self.clusterheads.clear()
 
-        for n in self.network.nodes:
+        for n in self.ieee802154.nodes:
             if(n.is_alive==True):
                 if (n.is_CH == True and n.id != 0):
-                    #self.network.clusterheads.append(n)
-                    self.network.clusterheads.append(n)
-                    self.network.clusterheads =  list(dict.fromkeys(self.clusterheads)) 
+                    #self.ieee802154.clusterheads.append(n)
+                    self.ieee802154.clusterheads.append(n)
+                    self.ieee802154.clusterheads =  list(dict.fromkeys(self.clusterheads)) 
                     self.clusterheads.append(n)
                     self.clusterheads =  list(dict.fromkeys(self.clusterheads)) # remove duplicates
-        # print("clusterheads are {0} in network  \n".format(self.clusterheads))
+        # print("clusterheads are {0} in ieee802154  \n".format(self.clusterheads))
 
-    def CH_probablity(self):# send network to this
+    def CH_probablity(self):# send ieee802154 to this
         if(len(self.clusters)==0):
             print("there is no cluster to cal CH_prob")
-        return float(len(self.clusters))/float(len(self.network.nodes))
+        return float(len(self.clusters))/float(len(self.ieee802154.nodes))
 
 
 
@@ -236,8 +236,8 @@ class LEACHC:
                             message2 = message.Message()
                             message2.broadcast(n,"{0} is cluster Head in {1} with TDMA ".format(n.id,cluster.id),n.neighbors)
                             self.ClusterHead_finder()
-                            graph = gui.graphic(cluster.net)
-                            graph.draw() # simple draw
+                            #graph = gui.graphic(cluster.net)
+                            #graph.draw() # simple draw
                             #time.sleep(1)
                             
                             return # it 

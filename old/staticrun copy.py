@@ -1,15 +1,15 @@
 #at begining you can set parameters in config file
 
-# to run simulation you need initial networks ( just simply define nodes and addd to network)
-import staticnet2c as initialnetwork
+# to run simulation you need initial ieee802154s ( just simply define nodes and addd to ieee802154)
+import network2c as initialieee802154
 import gui
 import config
 import report
 import logger
 
-#initialnetwork.net1.introduce_self()
-net1 = initialnetwork.net1
-env = initialnetwork.env
+#initialieee802154.net1.introduce_self()
+net1 = initialieee802154.net1
+env = initialieee802154.env
 graphi = gui.graphic(net1)
 
 
@@ -36,7 +36,7 @@ env.run(until=config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 
-#net1.network_packet_summery()
+#net1.ieee802154_packet_summery()
 
 # for n in net1.nodes:
 #     print(n,n.TDMA,n.is_CH,n.cluster,"   ",n.distance)
@@ -48,11 +48,11 @@ print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++
 # print(net1.nodes[0].inbox)
 net1.introduce_yourself()   
 
-# net1.network_outboxes()
-# net1.network_inboxes()
+# net1.ieee802154_outboxes()
+# net1.ieee802154_inboxes()
 
 
-net1.network_packet_summery()
-net1.network_optimize()
+net1.ieee802154_packet_summery()
+net1.ieee802154_optimize()
 report.plotpacket()
 report.plotenergy()

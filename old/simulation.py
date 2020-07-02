@@ -1,4 +1,4 @@
-import network
+import ieee802154
 import node
 import simpy
 import cluster
