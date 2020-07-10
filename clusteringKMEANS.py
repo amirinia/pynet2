@@ -30,7 +30,8 @@ class Kmeans:
         if self.k >16:
             print('use smaller k')
         df = pd.DataFrame(columns=['n', 'x', 'y'])
-        graphi = gui.graphic(ieee802154)
+        if(config.guienabled):
+            graphi = gui.graphic(ieee802154)
 
         for n in self.ieee802154.nodes:
             df.loc[n] = [n.id,n.x,n.y]
@@ -38,19 +39,21 @@ class Kmeans:
 
         kmeans = KMeans(n_clusters=3).fit(df)
         plt.scatter(df['x'], df['y'], color='k')
-        # centroids[i] = [x, y]
+            # centroids[i] = [x, y]
         centroids = {
-            i+1: [np.random.randint(0, config.xsize), np.random.randint(0, config.ysize)]
-            for i in range(self.k)
-        }
+                i+1: [np.random.randint(0, config.xsize), np.random.randint(0, config.ysize)]
+                for i in range(self.k)
+            }
         colmap = {1: 'r', 2: 'g', 3: 'b',4: 'y',5: 'k',6: 'm',7: 'c',8: 'pink',9 :'blue' ,10 :'green',11:'purple',12:'cyan',13:'red',14:'yellow',15:'black',16:'magenta'}
-        for i in centroids.keys():
-            plt.scatter(*centroids[i], color=colmap[i],s=400)
+        
+        if(config.guienabled):
+            for i in centroids.keys():
+                plt.scatter(*centroids[i], color=colmap[i],s=400)
 
 
-        plt.pause(1)
-        plt.clf()
-        plt.close()
+            plt.pause(1)
+            plt.clf()
+            plt.close()
 
         print(1)
 
@@ -72,14 +75,15 @@ class Kmeans:
         df = assignment(df, centroids)
         # print(df.head())
         fig = plt.figure()
-        plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k',s=400)
-        for i in centroids.keys():
-            plt.scatter(*centroids[i], color=colmap[i])
+        if(config.guienabled):
+            plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k',s=400)
+            for i in centroids.keys():
+                plt.scatter(*centroids[i], color=colmap[i])
 
 
-        plt.pause(1)
-        plt.clf()
-        plt.close()
+            plt.pause(1)
+            plt.clf()
+            plt.close()
         print(2)
 
         ## Update Stage
@@ -96,36 +100,38 @@ class Kmeans:
             return k
 
         centroids = update(centroids)
-            
-        fig = plt.figure()
-        ax = plt.axes()
-        plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k',s=400)
-        for i in centroids.keys():
-            plt.scatter(*centroids[i], color=colmap[i])
+        
+        if(config.guienabled):
+            fig = plt.figure()
+            ax = plt.axes()
+            plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k',s=400)
+            for i in centroids.keys():
+                plt.scatter(*centroids[i], color=colmap[i])
 
-        for i in old_centroids.keys():
-            old_x = old_centroids[i][0]
-            old_y = old_centroids[i][1]
-            dx = (centroids[i][0] - old_centroids[i][0]) * 0.75
-            dy = (centroids[i][1] - old_centroids[i][1]) * 0.75
-            ax.arrow(old_x, old_y, dx, dy, head_width=2, head_length=3, fc=colmap[i], ec=colmap[i])
+            for i in old_centroids.keys():
+                old_x = old_centroids[i][0]
+                old_y = old_centroids[i][1]
+                dx = (centroids[i][0] - old_centroids[i][0]) * 0.75
+                dy = (centroids[i][1] - old_centroids[i][1]) * 0.75
+                ax.arrow(old_x, old_y, dx, dy, head_width=2, head_length=3, fc=colmap[i], ec=colmap[i])
 
-        plt.pause(1)
-        plt.clf()
-        plt.close()
+            plt.pause(1)
+            plt.clf()
+            plt.close()
         print(3)
         df = assignment(df, centroids)
 
         # Plot results
-        fig = plt.figure()
-        plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k',s=400)
-        for i in centroids.keys():
-            plt.scatter(*centroids[i], color=colmap[i])
-        ax.legend()
+        if(config.guienabled):
+            fig = plt.figure()
+            plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k',s=400)
+            for i in centroids.keys():
+                plt.scatter(*centroids[i], color=colmap[i])
+            ax.legend()
 
-        plt.pause(1)
-        plt.clf()
-        plt.close()
+            plt.pause(1)
+            plt.clf()
+            plt.close()
         print(df)
 
         # for i, row in df.iterrows():
@@ -154,16 +160,17 @@ class Kmeans:
             df = assignment(df, centroids)
             if closest_centroids.equals(df['closest']):
                 break
+        
+        if(config.guienabled):
+            fig = plt.figure()
+            plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k',s=400)
+            for i in centroids.keys():
+                plt.scatter(*centroids[i], color=colmap[i])
 
-        fig = plt.figure()
-        plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k',s=400)
-        for i in centroids.keys():
-            plt.scatter(*centroids[i], color=colmap[i])
 
-
-        plt.pause(5)
-        plt.clf()
-        plt.close()
+            plt.pause(5)
+            plt.clf()
+            plt.close()
 
 
 
@@ -249,8 +256,10 @@ class Kmeans:
             self.ieee802154.add_cluster(c)
 
         self.ieee802154.introduce_yourself()
-        graphi = gui.graphic(self.ieee802154)  
-        graphi.draw()
+        if(config.guienabled):
+
+            graphi = gui.graphic(self.ieee802154)  
+            graphi.draw()
 
 
         yield self.env.timeout(1)

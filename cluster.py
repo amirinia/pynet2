@@ -28,7 +28,6 @@ class mycluster:
         print("\nCluster {0} is created".format(self.id))
         self.action = env.process(self.run(env))
 
-    
 
     def __str__(self):
         return str(self.id)
@@ -89,7 +88,7 @@ class mycluster:
         # node.TDMA_slot_number = self.nodes.index(node)
         # self.TDMA_slots += 1
         #print ("Cluster {0} has node id {1}".format(self.name,node.id))
-        node.set_TDMA(self.nodes.index(node)+1)
+        node.set_TDMA(self.nodes.index(node)+1) # set tdma to node
         
     def remove_node(self, node):
         self.nodelist.remove(node)

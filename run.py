@@ -21,7 +21,7 @@ env = initialieee802154.env
 
 
 # in second step you need and algorithm
-second = False
+second = True
 print("_____________________________Clustering Algorithm___________________________________ start\n\n")
 if(second):
     KMEANS1 = KMEANS.Kmeans(env,net1,10)
@@ -33,13 +33,18 @@ print("_____________________________Clustering Algorithm________________________
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++")
 net1.introduce_yourself()
-graphi = gui.graphic(net1)
-graphi.draw()
+
+if(config.guienabled):
+    graphi = gui.graphic(net1)
+    graphi.draw()
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
 env.run(600)#until=config.MAX_RUNTIME)
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
+if(config.guienabled):
+    graphi = gui.graphic(net1)
+    graphi.draw()
 
 #net1.ieee802154_packet_summery()
 

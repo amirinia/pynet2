@@ -14,7 +14,7 @@ class graphic:
     def __init__(self, myieee802154):
         self.myieee802154 = myieee802154
 
-    
+  
     def draw(self):
         print("draw \n")
         #self.myieee802154.introduce_yourself()
@@ -61,7 +61,7 @@ class graphic:
         #mng.full_screen_toggle()
         mng.set_window_title("draw")
 
-        plt.pause(4)
+        plt.pause(config.guiduration)
         plt.clf()
         plt.close()
         # plt.show()
@@ -101,7 +101,7 @@ class graphic:
 
         plt.title("dead mode")
 
-        plt.pause(7)
+        plt.pause(config.guiduration)
         plt.clf()
         plt.close()
 
@@ -194,7 +194,7 @@ class graphic:
             nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=[0], node_size=1000, node_color='#66ff66')
 
             plt.title("Graph Title")
-            plt.pause(5)
+            plt.pause(config.guiduration)
             plt.clf()
             plt.close()
 
@@ -246,7 +246,7 @@ class graphic:
         #ani = animation.FuncAnimation(fig, animate, interval=1000)
         plt.legend("ieee802154")
 
-        plt.pause(5)
+        plt.pause(config.guiduration)
         plt.clf()
         plt.close()
 
@@ -285,7 +285,7 @@ class graphic:
         mng.set_window_title("Fire happens")
         plt.title("alert")
 
-        plt.pause(1)
+        plt.pause(config.guiduration)
         plt.clf()
         plt.close()
 
@@ -321,7 +321,7 @@ class graphic:
         mng = plt.get_current_fig_manager()
         #mng.full_screen_toggle()
         mng.set_window_title("Fire happens")
-        plt.pause(1)
+        plt.pause(config.guiduration)
         plt.clf()
 
         plt.close()

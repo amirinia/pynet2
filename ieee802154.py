@@ -53,10 +53,11 @@ class Net():
 
         while True:
             #self.clock = self.mac.clock
-            #self.ClusterHead_finder()
-            if(self.env.now % 700 == 0):
-                graph = gui.graphic(self)
-                #graph.draw()  
+            # if(self.env.now % 700 == 0):
+                #if(config.guienabled):
+
+                #   graph = gui.graphic(self)
+                    #graph.draw()  
                 
             if (initial == False): # run once initialization
                 try:
@@ -72,10 +73,12 @@ class Net():
             print('\n New Superframe is began CSMA at %d number %d\n' % (self.env.now ,counter))
             CSMA_duration = self.superframe.CSMA_slot
 
-            if counter % config.Base_Sattion_Beaconning_period == 0:
+            if counter % config.Base_Sattion_Beaconning_period == 0: #beaconing the BS to sync the time and check the routs
+                print("Base Station beacon on regular basis {0} at env:{1} to sync the time and check the routs".format(config.Base_Sattion_Beaconning_period ,self.env.now))
+
                 for n in self.nodes[0].neighbors:
                     message_sender = message.Message()
-                    message_sender.broadcast(self.nodes[0],"Base Station boradcast on regular basis {0} at env:{1}".format(self.nodes[0].id ,self.env.now),n.neighbors)
+                    message_sender.broadcast(self.nodes[0],"Base Station beacon on regular basis {0} at env:{1} to sync the time and check the routs".format(self.nodes[0].id ,self.env.now),n.neighbors)
 
             try:
                 yield self.env.process(self.CSMA(CSMA_duration))
@@ -92,15 +95,7 @@ class Net():
 
             self.neighbor_collision()
 
-            #print('INACTIVE at %d\n' % env.now)
-            #inactive_duration = self.superframe.Inactive_slot
-            # for i in range(inactive_duration):
-            #     self.clock.clear()
-            #     self.clock.append("INACTIVE")
-            #     self.logger.log("at %d inactive ieee802154" %self.env.now)
-            #     print("at %d inactive ieee802154" %self.env.now)
 
-            #     yield self.env.timeout(1)
             try:
                 yield self.env.process(self.INACTIVE(self.superframe.Inactive_slot))
             except simpy.Interrupt:
@@ -280,9 +275,6 @@ class Net():
     #     self.dfdead.to_csv('report/deadnodes.csv')
 
 
-
-   
-
     def add_cluster(self, cluster):
         self.clusters.append(cluster)
         cluster.ieee802154 = self
@@ -336,5 +328,3 @@ class Net():
         print("first node {0} in total run = {1}".format(min(t),config.MAX_RUNTIME))
         #
         return [energy,duration,lost,min(t)]
-            
-

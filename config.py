@@ -19,9 +19,14 @@ Inactive_duration = 16
 
 Duration = CSMA_duration + TDMA_duration + Inactive_duration
 
+#gui config
+guienabled = False
+guiduration = 5
+
+
 # and config
 BEACONING_TIME       = 5
-Base_Sattion_Beaconning_period = 10
+Base_Sattion_Beaconning_period = 5 #per superframe
 cluster_rotation_period = 10
 
 # alert position

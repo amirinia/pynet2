@@ -236,8 +236,9 @@ class LEACHC:
                             message2 = message.Message()
                             message2.broadcast(n,"{0} is cluster Head in {1} with TDMA ".format(n.id,cluster.id),n.neighbors)
                             self.ClusterHead_finder()
-                            #graph = gui.graphic(cluster.net)
-                            #graph.draw() # simple draw
+                            if(config.guienabled):
+                                graph = gui.graphic(cluster.net)
+                                graph.draw() #  draw
                             #time.sleep(1)
                             
                             return # it 
