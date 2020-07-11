@@ -143,11 +143,13 @@ class Node():
                         self.is_alive = False
                         # draw
                         #time.sleep(4)
-                        #graphi = gui.graphic(self.net)
-                        #graphi.drawdead("{0} {1}".format(self.id ,self.env.now ))
-                        # save dead
-                        graph = gui.graphic(self.net)
-                        graph.draw()
+                        if(config.guienabled):
+
+                            #graphi = gui.graphic(self.net)
+                            #graphi.drawdead("{0} {1}".format(self.id ,self.env.now ))
+                            # save dead
+                            graph = gui.graphic(self.net)
+                            graph.draw()
                         print("env exit")
                         # self.net.env.exit()
                         # sys.exit()

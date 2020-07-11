@@ -266,7 +266,7 @@ class Net():
         self.logger.log("{0} packets are lost on wireless sensor ieee802154".format(sumpout-sumpin))
         print("{0} packets are lost on wireless sensor ieee802154 {1} {2}".format(sumpout-sumpin,sumpout,sumpin))
         print("=================================")
-        dfp.to_csv('report/packet.csv')
+        #dfp.to_csv('report/packet.csv')
         print(dfp.sum(axis = 0, skipna = True))
                         
 

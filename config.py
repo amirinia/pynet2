@@ -1,7 +1,7 @@
 import math
 
 ## Runtime configuration
-MAX_RUNTIME = 1000
+MAX_RUNTIME = 3000
 #ALERT TIME
 ALERT_TIME = 1000
 ALERT_END = 4000
@@ -20,9 +20,11 @@ Inactive_duration = 16
 Duration = CSMA_duration + TDMA_duration + Inactive_duration
 
 #gui config
-guienabled = False
+guienabled = True
 guiduration = 5
 
+#Log
+logenabled = False
 
 # and config
 BEACONING_TIME       = 5
@@ -46,8 +48,8 @@ COVERAGE_RADIUS = 15 # meters
 # initial energy at every node's battery
 INITIAL_ENERGY = 2000 # mili Joules 2000
 
-P_TX = 0.084   # Watts to transmite 
-P_RX = 0.073  # Watts to receive
+P_TX = 0.084  * 10 # Watts to transmite 
+P_RX = 0.073  * 10 # Watts to receive
 #dead node threshold
 DEAD_NODE_THRESHOLD = 100.299
 LOW_NODE_THRESHOLD = 300.5

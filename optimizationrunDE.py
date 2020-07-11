@@ -69,6 +69,11 @@ def run(x):
 
     print("++++++++++++++++++++++++++++++++++++++++++++++++++")
     net1.introduce_yourself()
+    if(config.guienabled):
+          graphi = gui.draw_neighbors()
+          graphi.draw()
+          graphi = gui.graphic(net1)
+          graphi.draw()
     #graphi.draw()
     #logger.logger.log(str("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++"))
     print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
@@ -106,16 +111,16 @@ def function(x):
     return a[0]
 
 
-""" DE """
-De_FIT=[]
-De_VAR=[]
-De_POP=[]
+# """ DE """
+# De_FIT=[]
+# De_VAR=[]
+# De_POP=[]
 
 
-population_num = 5
+population_num = 100
 iteration = (D * 5000)/population_num
 
-def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=5):
+def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=50):
         #print("de")
         dimensions = D
         initial = []
@@ -133,6 +138,7 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=5):
             initial.append(pop2)
         popnp = np.asarray(initial)
         #print((popnp))
+        df = pd.DataFrame(columns=['pop','energy','duration','lost','dead'])
 
         fitness = np.asarray([function(ind) for ind in popnp])
         #print("fitness list",fitness)
@@ -140,7 +146,9 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=5):
         #print("index of best",best_idx)
         best = popnp[best_idx]
         #print("best chromosome",best)
+
         for i in range(its):
+
             print(" New iteration ",i)
             for j in range(popsize):
                 idxs = [idx for idx in range(popsize) if idx != j]
@@ -192,9 +200,10 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=5):
 
         print("best  ",best,fitness[best_idx])
         return best, fitness[best_idx]
+        df.to_csv('report/DE best 2020-10-10.csv') # just last iteration
 
 
 de(lambda x: function(x))
 #print("fit ",De_FIT," ide ",De_VAR," ",De_POP)
-df.to_csv('report/DE best 2020-10-10.csv')
+#df.to_csv('report/DE best 2020-10-10.csv')
 
