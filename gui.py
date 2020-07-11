@@ -171,7 +171,12 @@ class graphic:
             nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True)
             #ani = animation.FuncAnimation(fig, animate, interval=1000)
             plt.legend("ieee802154")
-            plt.show()
+            #plt.show()
+            plt.title("Graph neighbors")
+
+            plt.pause(config.guiduration)
+            plt.clf()
+            plt.close()
 
 
     def draw_nods(self):

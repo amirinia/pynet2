@@ -20,7 +20,7 @@ Inactive_duration = 16
 Duration = CSMA_duration + TDMA_duration + Inactive_duration
 
 #gui config
-guienabled = True
+guienabled = False
 guiduration = 5
 
 #Log

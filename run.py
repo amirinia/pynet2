@@ -35,9 +35,8 @@ print("++++++++++++++++++++++++++++++++++++++++++++++++++")
 net1.introduce_yourself()
 
 if(config.guienabled):
-    graphi = gui.draw_neighbors()
-    graphi.draw()
     graphi = gui.graphic(net1)
+    graphi.draw_neighbors()
     graphi.draw()
 
 print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
