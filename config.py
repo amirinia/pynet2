@@ -19,6 +19,9 @@ Inactive_duration = 16
 
 Duration = CSMA_duration + TDMA_duration + Inactive_duration
 
+# print
+printenabled = False
+
 #gui config
 guienabled = False
 guiduration = 5
@@ -26,10 +29,13 @@ guiduration = 5
 #Log
 logenabled = False
 
+#save excel
+excelsave = False
+
 # and config
 BEACONING_TIME       = 5
 Base_Sattion_Beaconning_period = 5 #per superframe
-cluster_rotation_period = 10
+cluster_rotation_period = 5
 
 # alert position
 alertx = 270
@@ -48,8 +54,9 @@ COVERAGE_RADIUS = 15 # meters
 # initial energy at every node's battery
 INITIAL_ENERGY = 2000 # mili Joules 2000
 
-P_TX = 0.084  * 10 # Watts to transmite 
-P_RX = 0.073  * 10 # Watts to receive
+P_TX = 0.084  * 100 # Watts to transmite 
+P_RX = 0.073  * 100 # Watts to receive
+
 #dead node threshold
 DEAD_NODE_THRESHOLD = 100.299
 LOW_NODE_THRESHOLD = 300.5

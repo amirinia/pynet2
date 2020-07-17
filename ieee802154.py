@@ -64,17 +64,21 @@ class Net():
                     yield self.env.process(self.initialization(10))
                 except simpy.Interrupt:
                     self.logger.log("Was interrupted.CSMA")
-                    print('Was interrupted.CSMA')
+                    if config.printenabled:
+                        print('Was interrupted.CSMA')
                 initial = True
 
             counter += 1 # count superframes
             self.superframe_num = counter
             self.logger.log('\n New Superframe is began CSMA at %d number %d\n' % (self.env.now ,counter))
-            print('\n New Superframe is began CSMA at %d number %d\n' % (self.env.now ,counter))
+            if config.printenabled:
+
+                print('\n New Superframe is began CSMA at %d number %d\n' % (self.env.now ,counter))
             CSMA_duration = self.superframe.CSMA_slot
 
             if counter % config.Base_Sattion_Beaconning_period == 0: #beaconing the BS to sync the time and check the routs
-                print("Base Station beacon on regular basis {0} at env:{1} to sync the time and check the routs".format(config.Base_Sattion_Beaconning_period ,self.env.now))
+                if config.printenabled:
+                    print("Base Station beacon on regular basis {0} at env:{1} to sync the time and check the routs".format(config.Base_Sattion_Beaconning_period ,self.env.now))
 
                 for n in self.nodes[0].neighbors:
                     message_sender = message.Message()
@@ -83,7 +87,8 @@ class Net():
             try:
                 yield self.env.process(self.CSMA(CSMA_duration))
             except simpy.Interrupt:
-                print('Was interrupted.CSMA')
+                if config.printenabled:
+                    print('Was interrupted.CSMA')
 
             #print('TDMA at %d\n' % env.now)
             TDMA_duration = self.superframe.TDMA_slot
@@ -91,7 +96,8 @@ class Net():
             try:
                 yield self.env.process(self.TDMA(TDMA_duration))
             except simpy.Interrupt:
-                print('Was interrupted.TDMA')
+                if config.printenabled:
+                    print('Was interrupted.TDMA')
 
             self.neighbor_collision()
 
@@ -99,7 +105,8 @@ class Net():
             try:
                 yield self.env.process(self.INACTIVE(self.superframe.Inactive_slot))
             except simpy.Interrupt:
-                print('Was interrupted.INACTIVE')
+                if config.printenabled:
+                    print('Was interrupted.INACTIVE')
             # self.ieee802154_nodedsicovery()
             # print(self.nodes)
             # print("net discovery")
@@ -110,15 +117,18 @@ class Net():
 
     def initialization(self,duration):
         self.logger.log("initialization BS start to advertise + Superframe rules")
-        print("initialization BS start to advertise + Superframe rules")
+        if config.printenabled:
+            print("initialization BS start to advertise + Superframe rules")
         self.ieee802154_nodedsicovery()
         if (len(self.clusterheads) != 0):
             for n in self.clusterheads:
                 self.nodes[0].neighbors.append(n)
             self.logger.log("neighbors of BS:{0}".format(self.nodes[0].neighbors))
-            print("neighbors of BS: {0}".format(self.nodes[0].neighbors))
+            if config.printenabled:
+                print("neighbors of BS: {0}".format(self.nodes[0].neighbors))
         else:
-            print("Clusterheads' list is empty")
+            if config.printenabled:
+                print("Clusterheads' list is empty")
         self.introduce_yourself()
         # for n in self.nodes[0].neighbors:
         #     print(n,"is near bs")
@@ -132,10 +142,11 @@ class Net():
             message_sender.send_message("BS boradcast + Superframe rules adv " + str(n.id),self.nodes[0],n)
         #message_sender.broadcast(self.nodes[0],"BS boradcast + Superframe rules adv {0} at env:{1}".format(self.nodes[0].id ,self.env.now))
         #self.logger.log('cluster formation\n')
-
-        print("Inititial ieee802154 %d nods at %d"%(len(self.nodes),self.env.now))
+        if config.printenabled:
+            print("Inititial ieee802154 %d nods at %d"%(len(self.nodes),self.env.now))
         yield self.env.timeout(duration)
-        print("net is initials ends at {0} \n".format(self.env.now))
+        if config.printenabled:
+            print("net is initials ends at {0} \n".format(self.env.now))
         
 
     def TDMA(self,duration):
@@ -144,7 +155,8 @@ class Net():
             self.clock.append("TDMA")
             self.TDMA_slot = i+1
             self.logger.log("\n\nat {0} TDMA - slot {1}".format(self.env.now,(i)))
-            print("\n\nat {0} TDMA - slot {1}".format(self.env.now,(i)))
+            if config.printenabled:
+                print("\n\nat {0} TDMA - slot {1}".format(self.env.now,(i)))
 
             yield self.env.timeout(1)
 
@@ -154,7 +166,14 @@ class Net():
             self.clock.append("CSMA")
             self.CSMA_slot = i+1
             self.logger.log("\nat {0} CSMA - slot {1}".format(self.env.now,(i+1)))
-            print("\nat {0} CSMA - slot {1}".format(self.env.now,(i+1)))
+            if self.TDMA_slot < len(self.clusterheads): #penalty for not enough slot for SCMA
+                for node in self.clusterheads:
+                    #Sprint(self.clusterheads)
+                    node.power.decrease_tx_energy(10000)
+                    node.energy.append(node.power.energy)
+
+            if config.printenabled:
+                print("\nat {0} CSMA - slot {1}".format(self.env.now,(i+1)))
 
             yield self.env.timeout(1)
     
@@ -164,12 +183,14 @@ class Net():
             self.clock.append("INACTIVE")
             self.CSMA_slot = i+1
             self.logger.log("at %d inactive ieee802154" %self.env.now)
-            print("at %d inactive ieee802154" %self.env.now)
+            if config.printenabled:
+                print("at %d inactive ieee802154" %self.env.now)
 
             yield self.env.timeout(1)
 
     def random_net_generator(self,env,ieee802154,node_number):
-        print("Random ieee802154 is generated with %d nodes\n"%node_number)
+        if config.printenabled:
+            print("Random ieee802154 is generated with %d nodes\n"%node_number)
         for i in range(node_number):
                 mnode = node.Node(i+1,env ,random.randint(1000,2000),random.randint(0,self.xsize),random.randint(0,self.ysize))
                 self.add_node(mnode)
@@ -185,7 +206,8 @@ class Net():
 
     def ieee802154_nodedsicovery(self,distance = config.TX_RANGE):
         self.logger.log("\n++++++++++++++++++++ ieee802154 Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
-        print("++++++++++++++++++++ ieee802154 Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
+        if config.printenabled:
+            print("++++++++++++++++++++ ieee802154 Table Discovery Begins %d meters ++++++++++++++++++++++++++++"%config.TX_RANGE)
         for n in self.nodes:
             self.logger.log("Neighbors Table discovery for {0} is below and neighbors are {1}".format(str(n.id),n.neighbors))
             #print("Neighbors Table discovery for {0} is below and neighbors are {1}".format(str(n.id),n.neighbors))
@@ -202,7 +224,8 @@ class Net():
                             n.neighbors.append(n1)
 
         self.logger.log( "+++++++++++++++++++++ ieee802154 Table Discovery Ends +++++++++++++++++++++++++++++++ \n")                   
-        print("+++++++++++++++++++++ ieee802154 Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
+        if config.printenabled:
+            print("+++++++++++++++++++++ ieee802154 Table Discovery Ends +++++++++++++++++++++++++++++++ \n")
 
 
     def distance(self, node ,node1):
@@ -211,41 +234,50 @@ class Net():
 
     def ieee802154_inboxes(self):
         self.logger.log("\nInboxes are shown: ")
-        print("\nInboxes are shown: ")
+        if config.printenabled:
+            print("\nInboxes are shown: ")
         for n in self.nodes:
             self.logger.log("Inbox {0} has {1} \n".format(str(n.id) ,str(n.inbox)))
-            print("Inbox {0} has {1} \n".format(str(n.id) ,str(n.inbox)))
+            if config.printenabled:
+                print("Inbox {0} has {1} \n".format(str(n.id) ,str(n.inbox)))
 
     def ieee802154_outboxes(self):
         self.logger.log("\nOutboxes are shown: ")
-        print("\nOutboxes are shown: ")
+        if config.printenabled:
+            print("\nOutboxes are shown: ")
         for n in self.nodes:
             self.logger.log("Outbox {0} has {1} \n".format(str(n.id) ,str(n.outbox)))
-            print("Outbox {0} has {1} \n".format(str(n.id) ,str(n.outbox)))
+            if config.printenabled:
+                print("Outbox {0} has {1} \n".format(str(n.id) ,str(n.outbox)))
 
     def introduce_yourself(self):
         dfi = pd.DataFrame(columns=['id' , 'power', 'x' , 'y' , 'parent' ,'is_alive','TDMA','energy'])
         self.logger.log("****************************Begin of introduce ieee802154" )
-        print("****************************Begin of introduce ieee802154" )
+        if config.printenabled:
+            print("****************************Begin of introduce ieee802154" )
 
         for x in self.nodes:
             #print(x.id," is_CH ",x.is_CH,x.parent)
             if len(x.parent) == 0:
                 self.logger.log("{0}  with energy : {1}  with position {2} {3} ; CH is {8} {4} is alive: {5} with TDMA {6} {7}".format(x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy)),x.is_CH))
-                print("{0}  with energy : {1}  with position {2} {3} ; CH is {8} {4} is alive: {5} with TDMA {6} {7}".format(x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy)),x.is_CH))
+                if config.printenabled:
+                    print("{0}  with energy : {1}  with position {2} {3} ; CH is {8} {4} is alive: {5} with TDMA {6} {7}".format(x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy)),x.is_CH))
                 # print(x.energy)
                 dfi = dfi. append(pd.Series([x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))], index=dfi.columns), ignore_index=True)
             if len(x.parent) != 0:
                 self.logger.log("{0}  with energy : {1}  with position {2} {3} ; CH is {9} {4} is alive: {5} with TDMA {6} {7} sensor t: {8}".format(x.id ,x.power, str(x.x) , str(x.y) ,str(next(reversed(x.parent))),x.is_alive,x.TDMA,next(reversed(x.energy)),x.sensor,x.is_CH))
-                print("{0}  with energy : {1}  with position {2} {3} ; CH is {9} {4} is alive: {5} with TDMA {6} {7} sensor t: {8}".format(x.id ,x.power, str(x.x) , str(x.y) ,str(next(reversed(x.parent))),x.is_alive,x.TDMA,next(reversed(x.energy)),x.sensor,x.is_CH))
+                if config.printenabled:
+                    print("{0}  with energy : {1}  with position {2} {3} ; CH is {9} {4} is alive: {5} with TDMA {6} {7} sensor t: {8}".format(x.id ,x.power, str(x.x) , str(x.y) ,str(next(reversed(x.parent))),x.is_alive,x.TDMA,next(reversed(x.energy)),x.sensor,x.is_CH))
                 # print(x.energy)
                 dfi = dfi. append(pd.Series([x.id , x.power, str(x.x) , str(x.y) ,str(x.parent),x.is_alive,x.TDMA,next(reversed(x.energy))], index=dfi.columns), ignore_index=True)
         #self.logger.log("==============================Clusters===============================")
         #print("==============================Clusters===============================")
         # for c in self.clusters:
         #     print("{0} is alive: {5} with energy : {1} with nodes {2} ; TDMA: {3} ; CH is {4}".format(c.name , c.average_cluster_energy() ,str(c.nodelist) , str(c.TDMA_slots) ,str(c.CH),c.is_alive))
-        print("****************************End of introduce ieee802154 \n")
-        dfi.to_csv('report/introduce_yourself.csv')
+        if config.printenabled:
+            print("****************************End of introduce ieee802154 \n")
+        if(config.excelsave):
+            dfi.to_csv('report/introduce_yourself.csv')
         #pickle.dump(self.nodes, file = open("report/nodes.pickle", "wb"))
 
 
@@ -255,20 +287,25 @@ class Net():
         sumpin = 0
         dfp = pd.DataFrame(columns=['id','sent','received','lost'])
         self.logger.log("================================= packet summery==============================")
-        print("================================= packet summery==============================")
+        if config.printenabled:
+            print("================================= packet summery==============================")
         for n in self.nodes:
             if (n.id !=0):
                 self.logger.log("node {0} Sent {1} packes and Received {2} packes".format(n,len(n.outbox),len(n.inbox)))
-                print("node {0} Sent {1} packes and Received {2} packes Lost : {3}".format(n,len(n.outbox),len(n.inbox),len(n.outbox)-len(n.inbox)))
+                if config.printenabled:
+                    print("node {0} Sent {1} packes and Received {2} packes Lost : {3}".format(n,len(n.outbox),len(n.inbox),len(n.outbox)-len(n.inbox)))
                 dfp = dfp.append(pd.Series([n,len(n.outbox),len(n.inbox),len(n.outbox)-len(n.inbox)], index=dfp.columns), ignore_index=True)
                 sumpout += len(n.outbox)
                 sumpin += len(n.inbox)
         self.logger.log("{0} packets are lost on wireless sensor ieee802154".format(sumpout-sumpin))
-        print("{0} packets are lost on wireless sensor ieee802154 {1} {2}".format(sumpout-sumpin,sumpout,sumpin))
-        print("=================================")
-        #dfp.to_csv('report/packet.csv')
-        print(dfp.sum(axis = 0, skipna = True))
-                        
+        if config.printenabled:
+            print("{0} packets are lost on wireless sensor ieee802154 {1} {2}".format(sumpout-sumpin,sumpout,sumpin))
+            print("=================================")
+        if(config.excelsave):
+            dfp.to_csv('report/packet.csv')
+            if config.printenabled:
+                print(dfp.sum(axis = 0, skipna = True))
+                            
 
     # def savedeadnodes(self,i,energy,now):
     #     self.dfdead.append(pd.Series([i,energy,now], index=self.dfdead.columns), ignore_index=True)
@@ -293,7 +330,8 @@ class Net():
                             if n1 in n2.neighbors:
                                 if n1.TDMA == n2.TDMA:
                                     self.logger.log("{0} {1} {2} {3} {4} ".format(n1,n1.TDMA,"collison TDMA",n2,n2.TDMA))
-                                    print("{0} {1} {2} {3} {4} ".format(n1,n1.TDMA,"collison TDMA",n2,n2.TDMA))
+                                    if config.printenabled:
+                                        print("{0} {1} {2} {3} {4} ".format(n1,n1.TDMA,"collison TDMA",n2,n2.TDMA))
                                     n2.TDMA =n2.TDMA+1
                                     #n2.TDMA = len(n2.clus.nodes) + 1
 
@@ -307,24 +345,28 @@ class Net():
                 energy = energy + next(reversed(n.energy))
                 #print(next(reversed(n.energy)))
         self.logger.log("avrage ieee802154 energy {0}".format(energy))
-        print("avrage ieee802154 energy {0}".format(energy))
+        if config.printenabled:
+            print("avrage ieee802154 energy {0}".format(energy))
 
         # duration
         duration = config.TDMA_duration + config.Duration + config.Inactive_duration
-        print("duration ={0} superframe {1} {2} and t1:{3} t2:{4} t3:{5}".format(config.Duration,config.Multiframe_size,config.Multiframe_state,config.TDMA_duration,config.CSMA_duration,config.Inactive_duration))
-        print("number of superframe " , self.superframe_num)
+        if config.printenabled:
+            print("duration ={0} superframe {1} {2} and t1:{3} t2:{4} t3:{5}".format(config.Duration,config.Multiframe_size,config.Multiframe_state,config.TDMA_duration,config.CSMA_duration,config.Inactive_duration))
+            print("number of superframe " , self.superframe_num)
         # packet lost
         sumpout = 0
         sumpin = 0
         for n in self.nodes:
             sumpout +=len(n.outbox)
             sumpin +=len(n.inbox)
-        print("{0} packets are lost on wireless sensor ieee802154".format(sumpout-sumpin))
+        if config.printenabled:
+            print("{0} packets are lost on wireless sensor ieee802154".format(sumpout-sumpin))
         lost = sumpout-sumpin
         # first node
         t = []
         for n in self.nodes:
             t.append(n.deadtime)
-        print("first node {0} in total run = {1}".format(min(t),config.MAX_RUNTIME))
+        if config.printenabled:
+            print("first node {0} in total run = {1}".format(min(t),config.MAX_RUNTIME))
         #
         return [energy,duration,lost,min(t)]

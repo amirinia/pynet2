@@ -31,9 +31,11 @@ class sensor:
 
     def run(self,env):
         if self.sensor_type == 0:
+            if config.printenabled:
+                print(self.temperature_sensor())
+        if config.printenabled:
+            print(self.light_sensor())
             print(self.temperature_sensor())
-        print(self.light_sensor())
-        print(self.temperature_sensor())
 
     def temperature_sensor(self):
         return random.randint(17,30)
@@ -48,7 +50,6 @@ class Node():
     def __init__(self,id,env,energy=(config.INITIAL_ENERGY-random.randint(1000,2000)),x=random.randint(0,config.AREA_WIDTH),y=random.randint(0,config.AREA_LENGTH),node_type=None, power_type=1, mobile_type=0, ieee802154=ieee802154 ,sensor_type=0):
         self.env = env
         self.id = id
-        
         self.net = ieee802154
         self.is_alive = True
         self.energy = [energy]
@@ -96,17 +97,20 @@ class Node():
 
                 if self.net.clock[0]=="CSMA":
                     self.logger.log("at {0} BS is running".format(self.env.now))
-                    print("at {0} BS is running".format(self.env.now))
+                    if config.printenabled:
+                        print("at {0} BS is running".format(self.env.now))
                     yield self.env.timeout(config.BEACONING_TIME)
 
                 elif self.net.clock[0]=="TDMA":
                     self.logger.log("at {0} BS is calculating".format(self.env.now))
-                    print("at {0} BS is calculating".format(self.env.now))
+                    if config.printenabled:
+                        print("at {0} BS is calculating".format(self.env.now))
                     yield self.env.timeout(config.BEACONING_TIME)
                 
                 else:
                     self.logger.log("BS is proccessing {0}".format(self.env.now))
-                    print("BS is proccessing {0}".format(self.env.now))
+                    if config.printenabled:
+                        print("BS is proccessing {0}".format(self.env.now))
                     yield self.env.timeout(config.BEACONING_TIME)
         if (next(reversed(self.energy)) <= config.DEAD_NODE_THRESHOLD):
             self.is_alive = False
@@ -121,10 +125,12 @@ class Node():
                         if(self.is_alive == True):
                             self.is_alive == False
                         self.logger.log("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
+                        # if config.printenabled:
                         print("^^^^^^^^^^node {0} is dead ith energy {1} at env:{2}^^^^^^^^^^^ \n".format(self.id,next(reversed(self.energy)),self.env.now))
                         print(self.power.energy)
+                        #print(self.clus)
+
                         self.deadtime = self.env.now
-                        print(self.clus)
                         
                         #self.clus.mycluster.Clusterhead_Selection()#SRandom_Clusterhead_Selection()
                         self.env.timeout(100)
@@ -134,9 +140,11 @@ class Node():
                         #self.net.savedeadnodes(self.id,next(reversed(self.energy)),self.env.now)
                         if(self.is_CH == True):
                             self.logger.log("ch is dead ,cluster needs to find another CH {0} {1}\n\n".format(self.env.now, config.Duration))
-                            print("ch is dead ,cluster needs to find another CH {0} {1}\n\n".format(self.env.now, config.Duration))
+                            if config.printenabled:
+                                print("ch is dead ,cluster needs to find another CH {0} {1}\n\n".format(self.env.now, config.Duration))
                             self.is_CH == False
-                            print("cc test {0} cluster{1} size {2}".format(self.cluster,"ooo","cluster head is dead"))
+                            if config.printenabled:
+                                print("cc test {0} cluster{1} size {2}".format(self.cluster,"ooo","cluster head is dead"))
                             #self.clus.mycluster.Clusterhead_Selection(self.cluster.self)
                             
                             #self.cluster.Clusterhead_Selection()
@@ -150,7 +158,8 @@ class Node():
                             # save dead
                             graph = gui.graphic(self.net)
                             graph.draw()
-                        print("env exit")
+                        if config.printenabled:
+                            print("env exit")
                         # self.net.env.exit()
                         # sys.exit()
 
@@ -166,9 +175,10 @@ class Node():
                         #print(self.net.TDMA_slot,(self.TDMA))
                         if(self.is_CH == False):
                             if(config.TDMA_duration < (self.TDMA )): # there is no TDMA for this onde in ieee802154
+                                if config.printenabled:
                                     print("TDMA of this nod does not exist node : ", self.id)
-                                    self.power.decrease_tx_energy(10000)
-                                    self.energy.append(self.power.energy)
+                                self.power.decrease_tx_energy(10000)
+                                self.energy.append(self.power.energy)
 
 
 
@@ -194,7 +204,8 @@ class Node():
                                         if(self.sensor.sensor_type == 1 and self.net.superframe_num % config.Multiframe_size == 0): # every 2 superframe  Multisuperframe
                                             tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
                                             self.logger.log(tempmessage)
-                                            print(tempmessage)
+                                            if config.printenabled:
+                                                print(tempmessage)
                                             message_sender = message.Message(tempmessage)
      
                                             message_sender.send_message(tempmessage,self,self.parent[0],TDMA=True)
@@ -203,7 +214,8 @@ class Node():
                                         if (self.sensor.sensor_type == 0): # every frame nodetype
                                             tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
                                             self.logger.log(tempmessage)
-                                            print(tempmessage)
+                                            if config.printenabled:
+                                                print(tempmessage)
                                             message_sender = message.Message(tempmessage)
 
                                             message_sender.send_message(tempmessage,self,self.parent[0],TDMA=True)
@@ -213,7 +225,8 @@ class Node():
                                     else:
                                         tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
                                         self.logger.log(tempmessage)
-                                        print(tempmessage)
+                                        if config.printenabled:
+                                            print(tempmessage)
                                         message_sender = message.Message(tempmessage)
 
                                         message_sender.send_message(tempmessage,self,self.parent[0],TDMA=True)
@@ -236,7 +249,8 @@ class Node():
                                 if(self.is_alive == True):
                                     yield self.env.process(self.CSMA_beaconing(self.env))
                             except simpy.Interrupt:
-                                print("inter")
+                                if config.printenabled:
+                                    print("inter")
 
                     # else:
                     #     print("Inactive",self.env.now) # inactive time
@@ -245,7 +259,8 @@ class Node():
                             self.BS_getter()
                             self.getBS == True
                             self.logger.log("{0} {1} {2}".format(self.id,self.getBS,"bs is in inbox"))
-                            print("{0} {1} {2}".format(self.id,self.getBS,"bs is in inbox"))
+                            if config.printenabled:
+                                print("{0} {1} {2}".format(self.id,self.getBS,"bs is in inbox"))
                         
                     # print(self.id, "test")
 
@@ -263,7 +278,8 @@ class Node():
 
                         tempmessage = "at {0} beacon CSMA adv is sent by {1} aprent is {2}, since it has no CH with energy {3}".format(env.now,self.id,self.parent,self.power)
                         self.logger.log(tempmessage)
-                        print(tempmessage)
+                        if config.printenabled:
+                            print(tempmessage)
                         message_sender = message.Message(tempmessage)
                         #self.flag = True
 
@@ -284,7 +300,8 @@ class Node():
                             self.node_send_message(self.aggregate,0)
                             self.aggregate.clear()
                             self.logger.log(tempbuffer)
-                            print(tempbuffer)
+                            if config.printenabled:
+                                print(tempbuffer)
                             # energy tx decrease
                             message_sender = message.Message(tempbuffer)
                                         #self.interference.listsetter(self.id)
@@ -336,13 +353,14 @@ class Node():
         # if(self.header == 'superframe'):
         #     print("zzzzzzzzzz")
         #     exit()
-            
+        if("ACK" in str_message ):   
+            self.flag = False
 
         if("Superframe rules" in str_message ):
-            print("superframe is set on node {0}".format(self.id))
+            if config.printenabled:
+                print("superframe is set on node {0}".format(self.id))
         
-        
-        
+    
         if( "is cluster Head" in str_message ):
             if (sender_node.cluster == self.cluster):
                 self.parent_setter(sender_node)
@@ -352,7 +370,8 @@ class Node():
                     self.change_CulsterHead()
 
                     self.is_CH = False
-                    print("node {0} is CH NOW nnn parent is {1} and node is CH {2}".format(self.id, self.parent,self.is_CH))
+                    if config.printenabled:
+                        print("node {0} is CH NOW nnn parent is {1} and node is CH {2}".format(self.id, self.parent,self.is_CH))
 
 
 
@@ -414,7 +433,8 @@ class Node():
 
     def add_nodes(self,list):
         self.neighbors.append(list)
-        print(self.neighbors)
+        if config.printenabled:
+            print(self.neighbors)
 
 
     def change_CulsterHead(self):
@@ -423,14 +443,16 @@ class Node():
             self.parent.clear()
 
             self.logger.log("node {0} becomes CH (change)and parent is {1} and TDMA {2} energy {3}".format(self.id,self.parent,self.TDMA,(next(reversed(self.energy)))))
-            print("node {0} becomes CH (change)and parent is {1} and TDMA energy {3}".format(self.id,self.parent,self.TDMA,(next(reversed(self.energy)))))
+            if config.printenabled:
+                print("node {0} becomes CH (change)and parent is {1} and TDMA energy {3}".format(self.id,self.parent,self.TDMA,(next(reversed(self.energy)))))
             self.distance.clear
             self.distance.append(self.net.nodes[0])
         if(self.is_CH == True and self.id !=0):
             self.is_CH == False
             self.next_hop.clear()
             self.logger.log("e node {0} becomes simple node (change) and parent is {1} and TDMA {2} energy {3}".format(self.id,self.parent,self.TDMA,(next(reversed(self.energy)))))
-            print("e node {0} becomes simple node (change) and parent is {1} and TDMA {2} energy {3}".format(self.id,self.parent,self.TDMA,(next(reversed(self.energy)))))
+            if config.printenabled:
+                print("e node {0} becomes simple node (change) and parent is {1} and TDMA {2} energy {3}".format(self.id,self.parent,self.TDMA,(next(reversed(self.energy)))))
             #self.distance.append(next(reversed(self.parent)))
 
     def BS_getter(self):

@@ -31,10 +31,11 @@ class LEACHC:
             #     self.global_cluster_fromation(env)
 
 
-            if(self.env.now % self.rotation_time ==50):
+            if(self.env.now % self.rotation_time == 50):
                 for c in self.clusters:
                     self.Random_Clusterhead_SelectionCluster(c)
-                print("R buz 1000")
+                if config.printenabled:
+                    print("R buz 1000")
             #yield self.env.process(self.Random_Clusterhead_Selection(10))
             yield self.env.timeout(1)
 
@@ -56,7 +57,8 @@ class LEACHC:
                     mycluster1.cluster_head_setter(n)
                     mycluster1.CH = node
                     self.logger.log("{0} is CH in cluster {1} with {2}  ++++++++++++++++++\n".format(node.id , mycluster1.id,str(mycluster1.nodes) ) )
-                    print("{0} is CH in cluster {1} with {2}  ++++++++++++++++++\n".format(node.id , mycluster1.id,str(mycluster1.nodes) ) )
+                    if config.printenabled:
+                        print("{0} is CH in cluster {1} with {2}  ++++++++++++++++++\n".format(node.id , mycluster1.id,str(mycluster1.nodes) ) )
                     message2 = message.Message()
                     message2.broadcast(node,"node {0} is cluster Head in {1} with TDMA ".format(node.id,mycluster1.id),node.neighbors)
                     
@@ -72,7 +74,8 @@ class LEACHC:
                     self.notclustered.append(node)
 
         if(len(self.notclustered) != 0):
-            print("these are not clustered ",self.notclustered)
+            if config.printenabled:
+                print("these are not clustered ",self.notclustered)
 
     def cluster_fromation_area(self,env ,nodes):
         mycluster1 = cluster.mycluster(1,env,self.ieee802154)
@@ -133,7 +136,8 @@ class LEACHC:
                     c.CH = node
                     node.change_CulsterHead()
                     self.logger.log("{0} is CH in cluster {1} with {2}  ++++++++++++++++++ area\n".format(node.id , c.id,str(c.nodes) ) )
-                    print("{0} is CH in cluster {1} with {2}  ++++++++++++++++++ is CH {3} area \n".format(node.id , c.id,str(c.nodes),node.is_CH ) )
+                    if config.printenabled:
+                        print("{0} is CH in cluster {1} with {2}  ++++++++++++++++++ is CH {3} area \n".format(node.id , c.id,str(c.nodes),node.is_CH ) )
                     message2 = message.Message()
                     message2.broadcast(node,"node {0} is cluster Head in {1} with TDMA ".format(node.id,c.id),node.neighbors)
                     self.ieee802154.clusterheads.append(node)
@@ -149,13 +153,15 @@ class LEACHC:
                     self.notclustered.append(node)
 
         if(len(self.notclustered) != 0):
-            print("these are not clustered area ",self.notclustered)
+            if config.printenabled:    
+                print("these are not clustered area ",self.notclustered)
 
 
 
     def Random_Clusterhead_Selection_steady(self,env):
         yield self.env.timeout(7)
-        print("Random_Clusterhead_Selection_steady")
+        if config.printenabled:
+            print("Random_Clusterhead_Selection_steady")
             
  
 
@@ -175,7 +181,8 @@ class LEACHC:
 
     def CH_probablity(self):# send ieee802154 to this
         if(len(self.clusters)==0):
-            print("there is no cluster to cal CH_prob")
+            if config.printenabled:
+                print("there is no cluster to cal CH_prob")
         return float(len(self.clusters))/float(len(self.ieee802154.nodes))
 
 
@@ -186,27 +193,32 @@ class LEACHC:
             if (i.energy == maxi and i.id !=0):
                 i.change_to_clusterhead()
                 self.logger.log("{0} is cluster head".format(i))
-                print("{0} is cluster head".format(i))
+                if config.printenabled:
+                    print("{0} is cluster head".format(i))
                 self.cluster_head_setter(i)
 
     def Random_Clusterhead_SelectionCluster(self,cluster):
         prob_ch =  self.CH_probablity()
         cluster.logger.log("   \n      Random_Clusterhead_Selection : cluster {0} with prob {1}".format(cluster.id,prob_ch))
-        print("   \n      Random_Clusterhead_Selection : cluster {0} with prob {1}".format(cluster.id,prob_ch))
+        if config.printenabled:
+            print("   \n      Random_Clusterhead_Selection : cluster {0} with prob {1}".format(cluster.id,prob_ch))
         av = cluster.average_cluster_energy()
-        print("av enargy = ",av ," cluster nodes ",cluster.nodes)
+        if config.printenabled:
+            print("av enargy = ",av ," cluster nodes ",cluster.nodes)
         toplist = []
         for n in cluster.nodes:
             #print(n.id," en: ",next(reversed(n.energy)))
             if(next(reversed(n.energy)) >= av and n.id != 0):
                 toplist.append(n)
-        print("toplist",toplist)
+        if config.printenabled:
+            print("toplist",toplist)
         
         for n in toplist:
             if(n == self.findmaxenergy(toplist)):
                 random_node = random.choice(cluster.nodes)
                 if(random_node.id == n.id):
-                    print(n.id," ",n.is_CH, " .neighbors ",n.neighbors," energy : ",next(reversed(n.energy)), " r.id ",random_node.id)
+                    if config.printenabled:
+                        print(n.id," ",n.is_CH, " .neighbors ",n.neighbors," energy : ",next(reversed(n.energy)), " r.id ",random_node.id)
 
                 #print("random for {0} is {1}".format(n,n_random))
                 n_random = random.uniform(0,1)
@@ -214,14 +226,16 @@ class LEACHC:
                 if n_random < prob_ch:
                 
                     cluster.logger.log(" <<< random for node {0} is {1} with energy {2} and average cluster energy {3}".format(n,n_random,next(reversed(n.energy)),cluster.average_cluster_energy()))
-                    print("at ",self.env.now," <<< random for node {0} is {1} with energy {2} and average cluster energy {3} low threshold {4}".format(n,n_random,next(reversed(n.energy)),cluster.average_cluster_energy(),config.LOW_NODE_THRESHOLD))
+                    if config.printenabled:
+                        print("at ",self.env.now," <<< random for node {0} is {1} with energy {2} and average cluster energy {3} low threshold {4}".format(n,n_random,next(reversed(n.energy)),cluster.average_cluster_energy(),config.LOW_NODE_THRESHOLD))
                     if(sum(n.energy)> cluster.average_cluster_energy()):
                         if(n!=cluster.CH):
                             
                             #self.ClusterHead_finder()
 
                             cluster.logger.log("new ch is node {0}  with parent {1} and last ch was {2} with {3}".format(n,n.parent,cluster.CH,cluster.CH.parent))
-                            print("new ch is node {0}  with parent {1} and last ch was {2} with {3}".format(n,n.parent,cluster.CH,cluster.CH.parent))
+                            if config.printenabled:
+                                print("new ch is node {0}  with parent {1} and last ch was {2} with {3}".format(n,n.parent,cluster.CH,cluster.CH.parent))
                             cluster.CH.change_CulsterHead()
                             #cluster.CH.parent.append(n)
                             n.parent.clear()
@@ -232,7 +246,8 @@ class LEACHC:
                             cluster.cluster_head_setter(n)
                             n.cluster = cluster
                             cluster.logger.log("node {0} is CH in {1}  +  energy ++++++++++++++++++by random CH selection c ".format(n.id , cluster.id ,next(reversed(n.energy))))
-                            print("node {0} is CH in {1}  +  energy ++++++++++++++++++by random CH selection c ".format(n.id , cluster.id ,next(reversed(n.energy))))
+                            if config.printenabled:
+                                print("node {0} is CH in {1}  +  energy ++++++++++++++++++by random CH selection c ".format(n.id , cluster.id ,next(reversed(n.energy))))
                             message2 = message.Message()
                             message2.broadcast(n,"{0} is cluster Head in {1} with TDMA ".format(n.id,cluster.id),n.neighbors)
                             self.ClusterHead_finder()

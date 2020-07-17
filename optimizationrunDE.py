@@ -78,15 +78,19 @@ def run(x):
 
     # in second step you need and algorithm
      second = False
-     print("_____________________________Clustering Algorithm___________________________________ start\n\n")
+     if config.printenabled:
+
+          print("_____________________________Clustering Algorithm___________________________________ start\n\n")
      if(second):
         KMEANS1 = KMEANS.Kmeans(env,net1,10)
      else:
         LEACH1 = LEACH.LEACHC(env,net1)
-     print("_____________________________Clustering Algorithm___________________________________ end\n\n")
+     if config.printenabled:
+
+          print("_____________________________Clustering Algorithm___________________________________ end\n\n")
 
 
-     print("++++++++++++++++++++++++++++++++++++++++++++++++++")
+          print("++++++++++++++++++++++++++++++++++++++++++++++++++")
      net1.introduce_yourself()
      if(config.guienabled):
           graphi = gui.graphic(net1)
@@ -95,11 +99,14 @@ def run(x):
     #graphi.draw()
     #logger.logger.log(str("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++"))
 
+     if config.printenabled:
 
-     print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
+          print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
      env.run(until=config.MAX_RUNTIME)
     #logger.logger.log(str("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++"))
-     print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
+     if config.printenabled:
+
+          print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 
      net1.ieee802154_packet_summery()
@@ -120,11 +127,11 @@ D = 4
 df = pd.DataFrame(columns=['pop','energy','duration','lost','dead'])
 
 def function(x):
-    a = run(x)
-    global df
-    df = df.append(pd.Series([x,a[0],a[1],a[2],a[3]], index=df.columns), ignore_index=True)
-
-    return a[0]
+     a = run(x)
+     global df
+     df = df.append(pd.Series([x,a[0],a[1],a[2],a[3]], index=df.columns), ignore_index=True)
+     print("choromosome ",x,a[0],a[1])
+     return a[0]
 
 
 # """ DE """
@@ -133,11 +140,11 @@ def function(x):
 # De_POP=[]
 
 
-population_num = 100
+population_num = 20
 iteration = (D * 5000)/population_num
 
-def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=50):
-        #print("de")
+def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=100):
+        print("DE starts")
         dimensions = D
         initial = []
         for i in range(popsize):
@@ -161,11 +168,11 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=50):
         best_idx = np.argmax(fitness)# find min or max
         #print("index of best",best_idx)
         best = popnp[best_idx]
-        #print("best chromosome",best)
+        print("best chromosome",best)
 
         for i in range(its):
 
-            print(" New iteration ",i)
+            print("\n New iteration ",i)
             for j in range(popsize):
                 idxs = [idx for idx in range(popsize) if idx != j]
                 #print(idxs)
@@ -193,7 +200,7 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=50):
                      mutant[3]=0
                 if(mutant[3] > 1):
                      mutant[3]=1
-                print("mutant",mutant)
+                #print("mutant",mutant)
 
                 cross_points = np.random.rand(dimensions) < crossp
                 #print(cross_points)
@@ -210,14 +217,15 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=50):
                      if f > fitness[best_idx]:
                          best_idx = j
                          best = trial
+                         print("Best", best)
             
             #De_FIT.append(fitness[best_idx])
             #De_VAR.append(best)
 
         print("best  ",best,fitness[best_idx])
         return best, fitness[best_idx]
-        df.to_csv('report/DE best 2020-10-10.csv') # just last iteration
-
+        df.to_csv('report/DE best 2020-100-100-static.csv') # just last iteration
+        #df.append(df2, ignore_index=True)
 
 de(lambda x: function(x))
 #print("fit ",De_FIT," ide ",De_VAR," ",De_POP)

@@ -1,5 +1,5 @@
 simpy
-ieee802154x
+networkx
 matplotlib
 pandas
 pickle

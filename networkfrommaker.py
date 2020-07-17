@@ -26,7 +26,8 @@ for i in range(len(positions)):
 
 
 net1.introduce_yourself()
-print("static maker KKKKKKKKKK")
+if config.printenabled:
+    print("static maker KKKKKKKKKK")
 net1.ieee802154_nodedsicovery()
 graphi = gui.graphic(net1)
 #graphi.draw_nods()

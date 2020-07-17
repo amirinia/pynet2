@@ -38,9 +38,11 @@ class Interference():
         
         
         if (len(self.list) != len(set(self.list))):
-            print(self.list)
+            if config.printenabled:
+                print(self.list)
             l1= self.list
-            print("Interference is detected",set([x for x in l1 if l1.count(x) > 1]))
+            if config.printenabled:
+                print("Interference is detected",set([x for x in l1 if l1.count(x) > 1]))
             for n in l1:
                 n.power.decrease_rx_energy(500)
 

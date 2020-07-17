@@ -24,8 +24,9 @@ class mycluster:
         self.temperature = []  
         self.logger = logger.logger()
         self.saveClusterPos()
-        self.superframe = Superframe()    
-        print("\nCluster {0} is created".format(self.id))
+        self.superframe = Superframe()
+        if config.printenabled:    
+            print("\nCluster {0} is created".format(self.id))
         self.action = env.process(self.run(env))
 
 
@@ -46,7 +47,8 @@ class mycluster:
         while True:
             if (self.net.superframe_num % config.cluster_rotation_period) == 0:
                 self.logger.log("Cluster {0}  with {1} nodes ##### {2} {3}".format(self,self.nodes,self.net.superframe_num, env.now))
-                print ("Cluster {0}  with {1} nodes ##### {2} {3}".format(self,self.nodes,self.net.superframe_num, env.now))
+                if config.printenabled:
+                    print ("Cluster {0}  with {1} nodes ##### {2} {3}".format(self,self.nodes,self.net.superframe_num, env.now))
                 #self.Random_Clusterhead_Selection()
                 yield self.env.timeout(config.Duration)
             #self.logger.log("cluster {0} ,CH :{1} alive {2} and average {3}".format(self.id,self.CH,self.CH.is_alive,self.average_cluster_energy()))
@@ -66,11 +68,13 @@ class mycluster:
 
             # print(self.id,"cluster is runing",self.env.now)
             if len(self.nodes)>7:
-                print("nodes number is exceeded")
+                if config.printenabled:
+                    print("nodes number is exceeded")
             if(self.is_alive == True):
                 if(len(self.nodes)==0):
                     self.logger.log("Cluster {0} is dead@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \n".format(self.id))
-                    print("Cluster {0} is dead@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \n".format(self.id))
+                    if config.printenabled:
+                        print("Cluster {0} is dead@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \n".format(self.id))
                     self.is_alive = False
             yield self.env.timeout(1)
 
@@ -78,7 +82,8 @@ class mycluster:
         #print (self.id) # debugging...
         if(len(self.nodes )> 7):
             self.logger.log("cluster nodes is exceeded by {0}".format(node))
-            print("cluster nodes is exceeded by {0}".format(node))
+            if config.printenabled:
+                print("cluster nodes is exceeded by {0}".format(node))
         node.clus==self
         node.cluster = []
         node.cluster.append(self)
@@ -96,7 +101,8 @@ class mycluster:
         
     def introduce_yourself(self):
         self.logger.log("cluster {0} has {1} with TDMA_slots {2} (introduce)\n".format(self.id,self.nodes,self.TDMA_slots))
-        print("cluster {0} has {1} with TDMA_slots {2} (introduce)\n".format(self.id,self.nodes,self.TDMA_slots))
+        if config.printenabled:
+            print("cluster {0} has {1} with TDMA_slots {2} (introduce)\n".format(self.id,self.nodes,self.TDMA_slots))
 
 
     def average_cluster_energy(self):
@@ -119,7 +125,8 @@ class mycluster:
             if (i.energy == maxi):
                 i.change_to_clusterhead()
                 self.logger.log("{0} is cluster head".format(i))
-                print("{0} is cluster head".format(i))
+                if config.printenabled:
+                    print("{0} is cluster head".format(i))
                 self.cluster_head_setter(i)
 
 

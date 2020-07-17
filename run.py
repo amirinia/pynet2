@@ -22,26 +22,29 @@ env = initialieee802154.env
 
 # in second step you need and algorithm
 second = False
-print("_____________________________Clustering Algorithm___________________________________ start\n\n")
+if config.printenabled:
+    print("_____________________________Clustering Algorithm___________________________________ start\n\n")
 if(second):
     KMEANS1 = KMEANS.Kmeans(env,net1,10)
 else:
     LEACH1 = LEACH.LEACHC(env,net1)
-print("_____________________________Clustering Algorithm___________________________________ end\n\n")
+if config.printenabled:
+    print("_____________________________Clustering Algorithm___________________________________ end\n\n")
 
 
-
-print("++++++++++++++++++++++++++++++++++++++++++++++++++")
+if config.printenabled:
+    print("++++++++++++++++++++++++++++++++++++++++++++++++++")
 net1.introduce_yourself()
 
 if(config.guienabled):
     graphi = gui.graphic(net1)
     graphi.draw_neighbors()
     graphi.draw()
-
-print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
+if config.printenabled:
+    print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
 env.run(until=config.MAX_RUNTIME)
-print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
+if config.printenabled:
+    print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 if(config.guienabled):
     graphi = gui.graphic(net1)
