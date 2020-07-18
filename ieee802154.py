@@ -166,11 +166,13 @@ class Net():
             self.clock.append("CSMA")
             self.CSMA_slot = i+1
             self.logger.log("\nat {0} CSMA - slot {1}".format(self.env.now,(i+1)))
-            if self.TDMA_slot < len(self.clusterheads): #penalty for not enough slot for SCMA
+            if config.CSMA_duration < len(self.clusterheads): #penalty for not enough slot for SCMA
                 for node in self.clusterheads:
-                    #Sprint(self.clusterheads)
-                    node.power.decrease_tx_energy(10000)
-                    node.energy.append(node.power.energy)
+                    #print(self.clusterheads)
+                    #print(random.getrandbits(1))
+                    if random.randint(1, len(self.clusterheads)) < ( len(self.clusterheads)-config.CSMA_duration ):
+                        node.power.decrease_tx_energy(10000)
+                        node.energy.append(node.power.energy)
 
             if config.printenabled:
                 print("\nat {0} CSMA - slot {1}".format(self.env.now,(i+1)))
