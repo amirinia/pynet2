@@ -134,7 +134,7 @@ def function(x):
      a = run(x)
      global df
      df = df.append(pd.Series([x,a[0],a[1],a[2],a[3]], index=df.columns), ignore_index=True)
-     print("choromosome ",x,a[0],a[1])
+     print("choromosome ",x," remaining energy: ",a[0])
      return a[0]
 
 
@@ -172,7 +172,7 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=50):
         best_idx = np.argmax(fitness)# find min or max
         #print("index of best",best_idx)
         best = popnp[best_idx]
-        print("best chromosome",best , best_idx)
+        print("\n Best chromosome",best , best_idx)
 
         for i in range(its):
 
