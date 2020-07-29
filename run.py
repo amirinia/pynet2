@@ -8,36 +8,36 @@ import logger
 import LEACH 
 import clusteringKMEANS as KMEANS
 
-# here you select if it start with statci ieee802154 or ieee802154 maker
-startstatic = False
+# here you select if it start with statcinet or network maker
+startstatic = True
 if(startstatic):
-    import network as initialieee802154
+    import network as net
 else:
-    import networkfrommaker as initialieee802154
+    import networkfrommaker as net
 
-# create ieee802154
-net1 = initialieee802154.net1
-env = initialieee802154.env
+# import ieee802154
+ieee1 = net.ieee1
+env = net.env
 
 
 # in second step you need and algorithm
-second = False
+second = True
 if config.printenabled:
     print("_____________________________Clustering Algorithm___________________________________ start\n\n")
 if(second):
-    KMEANS1 = KMEANS.Kmeans(env,net1,10)
+    KMEANS1 = KMEANS.Kmeans(env,ieee1,10)
 else:
-    LEACH1 = LEACH.LEACHC(env,net1)
+    LEACH1 = LEACH.LEACHC(env,ieee1)
 if config.printenabled:
     print("_____________________________Clustering Algorithm___________________________________ end\n\n")
 
 
 if config.printenabled:
     print("++++++++++++++++++++++++++++++++++++++++++++++++++")
-net1.introduce_yourself()
+ieee1.introduce_yourself()
 
 if(config.guienabled):
-    graphi = gui.graphic(net1)
+    graphi = gui.graphic(ieee1)
     graphi.draw_neighbors()
     graphi.draw()
 if config.printenabled:
@@ -47,26 +47,26 @@ if config.printenabled:
     print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
 
 if(config.guienabled):
-    graphi = gui.graphic(net1)
+    graphi = gui.graphic(ieee1)
     graphi.draw()
 
-#net1.ieee802154_packet_summery()
+#ieee1.ieee802154_packet_summery()
 
-# for n in net1.nodes:
+# for n in ieee1.nodes:
 #     print(n,n.TDMA,n.is_CH,n.cluster,"   ",n.distance)
 
 
-# print(net1.clusters)
-# print(net1.clusterheads)
+# print(ieee1.clusters)
+# print(ieee1.clusterheads)
 
-# print(net1.nodes[0].inbox)
-net1.introduce_yourself()   
+# print(ieee1.nodes[0].inbox)
+ieee1.introduce_yourself()   
 
-# net1.ieee802154_outboxes()
-# net1.ieee802154_inboxes()
+# ieee1.ieee802154_outboxes()
+# ieee1.ieee802154_inboxes()
 
 
-net1.ieee802154_packet_summery()
-#net1.ieee802154_optimize()
+ieee1.ieee802154_packet_summery()
+#ieee1.ieee802154_optimize()
 #report.plotpacket()
 #report.plotenergy()
