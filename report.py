@@ -31,5 +31,5 @@ def plotenergy():
     plt.close()
 
 
-#plotpacket()
-#plotenergy()
+plotpacket()
+plotenergy()

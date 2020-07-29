@@ -334,7 +334,10 @@ class Net():
                                     self.logger.log("{0} {1} {2} {3} {4} ".format(n1,n1.TDMA,"collison TDMA",n2,n2.TDMA))
                                     if config.printenabled:
                                         print("{0} {1} {2} {3} {4} ".format(n1,n1.TDMA,"collison TDMA",n2,n2.TDMA))
-                                    n2.TDMA =n2.TDMA+1
+                                    if n2.TDMA+1 < 7:
+                                        n2.TDMA = n2.TDMA+1
+                                    else:
+                                        print("neighbor collision")
                                     #n2.TDMA = len(n2.clus.nodes) + 1
 
 
