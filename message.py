@@ -6,6 +6,7 @@ import energymodel
 from propagation import PropagationModel
 import math
 from interference import Interference
+import config
 
 
 Message_Type = {0: "Broadcast", 1: "Data", 2: "Ack",3: "Beacon" ,4: "Single"}
@@ -49,7 +50,7 @@ class Message(object):
             #is_loss = packetloss.packetloss() # packet loss model
 
             # propagation model
-            en = PropagationModel(propagation_type=0)
+            en = PropagationModel(propagation_type = config.propagation_type)
             n = sender_node
             n1 = destination_node
             d = math.sqrt(((n.x-n1.x)**2)+((n.y-n1.y)**2))

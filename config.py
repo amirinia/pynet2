@@ -43,6 +43,8 @@ alerty = 110
 Alert_RANGE = 90 # meters
 Alert_increase_temp = 300
 
+# propagation {0: "Free space", 1: "two-ray ground", 2: "Shadowing"}
+propagation_type = 0
 
 #aggregate time
 AGGREGATE_TIME = 10

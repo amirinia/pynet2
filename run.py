@@ -9,7 +9,7 @@ import LEACH
 import clusteringKMEANS as KMEANS
 
 # here you select if it start with statcinet or network maker
-startstatic = True
+startstatic = False
 if(startstatic):
     import network as net
 else:
