@@ -150,12 +150,13 @@ iteration = (D * 5000)/population_num
 def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=100):
         print("DE starts")
         dimensions = D
+        maxduration = 15625 #240 #15625 #Change 1 second to 15.36 ms time slot  4 min ==> 240,000 ms /15.36 => 15,625 number of slots Pass bayad max duration beshe 15,625 slot
         initial = []
         for i in range(popsize):
             pop2 =[]
             t1 = random.randint(2,7)
             t2 = random.randint(2,9)
-            t3 = random.randint((t1 +t2), 240 - (t1 +t2))
+            t3 = random.randint((t1 +t2), maxduration - (t1 +t2))
             b1 = random.choice([0, 1])
             pop2.append(t1)
             pop2.append(t2)
@@ -197,8 +198,8 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=100):
 
                 if(mutant[2] < temp):
                      mutant[2]=temp
-                if(mutant[2] > 240 - temp):
-                     mutant[2]= 240 - temp
+                if(mutant[2] > maxduration - temp):  #
+                     mutant[2]= maxduration - temp
 
                 if(mutant[3] < 0):
                      mutant[3]=0
@@ -222,13 +223,15 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=100):
                          best_idx = j
                          best = trial
                          print("Best", best)
-            
+                     if f == fitness[best_idx]:
+                         print("equal")
+
             #De_FIT.append(fitness[best_idx])
             #De_VAR.append(best)
 
         print("best  ",best,fitness[best_idx])
         return best, fitness[best_idx]
-        df.to_csv('report/DE best 2020-100-100-static.csv') # just last iteration
+        df.to_csv('report/DE best 2020-100-100-me15625.csv') # just last iteration
         #df.append(df2, ignore_index=True)
 
 de(lambda x: function(x))
