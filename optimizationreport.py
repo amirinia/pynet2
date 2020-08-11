@@ -9,7 +9,7 @@ import matplotlib.pyplot  as plt
 from mpl_toolkits import mplot3d
 import numpy as np
 
-df = pd.read_csv("report/DE best 2020-10-10.csv")
+df = pd.read_csv("report/DE best 2020-20-11.csv")
 df.sort_values(by=['energy'], inplace=True)
 
 print(df)

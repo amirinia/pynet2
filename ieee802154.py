@@ -148,7 +148,7 @@ class Net():
         if config.printenabled:
             print("net is initials ends at {0} \n".format(self.env.now))
         
-
+    #clock
     def TDMA(self,duration):
         for i in range(duration+1):
             self.clock.clear()
@@ -189,6 +189,8 @@ class Net():
                 print("at %d inactive ieee802154" %self.env.now)
 
             yield self.env.timeout(1)
+
+
 
     def random_net_generator(self,env,ieee802154,node_number):
         if config.printenabled:

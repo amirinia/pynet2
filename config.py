@@ -1,7 +1,7 @@
 import math
 
 ## Runtime configuration
-MAX_RUNTIME = 156250# 2000
+MAX_RUNTIME = 2000# 156250# 2000
 #ALERT TIME
 ALERT_TIME = 1000
 ALERT_END = 4000
@@ -23,7 +23,7 @@ Duration = CSMA_duration + TDMA_duration + Inactive_duration
 printenabled = False
 
 #gui config
-guienabled = False
+guienabled = True
 guiduration = 5
 
 #Log
