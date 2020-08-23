@@ -15,7 +15,7 @@ class LEACHC:
         self.logger = logger.logger()
         self.clusterheads = []
         self.clusters = []
-        self.rotation_time = 500
+        self.rotation_time = config.Duration *10
         self.notclustered = []
         self.initial = False
 

@@ -1,7 +1,7 @@
 import math
 
 ## Runtime configuration
-MAX_RUNTIME = 2000# 156250# 2000
+MAX_RUNTIME =  40000# 156250# 2000
 #ALERT TIME
 ALERT_TIME = 1000
 ALERT_END = 4000
@@ -15,7 +15,7 @@ ysize = AREA_LENGTH
 #Superframe
 CSMA_duration = 9
 TDMA_duration = 7
-Inactive_duration = 16
+Inactive_duration = 15000
 
 Duration = CSMA_duration + TDMA_duration + Inactive_duration
 
@@ -23,7 +23,7 @@ Duration = CSMA_duration + TDMA_duration + Inactive_duration
 printenabled = False
 
 #gui config
-guienabled = True
+guienabled = False
 guiduration = 5
 
 #Log

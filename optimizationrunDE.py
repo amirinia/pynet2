@@ -81,14 +81,16 @@ def run(x):
 
 
     # in second step you need and algorithm
-     second = False
+     second = True
      if config.printenabled:
 
           print("_____________________________Clustering Algorithm___________________________________ start\n\n")
      if(second):
         KMEANS1 = KMEANS.Kmeans(env,ieee1,10)
+        print("KMEANS")
      else:
         LEACH1 = LEACH.LEACHC(env,ieee1)
+        print("LEACH")
      if config.printenabled:
 
           print("_____________________________Clustering Algorithm___________________________________ end\n\n")
@@ -144,13 +146,13 @@ def function(x):
 # De_POP=[]
 
 
-population_num = 30
+population_num = 20
 iteration = (D * 5000)/population_num
 iteration = 20
 def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
-        print("DE starts")
+        print("\nDE starts with population: {0} and itration: {1}".format(popsize,its))
         dimensions = D
-        maxduration = 240 #15625 #Change 1 second to 15.36 ms time slot  4 min ==> 240,000 ms /15.36 => 15,625 number of slots Pass bayad max duration beshe 15,625 slot
+        maxduration = 15625#240 #Change 1 second to 15.36 ms time slot  4 min ==> 240,000 ms /15.36 => 15,625 number of slots Pass bayad max duration beshe 15,625 slot
         initial = []
         for i in range(popsize):
             pop2 =[]
@@ -183,7 +185,7 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
                 #print(idxs)
                 a, b, c = popnp[np.random.choice(idxs, 3, replace = False)]
                 #print(a,b,c)
-                mutant = np.clip(a + np.round( mut * (b - c)),0,237)#-1/(2-(1/(i+1))), 1/(2-(1/(i+1))))
+                mutant = np.clip(a + np.round( mut * (b - c)),0,maxduration)#-1/(2-(1/(i+1))), 1/(2-(1/(i+1))))
                 mutant = mutant.astype(int) # convert to int
                 if(mutant[0] < 1):
                      mutant[0]=1 +random.randint(0,2)
@@ -236,5 +238,5 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
 
 de(lambda x: function(x))
 #print("fit ",De_FIT," ide ",De_VAR," ",De_POP)
-df.to_csv('report/DE best 2020-{0}-{1}.csv'.format(population_num,iteration))
+df.to_csv('report/DE best 2020k-{0}-{1}.csv'.format(population_num,iteration))
 

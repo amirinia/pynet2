@@ -28,7 +28,8 @@ class Kmeans:
     def run(self,env): #steady pahse
         #while True:
         if self.k >16:
-            print('use smaller k')
+            if config.printenabled:
+                print('use smaller k')
         df = pd.DataFrame(columns=['n', 'x', 'y'])
         if(config.guienabled):
             graphi = gui.graphic(ieee802154)
@@ -55,7 +56,8 @@ class Kmeans:
             plt.clf()
             plt.close()
 
-        print(1)
+        if config.printenabled:
+            print(1)
 
         def assignment(df, centroids):
             for i in centroids.keys():
@@ -74,8 +76,9 @@ class Kmeans:
 
         df = assignment(df, centroids)
         # print(df.head())
-        fig = plt.figure()
         if(config.guienabled):
+
+            fig = plt.figure()
             plt.scatter(df['x'], df['y'], color=df['color'], alpha=0.5, edgecolor='k',s=400)
             for i in centroids.keys():
                 plt.scatter(*centroids[i], color=colmap[i])
@@ -84,7 +87,8 @@ class Kmeans:
             plt.pause(1)
             plt.clf()
             plt.close()
-        print(2)
+        if config.printenabled:
+            print(2)
 
         ## Update Stage
         # print("arrows")
@@ -118,7 +122,8 @@ class Kmeans:
             plt.pause(1)
             plt.clf()
             plt.close()
-        print(3)
+        if config.printenabled:
+            print(3)
         df = assignment(df, centroids)
 
         # Plot results
@@ -132,7 +137,9 @@ class Kmeans:
             plt.pause(1)
             plt.clf()
             plt.close()
-        print(df)
+        if config.printenabled:
+
+            print(df)
 
         # for i, row in df.iterrows():
             # for j, column in row.iteritems():
@@ -142,15 +149,18 @@ class Kmeans:
 
 
         doagain = False
-        print("clusters",self.ieee802154.clusters)
+        if config.printenabled:
+            print("clusters",self.ieee802154.clusters)
         for c in self.ieee802154.clusters:
                 print(c,c.nodes)
                 if (len(c.nodes)>7 or len(c.nodes)<2 ):
-                        print("cluster is too large")
+                        if config.printenabled:
+                            print("cluster is too large")
                         doagain ==True
 
         if doagain:
-                print("repeat Kmean")
+                if config.printenabled:
+                    print("repeat Kmean")
                 Kmeans(self.env,self.ieee802154,self.k)
 
         
@@ -174,7 +184,8 @@ class Kmeans:
 
 
 
-        print("nn",self.ieee802154.nodes)
+        if config.printenabled:
+            print("nn",self.ieee802154.nodes)
         clusters = []
         for n in self.ieee802154.nodes: # add cluster to node
             if(n.id != 0):
@@ -182,13 +193,15 @@ class Kmeans:
                 n.cluster.clear()
                 n.cluster.append(df['closest'][n])
                 clusters.append(df['closest'][n])
-        print("clusss ",set(clusters))
+        if config.printenabled:
+            print("clusss ",set(clusters))
 
 
 
         
         for c in set(clusters): # add neighbor to node
-            print(c ,"is new cluster in kmean" )
+            if config.printenabled:
+                print(c ,"is new cluster in kmean" )
                         # node.change_CulsterHead()
             mycluster1 = cluster.mycluster(c,env,self.ieee802154)
                         # mycluster1.add_node(node) # add ch to node list
@@ -196,8 +209,10 @@ class Kmeans:
                 if(df['closest'][n] == c and n.id != 0):
                     #print(df['closest'][n], "   ", c)
                     mycluster1.add_node(n)
-                    print(n," is added")
-            print("c nodws",mycluster1.nodes)
+                    if config.printenabled:
+                        print(n," is added")
+            if config.printenabled:
+                print("c nodws",mycluster1.nodes)
             if(len(mycluster1.nodes) >7):
                 doagain == True
             n= random.choice(mycluster1.nodes)
@@ -213,7 +228,8 @@ class Kmeans:
                 n.set_TDMA(len(mycluster1.nodes))
                                 # # node.change_TDMA(mycluster1.TDMA_slots)
                             #self.logger.log("{0} is CH in {1} with {2} energy ++++++++++++++++++\n".format(node.id , mycluster1.id,str(node.energy) ) )
-                print("{0} is CH in {1} with {2} energy ++++++++++++++++++ {3}\n".format(n.id , mycluster1.id,(n.neighbors) ,mycluster1.nodes) )
+                if config.printenabled:
+                    print("{0} is CH in {1} with {2} energy ++++++++++++++++++ {3}\n".format(n.id , mycluster1.id,(n.neighbors) ,mycluster1.nodes) )
                 message2 = message.Message()
                 message2.broadcast(n,"node {0} is cluster Head in {1} with TDMA ".format(n.id,mycluster1.id),mycluster1.nodes)
                                 
@@ -223,12 +239,12 @@ class Kmeans:
                 self.clusterheads.append(n)
                         
 
+        if config.printenabled:
+            print("nodes ",self.ieee802154.nodes) 
+            print("clusters ",self.clusters)    
+            print("CHs ",self.clusterheads)  
 
-        print("nodes ",self.ieee802154.nodes) 
-        print("clusters ",self.clusters)    
-        print("CHs ",self.clusterheads)  
-
-        print("kmeans is done")
+            print("kmeans is done")
 
         for node in self.ieee802154.nodes:
             #print(node.id, node.is_CH)
@@ -237,7 +253,8 @@ class Kmeans:
                     self.notclustered.append(node)
 
         if(len(self.notclustered) != 0):
-            print("these are not clustered area ",self.notclustered)
+            if config.printenabled:
+                print("these are not clustered area ",self.notclustered)
         
         for c in self.clusters:
             for node in c.nodes:
@@ -248,7 +265,8 @@ class Kmeans:
                     node.change_CulsterHead()
                     node.is_CH = True
                     #self.logger.log("{0} is CH in cluster {1} with {2}  ++++++++++++++++++ area\n".format(node.id , c.id,str(c.nodes) ) )
-                    print("{0} is CH in cluster {1} with {2}  ++++++++++++++++++ is CH {3} area \n".format(node.id , c.id,str(c.nodes),node.is_CH ) )
+                    if config.printenabled:
+                        print("{0} is CH in cluster {1} with {2}  ++++++++++++++++++ is CH {3} area \n".format(node.id , c.id,str(c.nodes),node.is_CH ) )
                     message2 = message.Message()
                     message2.broadcast(node,"node {0} is cluster Head in {1} with TDMA ".format(node.id,c.id),node.neighbors)
                     self.ieee802154.clusterheads.append(node)
