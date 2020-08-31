@@ -168,8 +168,8 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
             pop2 =[]
             t1 = random.randint(2,7)
             t2 = random.randint(2,9)
-            tempmin = (t1 + t2) + 1500
-            t3 = random.randint(tempmin, maxduration - tempmin)
+            tempmin = (t1 + t2) 
+            t3 = random.randint(1500, maxduration - tempmin)
             b1 = random.choice([0, 1])
             pop2.append(t1)
             pop2.append(t2)
@@ -209,8 +209,8 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
 
                 #temp = mutant[1] + mutant[0] + round(maxduration/10)
 
-                if(mutant[2] < temp):
-                     mutant[2]=temp
+                if(mutant[2] < 1500):
+                     mutant[2]=1500
                 if(mutant[2] > maxduration - tempmin):  #
                      mutant[2]= maxduration - tempmin
 
