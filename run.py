@@ -21,7 +21,7 @@ env = net.env
 
 
 # in second step you need and algorithm
-second = False
+second = True
 if config.printenabled:
     print("_____________________________Clustering Algorithm___________________________________ start\n\n")
 if(second):

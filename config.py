@@ -23,7 +23,7 @@ Duration = CSMA_duration + TDMA_duration + Inactive_duration
 printenabled = False
 
 #gui config
-guienabled = False
+guienabled = True
 guiduration = 5
 
 #Log
@@ -31,6 +31,10 @@ logenabled = False
 
 #save excel
 excelsave = False
+
+# Algorithm
+Algorith_Type = {0: "LEACH", 1: "KMEANS", 2: " NEW"}
+
 
 # and config
 BEACONING_TIME       = 5

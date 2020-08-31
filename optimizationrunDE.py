@@ -12,11 +12,12 @@ from node import Node
 import LEACH 
 import clusteringKMEANS as KMEANS
 import pickle
-
+import time
+print(time.ctime)
 # here you select if it start with statci ieee802154 or ieee802154 maker
-startstatic = True
+startstatic =False
 # in second step you need and algorithm
-second = True
+second = False
 
 print("\nStatic network is {0} and Kmeans is {1} and run time is {2}".format(startstatic,second,config.MAX_RUNTIME))
 
@@ -154,9 +155,9 @@ def function(x):
 # De_POP=[]
 
 
-population_num = 20
+population_num =30
 iteration = (D * 5000)/population_num
-iteration = 20
+iteration = 30
 def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
         print("DE starts with population: {0} and itration: {1} ".format(popsize,its))
         dimensions = D
@@ -166,7 +167,8 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
             pop2 =[]
             t1 = random.randint(2,7)
             t2 = random.randint(2,9)
-            t3 = random.randint((t1 +t2), maxduration - (t1 +t2))
+            tempmin = (t1 + t2) + 1500
+            t3 = random.randint(tempmin, maxduration - tempmin)
             b1 = random.choice([0, 1])
             pop2.append(t1)
             pop2.append(t2)
@@ -204,12 +206,12 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
                 if(mutant[1] > 9):
                      mutant[1]=9 -random.randint(0,3)
 
-                temp = mutant[1] + mutant[0]
+                temp = mutant[1] + mutant[0] + round(maxduration/10)
 
                 if(mutant[2] < temp):
                      mutant[2]=temp
-                if(mutant[2] > maxduration - temp):  #
-                     mutant[2]= maxduration - temp
+                if(mutant[2] > maxduration - tempmin):  #
+                     mutant[2]= maxduration - tempmin
 
                 if(mutant[3] < 0):
                      mutant[3]=0
@@ -246,5 +248,6 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
 
 de(lambda x: function(x))
 #print("fit ",De_FIT," ide ",De_VAR," ",De_POP)
-df.to_csv('report/DE best 2020k-{0}-{1}.csv'.format(population_num,iteration))
+print(time.ctime)
+df.to_csv('report/DE best 2020LE-{0}-{1}-{2}-{3}.csv'.format(population_num,iteration,startstatic,second))
 

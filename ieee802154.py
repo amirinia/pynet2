@@ -180,19 +180,16 @@ class Net():
             yield self.env.timeout(1)
     
     def INACTIVE(self,duration):
-        if config.printenabled:
-                print("at %d start inactive ieee802154\n" %self.env.now)
+
         for i in range(duration):
             self.clock.clear()
             self.clock.append("INACTIVE")
-            self.CSMA_slot = i+1
+            self.CSMA_slot = i+1 
             self.logger.log("at %d inactive ieee802154" %self.env.now)
-            #if config.printenabled:
-                #print("at %d inactive ieee802154" %self.env.now)
+            if config.printenabled:
+                print("at %d inactive ieee802154" %self.env.now)
 
             yield self.env.timeout(1)
-        if config.printenabled:
-                print("at %d end inactive ieee802154" %self.env.now)
 
 
     def random_net_generator(self,env,ieee802154,node_number):

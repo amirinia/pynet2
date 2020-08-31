@@ -9,7 +9,7 @@ import matplotlib.pyplot  as plt
 from mpl_toolkits import mplot3d
 import numpy as np
 
-df = pd.read_csv("report/DE best 2020-20-11.csv")
+df = pd.read_csv("report/DE best 2020ke-30-30.csv")
 df.sort_values(by=['energy'], inplace=True)
 
 print(df)
@@ -36,10 +36,10 @@ def convertvar(df):
         dfv = dfv.append(pd.Series([(L[0]),(L[1]),(L[2]),(L[3]),df['energy'][index],df['duration'][index],df['lost'][index],df['dead'][index],sumduration], index=dfv.columns),ignore_index=True)
 
     print(dfv)
-    dfv.to_csv('report/optimizationreport.csv')
+    dfv.to_csv('report/DE best 2020ke-30-30optimizationreport.csv')
 
 convertvar(df)
-dfv2 =pd.read_csv('report/optimizationreport.csv')
+dfv2 =pd.read_csv('report/DE best 2020ke-30-30optimizationreport.csv')
 
 
 
@@ -171,12 +171,12 @@ def myploted(df):
 
 print(dfv2[-70:])
 
-myplotpopulation(dfv2[-100:])
-myplott1t2(dfv2[-3000:])
-myplott1t2d(dfv2[-3000:])
-myplott1t2d2(dfv2[-3000:])
+myplotpopulation(dfv2[-30:])
+myplott1t2(dfv2[-30:])
+myplott1t2d(dfv2[-30:])
+myplott1t2d2(dfv2[-30:])
 
 
-myplotobj(dfv2[-3000:])
-myplotvar(dfv2[-3000:])
-myploted(dfv2[-100:]) # pareto
+myplotobj(dfv2[-30:])
+myplotvar(dfv2[-30:])
+myploted(dfv2[-30:]) # pareto

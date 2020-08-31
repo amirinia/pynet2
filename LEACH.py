@@ -35,7 +35,7 @@ class LEACHC:
                 for c in self.clusters:
                     self.Random_Clusterhead_SelectionCluster(c)
                 if config.printenabled:
-                    print("R buz 1000")
+                    print("R buz 1000",self.env.now ,self.rotation_time)
             #yield self.env.process(self.Random_Clusterhead_Selection(10))
             yield self.env.timeout(1)
 
