@@ -207,7 +207,7 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
                 if(mutant[1] > 9):
                      mutant[1]=9 -random.randint(0,3)
 
-                temp = mutant[1] + mutant[0] + round(maxduration/10)
+                #temp = mutant[1] + mutant[0] + round(maxduration/10)
 
                 if(mutant[2] < temp):
                      mutant[2]=temp
