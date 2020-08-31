@@ -13,6 +13,13 @@ import LEACH
 import clusteringKMEANS as KMEANS
 import pickle
 
+# here you select if it start with statci ieee802154 or ieee802154 maker
+startstatic = True
+# in second step you need and algorithm
+second = True
+
+print("\nStatic network is {0} and Kmeans is {1} and run time is {2}".format(startstatic,second,config.MAX_RUNTIME))
+
 def run(x):
 
      config.TDMA_duration = x[0]
@@ -25,7 +32,6 @@ def run(x):
 
 
      # here you select if it start with statci ieee802154 or ieee802154 maker
-     startstatic = True
      if(startstatic):
           # import network as initialieee802154
           # ieee1 = initialieee802154.ieee1
@@ -70,7 +76,10 @@ def run(x):
                     x = positions[i][0]
                     y = config.ysize - positions[i][1]
                     #print("p = x:",positions[i][0],positions[i][1],i)
-                    ieee1.add_node(Node(i,env,2000,x,y,ieee802154=ieee1))
+                    if (i % 2== 0):
+                         ieee1.add_node(Node(i,env,2000,x,y,ieee802154=ieee1 ))
+                    else:
+                         ieee1.add_node(Node(i,env,2000,x,y,ieee802154=ieee1, sensor_type=1 ))
      
 
 
@@ -80,17 +89,16 @@ def run(x):
      ieee1.ieee802154_nodedsicovery()
 
 
-    # in second step you need and algorithm
-     second = True
+
      if config.printenabled:
 
           print("_____________________________Clustering Algorithm___________________________________ start\n\n")
      if(second):
         KMEANS1 = KMEANS.Kmeans(env,ieee1,10)
-        print("KMEANS")
+        #print("KMEANS")
      else:
         LEACH1 = LEACH.LEACHC(env,ieee1)
-        print("LEACH")
+        #print("LEACH")
      if config.printenabled:
 
           print("_____________________________Clustering Algorithm___________________________________ end\n\n")
@@ -150,7 +158,7 @@ population_num = 20
 iteration = (D * 5000)/population_num
 iteration = 20
 def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
-        print("\nDE starts with population: {0} and itration: {1}".format(popsize,its))
+        print("DE starts with population: {0} and itration: {1} ".format(popsize,its))
         dimensions = D
         maxduration = 15625#240 #Change 1 second to 15.36 ms time slot  4 min ==> 240,000 ms /15.36 => 15,625 number of slots Pass bayad max duration beshe 15,625 slot
         initial = []
