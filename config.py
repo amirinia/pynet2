@@ -23,7 +23,7 @@ Duration = CSMA_duration + TDMA_duration + Inactive_duration
 printenabled = False
 
 #gui config
-guienabled = True
+guienabled = False
 guiduration = 5
 
 #Log
