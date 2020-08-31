@@ -21,6 +21,13 @@ second = False
 
 print("\nStatic network is {0} and Kmeans is {1} and run time is {2}".format(startstatic,second,config.MAX_RUNTIME))
 
+# here you select if it start with statci ieee802154 or ieee802154 maker
+startstatic = True
+# in second step you need and algorithm
+second = True
+
+print("\nStatic network is {0} and Kmeans is {1} and run time is {2}".format(startstatic,second,config.MAX_RUNTIME))
+
 def run(x):
 
      config.TDMA_duration = x[0]
