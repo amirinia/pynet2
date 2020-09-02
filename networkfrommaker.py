@@ -21,7 +21,12 @@ for i in range(len(positions)):
         x = positions[i][0]
         y = config.ysize - positions[i][1]
         #print("p = x:",positions[i][0],positions[i][1],i)
-        ieee1.add_node(Node(i,env,2000,x,y,ieee802154=ieee1))
+        #print("p = x:",positions[i][0],positions[i][1],i)
+        if (i % 2== 0):
+                         ieee1.add_node(Node(i,env,2000,x,y,ieee802154=ieee1 ))
+        else:
+                         ieee1.add_node(Node(i,env,2000,x,y,ieee802154=ieee1, sensor_type=1 ))
+        
         
 
 

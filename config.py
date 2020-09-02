@@ -19,8 +19,12 @@ Inactive_duration = 15000
 
 Duration = CSMA_duration + TDMA_duration + Inactive_duration
 
+# multiframe 
+Multiframe_size = 2
+Multiframe_state = True
+
 # print
-printenabled = False
+printenabled = True
 
 #gui config
 guienabled = False
@@ -60,8 +64,8 @@ COVERAGE_RADIUS = 15 # meters
 # initial energy at every node's battery
 INITIAL_ENERGY = 2000 # mili Joules 2000
 
-P_TX = 0.084 # * 100 # Watts to transmite 
-P_RX = 0.073 # * 100 # Watts to receive
+P_TX = 0.084 *100 # * 100 # Watts to transmite 
+P_RX = 0.073 *100 # * 100 # Watts to receive
 
 #dead node threshold
 DEAD_NODE_THRESHOLD = 100.299
@@ -87,11 +91,7 @@ BS_POS_Y = 0.0
 MSG_LENGTH = 4000 # bits
 HEADER_LENGTH = 150 # bits
 
-# multiframe 
-Multiframe_size = 2
-Multiframe_state = False
+
 
 
 RESULTS_PATH = 'report/'
-
-

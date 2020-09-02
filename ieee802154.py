@@ -355,22 +355,25 @@ class Net():
                 #print(next(reversed(n.energy)))
         self.logger.log("avrage ieee802154 energy {0}".format(energy))
         if config.printenabled:
-            print("avrage ieee802154 energy {0}".format(energy))
+            print("average ieee802154 energy {0}".format(energy))
 
         # duration
         duration = config.TDMA_duration + config.Duration + config.Inactive_duration
         if config.printenabled:
             print("duration ={0} superframe {1} {2} and t1:{3} t2:{4} t3:{5}".format(config.Duration,config.Multiframe_size,config.Multiframe_state,config.TDMA_duration,config.CSMA_duration,config.Inactive_duration))
-            print("number of superframe " , self.superframe_num)
+            print("Max run is {} and number of superframe {} ".format(config.MAX_RUNTIME,self.superframe_num))
+            print("P_TX is {} and P_RX is {}".format(config.P_TX,config.P_RX))
         # packet lost
         sumpout = 0
         sumpin = 0
         for n in self.nodes:
-            sumpout +=len(n.outbox)
-            sumpin +=len(n.inbox)
-        if config.printenabled:
-            print("{0} packets are lost on wireless sensor ieee802154".format(sumpout-sumpin))
+             if (n.id !=0):
+                sumpout +=len(n.outbox)
+                sumpin +=len(n.inbox)
+
         lost = sumpout-sumpin
+        if config.printenabled:
+                print("{0} packets are lost on wireless sensor ieee802154".format(lost))
         # first node
         t = []
         for n in self.nodes:

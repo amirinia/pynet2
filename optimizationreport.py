@@ -77,7 +77,7 @@ def myplott1t2(df):
 
     ax.set_xlabel('GTS size')
     ax.set_ylabel('CAP size')
-    ax.set_zlabel('Remaining Energy (MJ)')
+    ax.set_zlabel('Remaining Energy (mJ)')
     plt.show()
 
 def myplott1t2d(df):
@@ -95,7 +95,7 @@ def myplott1t2d(df):
 
     ax.set_xlabel('GTS size')
     #ax.set_ylabel('CAP size')
-    ax.set_ylabel('Remaining Energy (MJ)')
+    ax.set_ylabel('Remaining Energy (mJ)')
     plt.show()
 
 def myplott1t2d2(df):
@@ -113,7 +113,7 @@ def myplott1t2d2(df):
 
     #ax.set_xlabel('GTS size')
     ax.set_xlabel('CAP size')
-    ax.set_ylabel('Remaining Energy (MJ)')
+    ax.set_ylabel('Remaining Energy (mJ)')
     plt.show()
     
 def myplotobj(df):
@@ -129,9 +129,9 @@ def myplotobj(df):
     ax.scatter(x, y, z, c=xy2, marker='o',s =(df.energy/1000))
     plt.title("Objectives")
 
-    ax.set_xlabel('X duration(S)')
+    ax.set_xlabel('X duration(ms)')
     ax.set_ylabel('Y Lost')
-    ax.set_zlabel('Z Energy(MJ)')
+    ax.set_zlabel('Z Energy(mJ)')
     plt.show()
 
 def myplotvar(df):
@@ -164,8 +164,8 @@ def myploted(df):
     ax.scatter(x, y, c=xy2, marker='o')
     #plt.title("Pareto front")
 
-    ax.set_xlabel('Superframe Size (s)')
-    ax.set_ylabel('The Remaining Energy (MJ)')
+    ax.set_xlabel('Superframe Size (ms)')
+    ax.set_ylabel('The Remaining Energy (mJ)')
     plt.show()
     
 

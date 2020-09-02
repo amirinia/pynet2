@@ -7,6 +7,11 @@ import report
 import logger
 import LEACH 
 import clusteringKMEANS as KMEANS
+import pickle
+import simpy
+import ieee802154
+from node import Node
+
 
 # here you select if it start with statcinet or network maker
 startstatic = False
@@ -15,13 +20,14 @@ if(startstatic):
 else:
     import networkfrommaker as net
 
+
 # import ieee802154
 ieee1 = net.ieee1
 env = net.env
 
 
 # in second step you need and algorithm
-second = True
+second = False
 if config.printenabled:
     print("_____________________________Clustering Algorithm___________________________________ start\n\n")
 if(second):
@@ -66,7 +72,7 @@ ieee1.introduce_yourself()
 # ieee1.ieee802154_inboxes()
 
 
-ieee1.ieee802154_packet_summery()
-#ieee1.ieee802154_optimize()
+#ieee1.ieee802154_packet_summery()
+ieee1.ieee802154_optimize()
 #report.plotpacket()
 #report.plotenergy()

@@ -202,7 +202,7 @@ class Node():
                                         # self.cluster[0].temperature.append(self.temperature)
                                     if(config.Multiframe_state):
                                         if(self.sensor.sensor_type == 1 and self.net.superframe_num % config.Multiframe_size == 0): # every 2 superframe  Multisuperframe
-                                            tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
+                                            tempmessage = temp1 + "at env:{3} from node t1 {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
                                             self.logger.log(tempmessage)
                                             if config.printenabled:
                                                 print(tempmessage)
@@ -212,7 +212,7 @@ class Node():
                                             self.parent[0].buffer.append(tempmessage)
 
                                         if (self.sensor.sensor_type == 0): # every frame nodetype
-                                            tempmessage = temp1 + "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
+                                            tempmessage = temp1 + "at env:{3} from node t0 {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8} and energy {9}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent,next(reversed(self.energy)))
                                             self.logger.log(tempmessage)
                                             if config.printenabled:
                                                 print(tempmessage)
