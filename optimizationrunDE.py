@@ -13,6 +13,7 @@ import LEACH
 import clusteringKMEANS as KMEANS
 import pickle
 import time
+
 print(time.ctime)
 # here you select if it start with statci ieee802154 or ieee802154 maker
 startstatic =False
@@ -146,7 +147,7 @@ def function(x):
      a = run(x)
      global df
      df = df.append(pd.Series([x,a[0],a[1],a[2],a[3]], index=df.columns), ignore_index=True)
-     print("choromosome ",x," remaining energy: ",a[0])
+     print("choromosome ",x," remaining energy: ",a[0], " ",time.ctime)
      return a[0]
 
 

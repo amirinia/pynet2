@@ -14,7 +14,7 @@ from node import Node
 
 
 # here you select if it start with statcinet or network maker
-startstatic = False
+startstatic = True
 if(startstatic):
     import network as net
 else:
