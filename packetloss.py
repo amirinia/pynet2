@@ -9,7 +9,7 @@ if packetloss() returns false it means packet is lost and you need to resend
 
 """
 
-# Packet Delivery Ratio in wireless network
+# Packet Delivery Ratio in wireless ieee802154
 PDR = 95
 
 
@@ -17,7 +17,7 @@ import random
 
 def packetloss():
     p = random.randint(1,100)
-    if(p > PDR):
+    if(p < PDR):
         #print(p)
         return True
     else:

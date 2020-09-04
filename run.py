@@ -1,50 +1,78 @@
 #at begining you can set parameters in config file
-import gui
-import simpy
-import network
-import node
-import KMEANS
 
-# to run simulation you need initial networks ( just simply define nodes and addd to network or use random generator)
-env = simpy.Environment()
-net1 = network.Net(env)
-net1.random_net_generator(env,net1,40)
-net1.introduce_yourself()
-graphi = gui.graphic(net1)
-graphi.draw_nods()
+# to run simulation you need initial ieee802154s ( just simply define nodes and addd to ieee802154)
+import gui
+import config
+import report
+import logger
+import LEACH 
+import clusteringKMEANS as KMEANS
+import pickle
+import simpy
+import ieee802154
+from node import Node
+
+
+# here you select if it start with statcinet or network maker
+startstatic = False
+if(startstatic):
+    import network as net
+else:
+    import networkfrommaker as net
+
+
+# import ieee802154
+ieee1 = net.ieee1
+env = net.env
 
 
 # in second step you need and algorithm
-print("_____________________________Algorithm___________________________________ start\n\n")
-KMEANS.Kmeans(net1,7)
-print("_____________________________Algorithm___________________________________ end\n\n")
-
-# graphi.draw_clusters()
-net1.cluster_formation()
-net1.introduce_yourself()
-
-# for n in net1.nodes:
-#     print(n,n.neighbors)
-#     if len(n.parent) != 0:
-#         print(n,next(reversed(n.parent)))
-
-print("++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
-env.run(until=1)#config.MAX_RUNTIME)
-print("++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
-
-net1.network_packet_summery()
+second = False
+if config.printenabled:
+    print("_____________________________Clustering Algorithm___________________________________ start\n\n")
+if(second):
+    KMEANS1 = KMEANS.Kmeans(env,ieee1,10)
+else:
+    LEACH1 = LEACH.LEACHC(env,ieee1)
+if config.printenabled:
+    print("_____________________________Clustering Algorithm___________________________________ end\n\n")
 
 
-# for n in net1.nodes:
-#     print(n,n.neighbors)
-#     if len(n.parent) != 0:
-#         print(n,next(reversed(n.parent)))
+if config.printenabled:
+    print("++++++++++++++++++++++++++++++++++++++++++++++++++")
+ieee1.introduce_yourself()
+
+if(config.guienabled):
+    graphi = gui.graphic(ieee1)
+    graphi.draw_neighbors()
+    graphi.draw()
+if config.printenabled:
+    print("++++++++++++++++++++++++++++++++++++++++++++++++++ run begin ++++++++++++++++++++++++")
+env.run(until=config.MAX_RUNTIME)
+if config.printenabled:
+    print("++++++++++++++++++++++++++++++++++++++++++++++++++ run end ++++++++++++++++++++++++")
+
+if(config.guienabled):
+    graphi = gui.graphic(ieee1)
+    graphi.draw()
+
+#ieee1.ieee802154_packet_summery()
+
+# for n in ieee1.nodes:
+#     print(n,n.TDMA,n.is_CH,n.cluster,"   ",n.distance)
 
 
-for n in net1.nodes:
-    print(n,n.is_CH,n.distance)
-graphi.draw_neighbors()
+# print(ieee1.clusters)
+# print(ieee1.clusterheads)
 
-net1.introduce_yourself()
-net1.network_outboxes()
-net1.network_inboxes()
+# print(ieee1.nodes[0].inbox)
+ieee1.introduce_yourself()   
+
+# ieee1.ieee802154_outboxes()
+# ieee1.ieee802154_inboxes()
+
+
+#ieee1.ieee802154_packet_summery()
+ieee1.ieee802154_optimize()
+#report.plotpacket()
+#report.plotenergy()

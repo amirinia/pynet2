@@ -1,98 +1,80 @@
 import networkx as nx
 import matplotlib.pyplot as plt
-import network
+import ieee802154
 import matplotlib.animation as animation
 import time 
 import config
-
 import numpy as np
 import matplotlib.cm as cm
 import matplotlib.pyplot as plt
 import matplotlib.cbook as cbook
 
 
-
-
-
 class graphic:
-    def __init__(self, mynetwork):
-        self.mynetwork = mynetwork
+    def __init__(self, myieee802154):
+        self.myieee802154 = myieee802154
 
-
-    def simple_draw(self):
-        print("simple draw")
-
-
-        self.mynetwork.ClusterHead_finder()
-
-        G = nx.Graph()
-        G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
-        for node in self.mynetwork.nodes:
-            if(node.is_alive == True):
-                G.add_node(node.id,pos=(node.x,node.y))
-                print("{0} node is aliveeeeeeeeeeeeee with parent {1} and nexthop {2}".format(node,node.parent,node.next_hop))
-                if(len(node.parent)!=0):
-                    if(node.parent[0].is_alive==True):
-                        G.add_edge(node.id,node.parent[0].id)
-                if(node.is_CH == True):
-                    if(len(node.next_hop)!=0):
-                        if(node!=node.next_hop[0]):
-                            if(node.next_hop[0].is_alive==True):
-                                print(node,node.next_hop)
-                                G.add_edge(node.id,node.next_hop[0].id)
-                    if(len(node.next_hop)==0):
-                        print("\n node{0} +++  nexthop {1}".format(node,len(node.next_hop)))
-                        G.add_edge(node.id,0)
-
-        nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True, node_size=400)
-        #ani = animation.FuncAnimation(fig, animate, interval=1000)
-        plt.legend("Network")
-
-        plt.show()
-    
-    
+  
     def draw(self):
         print("draw \n")
+        #self.myieee802154.introduce_yourself()
         G = nx.Graph()
-        G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
-        for node in self.mynetwork.nodes:
+        G.add_node(0,pos=(config.xsize/2,config.ysize/2))
+        for node in self.myieee802154.nodes:
             if(node.is_alive == True):
-                # print("for node in self.mynetwork.nodes {0} and cluster head {1}".format(node,node.parent))
+                # print("for node in self.myieee802154.nodes {0} and cluster head {1}".format(node,node.parent))
 
                 G.add_node(node.id,pos=(node.x,node.y))
                 
-                if(len(node.parent)!=0):
-                    if(node.parent[0].is_alive==True):
-                        G.add_edge(0,node.parent[0].id)
+                if(node.is_CH == True): # if there is no parrent
+                    if(node.is_alive==True):
+                        G.add_edge(0,node.id)
+                # if(len(node.parent)!=0):
+                #     if(node.parent[0].is_alive==True):
+                #         G.add_edge(0,node.parent[0].id)
                 if(len(node.parent)!=0):
                     if(node.parent[0].is_alive==True):
                         G.add_edge(node.id,node.parent[0].id)
+            else: # deadposition
+                G.add_node(node.id,pos=(node.x,node.y))
 
         nodelistCH = []
-        for node in self.mynetwork.nodes:
+        deadlist = []
+        for node in self.myieee802154.nodes:
             if(node.is_alive == True):
                 if(node.is_CH == True):
+                   # print(node.id," is CH on draw",)
                     nodelistCH.append(node.id)
-        # print(nodelistCH)
+            else:
+                deadlist.append(node.id)
+                print(node.id," id dead in gui")
+        
+        #print(deadlist)
+
         nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True, node_size=400)
         #ani = animation.FuncAnimation(fig, animate, interval=1000)
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=[0], node_size=1000, node_color='#66ff66')
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=nodelistCH, node_size=700, node_color='#ff80ff')
+        nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=deadlist, node_size=500, node_color='#ff0000')
+
         mng = plt.get_current_fig_manager()
         #mng.full_screen_toggle()
         mng.set_window_title("draw")
 
-        plt.pause(5)
+        plt.pause(config.guiduration)
         plt.clf()
         plt.close()
+        # plt.show()
 
-    def drawdead(self):
+        
+
+    def drawdead(self,title):
         print("draw dead\n")
         G = nx.Graph()
-        G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
-        for node in self.mynetwork.nodes:
+        G.add_node(0,pos=(config.xsize/2,config.ysize/2))
+        for node in self.myieee802154.nodes:
             if(node.is_alive == True):
-                # print("for node in self.mynetwork.nodes {0} and cluster head {1}".format(node,node.parent))
+                # print("for node in self.myieee802154.nodes {0} and cluster head {1}".format(node,node.parent))
 
                 G.add_node(node.id,pos=(node.x,node.y))
                 
@@ -104,7 +86,7 @@ class graphic:
                         G.add_edge(node.id,node.parent[0].id)
 
         nodelistCH = []
-        for node in self.mynetwork.nodes:
+        for node in self.myieee802154.nodes:
             if(node.is_alive == True):
                 if(node.is_CH == True):
                     nodelistCH.append(node.id)
@@ -115,11 +97,11 @@ class graphic:
         nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=nodelistCH, node_size=700, node_color='#ff80ff')
         mng = plt.get_current_fig_manager()
         #mng.full_screen_toggle()
-        mng.set_window_title("dead node")
+        mng.set_window_title("dead node {0}".format(title))
 
         plt.title("dead mode")
 
-        plt.pause(5)
+        plt.pause(config.guiduration)
         plt.clf()
         plt.close()
 
@@ -129,19 +111,19 @@ class graphic:
         print("GUI CLUSTERS")
 
         G = nx.Graph()
-        for node in self.mynetwork.nodes:
+        for node in self.myieee802154.nodes:
             if(node.is_alive == True):
                 G.add_node(node.id,pos=(node.x,node.y))
                 #G.add_edge(node,"BS")
         # nodes in cluster
-        for node in self.mynetwork.nodes:
+        for node in self.myieee802154.nodes:
             if(node.is_alive==True):
                 if(len(node.parent)!=0):
                     
                     print("netwww ",node,node.x,node.y)
                     G.add_edge(node.id,node.parent[0].id)
                     
-        for cluster in self.mynetwork.clusters:
+        for cluster in self.myieee802154.clusters:
             #if(cluster.is_alive==True):
                 print("gui cluster",cluster)
                 for node in cluster.nodes:
@@ -153,16 +135,16 @@ class graphic:
                             #print("({0}, {1})".format((node),(node.parent[0])))
                             G.add_edge(node.id,next(reversed(node.parent)))
         nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True, node_size=400)
-        if self.mynetwork.alert :
+        if self.myieee802154.alert :
                 G.add_node("Fire",pos=(config.alertx,config.alerty))
-                nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=["Fire"], node_size=1000, node_color='#FF0000')
+                nx.draw_ieee802154x(G, nx.get_node_attributes(G, 'pos'), nodelist=["Fire"], node_size=1000, node_color='#FF0000')
         #ani = animation.FuncAnimation(fig, animate, interval=1000)
-        if not self.mynetwork.alert:
+        if not self.myieee802154.alert:
             G.add_node("Solve",pos=(config.alertx,config.alerty))
-            nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=["Solve"], node_size=2000, node_color='#00ff80')
+            nx.draw_ieee802154x(G, nx.get_node_attributes(G, 'pos'), nodelist=["Solve"], node_size=2000, node_color='#00ff80')
         #ani = animation.FuncAnimation(fig, animate, interval=1000)
 
-        plt.legend("Network")
+        plt.legend("ieee802154")
 
         plt.show()
 
@@ -171,16 +153,15 @@ class graphic:
             print("GUI NEIGHBORS TABLE")
 
             G = nx.Graph()
-            #G.add_node("BS",pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
 
-            for node in self.mynetwork.nodes:
+            for node in self.myieee802154.nodes:
                 if(node.is_alive == True):
                     G.add_node(node.id,pos=(node.x,node.y,))
                 #G.add_edge(node,"BS")
 
                 #print("draw node",node)
 
-            for node in self.mynetwork.nodes:
+            for node in self.myieee802154.nodes:
                 if(node.is_alive==True):
                     #print("draw edge",node)
                     for neighbor in node.neighbors:
@@ -189,17 +170,22 @@ class graphic:
                             G.add_edge(node.id,neighbor.id)
             nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True)
             #ani = animation.FuncAnimation(fig, animate, interval=1000)
-            plt.legend("Network")
-            plt.show()
+            plt.legend("ieee802154")
+            #plt.show()
+            plt.title("Graph neighbors")
+
+            plt.pause(config.guiduration)
+            plt.clf()
+            plt.close()
 
 
     def draw_nods(self):
             print("GUI NODES ONLY")
             G = nx.Graph()
-            #G.add_node("BS",pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
-            for node in self.mynetwork.nodes:
+            for node in self.myieee802154.nodes:
                 if(node.is_alive == True):
                     G.add_node(node.id,pos=(node.x,node.y),weight=node.id)
+                    #print("draw ",node.x,node.y)
                     #G.add_edge(node.id,0,weight=node.id)
                 #print(node)
             pos = nx.get_node_attributes(G, 'pos')
@@ -210,21 +196,24 @@ class graphic:
             nx.draw_networkx_edges(G,pos)
             nx.draw_networkx_labels(G,pos,)
             nx.draw_networkx_edge_labels(G,pos,edge_labels=edge_labels)
+            nx.draw_networkx(G, nx.get_node_attributes(G, 'pos'), nodelist=[0], node_size=1000, node_color='#66ff66')
+
             plt.title("Graph Title")
-            plt.show()
+            plt.pause(config.guiduration)
+            plt.clf()
+            plt.close()
 
     def draw_ch(self):
             print("GUI NODES CH ONLY")
             G = nx.Graph()
-            #G.add_node("BS",pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
-            for node in self.mynetwork.nodes:
+            for node in self.myieee802154.nodes:
                 if(node.is_alive == True):
                     G.add_node(node.id,pos=(node.x,node.y),weight=node.id)
 
 
-            for node in self.mynetwork.nodes:
+            for node in self.myieee802154.nodes:
                 if(node.is_alive == True):
-                    for node1 in self.mynetwork.nodes:
+                    for node1 in self.myieee802154.nodes:
                         if node is not node1:
                             #print("bbbb",node.parent[0],node,node1.parent[0],node1,str(node.parent[0])==str(node1.parent[0]))
 
@@ -236,22 +225,21 @@ class graphic:
 
             nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True)
             #ani = animation.FuncAnimation(fig, animate, interval=1000)
-            plt.legend("Network")
+            plt.legend("ieee802154")
             plt.show()
 
     def Kmeans_draw(self):
         print("GUI Kmean ONLY")
         G = nx.Graph()
-        #G.add_node("BS",pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
-        for node in self.mynetwork.nodes:
+        for node in self.myieee802154.nodes:
             if(node.is_alive == True):
                 G.add_node(node.id,pos=(node.x,node.y),weight=node.id)
 
 
-        for node in self.mynetwork.nodes:
+        for node in self.myieee802154.nodes:
             if(node.id != 0):
                 if(node.is_alive == True):
-                    for node1 in self.mynetwork.nodes:
+                    for node1 in self.myieee802154.nodes:
                         if(node1.id != 0):
                             if node is not node1:
                                 #print("bbbb",node.parent[0],node,node1.parent[0],node1,str(node.parent[0])==str(node1.parent[0]))
@@ -261,27 +249,20 @@ class graphic:
                                     G.add_edge(node.id,node1.id)
         nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True)
         #ani = animation.FuncAnimation(fig, animate, interval=1000)
-        plt.legend("Network")
-        plt.show()
+        plt.legend("ieee802154")
+
+        plt.pause(config.guiduration)
+        plt.clf()
+        plt.close()
 
 
     def alert(self):
-        #         # A sample image
-        # with cbook.get_sample_data('C:\\Users\\amiry\\OneDrive\\Desktop\\fire1.png') as image_file:
-        #     image = plt.imread(image_file)
-        # fig, ax = plt.subplots()
-        # ax.imshow(image)
-        # #ax.axis('off')  # clear x-axis and y-axis
-        # # ax.set_title('Fire')
-        # x = range(300)
-        # ax.plot(x, x, '--', linewidth=5, color='firebrick')
-
 
         G = nx.Graph()
-        G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
-        for node in self.mynetwork.nodes:
+        G.add_node(0,pos=(config.xsize/2,config.ysize/2))
+        for node in self.myieee802154.nodes:
             if(node.is_alive == True):
-                # print("for node in self.mynetwork.nodes {0} and cluster head {1}".format(node,node.parent))
+                # print("for node in self.myieee802154.nodes {0} and cluster head {1}".format(node,node.parent))
 
                 G.add_node(node.id,pos=(node.x,node.y))
                 
@@ -294,7 +275,7 @@ class graphic:
 
 
         nodelistCH = []
-        for node in self.mynetwork.nodes:
+        for node in self.myieee802154.nodes:
             if(node.is_alive == True):
                 if(node.is_CH == True):
                     nodelistCH.append(node.id)
@@ -309,19 +290,17 @@ class graphic:
         mng.set_window_title("Fire happens")
         plt.title("alert")
 
-        plt.pause(5)
+        plt.pause(config.guiduration)
         plt.clf()
         plt.close()
 
 
     def alert_sloved(self):
-
-
         G = nx.Graph()
-        G.add_node(0,pos=(self.mynetwork.xsize/2,self.mynetwork.xsize/2))
-        for node in self.mynetwork.nodes:
+        G.add_node(0,pos=(config.xsize/2,config.ysize/2))
+        for node in self.myieee802154.nodes:
             if(node.is_alive == True):
-                # print("for node in self.mynetwork.nodes {0} and cluster head {1}".format(node,node.parent))
+                # print("for node in self.myieee802154.nodes {0} and cluster head {1}".format(node,node.parent))
 
                 G.add_node(node.id,pos=(node.x,node.y))
                 
@@ -334,7 +313,7 @@ class graphic:
 
 
         nodelistCH = []
-        for node in self.mynetwork.nodes:
+        for node in self.myieee802154.nodes:
             if(node.is_alive == True):
                 if(node.is_CH == True):
                     nodelistCH.append(node.id)
@@ -347,7 +326,7 @@ class graphic:
         mng = plt.get_current_fig_manager()
         #mng.full_screen_toggle()
         mng.set_window_title("Fire happens")
-        plt.pause(5)
+        plt.pause(config.guiduration)
         plt.clf()
 
         plt.close()

@@ -1,0 +1,221 @@
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2020-02-24 13:30:35
+count workspace : c:\Users\100730451\OneDrive\Documents\Python\pynet2
+total files : 140
+total code lines : 114856
+total comment lines : 618
+total blank lines : 1389
+
+.gitignore, code is 2, comment is 0, blank is 0.
+__pycache__\alert.cpython-37.pyc, it is a binary file.
+__pycache__\cluster.cpython-37.pyc, it is a binary file.
+__pycache__\config.cpython-37.pyc, it is a binary file.
+__pycache__\energymodel.cpython-37.pyc, it is a binary file.
+__pycache__\gui.cpython-37.pyc, it is a binary file.
+__pycache__\KMEANS.cpython-37.pyc, it is a binary file.
+__pycache__\LEACH.cpython-37.pyc, it is a binary file.
+__pycache__\logger.cpython-37.pyc, it is a binary file.
+__pycache__\message.cpython-37.pyc, it is a binary file.
+__pycache__\ieee802154.cpython-37.pyc, it is a binary file.
+__pycache__\node.cpython-37.pyc, it is a binary file.
+__pycache__\optimizationrun.cpython-37.pyc, it is a binary file.
+__pycache__\packetloss.cpython-37.pyc, it is a binary file.
+__pycache__\report.cpython-37.pyc, it is a binary file.
+__pycache__\RSSI.cpython-37.pyc, it is a binary file.
+__pycache__\sensor.cpython-37.pyc, it is a binary file.
+__pycache__\network.cpython-37.pyc, it is a binary file.
+alert.py, code is 28, comment is 1, blank is 5.
+app.py, code is 17, comment is 19, blank is 12.
+BSbroadcast.py, code is 18, comment is 5, blank is 5.
+cluster.py, code is 122, comment is 14, blank is 24.
+config.py, code is 37, comment is 28, blank is 21.
+DE best .csv, code is 3101, comment is 0, blank is 0.
+DE best new.csv, code is 3101, comment is 0, blank is 0.
+energymodel.py, code is 38, comment is 13, blank is 13.
+gui.py, code is 234, comment is 47, blank is 72.
+KMEANS.py, code is 125, comment is 42, blank is 66.
+LEACH.py, code is 40, comment is 11, blank is 11.
+logger.py, code is 9, comment is 10, blank is 3.
+message.py, code is 38, comment is 11, blank is 21.
+myDE.py, code is 45, comment is 11, blank is 11.
+myDEproject.py, code is 76, comment is 12, blank is 22.
+ieee802154.py, code is 277, comment is 36, blank is 53.
+node.py, code is 235, comment is 82, blank is 51.
+note, code is 1, comment is 0, blank is 0.
+optimizationrun copy 2.py, code is 103, comment is 40, blank is 55.
+optimizationrun copy 3.py, code is 103, comment is 40, blank is 50.
+optimizationrun copy.py, code is 104, comment is 39, blank is 50.
+optimizationrun.py, code is 103, comment is 40, blank is 50.
+packetloss.py, code is 9, comment is 8, blank is 8.
+popplot.py, code is 101, comment is 10, blank is 29.
+README.md, code is 2, comment is 0, blank is 0.
+report.py, code is 21, comment is 4, blank is 10.
+report1.py, code is 53, comment is 10, blank is 23.
+report\1.csv, code is 3101, comment is 0, blank is 0.
+report\10,000,000.csv, code is 3101, comment is 0, blank is 0.
+report\10,000.csv, code is 3101, comment is 0, blank is 0.
+report\100,000.csv, code is 3101, comment is 0, blank is 0.
+report\1000,000.csv, code is 3101, comment is 0, blank is 0.
+report\10000\2.png, it is a binary file.
+report\10000\3.png, it is a binary file.
+report\10000\4.png, it is a binary file.
+report\10000\DE best .csv, code is 3101, comment is 0, blank is 0.
+report\10000\DE best variables new1.csv, code is 3101, comment is 0, blank is 0.
+report\10000\Figure_1.png, it is a binary file.
+report\10000\Figure_p.png, it is a binary file.
+report\10000\introduce_yourself.csv, code is 24, comment is 0, blank is 0.
+report\10000\packet.csv, code is 24, comment is 0, blank is 0.
+report\1000\DE best .csv, code is 3101, comment is 0, blank is 0.
+report\1000\DE best variables new1.csv, code is 3101, comment is 0, blank is 0.
+report\1000\introduce_yourself.csv, code is 24, comment is 0, blank is 0.
+report\1000\log3-7-198-True.txt, code is 272, comment is 0, blank is 2.
+report\1000\packet.csv, code is 24, comment is 0, blank is 0.
+report\50,000,000.csv, code is 3101, comment is 0, blank is 0.
+report\50,000.csv, code is 3101, comment is 0, blank is 0.
+report\500,000.csv, code is 3101, comment is 0, blank is 0.
+report\5000\2.png, it is a binary file.
+report\5000\3.png, it is a binary file.
+report\5000\4.png, it is a binary file.
+report\5000\DE best .csv, code is 3101, comment is 0, blank is 0.
+report\5000\DE best variables new1.csv, code is 3101, comment is 0, blank is 0.
+report\5000\Figure_1.png, it is a binary file.
+report\5000\Figure_2.png, it is a binary file.
+report\5000\Figure_3.png, it is a binary file.
+report\5000\Figure_5.png, it is a binary file.
+report\5000\introduce_yourself.csv, code is 24, comment is 0, blank is 0.
+report\5000\packet.csv, code is 24, comment is 0, blank is 0.
+report\500\DE best new.csv, code is 3101, comment is 0, blank is 0.
+report\500\DE best variables new.csv, code is 3101, comment is 0, blank is 0.
+report\500\DE best variables new1.csv, code is 3101, comment is 0, blank is 0.
+report\500\DE best variables new1.xlsx, it is a binary file.
+report\500\DE best variables newttt.csv, code is 3102, comment is 0, blank is 0.
+report\500\DE best variables old.csv, code is 3101, comment is 0, blank is 0.
+report\500\energy1 2 .png, it is a binary file.
+report\500\introduce_yourself.csv, code is 24, comment is 0, blank is 0.
+report\500\log3-7-198-True.txt, code is 6382, comment is 0, blank is 561.
+report\500\obj.png, it is a binary file.
+report\500\packet.csv, code is 24, comment is 0, blank is 0.
+report\500\packet1 1 .png, it is a binary file.
+report\500\packet1 2 .png, it is a binary file.
+report\500\pareto - Copy.png, it is a binary file.
+report\500\pareto.png, it is a binary file.
+report\500\pop.png, it is a binary file.
+report\500\t1t2 1.png, it is a binary file.
+report\500\t1t2 2.png, it is a binary file.
+report\500\t1t2 3.png, it is a binary file.
+report\500\v1.png, it is a binary file.
+report\500\v2.png, it is a binary file.
+report\DE best .csv, code is 3101, comment is 0, blank is 0.
+report\DE best 10,000,000.csv, code is 3101, comment is 0, blank is 0.
+report\DE best 100,000.csv, code is 3101, comment is 0, blank is 0.
+report\DE best 2cluster 1 node .csv, code is 3101, comment is 0, blank is 0.
+report\DE best 50,000,000.csv, code is 3101, comment is 0, blank is 0.
+report\DE best co.csv, code is 3101, comment is 0, blank is 0.
+report\DE best only 2nodes.csv, code is 3101, comment is 0, blank is 0.
+report\DE best single node in cluster.csv, code is 3101, comment is 0, blank is 0.
+report\DE best variables co.csv, code is 3101, comment is 0, blank is 0.
+report\DE best variables DE best 2cluster 1 node.csv, code is 3101, comment is 0, blank is 0.
+report\DE best variables DE best single node in cluster.csv, code is 3101, comment is 0, blank is 0.
+report\energy1 2 .png, it is a binary file.
+report\introduce_yourself.csv, code is 24, comment is 0, blank is 0.
+report\newSensivity1.xlsx, it is a binary file.
+report\old\DE best .csv, code is 3101, comment is 0, blank is 0.
+report\old\DE best variables.csv, code is 3101, comment is 0, blank is 0.
+report\old\ob.png, it is a binary file.
+report\old\obj.png, it is a binary file.
+report\old\Paretofront .jpeg, it is a binary file.
+report\old\Paretofront b.jpeg, it is a binary file.
+report\old\t1t2.png, it is a binary file.
+report\old\t1t2e.png, it is a binary file.
+report\old\v1.png, it is a binary file.
+report\old\variavles.png, it is a binary file.
+report\packet.csv, code is 24, comment is 0, blank is 0.
+report\packet1 1 .png, it is a binary file.
+report\packet1 2 .png, it is a binary file.
+report\timesensivity(AutoRecovered).xlsx, it is a binary file.
+report\timesensivity.xlsx, it is a binary file.
+RSSI.py, code is 8, comment is 4, blank is 6.
+run.py, code is 26, comment is 13, blank is 12.
+sensivity.txt, code is 19, comment is 0, blank is 7.
+sensor.py, code is 22, comment is 1, blank is 10.
+simulation.py, code is 8, comment is 0, blank is 1.
+network copy 2.py, code is 78, comment is 9, blank is 15.
+network copy.py, code is 78, comment is 9, blank is 15.
+network.py, code is 78, comment is 9, blank is 15.
+network2.py, code is 131, comment is 7, blank is 15.
+network3.py, code is 41, comment is 9, blank is 30.
+staticrun.py, code is 21, comment is 19, blank is 18.
+temp.py, code is 76, comment is 5, blank is 17.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2020-02-24 13:33:18
+count workspace : c:\Users\100730451\OneDrive\Documents\Python\pynet2
+total files : 57
+total code lines : 8729
+total comment lines : 618
+total blank lines : 826
+
+.gitignore, code is 2, comment is 0, blank is 0.
+__pycache__\alert.cpython-37.pyc, it is a binary file.
+__pycache__\cluster.cpython-37.pyc, it is a binary file.
+__pycache__\config.cpython-37.pyc, it is a binary file.
+__pycache__\energymodel.cpython-37.pyc, it is a binary file.
+__pycache__\gui.cpython-37.pyc, it is a binary file.
+__pycache__\KMEANS.cpython-37.pyc, it is a binary file.
+__pycache__\LEACH.cpython-37.pyc, it is a binary file.
+__pycache__\logger.cpython-37.pyc, it is a binary file.
+__pycache__\message.cpython-37.pyc, it is a binary file.
+__pycache__\ieee802154.cpython-37.pyc, it is a binary file.
+__pycache__\node.cpython-37.pyc, it is a binary file.
+__pycache__\optimizationrun.cpython-37.pyc, it is a binary file.
+__pycache__\packetloss.cpython-37.pyc, it is a binary file.
+__pycache__\report.cpython-37.pyc, it is a binary file.
+__pycache__\RSSI.cpython-37.pyc, it is a binary file.
+__pycache__\sensor.cpython-37.pyc, it is a binary file.
+__pycache__\network.cpython-37.pyc, it is a binary file.
+alert.py, code is 28, comment is 1, blank is 5.
+app.py, code is 17, comment is 19, blank is 12.
+BSbroadcast.py, code is 18, comment is 5, blank is 5.
+cluster.py, code is 122, comment is 14, blank is 24.
+config.py, code is 37, comment is 28, blank is 21.
+DE best .csv, code is 3101, comment is 0, blank is 0.
+DE best new.csv, code is 3101, comment is 0, blank is 0.
+energymodel.py, code is 38, comment is 13, blank is 13.
+gui.py, code is 234, comment is 47, blank is 72.
+KMEANS.py, code is 125, comment is 42, blank is 66.
+LEACH.py, code is 40, comment is 11, blank is 11.
+logger.py, code is 9, comment is 10, blank is 3.
+message.py, code is 38, comment is 11, blank is 21.
+myDE.py, code is 45, comment is 11, blank is 11.
+myDEproject.py, code is 76, comment is 12, blank is 22.
+ieee802154.py, code is 277, comment is 36, blank is 53.
+node.py, code is 235, comment is 82, blank is 51.
+note, code is 1, comment is 0, blank is 0.
+optimizationrun copy 2.py, code is 103, comment is 40, blank is 55.
+optimizationrun copy 3.py, code is 103, comment is 40, blank is 50.
+optimizationrun copy.py, code is 104, comment is 39, blank is 50.
+optimizationrun.py, code is 103, comment is 40, blank is 50.
+packetloss.py, code is 9, comment is 8, blank is 8.
+popplot.py, code is 101, comment is 10, blank is 29.
+README.md, code is 2, comment is 0, blank is 0.
+report.py, code is 21, comment is 4, blank is 10.
+report1.py, code is 53, comment is 10, blank is 23.
+RSSI.py, code is 8, comment is 4, blank is 6.
+run.py, code is 26, comment is 13, blank is 12.
+sensivity.txt, code is 19, comment is 0, blank is 7.
+sensor.py, code is 22, comment is 1, blank is 10.
+simulation.py, code is 8, comment is 0, blank is 1.
+network copy 2.py, code is 78, comment is 9, blank is 15.
+network copy.py, code is 78, comment is 9, blank is 15.
+network.py, code is 78, comment is 9, blank is 15.
+network2.py, code is 131, comment is 7, blank is 15.
+network3.py, code is 41, comment is 9, blank is 30.
+staticrun.py, code is 21, comment is 19, blank is 18.
+temp.py, code is 76, comment is 5, blank is 17.
+===============================================================================

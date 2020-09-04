@@ -14,8 +14,8 @@ def plotpacket():
     df.plot(kind='line',x='id',y='received', color='blue', ax=ax)
     plt.savefig('report/packet{0} {1} .png'.format(1,1))
 
-    df.plot(kind='bar',x='id',y='lost')
-    plt.savefig('report/packet{0} {1} .png'.format(1,2))
+    #df.plot(kind='bar',x='id',y='lost')
+    #plt.savefig('report/packet{0} {1} .png'.format(1,2))
     plt.pause(15)
     plt.clf()
     plt.close()
@@ -26,7 +26,7 @@ def plotenergy():
 
     df2.plot(kind='bar',x='id',y='energy')
     plt.savefig('report/energy{0} {1} .png'.format(1,2))
-    plt.pause(15)
+    plt.pause(50)
     plt.clf()
     plt.close()
 
