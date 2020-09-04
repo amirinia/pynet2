@@ -14,13 +14,16 @@ import clusteringKMEANS as KMEANS
 import pickle
 import time
 
+config.printenabled = False
+config.guienabled = False
+
 print(time.ctime)
 # here you select if it start with statci ieee802154 or ieee802154 maker
 startstatic =False
 # in second step you need and algorithm
 second = False
 
-print("\nStatic network is {0} and Kmeans is {1} and run time is {2}".format(startstatic,second,config.MAX_RUNTIME))
+print("\nStatic network is {0} and Kmeans is {1} and Max run time is {2} @ {3}".format(startstatic,second,config.MAX_RUNTIME,time.ctime()))
 
 
 def run(x):
@@ -147,7 +150,7 @@ def function(x):
      a = run(x)
      global df
      df = df.append(pd.Series([x,a[0],a[1],a[2],a[3]], index=df.columns), ignore_index=True)
-     print("choromosome ",x," remaining energy: ",a[0], " ",time.ctime)
+     print("choromosome ",x," remaining energy: ",a[0], " ",time.ctime())
      return a[0]
 
 
