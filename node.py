@@ -159,7 +159,8 @@ class Node():
                             graph = gui.graphic(self.net)
                             graph.draw()
                         if config.printenabled:
-                            print("env exit")
+                            print("env exit" ,self.id ,next(reversed(self.energy)))
+                            print(self.outbox)
                         # self.net.env.exit()
                         # sys.exit()
 

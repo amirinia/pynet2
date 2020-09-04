@@ -14,6 +14,7 @@ import logger
 from superframe import Superframe
 import pickle
 from interference import Interference
+import time
 #import mac
 """
 """
@@ -355,7 +356,7 @@ class Net():
                 #print(next(reversed(n.energy)))
         self.logger.log("avrage ieee802154 energy {0}".format(energy))
         if config.printenabled:
-            print("average ieee802154 energy {0}".format(energy))
+            print("{0} average ieee802154 energy {1}".format(time.ctime,energy))
 
         # duration
         duration = config.TDMA_duration + config.Duration + config.Inactive_duration
@@ -378,7 +379,7 @@ class Net():
         t = []
         for n in self.nodes:
             t.append(n.deadtime)
-        if config.printenabled:
-            print("first node {0} in total run = {1}".format(min(t),config.MAX_RUNTIME))
+        #if config.printenabled:
+            #print("first node {0} in total run = {1}".format(min(t),config.MAX_RUNTIME))
         #
         return [energy,duration,lost,min(t)]
