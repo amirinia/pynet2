@@ -9,18 +9,21 @@ import matplotlib.pyplot  as plt
 from mpl_toolkits import mplot3d
 import numpy as np
 
-df = pd.read_csv("report/DE best 2020ke-30-30.csv")
+
+filename = "DE best 2020k-100-100" #DE best 2020l-100-100
+print("Convert start {}".format(filename))
+df = pd.read_csv("report/{}.csv".format(filename))
 df.sort_values(by=['energy'], inplace=True)
 
-print(df)
+#print(df)
 
 
 def convertvar(df):
     dfv = pd.DataFrame(columns=['t1','t2','t3','t4','energy','old duration' , 'lost','dead','duration'])
     for index,row in df.iterrows():
-        print(index)
+        #print(index)
         word = df['pop'][index]
-        print(word)
+        #print(word)
         #res = [int(i) for i in word.split() if i.isdigit()] 
         word = word.replace('  ', ' ')
         word = word.replace('[', '')
@@ -28,7 +31,7 @@ def convertvar(df):
         # L = ""
         L = word.split(' ')
         L = [i for i in L if i != '']
-        print(L)
+        #print(L)
         #dft['My new column'] =L[0]
         #("p",L[0],L[1],L[2],L[3])
         #dft["n"][index] =L[2]
@@ -36,10 +39,10 @@ def convertvar(df):
         dfv = dfv.append(pd.Series([(L[0]),(L[1]),(L[2]),(L[3]),df['energy'][index],df['duration'][index],df['lost'][index],df['dead'][index],sumduration], index=dfv.columns),ignore_index=True)
 
     print(dfv)
-    dfv.to_csv('report/DE best 2020ke-30-30optimizationreport.csv')
+    dfv.to_csv('report/{}{}.csv'.format(filename,"report"))
 
 convertvar(df)
-dfv2 =pd.read_csv('report/DE best 2020ke-30-30optimizationreport.csv')
+dfv2 =pd.read_csv('report/{}{}.csv'.format(filename,"report"))
 
 
 
@@ -168,15 +171,16 @@ def myploted(df):
     ax.set_ylabel('The Remaining Energy (mJ)')
     plt.show()
     
+lasttop =  100
+print(dfv2[-lasttop:])
 
-print(dfv2[-70:])
+myplotpopulation(dfv2[-lasttop:])
+myplott1t2(dfv2[-lasttop:])
+myplott1t2d(dfv2[-lasttop:])
+myplott1t2d2(dfv2[-lasttop:])
+print("5")
 
-myplotpopulation(dfv2[-30:])
-myplott1t2(dfv2[-30:])
-myplott1t2d(dfv2[-30:])
-myplott1t2d2(dfv2[-30:])
-
-
-myplotobj(dfv2[-30:])
-myplotvar(dfv2[-30:])
-myploted(dfv2[-30:]) # pareto
+myplotobj(dfv2[-lasttop:])
+myplotvar(dfv2[-lasttop:])
+print("7")
+myploted(dfv2[-lasttop:]) # pareto
