@@ -170,14 +170,14 @@ def function(x):
 def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
         print("DE starts with population: {0} and itration: {1} ".format(popsize,its))
         dimensions = D
-        maxduration = 15625#240 #Change 1 second to 15.36 ms time slot  4 min ==> 240,000 ms /15.36 => 15,625 number of slots Pass bayad max duration beshe 15,625 slot
+        maxduration = 15625 #240 #Change 1 second to 15.36 ms time slot  4 min ==> 240,000 ms /15.36 => 15,625 number of slots Pass bayad max duration beshe 15,625 slot
         initial = []
         for i in range(popsize):
             pop2 =[]
             t1 = random.randint(2,7)
             t2 = random.randint(2,9)
             tempmin = (t1 + t2) 
-            t3 = random.randint(1500, maxduration - tempmin)
+            t3 = random.randint(0, maxduration - tempmin)
             b1 = random.choice([0, 1])
             pop2.append(t1)
             pop2.append(t2)
@@ -217,8 +217,8 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
 
                 #temp = mutant[1] + mutant[0] + round(maxduration/10)
 
-                if(mutant[2] < 1500):
-                     mutant[2]=1500 + random.randint(0,10000)
+                if(mutant[2] < 16):
+                     mutant[2]=  random.randint(0,15000)
                 if(mutant[2] > maxduration - tempmin):  #
                      mutant[2]= maxduration - tempmin - random.randint(0,10000)
 
