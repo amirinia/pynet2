@@ -13,15 +13,20 @@ import LEACH
 import clusteringKMEANS as KMEANS
 import pickle
 import time
+import datetime
 
 config.printenabled = False
 config.guienabled = False
-
+t1 = datetime.datetime.now()
 print(time.ctime)
 # here you select if it start with statci ieee802154 or ieee802154 maker
-startstatic =False
+startstatic = False
 # in second step you need and algorithm
 second = False
+
+population_num = 33
+iteration = 33
+
 
 print("\nStatic network is {0} and Kmeans is {1} and Max run time is {2} @ {3}".format(startstatic,second,config.MAX_RUNTIME,time.ctime()))
 
@@ -145,12 +150,13 @@ def run(x):
 
 D = 4
 df = pd.DataFrame(columns=['pop','energy','duration','lost','dead'])
+#iteration = (D * 5000)/population_num
 
 def function(x):
      a = run(x)
      global df
      df = df.append(pd.Series([x,a[0],a[1],a[2],a[3]], index=df.columns), ignore_index=True)
-     print("choromosome ",x," remaining energy: ",a[0], " ",time.ctime())
+     print("choromosome ",x," remaining energy: ",a[0])
      return a[0]
 
 
@@ -160,9 +166,7 @@ def function(x):
 # De_POP=[]
 
 
-population_num =30
-iteration = (D * 5000)/population_num
-iteration = 30
+
 def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
         print("DE starts with population: {0} and itration: {1} ".format(popsize,its))
         dimensions = D
@@ -194,7 +198,7 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
 
         for i in range(its):
 
-            print("\n New iteration ",i+1)
+            print("\n New iteration ",i+1 , " ",time.ctime())
             for j in range(popsize):
                 idxs = [idx for idx in range(popsize) if idx != j]
                 #print(idxs)
@@ -203,20 +207,20 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
                 mutant = np.clip(a + np.round( mut * (b - c)),0,maxduration)#-1/(2-(1/(i+1))), 1/(2-(1/(i+1))))
                 mutant = mutant.astype(int) # convert to int
                 if(mutant[0] < 1):
-                     mutant[0]=1 +random.randint(0,2)
+                     mutant[0]=1 + random.randint(0,2)
                 if(mutant[0] > 7):
-                     mutant[0]=7 -random.randint(0,2)
+                     mutant[0]=7 - random.randint(0,2)
                 if(mutant[1] < 1):
-                     mutant[1]=1 +random.randint(0,3)
+                     mutant[1]=1 + random.randint(0,3)
                 if(mutant[1] > 9):
-                     mutant[1]=9 -random.randint(0,3)
+                     mutant[1]=9 - random.randint(0,3)
 
                 #temp = mutant[1] + mutant[0] + round(maxduration/10)
 
                 if(mutant[2] < 1500):
-                     mutant[2]=1500
+                     mutant[2]=1500 + random.randint(0,10000)
                 if(mutant[2] > maxduration - tempmin):  #
-                     mutant[2]= maxduration - tempmin
+                     mutant[2]= maxduration - tempmin - random.randint(0,10000)
 
                 if(mutant[3] < 0):
                      mutant[3]=0
@@ -253,6 +257,8 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
 
 de(lambda x: function(x))
 #print("fit ",De_FIT," ide ",De_VAR," ",De_POP)
-print(time.ctime)
-df.to_csv('report/DE best 2020LE-{0}-{1}-{2}-{3}.csv'.format(population_num,iteration,startstatic,second))
+t2 = datetime.datetime.now()
 
+print(time.ctime())
+print(t1 - t2)
+df.to_csv('report/DE best 2020LE-{0}-{1}-{2}-{3}.csv'.format(population_num,iteration,startstatic,second))

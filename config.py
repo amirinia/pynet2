@@ -1,7 +1,7 @@
 import math
 
 ## Runtime configuration
-MAX_RUNTIME =  10000 # 156250# 2000
+MAX_RUNTIME =  100000 # 156250# 2000
 #ALERT TIME
 ALERT_TIME = 1000
 ALERT_END = 4000
@@ -41,7 +41,7 @@ Algorith_Type = {0: "LEACH", 1: "KMEANS", 2: " NEW"}
 
 
 # and config
-BEACONING_TIME       = 5
+BEACONING_TIME  = 5
 Base_Sattion_Beaconning_period = 5 #per superframe
 cluster_rotation_period = 5
 
@@ -64,7 +64,7 @@ COVERAGE_RADIUS = 15 # meters
 # initial energy at every node's battery
 INITIAL_ENERGY = 2000 # mili Joules 2000
 
-P_TX = 0.084  # * 100 # Watts to transmite 
+P_TX = 0.084   # * 100 # Watts to transmite 
 P_RX = 0.073  # * 100 # Watts to receive
 
 #dead node threshold
