@@ -20,7 +20,7 @@ for i in range(len(positions)):
     if (i >0):
         x = positions[i][0]
         y = config.ysize - positions[i][1]
-        #print("p = x:",positions[i][0],positions[i][1],i)
+        print("p = node:",i ," = x:",positions[i][0]," y:",positions[i][1])
         #print("p = x:",positions[i][0],positions[i][1],i)
         if (i % 2== 0):
                          ieee1.add_node(Node(i,env,2000,x,y,ieee802154=ieee1 ))
@@ -35,13 +35,13 @@ if config.printenabled:
     print("static maker KKKKKKKKKK")
 ieee1.ieee802154_nodedsicovery()
 graphi = gui.graphic(ieee1)
-#graphi.draw_nods()
+graphi.draw_nods()
 
 # env.run(until=80)
 
 # print(ieee1.nodes)
 
-# graphi.draw_neighbors()
+graphi.draw_neighbors()
 
 # ieee1.ieee802154_inboxes()
 # ieee1.ieee802154_outboxes()
