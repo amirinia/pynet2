@@ -1,0 +1,1553 @@
+Wed, 03 Feb 2021 18:52:52 ****************************Begin of introduce ieee802154
+Wed, 03 Feb 2021 18:52:52 0  with energy : <Power Type=External, Energy=2000 mJ>  with position 150.0 150.0 ; CH is False [] is alive: True with TDMA 0 4
+Wed, 03 Feb 2021 18:52:52 1  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 10 10 ; CH is False [] is alive: True with TDMA 0 1.99
+Wed, 03 Feb 2021 18:52:52 2  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 10 60 ; CH is False [] is alive: True with TDMA 0 1.98
+Wed, 03 Feb 2021 18:52:52 3  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 30 11 ; CH is False [] is alive: True with TDMA 0 1.988
+Wed, 03 Feb 2021 18:52:52 4  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 43 35 ; CH is False [] is alive: True with TDMA 0 1.9088
+Wed, 03 Feb 2021 18:52:52 5  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 260 30 ; CH is False [] is alive: True with TDMA 0 1.9855
+Wed, 03 Feb 2021 18:52:52 6  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 270 50 ; CH is False [] is alive: True with TDMA 0 1.9678
+Wed, 03 Feb 2021 18:52:52 7  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 259 72 ; CH is False [] is alive: True with TDMA 0 1.8434
+Wed, 03 Feb 2021 18:52:52 8  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 241 47 ; CH is False [] is alive: True with TDMA 0 1.90234
+Wed, 03 Feb 2021 18:52:52 9  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 260 200 ; CH is False [] is alive: True with TDMA 0 1.989364
+Wed, 03 Feb 2021 18:52:52 10  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 290 200 ; CH is False [] is alive: True with TDMA 0 1.876549
+Wed, 03 Feb 2021 18:52:52 11  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 280 220 ; CH is False [] is alive: True with TDMA 0 1.78233
+Wed, 03 Feb 2021 18:52:52 12  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 20 200 ; CH is False [] is alive: True with TDMA 0 1.79745
+Wed, 03 Feb 2021 18:52:52 13  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 10 160 ; CH is False [] is alive: True with TDMA 0 1.86435
+Wed, 03 Feb 2021 18:52:52 14  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 13 183 ; CH is False [] is alive: True with TDMA 0 1.76434
+Wed, 03 Feb 2021 18:52:52 15  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 50 200 ; CH is False [] is alive: True with TDMA 0 1.9754734
+Wed, 03 Feb 2021 18:52:52 16  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 29 189 ; CH is False [] is alive: True with TDMA 0 1.8634754
+Wed, 03 Feb 2021 18:52:52 17  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 35 204 ; CH is False [] is alive: True with TDMA 0 1.87648
+Wed, 03 Feb 2021 18:52:52 18  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 31 172 ; CH is False [] is alive: True with TDMA 0 1.7645
+Wed, 03 Feb 2021 18:52:52 19  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 30 50 ; CH is False [] is alive: True with TDMA 0 1.3654675
+Wed, 03 Feb 2021 18:52:52 20  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 130 20 ; CH is False [] is alive: True with TDMA 0 1.846
+Wed, 03 Feb 2021 18:52:52 21  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 135 2 ; CH is False [] is alive: True with TDMA 0 1.786487
+Wed, 03 Feb 2021 18:52:52 22  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 175 5 ; CH is False [] is alive: True with TDMA 0 2
+Wed, 03 Feb 2021 18:52:52 
+++++++++++++++++++++ ieee802154 Table Discovery Begins 70 meters ++++++++++++++++++++++++++++
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 0 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 1 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 1 <=> 2 Distance= 50.0 RSSI= -103
+Wed, 03 Feb 2021 18:52:52 1 <=> 3 Distance= 20.02 RSSI= -95
+Wed, 03 Feb 2021 18:52:52 1 <=> 4 Distance= 41.4 RSSI= -101
+Wed, 03 Feb 2021 18:52:52 1 <=> 19 Distance= 44.72 RSSI= -102
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 2 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 2 <=> 1 Distance= 50.0 RSSI= -103
+Wed, 03 Feb 2021 18:52:52 2 <=> 3 Distance= 52.92 RSSI= -103
+Wed, 03 Feb 2021 18:52:52 2 <=> 4 Distance= 41.4 RSSI= -101
+Wed, 03 Feb 2021 18:52:52 2 <=> 19 Distance= 22.36 RSSI= -96
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 3 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 3 <=> 1 Distance= 20.02 RSSI= -95
+Wed, 03 Feb 2021 18:52:52 3 <=> 2 Distance= 52.92 RSSI= -103
+Wed, 03 Feb 2021 18:52:52 3 <=> 4 Distance= 27.29 RSSI= -98
+Wed, 03 Feb 2021 18:52:52 3 <=> 19 Distance= 39.0 RSSI= -101
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 4 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 4 <=> 1 Distance= 41.4 RSSI= -101
+Wed, 03 Feb 2021 18:52:52 4 <=> 2 Distance= 41.4 RSSI= -101
+Wed, 03 Feb 2021 18:52:52 4 <=> 3 Distance= 27.29 RSSI= -98
+Wed, 03 Feb 2021 18:52:52 4 <=> 19 Distance= 19.85 RSSI= -95
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 5 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 5 <=> 6 Distance= 22.36 RSSI= -96
+Wed, 03 Feb 2021 18:52:52 5 <=> 7 Distance= 42.01 RSSI= -101
+Wed, 03 Feb 2021 18:52:52 5 <=> 8 Distance= 25.5 RSSI= -97
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 6 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 6 <=> 5 Distance= 22.36 RSSI= -96
+Wed, 03 Feb 2021 18:52:52 6 <=> 7 Distance= 24.6 RSSI= -97
+Wed, 03 Feb 2021 18:52:52 6 <=> 8 Distance= 29.15 RSSI= -98
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 7 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 7 <=> 5 Distance= 42.01 RSSI= -101
+Wed, 03 Feb 2021 18:52:52 7 <=> 6 Distance= 24.6 RSSI= -97
+Wed, 03 Feb 2021 18:52:52 7 <=> 8 Distance= 30.81 RSSI= -99
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 8 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 8 <=> 5 Distance= 25.5 RSSI= -97
+Wed, 03 Feb 2021 18:52:52 8 <=> 6 Distance= 29.15 RSSI= -98
+Wed, 03 Feb 2021 18:52:52 8 <=> 7 Distance= 30.81 RSSI= -99
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 9 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 9 <=> 10 Distance= 30.0 RSSI= -99
+Wed, 03 Feb 2021 18:52:52 9 <=> 11 Distance= 28.28 RSSI= -98
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 10 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 10 <=> 9 Distance= 30.0 RSSI= -99
+Wed, 03 Feb 2021 18:52:52 10 <=> 11 Distance= 22.36 RSSI= -96
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 11 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 11 <=> 9 Distance= 28.28 RSSI= -98
+Wed, 03 Feb 2021 18:52:52 11 <=> 10 Distance= 22.36 RSSI= -96
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 12 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 12 <=> 13 Distance= 41.23 RSSI= -101
+Wed, 03 Feb 2021 18:52:52 12 <=> 14 Distance= 18.38 RSSI= -94
+Wed, 03 Feb 2021 18:52:52 12 <=> 15 Distance= 30.0 RSSI= -99
+Wed, 03 Feb 2021 18:52:52 12 <=> 16 Distance= 14.21 RSSI= -92
+Wed, 03 Feb 2021 18:52:52 12 <=> 17 Distance= 15.52 RSSI= -93
+Wed, 03 Feb 2021 18:52:52 12 <=> 18 Distance= 30.08 RSSI= -99
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 13 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 13 <=> 12 Distance= 41.23 RSSI= -101
+Wed, 03 Feb 2021 18:52:52 13 <=> 14 Distance= 23.19 RSSI= -96
+Wed, 03 Feb 2021 18:52:52 13 <=> 15 Distance= 56.57 RSSI= -104
+Wed, 03 Feb 2021 18:52:52 13 <=> 16 Distance= 34.67 RSSI= -100
+Wed, 03 Feb 2021 18:52:52 13 <=> 17 Distance= 50.61 RSSI= -103
+Wed, 03 Feb 2021 18:52:52 13 <=> 18 Distance= 24.19 RSSI= -97
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 14 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 14 <=> 12 Distance= 18.38 RSSI= -94
+Wed, 03 Feb 2021 18:52:52 14 <=> 13 Distance= 23.19 RSSI= -96
+Wed, 03 Feb 2021 18:52:52 14 <=> 15 Distance= 40.72 RSSI= -101
+Wed, 03 Feb 2021 18:52:52 14 <=> 16 Distance= 17.09 RSSI= -94
+Wed, 03 Feb 2021 18:52:52 14 <=> 17 Distance= 30.41 RSSI= -99
+Wed, 03 Feb 2021 18:52:52 14 <=> 18 Distance= 21.1 RSSI= -95
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 15 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 15 <=> 12 Distance= 30.0 RSSI= -99
+Wed, 03 Feb 2021 18:52:52 15 <=> 13 Distance= 56.57 RSSI= -104
+Wed, 03 Feb 2021 18:52:52 15 <=> 14 Distance= 40.72 RSSI= -101
+Wed, 03 Feb 2021 18:52:52 15 <=> 16 Distance= 23.71 RSSI= -96
+Wed, 03 Feb 2021 18:52:52 15 <=> 17 Distance= 15.52 RSSI= -93
+Wed, 03 Feb 2021 18:52:52 15 <=> 18 Distance= 33.84 RSSI= -100
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 16 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 16 <=> 12 Distance= 14.21 RSSI= -92
+Wed, 03 Feb 2021 18:52:52 16 <=> 13 Distance= 34.67 RSSI= -100
+Wed, 03 Feb 2021 18:52:52 16 <=> 14 Distance= 17.09 RSSI= -94
+Wed, 03 Feb 2021 18:52:52 16 <=> 15 Distance= 23.71 RSSI= -96
+Wed, 03 Feb 2021 18:52:52 16 <=> 17 Distance= 16.16 RSSI= -93
+Wed, 03 Feb 2021 18:52:52 16 <=> 18 Distance= 17.12 RSSI= -94
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 17 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 17 <=> 12 Distance= 15.52 RSSI= -93
+Wed, 03 Feb 2021 18:52:52 17 <=> 13 Distance= 50.61 RSSI= -103
+Wed, 03 Feb 2021 18:52:52 17 <=> 14 Distance= 30.41 RSSI= -99
+Wed, 03 Feb 2021 18:52:52 17 <=> 15 Distance= 15.52 RSSI= -93
+Wed, 03 Feb 2021 18:52:52 17 <=> 16 Distance= 16.16 RSSI= -93
+Wed, 03 Feb 2021 18:52:52 17 <=> 18 Distance= 32.25 RSSI= -99
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 18 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 18 <=> 12 Distance= 30.08 RSSI= -99
+Wed, 03 Feb 2021 18:52:52 18 <=> 13 Distance= 24.19 RSSI= -97
+Wed, 03 Feb 2021 18:52:52 18 <=> 14 Distance= 21.1 RSSI= -95
+Wed, 03 Feb 2021 18:52:52 18 <=> 15 Distance= 33.84 RSSI= -100
+Wed, 03 Feb 2021 18:52:52 18 <=> 16 Distance= 17.12 RSSI= -94
+Wed, 03 Feb 2021 18:52:52 18 <=> 17 Distance= 32.25 RSSI= -99
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 19 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 19 <=> 1 Distance= 44.72 RSSI= -102
+Wed, 03 Feb 2021 18:52:52 19 <=> 2 Distance= 22.36 RSSI= -96
+Wed, 03 Feb 2021 18:52:52 19 <=> 3 Distance= 39.0 RSSI= -101
+Wed, 03 Feb 2021 18:52:52 19 <=> 4 Distance= 19.85 RSSI= -95
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 20 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 20 <=> 21 Distance= 18.68 RSSI= -94
+Wed, 03 Feb 2021 18:52:52 20 <=> 22 Distance= 47.43 RSSI= -103
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 21 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 21 <=> 20 Distance= 18.68 RSSI= -94
+Wed, 03 Feb 2021 18:52:52 21 <=> 22 Distance= 40.11 RSSI= -101
+Wed, 03 Feb 2021 18:52:52 Neighbors Table discovery for 22 is below and neighbors are []
+Wed, 03 Feb 2021 18:52:52 22 <=> 20 Distance= 47.43 RSSI= -103
+Wed, 03 Feb 2021 18:52:52 22 <=> 21 Distance= 40.11 RSSI= -101
+Wed, 03 Feb 2021 18:52:52 +++++++++++++++++++++ ieee802154 Table Discovery Ends +++++++++++++++++++++++++++++++ 
+
+Wed, 03 Feb 2021 18:53:01 node 1 becomes CH (change)and parent is [] and TDMA 1 energy 1999.9990190624997
+Wed, 03 Feb 2021 18:53:01 e node 1 becomes simple node (change) and parent is [] and TDMA 1 energy 1999.9990190624997
+Wed, 03 Feb 2021 18:53:01 1 is CH in cluster 1 with [node1, node2, node3, node4, node19]  ++++++++++++++++++ area
+
+Wed, 03 Feb 2021 18:53:01 node 15 becomes CH (change)and parent is [] and TDMA 4 energy 1999.9985035000002
+Wed, 03 Feb 2021 18:53:01 e node 15 becomes simple node (change) and parent is [] and TDMA 4 energy 1999.9985035000002
+Wed, 03 Feb 2021 18:53:01 15 is CH in cluster 2 with [node12, node13, node14, node15, node16, node18]  ++++++++++++++++++ area
+
+Wed, 03 Feb 2021 18:53:01 node 17 becomes CH (change)and parent is [] and TDMA 1 energy 1999.9982799374998
+Wed, 03 Feb 2021 18:53:01 e node 17 becomes simple node (change) and parent is [] and TDMA 1 energy 1999.9982799374998
+Wed, 03 Feb 2021 18:53:01 17 is CH in cluster 3 with [node17]  ++++++++++++++++++ area
+
+Wed, 03 Feb 2021 18:53:01 node 22 becomes CH (change)and parent is [] and TDMA 3 energy 1999.9994981250002
+Wed, 03 Feb 2021 18:53:01 e node 22 becomes simple node (change) and parent is [] and TDMA 3 energy 1999.9994981250002
+Wed, 03 Feb 2021 18:53:01 22 is CH in cluster 4 with [node20, node21, node22]  ++++++++++++++++++ area
+
+Wed, 03 Feb 2021 18:53:01 node 5 becomes CH (change)and parent is [] and TDMA 1 energy 1999.99926771875
+Wed, 03 Feb 2021 18:53:01 e node 5 becomes simple node (change) and parent is [] and TDMA 1 energy 1999.99926771875
+Wed, 03 Feb 2021 18:53:01 5 is CH in cluster 7 with [node5, node6, node7, node8]  ++++++++++++++++++ area
+
+Wed, 03 Feb 2021 18:53:01 node 9 becomes CH (change)and parent is [] and TDMA 1 energy 1999.99950953125
+Wed, 03 Feb 2021 18:53:01 e node 9 becomes simple node (change) and parent is [] and TDMA 1 energy 1999.99950953125
+Wed, 03 Feb 2021 18:53:01 9 is CH in cluster 8 with [node9, node10]  ++++++++++++++++++ area
+
+Wed, 03 Feb 2021 18:53:01 node 11 becomes CH (change)and parent is [] and TDMA 1 energy 1999.99928140625
+Wed, 03 Feb 2021 18:53:01 e node 11 becomes simple node (change) and parent is [] and TDMA 1 energy 1999.99928140625
+Wed, 03 Feb 2021 18:53:01 11 is CH in cluster 9 with [node11]  ++++++++++++++++++ area
+
+Wed, 03 Feb 2021 18:53:01 ****************************Begin of introduce ieee802154
+Wed, 03 Feb 2021 18:53:01 0  with energy : <Power Type=External, Energy=2000 mJ>  with position 150.0 150.0 ; CH is False [] is alive: True with TDMA 0 4
+Wed, 03 Feb 2021 18:53:01 1  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 10 10 ; CH is True [] is alive: True with TDMA 1 1999.9987618124997
+Wed, 03 Feb 2021 18:53:01 2  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 10 60 ; CH is False 1 is alive: True with TDMA 2 1999.9987955 sensor t: 1
+Wed, 03 Feb 2021 18:53:01 3  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 30 11 ; CH is False 1 is alive: True with TDMA 3 1999.9987955 sensor t: 0
+Wed, 03 Feb 2021 18:53:01 4  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 43 35 ; CH is False 1 is alive: True with TDMA 4 1999.9987977812498 sensor t: 1
+Wed, 03 Feb 2021 18:53:01 5  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 260 30 ; CH is True [] is alive: True with TDMA 1 1999.99901046875
+Wed, 03 Feb 2021 18:53:01 6  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 270 50 ; CH is False 5 is alive: True with TDMA 2 1999.9990464374998 sensor t: 1
+Wed, 03 Feb 2021 18:53:01 7  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 259 72 ; CH is False 5 is alive: True with TDMA 3 1999.99904415625 sensor t: 0
+Wed, 03 Feb 2021 18:53:01 8  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 241 47 ; CH is False 5 is alive: True with TDMA 4 1999.9990464374998 sensor t: 1
+Wed, 03 Feb 2021 18:53:01 9  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 260 200 ; CH is True [] is alive: True with TDMA 1 1999.9990264374999
+Wed, 03 Feb 2021 18:53:01 10  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 290 200 ; CH is False 9 is alive: True with TDMA 2 1999.9990578437498 sensor t: 1
+Wed, 03 Feb 2021 18:53:01 11  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 280 220 ; CH is True [] is alive: True with TDMA 1 1999.99902153125
+Wed, 03 Feb 2021 18:53:01 12  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 20 200 ; CH is False 15 is alive: True with TDMA 1 1999.9980563749998 sensor t: 1
+Wed, 03 Feb 2021 18:53:01 13  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 10 160 ; CH is False 15 is alive: True with TDMA 2 1999.9980472500001 sensor t: 0
+Wed, 03 Feb 2021 18:53:01 14  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 13 183 ; CH is False 15 is alive: True with TDMA 3 1999.9980563749998 sensor t: 1
+Wed, 03 Feb 2021 18:53:01 15  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 50 200 ; CH is True [] is alive: True with TDMA 4 1999.9980177812502
+Wed, 03 Feb 2021 18:53:01 16  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 29 189 ; CH is False 15 is alive: True with TDMA 5 1999.9980540937497 sensor t: 1
+Wed, 03 Feb 2021 18:53:01 17  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 35 204 ; CH is True [] is alive: True with TDMA 1 1999.9980200624998
+Wed, 03 Feb 2021 18:53:01 18  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 31 172 ; CH is False 15 is alive: True with TDMA 6 1999.9980563749998 sensor t: 1
+Wed, 03 Feb 2021 18:53:01 19  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 30 50 ; CH is False 1 is alive: True with TDMA 5 1999.99878865625 sensor t: 0
+Wed, 03 Feb 2021 18:53:01 20  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 130 20 ; CH is False 22 is alive: True with TDMA 1 1999.9992745625 sensor t: 1
+Wed, 03 Feb 2021 18:53:01 21  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 135 2 ; CH is False 22 is alive: True with TDMA 2 1999.9992745625 sensor t: 0
+Wed, 03 Feb 2021 18:53:01 22  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 175 5 ; CH is True [] is alive: True with TDMA 3 1999.9992382500002
+Wed, 03 Feb 2021 18:53:50 ****************************Begin of introduce ieee802154
+Wed, 03 Feb 2021 18:53:50 0  with energy : <Power Type=External, Energy=2000 mJ>  with position 150.0 150.0 ; CH is False [] is alive: True with TDMA 0 4
+Wed, 03 Feb 2021 18:53:50 1  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 280 283 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 2  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 235 282 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 3  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 236 240 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 4  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 281 234 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 5  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 239 165 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 6  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 288 161 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 7  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 287 128 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 8  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 241 127 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 9  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 281 63 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 10  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 236 62 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 11  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 243 24 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 12  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 289 20 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 13  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 172 72 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 14  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 133 74 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 15  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 137 28 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 16  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 177 26 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 17  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 70 31 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 18  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 67 73 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 19  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 22 72 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 20  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 24 31 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:50 21  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 23 117 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:51 22  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 75 118 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:51 23  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 64 164 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:51 24  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 24 166 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:51 25  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 20 213 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:51 26  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 70 208 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:51 27  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 61 276 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:51 28  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 21 275 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:51 29  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 136 270 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:51 30  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 190 271 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:51 31  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 180 227 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:51 32  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 135 225 ; CH is False [] is alive: True with TDMA 0 2000
+Wed, 03 Feb 2021 18:53:51 
+++++++++++++++++++++ ieee802154 Table Discovery Begins 70 meters ++++++++++++++++++++++++++++
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 0 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 1 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 1 <=> 2 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 1 <=> 3 Distance= 61.52 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 1 <=> 4 Distance= 49.01 RSSI= -103
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 2 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 2 <=> 1 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 2 <=> 3 Distance= 42.01 RSSI= -101
+Wed, 03 Feb 2021 18:53:51 2 <=> 4 Distance= 66.48 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 2 <=> 30 Distance= 46.32 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 3 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 3 <=> 1 Distance= 61.52 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 3 <=> 2 Distance= 42.01 RSSI= -101
+Wed, 03 Feb 2021 18:53:51 3 <=> 4 Distance= 45.4 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 3 <=> 30 Distance= 55.47 RSSI= -104
+Wed, 03 Feb 2021 18:53:51 3 <=> 31 Distance= 57.49 RSSI= -104
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 4 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 4 <=> 1 Distance= 49.01 RSSI= -103
+Wed, 03 Feb 2021 18:53:51 4 <=> 2 Distance= 66.48 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 4 <=> 3 Distance= 45.4 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 5 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 5 <=> 6 Distance= 49.16 RSSI= -103
+Wed, 03 Feb 2021 18:53:51 5 <=> 7 Distance= 60.61 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 5 <=> 8 Distance= 38.05 RSSI= -101
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 6 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 6 <=> 5 Distance= 49.16 RSSI= -103
+Wed, 03 Feb 2021 18:53:51 6 <=> 7 Distance= 33.02 RSSI= -99
+Wed, 03 Feb 2021 18:53:51 6 <=> 8 Distance= 58.01 RSSI= -104
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 7 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 7 <=> 5 Distance= 60.61 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 7 <=> 6 Distance= 33.02 RSSI= -99
+Wed, 03 Feb 2021 18:53:51 7 <=> 8 Distance= 46.01 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 7 <=> 9 Distance= 65.28 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 8 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 8 <=> 5 Distance= 38.05 RSSI= -101
+Wed, 03 Feb 2021 18:53:51 8 <=> 6 Distance= 58.01 RSSI= -104
+Wed, 03 Feb 2021 18:53:51 8 <=> 7 Distance= 46.01 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 8 <=> 10 Distance= 65.19 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 9 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 9 <=> 7 Distance= 65.28 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 9 <=> 10 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 9 <=> 11 Distance= 54.45 RSSI= -104
+Wed, 03 Feb 2021 18:53:51 9 <=> 12 Distance= 43.74 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 10 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 10 <=> 8 Distance= 65.19 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 10 <=> 9 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 10 <=> 11 Distance= 38.64 RSSI= -101
+Wed, 03 Feb 2021 18:53:51 10 <=> 12 Distance= 67.62 RSSI= -106
+Wed, 03 Feb 2021 18:53:51 10 <=> 13 Distance= 64.78 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 10 <=> 16 Distance= 69.12 RSSI= -106
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 11 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 11 <=> 9 Distance= 54.45 RSSI= -104
+Wed, 03 Feb 2021 18:53:51 11 <=> 10 Distance= 38.64 RSSI= -101
+Wed, 03 Feb 2021 18:53:51 11 <=> 12 Distance= 46.17 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 11 <=> 16 Distance= 66.03 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 12 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 12 <=> 9 Distance= 43.74 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 12 <=> 10 Distance= 67.62 RSSI= -106
+Wed, 03 Feb 2021 18:53:51 12 <=> 11 Distance= 46.17 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 13 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 13 <=> 10 Distance= 64.78 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 13 <=> 14 Distance= 39.05 RSSI= -101
+Wed, 03 Feb 2021 18:53:51 13 <=> 15 Distance= 56.22 RSSI= -104
+Wed, 03 Feb 2021 18:53:51 13 <=> 16 Distance= 46.27 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 14 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 14 <=> 13 Distance= 39.05 RSSI= -101
+Wed, 03 Feb 2021 18:53:51 14 <=> 15 Distance= 46.17 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 14 <=> 16 Distance= 65.12 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 14 <=> 18 Distance= 66.01 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 15 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 15 <=> 13 Distance= 56.22 RSSI= -104
+Wed, 03 Feb 2021 18:53:51 15 <=> 14 Distance= 46.17 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 15 <=> 16 Distance= 40.05 RSSI= -101
+Wed, 03 Feb 2021 18:53:51 15 <=> 17 Distance= 67.07 RSSI= -106
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 16 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 16 <=> 10 Distance= 69.12 RSSI= -106
+Wed, 03 Feb 2021 18:53:51 16 <=> 11 Distance= 66.03 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 16 <=> 13 Distance= 46.27 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 16 <=> 14 Distance= 65.12 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 16 <=> 15 Distance= 40.05 RSSI= -101
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 17 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 17 <=> 15 Distance= 67.07 RSSI= -106
+Wed, 03 Feb 2021 18:53:51 17 <=> 18 Distance= 42.11 RSSI= -101
+Wed, 03 Feb 2021 18:53:51 17 <=> 19 Distance= 63.13 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 17 <=> 20 Distance= 46.0 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 18 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 18 <=> 14 Distance= 66.01 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 18 <=> 17 Distance= 42.11 RSSI= -101
+Wed, 03 Feb 2021 18:53:51 18 <=> 19 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 18 <=> 20 Distance= 60.11 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 18 <=> 21 Distance= 62.23 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 18 <=> 22 Distance= 45.71 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 19 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 19 <=> 17 Distance= 63.13 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 19 <=> 18 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 19 <=> 20 Distance= 41.05 RSSI= -101
+Wed, 03 Feb 2021 18:53:51 19 <=> 21 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 20 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 20 <=> 17 Distance= 46.0 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 20 <=> 18 Distance= 60.11 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 20 <=> 19 Distance= 41.05 RSSI= -101
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 21 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 21 <=> 18 Distance= 62.23 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 21 <=> 19 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 21 <=> 22 Distance= 52.01 RSSI= -103
+Wed, 03 Feb 2021 18:53:51 21 <=> 23 Distance= 62.37 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 21 <=> 24 Distance= 49.01 RSSI= -103
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 22 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 22 <=> 18 Distance= 45.71 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 22 <=> 21 Distance= 52.01 RSSI= -103
+Wed, 03 Feb 2021 18:53:51 22 <=> 23 Distance= 47.3 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 23 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 23 <=> 21 Distance= 62.37 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 23 <=> 22 Distance= 47.3 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 23 <=> 24 Distance= 40.05 RSSI= -101
+Wed, 03 Feb 2021 18:53:51 23 <=> 25 Distance= 65.86 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 23 <=> 26 Distance= 44.41 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 24 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 24 <=> 21 Distance= 49.01 RSSI= -103
+Wed, 03 Feb 2021 18:53:51 24 <=> 23 Distance= 40.05 RSSI= -101
+Wed, 03 Feb 2021 18:53:51 24 <=> 25 Distance= 47.17 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 24 <=> 26 Distance= 62.29 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 25 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 25 <=> 23 Distance= 65.86 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 25 <=> 24 Distance= 47.17 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 25 <=> 26 Distance= 50.25 RSSI= -103
+Wed, 03 Feb 2021 18:53:51 25 <=> 28 Distance= 62.01 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 26 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 26 <=> 23 Distance= 44.41 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 26 <=> 24 Distance= 62.29 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 26 <=> 25 Distance= 50.25 RSSI= -103
+Wed, 03 Feb 2021 18:53:51 26 <=> 27 Distance= 68.59 RSSI= -106
+Wed, 03 Feb 2021 18:53:51 26 <=> 32 Distance= 67.19 RSSI= -106
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 27 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 27 <=> 26 Distance= 68.59 RSSI= -106
+Wed, 03 Feb 2021 18:53:51 27 <=> 28 Distance= 40.01 RSSI= -101
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 28 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 28 <=> 25 Distance= 62.01 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 28 <=> 27 Distance= 40.01 RSSI= -101
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 29 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 29 <=> 30 Distance= 54.01 RSSI= -104
+Wed, 03 Feb 2021 18:53:51 29 <=> 31 Distance= 61.52 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 29 <=> 32 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 30 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 30 <=> 2 Distance= 46.32 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 30 <=> 3 Distance= 55.47 RSSI= -104
+Wed, 03 Feb 2021 18:53:51 30 <=> 29 Distance= 54.01 RSSI= -104
+Wed, 03 Feb 2021 18:53:51 30 <=> 31 Distance= 45.12 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 31 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 31 <=> 3 Distance= 57.49 RSSI= -104
+Wed, 03 Feb 2021 18:53:51 31 <=> 29 Distance= 61.52 RSSI= -105
+Wed, 03 Feb 2021 18:53:51 31 <=> 30 Distance= 45.12 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 31 <=> 32 Distance= 45.04 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 Neighbors Table discovery for 32 is below and neighbors are []
+Wed, 03 Feb 2021 18:53:51 32 <=> 26 Distance= 67.19 RSSI= -106
+Wed, 03 Feb 2021 18:53:51 32 <=> 29 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 32 <=> 31 Distance= 45.04 RSSI= -102
+Wed, 03 Feb 2021 18:53:51 +++++++++++++++++++++ ieee802154 Table Discovery Ends +++++++++++++++++++++++++++++++ 
+
+Wed, 03 Feb 2021 18:54:07 node 20 becomes CH (change)and parent is [] and TDMA 4 energy 1999.9992494687501
+Wed, 03 Feb 2021 18:54:07 e node 20 becomes simple node (change) and parent is [] and TDMA 4 energy 1999.9992494687501
+Wed, 03 Feb 2021 18:54:07 20 is CH in cluster 1 with [node17, node18, node19, node20]  ++++++++++++++++++ area
+
+Wed, 03 Feb 2021 18:54:07 node 23 becomes CH (change)and parent is [] and TDMA 3 energy 1999.9987475937503
+Wed, 03 Feb 2021 18:54:07 e node 23 becomes simple node (change) and parent is [] and TDMA 3 energy 1999.9987475937503
+Wed, 03 Feb 2021 18:54:07 23 is CH in cluster 2 with [node21, node22, node23, node24]  ++++++++++++++++++ area
+
+Wed, 03 Feb 2021 18:54:07 node 25 becomes CH (change)and parent is [] and TDMA 1 energy 1999.9987704062503
+Wed, 03 Feb 2021 18:54:07 e node 25 becomes simple node (change) and parent is [] and TDMA 1 energy 1999.9987704062503
+Wed, 03 Feb 2021 18:54:07 25 is CH in cluster 3 with [node25, node26, node27, node28]  ++++++++++++++++++ area
+
+Wed, 03 Feb 2021 18:54:07 node 28 becomes CH (change)and parent is [] and TDMA 4 energy 1999.9992722812501
+Wed, 03 Feb 2021 18:54:07 e node 28 becomes simple node (change) and parent is [] and TDMA 4 energy 1999.9992722812501
+Wed, 03 Feb 2021 18:54:07 28 is CH in cluster 3 with [node25, node26, node27, node28]  ++++++++++++++++++ area
+
+Wed, 03 Feb 2021 18:54:07 e node 25 becomes simple node (change) and parent is [node28] and TDMA 1 energy 1999.9985105312503
+Wed, 03 Feb 2021 18:54:07 node 16 becomes CH (change)and parent is [] and TDMA 4 energy 1999.9987453125004
+Wed, 03 Feb 2021 18:54:07 e node 16 becomes simple node (change) and parent is [] and TDMA 4 energy 1999.9987453125004
+Wed, 03 Feb 2021 18:54:07 16 is CH in cluster 4 with [node13, node14, node15, node16]  ++++++++++++++++++ area
+
+Wed, 03 Feb 2021 18:54:07 node 30 becomes CH (change)and parent is [] and TDMA 2 energy 1999.9990008125
+Wed, 03 Feb 2021 18:54:07 e node 30 becomes simple node (change) and parent is [] and TDMA 2 energy 1999.9990008125
+Wed, 03 Feb 2021 18:54:07 30 is CH in cluster 6 with [node29, node30, node31, node32]  ++++++++++++++++++ area
+
+Wed, 03 Feb 2021 18:54:07 node 9 becomes CH (change)and parent is [] and TDMA 1 energy 1999.99900765625
+Wed, 03 Feb 2021 18:54:07 e node 9 becomes simple node (change) and parent is [] and TDMA 1 energy 1999.99900765625
+Wed, 03 Feb 2021 18:54:07 9 is CH in cluster 7 with [node9, node10, node11, node12]  ++++++++++++++++++ area
+
+Wed, 03 Feb 2021 18:54:07 node 7 becomes CH (change)and parent is [] and TDMA 3 energy 1999.99879321875
+Wed, 03 Feb 2021 18:54:07 e node 7 becomes simple node (change) and parent is [] and TDMA 3 energy 1999.99879321875
+Wed, 03 Feb 2021 18:54:07 7 is CH in cluster 8 with [node5, node6, node7, node8]  ++++++++++++++++++ area
+
+Wed, 03 Feb 2021 18:54:07 node 3 becomes CH (change)and parent is [] and TDMA 3 energy 1999.9985399999998
+Wed, 03 Feb 2021 18:54:07 e node 3 becomes simple node (change) and parent is [] and TDMA 3 energy 1999.9985399999998
+Wed, 03 Feb 2021 18:54:07 3 is CH in cluster 9 with [node1, node2, node3, node4]  ++++++++++++++++++ area
+
+Wed, 03 Feb 2021 18:54:07 node 4 becomes CH (change)and parent is [] and TDMA 4 energy 1999.99903959375
+Wed, 03 Feb 2021 18:54:07 e node 4 becomes simple node (change) and parent is [] and TDMA 4 energy 1999.99903959375
+Wed, 03 Feb 2021 18:54:07 4 is CH in cluster 9 with [node1, node2, node3, node4]  ++++++++++++++++++ area
+
+Wed, 03 Feb 2021 18:54:07 e node 3 becomes simple node (change) and parent is [node4] and TDMA 3 energy 1999.9982827499998
+Wed, 03 Feb 2021 18:54:07 ****************************Begin of introduce ieee802154
+Wed, 03 Feb 2021 18:54:07 0  with energy : <Power Type=External, Energy=2000 mJ>  with position 150.0 150.0 ; CH is False [] is alive: True with TDMA 0 4
+Wed, 03 Feb 2021 18:54:07 1  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 280 283 ; CH is False 4 is alive: True with TDMA 1 1999.9988137500002 sensor t: 1
+Wed, 03 Feb 2021 18:54:07 2  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 235 282 ; CH is False 4 is alive: True with TDMA 2 1999.99833925 sensor t: 0
+Wed, 03 Feb 2021 18:54:07 3  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 236 240 ; CH is False 4 is alive: True with TDMA 3 1999.9980591874998 sensor t: 1
+Wed, 03 Feb 2021 18:54:07 4  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 281 234 ; CH is True [] is alive: True with TDMA 4 1999.99878234375
+Wed, 03 Feb 2021 18:54:07 5  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 239 165 ; CH is False 7 is alive: True with TDMA 1 1999.9990373125001 sensor t: 1
+Wed, 03 Feb 2021 18:54:07 6  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 288 161 ; CH is False 7 is alive: True with TDMA 2 1999.99903959375 sensor t: 0
+Wed, 03 Feb 2021 18:54:07 7  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 287 128 ; CH is True [] is alive: True with TDMA 3 1999.99853596875
+Wed, 03 Feb 2021 18:54:07 8  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 241 127 ; CH is False 7 is alive: True with TDMA 4 1999.99878865625 sensor t: 0
+Wed, 03 Feb 2021 18:54:07 9  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 281 63 ; CH is True [] is alive: True with TDMA 1 1999.99852684375
+Wed, 03 Feb 2021 18:54:07 10  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 236 62 ; CH is False 9 is alive: True with TDMA 2 1999.9980495312502 sensor t: 0
+Wed, 03 Feb 2021 18:54:07 11  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 243 24 ; CH is False 9 is alive: True with TDMA 3 1999.9985491250002 sensor t: 1
+Wed, 03 Feb 2021 18:54:07 12  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 289 20 ; CH is False 9 is alive: True with TDMA 4 1999.9990259062502 sensor t: 0
+Wed, 03 Feb 2021 18:54:07 13  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 172 72 ; CH is False 16 is alive: True with TDMA 1 1999.9987704062503 sensor t: 1
+Wed, 03 Feb 2021 18:54:07 14  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 133 74 ; CH is False 16 is alive: True with TDMA 2 1999.9987704062503 sensor t: 0
+Wed, 03 Feb 2021 18:54:07 15  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 137 28 ; CH is False 16 is alive: True with TDMA 3 1999.9987704062503 sensor t: 1
+Wed, 03 Feb 2021 18:54:07 16  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 177 26 ; CH is True [] is alive: True with TDMA 4 1999.9984854375004
+Wed, 03 Feb 2021 18:54:07 17  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 70 31 ; CH is False 20 is alive: True with TDMA 1 1999.9987726875001 sensor t: 1
+Wed, 03 Feb 2021 18:54:07 18  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 67 73 ; CH is False 20 is alive: True with TDMA 2 1999.9982685312505 sensor t: 0
+Wed, 03 Feb 2021 18:54:07 19  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 22 72 ; CH is False 20 is alive: True with TDMA 3 1999.9987704062503 sensor t: 1
+Wed, 03 Feb 2021 18:54:07 20  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 24 31 ; CH is True [] is alive: True with TDMA 4 1999.9989895937501
+Wed, 03 Feb 2021 18:54:07 21  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 23 117 ; CH is False 23 is alive: True with TDMA 1 1999.9985194687504 sensor t: 1
+Wed, 03 Feb 2021 18:54:07 22  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 75 118 ; CH is False 23 is alive: True with TDMA 2 1999.999023625 sensor t: 0
+Wed, 03 Feb 2021 18:54:07 23  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 64 164 ; CH is True [] is alive: True with TDMA 3 1999.9982618750003
+Wed, 03 Feb 2021 18:54:07 24  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 24 166 ; CH is False 23 is alive: True with TDMA 4 1999.9985445625002 sensor t: 0
+Wed, 03 Feb 2021 18:54:07 25  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 20 213 ; CH is False 28 is alive: True with TDMA 1 1999.9982846875002 sensor t: 1
+Wed, 03 Feb 2021 18:54:07 26  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 70 208 ; CH is False 28 is alive: True with TDMA 2 1999.9982936250003 sensor t: 0
+Wed, 03 Feb 2021 18:54:08 27  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 61 276 ; CH is False 28 is alive: True with TDMA 3 1999.9992722812501 sensor t: 1
+Wed, 03 Feb 2021 18:54:08 28  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 21 275 ; CH is True [] is alive: True with TDMA 4 1999.9990124062501
+Wed, 03 Feb 2021 18:54:08 29  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 136 270 ; CH is False 30 is alive: True with TDMA 1 1999.9990213437502 sensor t: 1
+Wed, 03 Feb 2021 18:54:08 30  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 190 271 ; CH is True [] is alive: True with TDMA 2 1999.9985173750001
+Wed, 03 Feb 2021 18:54:08 31  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 180 227 ; CH is False 30 is alive: True with TDMA 3 1999.9985491250002 sensor t: 1
+Wed, 03 Feb 2021 18:54:08 32  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 135 225 ; CH is False 30 is alive: True with TDMA 4 1999.9992471875003 sensor t: 0
+Wed, 03 Feb 2021 18:54:24 at 0 BS is running
+Wed, 03 Feb 2021 18:54:24 Cluster 1  with [node17, node18, node19, node20] nodes ##### 0 0
+Wed, 03 Feb 2021 18:54:24 Cluster 2  with [node21, node22, node23, node24] nodes ##### 0 0
+Wed, 03 Feb 2021 18:54:24 Cluster 3  with [node25, node26, node27, node28] nodes ##### 0 0
+Wed, 03 Feb 2021 18:54:24 Cluster 4  with [node13, node14, node15, node16] nodes ##### 0 0
+Wed, 03 Feb 2021 18:54:24 Cluster 5  with [] nodes ##### 0 0
+Wed, 03 Feb 2021 18:54:24 Cluster 6  with [node29, node30, node31, node32] nodes ##### 0 0
+Wed, 03 Feb 2021 18:54:24 Cluster 7  with [node9, node10, node11, node12] nodes ##### 0 0
+Wed, 03 Feb 2021 18:54:24 Cluster 8  with [node5, node6, node7, node8] nodes ##### 0 0
+Wed, 03 Feb 2021 18:54:24 Cluster 9  with [node1, node2, node3, node4] nodes ##### 0 0
+Wed, 03 Feb 2021 18:54:24 initialization BS start to advertise + Superframe rules
+Wed, 03 Feb 2021 18:54:24 
+++++++++++++++++++++ ieee802154 Table Discovery Begins 70 meters ++++++++++++++++++++++++++++
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 0 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 1 is below and neighbors are [node2, node3, node4]
+Wed, 03 Feb 2021 18:54:24 1 <=> 2 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 1 <=> 3 Distance= 61.52 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 1 <=> 4 Distance= 49.01 RSSI= -103
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 2 is below and neighbors are [node1, node3, node4, node30]
+Wed, 03 Feb 2021 18:54:24 2 <=> 1 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 2 <=> 3 Distance= 42.01 RSSI= -101
+Wed, 03 Feb 2021 18:54:24 2 <=> 4 Distance= 66.48 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 2 <=> 30 Distance= 46.32 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 3 is below and neighbors are [node1, node2, node4, node30, node31]
+Wed, 03 Feb 2021 18:54:24 3 <=> 1 Distance= 61.52 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 3 <=> 2 Distance= 42.01 RSSI= -101
+Wed, 03 Feb 2021 18:54:24 3 <=> 4 Distance= 45.4 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 3 <=> 30 Distance= 55.47 RSSI= -104
+Wed, 03 Feb 2021 18:54:24 3 <=> 31 Distance= 57.49 RSSI= -104
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 4 is below and neighbors are [node1, node2, node3]
+Wed, 03 Feb 2021 18:54:24 4 <=> 1 Distance= 49.01 RSSI= -103
+Wed, 03 Feb 2021 18:54:24 4 <=> 2 Distance= 66.48 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 4 <=> 3 Distance= 45.4 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 5 is below and neighbors are [node6, node7, node8]
+Wed, 03 Feb 2021 18:54:24 5 <=> 6 Distance= 49.16 RSSI= -103
+Wed, 03 Feb 2021 18:54:24 5 <=> 7 Distance= 60.61 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 5 <=> 8 Distance= 38.05 RSSI= -101
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 6 is below and neighbors are [node5, node7, node8]
+Wed, 03 Feb 2021 18:54:24 6 <=> 5 Distance= 49.16 RSSI= -103
+Wed, 03 Feb 2021 18:54:24 6 <=> 7 Distance= 33.02 RSSI= -99
+Wed, 03 Feb 2021 18:54:24 6 <=> 8 Distance= 58.01 RSSI= -104
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 7 is below and neighbors are [node5, node6, node8, node9]
+Wed, 03 Feb 2021 18:54:24 7 <=> 5 Distance= 60.61 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 7 <=> 6 Distance= 33.02 RSSI= -99
+Wed, 03 Feb 2021 18:54:24 7 <=> 8 Distance= 46.01 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 7 <=> 9 Distance= 65.28 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 8 is below and neighbors are [node5, node6, node7, node10]
+Wed, 03 Feb 2021 18:54:24 8 <=> 5 Distance= 38.05 RSSI= -101
+Wed, 03 Feb 2021 18:54:24 8 <=> 6 Distance= 58.01 RSSI= -104
+Wed, 03 Feb 2021 18:54:24 8 <=> 7 Distance= 46.01 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 8 <=> 10 Distance= 65.19 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 9 is below and neighbors are [node7, node10, node11, node12]
+Wed, 03 Feb 2021 18:54:24 9 <=> 7 Distance= 65.28 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 9 <=> 10 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 9 <=> 11 Distance= 54.45 RSSI= -104
+Wed, 03 Feb 2021 18:54:24 9 <=> 12 Distance= 43.74 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 10 is below and neighbors are [node8, node9, node11, node12, node13, node16]
+Wed, 03 Feb 2021 18:54:24 10 <=> 8 Distance= 65.19 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 10 <=> 9 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 10 <=> 11 Distance= 38.64 RSSI= -101
+Wed, 03 Feb 2021 18:54:24 10 <=> 12 Distance= 67.62 RSSI= -106
+Wed, 03 Feb 2021 18:54:24 10 <=> 13 Distance= 64.78 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 10 <=> 16 Distance= 69.12 RSSI= -106
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 11 is below and neighbors are [node9, node10, node12, node16]
+Wed, 03 Feb 2021 18:54:24 11 <=> 9 Distance= 54.45 RSSI= -104
+Wed, 03 Feb 2021 18:54:24 11 <=> 10 Distance= 38.64 RSSI= -101
+Wed, 03 Feb 2021 18:54:24 11 <=> 12 Distance= 46.17 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 11 <=> 16 Distance= 66.03 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 12 is below and neighbors are [node9, node10, node11]
+Wed, 03 Feb 2021 18:54:24 12 <=> 9 Distance= 43.74 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 12 <=> 10 Distance= 67.62 RSSI= -106
+Wed, 03 Feb 2021 18:54:24 12 <=> 11 Distance= 46.17 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 13 is below and neighbors are [node10, node14, node15, node16]
+Wed, 03 Feb 2021 18:54:24 13 <=> 10 Distance= 64.78 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 13 <=> 14 Distance= 39.05 RSSI= -101
+Wed, 03 Feb 2021 18:54:24 13 <=> 15 Distance= 56.22 RSSI= -104
+Wed, 03 Feb 2021 18:54:24 13 <=> 16 Distance= 46.27 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 14 is below and neighbors are [node13, node15, node16, node18]
+Wed, 03 Feb 2021 18:54:24 14 <=> 13 Distance= 39.05 RSSI= -101
+Wed, 03 Feb 2021 18:54:24 14 <=> 15 Distance= 46.17 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 14 <=> 16 Distance= 65.12 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 14 <=> 18 Distance= 66.01 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 15 is below and neighbors are [node13, node14, node16, node17]
+Wed, 03 Feb 2021 18:54:24 15 <=> 13 Distance= 56.22 RSSI= -104
+Wed, 03 Feb 2021 18:54:24 15 <=> 14 Distance= 46.17 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 15 <=> 16 Distance= 40.05 RSSI= -101
+Wed, 03 Feb 2021 18:54:24 15 <=> 17 Distance= 67.07 RSSI= -106
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 16 is below and neighbors are [node10, node11, node13, node14, node15]
+Wed, 03 Feb 2021 18:54:24 16 <=> 10 Distance= 69.12 RSSI= -106
+Wed, 03 Feb 2021 18:54:24 16 <=> 11 Distance= 66.03 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 16 <=> 13 Distance= 46.27 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 16 <=> 14 Distance= 65.12 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 16 <=> 15 Distance= 40.05 RSSI= -101
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 17 is below and neighbors are [node15, node18, node19, node20]
+Wed, 03 Feb 2021 18:54:24 17 <=> 15 Distance= 67.07 RSSI= -106
+Wed, 03 Feb 2021 18:54:24 17 <=> 18 Distance= 42.11 RSSI= -101
+Wed, 03 Feb 2021 18:54:24 17 <=> 19 Distance= 63.13 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 17 <=> 20 Distance= 46.0 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 18 is below and neighbors are [node14, node17, node19, node20, node21, node22]
+Wed, 03 Feb 2021 18:54:24 18 <=> 14 Distance= 66.01 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 18 <=> 17 Distance= 42.11 RSSI= -101
+Wed, 03 Feb 2021 18:54:24 18 <=> 19 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 18 <=> 20 Distance= 60.11 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 18 <=> 21 Distance= 62.23 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 18 <=> 22 Distance= 45.71 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 19 is below and neighbors are [node17, node18, node20, node21]
+Wed, 03 Feb 2021 18:54:24 19 <=> 17 Distance= 63.13 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 19 <=> 18 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 19 <=> 20 Distance= 41.05 RSSI= -101
+Wed, 03 Feb 2021 18:54:24 19 <=> 21 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 20 is below and neighbors are [node17, node18, node19]
+Wed, 03 Feb 2021 18:54:24 20 <=> 17 Distance= 46.0 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 20 <=> 18 Distance= 60.11 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 20 <=> 19 Distance= 41.05 RSSI= -101
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 21 is below and neighbors are [node18, node19, node22, node23, node24]
+Wed, 03 Feb 2021 18:54:24 21 <=> 18 Distance= 62.23 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 21 <=> 19 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 21 <=> 22 Distance= 52.01 RSSI= -103
+Wed, 03 Feb 2021 18:54:24 21 <=> 23 Distance= 62.37 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 21 <=> 24 Distance= 49.01 RSSI= -103
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 22 is below and neighbors are [node18, node21, node23]
+Wed, 03 Feb 2021 18:54:24 22 <=> 18 Distance= 45.71 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 22 <=> 21 Distance= 52.01 RSSI= -103
+Wed, 03 Feb 2021 18:54:24 22 <=> 23 Distance= 47.3 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 23 is below and neighbors are [node21, node22, node24, node25, node26]
+Wed, 03 Feb 2021 18:54:24 23 <=> 21 Distance= 62.37 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 23 <=> 22 Distance= 47.3 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 23 <=> 24 Distance= 40.05 RSSI= -101
+Wed, 03 Feb 2021 18:54:24 23 <=> 25 Distance= 65.86 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 23 <=> 26 Distance= 44.41 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 24 is below and neighbors are [node21, node23, node25, node26]
+Wed, 03 Feb 2021 18:54:24 24 <=> 21 Distance= 49.01 RSSI= -103
+Wed, 03 Feb 2021 18:54:24 24 <=> 23 Distance= 40.05 RSSI= -101
+Wed, 03 Feb 2021 18:54:24 24 <=> 25 Distance= 47.17 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 24 <=> 26 Distance= 62.29 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 25 is below and neighbors are [node23, node24, node26, node28]
+Wed, 03 Feb 2021 18:54:24 25 <=> 23 Distance= 65.86 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 25 <=> 24 Distance= 47.17 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 25 <=> 26 Distance= 50.25 RSSI= -103
+Wed, 03 Feb 2021 18:54:24 25 <=> 28 Distance= 62.01 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 26 is below and neighbors are [node23, node24, node25, node27, node32]
+Wed, 03 Feb 2021 18:54:24 26 <=> 23 Distance= 44.41 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 26 <=> 24 Distance= 62.29 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 26 <=> 25 Distance= 50.25 RSSI= -103
+Wed, 03 Feb 2021 18:54:24 26 <=> 27 Distance= 68.59 RSSI= -106
+Wed, 03 Feb 2021 18:54:24 26 <=> 32 Distance= 67.19 RSSI= -106
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 27 is below and neighbors are [node26, node28]
+Wed, 03 Feb 2021 18:54:24 27 <=> 26 Distance= 68.59 RSSI= -106
+Wed, 03 Feb 2021 18:54:24 27 <=> 28 Distance= 40.01 RSSI= -101
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 28 is below and neighbors are [node25, node27]
+Wed, 03 Feb 2021 18:54:24 28 <=> 25 Distance= 62.01 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 28 <=> 27 Distance= 40.01 RSSI= -101
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 29 is below and neighbors are [node30, node31, node32]
+Wed, 03 Feb 2021 18:54:24 29 <=> 30 Distance= 54.01 RSSI= -104
+Wed, 03 Feb 2021 18:54:24 29 <=> 31 Distance= 61.52 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 29 <=> 32 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 30 is below and neighbors are [node2, node3, node29, node31]
+Wed, 03 Feb 2021 18:54:24 30 <=> 2 Distance= 46.32 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 30 <=> 3 Distance= 55.47 RSSI= -104
+Wed, 03 Feb 2021 18:54:24 30 <=> 29 Distance= 54.01 RSSI= -104
+Wed, 03 Feb 2021 18:54:24 30 <=> 31 Distance= 45.12 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 31 is below and neighbors are [node3, node29, node30, node32]
+Wed, 03 Feb 2021 18:54:24 31 <=> 3 Distance= 57.49 RSSI= -104
+Wed, 03 Feb 2021 18:54:24 31 <=> 29 Distance= 61.52 RSSI= -105
+Wed, 03 Feb 2021 18:54:24 31 <=> 30 Distance= 45.12 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 31 <=> 32 Distance= 45.04 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 Neighbors Table discovery for 32 is below and neighbors are [node26, node29, node31]
+Wed, 03 Feb 2021 18:54:24 32 <=> 26 Distance= 67.19 RSSI= -106
+Wed, 03 Feb 2021 18:54:24 32 <=> 29 Distance= 45.01 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 32 <=> 31 Distance= 45.04 RSSI= -102
+Wed, 03 Feb 2021 18:54:24 +++++++++++++++++++++ ieee802154 Table Discovery Ends +++++++++++++++++++++++++++++++ 
+
+Wed, 03 Feb 2021 18:54:24 neighbors of BS:[node20, node23, node25, node28, node16, node30, node9, node7, node3, node4]
+Wed, 03 Feb 2021 18:54:24 ****************************Begin of introduce ieee802154
+Wed, 03 Feb 2021 18:54:24 0  with energy : <Power Type=External, Energy=2000 mJ>  with position 150.0 150.0 ; CH is False [] is alive: True with TDMA 0 4
+Wed, 03 Feb 2021 18:54:24 1  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 280 283 ; CH is False 4 is alive: True with TDMA 1 1999.9957933750002 sensor t: 1
+Wed, 03 Feb 2021 18:54:24 2  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 235 282 ; CH is False 4 is alive: True with TDMA 2 1999.99392959375 sensor t: 0
+Wed, 03 Feb 2021 18:54:24 3  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 236 240 ; CH is False 4 is alive: True with TDMA 3 1999.9922625312495 sensor t: 1
+Wed, 03 Feb 2021 18:54:24 4  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 281 234 ; CH is True [] is alive: True with TDMA 4 1999.9980455
+Wed, 03 Feb 2021 18:54:24 5  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 239 165 ; CH is False 7 is alive: True with TDMA 1 1999.9960169375001 sensor t: 1
+Wed, 03 Feb 2021 18:54:24 6  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 288 161 ; CH is False 7 is alive: True with TDMA 2 1999.9960214999999 sensor t: 0
+Wed, 03 Feb 2021 18:54:24 7  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 287 128 ; CH is True [] is alive: True with TDMA 3 1999.99755275
+Wed, 03 Feb 2021 18:54:24 8  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 241 127 ; CH is False 7 is alive: True with TDMA 4 1999.994379 sensor t: 0
+Wed, 03 Feb 2021 18:54:24 9  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 281 63 ; CH is True [] is alive: True with TDMA 1 1999.9941126249996
+Wed, 03 Feb 2021 18:54:24 10  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 236 62 ; CH is False 9 is alive: True with TDMA 2 1999.9908453437502 sensor t: 0
+Wed, 03 Feb 2021 18:54:24 11  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 243 24 ; CH is False 9 is alive: True with TDMA 3 1999.9941257812502 sensor t: 1
+Wed, 03 Feb 2021 18:54:24 12  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 289 20 ; CH is False 9 is alive: True with TDMA 4 1999.9948535 sensor t: 0
+Wed, 03 Feb 2021 18:54:24 13  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 172 72 ; CH is False 16 is alive: True with TDMA 1 1999.9943447812504 sensor t: 1
+Wed, 03 Feb 2021 18:54:24 14  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 133 74 ; CH is False 16 is alive: True with TDMA 2 1999.9943447812504 sensor t: 0
+Wed, 03 Feb 2021 18:54:24 15  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 137 28 ; CH is False 16 is alive: True with TDMA 3 1999.9943447812504 sensor t: 1
+Wed, 03 Feb 2021 18:54:24 16  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 177 26 ; CH is True [] is alive: True with TDMA 4 1999.9972307500009
+Wed, 03 Feb 2021 18:54:24 17  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 70 31 ; CH is False 20 is alive: True with TDMA 1 1999.9943493437502 sensor t: 1
+Wed, 03 Feb 2021 18:54:24 18  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 67 73 ; CH is False 20 is alive: True with TDMA 2 1999.9910597812507 sensor t: 0
+Wed, 03 Feb 2021 18:54:24 19  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 22 72 ; CH is False 20 is alive: True with TDMA 3 1999.9943447812504 sensor t: 1
+Wed, 03 Feb 2021 18:54:24 20  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 24 31 ; CH is True [] is alive: True with TDMA 4 1999.9982390625003
+Wed, 03 Feb 2021 18:54:24 21  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 23 117 ; CH is False 23 is alive: True with TDMA 1 1999.9915616562505 sensor t: 1
+Wed, 03 Feb 2021 18:54:24 22  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 75 118 ; CH is False 23 is alive: True with TDMA 2 1999.99485121875 sensor t: 0
+Wed, 03 Feb 2021 18:54:24 23  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 64 164 ; CH is True [] is alive: True with TDMA 3 1999.9913063437502
+Wed, 03 Feb 2021 18:54:24 24  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 24 166 ; CH is False 23 is alive: True with TDMA 4 1999.9929783125003 sensor t: 0
+Wed, 03 Feb 2021 18:54:24 25  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 20 213 ; CH is False 28 is alive: True with TDMA 1 1999.9938590625004 sensor t: 1
+Wed, 03 Feb 2021 18:54:24 26  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 70 208 ; CH is False 28 is alive: True with TDMA 2 1999.9924764375005 sensor t: 0
+Wed, 03 Feb 2021 18:54:24 27  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 61 276 ; CH is False 28 is alive: True with TDMA 3 1999.9976297812502 sensor t: 1
+Wed, 03 Feb 2021 18:54:24 28  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 21 275 ; CH is True [] is alive: True with TDMA 4 1999.9985105312503
+Wed, 03 Feb 2021 18:54:24 29  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 136 270 ; CH is False 30 is alive: True with TDMA 1 1999.9959872812503 sensor t: 1
+Wed, 03 Feb 2021 18:54:25 30  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 190 271 ; CH is True [] is alive: True with TDMA 2 1999.9929556875
+Wed, 03 Feb 2021 18:54:25 31  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 180 227 ; CH is False 30 is alive: True with TDMA 3 1999.9941257812502 sensor t: 1
+Wed, 03 Feb 2021 18:54:25 32  with energy : <Power Type=Battery, Energy=1999 mJ>  with position 135 225 ; CH is False 30 is alive: True with TDMA 4 1999.9984943750005 sensor t: 0
+Wed, 03 Feb 2021 18:54:25 at 5 BS is running
+Wed, 03 Feb 2021 18:54:25 at 10 BS is running
+Wed, 03 Feb 2021 18:54:25 
+ New Superframe is began CSMA at 10 number 1
+
+Wed, 03 Feb 2021 18:54:25 
+at 10 CSMA - slot 1
+Wed, 03 Feb 2021 18:54:25 
+at 11 CSMA - slot 2
+Wed, 03 Feb 2021 18:54:25 
+at 12 CSMA - slot 3
+Wed, 03 Feb 2021 18:54:25 
+at 13 CSMA - slot 4
+Wed, 03 Feb 2021 18:54:25 
+
+at 14 TDMA - slot 0
+Wed, 03 Feb 2021 18:54:25 at 15 BS is calculating
+Wed, 03 Feb 2021 18:54:25 
+
+at 15 TDMA - slot 1
+Wed, 03 Feb 2021 18:54:25 Cluster 5 is dead@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
+
+Wed, 03 Feb 2021 18:54:25 
+
+at 16 TDMA - slot 2
+Wed, 03 Feb 2021 18:54:25 at env:16 from node t0 2 light: 251 temperature: 29 TDMA-based 2 to [9] with pos 235 282 and parent [node4] and energy 1999.99356003125
+Wed, 03 Feb 2021 18:54:25 at env:16 from node t0 6 light: 185 temperature: 26 TDMA-based 2 to [8] with pos 288 161 and parent [node7] and energy 1999.9956519374998
+Wed, 03 Feb 2021 18:54:25 at env:16 from node t0 10 light: 253 temperature: 22 TDMA-based 2 to [7] with pos 236 62 and parent [node9] and energy 1999.9904735000002
+Wed, 03 Feb 2021 18:54:25 at env:16 from node t0 14 light: 141 temperature: 18 TDMA-based 2 to [4] with pos 133 74 and parent [node16] and energy 1999.9939729375005
+Wed, 03 Feb 2021 18:54:25 at env:16 from node t0 18 light: 218 temperature: 25 TDMA-based 2 to [1] with pos 67 73 and parent [node20] and energy 1999.9906879375008
+Wed, 03 Feb 2021 18:54:25 at env:16 from node t0 22 light: 213 temperature: 17 TDMA-based 2 to [2] with pos 75 118 and parent [node23] and energy 1999.994479375
+Wed, 03 Feb 2021 18:54:25 at env:16 from node t0 26 light: 120 temperature: 27 TDMA-based 2 to [3] with pos 70 208 and parent [node28] and energy 1999.9921045937506
+Wed, 03 Feb 2021 18:54:25 
+
+at 17 TDMA - slot 3
+Wed, 03 Feb 2021 18:54:25 
+
+at 18 TDMA - slot 4
+Wed, 03 Feb 2021 18:54:25 at env:18 from node t0 8 light: 210 temperature: 20 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9940094375
+Wed, 03 Feb 2021 18:54:25 at env:18 from node t0 12 light: 213 temperature: 26 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9944816562502
+Wed, 03 Feb 2021 18:54:25 at env:18 from node t0 24 light: 186 temperature: 27 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.9926064687504
+Wed, 03 Feb 2021 18:54:25 at env:18 from node t0 32 light: 184 temperature: 28 TDMA-based 4 to [6] with pos 135 225 and parent [node30] and energy 1999.9981225312506
+Wed, 03 Feb 2021 18:54:25 at env:19 from node t0 8 light: 296 temperature: 22 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9940094375
+Wed, 03 Feb 2021 18:54:25 at env:19 from node t0 12 light: 180 temperature: 26 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9944816562502
+Wed, 03 Feb 2021 18:54:25 at env:19 from node t0 24 light: 216 temperature: 27 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.9926064687504
+Wed, 03 Feb 2021 18:54:25 at env:19 from node t0 32 light: 198 temperature: 19 TDMA-based 4 to [6] with pos 135 225 and parent [node30] and energy 1999.9981225312506
+Wed, 03 Feb 2021 18:54:25 3 3 collison TDMA 31 3 
+Wed, 03 Feb 2021 18:54:25 14 2 collison TDMA 18 2 
+Wed, 03 Feb 2021 18:54:25 18 3 collison TDMA 19 3 
+Wed, 03 Feb 2021 18:54:25 31 4 collison TDMA 32 4 
+Wed, 03 Feb 2021 18:54:25 at 19 inactive ieee802154
+Wed, 03 Feb 2021 18:54:25 BS is proccessing 20
+Wed, 03 Feb 2021 18:54:25 at 20 inactive ieee802154
+Wed, 03 Feb 2021 18:54:25 at 21 inactive ieee802154
+Wed, 03 Feb 2021 18:54:25 at 22 inactive ieee802154
+Wed, 03 Feb 2021 18:54:25 at 23 inactive ieee802154
+Wed, 03 Feb 2021 18:54:25 at 24 inactive ieee802154
+Wed, 03 Feb 2021 18:54:25 BS is proccessing 25
+Wed, 03 Feb 2021 18:54:25 at 25 inactive ieee802154
+Wed, 03 Feb 2021 18:54:25 at 26 inactive ieee802154
+Wed, 03 Feb 2021 18:54:25 
+ New Superframe is began CSMA at 27 number 2
+
+Wed, 03 Feb 2021 18:54:25 
+at 27 CSMA - slot 1
+Wed, 03 Feb 2021 18:54:25 
+at 28 CSMA - slot 2
+Wed, 03 Feb 2021 18:54:25 
+at 29 CSMA - slot 3
+Wed, 03 Feb 2021 18:54:25 at 30 BS is running
+Wed, 03 Feb 2021 18:54:25 
+at 30 CSMA - slot 4
+Wed, 03 Feb 2021 18:54:25 
+
+at 31 TDMA - slot 0
+Wed, 03 Feb 2021 18:54:25 
+
+at 32 TDMA - slot 1
+Wed, 03 Feb 2021 18:54:25 at env:32 from node t1 1 light: 251 temperature: 25 TDMA-based 1 to [9] with pos 280 283 and parent [node4] and energy 1999.9954238125001
+Wed, 03 Feb 2021 18:54:25 at env:32 from node t1 5 light: 138 temperature: 23 TDMA-based 1 to [8] with pos 239 165 and parent [node7] and energy 1999.995647375
+Wed, 03 Feb 2021 18:54:25 at env:32 from node t1 13 light: 270 temperature: 19 TDMA-based 1 to [4] with pos 172 72 and parent [node16] and energy 1999.9939729375005
+Wed, 03 Feb 2021 18:54:25 at env:32 from node t1 17 light: 104 temperature: 19 TDMA-based 1 to [1] with pos 70 31 and parent [node20] and energy 1999.9939775000003
+Wed, 03 Feb 2021 18:54:25 at env:32 from node t1 21 light: 285 temperature: 25 TDMA-based 1 to [2] with pos 23 117 and parent [node23] and energy 1999.9911898125006
+Wed, 03 Feb 2021 18:54:25 at env:32 from node t1 25 light: 142 temperature: 29 TDMA-based 1 to [3] with pos 20 213 and parent [node28] and energy 1999.8839247187507
+Wed, 03 Feb 2021 18:54:25 at env:32 from node t1 29 light: 188 temperature: 28 TDMA-based 1 to [6] with pos 136 270 and parent [node30] and energy 1999.9956154375004
+Wed, 03 Feb 2021 18:54:25 
+
+at 33 TDMA - slot 2
+Wed, 03 Feb 2021 18:54:25 at env:33 from node t0 2 light: 196 temperature: 24 TDMA-based 2 to [9] with pos 235 282 and parent [node4] and energy 1999.99356003125
+Wed, 03 Feb 2021 18:54:25 at env:33 from node t0 6 light: 137 temperature: 27 TDMA-based 2 to [8] with pos 288 161 and parent [node7] and energy 1999.9956519374998
+Wed, 03 Feb 2021 18:54:25 at env:33 from node t0 10 light: 197 temperature: 26 TDMA-based 2 to [7] with pos 236 62 and parent [node9] and energy 1999.9904735000002
+Wed, 03 Feb 2021 18:54:25 at env:33 from node t0 14 light: 247 temperature: 26 TDMA-based 2 to [4] with pos 133 74 and parent [node16] and energy 1999.9939729375005
+Wed, 03 Feb 2021 18:54:25 at env:33 from node t0 22 light: 100 temperature: 26 TDMA-based 2 to [2] with pos 75 118 and parent [node23] and energy 1999.994479375
+Wed, 03 Feb 2021 18:54:25 at env:33 from node t0 26 light: 232 temperature: 19 TDMA-based 2 to [3] with pos 70 208 and parent [node28] and energy 1999.9921045937506
+Wed, 03 Feb 2021 18:54:25 
+
+at 34 TDMA - slot 3
+Wed, 03 Feb 2021 18:54:25 at env:34 from node t1 3 light: 179 temperature: 19 TDMA-based 3 to [9] with pos 236 240 and parent [node4] and energy 1999.8811898437496
+Wed, 03 Feb 2021 18:54:25 at env:34 from node t1 11 light: 273 temperature: 17 TDMA-based 3 to [7] with pos 243 24 and parent [node9] and energy 1999.9937539375003
+Wed, 03 Feb 2021 18:54:25 at env:34 from node t1 15 light: 295 temperature: 22 TDMA-based 3 to [4] with pos 137 28 and parent [node16] and energy 1999.9939729375005
+Wed, 03 Feb 2021 18:54:25 at env:34 from node t0 18 light: 180 temperature: 17 TDMA-based 3 to [1] with pos 67 73 and parent [node20] and energy 1999.9906879375008
+Wed, 03 Feb 2021 18:54:25 at env:34 from node t1 27 light: 141 temperature: 30 TDMA-based 3 to [3] with pos 61 276 and parent [node28] and energy 1999.9972579375003
+Wed, 03 Feb 2021 18:54:25 at 35 BS is calculating
+Wed, 03 Feb 2021 18:54:25 
+
+at 35 TDMA - slot 4
+Wed, 03 Feb 2021 18:54:25 at env:35 from node t0 8 light: 134 temperature: 17 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9940094375
+Wed, 03 Feb 2021 18:54:25 at env:35 from node t0 12 light: 177 temperature: 18 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9944816562502
+Wed, 03 Feb 2021 18:54:25 at env:35 from node t1 19 light: 135 temperature: 28 TDMA-based 4 to [1] with pos 22 72 and parent [node20] and energy 1999.9939729375005
+Wed, 03 Feb 2021 18:54:25 at env:35 from node t0 24 light: 168 temperature: 22 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.9926064687504
+Wed, 03 Feb 2021 18:54:25 at env:35 from node t1 31 light: 149 temperature: 30 TDMA-based 4 to [6] with pos 180 227 and parent [node30] and energy 1999.9937539375003
+Wed, 03 Feb 2021 18:54:25 at env:36 from node t0 8 light: 144 temperature: 29 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9940094375
+Wed, 03 Feb 2021 18:54:25 at env:36 from node t0 12 light: 173 temperature: 17 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9944816562502
+Wed, 03 Feb 2021 18:54:25 at env:36 from node t1 19 light: 187 temperature: 20 TDMA-based 4 to [1] with pos 22 72 and parent [node20] and energy 1999.9939729375005
+Wed, 03 Feb 2021 18:54:25 at env:36 from node t0 24 light: 275 temperature: 19 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.9926064687504
+Wed, 03 Feb 2021 18:54:25 at env:36 from node t1 31 light: 287 temperature: 28 TDMA-based 4 to [6] with pos 180 227 and parent [node30] and energy 1999.9937539375003
+Wed, 03 Feb 2021 18:54:25 at 36 inactive ieee802154
+Wed, 03 Feb 2021 18:54:25 at 37 inactive ieee802154
+Wed, 03 Feb 2021 18:54:25 at 38 inactive ieee802154
+Wed, 03 Feb 2021 18:54:25 at 39 inactive ieee802154
+Wed, 03 Feb 2021 18:54:25 BS is proccessing 40
+Wed, 03 Feb 2021 18:54:25 at 40 inactive ieee802154
+Wed, 03 Feb 2021 18:54:25 at 41 inactive ieee802154
+Wed, 03 Feb 2021 18:54:25 at 42 inactive ieee802154
+Wed, 03 Feb 2021 18:54:25 at 43 inactive ieee802154
+Wed, 03 Feb 2021 18:54:25 
+ New Superframe is began CSMA at 44 number 3
+
+Wed, 03 Feb 2021 18:54:25 
+at 44 CSMA - slot 1
+Wed, 03 Feb 2021 18:54:25 at 45 BS is running
+Wed, 03 Feb 2021 18:54:25 
+at 45 CSMA - slot 2
+Wed, 03 Feb 2021 18:54:25 
+at 46 CSMA - slot 3
+Wed, 03 Feb 2021 18:54:25 
+at 47 CSMA - slot 4
+Wed, 03 Feb 2021 18:54:25 
+
+at 48 TDMA - slot 0
+Wed, 03 Feb 2021 18:54:25 
+
+at 49 TDMA - slot 1
+Wed, 03 Feb 2021 18:54:25 at 50 BS is calculating
+Wed, 03 Feb 2021 18:54:25    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.2727272727272727
+Wed, 03 Feb 2021 18:54:25  <<< random for node 17 is 0.030472212257837805 with energy 1999.9939775000003 and average cluster energy 1999.9467716718755
+Wed, 03 Feb 2021 18:54:25 new ch is node 17  with parent [node20] and last ch was 20 with []
+Wed, 03 Feb 2021 18:54:25 e node 20 becomes simple node (change) and parent is [] and TDMA 4 energy 1999.8084483125008
+Wed, 03 Feb 2021 18:54:25 node 17 becomes CH (change)and parent is [] and TDMA 1 energy 1999.9939775000003
+Wed, 03 Feb 2021 18:54:25 e node 17 becomes simple node (change) and parent is [] and TDMA 1 energy 1999.9939775000003
+Wed, 03 Feb 2021 18:54:25 node 17 is CH in 1  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 03 Feb 2021 18:54:33    
+      Random_Clusterhead_Selection : cluster 2 with prob 0.2727272727272727
+Wed, 03 Feb 2021 18:54:33    
+      Random_Clusterhead_Selection : cluster 3 with prob 0.2727272727272727
+Wed, 03 Feb 2021 18:54:33    
+      Random_Clusterhead_Selection : cluster 4 with prob 0.2727272727272727
+Wed, 03 Feb 2021 18:54:33    
+      Random_Clusterhead_Selection : cluster 5 with prob 0.2727272727272727
+Wed, 03 Feb 2021 18:54:33    
+      Random_Clusterhead_Selection : cluster 6 with prob 0.2727272727272727
+Wed, 03 Feb 2021 18:54:33    
+      Random_Clusterhead_Selection : cluster 7 with prob 0.2727272727272727
+Wed, 03 Feb 2021 18:54:33    
+      Random_Clusterhead_Selection : cluster 8 with prob 0.2727272727272727
+Wed, 03 Feb 2021 18:54:33    
+      Random_Clusterhead_Selection : cluster 9 with prob 0.2727272727272727
+Wed, 03 Feb 2021 18:54:33 
+
+at 50 TDMA - slot 2
+Wed, 03 Feb 2021 18:54:33 at env:50 from node t0 2 light: 107 temperature: 26 TDMA-based 2 to [9] with pos 235 282 and parent [node4] and energy 1999.99356003125
+Wed, 03 Feb 2021 18:54:33 at env:50 from node t0 6 light: 182 temperature: 18 TDMA-based 2 to [8] with pos 288 161 and parent [node7] and energy 1999.9956519374998
+Wed, 03 Feb 2021 18:54:33 at env:50 from node t0 10 light: 289 temperature: 17 TDMA-based 2 to [7] with pos 236 62 and parent [node9] and energy 1999.9904735000002
+Wed, 03 Feb 2021 18:54:33 at env:50 from node t0 14 light: 224 temperature: 20 TDMA-based 2 to [4] with pos 133 74 and parent [node16] and energy 1999.9939729375005
+Wed, 03 Feb 2021 18:54:33 at env:50 from node t0 22 light: 210 temperature: 22 TDMA-based 2 to [2] with pos 75 118 and parent [node23] and energy 1999.994479375
+Wed, 03 Feb 2021 18:54:33 at env:50 from node t0 26 light: 158 temperature: 25 TDMA-based 2 to [3] with pos 70 208 and parent [node28] and energy 1999.9921045937506
+Wed, 03 Feb 2021 18:54:33 
+
+at 51 TDMA - slot 3
+Wed, 03 Feb 2021 18:54:33 at env:51 from node t0 18 light: 116 temperature: 21 TDMA-based 3 to [1] with pos 67 73 and parent [node17] and energy 1999.9836297500003
+Wed, 03 Feb 2021 18:54:33 
+
+at 52 TDMA - slot 4
+Wed, 03 Feb 2021 18:54:33 at env:52 from node t0 8 light: 300 temperature: 17 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9940094375
+Wed, 03 Feb 2021 18:54:33 at env:52 from node t0 12 light: 142 temperature: 27 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9944816562502
+Wed, 03 Feb 2021 18:54:33 at env:52 from node t0 20 light: 264 temperature: 21 TDMA-based 4 to [1] with pos 24 31 and parent [node17] and energy 1999.8082338750007
+Wed, 03 Feb 2021 18:54:33 at env:52 from node t0 24 light: 249 temperature: 19 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.9926064687504
+Wed, 03 Feb 2021 18:54:33 at env:53 from node t0 8 light: 143 temperature: 23 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9940094375
+Wed, 03 Feb 2021 18:54:33 at env:53 from node t0 12 light: 127 temperature: 24 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9944816562502
+Wed, 03 Feb 2021 18:54:33 at env:53 from node t0 20 light: 167 temperature: 21 TDMA-based 4 to [1] with pos 24 31 and parent [node17] and energy 1999.8082338750007
+Wed, 03 Feb 2021 18:54:33 at env:53 from node t0 24 light: 112 temperature: 19 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.9926064687504
+Wed, 03 Feb 2021 18:54:33 19 4 collison TDMA 20 4 
+Wed, 03 Feb 2021 18:54:33 at 53 inactive ieee802154
+Wed, 03 Feb 2021 18:54:33 at 54 inactive ieee802154
+Wed, 03 Feb 2021 18:54:33 BS is proccessing 55
+Wed, 03 Feb 2021 18:54:33 at 55 inactive ieee802154
+Wed, 03 Feb 2021 18:54:33 at 56 inactive ieee802154
+Wed, 03 Feb 2021 18:54:33 at 57 inactive ieee802154
+Wed, 03 Feb 2021 18:54:33 at 58 inactive ieee802154
+Wed, 03 Feb 2021 18:54:33 at 59 inactive ieee802154
+Wed, 03 Feb 2021 18:54:33 BS is proccessing 60
+Wed, 03 Feb 2021 18:54:33 at 60 inactive ieee802154
+Wed, 03 Feb 2021 18:54:33 
+ New Superframe is began CSMA at 61 number 4
+
+Wed, 03 Feb 2021 18:54:33 
+at 61 CSMA - slot 1
+Wed, 03 Feb 2021 18:54:33 
+at 62 CSMA - slot 2
+Wed, 03 Feb 2021 18:54:33 
+at 63 CSMA - slot 3
+Wed, 03 Feb 2021 18:54:33 
+at 64 CSMA - slot 4
+Wed, 03 Feb 2021 18:54:33 at 65 BS is running
+Wed, 03 Feb 2021 18:54:33 
+
+at 65 TDMA - slot 0
+Wed, 03 Feb 2021 18:54:33 
+
+at 66 TDMA - slot 1
+Wed, 03 Feb 2021 18:54:33 at env:66 from node t1 1 light: 160 temperature: 30 TDMA-based 1 to [9] with pos 280 283 and parent [node4] and energy 1999.9954238125001
+Wed, 03 Feb 2021 18:54:33 at env:66 from node t1 5 light: 164 temperature: 27 TDMA-based 1 to [8] with pos 239 165 and parent [node7] and energy 1999.995647375
+Wed, 03 Feb 2021 18:54:33 at env:66 from node t1 13 light: 117 temperature: 30 TDMA-based 1 to [4] with pos 172 72 and parent [node16] and energy 1999.9939729375005
+Wed, 03 Feb 2021 18:54:33 at env:66 from node t1 21 light: 157 temperature: 17 TDMA-based 1 to [2] with pos 23 117 and parent [node23] and energy 1999.9911898125006
+Wed, 03 Feb 2021 18:54:33 at env:66 from node t1 25 light: 222 temperature: 18 TDMA-based 1 to [3] with pos 20 213 and parent [node28] and energy 1999.805174718751
+Wed, 03 Feb 2021 18:54:33 at env:66 from node t1 29 light: 262 temperature: 18 TDMA-based 1 to [6] with pos 136 270 and parent [node30] and energy 1999.9956154375004
+Wed, 03 Feb 2021 18:54:33 
+
+at 67 TDMA - slot 2
+Wed, 03 Feb 2021 18:54:33 at env:67 from node t0 2 light: 159 temperature: 17 TDMA-based 2 to [9] with pos 235 282 and parent [node4] and energy 1999.99356003125
+Wed, 03 Feb 2021 18:54:33 at env:67 from node t0 6 light: 131 temperature: 28 TDMA-based 2 to [8] with pos 288 161 and parent [node7] and energy 1999.9956519374998
+Wed, 03 Feb 2021 18:54:33 at env:67 from node t0 10 light: 266 temperature: 26 TDMA-based 2 to [7] with pos 236 62 and parent [node9] and energy 1999.9904735000002
+Wed, 03 Feb 2021 18:54:33 at env:67 from node t0 14 light: 163 temperature: 28 TDMA-based 2 to [4] with pos 133 74 and parent [node16] and energy 1999.9939729375005
+Wed, 03 Feb 2021 18:54:33 at env:67 from node t0 22 light: 108 temperature: 25 TDMA-based 2 to [2] with pos 75 118 and parent [node23] and energy 1999.994479375
+Wed, 03 Feb 2021 18:54:33 at env:67 from node t0 26 light: 142 temperature: 20 TDMA-based 2 to [3] with pos 70 208 and parent [node28] and energy 1999.9921045937506
+Wed, 03 Feb 2021 18:54:33 
+
+at 68 TDMA - slot 3
+Wed, 03 Feb 2021 18:54:33 at env:68 from node t1 3 light: 235 temperature: 26 TDMA-based 3 to [9] with pos 236 240 and parent [node4] and energy 1999.8286898437498
+Wed, 03 Feb 2021 18:54:33 at env:68 from node t1 11 light: 151 temperature: 27 TDMA-based 3 to [7] with pos 243 24 and parent [node9] and energy 1999.9937539375003
+Wed, 03 Feb 2021 18:54:33 at env:68 from node t1 15 light: 249 temperature: 27 TDMA-based 3 to [4] with pos 137 28 and parent [node16] and energy 1999.9891960000002
+Wed, 03 Feb 2021 18:54:33 at env:68 from node t0 18 light: 149 temperature: 27 TDMA-based 3 to [1] with pos 67 73 and parent [node17] and energy 1999.9836297500003
+Wed, 03 Feb 2021 18:54:33 at env:68 from node t1 27 light: 144 temperature: 30 TDMA-based 3 to [3] with pos 61 276 and parent [node28] and energy 1999.9972579375003
+Wed, 03 Feb 2021 18:54:33 
+
+at 69 TDMA - slot 4
+Wed, 03 Feb 2021 18:54:33 at env:69 from node t0 8 light: 191 temperature: 29 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9940094375
+Wed, 03 Feb 2021 18:54:33 at env:69 from node t0 12 light: 172 temperature: 24 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9944816562502
+Wed, 03 Feb 2021 18:54:33 at env:69 from node t1 19 light: 257 temperature: 19 TDMA-based 4 to [1] with pos 22 72 and parent [node17] and energy 1999.9891960000002
+Wed, 03 Feb 2021 18:54:33 at env:69 from node t0 24 light: 168 temperature: 22 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.9926064687504
+Wed, 03 Feb 2021 18:54:33 at env:69 from node t1 31 light: 112 temperature: 24 TDMA-based 4 to [6] with pos 180 227 and parent [node30] and energy 1999.9937539375003
+Wed, 03 Feb 2021 18:54:33 at 70 BS is calculating
+Wed, 03 Feb 2021 18:54:33 at env:70 from node t0 8 light: 275 temperature: 20 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9940094375
+Wed, 03 Feb 2021 18:54:33 at env:70 from node t0 12 light: 229 temperature: 26 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9944816562502
+Wed, 03 Feb 2021 18:54:33 at env:70 from node t1 19 light: 105 temperature: 26 TDMA-based 4 to [1] with pos 22 72 and parent [node17] and energy 1999.9891960000002
+Wed, 03 Feb 2021 18:54:33 at env:70 from node t0 24 light: 282 temperature: 30 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.9926064687504
+Wed, 03 Feb 2021 18:54:33 at env:70 from node t1 31 light: 277 temperature: 19 TDMA-based 4 to [6] with pos 180 227 and parent [node30] and energy 1999.9937539375003
+Wed, 03 Feb 2021 18:54:33 at 70 inactive ieee802154
+Wed, 03 Feb 2021 18:54:33 at 71 inactive ieee802154
+Wed, 03 Feb 2021 18:54:33 at 72 inactive ieee802154
+Wed, 03 Feb 2021 18:54:33 at 73 inactive ieee802154
+Wed, 03 Feb 2021 18:54:33 at 74 inactive ieee802154
+Wed, 03 Feb 2021 18:54:33 BS is proccessing 75
+Wed, 03 Feb 2021 18:54:33 at 75 inactive ieee802154
+Wed, 03 Feb 2021 18:54:33 at 76 inactive ieee802154
+Wed, 03 Feb 2021 18:54:33 at 77 inactive ieee802154
+Wed, 03 Feb 2021 18:54:33 
+ New Superframe is began CSMA at 78 number 5
+
+Wed, 03 Feb 2021 18:54:33 
+at 78 CSMA - slot 1
+Wed, 03 Feb 2021 18:54:33 Cluster 1  with [node17, node18, node19, node20] nodes ##### 5 79
+Wed, 03 Feb 2021 18:54:33 Cluster 2  with [node21, node22, node23, node24] nodes ##### 5 79
+Wed, 03 Feb 2021 18:54:33 Cluster 3  with [node25, node26, node27, node28] nodes ##### 5 79
+Wed, 03 Feb 2021 18:54:33 Cluster 4  with [node13, node14, node15, node16] nodes ##### 5 79
+Wed, 03 Feb 2021 18:54:33 Cluster 5  with [] nodes ##### 5 79
+Wed, 03 Feb 2021 18:54:33 Cluster 6  with [node29, node30, node31, node32] nodes ##### 5 79
+Wed, 03 Feb 2021 18:54:33 Cluster 7  with [node9, node10, node11, node12] nodes ##### 5 79
+Wed, 03 Feb 2021 18:54:33 Cluster 8  with [node5, node6, node7, node8] nodes ##### 5 79
+Wed, 03 Feb 2021 18:54:33 Cluster 9  with [node1, node2, node3, node4] nodes ##### 5 79
+Wed, 03 Feb 2021 18:54:33 
+at 79 CSMA - slot 2
+Wed, 03 Feb 2021 18:54:34 at 80 BS is running
+Wed, 03 Feb 2021 18:54:34 
+at 80 CSMA - slot 3
+Wed, 03 Feb 2021 18:54:34 
+at 81 CSMA - slot 4
+Wed, 03 Feb 2021 18:54:34 
+
+at 82 TDMA - slot 0
+Wed, 03 Feb 2021 18:54:34 
+
+at 83 TDMA - slot 1
+Wed, 03 Feb 2021 18:54:34 
+
+at 84 TDMA - slot 2
+Wed, 03 Feb 2021 18:54:34 at env:84 from node t0 2 light: 192 temperature: 25 TDMA-based 2 to [9] with pos 235 282 and parent [node4] and energy 1999.9880051874993
+Wed, 03 Feb 2021 18:54:34 at env:84 from node t0 6 light: 195 temperature: 17 TDMA-based 2 to [8] with pos 288 161 and parent [node7] and energy 1999.9918992812495
+Wed, 03 Feb 2021 18:54:34 at env:84 from node t0 10 light: 148 temperature: 20 TDMA-based 2 to [7] with pos 236 62 and parent [node9] and energy 1999.9829681874996
+Wed, 03 Feb 2021 18:54:34 at env:84 from node t0 14 light: 128 temperature: 22 TDMA-based 2 to [4] with pos 133 74 and parent [node16] and energy 1999.9890796562502
+Wed, 03 Feb 2021 18:54:34 at env:84 from node t0 22 light: 125 temperature: 26 TDMA-based 2 to [2] with pos 75 118 and parent [node23] and energy 1999.9907267187498
+Wed, 03 Feb 2021 18:54:34 at env:84 from node t0 26 light: 257 temperature: 26 TDMA-based 2 to [3] with pos 70 208 and parent [node28] and energy 1999.98573990625
+Wed, 03 Feb 2021 18:54:34 at 85 BS is calculating
+Wed, 03 Feb 2021 18:54:34 
+
+at 85 TDMA - slot 3
+Wed, 03 Feb 2021 18:54:34 at env:85 from node t0 18 light: 205 temperature: 29 TDMA-based 3 to [1] with pos 67 73 and parent [node17] and energy 1999.9832989687502
+Wed, 03 Feb 2021 18:54:34 
+
+at 86 TDMA - slot 4
+Wed, 03 Feb 2021 18:54:34 at env:86 from node t0 8 light: 207 temperature: 29 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9891161562496
+Wed, 03 Feb 2021 18:54:34 at env:86 from node t0 12 light: 182 temperature: 19 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9907289999999
+Wed, 03 Feb 2021 18:54:34 at env:86 from node t0 24 light: 187 temperature: 23 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.98738240625
+Wed, 03 Feb 2021 18:54:34 at env:87 from node t0 8 light: 173 temperature: 24 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9891161562496
+Wed, 03 Feb 2021 18:54:34 at env:87 from node t0 12 light: 239 temperature: 18 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9907289999999
+Wed, 03 Feb 2021 18:54:34 at env:87 from node t0 24 light: 280 temperature: 22 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.98738240625
+Wed, 03 Feb 2021 18:54:34 at 87 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 88 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 89 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 BS is proccessing 90
+Wed, 03 Feb 2021 18:54:34 at 90 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 91 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 92 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 93 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 94 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 BS is proccessing 95
+Wed, 03 Feb 2021 18:54:34 
+ New Superframe is began CSMA at 95 number 6
+
+Wed, 03 Feb 2021 18:54:34 
+at 95 CSMA - slot 1
+Wed, 03 Feb 2021 18:54:34 
+at 96 CSMA - slot 2
+Wed, 03 Feb 2021 18:54:34 
+at 97 CSMA - slot 3
+Wed, 03 Feb 2021 18:54:34 
+at 98 CSMA - slot 4
+Wed, 03 Feb 2021 18:54:34 
+
+at 99 TDMA - slot 0
+Wed, 03 Feb 2021 18:54:34 at 100 BS is calculating
+Wed, 03 Feb 2021 18:54:34 
+
+at 100 TDMA - slot 1
+Wed, 03 Feb 2021 18:54:34 at env:100 from node t1 1 light: 237 temperature: 22 TDMA-based 1 to [9] with pos 280 283 and parent [node4] and energy 1999.9913403749997
+Wed, 03 Feb 2021 18:54:34 at env:100 from node t1 5 light: 274 temperature: 29 TDMA-based 1 to [8] with pos 239 165 and parent [node7] and energy 1999.9918947187498
+Wed, 03 Feb 2021 18:54:34 at env:100 from node t1 13 light: 126 temperature: 23 TDMA-based 1 to [4] with pos 172 72 and parent [node16] and energy 1999.9890796562502
+Wed, 03 Feb 2021 18:54:34 at env:100 from node t1 21 light: 213 temperature: 20 TDMA-based 1 to [2] with pos 23 117 and parent [node23] and energy 1999.9851559062502
+Wed, 03 Feb 2021 18:54:34 at env:100 from node t1 25 light: 101 temperature: 19 TDMA-based 1 to [3] with pos 20 213 and parent [node28] and energy 1999.8045131562508
+Wed, 03 Feb 2021 18:54:34 at env:100 from node t1 29 light: 114 temperature: 19 TDMA-based 1 to [6] with pos 136 270 and parent [node30] and energy 1999.9918627812501
+Wed, 03 Feb 2021 18:54:34 
+
+at 101 TDMA - slot 2
+Wed, 03 Feb 2021 18:54:34 at env:101 from node t0 2 light: 300 temperature: 21 TDMA-based 2 to [9] with pos 235 282 and parent [node4] and energy 1999.9880051874993
+Wed, 03 Feb 2021 18:54:34 at env:101 from node t0 6 light: 196 temperature: 30 TDMA-based 2 to [8] with pos 288 161 and parent [node7] and energy 1999.9918992812495
+Wed, 03 Feb 2021 18:54:34 at env:101 from node t0 10 light: 222 temperature: 22 TDMA-based 2 to [7] with pos 236 62 and parent [node9] and energy 1999.9829681874996
+Wed, 03 Feb 2021 18:54:34 at env:101 from node t0 14 light: 188 temperature: 23 TDMA-based 2 to [4] with pos 133 74 and parent [node16] and energy 1999.9890796562502
+Wed, 03 Feb 2021 18:54:34 at env:101 from node t0 22 light: 211 temperature: 17 TDMA-based 2 to [2] with pos 75 118 and parent [node23] and energy 1999.9907267187498
+Wed, 03 Feb 2021 18:54:34 at env:101 from node t0 26 light: 254 temperature: 30 TDMA-based 2 to [3] with pos 70 208 and parent [node28] and energy 1999.98573990625
+Wed, 03 Feb 2021 18:54:34 
+
+at 102 TDMA - slot 3
+Wed, 03 Feb 2021 18:54:34 at env:102 from node t1 3 light: 281 temperature: 21 TDMA-based 3 to [9] with pos 236 240 and parent [node4] and energy 1999.8280282812495
+Wed, 03 Feb 2021 18:54:34 at env:102 from node t1 11 light: 170 temperature: 23 TDMA-based 3 to [7] with pos 243 24 and parent [node9] and energy 1999.9885298749998
+Wed, 03 Feb 2021 18:54:34 at env:102 from node t1 15 light: 101 temperature: 22 TDMA-based 3 to [4] with pos 137 28 and parent [node16] and energy 1999.98886521875
+Wed, 03 Feb 2021 18:54:34 at env:102 from node t0 18 light: 253 temperature: 17 TDMA-based 3 to [1] with pos 67 73 and parent [node17] and energy 1999.9832989687502
+Wed, 03 Feb 2021 18:54:34 at env:102 from node t1 27 light: 116 temperature: 28 TDMA-based 3 to [3] with pos 61 276 and parent [node28] and energy 1999.99464590625
+Wed, 03 Feb 2021 18:54:34 
+
+at 103 TDMA - slot 4
+Wed, 03 Feb 2021 18:54:34 at env:103 from node t0 8 light: 293 temperature: 28 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9891161562496
+Wed, 03 Feb 2021 18:54:34 at env:103 from node t0 12 light: 256 temperature: 27 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9907289999999
+Wed, 03 Feb 2021 18:54:34 at env:103 from node t1 19 light: 150 temperature: 25 TDMA-based 4 to [1] with pos 22 72 and parent [node17] and energy 1999.98886521875
+Wed, 03 Feb 2021 18:54:34 at env:103 from node t0 24 light: 167 temperature: 26 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.98738240625
+Wed, 03 Feb 2021 18:54:34 at env:103 from node t1 31 light: 219 temperature: 17 TDMA-based 4 to [6] with pos 180 227 and parent [node30] and energy 1999.9885298749998
+Wed, 03 Feb 2021 18:54:34 at env:104 from node t0 8 light: 260 temperature: 22 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9891161562496
+Wed, 03 Feb 2021 18:54:34 at env:104 from node t0 12 light: 163 temperature: 29 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9907289999999
+Wed, 03 Feb 2021 18:54:34 at env:104 from node t1 19 light: 117 temperature: 19 TDMA-based 4 to [1] with pos 22 72 and parent [node17] and energy 1999.98886521875
+Wed, 03 Feb 2021 18:54:34 at env:104 from node t0 24 light: 236 temperature: 26 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.98738240625
+Wed, 03 Feb 2021 18:54:34 at env:104 from node t1 31 light: 277 temperature: 21 TDMA-based 4 to [6] with pos 180 227 and parent [node30] and energy 1999.9885298749998
+Wed, 03 Feb 2021 18:54:34 at 104 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 BS is proccessing 105
+Wed, 03 Feb 2021 18:54:34 at 105 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 106 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 107 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 108 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 109 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 BS is proccessing 110
+Wed, 03 Feb 2021 18:54:34 at 110 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 111 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 
+ New Superframe is began CSMA at 112 number 7
+
+Wed, 03 Feb 2021 18:54:34 
+at 112 CSMA - slot 1
+Wed, 03 Feb 2021 18:54:34 
+at 113 CSMA - slot 2
+Wed, 03 Feb 2021 18:54:34 
+at 114 CSMA - slot 3
+Wed, 03 Feb 2021 18:54:34 at 115 BS is running
+Wed, 03 Feb 2021 18:54:34 
+at 115 CSMA - slot 4
+Wed, 03 Feb 2021 18:54:34 
+
+at 116 TDMA - slot 0
+Wed, 03 Feb 2021 18:54:34 
+
+at 117 TDMA - slot 1
+Wed, 03 Feb 2021 18:54:34 
+
+at 118 TDMA - slot 2
+Wed, 03 Feb 2021 18:54:34 at env:118 from node t0 2 light: 207 temperature: 18 TDMA-based 2 to [9] with pos 235 282 and parent [node4] and energy 1999.9880051874993
+Wed, 03 Feb 2021 18:54:34 at env:118 from node t0 6 light: 234 temperature: 19 TDMA-based 2 to [8] with pos 288 161 and parent [node7] and energy 1999.9918992812495
+Wed, 03 Feb 2021 18:54:34 at env:118 from node t0 10 light: 166 temperature: 17 TDMA-based 2 to [7] with pos 236 62 and parent [node9] and energy 1999.9829681874996
+Wed, 03 Feb 2021 18:54:34 at env:118 from node t0 14 light: 240 temperature: 27 TDMA-based 2 to [4] with pos 133 74 and parent [node16] and energy 1999.9890796562502
+Wed, 03 Feb 2021 18:54:34 at env:118 from node t0 22 light: 130 temperature: 29 TDMA-based 2 to [2] with pos 75 118 and parent [node23] and energy 1999.9907267187498
+Wed, 03 Feb 2021 18:54:34 at env:118 from node t0 26 light: 233 temperature: 24 TDMA-based 2 to [3] with pos 70 208 and parent [node28] and energy 1999.98573990625
+Wed, 03 Feb 2021 18:54:34 
+
+at 119 TDMA - slot 3
+Wed, 03 Feb 2021 18:54:34 at env:119 from node t0 18 light: 248 temperature: 28 TDMA-based 3 to [1] with pos 67 73 and parent [node17] and energy 1999.9832989687502
+Wed, 03 Feb 2021 18:54:34 at 120 BS is calculating
+Wed, 03 Feb 2021 18:54:34 
+
+at 120 TDMA - slot 4
+Wed, 03 Feb 2021 18:54:34 at env:120 from node t0 8 light: 218 temperature: 26 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9891161562496
+Wed, 03 Feb 2021 18:54:34 at env:120 from node t0 12 light: 153 temperature: 24 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9907289999999
+Wed, 03 Feb 2021 18:54:34 at env:120 from node t0 24 light: 183 temperature: 22 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.98738240625
+Wed, 03 Feb 2021 18:54:34 at env:121 from node t0 8 light: 284 temperature: 28 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9891161562496
+Wed, 03 Feb 2021 18:54:34 at env:121 from node t0 12 light: 253 temperature: 26 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9907289999999
+Wed, 03 Feb 2021 18:54:34 at env:121 from node t0 24 light: 199 temperature: 27 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.98738240625
+Wed, 03 Feb 2021 18:54:34 at 121 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 122 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 123 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 124 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 BS is proccessing 125
+Wed, 03 Feb 2021 18:54:34 at 125 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 126 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 127 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 128 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 
+ New Superframe is began CSMA at 129 number 8
+
+Wed, 03 Feb 2021 18:54:34 
+at 129 CSMA - slot 1
+Wed, 03 Feb 2021 18:54:34 at 130 BS is running
+Wed, 03 Feb 2021 18:54:34 
+at 130 CSMA - slot 2
+Wed, 03 Feb 2021 18:54:34 
+at 131 CSMA - slot 3
+Wed, 03 Feb 2021 18:54:34 
+at 132 CSMA - slot 4
+Wed, 03 Feb 2021 18:54:34 
+
+at 133 TDMA - slot 0
+Wed, 03 Feb 2021 18:54:34 
+
+at 134 TDMA - slot 1
+Wed, 03 Feb 2021 18:54:34 at env:134 from node t1 1 light: 101 temperature: 23 TDMA-based 1 to [9] with pos 280 283 and parent [node4] and energy 1999.9913403749997
+Wed, 03 Feb 2021 18:54:34 at env:134 from node t1 5 light: 152 temperature: 30 TDMA-based 1 to [8] with pos 239 165 and parent [node7] and energy 1999.9918947187498
+Wed, 03 Feb 2021 18:54:34 at env:134 from node t1 13 light: 300 temperature: 21 TDMA-based 1 to [4] with pos 172 72 and parent [node16] and energy 1999.9890796562502
+Wed, 03 Feb 2021 18:54:34 at env:134 from node t1 21 light: 206 temperature: 19 TDMA-based 1 to [2] with pos 23 117 and parent [node23] and energy 1999.9851559062502
+Wed, 03 Feb 2021 18:54:34 at env:134 from node t1 25 light: 205 temperature: 17 TDMA-based 1 to [3] with pos 20 213 and parent [node28] and energy 1999.8045131562508
+Wed, 03 Feb 2021 18:54:34 at env:134 from node t1 29 light: 249 temperature: 25 TDMA-based 1 to [6] with pos 136 270 and parent [node30] and energy 1999.9918627812501
+Wed, 03 Feb 2021 18:54:34 at 135 BS is calculating
+Wed, 03 Feb 2021 18:54:34 
+
+at 135 TDMA - slot 2
+Wed, 03 Feb 2021 18:54:34 at env:135 from node t0 2 light: 294 temperature: 18 TDMA-based 2 to [9] with pos 235 282 and parent [node4] and energy 1999.9880051874993
+Wed, 03 Feb 2021 18:54:34 at env:135 from node t0 6 light: 225 temperature: 27 TDMA-based 2 to [8] with pos 288 161 and parent [node7] and energy 1999.9918992812495
+Wed, 03 Feb 2021 18:54:34 at env:135 from node t0 10 light: 100 temperature: 22 TDMA-based 2 to [7] with pos 236 62 and parent [node9] and energy 1999.9829681874996
+Wed, 03 Feb 2021 18:54:34 at env:135 from node t0 14 light: 152 temperature: 28 TDMA-based 2 to [4] with pos 133 74 and parent [node16] and energy 1999.9890796562502
+Wed, 03 Feb 2021 18:54:34 at env:135 from node t0 22 light: 294 temperature: 26 TDMA-based 2 to [2] with pos 75 118 and parent [node23] and energy 1999.9907267187498
+Wed, 03 Feb 2021 18:54:34 at env:135 from node t0 26 light: 155 temperature: 17 TDMA-based 2 to [3] with pos 70 208 and parent [node28] and energy 1999.98573990625
+Wed, 03 Feb 2021 18:54:34 
+
+at 136 TDMA - slot 3
+Wed, 03 Feb 2021 18:54:34 at env:136 from node t1 3 light: 170 temperature: 23 TDMA-based 3 to [9] with pos 236 240 and parent [node4] and energy 1999.8280282812495
+Wed, 03 Feb 2021 18:54:34 at env:136 from node t1 11 light: 129 temperature: 22 TDMA-based 3 to [7] with pos 243 24 and parent [node9] and energy 1999.9885298749998
+Wed, 03 Feb 2021 18:54:34 at env:136 from node t1 15 light: 257 temperature: 27 TDMA-based 3 to [4] with pos 137 28 and parent [node16] and energy 1999.98886521875
+Wed, 03 Feb 2021 18:54:34 at env:136 from node t0 18 light: 178 temperature: 26 TDMA-based 3 to [1] with pos 67 73 and parent [node17] and energy 1999.9832989687502
+Wed, 03 Feb 2021 18:54:34 at env:136 from node t1 27 light: 183 temperature: 28 TDMA-based 3 to [3] with pos 61 276 and parent [node28] and energy 1999.99464590625
+Wed, 03 Feb 2021 18:54:34 
+
+at 137 TDMA - slot 4
+Wed, 03 Feb 2021 18:54:34 at env:137 from node t0 8 light: 147 temperature: 21 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9891161562496
+Wed, 03 Feb 2021 18:54:34 at env:137 from node t0 12 light: 108 temperature: 21 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9907289999999
+Wed, 03 Feb 2021 18:54:34 at env:137 from node t1 19 light: 120 temperature: 19 TDMA-based 4 to [1] with pos 22 72 and parent [node17] and energy 1999.98886521875
+Wed, 03 Feb 2021 18:54:34 at env:137 from node t0 24 light: 169 temperature: 28 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.98738240625
+Wed, 03 Feb 2021 18:54:34 at env:137 from node t1 31 light: 287 temperature: 17 TDMA-based 4 to [6] with pos 180 227 and parent [node30] and energy 1999.9885298749998
+Wed, 03 Feb 2021 18:54:34 at env:138 from node t0 8 light: 219 temperature: 21 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9891161562496
+Wed, 03 Feb 2021 18:54:34 at env:138 from node t0 12 light: 161 temperature: 25 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9907289999999
+Wed, 03 Feb 2021 18:54:34 at env:138 from node t1 19 light: 132 temperature: 17 TDMA-based 4 to [1] with pos 22 72 and parent [node17] and energy 1999.98886521875
+Wed, 03 Feb 2021 18:54:34 at env:138 from node t0 24 light: 285 temperature: 30 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.98738240625
+Wed, 03 Feb 2021 18:54:34 at env:138 from node t1 31 light: 179 temperature: 23 TDMA-based 4 to [6] with pos 180 227 and parent [node30] and energy 1999.9885298749998
+Wed, 03 Feb 2021 18:54:34 at 138 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 139 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 BS is proccessing 140
+Wed, 03 Feb 2021 18:54:34 at 140 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 141 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 142 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 143 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 144 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 BS is proccessing 145
+Wed, 03 Feb 2021 18:54:34 at 145 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 
+ New Superframe is began CSMA at 146 number 9
+
+Wed, 03 Feb 2021 18:54:34 
+at 146 CSMA - slot 1
+Wed, 03 Feb 2021 18:54:34 
+at 147 CSMA - slot 2
+Wed, 03 Feb 2021 18:54:34 
+at 148 CSMA - slot 3
+Wed, 03 Feb 2021 18:54:34 
+at 149 CSMA - slot 4
+Wed, 03 Feb 2021 18:54:34 at 150 BS is running
+Wed, 03 Feb 2021 18:54:34 
+
+at 150 TDMA - slot 0
+Wed, 03 Feb 2021 18:54:34 
+
+at 151 TDMA - slot 1
+Wed, 03 Feb 2021 18:54:34 
+
+at 152 TDMA - slot 2
+Wed, 03 Feb 2021 18:54:34 at env:152 from node t0 2 light: 279 temperature: 18 TDMA-based 2 to [9] with pos 235 282 and parent [node4] and energy 1999.9880051874993
+Wed, 03 Feb 2021 18:54:34 at env:152 from node t0 6 light: 283 temperature: 29 TDMA-based 2 to [8] with pos 288 161 and parent [node7] and energy 1999.9918992812495
+Wed, 03 Feb 2021 18:54:34 at env:152 from node t0 10 light: 125 temperature: 28 TDMA-based 2 to [7] with pos 236 62 and parent [node9] and energy 1999.9829681874996
+Wed, 03 Feb 2021 18:54:34 at env:152 from node t0 14 light: 265 temperature: 29 TDMA-based 2 to [4] with pos 133 74 and parent [node16] and energy 1999.9890796562502
+Wed, 03 Feb 2021 18:54:34 at env:152 from node t0 22 light: 229 temperature: 20 TDMA-based 2 to [2] with pos 75 118 and parent [node23] and energy 1999.9907267187498
+Wed, 03 Feb 2021 18:54:34 at env:152 from node t0 26 light: 133 temperature: 19 TDMA-based 2 to [3] with pos 70 208 and parent [node28] and energy 1999.98573990625
+Wed, 03 Feb 2021 18:54:34 
+
+at 153 TDMA - slot 3
+Wed, 03 Feb 2021 18:54:34 at env:153 from node t0 18 light: 183 temperature: 25 TDMA-based 3 to [1] with pos 67 73 and parent [node17] and energy 1999.9832989687502
+Wed, 03 Feb 2021 18:54:34 
+
+at 154 TDMA - slot 4
+Wed, 03 Feb 2021 18:54:34 at env:154 from node t0 8 light: 127 temperature: 26 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9891161562496
+Wed, 03 Feb 2021 18:54:34 at env:154 from node t0 12 light: 161 temperature: 27 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9907289999999
+Wed, 03 Feb 2021 18:54:34 at env:154 from node t0 24 light: 185 temperature: 30 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.98738240625
+Wed, 03 Feb 2021 18:54:34 at 155 BS is calculating
+Wed, 03 Feb 2021 18:54:34 at env:155 from node t0 8 light: 289 temperature: 24 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9891161562496
+Wed, 03 Feb 2021 18:54:34 at env:155 from node t0 12 light: 284 temperature: 21 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9907289999999
+Wed, 03 Feb 2021 18:54:34 at env:155 from node t0 24 light: 142 temperature: 24 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.98738240625
+Wed, 03 Feb 2021 18:54:34 at 155 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 156 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 157 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 158 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 159 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 BS is proccessing 160
+Wed, 03 Feb 2021 18:54:34 at 160 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 161 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 162 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 
+ New Superframe is began CSMA at 163 number 10
+
+Wed, 03 Feb 2021 18:54:34 
+at 163 CSMA - slot 1
+Wed, 03 Feb 2021 18:54:34 Cluster 1  with [node17, node18, node19, node20] nodes ##### 10 164
+Wed, 03 Feb 2021 18:54:34 Cluster 2  with [node21, node22, node23, node24] nodes ##### 10 164
+Wed, 03 Feb 2021 18:54:34 Cluster 3  with [node25, node26, node27, node28] nodes ##### 10 164
+Wed, 03 Feb 2021 18:54:34 Cluster 4  with [node13, node14, node15, node16] nodes ##### 10 164
+Wed, 03 Feb 2021 18:54:34 Cluster 5  with [] nodes ##### 10 164
+Wed, 03 Feb 2021 18:54:34 Cluster 6  with [node29, node30, node31, node32] nodes ##### 10 164
+Wed, 03 Feb 2021 18:54:34 Cluster 7  with [node9, node10, node11, node12] nodes ##### 10 164
+Wed, 03 Feb 2021 18:54:34 Cluster 8  with [node5, node6, node7, node8] nodes ##### 10 164
+Wed, 03 Feb 2021 18:54:34 Cluster 9  with [node1, node2, node3, node4] nodes ##### 10 164
+Wed, 03 Feb 2021 18:54:34 
+at 164 CSMA - slot 2
+Wed, 03 Feb 2021 18:54:34 at 165 BS is running
+Wed, 03 Feb 2021 18:54:34 
+at 165 CSMA - slot 3
+Wed, 03 Feb 2021 18:54:34 
+at 166 CSMA - slot 4
+Wed, 03 Feb 2021 18:54:34 
+
+at 167 TDMA - slot 0
+Wed, 03 Feb 2021 18:54:34 
+
+at 168 TDMA - slot 1
+Wed, 03 Feb 2021 18:54:34 at env:168 from node t1 1 light: 175 temperature: 21 TDMA-based 1 to [9] with pos 280 283 and parent [node4] and energy 1999.9872523749996
+Wed, 03 Feb 2021 18:54:34 at env:168 from node t1 5 light: 179 temperature: 23 TDMA-based 1 to [8] with pos 239 165 and parent [node7] and energy 1999.9881397812496
+Wed, 03 Feb 2021 18:54:34 at env:168 from node t1 13 light: 114 temperature: 25 TDMA-based 1 to [4] with pos 172 72 and parent [node16] and energy 1999.98532471875
+Wed, 03 Feb 2021 18:54:34 at env:168 from node t1 21 light: 169 temperature: 28 TDMA-based 1 to [2] with pos 23 117 and parent [node23] and energy 1999.9791197187499
+Wed, 03 Feb 2021 18:54:34 at env:168 from node t1 25 light: 143 temperature: 18 TDMA-based 1 to [3] with pos 20 213 and parent [node28] and energy 1999.7992845312506
+Wed, 03 Feb 2021 18:54:34 at env:168 from node t1 29 light: 143 temperature: 28 TDMA-based 1 to [6] with pos 136 270 and parent [node30] and energy 1999.98924846875
+Wed, 03 Feb 2021 18:54:34 
+
+at 169 TDMA - slot 2
+Wed, 03 Feb 2021 18:54:34 at env:169 from node t0 2 light: 277 temperature: 24 TDMA-based 2 to [9] with pos 235 282 and parent [node4] and energy 1999.9824434999991
+Wed, 03 Feb 2021 18:54:34 at env:169 from node t0 6 light: 290 temperature: 21 TDMA-based 2 to [8] with pos 288 161 and parent [node7] and energy 1999.9881443437494
+Wed, 03 Feb 2021 18:54:34 at env:169 from node t0 10 light: 274 temperature: 21 TDMA-based 2 to [7] with pos 236 62 and parent [node9] and energy 1999.9765989374994
+Wed, 03 Feb 2021 18:54:34 at env:169 from node t0 14 light: 155 temperature: 30 TDMA-based 2 to [4] with pos 133 74 and parent [node16] and energy 1999.98532471875
+Wed, 03 Feb 2021 18:54:34 at env:169 from node t0 22 light: 118 temperature: 17 TDMA-based 2 to [2] with pos 75 118 and parent [node23] and energy 1999.9869717812496
+Wed, 03 Feb 2021 18:54:34 at env:169 from node t0 26 light: 166 temperature: 24 TDMA-based 2 to [3] with pos 70 208 and parent [node28] and energy 1999.9805112812498
+Wed, 03 Feb 2021 18:54:34 at 170 BS is calculating
+Wed, 03 Feb 2021 18:54:34 
+
+at 170 TDMA - slot 3
+Wed, 03 Feb 2021 18:54:34 at env:170 from node t1 3 light: 231 temperature: 28 TDMA-based 3 to [9] with pos 236 240 and parent [node4] and energy 1999.8216590312493
+Wed, 03 Feb 2021 18:54:34 at env:170 from node t1 11 light: 165 temperature: 19 TDMA-based 3 to [7] with pos 243 24 and parent [node9] and energy 1999.9844418749997
+Wed, 03 Feb 2021 18:54:34 at env:170 from node t1 15 light: 105 temperature: 26 TDMA-based 3 to [4] with pos 137 28 and parent [node16] and energy 1999.98511028125
+Wed, 03 Feb 2021 18:54:34 at env:170 from node t0 18 light: 216 temperature: 18 TDMA-based 3 to [1] with pos 67 73 and parent [node17] and energy 1999.97726278125
+Wed, 03 Feb 2021 18:54:34 at env:170 from node t1 27 light: 227 temperature: 27 TDMA-based 3 to [3] with pos 61 276 and parent [node28] and energy 1999.99203159375
+Wed, 03 Feb 2021 18:54:34 
+
+at 171 TDMA - slot 4
+Wed, 03 Feb 2021 18:54:34 at env:171 from node t0 8 light: 201 temperature: 20 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9842205937493
+Wed, 03 Feb 2021 18:54:34 at env:171 from node t0 12 light: 147 temperature: 17 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9869740624997
+Wed, 03 Feb 2021 18:54:34 at env:171 from node t1 19 light: 209 temperature: 29 TDMA-based 4 to [1] with pos 22 72 and parent [node17] and energy 1999.98511028125
+Wed, 03 Feb 2021 18:54:34 at env:171 from node t0 24 light: 285 temperature: 21 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.9821537812497
+Wed, 03 Feb 2021 18:54:34 at env:171 from node t1 31 light: 243 temperature: 28 TDMA-based 4 to [6] with pos 180 227 and parent [node30] and energy 1999.9844418749997
+Wed, 03 Feb 2021 18:54:34 at env:172 from node t0 8 light: 233 temperature: 19 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9842205937493
+Wed, 03 Feb 2021 18:54:34 at env:172 from node t0 12 light: 160 temperature: 27 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9869740624997
+Wed, 03 Feb 2021 18:54:34 at env:172 from node t1 19 light: 146 temperature: 30 TDMA-based 4 to [1] with pos 22 72 and parent [node17] and energy 1999.98511028125
+Wed, 03 Feb 2021 18:54:34 at env:172 from node t0 24 light: 183 temperature: 30 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.9821537812497
+Wed, 03 Feb 2021 18:54:34 at env:172 from node t1 31 light: 169 temperature: 30 TDMA-based 4 to [6] with pos 180 227 and parent [node30] and energy 1999.9844418749997
+Wed, 03 Feb 2021 18:54:34 at 172 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 173 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 174 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 BS is proccessing 175
+Wed, 03 Feb 2021 18:54:34 at 175 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 176 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 177 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 178 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 179 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 BS is proccessing 180
+Wed, 03 Feb 2021 18:54:34 
+ New Superframe is began CSMA at 180 number 11
+
+Wed, 03 Feb 2021 18:54:34 
+at 180 CSMA - slot 1
+Wed, 03 Feb 2021 18:54:34 
+at 181 CSMA - slot 2
+Wed, 03 Feb 2021 18:54:34 
+at 182 CSMA - slot 3
+Wed, 03 Feb 2021 18:54:34 
+at 183 CSMA - slot 4
+Wed, 03 Feb 2021 18:54:34 
+
+at 184 TDMA - slot 0
+Wed, 03 Feb 2021 18:54:34 at 185 BS is calculating
+Wed, 03 Feb 2021 18:54:34 
+
+at 185 TDMA - slot 1
+Wed, 03 Feb 2021 18:54:34 
+
+at 186 TDMA - slot 2
+Wed, 03 Feb 2021 18:54:34 at env:186 from node t0 2 light: 220 temperature: 17 TDMA-based 2 to [9] with pos 235 282 and parent [node4] and energy 1999.9824434999991
+Wed, 03 Feb 2021 18:54:34 at env:186 from node t0 6 light: 122 temperature: 26 TDMA-based 2 to [8] with pos 288 161 and parent [node7] and energy 1999.9881443437494
+Wed, 03 Feb 2021 18:54:34 at env:186 from node t0 10 light: 127 temperature: 20 TDMA-based 2 to [7] with pos 236 62 and parent [node9] and energy 1999.9765989374994
+Wed, 03 Feb 2021 18:54:34 at env:186 from node t0 14 light: 224 temperature: 17 TDMA-based 2 to [4] with pos 133 74 and parent [node16] and energy 1999.98532471875
+Wed, 03 Feb 2021 18:54:34 at env:186 from node t0 22 light: 128 temperature: 27 TDMA-based 2 to [2] with pos 75 118 and parent [node23] and energy 1999.9869717812496
+Wed, 03 Feb 2021 18:54:34 at env:186 from node t0 26 light: 273 temperature: 21 TDMA-based 2 to [3] with pos 70 208 and parent [node28] and energy 1999.9805112812498
+Wed, 03 Feb 2021 18:54:34 
+
+at 187 TDMA - slot 3
+Wed, 03 Feb 2021 18:54:34 at env:187 from node t0 18 light: 147 temperature: 22 TDMA-based 3 to [1] with pos 67 73 and parent [node17] and energy 1999.97726278125
+Wed, 03 Feb 2021 18:54:34 
+
+at 188 TDMA - slot 4
+Wed, 03 Feb 2021 18:54:34 at env:188 from node t0 8 light: 207 temperature: 19 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9842205937493
+Wed, 03 Feb 2021 18:54:34 at env:188 from node t0 12 light: 281 temperature: 18 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9869740624997
+Wed, 03 Feb 2021 18:54:34 at env:188 from node t0 24 light: 142 temperature: 23 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.9821537812497
+Wed, 03 Feb 2021 18:54:34 at env:189 from node t0 8 light: 102 temperature: 27 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9842205937493
+Wed, 03 Feb 2021 18:54:34 at env:189 from node t0 12 light: 153 temperature: 25 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9869740624997
+Wed, 03 Feb 2021 18:54:34 at env:189 from node t0 24 light: 177 temperature: 27 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.9821537812497
+Wed, 03 Feb 2021 18:54:34 at 189 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 BS is proccessing 190
+Wed, 03 Feb 2021 18:54:34 at 190 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 191 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 192 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 193 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 194 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 BS is proccessing 195
+Wed, 03 Feb 2021 18:54:34 at 195 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 196 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 
+ New Superframe is began CSMA at 197 number 12
+
+Wed, 03 Feb 2021 18:54:34 
+at 197 CSMA - slot 1
+Wed, 03 Feb 2021 18:54:34 
+at 198 CSMA - slot 2
+Wed, 03 Feb 2021 18:54:34 
+at 199 CSMA - slot 3
+Wed, 03 Feb 2021 18:54:34 at 200 BS is running
+Wed, 03 Feb 2021 18:54:34 
+at 200 CSMA - slot 4
+Wed, 03 Feb 2021 18:54:34 
+
+at 201 TDMA - slot 0
+Wed, 03 Feb 2021 18:54:34 
+
+at 202 TDMA - slot 1
+Wed, 03 Feb 2021 18:54:34 at env:202 from node t1 1 light: 131 temperature: 18 TDMA-based 1 to [9] with pos 280 283 and parent [node4] and energy 1999.9872523749996
+Wed, 03 Feb 2021 18:54:34 at env:202 from node t1 5 light: 157 temperature: 19 TDMA-based 1 to [8] with pos 239 165 and parent [node7] and energy 1999.9881397812496
+Wed, 03 Feb 2021 18:54:34 at env:202 from node t1 13 light: 120 temperature: 25 TDMA-based 1 to [4] with pos 172 72 and parent [node16] and energy 1999.98532471875
+Wed, 03 Feb 2021 18:54:34 at env:202 from node t1 21 light: 300 temperature: 26 TDMA-based 1 to [2] with pos 23 117 and parent [node23] and energy 1999.9791197187499
+Wed, 03 Feb 2021 18:54:34 at env:202 from node t1 25 light: 204 temperature: 25 TDMA-based 1 to [3] with pos 20 213 and parent [node28] and energy 1999.7992845312506
+Wed, 03 Feb 2021 18:54:34 at env:202 from node t1 29 light: 116 temperature: 29 TDMA-based 1 to [6] with pos 136 270 and parent [node30] and energy 1999.98924846875
+Wed, 03 Feb 2021 18:54:34 
+
+at 203 TDMA - slot 2
+Wed, 03 Feb 2021 18:54:34 at env:203 from node t0 2 light: 297 temperature: 25 TDMA-based 2 to [9] with pos 235 282 and parent [node4] and energy 1999.9824434999991
+Wed, 03 Feb 2021 18:54:34 at env:203 from node t0 6 light: 273 temperature: 17 TDMA-based 2 to [8] with pos 288 161 and parent [node7] and energy 1999.9881443437494
+Wed, 03 Feb 2021 18:54:34 at env:203 from node t0 10 light: 190 temperature: 30 TDMA-based 2 to [7] with pos 236 62 and parent [node9] and energy 1999.9765989374994
+Wed, 03 Feb 2021 18:54:34 at env:203 from node t0 14 light: 264 temperature: 17 TDMA-based 2 to [4] with pos 133 74 and parent [node16] and energy 1999.98532471875
+Wed, 03 Feb 2021 18:54:34 at env:203 from node t0 22 light: 266 temperature: 25 TDMA-based 2 to [2] with pos 75 118 and parent [node23] and energy 1999.9869717812496
+Wed, 03 Feb 2021 18:54:34 at env:203 from node t0 26 light: 223 temperature: 19 TDMA-based 2 to [3] with pos 70 208 and parent [node28] and energy 1999.9805112812498
+Wed, 03 Feb 2021 18:54:34 
+
+at 204 TDMA - slot 3
+Wed, 03 Feb 2021 18:54:34 at env:204 from node t1 3 light: 164 temperature: 23 TDMA-based 3 to [9] with pos 236 240 and parent [node4] and energy 1999.8216590312493
+Wed, 03 Feb 2021 18:54:34 at env:204 from node t1 11 light: 232 temperature: 20 TDMA-based 3 to [7] with pos 243 24 and parent [node9] and energy 1999.9844418749997
+Wed, 03 Feb 2021 18:54:34 at env:204 from node t1 15 light: 201 temperature: 23 TDMA-based 3 to [4] with pos 137 28 and parent [node16] and energy 1999.98511028125
+Wed, 03 Feb 2021 18:54:34 at env:204 from node t0 18 light: 100 temperature: 22 TDMA-based 3 to [1] with pos 67 73 and parent [node17] and energy 1999.97726278125
+Wed, 03 Feb 2021 18:54:34 at env:204 from node t1 27 light: 149 temperature: 19 TDMA-based 3 to [3] with pos 61 276 and parent [node28] and energy 1999.99203159375
+Wed, 03 Feb 2021 18:54:34 at 205 BS is calculating
+Wed, 03 Feb 2021 18:54:34 
+
+at 205 TDMA - slot 4
+Wed, 03 Feb 2021 18:54:34 at env:205 from node t0 8 light: 147 temperature: 19 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9842205937493
+Wed, 03 Feb 2021 18:54:34 at env:205 from node t0 12 light: 222 temperature: 20 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9869740624997
+Wed, 03 Feb 2021 18:54:34 at env:205 from node t1 19 light: 194 temperature: 27 TDMA-based 4 to [1] with pos 22 72 and parent [node17] and energy 1999.98511028125
+Wed, 03 Feb 2021 18:54:34 at env:205 from node t0 24 light: 279 temperature: 27 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.9821537812497
+Wed, 03 Feb 2021 18:54:34 at env:205 from node t1 31 light: 270 temperature: 21 TDMA-based 4 to [6] with pos 180 227 and parent [node30] and energy 1999.9844418749997
+Wed, 03 Feb 2021 18:54:34 at env:206 from node t0 8 light: 174 temperature: 24 TDMA-based 4 to [8] with pos 241 127 and parent [node7] and energy 1999.9842205937493
+Wed, 03 Feb 2021 18:54:34 at env:206 from node t0 12 light: 238 temperature: 24 TDMA-based 4 to [7] with pos 289 20 and parent [node9] and energy 1999.9869740624997
+Wed, 03 Feb 2021 18:54:34 at env:206 from node t1 19 light: 256 temperature: 24 TDMA-based 4 to [1] with pos 22 72 and parent [node17] and energy 1999.98511028125
+Wed, 03 Feb 2021 18:54:34 at env:206 from node t0 24 light: 254 temperature: 25 TDMA-based 4 to [2] with pos 24 166 and parent [node23] and energy 1999.9821537812497
+Wed, 03 Feb 2021 18:54:34 at env:206 from node t1 31 light: 254 temperature: 23 TDMA-based 4 to [6] with pos 180 227 and parent [node30] and energy 1999.9844418749997
+Wed, 03 Feb 2021 18:54:34 at 206 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 207 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 208 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 at 209 inactive ieee802154
+Wed, 03 Feb 2021 18:54:34 BS is proccessing 210
+Wed, 03 Feb 2021 18:54:34    
+      Random_Clusterhead_Selection : cluster 1 with prob 0.2727272727272727
+Wed, 03 Feb 2021 18:54:34  <<< random for node 19 is 0.1353049045735275 with energy 1999.98511028125 and average cluster energy 1999.568099156252
+Wed, 03 Feb 2021 18:54:34 new ch is node 19  with parent [node17] and last ch was 17 with []
+Wed, 03 Feb 2021 18:54:34 e node 17 becomes simple node (change) and parent is [] and TDMA 1 energy 1999.6830396875016
+Wed, 03 Feb 2021 18:54:34 node 19 becomes CH (change)and parent is [] and TDMA 4 energy 1999.98511028125
+Wed, 03 Feb 2021 18:54:34 e node 19 becomes simple node (change) and parent is [] and TDMA 4 energy 1999.98511028125
+Wed, 03 Feb 2021 18:54:34 node 19 is CH in 1  +  energy ++++++++++++++++++by random CH selection c 
+Wed, 03 Feb 2021 18:54:36 at 210 inactive ieee802154
+Wed, 03 Feb 2021 18:54:49 ****************************Begin of introduce ieee802154
+Wed, 03 Feb 2021 18:54:49 0  with energy : <Power Type=External, Energy=2000 mJ>  with position 150.0 150.0 ; CH is False [] is alive: True with TDMA 0 4
+Wed, 03 Feb 2021 18:54:49 1  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 10 10 ; CH is False [] is alive: True with TDMA 0 1.99
+Wed, 03 Feb 2021 18:54:49 2  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 10 60 ; CH is False [] is alive: True with TDMA 0 1.98
+Wed, 03 Feb 2021 18:54:49 3  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 30 11 ; CH is False [] is alive: True with TDMA 0 1.988
+Wed, 03 Feb 2021 18:54:49 4  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 43 35 ; CH is False [] is alive: True with TDMA 0 1.9088
+Wed, 03 Feb 2021 18:54:49 5  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 260 30 ; CH is False [] is alive: True with TDMA 0 1.9855
+Wed, 03 Feb 2021 18:54:49 6  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 270 50 ; CH is False [] is alive: True with TDMA 0 1.9678
+Wed, 03 Feb 2021 18:54:49 7  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 259 72 ; CH is False [] is alive: True with TDMA 0 1.8434
+Wed, 03 Feb 2021 18:54:49 8  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 241 47 ; CH is False [] is alive: True with TDMA 0 1.90234
+Wed, 03 Feb 2021 18:54:49 9  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 260 200 ; CH is False [] is alive: True with TDMA 0 1.989364
+Wed, 03 Feb 2021 18:54:50 10  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 290 200 ; CH is False [] is alive: True with TDMA 0 1.876549
+Wed, 03 Feb 2021 18:54:50 11  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 280 220 ; CH is False [] is alive: True with TDMA 0 1.78233
+Wed, 03 Feb 2021 18:54:50 12  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 20 200 ; CH is False [] is alive: True with TDMA 0 1.79745
+Wed, 03 Feb 2021 18:54:50 13  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 10 160 ; CH is False [] is alive: True with TDMA 0 1.86435
+Wed, 03 Feb 2021 18:54:50 14  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 13 183 ; CH is False [] is alive: True with TDMA 0 1.76434
+Wed, 03 Feb 2021 18:54:50 15  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 50 200 ; CH is False [] is alive: True with TDMA 0 1.9754734
+Wed, 03 Feb 2021 18:54:50 16  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 29 189 ; CH is False [] is alive: True with TDMA 0 1.8634754
+Wed, 03 Feb 2021 18:54:50 17  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 35 204 ; CH is False [] is alive: True with TDMA 0 1.87648
+Wed, 03 Feb 2021 18:54:50 18  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 31 172 ; CH is False [] is alive: True with TDMA 0 1.7645
+Wed, 03 Feb 2021 18:54:50 19  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 30 50 ; CH is False [] is alive: True with TDMA 0 1.3654675
+Wed, 03 Feb 2021 18:54:50 20  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 130 20 ; CH is False [] is alive: True with TDMA 0 1.846
+Wed, 03 Feb 2021 18:54:50 21  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 135 2 ; CH is False [] is alive: True with TDMA 0 1.786487
+Wed, 03 Feb 2021 18:54:50 22  with energy : <Power Type=Battery, Energy=2000 mJ>  with position 175 5 ; CH is False [] is alive: True with TDMA 0 2
+Wed, 03 Feb 2021 18:54:50 
+++++++++++++++++++++ ieee802154 Table Discovery Begins 70 meters ++++++++++++++++++++++++++++
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 0 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 1 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 1 <=> 2 Distance= 50.0 RSSI= -103
+Wed, 03 Feb 2021 18:54:50 1 <=> 3 Distance= 20.02 RSSI= -95
+Wed, 03 Feb 2021 18:54:50 1 <=> 4 Distance= 41.4 RSSI= -101
+Wed, 03 Feb 2021 18:54:50 1 <=> 19 Distance= 44.72 RSSI= -102
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 2 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 2 <=> 1 Distance= 50.0 RSSI= -103
+Wed, 03 Feb 2021 18:54:50 2 <=> 3 Distance= 52.92 RSSI= -103
+Wed, 03 Feb 2021 18:54:50 2 <=> 4 Distance= 41.4 RSSI= -101
+Wed, 03 Feb 2021 18:54:50 2 <=> 19 Distance= 22.36 RSSI= -96
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 3 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 3 <=> 1 Distance= 20.02 RSSI= -95
+Wed, 03 Feb 2021 18:54:50 3 <=> 2 Distance= 52.92 RSSI= -103
+Wed, 03 Feb 2021 18:54:50 3 <=> 4 Distance= 27.29 RSSI= -98
+Wed, 03 Feb 2021 18:54:50 3 <=> 19 Distance= 39.0 RSSI= -101
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 4 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 4 <=> 1 Distance= 41.4 RSSI= -101
+Wed, 03 Feb 2021 18:54:50 4 <=> 2 Distance= 41.4 RSSI= -101
+Wed, 03 Feb 2021 18:54:50 4 <=> 3 Distance= 27.29 RSSI= -98
+Wed, 03 Feb 2021 18:54:50 4 <=> 19 Distance= 19.85 RSSI= -95
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 5 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 5 <=> 6 Distance= 22.36 RSSI= -96
+Wed, 03 Feb 2021 18:54:50 5 <=> 7 Distance= 42.01 RSSI= -101
+Wed, 03 Feb 2021 18:54:50 5 <=> 8 Distance= 25.5 RSSI= -97
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 6 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 6 <=> 5 Distance= 22.36 RSSI= -96
+Wed, 03 Feb 2021 18:54:50 6 <=> 7 Distance= 24.6 RSSI= -97
+Wed, 03 Feb 2021 18:54:50 6 <=> 8 Distance= 29.15 RSSI= -98
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 7 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 7 <=> 5 Distance= 42.01 RSSI= -101
+Wed, 03 Feb 2021 18:54:50 7 <=> 6 Distance= 24.6 RSSI= -97
+Wed, 03 Feb 2021 18:54:50 7 <=> 8 Distance= 30.81 RSSI= -99
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 8 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 8 <=> 5 Distance= 25.5 RSSI= -97
+Wed, 03 Feb 2021 18:54:50 8 <=> 6 Distance= 29.15 RSSI= -98
+Wed, 03 Feb 2021 18:54:50 8 <=> 7 Distance= 30.81 RSSI= -99
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 9 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 9 <=> 10 Distance= 30.0 RSSI= -99
+Wed, 03 Feb 2021 18:54:50 9 <=> 11 Distance= 28.28 RSSI= -98
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 10 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 10 <=> 9 Distance= 30.0 RSSI= -99
+Wed, 03 Feb 2021 18:54:50 10 <=> 11 Distance= 22.36 RSSI= -96
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 11 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 11 <=> 9 Distance= 28.28 RSSI= -98
+Wed, 03 Feb 2021 18:54:50 11 <=> 10 Distance= 22.36 RSSI= -96
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 12 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 12 <=> 13 Distance= 41.23 RSSI= -101
+Wed, 03 Feb 2021 18:54:50 12 <=> 14 Distance= 18.38 RSSI= -94
+Wed, 03 Feb 2021 18:54:50 12 <=> 15 Distance= 30.0 RSSI= -99
+Wed, 03 Feb 2021 18:54:50 12 <=> 16 Distance= 14.21 RSSI= -92
+Wed, 03 Feb 2021 18:54:50 12 <=> 17 Distance= 15.52 RSSI= -93
+Wed, 03 Feb 2021 18:54:50 12 <=> 18 Distance= 30.08 RSSI= -99
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 13 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 13 <=> 12 Distance= 41.23 RSSI= -101
+Wed, 03 Feb 2021 18:54:50 13 <=> 14 Distance= 23.19 RSSI= -96
+Wed, 03 Feb 2021 18:54:50 13 <=> 15 Distance= 56.57 RSSI= -104
+Wed, 03 Feb 2021 18:54:50 13 <=> 16 Distance= 34.67 RSSI= -100
+Wed, 03 Feb 2021 18:54:50 13 <=> 17 Distance= 50.61 RSSI= -103
+Wed, 03 Feb 2021 18:54:50 13 <=> 18 Distance= 24.19 RSSI= -97
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 14 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 14 <=> 12 Distance= 18.38 RSSI= -94
+Wed, 03 Feb 2021 18:54:50 14 <=> 13 Distance= 23.19 RSSI= -96
+Wed, 03 Feb 2021 18:54:50 14 <=> 15 Distance= 40.72 RSSI= -101
+Wed, 03 Feb 2021 18:54:50 14 <=> 16 Distance= 17.09 RSSI= -94
+Wed, 03 Feb 2021 18:54:50 14 <=> 17 Distance= 30.41 RSSI= -99
+Wed, 03 Feb 2021 18:54:50 14 <=> 18 Distance= 21.1 RSSI= -95
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 15 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 15 <=> 12 Distance= 30.0 RSSI= -99
+Wed, 03 Feb 2021 18:54:50 15 <=> 13 Distance= 56.57 RSSI= -104
+Wed, 03 Feb 2021 18:54:50 15 <=> 14 Distance= 40.72 RSSI= -101
+Wed, 03 Feb 2021 18:54:50 15 <=> 16 Distance= 23.71 RSSI= -96
+Wed, 03 Feb 2021 18:54:50 15 <=> 17 Distance= 15.52 RSSI= -93
+Wed, 03 Feb 2021 18:54:50 15 <=> 18 Distance= 33.84 RSSI= -100
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 16 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 16 <=> 12 Distance= 14.21 RSSI= -92
+Wed, 03 Feb 2021 18:54:50 16 <=> 13 Distance= 34.67 RSSI= -100
+Wed, 03 Feb 2021 18:54:50 16 <=> 14 Distance= 17.09 RSSI= -94
+Wed, 03 Feb 2021 18:54:50 16 <=> 15 Distance= 23.71 RSSI= -96
+Wed, 03 Feb 2021 18:54:50 16 <=> 17 Distance= 16.16 RSSI= -93
+Wed, 03 Feb 2021 18:54:50 16 <=> 18 Distance= 17.12 RSSI= -94
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 17 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 17 <=> 12 Distance= 15.52 RSSI= -93
+Wed, 03 Feb 2021 18:54:50 17 <=> 13 Distance= 50.61 RSSI= -103
+Wed, 03 Feb 2021 18:54:50 17 <=> 14 Distance= 30.41 RSSI= -99
+Wed, 03 Feb 2021 18:54:50 17 <=> 15 Distance= 15.52 RSSI= -93
+Wed, 03 Feb 2021 18:54:50 17 <=> 16 Distance= 16.16 RSSI= -93
+Wed, 03 Feb 2021 18:54:50 17 <=> 18 Distance= 32.25 RSSI= -99
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 18 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 18 <=> 12 Distance= 30.08 RSSI= -99
+Wed, 03 Feb 2021 18:54:50 18 <=> 13 Distance= 24.19 RSSI= -97
+Wed, 03 Feb 2021 18:54:50 18 <=> 14 Distance= 21.1 RSSI= -95
+Wed, 03 Feb 2021 18:54:50 18 <=> 15 Distance= 33.84 RSSI= -100
+Wed, 03 Feb 2021 18:54:50 18 <=> 16 Distance= 17.12 RSSI= -94
+Wed, 03 Feb 2021 18:54:50 18 <=> 17 Distance= 32.25 RSSI= -99
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 19 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 19 <=> 1 Distance= 44.72 RSSI= -102
+Wed, 03 Feb 2021 18:54:50 19 <=> 2 Distance= 22.36 RSSI= -96
+Wed, 03 Feb 2021 18:54:50 19 <=> 3 Distance= 39.0 RSSI= -101
+Wed, 03 Feb 2021 18:54:50 19 <=> 4 Distance= 19.85 RSSI= -95
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 20 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 20 <=> 21 Distance= 18.68 RSSI= -94
+Wed, 03 Feb 2021 18:54:50 20 <=> 22 Distance= 47.43 RSSI= -103
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 21 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 21 <=> 20 Distance= 18.68 RSSI= -94
+Wed, 03 Feb 2021 18:54:50 21 <=> 22 Distance= 40.11 RSSI= -101
+Wed, 03 Feb 2021 18:54:50 Neighbors Table discovery for 22 is below and neighbors are []
+Wed, 03 Feb 2021 18:54:50 22 <=> 20 Distance= 47.43 RSSI= -103
+Wed, 03 Feb 2021 18:54:50 22 <=> 21 Distance= 40.11 RSSI= -101
+Wed, 03 Feb 2021 18:54:50 +++++++++++++++++++++ ieee802154 Table Discovery Ends +++++++++++++++++++++++++++++++ 
+

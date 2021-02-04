@@ -1,7 +1,7 @@
 import math
 
 ## Runtime configuration
-MAX_RUNTIME =  100000 # 156250# 2000
+MAX_RUNTIME =  1000 # 156250# 2000
 #ALERT TIME
 ALERT_TIME = 1000
 ALERT_END = 4000
@@ -31,7 +31,7 @@ guienabled = True
 guiduration = 5
 
 #Log
-logenabled = True
+logenabled = False
 
 #save excel
 excelsave = False

@@ -1,5 +1,6 @@
-simpy
-networkx
+networkx==2.5
 matplotlib
 pandas
+numpy
 pickle
+simpy==4.0.1
