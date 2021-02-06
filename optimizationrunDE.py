@@ -168,7 +168,7 @@ def function(x):
 
 
 def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
-        print("DE starts with population: {0} and itration: {1} ".format(popsize,its))
+        print("DE starts with population: {0} and itration: {1}  [TDMA, CSMA, Inactive, Multi]".format(popsize,its))
         dimensions = D
         maxduration = 15625 #240 #Change 1 second to 15.36 ms time slot  4 min ==> 240,000 ms /15.36 => 15,625 number of slots Pass bayad max duration beshe 15,625 slot
         initial = []

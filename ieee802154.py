@@ -44,7 +44,7 @@ class Net():
 
         self.interfrerence = Interference(self.env,self)
         self.action = env.process(self.run())
-
+        self.channel_free = True
 
     def run(self):
         counter = 0
@@ -163,6 +163,7 @@ class Net():
 
     def CSMA(self,duration):
         for i in range(duration):
+            self.channel_free = True
             self.clock.clear()
             self.clock.append("CSMA")
             self.CSMA_slot = i+1
@@ -373,8 +374,8 @@ class Net():
                 sumpin +=len(n.inbox)
 
         lost = sumpout-sumpin
-        if config.printenabled:
-                print("{0} packets are lost on wireless sensor ieee802154".format(lost))
+        #if config.printenabled:
+                #print("{0} packets are lost on wireless sensor ieee802154".format(lost))
         # first node
         t = []
         for n in self.nodes:

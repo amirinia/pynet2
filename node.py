@@ -290,9 +290,12 @@ class Node():
                             yield self.env.timeout(1)
 
             if (self.is_CH == True): # if node is cluster head
-                # print(random.randint(1,config.CSMA_duration))
-                if(random.randint(1,config.CSMA_duration)==5):
+                #print(random.randint(1,config.CSMA_duration)," ",self.id,"  ", config.CSMA_duration)
+                if(random.randint(1,2)==1):#config.CSMA_duration)==config.CSMA_duration):  Chance of sending
                     if len(self.buffer) !=0 :
+                        if(self.net.channel_free == True):
+                            if config.printenabled:
+                                print("Cluster head ",self.id ," sent")
                             # self.power.decrease_energy(discharging_time = 10)  # idle discharge
                             tempbuffer = "CH {0} aggregate CSMA sent to BS on env:{1}====+++++++++++++++++++\n {2} ".format(self.id,env.now,self.buffer)
                             tempbuffer += "at env:{3} from node {2} light: {0} temperature: {1} TDMA-based {4} to {5} with pos {6} {7} and parent {8}".format(self.light,self.temperature,self.id,self.env.now,self.TDMA,self.cluster,self.x,self.y,self.parent)
@@ -301,17 +304,23 @@ class Node():
                             self.node_send_message(self.aggregate,0)
                             self.aggregate.clear()
                             self.logger.log(tempbuffer)
-                            if config.printenabled:
-                                print(tempbuffer)
+                            #if config.printenabled:
+                                #print(tempbuffer)
                             # energy tx decrease
                             message_sender = message.Message(tempbuffer)
                                         #self.interference.listsetter(self.id)
 
                             self.buffer.clear()
                             #self.flag = True
-
+                            self.net.channel_free = False
                             # print(self.clus.cluster_average_light())
                             # self.clus.light.clear()
+                        else:
+                            if config.printenabled:
+                                print("Cluster head ",self.id ," channel is busy at CSMA")
+                            message_sender = message.Message(" collision")
+                            message_sender = message.Message(" collision")
+
 
         # yield self.env.timeout(1)
 

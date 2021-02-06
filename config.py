@@ -1,7 +1,7 @@
 import math
 
 ## Runtime configuration
-MAX_RUNTIME =  1000 # 156250# 2000
+MAX_RUNTIME =  10000 # 156250# 2000
 #ALERT TIME
 ALERT_TIME = 1000
 ALERT_END = 4000
@@ -27,7 +27,7 @@ Multiframe_state = True
 printenabled = True
 
 #gui config
-guienabled = True
+guienabled = False
 guiduration = 5
 
 #Log
