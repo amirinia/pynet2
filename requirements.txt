@@ -1,6 +1,6 @@
 networkx==2.5
-matplotlib
-pandas
-numpy
+matplotlib == 3.3.3
+pandas == 1.1.4
+numpy ==1.19.3
 pickle
 simpy==4.0.1

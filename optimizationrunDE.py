@@ -195,7 +195,7 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
         #print("index of best",best_idx)
         best = popnp[best_idx]
         print("\n Best chromosome",best , best_idx)
-
+        previousbest = ""
         for i in range(its):
 
             print("\n New iteration ",i+1 , " ",time.ctime())
@@ -245,8 +245,8 @@ def de(fuctuion, mut=0.8, crossp=0.9, popsize=population_num, its=iteration):
                          best = trial
                          print("Best", best)
                      if f == fitness[best_idx]:
-                         print("equal with previous", best)
-
+                         print("equal with previous", previousbest)
+                         previousbest = best
             #De_FIT.append(fitness[best_idx])
             #De_VAR.append(best)
 
