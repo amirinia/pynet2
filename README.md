@@ -4,6 +4,8 @@ Is wireless network simulation based on Simpy engine.
 I used energy model and Propagation of pymote 2.0 project.
 Also, Optimization part is added to find an optimal superframe size and compositions.
 
+(/draw.png)
+
 paper: https://ieeexplore.ieee.org/abstract/document/9297230
 
 	Network Simulation - The Pynet Simulator
