@@ -1,10 +1,11 @@
 # pynet2
 pynet2
-Is wireless network simulation based on Simpy engine. 
+Is apython wireless sensor network simulation based on Simpy engine. 
 I used energy model and Propagation of pymote 2.0 project.
 Also, Optimization part is added to find an optimal superframe size and compositions.
 
-(/draw.png)
+## UI:
+![UI](/draw.png)
 
 paper: https://ieeexplore.ieee.org/abstract/document/9297230
 
