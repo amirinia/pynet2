@@ -27,7 +27,7 @@ Multiframe_state = True
 printenabled = True
 
 #gui config
-guienabled = False
+guienabled = True
 guiduration = 5
 
 #Log
