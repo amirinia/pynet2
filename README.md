@@ -1,7 +1,5 @@
-# pynet2
-pynet2
-<<<<<<< HEAD
-<<<<<<< HEAD
+#pynet2
+
 2020
 Author : Hossein Amirinia
 =======
@@ -9,7 +7,6 @@ Is wireless network simulation based on Simpy engine.
 I used energy model and Propagation of pymote 2.0 project.
 Also, Optimization part is added to find an optimal superframe size and compositions.
 
->>>>>>> 61d2971372cc4150ef050e080769459276b3ac80
 =======
 Is apython wireless sensor network simulation based on Simpy engine. 
 I used energy model and Propagation of pymote 2.0 project.
@@ -17,7 +14,6 @@ Also, Optimization part is added to find an optimal superframe size and composit
 
 ## UI:
 ![UI](/draw.png)
->>>>>>> 415cb2780b3fbc7491abd8c0d8800ae2efb14d33
 
 paper: https://ieeexplore.ieee.org/abstract/document/9297230
 
