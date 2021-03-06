@@ -4,7 +4,7 @@ Is wireless network simulation based on Simpy engine.
 I used energy model and Propagation of pymote 2.0 project.
 Also, Optimization part is added to find an optimal superframe size and compositions.
 
-
+paper: https://ieeexplore.ieee.org/abstract/document/9297230
 
 	Network Simulation - The Pynet Simulator
 In order to simulate the network, A simulator with more than 2,000 lines of code, was developed called “Pynet”. It is based on Simpy which is developed on python 3.7. Pynet was developed because it was challenging to integrate an evolutionary algorithm with existing simulation environments, for instance, cooja and omnet++ simulators require an integrated API for sending the superframe size and combinations and determine the remaining energy. Also, utilizing an integrated environment to increase the pace of progress on the DE algorithm phase was the reason to create an integrated simulation environment.
