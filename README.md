@@ -1,9 +1,9 @@
-#pynet2
+#pynet2 (Wireless Sensor Network Simulation in Python)
 
 2020
 Author : Hossein Amirinia
 =======
-Is wireless network simulation based on Simpy engine. 
+Is wireless sensor network (WSN) simulation based on Simpy engine. 
 I used energy model and Propagation of pymote 2.0 project.
 Also, Optimization part is added to find an optimal superframe size and compositions.
 
